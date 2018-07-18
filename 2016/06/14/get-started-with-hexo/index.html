@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+    
+        <title>
+            
+                워드프레스보다 쉬운 Hexo 블로그 시작하기 |
+                    
+                        Writer, IT Blog
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+            <meta name="keywords" content="hexo,web,blog,markdown">
+        
+
+        
+        <meta name="description" content="네이버 블로그를 시작하면서 아쉬웠던 점은 마크다운(Markdown) 언어를 지원하지 않는다는 점이었습니다. 그래서 Markdown here 라는 크롬 익스텐션을 이용해서 마크다운으로 렌더링하고 에디터에 붙여넣는 방식으로 블로그를 작성했습니다. 문제는 네이버 블로그의 스마트 에디터 와 호환이 제대로 되지 않는다는 점이었습니다. 열심히 작성했던 포스트가 모바일">
+<meta name="keywords" content="hexo,web,blog,markdown">
+<meta property="og:type" content="article">
+<meta property="og:title" content="워드프레스보다 쉬운 Hexo 블로그 시작하기">
+<meta property="og:url" content="http://futurecreator.github.io/2016/06/14/get-started-with-hexo/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="네이버 블로그를 시작하면서 아쉬웠던 점은 마크다운(Markdown) 언어를 지원하지 않는다는 점이었습니다. 그래서 Markdown here 라는 크롬 익스텐션을 이용해서 마크다운으로 렌더링하고 에디터에 붙여넣는 방식으로 블로그를 작성했습니다. 문제는 네이버 블로그의 스마트 에디터 와 호환이 제대로 되지 않는다는 점이었습니다. 열심히 작성했던 포스트가 모바일">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://futurecreator.github.io/images/hexo/hexo_index.png">
+<meta property="og:updated_time" content="2018-07-16T15:34:01.502Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="워드프레스보다 쉬운 Hexo 블로그 시작하기">
+<meta name="twitter:description" content="네이버 블로그를 시작하면서 아쉬웠던 점은 마크다운(Markdown) 언어를 지원하지 않는다는 점이었습니다. 그래서 Markdown here 라는 크롬 익스텐션을 이용해서 마크다운으로 렌더링하고 에디터에 붙여넣는 방식으로 블로그를 작성했습니다. 문제는 네이버 블로그의 스마트 에디터 와 호환이 제대로 되지 않는다는 점이었습니다. 열심히 작성했던 포스트가 모바일">
+<meta name="twitter:image" content="http://futurecreator.github.io/images/hexo/hexo_index.png">
+<meta name="twitter:creator" content="@fcreator_twt">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+        
+        
+        <link rel="canonical" href="http://futurecreator.github.io/2016/06/14/get-started-with-hexo/">
+        
+        
+            <link rel="icon" href="/images/favicions/favicon6.png">
+        
+        <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+        <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+        
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+        <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="https://kr.linkedin.com/in/dongho-han-97465327" rel="external nofollow noopener noreferrer" target="_blank">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-get-started-with-hexo" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        워드프레스보다 쉬운 Hexo 블로그 시작하기
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2016/06/14/get-started-with-hexo/" class="article-date">
+    <time datetime="2016-06-14T07:44:00.000Z" itemprop="datePublished">2016-06-14</time>
+</a>
+            <!-- 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+ -->
+            <span class="reading-time">⏱ 5 분</span>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>네이버 블로그를 시작하면서 아쉬웠던 점은 <strong>마크다운(Markdown)</strong> 언어를 지원하지 않는다는 점이었습니다. 그래서 <strong>Markdown here</strong> 라는 크롬 익스텐션을 이용해서 마크다운으로 렌더링하고 에디터에 붙여넣는 방식으로 블로그를 작성했습니다.</p>
+<p>문제는 네이버 블로그의 <strong>스마트 에디터</strong> 와 호환이 제대로 되지 않는다는 점이었습니다. 열심히 작성했던 포스트가 모바일로 수정하면 깨져버리고, 마크다운에서 <code>code</code>를 작성하면 개행이 먹질 않는 등 문제가 있었습니다. 결국엔 내용은 마크다운 에디터로 작성을 하고 포스트할 때 이미지와 코드는 스마트 에디터 이용해서 작성합니다. 이중, 삼중으로 손이 많이 가는 작업이죠 ㅠㅠ</p>
+<p><img src="/images/hexo/hexo_index.png" alt="https://hexo.io/"></p>
+<p>대체할 블로그를 찾던 중 제 마음에 든 놈은 이겁니다. <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> 라는 블로그 프레임워크인데 말그대로 쉽고 빠르고 강력합니다. 워드프레스처럼 어렵지도 않고 네이버보다는 내 맘대로 커스터마이징 할 수 있어서 마음에 쏙 들더군요.</p>
+<p>Hexo는 <strong>github pages</strong>를 이용한 블로그입니다. <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Pages</a> 는 github 유저와 프로젝트의 정적인(static) 홈페이지를 자동으로 만들어주고 <code>github.io</code> 도메인으로 호스팅해주는 서비스입니다. 즉, 서버의 내용을 github 에 push만 하면 실시간 적용됩니다. 아주 간단하죠?</p>
+<ul>
+<li>Command Line 으로 간편하게 포스트 생성 및 관리</li>
+<li>다양한 테마 적용 (github)</li>
+<li>간편한 플러그인 적용 (npm)</li>
+<li>Github Pages 를 이용한 호스팅</li>
+<li>마크다운 (Markdown) 지원</li>
+</ul>
+<p>하지만 아무리 쉽다고 해도 어느정도 <strong>웹 프로그래밍에 대한 지식이 있는 사람</strong> 에 한합니다. 커맨드라인에서 작업을 하고, 레이아웃이나 템플릿 등을 이해하려면 기본적으로 <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>에 대해 알아야 할 것이고, git 의 개념에 대해서도 알아야할 것이고, 포스트도 마크다운으로 작성하니 일반 사람들에게는 아무래도 생소하고 어렵게 느껴지겠죠.</p>
+<h2 id="github-프로젝트-만들기">Github 프로젝트 만들기</h2>
+<p>먼저 블로그의 각종 설정과 포스트를 관리할 github repository를 먼저 만듭니다. <a href="https://github.com/" rel="external nofollow noopener noreferrer" target="_blank">github.com</a>에 접속해 <code>New Repository</code>로 새로운 저장소를 만듭니다.</p>
+<p>여기서 주의할 점이 사용자 페이지와 프로젝트 페이지 만드는 법이 다릅니다. 두 사이트의 가장 큰 차이는 <strong>url</strong> 입니다. url이 완전 달라집니다. 사용자 페이지의 경우 <code>username.github.io</code> 이렇게 만들어지지만, <code>http://username.github.io/repository</code> 이렇게 만들어집니다. 주소 자체를 루트로 가져가지 못하고 서브디렉토리가 루트가 됩니다.</p>
+<p>저도 처음에는 잘 몰라서 프로젝트 페이지로 만들었고 원래 url이 이런가보다 하고 잘 쓰다가 나중에 페이스북 도메인 인사이트 등록할 때 루트가 아니라서 안된다고 나와서 충격받았습니다… 그래서 다시 만드느라 고생했네요. 사용처가 분명히 다르니, 계정 대표 블로그라면 유저 페이지로 만드시길 바랍니다.</p>
+<p>유저 페이지로 만들기 위해서는 repository 이름을 <code>username.github.io</code>으로 만드셔야 합니다.</p>
+<p>저장소를 만드신 후에 clone 받아서 <code>index.html</code>만 넣어주시면 바로 접속 가능합니다. 하지만 우리는 <strong>Hexo</strong> 를 설치할 것이니까 그대로 진행합니다.</p>
+<h2 id="설치하기">설치하기</h2>
+<p>이번엔 Hexo를 설치해보죠. <strong>Node.js</strong> 와 <strong>Git</strong> 이 설치되어 있다면 아주 간단하게 설치할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h2 id="시작하기">시작하기</h2>
+<p>블로그 파일을 저장할 폴더를 하나 만듭니다. 여기에 블로그의 기본적인 구조를 만들겁니다. 이름을 myBlog라고 해보죠.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init myBlog</span><br><span class="line">$ cd myBlog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>그리고 나면 다음과 같은 폴더구조가 생성됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>바로 로컬서버를 띄워 확인해볼 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>그러면 <code>localhost:4000</code> 에 접속하라고 뜨네요. 초기 상태의 블로그가 만들어졌습니다.</p>
+<h2 id="설정하기">설정하기</h2>
+<p>Hexo 블로그는 generate (build) 과정 후에 생성되는 <code>public</code> 폴더만 있으면 어디든 배포할 수 있습니다. 이 중에 기본적으로 가장 많이 사용되는 것이 <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Pages</a> 입니다. Github Pages 는 깃허브 유저나 프로젝트의 페이지를 호스팅해주는 서비스입니다. 많은 개발자들이 쉽게 접근할 수 있는 github 계정이기도 하고, <code>github.io</code> 라는 도메인도 인기가 많습니다.</p>
+<p>먼저 Github 에 빌드된 결과물을 deploy 하기 위해서 <a href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noopener noreferrer" target="_blank">hexo-deployer-git</a> 플러그인을 설치해야 합니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
+<p>프로젝트 설정은 <code>_config.yaml</code> 파일을 수정하면 됩니다. 블로그의 전반적인 설정을 할 수 있는 파일입니다. 자세한 내용은 차근차근 알아보기로 하고 URL과 Deployment 부분을 다음과 같은 형식으로 지정해줍니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Writer,</span> <span class="string">IT</span> <span class="string">Blog</span>	<span class="comment"># 타이틀</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">Eirc</span> <span class="string">Han's</span> <span class="string">IT</span> <span class="string">Blog</span> <span class="string">using</span> <span class="string">Hexo</span> <span class="comment"># 서브 타이틀</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">Eirc</span> <span class="string">Han's</span> <span class="string">IT</span> <span class="string">Blog</span> <span class="string">using</span> <span class="string">Hexo</span> <span class="comment"># 블로그 설명</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Eric</span> <span class="string">Han</span> <span class="comment"># 저자 이름</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">en</span> <span class="comment"># 기본 언어. 다국어 지원</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Seoul</span> <span class="comment"># 해당 타임존 설정 (https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="attr">http://futurecreator.github.io/</span> <span class="comment"># 앞에서 만든 github page 주소</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/</span> <span class="comment"># 기본은 / 이고 만약 서브디렉토리 구조를 가진다면 루트를 지정하는 부분.</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:title/</span> <span class="comment"># 기본 permalink (고정 url). 새글 생성 시 자동으로 지정된 형식의 URL이 할당된다.</span></span><br><span class="line"><span class="attr">permalink_defaults:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/futureCreator/futurecreator.github.io.git</span></span><br></pre></td></tr></table></figure>
+<p>이제 github 도메인으로 접속하기 위해 배포를 합니다. github 에 push 해서 확인해보겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>혹은 이렇게 한 줄로 할 수도 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p>주로 로컬에서 포스트 작성, 설정 변경 등 작업을 하고 다 되면 배포하는 식으로 작업합니다. 배포가 되면 <code>username.github.io</code> 으로 접속해서 확인합니다. 제 경우에는 <a href="futurecreator.github.io">futurecreator.github.io</a> 입니다.</p>
+<h2 id="포스트-작성하기">포스트 작성하기</h2>
+<p>이번에는 새 글을 하나 작성해보죠. 커맨드라인에서 다음과 같이 포스트를 생성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post &apos;post name&apos;</span><br></pre></td></tr></table></figure>
+<p>그러면 <code>[blogFolder]/source/_posts</code>에 해당 이름의 새로운 마크다운 파일이 생성됩니다. 마크다운 파일을 열어 보면 맨 앞에 제목과 생성 날짜가 자동으로 들어가는데 이걸 <strong>front-matter</strong> 라고 합니다. 여러가지 내용이 들어갈 수 있는데 그냥 제목만 입력해보죠. 원하는 제목으로 수정하고 내용을 작성한 후에 로컬서버에서 확인해봅니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>잘 보인다면 서버에 배포하고 확인해봅시다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p>Hexo를 설치하고 새 포스트를 작성하는 것까지 알아봤습니다. 길어보이지만 실제로는 거의 작업이 없습니다. 자세한 내용은 블로그 내 다른 포스트와 <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">Hexo Docs</a>를 참고하세요.</p>
+<p>다음 번엔 테마를 바꾸고 여러 기능을 추가해보겠습니다.</p>
+<h3 id="related-posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
+</li>
+<li>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
+</li>
+<li>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
+</li>
+<li>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
+</li>
+<li>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
+</li>
+<li>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+</ul>
+
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="medium" href="https://medium.com/@fcreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-medium"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/14/hexo-apply-hueman-theme/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo 추천 테마, Hueman 적용하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://fc-yume.com/" rel="external nofollow noopener noreferrer" target="_blank">yume</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-kasa.com/" rel="external nofollow noopener noreferrer" target="_blank">kasa</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-jam-dump.com/" rel="external nofollow noopener noreferrer" target="_blank">dump</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo.io</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer" target="_blank">블로거 후원하기</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2018 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'http://futurecreator.github.io/2016/06/14/get-started-with-hexo/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+

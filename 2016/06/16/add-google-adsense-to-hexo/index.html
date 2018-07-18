@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+    
+        <title>
+            
+                Hexo 블로그에 구글 애드센스(Adsense) 추가하기 |
+                    
+                        Writer, IT Blog
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+            <meta name="keywords" content="hexo,google,adsense">
+        
+
+        
+        <meta name="description" content="블로그가 광고로 지저분해지는 게 마냥 좋은 건 아니지만, 그래도 광고 수입을 포기할 수 없죠. 인터넷 뉴스 사이트처럼 광고로 점칠되어 있는 정도가 아니라면 괜찮을 것 같습니다. 내용에 읽는데 무리가 없되 적당히 눈에 잘 띄는 곳에 설치해보겠습니다.  애드센스 광고 생성하기 애드센스 승인이 나셨다면 이제 광고를 달 수 있습니다. 애드센스 홈페이지 에서 광고를">
+<meta name="keywords" content="hexo,google,adsense">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">
+<meta property="og:url" content="http://futurecreator.github.io/2016/06/16/add-google-adsense-to-hexo/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="블로그가 광고로 지저분해지는 게 마냥 좋은 건 아니지만, 그래도 광고 수입을 포기할 수 없죠. 인터넷 뉴스 사이트처럼 광고로 점칠되어 있는 정도가 아니라면 괜찮을 것 같습니다. 내용에 읽는데 무리가 없되 적당히 눈에 잘 띄는 곳에 설치해보겠습니다.  애드센스 광고 생성하기 애드센스 승인이 나셨다면 이제 광고를 달 수 있습니다. 애드센스 홈페이지 에서 광고를">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://futurecreator.github.io/images/adsense/adsense_thumb.jpg">
+<meta property="og:updated_time" content="2018-07-07T05:16:26.215Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">
+<meta name="twitter:description" content="블로그가 광고로 지저분해지는 게 마냥 좋은 건 아니지만, 그래도 광고 수입을 포기할 수 없죠. 인터넷 뉴스 사이트처럼 광고로 점칠되어 있는 정도가 아니라면 괜찮을 것 같습니다. 내용에 읽는데 무리가 없되 적당히 눈에 잘 띄는 곳에 설치해보겠습니다.  애드센스 광고 생성하기 애드센스 승인이 나셨다면 이제 광고를 달 수 있습니다. 애드센스 홈페이지 에서 광고를">
+<meta name="twitter:image" content="http://futurecreator.github.io/images/adsense/adsense_thumb.jpg">
+<meta name="twitter:creator" content="@fcreator_twt">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+        
+        
+        <link rel="canonical" href="http://futurecreator.github.io/2016/06/16/add-google-adsense-to-hexo/">
+        
+        
+            <link rel="icon" href="/images/favicions/favicon6.png">
+        
+        <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+        <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+        
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+        <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="https://kr.linkedin.com/in/dongho-han-97465327" rel="external nofollow noopener noreferrer" target="_blank">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-add-google-adsense-to-hexo" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 블로그에 구글 애드센스(Adsense) 추가하기
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2016/06/16/add-google-adsense-to-hexo/" class="article-date">
+    <time datetime="2016-06-16T06:35:16.000Z" itemprop="datePublished">2016-06-16</time>
+</a>
+            <!-- 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/adsense/">adsense</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/google/">google</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+ -->
+            <span class="reading-time">⏱ 12 분</span>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>블로그가 광고로 지저분해지는 게 마냥 좋은 건 아니지만, 그래도 광고 수입을 포기할 수 없죠. 인터넷 뉴스 사이트처럼 광고로 점칠되어 있는 정도가 아니라면 괜찮을 것 같습니다. 내용에 읽는데 무리가 없되 적당히 눈에 잘 띄는 곳에 설치해보겠습니다.</p>
+<p><img src="/images/adsense/adsense_thumb.jpg" alt="https://www.google.co.kr/adsense/start"></p>
+<h2 id="애드센스-광고-생성하기">애드센스 광고 생성하기</h2>
+<p>애드센스 승인이 나셨다면 이제 광고를 달 수 있습니다. <a href="https://www.google.com/adsense/" rel="external nofollow noopener noreferrer" target="_blank">애드센스 홈페이지</a> 에서 광고를 새로 만들고, 그 광고를 내 블로그에 붙이면 됩니다. 먼저, 애드센스 홈페이지에서 <strong>내 광고 &gt; 콘텐츠 &gt; 광고 단위</strong> 메뉴에 들어가서 새 광고를 만듭니다.</p>
+<p><img src="/images/adsense/new_ad.png" alt="https://www.google.com/adsense/"></p>
+<p>크기와 색상을 선택할 수 있는데 크기는 <strong>반응형</strong> 으로 선택합니다. 화면 크기와 위치에 따라 자동으로 크기가 변하기 때문에 같은 코드로 어느 위치에 넣어도 되니까 크게 신경 안써도 되고 편합니다.</p>
+<p>등록을 완료하면 고유의 코드가 생성됩니다. 이제 이걸 본인의 사이트에 넣으면 됩니다.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!-- 광고 --&gt;</span><br><span class="line">&lt;ins <span class="class"><span class="keyword">class</span></span>=<span class="string">"adsbygoogle"</span></span><br><span class="line">     style=<span class="string">"display:block"</span></span><br><span class="line">     data-ad-client=<span class="string">"ca-pub-1111111111111111"</span></span><br><span class="line">     data-ad-slot=<span class="string">"1111111111"</span></span><br><span class="line">     data-ad-format=<span class="string">"auto"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">(adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;&#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="hexo-의-레이아웃">Hexo 의 레이아웃</h2>
+<p>적용한 테마마다 형식이 조금씩 다르겠지만 보통 테마 폴더 안에 있는 <code>layout</code> 폴더에 <code>ejs</code> 파일들이 있습니다. <a href="http://www.embeddedjs.com/" rel="external nofollow noopener noreferrer" target="_blank">EJS</a> 는 Embedded JavaScript 로 HTML 내에 자바스크립트를 넣는 클라이언트-사이드 템플릿 언어입니다. HTML 내에 Java 소스를 넣는 JSP 처럼 말이죠.</p>
+<p>전체적인 레이아웃은 <code>layout.ejs</code> 를 보시면 됩니다. 제 사이트의 <code>layout.ejs</code> 를 예로 살펴보겠습니다.</p>
+<figure class="highlight js"><figcaption><span>layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(<span class="string">'common/head'</span>) %&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"wrap"</span>&gt;</span><br><span class="line">        &lt;%- partial(<span class="string">'common/header'</span>, <span class="literal">null</span>, &#123;<span class="attr">cache</span>: !config.relative_link&#125;) %&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"container"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"main-body container-inner"</span>&gt;</span><br><span class="line">                &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"main-body-inner"</span>&gt;</span><br><span class="line">                    &lt;section id=<span class="string">"main"</span>&gt;</span><br><span class="line">                        &lt;%- partial(<span class="string">'common/content-title'</span>) %&gt;</span><br><span class="line">                        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"main-body-content"</span>&gt;</span><br><span class="line">                            &lt;%- body %&gt;</span><br><span class="line">                        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;/</span>section&gt;</span><br><span class="line">                    &lt;%- partial(<span class="string">'common/sidebar'</span>) %&gt;</span><br><span class="line">                &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>div&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;%- partial('common/</span>footer<span class="string">', null, &#123;cache: !config.relative_link&#125;) %&gt;</span></span><br><span class="line"><span class="string">        &lt;%- partial('</span>common/scripts<span class="string">') %&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<p>전체적인 레이아웃을 결정하고 있는데 부분적인 소스는 ejs 파일로 따로 빼놓고 <code>&lt;%- partial() %&gt;</code> 을 이용해서 조립하고 있습니다. header, footer, sidebar 등 해당 경로에 ejs 파일로 따로 존재합니다. 이러한 표현식은 Hexo 에서 제공하는 <strong>Helper</strong>라는 표현식으로 코드를 쉽게 입력할 수 있도록 도와줍니다. 나중에 따로 다루겠습니다.</p>
+<h2 id="hexo-에-애드센스-코드-추가하기">Hexo 에 애드센스 코드 추가하기</h2>
+<p>이제 생성한 코드를 넣을 차례입니다. 저는 본문 앞과 뒤, 그래고 사이드에 추가했습니다. 본문 내용을 해치지 않으면서 처음과 끝이라 눈에도 잘 띄고 사이드바에 넣으면 스크롤을 내리는 중간에도 광고가 노출되기 때문입니다.</p>
+<h3 id="애드센스-코드-저장">애드센스 코드 저장</h3>
+<p>일단 여러군데 같은 소스로 활용하기 위해 <strong>반응형 광고</strong>를 만들었었죠. 복사한 코드를 테마 폴더 안 <code>layout/ads</code> 라는 폴더를 만들고 <code>adsense.ejs</code> 라는 파일로 저장합시다. (물론 아래 코드는 예시입니다.)</p>
+<figure class="highlight js"><figcaption><span>adsense.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!-- 광고 --&gt;</span><br><span class="line">&lt;ins <span class="class"><span class="keyword">class</span></span>=<span class="string">"adsbygoogle"</span></span><br><span class="line">     style=<span class="string">"display:block"</span></span><br><span class="line">     data-ad-client=<span class="string">"ca-pub-1111111111111111"</span></span><br><span class="line">     data-ad-slot=<span class="string">"1111111111"</span></span><br><span class="line">     data-ad-format=<span class="string">"auto"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">ins</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">(adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;&#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1-body-태그-위">1. <code>&lt;body&gt;</code> 태그 위</h3>
+<p><code>&lt;%- body %&gt;</code> 는 본문 내용의 템플릿입니다. 아까 살펴봤던 <code>layout.ejs</code> 에서 <code>&lt;%- body %&gt;</code> 앞에다가 <code>&lt;%- partial('ads/adsense') %&gt;</code> 를 넣으면 본문 상단에 광고가 표시됩니다. 이때 확장자 ejs 는 쓰면 안됩니다.</p>
+<figure class="highlight js"><figcaption><span>layout.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- partial(<span class="string">'common/head'</span>) %&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"wrap"</span>&gt;</span><br><span class="line">        &lt;%- partial(<span class="string">'common/header'</span>, <span class="literal">null</span>, &#123;<span class="attr">cache</span>: !config.relative_link&#125;) %&gt;</span><br><span class="line">        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"container"</span>&gt;</span><br><span class="line">            &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"main-body container-inner"</span>&gt;</span><br><span class="line">                &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"main-body-inner"</span>&gt;</span><br><span class="line">                    &lt;section id=<span class="string">"main"</span>&gt;</span><br><span class="line">                        &lt;%- partial(<span class="string">'common/content-title'</span>) %&gt;</span><br><span class="line">                        &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"main-body-content"</span>&gt;</span><br><span class="line">                            &lt;%- partial(<span class="string">'ads/adsense'</span>) %&gt;</span><br><span class="line">                            &lt;%- body %&gt;</span><br><span class="line">                        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">                    &lt;/</span>section&gt;</span><br><span class="line">                    &lt;%- partial(<span class="string">'common/sidebar'</span>) %&gt;</span><br><span class="line">                &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">            &lt;/</span>div&gt;</span><br><span class="line">        &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">        &lt;%- partial('common/</span>footer<span class="string">', null, &#123;cache: !config.relative_link&#125;) %&gt;</span></span><br><span class="line"><span class="string">        &lt;%- partial('</span>common/scripts<span class="string">') %&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-본문-하단">2. 본문 하단</h3>
+<p>본문 하단에 넣으려면 그냥 <code>&lt;%- body %&gt;</code> 아래에다 넣으면 될까요? 그러면 밑에 있는 footer 때문에 제대로 표시되질 않습니다. 본문 밑에 있는 댓글과 공유버튼 위쪽에 삽입해야 합니다. <code>layout/common/article.ejs</code> 를 확인해봅시다. <code>article.ejs</code> 는 본문 내용을 표현하고 있습니다.</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">article</span> <span class="attr">id</span>=<span class="string">"&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;"</span> <span class="attr">class</span>=<span class="string">"article article-single article-type-&lt;%= post.layout %&gt;"</span> <span class="attr">itemscope</span> <span class="attr">itemprop</span>=<span class="string">"blogPost"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-inner"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">post.link</span> || <span class="attr">post.title</span>) &#123; %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">header</span> <span class="attr">class</span>=<span class="string">"article-header"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">title</span>', &#123; <span class="attr">class_name:</span> '<span class="attr">article-title</span>' &#125;) %&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-subtitle"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">date</span>', &#123; <span class="attr">class_name:</span> '<span class="attr">article-date</span>', <span class="attr">date_format:</span> <span class="attr">null</span> &#125;) %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">tag</span>') %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-entry"</span> <span class="attr">itemprop</span>=<span class="string">"articleBody"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">post.content</span> %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">footer</span> <span class="attr">class</span>=<span class="string">"article-footer"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">share</span>/<span class="attr">index</span>', &#123; <span class="attr">post:</span> <span class="attr">post</span> &#125;) %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">comment</span>/<span class="attr">index</span>') %&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>article-footer</code> 를 보면 공유버튼 부분이 있고 본문 내용이 다 끝난 후에 <code>comment/index.ejs</code> 가 삽입되겠군요. <code>&lt;%- partial('ads/adsense') %&gt;</code>를 공유 버튼 위에 넣어줍니다.</p>
+<figure class="highlight js"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"article-entry"</span> itemprop=<span class="string">"articleBody"</span>&gt;</span><br><span class="line">	&lt;%- post.content %&gt;</span><br><span class="line">&lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">&lt;%- partial('ads/</span>adsense<span class="string">') %&gt;</span></span><br><span class="line"><span class="string">&lt;footer class="article-footer"&gt;</span></span><br><span class="line"><span class="string">    &lt;%- partial('</span>share/index<span class="string">', &#123; post: post &#125;) %&gt;</span></span><br><span class="line"><span class="string">&lt;/footer&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-사이드바">3. 사이드바</h3>
+<p>본문 상단에 광고가 있으니까 본문 중간 쯤 광고가 나오게 하기 위해서 사이드바 마지막 부분에 광고를 넣어보겠습니다. 사이드바 코드는 <code>layout/common/sidebar.ejs</code> 입니다.</p>
+<figure class="highlight html"><figcaption><span>sidebar.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aside</span> <span class="attr">id</span>=<span class="string">"sidebar"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"sidebar-toggle"</span> <span class="attr">title</span>=<span class="string">"Expand Sidebar"</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"toggle icon"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sidebar-top"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">__</span>('<span class="attr">sidebar.follow</span>') %&gt;</span>:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">"social-links"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">for</span> (<span class="attr">var</span> <span class="attr">i</span> <span class="attr">in</span> <span class="attr">theme.customize.social_links</span>) &#123; %&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.customize.social_links</span>[<span class="attr">i</span>]) &#123; %&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"social-tooltip"</span> <span class="attr">title</span>=<span class="string">"&lt;%= i %&gt;"</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(theme.customize.social_links[i]) %&gt;"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon fa fa-&lt;%= i %&gt;"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">is_post</span>()) &#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">nav</span>', &#123;<span class="attr">post:</span> <span class="attr">page</span>&#125;) %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"widgets-container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.widgets</span>) &#123; %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">theme.widgets.forEach</span>(<span class="attr">function</span>(<span class="attr">widget</span>) &#123; %&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">widget</span>/' + <span class="attr">widget</span>) %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>사이드바 상단에는 소셜링크와 아이콘들이 나열되고 그 뒤에 위젯들이 나오는군요. 위젯 밑에 넣으면 되겠습니다. <code>&lt;/aside&gt;</code> 위에 넣습니다.</p>
+<figure class="highlight html"><figcaption><span>sidebar.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"widgets-container"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">theme.widgets</span>) &#123; %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> <span class="attr">theme.widgets.forEach</span>(<span class="attr">function</span>(<span class="attr">widget</span>) &#123; %&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">widget</span>/' + <span class="attr">widget</span>) %&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">ads</span>/<span class="attr">adsense</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="확인하기">확인하기</h2>
+<p>로컬 서버에서는 광고가 잘 표시가 안되더군요. 표시가 되었다가 안되었다가 합니다. repository 에 푸쉬를 하고 확인해봅니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>확인해보면 광고 자리에 빈 칸이 제대로 들어가있으면 성공입니다. 처음 게시하는 광고는 게시한 후에 바로 나타나는 것이 아니라 구글봇이 크롤링하면서 광고를 확인해서 바꿔준다고 하네요. 시간은 30분 ~ 2시간 정도 걸린다고 합니다. 일단 빈 칸이 잘 보인다면 성공이니 잠시 기다려보시고 그래도 안된다면 소스에 문제가 있는 것입니다.</p>
+<p>저는 한 40분 정도 지나니까 광고가 제대로 보이더군요. 앞으로 얼마가 들어올진 모르겠지만 그래도 광고를 달고 나니 뿌듯합니다.</p>
+<h2 id="추가-페이지-수준-광고">추가: 페이지 수준 광고</h2>
+<p>페이지 수준 광고는 모바일 화면에서 포스트 상에 광고가 삽입되는 것이 아니라 사용자가 보는 페이지 단위로 삽입되는 광고입니다. 두 가지 종류가 있습니다.</p>
+<ul>
+<li><strong>앵커/오버레이</strong>: 화면 하단에 배너가 화면을 움직여도 둥둥 떠나니면서 보이는 방식</li>
+<li><strong>모바일 전면광고</strong>: 화면 이동 시에 전체 화면에 나타나는 광고</li>
+</ul>
+<p>앱스토어나 구글 플레이에서 다운받은 무료 앱을 생각해보시면 될 것 같습니다. 앵커는 화면 하단에 둥둥 떠다니는 배너를 말하고, 모바일 전면광고는 앱 사용 도중에 전체 화면으로 광고가 떠서 x를 눌러 닫는 광고를 말합니다. 둘 다 모바일 상에서만 동작합니다.</p>
+<p><img src="/images/adsense/ad_page.jpg" alt="페이지 수준 광고"></p>
+<p>페이지 수준 광고는 ‘광고 단위’ 메뉴가 아닌 <code>내 광고 &gt; 콘텐츠 &gt; 페이지 수준 광고 (베타)</code> 메뉴에 있습니다. 여기서 적용하려는 광고 형식을 선택해서 활성화한 후에 하단에 ‘코드 가져오기’ 를 눌러서 코드를 복사합니다. <code>ads/adsense_page</code> 폴더에 <code>adsense_page.ejs</code> 라는 파일을 만들어 붙여넣습니다.</p>
+<figure class="highlight js"><figcaption><span>adsense_page.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    (adsbygoogle = <span class="built_in">window</span>.adsbygoogle || []).push(&#123;</span><br><span class="line">      google_ad_client: <span class="string">"ca-pub-1111111111111111"</span>,</span><br><span class="line">      enable_page_level_ads: <span class="literal">true</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>이 코드는 <code>&lt;head&gt;</code> 안에 넣으라고 되어있네요. 헤더는 <code>layout/common/head.ejs</code> 안에 있습니다. 맨 마지막 부분에 추가하겠습니다.</p>
+<figure class="highlight js"><figcaption><span>head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;!-- 중략 --&gt;</span><br><span class="line">	&lt;%- css(<span class="string">'css/style'</span>) %&gt;</span><br><span class="line">    &lt;%- js(<span class="string">'vendor/jquery/2.0.3/jquery.min'</span>) %&gt;</span><br><span class="line">    &lt;%- partial(<span class="string">'plugin/scripts'</span>, &#123; <span class="attr">isHead</span>: <span class="literal">true</span> &#125;) %&gt;</span><br><span class="line"></span><br><span class="line">    &lt;%- partial(<span class="string">'ads/adsense_page'</span>) %&gt;</span><br><span class="line">&lt;<span class="regexp">/head&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/images/adsense/adsense_page_test.jpg" alt="페이지 수준 광고 테스트"></p>
+<p>잘 뜨는지 테스트를 해보겠습니다. 크롬 브라우저를 기준으로, 페이지를 개발자 도구를 이용해서 엽니다. 그 후에 ‘Toogle Device Toolbar’ 라는 메뉴로 화면을 모바일 형식으로 변환합니다. 그리고 나서 테스트하려는 url 맨 뒤에 <code>#googleads</code> 라는 해시태그를 붙이고 refresh 하면 상단에 페이지 수준 관고 테스트가 표시됩니다. 앵커와 모바일 전면광고 두 가지 옵션이 중 선택해서 화면에 어떻게 보이는지 테스트할 수 있습니다.</p>
+<p>페이지 수준 광고는 어떻게 보면 사용자 입장에서 좀 짜증날 수도 있습니다. 사용자 환경을 저해하는 요인이 될 수 있죠. 그래도 사용자 환경을 저해하지 않는 한에서 광고가 표시된다고 하니 광고를 추가하기로 했습니다. 다음번 포스트에서는 Hexo 의 템플릿과 Helper 에 대해서 알아보겠습니다.</p>
+<h3 id="related-posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+<li>
+<a href="/2016/06/28/google-200-ranking-factors-korean-list/" title="구글 검색 상위 노출을 위한 200가지 팁">구글 검색 상위 노출을 위한 200가지 팁</a>
+</li>
+</ul>
+
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="medium" href="https://medium.com/@fcreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-medium"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/17/google-search-how-to-work/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            구글(Google) 검색 원리와 검색이 잘 되게 하는 방법
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/16/opengraph-social-meta-tag/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://fc-yume.com/" rel="external nofollow noopener noreferrer" target="_blank">yume</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-kasa.com/" rel="external nofollow noopener noreferrer" target="_blank">kasa</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-jam-dump.com/" rel="external nofollow noopener noreferrer" target="_blank">dump</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo.io</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer" target="_blank">블로거 후원하기</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2018 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'http://futurecreator.github.io/2016/06/16/add-google-adsense-to-hexo/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+

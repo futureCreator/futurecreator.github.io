@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+    
+        <title>
+            
+                macOS 기본 터미널 개선하기 |
+                    
+                        Writer, IT Blog
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+            <meta name="keywords" content="mac,osx,macos,terminal,iterm2,zsh,ohmyzsh">
+        
+
+        
+        <meta name="description" content="macOS 는 유닉스 기반의 OS 로 개발을 하다보면 터미널을 많이 사용하기 마련인데 기본으로 제공되는 터미널은 너무 빈약합니다. PuTTY 같은 다른 터미널 클라이언트를 사용했던 분들이라면 더더욱 그럴거구요. 기본적인 색깔 구분도 안되서 사용이 쉽지 않았습니다. iTerm2 + zsh + oh my zsh 터미널 관련 라이브러리들을 찾다보니 zsh 라는">
+<meta name="keywords" content="mac,osx,macos,terminal,iterm2,zsh,ohmyzsh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macOS 기본 터미널 개선하기">
+<meta property="og:url" content="http://futurecreator.github.io/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="macOS 는 유닉스 기반의 OS 로 개발을 하다보면 터미널을 많이 사용하기 마련인데 기본으로 제공되는 터미널은 너무 빈약합니다. PuTTY 같은 다른 터미널 클라이언트를 사용했던 분들이라면 더더욱 그럴거구요. 기본적인 색깔 구분도 안되서 사용이 쉽지 않았습니다. iTerm2 + zsh + oh my zsh 터미널 관련 라이브러리들을 찾다보니 zsh 라는">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://ohmyz.sh/img/themes/nebirhos.jpg">
+<meta property="og:updated_time" content="2018-07-07T05:15:06.526Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="macOS 기본 터미널 개선하기">
+<meta name="twitter:description" content="macOS 는 유닉스 기반의 OS 로 개발을 하다보면 터미널을 많이 사용하기 마련인데 기본으로 제공되는 터미널은 너무 빈약합니다. PuTTY 같은 다른 터미널 클라이언트를 사용했던 분들이라면 더더욱 그럴거구요. 기본적인 색깔 구분도 안되서 사용이 쉽지 않았습니다. iTerm2 + zsh + oh my zsh 터미널 관련 라이브러리들을 찾다보니 zsh 라는">
+<meta name="twitter:image" content="http://ohmyz.sh/img/themes/nebirhos.jpg">
+<meta name="twitter:creator" content="@fcreator_twt">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+        
+        
+        <link rel="canonical" href="http://futurecreator.github.io/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/">
+        
+        
+            <link rel="icon" href="/images/favicions/favicon6.png">
+        
+        <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/vendor/titillium-web/styles.css">
+        <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+        
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+        <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+        <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu:300" rel="stylesheet">
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="https://kr.linkedin.com/in/dongho-han-97465327" rel="external nofollow noopener noreferrer" target="_blank">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Reviews/">Reviews</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-mac-os-better-terminal-iterm2-zsh-oh-my-zsh" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        macOS 기본 터미널 개선하기
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/" class="article-date">
+    <time datetime="2018-05-30T14:27:27.000Z" itemprop="datePublished">2018-05-30</time>
+</a>
+            <!-- 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iterm2/">iterm2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/macos/">macos</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ohmyzsh/">ohmyzsh</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/osx/">osx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/terminal/">terminal</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zsh/">zsh</a></li></ul>
+ -->
+            <span class="reading-time">⏱ 5 분</span>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>macOS 는 유닉스 기반의 OS 로 개발을 하다보면 터미널을 많이 사용하기 마련인데 기본으로 제공되는 터미널은 너무 빈약합니다. PuTTY 같은 다른 터미널 클라이언트를 사용했던 분들이라면 더더욱 그럴거구요. 기본적인 색깔 구분도 안되서 사용이 쉽지 않았습니다.</p>
+<h2 id="iterm2-zsh-oh-my-zsh">iTerm2 + zsh + oh my zsh</h2>
+<p>터미널 관련 라이브러리들을 찾다보니 zsh 라는 쉘과 Oh my zsh 라는 프레임워크 그리고  iTerm2 라는 애플리케이션을 조합해서 많이들 사용하시더라구요. 어떤 점이 좋아서 사용하는지 하나씩 확인해보겠습니다.</p>
+<h2 id="z-shell-zsh">Z shell (zsh)</h2>
+<p>일단 기본 쉘인 bash 를 대체할만한 쉘을 살펴보겠습니다. <a href="http://www.zsh.org/" rel="external nofollow noopener noreferrer" target="_blank">zsh</a> 는 기존 bash, ksh, tcsh 의 일부 기능과 유용한 기능을 더한 쉘입니다.</p>
+<blockquote>
+<p>Zsh is a shell designed for interactive use, although it is also a powerful scripting language. Many of the useful features of bash, ksh, and tcsh were incorporated into zsh; many original features were added.</p>
+</blockquote>
+<p>zsh 를 사용하면서 느낄 수 있는 장점들은 다음과 같습니다.</p>
+<ul>
+<li>컨텍스트 기반 자동완성 기능 (tab)</li>
+<li>다양하고 예쁜 테마와 플러그인</li>
+<li>스펠링 체크</li>
+<li>history 기능</li>
+</ul>
+<h3 id="zsh-설치하기">zsh 설치하기</h3>
+<p>기본적으로 zsh 가 설치되어 있습니다. 다음 명령어로 현재 버전을 확인할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ zsh --version</span><br><span class="line">zsh 5.3 (x86_64-apple-darwin17.5.0)</span><br></pre></td></tr></table></figure>
+<p>최신 버전이 아닐 경우 다음 명령어로 업그레이드 해줄 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew update</span><br><span class="line">$ brew upgrade zsh</span><br></pre></td></tr></table></figure>
+<p>업그레이드 후 터미널을 재시작해보면 새로운 버전이 적용된 것을 확인할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ zsh --version</span><br><span class="line">zsh 5.5.1 (x86_64-apple-darwin17.5.0)</span><br></pre></td></tr></table></figure>
+<h3 id="기본-shell-변경하기">기본 shell 변경하기</h3>
+<p>현재 사용하고 있는 쉘을 확인해보겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ echo $SHELL</span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure>
+<p>기본적으로 사용가능한 쉘은 다음 명령어로 확인할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
+<p>결과를 보시면 <code>/bin/zsh</code> 라는 경로에 zsh 가 이미 설치되어있는 걸 확인할 수 있는데요, 우리가 brew 로 새롭게 설치한 최신 버전을 등록해줘야 합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># List of acceptable shells for chpass(1).</span><br><span class="line"># Ftpd will not allow users to connect who are not using</span><br><span class="line"># one of these shells.</span><br><span class="line"></span><br><span class="line">/bin/bash</span><br><span class="line">/bin/csh</span><br><span class="line">/bin/ksh</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure>
+<p>현재 zsh 경로를 확인하고 <code>/etc/shells</code> 를 열어 맨 마지막에 추가해줍니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ which zsh</span><br><span class="line">/usr/local/bin/zsh</span><br><span class="line">$ vi /etc/shells</span><br></pre></td></tr></table></figure>
+<p>그럼 다음 명령어로 기본 쉘을 변경합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ chsh -s `which zsh`</span><br></pre></td></tr></table></figure>
+<p>만약 <code>/etc/shells</code>에 zsh 경로를 추가하지 않았다면 다음과 같은 에러가 발생합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh: /usr/local/bin/zsh: non-standard shell</span><br></pre></td></tr></table></figure>
+<h2 id="oh-my-zsh">Oh My Zsh</h2>
+<p>zsh 는 특히나 Oh my zsh 를 이용해서 테마와 플러그인들을 적용하는 것이 유용합니다. zsh 의 기능을 확장시켜주고 테마와 플러그인을 사용할 수 있도록 도와주는 것이 <a href="http://ohmyz.sh/" rel="external nofollow noopener noreferrer" target="_blank">Oh my zsh</a> 입니다.</p>
+<blockquote>
+<p>Oh-My-Zsh is an open source, community-driven framework for managing your ZSH configuration. It comes bundled with a ton of helpful functions, helpers, plugins, themes, and a few things that make you shout…</p>
+</blockquote>
+<h3 id="oh-my-zsh-설치하기">oh my zsh 설치하기</h3>
+<p>다음 명령어를 이용해서 설치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="강력해진-자동완성-tab">강력해진 자동완성 tab</h3>
+<p>tab 을 이용해서 자동완성 기능을 이용하는데 좀 더 파워풀합니다. tab 을 누르면 옵션을 보여주고 한번 더 탭을 누르면 방향키를 이용해 선택할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">% cd d</span><br><span class="line">Developer/  data/       dev/</span><br></pre></td></tr></table></figure>
+<p>이 뿐만 아니라 각종 명령어의 다양한 옵션들을 보여줍니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">% git r</span><br><span class="line">rebase  -- forward-port local commits to the updated upstream head</span><br><span class="line">reset   -- reset current HEAD to the specified state</span><br><span class="line">rm      -- remove files from the working tree and from the index</span><br></pre></td></tr></table></figure>
+<h3 id="히스토리">히스토리</h3>
+<p>폴더를 이동하다보면 바로 이전 폴더로 돌아가야할 때가 있습니다. 그럴 땐 다음 명령어면 쉽게 이동할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% cd -</span><br></pre></td></tr></table></figure>
+<p>그런데 이전의 이전 폴더로 가려면 어떻게 해야할까요? <code>cd -</code> 상태에서 탭을 누르면 여태까지 이동했던 폴더의 히스토리를 보여줍니다. 선택해서 이동할 수 있습니다 (최대 10개). 예시에서는 좀 간단한 폴더들이었지만 복잡한 폴더 구조를 넘나들 때는 더 유용합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">% cd -</span><br><span class="line">1 -- /dev</span><br><span class="line">2 -- /Users</span><br><span class="line">3 -- ~</span><br><span class="line">4 -- ~/Dev/hexo/myBlog</span><br><span class="line">5 -- ~/Dev</span><br></pre></td></tr></table></figure>
+<h3 id="spelling-체크">Spelling 체크</h3>
+<p>스펠링 체크를 이용해서 명령어를 잘못친 경우 바로잡아 줄 수 있습니다. 다음 명령어로 옵션을 켤 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">% setopt correct</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">% gut add</span><br><span class="line">zsh: correct &apos;gut&apos; to &apos;git&apos; [nyae]?</span><br></pre></td></tr></table></figure>
+<h3 id="상위-폴더로-이동하기">상위 폴더로 이동하기</h3>
+<p>다음은 bash 에서 상위 폴더로 이동하는 명령어죠</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ..</span><br></pre></td></tr></table></figure>
+<p>상위에 상위, 그 상위까지 올라가려면 좀 귀찮습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ../../..</span><br></pre></td></tr></table></figure>
+<p>oh my zsh 에서는 다음과 같이 점의 갯수를 이용해서 이동할 레벨을 지정할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">% cd ..   # 상위</span><br><span class="line">% cd ...  # 상위의 상위</span><br><span class="line">% cd .... # 상위의 상위의 상위</span><br></pre></td></tr></table></figure>
+<h3 id="테마-변경하기">테마 변경하기</h3>
+<p><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/themes" rel="external nofollow noopener noreferrer" target="_blank">테마</a> 에서 테마의 스크린샷을 확인하고 <code>~/.zshrc</code> 를 열고 테마명을 지정해주면 테마를 설정할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;robbyrussell&quot; # 기본 테마</span><br></pre></td></tr></table></figure>
+<p>어떤 테마들이 있는지 몇 개 살펴볼까요?</p>
+<p><img src="http://ohmyz.sh/img/themes/nebirhos.jpg" alt="nebirhos"><br>
+<img src="http://ohmyz.sh/img/themes/daveverwer.jpg" alt="daveverwer"><br>
+<img src="http://ohmyz.sh/img/themes/af-magic.jpg" alt="af-magic"><br>
+<img src="http://ohmyz.sh/img/themes/eastwood.jpg" alt="eastwood"><br>
+<img src="http://ohmyz.sh/img/themes/kolo.jpg" alt="kolo"><br>
+<img src="http://ohmyz.sh/img/themes/mh.jpg" alt="mh"></p>
+<p>테마가 너무 많아서 고르기 귀찮을 때는 켤 때마다 랜덤으로 테마를 바꿔줄 수도 있습니다. 저는 이걸 사용하는데 재밌네요.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;random&quot;</span><br></pre></td></tr></table></figure>
+<p>그럼 터미널을 켤 때마다 다음 메시지와 함께 랜덤으로 선택된 테마가 적용됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Last login: Wed May 30 20:33:02 on console</span><br><span class="line">[oh-my-zsh] Random theme &apos;/Users/fcreator/.oh-my-zsh/themes/sorin.zsh-theme&apos; loaded...</span><br></pre></td></tr></table></figure>
+<p>테마 기능이 필요없을 땐 다음과 같이 테마 기능을 끌 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ZSH_THEME=&quot;&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="iterm2">iTerm2</h2>
+<p><a href="https://www.iterm2.com/downloads.html" rel="external nofollow noopener noreferrer" target="_blank">iTerm2</a> 는 기본 터미널에 기능을 확장한 무료 애플리케이션입니다. 저 같은 경우는 기본 터미널에 oh my zsh 면 충분해서 잘 사용하지 않지만, 쉘을 많이 사용하시는 분들이라면 유용하실 것 같습니다.</p>
+<p><a href="https://www.iterm2.com/downloads.html" rel="external nofollow noopener noreferrer" target="_blank">다운로드 페이지</a></p>
+<h3 id="유용한-단축키">유용한 단축키</h3>
+<h4 id="터미널-검색하기">터미널 검색하기</h4>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">f</kbd>
+<h4 id="검색-결과에서-탐색하기">검색 결과에서 탐색하기</h4>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Shift⇧</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">g</kbd>
+<h4 id="전역-검색하기">전역 검색하기</h4>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Option⌥</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">e</kbd>
+<h3 id="클립보드-이력보기">클립보드 이력보기</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Shift⇧</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">h</kbd>
+<h3 id="탭-열기">탭 열기</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">t</kbd>
+<h3 id="탭-차례로-이동">탭 차례로 이동</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">tab</kbd>
+<h3 id="특정-탭-이동-탭-번호">특정 탭 이동 (탭 번호)</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">1</kbd>
+<h3 id="창-세로-분할">창 세로 분할</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">d</kbd>
+<h3 id="창-가로-분할">창 가로 분할</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Shift⇧</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">d</kbd>
+<h3 id="화면-포커스-이동">화면 포커스 이동</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">[</kbd> 또는 <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">]</kbd>
+<h3 id="현재-포커스-찾기">현재 포커스 찾기</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">/</kbd>
+<h3 id="탭-닫기">탭 닫기</h3>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">w</kbd>
+<p>이상으로 기본 터미널을 대체할 수 있는 방법을 살펴봤습니다. 이 외에도 폰트를 마음에 드는 폰트로 바꾸는 것도 좋겠네요.</p>
+
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="medium" href="https://medium.com/@fcreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-medium"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/02/java-string-concatenation/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java 문자열 연결 방법 비교
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/05/29/vertx-running-blocking-code/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Vert.x Blocking Code 처리하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://fc-yume.com/" rel="external nofollow noopener noreferrer" target="_blank">yume</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-kasa.com/" rel="external nofollow noopener noreferrer" target="_blank">kasa</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-jam-dump.com/" rel="external nofollow noopener noreferrer" target="_blank">dump</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo.io</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer" target="_blank">블로거 후원하기</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2018 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'http://futurecreator.github.io/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+
