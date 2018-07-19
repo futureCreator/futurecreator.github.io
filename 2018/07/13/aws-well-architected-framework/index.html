@@ -25,10 +25,12 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-12T15:57:16.032Z">
+<meta property="og:image" content="https://i.octopus.com/docs/images/3048182/3278255.png">
+<meta property="og:updated_time" content="2018-07-19T11:42:52.398Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS Well-Architected Framework 백서 (번역&#x2F;요약)">
 <meta name="twitter:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
+<meta name="twitter:image" content="https://i.octopus.com/docs/images/3048182/3278255.png">
 <meta name="twitter:creator" content="@fcreator_twt">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
@@ -198,7 +200,7 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architect/">architect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certified/">certified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/framework/">framework</a></li></ul>
  -->
-            <span class="reading-time">⏱ 3 분</span>
+            <span class="reading-time">⏱ 4 분</span>
         </div>
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 포스트는 AWS 자격증 스터디에서 <a href="https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf" rel="external nofollow noopener noreferrer" target="_blank">AWS Well-Architected Framework</a> 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.</p>
@@ -300,6 +302,43 @@ ga('send', 'pageview');
 <li>진화 Evolve</li>
 </ol>
 <h4 id="모범사례">모범사례</h4>
+<p><em>Prepare</em></p>
+<ul>
+<li>효과적인 준비가 운영 우수성을 이끈다.</li>
+<li>워크로드 또는 변경사항이 운영 환경으로 이동할 준비가 되었는지 확인하고 지원할 수 있는 매커니즘을 만들어야 한다.</li>
+<li>AWS 를 이용하면 클라우드에서 코드로 안전하게 실험하고, 운영 절차를 개발하고 실패를 연습할 수 있다. AWS CloudFormation 을 이용해 일관되고, 템플릿화, 샌드박스 개발, 테스트, 운영 환경을 구축할 수 있다.</li>
+<li>AWS 를 이용하면 모든 레이어에서 다양한 로그 컬렉션으로 워크로드를 볼 수 있다. (Amazon CloudWatch, AWS CloudTrail, VPC Flow Logs)</li>
+</ul>
+<p>운영 우수성을 위한 질문</p>
+<ul>
+<li>
+<p><strong>OPS 1: 운영에서 우선순위를 결정하는 요인은 무엇인가?</strong></p>
+<ul>
+<li>비즈니스 성과 달성을 위한 운영 지원을 알아보기 위해 운영 우선순위를 정할 때 비즈니스팀과 개발팀을 모두 참여시킨다.</li>
+<li>컴플라이언스 요구사항이나 산업 표준 등 외부 요소를 고려해서 정한다.</li>
+<li>상충되는 여러 요소 (가격, 스피드 등)의 리스크를 평가해 결정한다.</li>
+</ul>
+</li>
+<li>
+<p><strong>OPS 2: 작동 가능성을 높이기 위해 어떻게 설계할 것인가?</strong></p>
+<ul>
+<li>복잡도를 줄이고 개발 편의를 최대화할 수 있는 표준 설계를 만들고, 지속적으로 개선해나간다.</li>
+<li>모범 사례와 지침을 공유한다.</li>
+<li>클라우드의 이점을 활용한 설계 (탄력성, 온디맨드 확장성, 쓴만큼만 내는 과금, 자동화 등)</li>
+<li>고객의 행동을 도구들(logs, metric, counters 등)로 측정하고, 인사이트를 발견해 고객 경험을 향상시킨다</li>
+<li>결함을 줄이고 문제 해결을 간소화하며 플로우를 개선하는 방법을 구현해야 한다. 빠른 피드백, 리팩토링 등</li>
+<li>배포의 리스크를 줄인다 : 자동화된 테스트, 작은 사이즈로 조금씩 자주 배포, 테스트, <a href="https://octopus.com/docs/deployment-patterns/canary-deployments" rel="external nofollow noopener noreferrer" target="_blank">canary 배포</a>, one-box 배포, <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html" rel="external nofollow noopener noreferrer" target="_blank">blue-green 배</a>포 등</li>
+</ul>
+<p><a href="https://octopus.com/docs/deployment-patterns/canary-deployments#" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://i.octopus.com/docs/images/3048182/3278255.png" alt="https://octopus.com/docs/deployment-patterns/canary-deployments"></a></p>
+<p><img src="https://martinfowler.com/bliki/images/blueGreenDeployment/blue_green_deployments.png" alt="https://martinfowler.com/bliki/BlueGreenDeployment.html"></p>
+</li>
+<li>
+<p><strong>OPS 3: 워크로드를 지원할 준비가 되었는지 어떻게 알 수 있나?</strong></p>
+<ul>
+<li>45페이지</li>
+</ul>
+</li>
+</ul>
 
         </div>
 

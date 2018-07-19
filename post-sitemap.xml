@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/07/13/aws-well-architected-framework/</loc>
+        <lastmod>2018-07-19T11:42:52.398Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
         <lastmod>2018-07-19T11:37:19.196Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +41,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/14/get-started-with-hexo/</loc>
         <lastmod>2018-07-16T15:34:01.502Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/13/aws-well-architected-framework/</loc>
-        <lastmod>2018-07-12T15:57:16.032Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

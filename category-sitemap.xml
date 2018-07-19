@@ -56,13 +56,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/categories/AWS/</loc>
-        <lastmod>2018-07-18T13:46:51.285Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/categories/Hexo/</loc>
         <lastmod>2018-07-18T13:53:29.629Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -79,6 +72,13 @@
     <url>
         <loc>http://futurecreator.github.io/categories/Programming/Java/</loc>
         <lastmod>2018-07-19T11:37:19.196Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/AWS/</loc>
+        <lastmod>2018-07-19T11:42:52.398Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
