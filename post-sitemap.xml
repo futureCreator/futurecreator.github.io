@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
+        <lastmod>2018-07-20T08:05:49.754Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
+        <lastmod>2018-07-20T08:04:30.796Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/07/20/what-are-the-best-markdown-editor/</loc>
         <lastmod>2018-07-19T15:42:25.534Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +41,6 @@
     <url>
         <loc>http://futurecreator.github.io/2018/07/13/aws-well-architected-framework/</loc>
         <lastmod>2018-07-19T11:42:52.398Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
-        <lastmod>2018-07-19T11:37:19.196Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -856,27 +856,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/java/</loc>
-        <lastmod>2018-07-19T11:37:19.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/lambda/</loc>
-        <lastmod>2018-07-19T11:37:19.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/basics/</loc>
-        <lastmod>2018-07-19T11:37:19.196Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/aws/</loc>
         <lastmod>2018-07-19T11:42:52.398Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -942,6 +921,41 @@
     <url>
         <loc>http://futurecreator.github.io/tags/editor/</loc>
         <lastmod>2018-07-19T15:42:25.534Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/basics/</loc>
+        <lastmod>2018-07-20T08:04:30.796Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/java/</loc>
+        <lastmod>2018-07-20T08:05:49.754Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/lambda/</loc>
+        <lastmod>2018-07-20T08:05:49.754Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/type-inference/</loc>
+        <lastmod>2018-07-20T08:05:49.754Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
+        <lastmod>2018-07-20T08:05:49.754Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
