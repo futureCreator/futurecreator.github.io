@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/07/20/what-are-the-best-markdown-editor/</loc>
+        <lastmod>2018-08-01T12:42:08.535Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/</loc>
         <lastmod>2018-08-01T12:09:36.440Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -33,14 +41,6 @@
     <url>
         <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
         <lastmod>2018-07-20T08:04:30.796Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/20/what-are-the-best-markdown-editor/</loc>
-        <lastmod>2018-07-19T15:42:25.534Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
