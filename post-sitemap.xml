@@ -7,6 +7,30 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-method-references/</loc>
+        <lastmod>2018-08-01T15:08:53.863Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
+        <lastmod>2018-08-01T15:06:47.713Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
+        <lastmod>2018-08-01T15:04:45.378Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/07/20/what-are-the-best-markdown-editor/</loc>
         <lastmod>2018-08-01T12:42:08.535Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,22 +49,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/20/mysql-mariadb-isntall-settings-mac-windows/</loc>
         <lastmod>2018-08-01T11:40:35.741Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
-        <lastmod>2018-07-20T15:19:44.328Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
-        <lastmod>2018-07-20T08:04:30.796Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
