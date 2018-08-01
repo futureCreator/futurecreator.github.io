@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/</loc>
+        <lastmod>2018-08-01T11:47:22.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2016/06/20/mysql-mariadb-isntall-settings-mac-windows/</loc>
+        <lastmod>2018-08-01T11:40:35.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
         <lastmod>2018-07-20T15:19:44.328Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -185,14 +201,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/</loc>
         <lastmod>2018-07-07T05:16:08.785Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/20/mysql-mariadb-isntall-settings-mac-windows/</loc>
-        <lastmod>2018-07-07T05:16:04.086Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

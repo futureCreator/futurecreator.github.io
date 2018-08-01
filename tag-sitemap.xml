@@ -513,41 +513,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/mysql/</loc>
-        <lastmod>2018-07-07T05:16:04.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/mariadb/</loc>
-        <lastmod>2018-07-07T05:16:04.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/install/</loc>
-        <lastmod>2018-07-07T05:16:04.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/settings/</loc>
-        <lastmod>2018-07-07T05:16:04.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/mac/</loc>
-        <lastmod>2018-07-07T05:16:04.086Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/tag/</loc>
         <lastmod>2018-07-07T05:16:08.785Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -898,13 +863,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/windows/</loc>
-        <lastmod>2018-07-19T15:42:25.534Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/markdown/</loc>
         <lastmod>2018-07-19T15:42:25.534Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -956,6 +914,55 @@
     <url>
         <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
         <lastmod>2018-07-20T15:19:44.328Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/mariadb/</loc>
+        <lastmod>2018-08-01T11:40:35.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/install/</loc>
+        <lastmod>2018-08-01T11:40:35.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/settings/</loc>
+        <lastmod>2018-08-01T11:40:35.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/mac/</loc>
+        <lastmod>2018-08-01T11:40:35.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/windows/</loc>
+        <lastmod>2018-08-01T11:40:35.741Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/mysql/</loc>
+        <lastmod>2018-08-01T11:47:22.578Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/installation/</loc>
+        <lastmod>2018-08-01T11:47:22.578Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
