@@ -170,13 +170,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/jdk/</loc>
-        <lastmod>2018-07-07T05:14:52.968Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/design/</loc>
         <lastmod>2018-07-07T05:14:55.921Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -933,43 +926,50 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/tags/jdk/</loc>
+        <lastmod>2018-08-02T14:16:50.115Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/tags/type-inference/</loc>
-        <lastmod>2018-08-01T15:04:45.378Z</lastmod>
+        <lastmod>2018-08-02T14:17:23.226Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
-        <lastmod>2018-08-01T15:04:45.378Z</lastmod>
+        <lastmod>2018-08-02T14:17:23.226Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/basics/</loc>
-        <lastmod>2018-08-01T15:06:47.713Z</lastmod>
+        <lastmod>2018-08-02T14:17:40.147Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/java/</loc>
-        <lastmod>2018-08-01T15:08:53.863Z</lastmod>
+        <lastmod>2018-08-02T14:18:13.316Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/lambda/</loc>
-        <lastmod>2018-08-01T15:08:53.863Z</lastmod>
+        <lastmod>2018-08-02T14:18:13.316Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/method-references/</loc>
-        <lastmod>2018-08-01T15:08:53.863Z</lastmod>
+        <lastmod>2018-08-02T14:18:13.316Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

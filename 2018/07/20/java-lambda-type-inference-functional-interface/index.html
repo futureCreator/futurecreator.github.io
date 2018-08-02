@@ -17,18 +17,18 @@
         
 
         
-        <meta name="description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하">
+        <meta name="description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가">
 <meta name="keywords" content="java,lambda,type_inference,functional_interface">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Lambda (2) 타입 추론과 함수형 인터페이스">
 <meta property="og:url" content="http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하">
+<meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-01T15:04:45.378Z">
+<meta property="og:updated_time" content="2018-08-02T14:17:23.226Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Lambda (2) 타입 추론과 함수형 인터페이스">
-<meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하">
+<meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가">
 <meta name="twitter:creator" content="@fcreator_twt">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
@@ -213,6 +213,9 @@ ga('send', 'pageview');
 <li>
 <a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
 </li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
 </ul>
 <h2 id="타입-추론-type-inference">타입 추론 Type Inference</h2>
 <p>타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하지 않기 때문에 자바에서의 타입 추론은 제네릭과 람다에 대한 타입 추론을 말합니다.</p>
@@ -261,7 +264,10 @@ ga('send', 'pageview');
 <a href="/2018/07/20/java-lambda-type-inference-functional-interface/" title="Java Lambda (2) 타입 추론과 함수형 인터페이스">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
 </li>
 <li>
-<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a></li>
+<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a></li>
 </ul>
 
         </div>
@@ -455,7 +461,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 

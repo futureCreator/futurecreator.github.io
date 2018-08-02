@@ -17,18 +17,18 @@
         
 
         
-        <meta name="description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. &apos;참조’라는 말에">
+        <meta name="description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으">
 <meta name="keywords" content="java,lambda,method_references">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Lambda (3) 메소드 참조">
 <meta property="og:url" content="http://futurecreator.github.io/2018/08/02/java-lambda-method-references/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. &apos;참조’라는 말에">
+<meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-01T15:08:53.863Z">
+<meta property="og:updated_time" content="2018-08-02T14:18:13.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Lambda (3) 메소드 참조">
-<meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. &apos;참조’라는 말에">
+<meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으">
 <meta name="twitter:creator" content="@fcreator_twt">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
@@ -213,6 +213,9 @@ ga('send', 'pageview');
 <li>
 <a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
 </li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
 </ul>
 <h2 id="메소드-참조-method-references">메소드 참조 Method References</h2>
 <p>메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. '참조’라는 말에서 알 수 있듯이 이미 존재하는 이름을 가진 메소드를 람다로써 사용할 수 있도록 참조하는(가리키는) 역할을 합니다.</p>
@@ -252,7 +255,7 @@ ga('send', 'pageview');
 <p>이러한 방법은 이미 정의되어 있는 메소드를 (함수형 인터페이스가 맞다면) 람다로 재사용할 수 있게 해줍니다. 함수형 인터페이스 간의 전환도 가능합니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Callable&lt;String&gt; c = () -&gt; <span class="string">"Hello"</span>; <span class="comment">// 함수형 메소드는 call</span></span><br><span class="line">Factory&lt;String&gt; f = c::call; <span class="comment">// 다른 함수형 인터페이스를 사용 가능</span></span><br></pre></td></tr></table></figure>
 <p>좀 더 자세한 예제를 살펴보겠습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">example</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  String x = <span class="string">"hello"</span>;</span><br><span class="line">  <span class="comment">// 함수형 인터페이스 시그니처에 맞는 인스턴스 메소드를 전달할 수 있다!</span></span><br><span class="line">  function(x::toString); <span class="comment">// 내부에는 x 가 없고 외부 범위의 x 에 접근하는 클로저</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Supplier</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  <span class="function">T <span class="title">get</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">function</span><span class="params">(Supplier&lt;String&gt; supplier)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> sullier.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">example</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  String x = <span class="string">"hello"</span>;</span><br><span class="line">  <span class="comment">// 함수형 인터페이스 시그니처에 맞는 인스턴스 메소드를 전달할 수 있다!</span></span><br><span class="line">  function(x::toString); <span class="comment">// 내부에는 x 가 없고 외부 범위의 x 에 접근하는 클로저</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">function</span><span class="params">(Supplier&lt;String&gt; supplier)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> sullier.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="인스턴스-메소드-참조-2">인스턴스 메소드 참조 (2)</h2>
 <p>앞에서 살펴 본 내용에 따르면 다음 메소드 참조에서 <code>Obejct</code> 는 클래스를 의미할 것입니다. 하지만 여기서 <code>toString</code> 메소드는 스태틱 메소드가 아니라 일반적인 인스턴스 메소드입니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object::toString</span><br></pre></td></tr></table></figure>
@@ -265,6 +268,10 @@ ga('send', 'pageview');
 <p>이번 포스팅에서 살펴본 메소드 참조를 정리해보겠습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[The Java Tutorials : Method References](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
 ">[1]</span></a></sup></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 생성자 참조</span></span><br><span class="line">String::<span class="keyword">new</span> <span class="comment">// ClassName::new</span></span><br><span class="line">() -&gt; <span class="keyword">new</span> String()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 정적 메소드 참조</span></span><br><span class="line">String::valueOf <span class="comment">// ClassName::staticMethodName</span></span><br><span class="line">(s) -&gt; String.valueOf(s)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 인스턴스 메소드 참조 (1) 클로저</span></span><br><span class="line">x::toString <span class="comment">// instanceName::instanceMethodName</span></span><br><span class="line">() -&gt; <span class="string">"hello"</span>.toString()</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 인스턴스 메소드 참조 (2) 람다</span></span><br><span class="line">String::toString <span class="comment">// ClassName::instanceMethodName</span></span><br><span class="line">(s) -&gt; s.toString()</span><br></pre></td></tr></table></figure>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378&amp;OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&amp;a=A100532541&amp;l=9999&amp;l_cd1=0&amp;u_id=jjtlu78nwo016iuh02yqe&amp;l_cd2=0&amp;tu=http%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;자바 람다 배우기&gt;</a></li>
+</ul>
 <h2 id="related-posts">Related Posts</h2>
 <ul>
 <li>
@@ -275,6 +282,9 @@ ga('send', 'pageview');
 </li>
 <li>
 <a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
 </li>
 </ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html" rel="external nofollow noopener noreferrer" target="_blank">The Java Tutorials : Method References</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
@@ -410,6 +420,16 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
+        <a href="/2018/08/02/java-jdk-functional-interfaces-api/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java Lambda (4) 기본으로 제공되는 함수형 인터페이스
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2018/08/01/installation-mysql-5-7-binary-tar-gz/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -459,7 +479,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
