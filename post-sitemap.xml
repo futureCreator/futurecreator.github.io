@@ -7,24 +7,8 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/</loc>
-        <lastmod>2018-08-02T14:36:00.465Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-method-references/</loc>
-        <lastmod>2018-08-02T14:18:13.316Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
-        <lastmod>2018-08-02T14:17:40.147Z</lastmod>
+        <lastmod>2018-08-02T14:38:06.349Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +16,7 @@
 
     <url>
         <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
-        <lastmod>2018-08-02T14:17:23.226Z</lastmod>
+        <lastmod>2018-08-02T14:37:58.304Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,7 +24,23 @@
 
     <url>
         <loc>http://futurecreator.github.io/2018/08/02/java-jdk-functional-interfaces-api/</loc>
-        <lastmod>2018-08-02T14:16:50.115Z</lastmod>
+        <lastmod>2018-08-02T14:37:50.108Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-method-references/</loc>
+        <lastmod>2018-08-02T14:37:42.627Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/</loc>
+        <lastmod>2018-08-02T14:37:35.229Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

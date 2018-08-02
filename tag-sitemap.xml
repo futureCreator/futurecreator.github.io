@@ -926,57 +926,57 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/jdk/</loc>
-        <lastmod>2018-08-02T14:16:50.115Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/type-inference/</loc>
-        <lastmod>2018-08-02T14:17:23.226Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
-        <lastmod>2018-08-02T14:17:23.226Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/basics/</loc>
-        <lastmod>2018-08-02T14:17:40.147Z</lastmod>
+        <loc>http://futurecreator.github.io/tags/variable-scope/</loc>
+        <lastmod>2018-08-02T14:37:35.229Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/method-references/</loc>
-        <lastmod>2018-08-02T14:18:13.316Z</lastmod>
+        <lastmod>2018-08-02T14:37:42.627Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/jdk/</loc>
+        <lastmod>2018-08-02T14:37:50.108Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/type-inference/</loc>
+        <lastmod>2018-08-02T14:37:58.304Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
+        <lastmod>2018-08-02T14:37:58.304Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/java/</loc>
-        <lastmod>2018-08-02T14:36:00.465Z</lastmod>
+        <lastmod>2018-08-02T14:38:06.349Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/lambda/</loc>
-        <lastmod>2018-08-02T14:36:00.465Z</lastmod>
+        <lastmod>2018-08-02T14:38:06.349Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/variable-scope/</loc>
-        <lastmod>2018-08-02T14:36:00.465Z</lastmod>
+        <loc>http://futurecreator.github.io/tags/basics/</loc>
+        <lastmod>2018-08-02T14:38:06.349Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

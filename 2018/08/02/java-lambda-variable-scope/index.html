@@ -25,7 +25,7 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   변수 범위 람다는 새로운 변수 범위를 생성하지 않습니다.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-02T14:36:00.465Z">
+<meta property="og:updated_time" content="2018-08-02T14:37:35.229Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Lambda (5) 변수 범위">
 <meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   변수 범위 람다는 새로운 변수 범위를 생성하지 않습니다.">
@@ -252,6 +252,10 @@ ga('send', 'pageview');
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span>[] sum = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">forEach(people, x -&gt; sum[<span class="number">0</span>] += x); <span class="comment">// ok</span></span><br></pre></td></tr></table></figure>
 <p>하지만 배열 <code>sum</code> 에 대해서 다른 곳에서 변경할 수 있는 side effect 가 존재합니다. 유사 파이널 설명을 위해서 코드를 살펴봤지만, 이런 작업은 stream API 를 이용해서 하는 것이 더 효과적입니다. 다음과 같은 코드가 될 겁니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> sum = people.stream()</span><br><span class="line">  .map(person -&gt; person.getAge())</span><br><span class="line">  .reduce(<span class="number">0</span>, Integer::sum);</span><br></pre></td></tr></table></figure>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378&amp;OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&amp;a=A100532541&amp;l=9999&amp;l_cd1=0&amp;u_id=jjtlu78nwo016iuh02yqe&amp;l_cd2=0&amp;tu=http%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;자바 람다 배우기&gt;</a></li>
+</ul>
 <h2 id="related-posts">Related Posts</h2>
 <ul>
 <li>
