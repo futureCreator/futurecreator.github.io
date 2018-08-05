@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2016/06/18/spring-boot-get-started/</loc>
+        <lastmod>2018-08-05T10:45:48.972Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/</loc>
         <lastmod>2018-08-05T10:33:33.174Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -201,14 +209,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/17/google-search-how-to-work/</loc>
         <lastmod>2018-07-07T05:16:19.202Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/18/spring-boot-get-started/</loc>
-        <lastmod>2018-07-07T05:16:16.286Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
