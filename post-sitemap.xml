@@ -7,32 +7,8 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-method-references/</loc>
-        <lastmod>2018-08-02T14:40:02.014Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
-        <lastmod>2018-08-02T14:38:06.349Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
-        <lastmod>2018-08-02T14:37:58.304Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/08/02/java-jdk-functional-interfaces-api/</loc>
-        <lastmod>2018-08-02T14:37:50.108Z</lastmod>
+        <loc>http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/</loc>
+        <lastmod>2018-08-05T10:33:33.174Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,7 +16,39 @@
 
     <url>
         <loc>http://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/</loc>
-        <lastmod>2018-08-02T14:37:35.229Z</lastmod>
+        <lastmod>2018-08-03T14:09:42.353Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/07/19/java-lambda-basics/</loc>
+        <lastmod>2018-08-03T14:09:39.834Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/</loc>
+        <lastmod>2018-08-03T14:09:33.792Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/08/02/java-jdk-functional-interfaces-api/</loc>
+        <lastmod>2018-08-03T14:09:28.019Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/08/02/java-lambda-method-references/</loc>
+        <lastmod>2018-08-03T14:09:18.958Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -65,14 +73,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/20/mysql-mariadb-isntall-settings-mac-windows/</loc>
         <lastmod>2018-08-01T11:40:35.741Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/</loc>
-        <lastmod>2018-07-19T15:39:00.547Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

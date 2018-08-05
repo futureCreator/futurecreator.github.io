@@ -22,18 +22,18 @@
         
 
         
-        <meta name="description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   메소드 참조 Method References 메소드 참조">
+        <meta name="description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   Java Lambda (6) 예외 처리   메소드 참조">
 <meta name="keywords" content="java,lambda,method_references">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Lambda (3) 메소드 참조">
 <meta property="og:url" content="http://futurecreator.github.io/2018/08/02/java-lambda-method-references/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   메소드 참조 Method References 메소드 참조">
+<meta property="og:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   Java Lambda (6) 예외 처리   메소드 참조">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-02T14:40:02.014Z">
+<meta property="og:updated_time" content="2018-08-03T14:09:18.958Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Lambda (3) 메소드 참조">
-<meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   메소드 참조 Method References 메소드 참조">
+<meta name="twitter:description" content="Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론과 함수형 인터페이스   Java Lambda (3) 메소드 참조   Java Lambda (4) 기본으로 제공되는 함수형 인터페이스   Java Lambda (5) 변수 범위   Java Lambda (6) 예외 처리   메소드 참조">
 <meta name="twitter:creator" content="@fcreator_twt">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
@@ -200,7 +200,7 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/method-references/">method_references</a></li></ul>
  -->
-            <span class="reading-time">⏱ 7 분</span>
+            <span class="reading-time">⏱ 8 분</span>
         </div>
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><strong>Java 8 Lambda Deep Dive</strong></p>
@@ -219,6 +219,9 @@ ga('send', 'pageview');
 </li>
 <li>
 <a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/03/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
 </li>
 </ul>
 <h2 id="메소드-참조-method-references">메소드 참조 Method References</h2>
@@ -292,6 +295,9 @@ ga('send', 'pageview');
 </li>
 <li>
 <a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/03/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
 </li>
 </ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html" rel="external nofollow noopener noreferrer" target="_blank">The Java Tutorials : Method References</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
