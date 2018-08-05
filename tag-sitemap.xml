@@ -324,69 +324,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/javascript/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/nodejs/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/npm/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/n/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/update/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/upgrade/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/latest/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/stable/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/version/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/variable/</loc>
         <lastmod>2018-07-07T05:15:19.750Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -977,6 +914,69 @@
     <url>
         <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
         <lastmod>2018-08-05T10:47:17.850Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/javascript/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/nodejs/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/npm/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/n/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/update/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/upgrade/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/latest/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/stable/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/version/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

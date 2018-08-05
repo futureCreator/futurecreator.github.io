@@ -31,7 +31,7 @@
 <meta property="og:description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://camo.githubusercontent.com/e3c6ac1ad2a69e2e969597b69d794658cb64df88/687474703a2f2f6e696d69742e696f2f696d616765732f6e2f6e2e676966">
-<meta property="og:updated_time" content="2018-07-07T05:15:16.626Z">
+<meta property="og:updated_time" content="2018-08-05T10:51:25.803Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js 버전 관리하기 (설치 &amp; 업데이트)">
 <meta name="twitter:description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
@@ -217,13 +217,13 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
 <h2 id="node-js-버전-업그레이드">Node.js 버전 업그레이드</h2>
 <h3 id="node-js-버전-확인">Node.js 버전 확인</h3>
 <p>먼저 현재 설치되어있는 버전을 확인해봅니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
 <h3 id="cache-삭제">Cache 삭제</h3>
 <p>Node.js 의 패키지매니저인 npm 을 이용해서 대부분의 플러그인을 설치하는데요. 캐시가 남아있는 경우 에러가 날 수 있다고 합니다. 캐시를 미리 삭제해줍니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm cache clean -f</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm cache clean -f</span><br></pre></td></tr></table></figure>
 <h3 id="n-설치">n 설치</h3>
 <p>위에서 살펴본 n 모듈을 설치해보겠습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g n</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g n</span><br></pre></td></tr></table></figure>
 <h3 id="n-사용법">n 사용법</h3>
 <p>n 사용법은 정말 간단합니다. Node.js 버전에 따라서 다음과 같이 설치할 수 있습니다.</p>
 <ul>
@@ -234,28 +234,28 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
 </ul>
 <p>저는 최신 버전까진 필요없고 안정 버전으로 설치했습니다.</p>
 <h4 id="최신-버전-설치">최신 버전 설치</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n latest</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n latest</span><br></pre></td></tr></table></figure>
 <h4 id="stable-버전-설치">Stable 버전 설치</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n stable</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n stable</span><br></pre></td></tr></table></figure>
 <h4 id="lts-버전-설치">LTS 버전 설치</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n lts</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n lts</span><br></pre></td></tr></table></figure>
 <h4 id="특정-버전-설치">특정 버전 설치</h4>
 <p>필요에 따라 특정 버전을 설치해야하는 경우도 생깁니다. 이럴 땐 <code>n &lt;version&gt;</code> 처럼 버전을 같이 적어주면 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ n 0.8.14</span><br><span class="line">$ n 0.8.17</span><br><span class="line">$ n 0.9.6</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ n 0.8.14</span><br><span class="line">$ n 0.8.17</span><br><span class="line">$ n 0.9.6</span><br></pre></td></tr></table></figure>
 <h4 id="버전-변경하기">버전 변경하기</h4>
 <p>여러가지 버전이 설치되어 있는 경우에 필요에 따라 버전을 선택하여 변경할 수 있습니다. 간단하게 <code>n</code> 을 입력하면 버전을 확인하고 선택할 수 있습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ n</span><br><span class="line"></span><br><span class="line">  0.8.14</span><br><span class="line">ο 0.8.17</span><br><span class="line">  0.9.6</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ n</span><br><span class="line"></span><br><span class="line">  0.8.14</span><br><span class="line">ο 0.8.17</span><br><span class="line">  0.9.6</span><br></pre></td></tr></table></figure>
 <h4 id="버전-삭제하기">버전 삭제하기</h4>
 <p>위와 같이 버전이 여러 개 설치되어 있는 경우 버전을 선택해서 삭제할 수도 있습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n rm 0.9.4 v0.10.0</span><br><span class="line">$ n - 0.9.4</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n rm 0.9.4 v0.10.0</span><br><span class="line">$ n - 0.9.4</span><br></pre></td></tr></table></figure>
 <h4 id="현재-버전-외에-모든-버전-삭제하기">현재 버전 외에 모든 버전 삭제하기</h4>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n prune</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n prune</span><br></pre></td></tr></table></figure>
 <h2 id="npm-버전-업그레이드">npm 버전 업그레이드</h2>
 <p>이번에는 npm 버전을 올려보겠습니다.</p>
 <h3 id="현재-버전-확인">현재 버전 확인</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
 <h3 id="npm-재설치">npm 재설치</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g npm</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g npm</span><br></pre></td></tr></table></figure>
 <h3 id="설치-확인">설치 확인</h3>
 <p>반영이 바로 안될 수 있으니 터미널을 종료 후 다시 실행시켜서 버전을 확인해봅시다.</p>
 

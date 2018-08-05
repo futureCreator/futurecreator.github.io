@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/05/28/nodejs-npm-update-latest-or-stable-version/</loc>
+        <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/08/02/java-jdk-functional-interfaces-api/</loc>
         <lastmod>2018-08-05T10:47:17.850Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -329,14 +337,6 @@
     <url>
         <loc>http://futurecreator.github.io/2017/01/27/java-variable-data-type/</loc>
         <lastmod>2018-07-07T05:15:19.750Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/05/28/nodejs-npm-update-latest-or-stable-version/</loc>
-        <lastmod>2018-07-07T05:15:16.626Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
