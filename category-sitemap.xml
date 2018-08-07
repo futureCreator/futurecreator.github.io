@@ -28,13 +28,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/categories/Column/</loc>
-        <lastmod>2018-07-12T15:14:06.320Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/categories/Hexo/</loc>
         <lastmod>2018-07-18T13:53:29.629Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -79,6 +72,13 @@
     <url>
         <loc>http://futurecreator.github.io/categories/Programming/JavaScript/</loc>
         <lastmod>2018-08-05T10:51:25.803Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/Column/</loc>
+        <lastmod>2018-08-07T14:41:54.447Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
