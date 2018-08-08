@@ -9,13 +9,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/twitter/</loc>
-        <lastmod>2018-07-07T05:13:53.385Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/wordcount/</loc>
         <lastmod>2018-07-07T05:13:58.912Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -548,13 +541,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/plugin/</loc>
-        <lastmod>2018-07-07T05:16:36.667Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/theme/</loc>
         <lastmod>2018-07-07T05:16:36.667Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -697,13 +683,6 @@
     <url>
         <loc>http://futurecreator.github.io/tags/exam/</loc>
         <lastmod>2018-07-18T13:46:51.285Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/hexo/</loc>
-        <lastmod>2018-07-18T13:53:29.629Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -998,6 +977,27 @@
     <url>
         <loc>http://futurecreator.github.io/tags/functional-interface/</loc>
         <lastmod>2018-08-08T13:36:47.172Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/hexo/</loc>
+        <lastmod>2018-08-08T13:59:39.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/plugin/</loc>
+        <lastmod>2018-08-08T13:59:39.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/twitter/</loc>
+        <lastmod>2018-08-08T13:59:39.464Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
