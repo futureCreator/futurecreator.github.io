@@ -954,21 +954,7 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/java/</loc>
-        <lastmod>2018-08-08T13:36:47.172Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/jdk/</loc>
-        <lastmod>2018-08-08T13:36:47.172Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/lambda/</loc>
         <lastmod>2018-08-08T13:36:47.172Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
@@ -998,6 +984,27 @@
     <url>
         <loc>http://futurecreator.github.io/tags/twitter/</loc>
         <lastmod>2018-08-08T13:59:39.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/java/</loc>
+        <lastmod>2018-08-09T13:22:41.994Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/lambda/</loc>
+        <lastmod>2018-08-09T13:22:41.994Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/exception/</loc>
+        <lastmod>2018-08-09T13:22:41.994Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

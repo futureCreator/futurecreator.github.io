@@ -63,22 +63,22 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/categories/Hexo/</loc>
+        <lastmod>2018-08-08T13:59:39.464Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/categories/Programming/</loc>
-        <lastmod>2018-08-08T13:36:47.172Z</lastmod>
+        <lastmod>2018-08-09T13:22:41.994Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/categories/Programming/Java/</loc>
-        <lastmod>2018-08-08T13:36:47.172Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/categories/Hexo/</loc>
-        <lastmod>2018-08-08T13:59:39.464Z</lastmod>
+        <lastmod>2018-08-09T13:22:41.994Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
