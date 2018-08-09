@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/08/10/java-8-lambda-deep-dive/</loc>
+        <lastmod>2018-08-09T15:36:59.513Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/</loc>
         <lastmod>2018-08-09T13:54:51.297Z</lastmod>
         <changefreq>weekly</changefreq>
