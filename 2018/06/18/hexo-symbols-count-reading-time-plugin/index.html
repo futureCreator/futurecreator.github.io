@@ -31,7 +31,7 @@
 <meta property="og:description" content="블로그 서비스인 Medium 은 글을 읽을 때 소요될 시간을 미리 표시해줍니다. 독자들이 이 글을 읽는데 얼마나 소요될지를 미리 파악함으로써, 글의 질을 예측해볼 수 있고 이 글을 계속 읽을지 말지를 결정하는데 도움이 됩니다.  소소하지만 탐나는 기능이었습니다. Hexo 블로그에는 이런 기능이 없나 살펴봤더니 역시나 있었습니다. 이번 포스팅에서는 글자 수와">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://futurecreator.github.io/2018/06/18/hexo-symbols-count-reading-time-plugin/2018/06/18/hexo-symbols-count-reading-time-plugin/medium.png">
-<meta property="og:updated_time" content="2018-07-07T05:13:58.912Z">
+<meta property="og:updated_time" content="2018-08-14T13:25:40.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 글자 수와 리딩 타임 추가하기">
 <meta name="twitter:description" content="블로그 서비스인 Medium 은 글을 읽을 때 소요될 시간을 미리 표시해줍니다. 독자들이 이 글을 읽는데 얼마나 소요될지를 미리 파악함으로써, 글의 질을 예측해볼 수 있고 이 글을 계속 읽을지 말지를 결정하는데 도움이 됩니다.  소소하지만 탐나는 기능이었습니다. Hexo 블로그에는 이런 기능이 없나 살펴봤더니 역시나 있었습니다. 이번 포스팅에서는 글자 수와">
@@ -227,13 +227,13 @@ ga('send', 'pageview');
 <h2 id="계산-방식">계산 방식</h2>
 <p>조금 더 세부적으로 살펴보겠습니다. 이 플러그인은 현재 포스트 (혹은 사이트 전체)의 글자수를 세고, 이 글자수를 바탕으로 단어가 몇 개인지 파악합니다. 이 때 설정하는 값이 <strong>AWL (평균단어길이)</strong> 입니다. 단어가 몇 개 정도인지 파악한 후에 1분 당 읽을 수 있는 글자수, 즉 읽는 속도를 바탕으로 읽는데 예상 소요 시간을 계산합니다. 이때 이 읽는 속도가 <strong>WPM (분당 읽는 단어)</strong> 입니다.</p>
 <ul>
-<li>AWL (Average Word Length) : 평균 단어 길이. 기본값은 4.</li>
-<li>WPM (Words Per Minute) : 분당 읽을 수 있는 단어. 즉 읽는 속도. 기본값은 275.</li>
+<li>AWL (<em>Average Word Length</em>) : 평균 단어 길이. 기본값은 4.</li>
+<li>WPM (<em>Words Per Minute</em>) : 분당 읽을 수 있는 단어. 즉 읽는 속도. 기본값은 275.</li>
 </ul>
 <p>따라서, 만약 글자수가 4000개라면 -&gt; 1000단어라고 보고 -&gt; 분당 275단어니까 읽는 시간은 3.6분 정도로 계산하는 식입니다.</p>
 <h2 id="설정-변경하기">설정 변경하기</h2>
 <p>일단 추가한 위치를 수정해야겠습니다. 사용자가 본문을 읽기 전에 이 글의 양이 어느정도 되는지 전달하기 위해서는 제목 바로 아래에 추가하는 것이 더 좋겠네요. 다음으로 글자 수 자체로는 이 포스트의 양을 판단하기에 썩 도움이 되지 않을 것 같습니다. 그보다는 읽을 때 어느 정도 시간이 걸릴 지 소요되는 시간을 알려주는 것이 더 가치있는 정보일 것입니다. 그래서 저는 해당 포스트의 시간 정보만 보여주도록 설정하겠습니다.</p>
-<p>그렇다면 평균 단어 길이(AWL)와 분당 글자 수(WPM)는 어떨까요? 한글 기준으로 띄어쓰기를 생각해본다면 평균적으로 3~5글자 정도인 것 같으니 디폴트 값인 4글자로 충분할 것 같습니다. 하지만 IT 블로그 특성 상 영어와 코드가 섞여 있기 때문에 글 읽는 속도인 WPM 은 좀 줄여서 210 정도로 설정하겠습니다.</p>
+<p>그렇다면 평균 단어 길이(<em>AWL</em>)와 분당 글자 수(<em>WPM</em>)는 어떨까요? 한글 기준으로 띄어쓰기를 생각해본다면 평균적으로 3~5글자 정도인 것 같으니 디폴트 값인 4글자로 충분할 것 같습니다. 하지만 IT 블로그 특성 상 영어와 코드가 섞여 있기 때문에 글 읽는 속도인 WPM 은 좀 줄여서 210 정도로 설정하겠습니다.</p>
 <p>해당 내용을 반영하여 <code>article.ejs</code> 파일에 다음과 같이 추가합니다. 저는 이모지를 이용해서 시계를 넣었습니다.</p>
 <figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"article-subtitle"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">date</span>', &#123; <span class="attr">class_name:</span> '<span class="attr">article-date</span>', <span class="attr">date_format:</span> <span class="attr">null</span> &#125;) %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">post</span>/<span class="attr">tag</span>') %&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"reading-time"</span>&gt;</span>⏱ <span class="tag">&lt;<span class="name">%-</span> <span class="attr">symbolsTime</span>(<span class="attr">post.content</span>, <span class="attr">4</span>, <span class="attr">210</span>, '분') %&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>그리고 왼쪽으로 여백을 주기 위해서 마진을 추가하겠습니다. <code>style.styl</code> 파일에 클래스를 추가합니다.</p>

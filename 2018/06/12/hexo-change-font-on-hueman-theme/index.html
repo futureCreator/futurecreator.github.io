@@ -30,7 +30,7 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="오랫만에 예전에 올렸던 글을 살펴봤습니다. 이제보니 글자 크기는 괜찮은데 폰트가 너무 얇아서 눈에 잘 들어오지 않고, 잘 읽히지가 않았습니다. 글을 올리는 것에만 신경썼지 올라간 글을 자세히 읽어보질 않았던 것 같습니다. 몇 번 읽어봐도 가독성이 영 좋지 않아서 폰트를 바꿔야겠다 마음 먹었습니다. Font 고르기 보통 웹 폰트는 일반 폰트와 달리 용량을 줄">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-07T05:14:23.603Z">
+<meta property="og:updated_time" content="2018-08-14T13:27:36.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 폰트 변경하기 (Hueman 테마)">
 <meta name="twitter:description" content="오랫만에 예전에 올렸던 글을 살펴봤습니다. 이제보니 글자 크기는 괜찮은데 폰트가 너무 얇아서 눈에 잘 들어오지 않고, 잘 읽히지가 않았습니다. 글을 올리는 것에만 신경썼지 올라간 글을 자세히 읽어보질 않았던 것 같습니다. 몇 번 읽어봐도 가독성이 영 좋지 않아서 폰트를 바꿔야겠다 마음 먹었습니다. Font 고르기 보통 웹 폰트는 일반 폰트와 달리 용량을 줄">
@@ -210,7 +210,7 @@ ga('send', 'pageview');
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">나눔스퀘어라운드(NanumSquareRound)</span><br><span class="line">https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css</span><br></pre></td></tr></table></figure>
 <p>이 외에 <a href="https://storyfunding.daum.net/episode/4742" rel="external nofollow noopener noreferrer" target="_blank">미생체</a>도 깔끔해보이는데 나중에 적용해보고 싶네요. 미생체는 따로 웹 폰트로 나오진 않았지만, 웹 폰트로 만들어놓은 <a href="http://martian36.tistory.com/1449" rel="external nofollow noopener noreferrer" target="_blank">블로그</a>가 있어서 필요하신 분들은 참고하시면 좋겠습니다.</p>
 <h2 id="head-ejs-수정하기">head.ejs 수정하기</h2>
-<p>해당 css 의 CDN 링크를 복사했으면 다운로드할 수 있게 <head> 태그 안에 넣어야겠죠? css 링크를 넣을 때는 다음 helper 를 사용하면 편합니다.</head></p>
+<p>해당 css 의 CDN 링크를 복사했으면 다운로드할 수 있게 <code>&lt;head&gt;</code> 태그 안에 넣어야겠죠? css 링크를 넣을 때는 다음 helper 를 사용하면 편합니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// &lt;link rel=&quot;stylesheet&quot; href=&quot;/style.css&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;%- css(&apos;style.css&apos;) %&gt;</span><br><span class="line"></span><br><span class="line">// &lt;link rel=&quot;stylesheet&quot; href=&quot;/style.css&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">// &lt;link rel=&quot;stylesheet&quot; href=&quot;/screen.css&quot; type=&quot;text/css&quot;&gt;</span><br><span class="line">&lt;%- css([&apos;style.css&apos;, &apos;screen.css&apos;]) %&gt;</span><br></pre></td></tr></table></figure>
 <p>Hueman 테마의 <code>&lt;head&gt;</code> 부분을 만드는 <code>/themes/hueman/layout/common/head.ejs</code> 파일을 수정하면 됩니다. <code>&lt;head&gt;</code> 태그 안쪽에 다음과 같이 추가하면 페이지가 로딩될 때 해당 css 를 같이 로드하게 됩니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- css(&apos;https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css&apos;) %&gt;</span><br></pre></td></tr></table></figure>

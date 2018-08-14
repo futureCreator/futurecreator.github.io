@@ -30,7 +30,7 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이번 포스팅에서는 연봉 많이 받는 프로그래밍 언어 세계 순위를 알아보고 몇 가지 언어들에 대해서 살펴보겠습니다. 순위는 stackoverflow Developer Survey Results 2018 을 참고했습니다. 순위 언어가 많으므로 TOP 10 까지만 보겠습니다. 세계 순위와 미국 순위에 모두 올라가 있는 언어는 굵게 표시하였고, 환율은 KRW 1,1">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-07T15:48:59.416Z">
+<meta property="og:updated_time" content="2018-08-14T13:15:55.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="연봉 높은 프로그래밍 언어 순위 2018">
 <meta name="twitter:description" content="이번 포스팅에서는 연봉 많이 받는 프로그래밍 언어 세계 순위를 알아보고 몇 가지 언어들에 대해서 살펴보겠습니다. 순위는 stackoverflow Developer Survey Results 2018 을 참고했습니다. 순위 언어가 많으므로 TOP 10 까지만 보겠습니다. 세계 순위와 미국 순위에 모두 올라가 있는 언어는 굵게 표시하였고, 환율은 KRW 1,1">
@@ -205,7 +205,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스팅에서는 연봉 많이 받는 프로그래밍 언어 세계 순위를 알아보고 몇 가지 언어들에 대해서 살펴보겠습니다. 순위는 <a href="https://insights.stackoverflow.com/survey/2018/" rel="external nofollow noopener noreferrer" target="_blank">stackoverflow Developer Survey Results 2018</a> 을 참고했습니다.</p>
 <h2 id="순위">순위</h2>
-<p>언어가 많으므로 TOP 10 까지만 보겠습니다. 세계 순위와 미국 순위에 모두 올라가 있는 언어는 굵게 표시하였고, 환율은 KRW 1,122.50/1 USD 기준입니다.</p>
+<p>언어가 많으므로 TOP 10 까지만 보겠습니다. 세계 순위와 미국 순위에 모두 올라가 있는 언어는 굵게 표시하였고, 환율은 <em>KRW 1,122.50/1 USD</em> 기준입니다.</p>
 <h3 id="세계-기준">세계 기준</h3>
 <table>
 <thead>
@@ -376,14 +376,14 @@ ga('send', 'pageview');
 </table>
 <p>글로벌 순위와 미국 순위를 살펴봤는데 순위권에 든 언어들은 대부분 비슷하다는 걸 쉽게 알 수 있습니다. 물론 순위 자체는 조금씩 다르지만요. 그리고 함수형 언어 혹은 함수형 프로그래밍을 지원하는 멀티 패러다임 언어들이 상위권에 많이 있다는 것을 알 수 있습니다. 하지만 Erlang, Ocaml, F# 등 조금은 생소한 언어도 많은데요, 하나씩 살펴보겠습니다. 언어별 첫 번째 예제는 Hello world, 두 번째 예제는 ‘하노이의 탑’ 입니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Tower of Hanoi](https://en.wikipedia.org/wiki/Tower_of_Hanoi)">[1]</span></a></sup></p>
 <h2 id="erlang">Erlang</h2>
-<p><a href="http://erlang.org/doc/reference_manual/users_guide.html" rel="external nofollow noopener noreferrer" target="_blank">Erlang</a>(얼랭)은 1986년 스웨덴의 통신 장비 제조사인 에릭슨이 만든 함수형 언어입니다. 병행처리에 초점을 맞춘 언어로 ‘BEAM’(Erlang VM)이라는 가상 머신 위에서 실행됩니다. 서버를 만들 경우 많은 요청을 안정적으로 처리할 수 있습니다.</p>
+<p><a href="http://erlang.org/doc/reference_manual/users_guide.html" rel="external nofollow noopener noreferrer" target="_blank">Erlang</a>(얼랭)은 1986년 스웨덴의 통신 장비 제조사인 에릭슨이 만든 함수형 언어입니다. 병행처리에 초점을 맞춘 언어로 ‘BEAM’(<em>Erlang VM</em>)이라는 가상 머신 위에서 실행됩니다. 서버를 만들 경우 많은 요청을 안정적으로 처리할 수 있습니다.</p>
 <figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% This file is a "Hello, world!" in Erlang for wandbox.</span></span><br><span class="line"><span class="keyword">-module</span><span class="params">(prog)</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment">% Erlang for Wandbox must exports main/0</span></span><br><span class="line"><span class="keyword">-export</span><span class="params">([main/<span class="number">0</span>])</span>.</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">main</span><span class="params">()</span> -&gt;</span></span><br><span class="line">  io:format(<span class="string">"Hello, Erlang!~n"</span>).</span><br></pre></td></tr></table></figure>
 <h3 id="특징">특징</h3>
 <ul>
 <li>초경량 프로세스로 많은 처리에 강합니다.</li>
 <li>비동기 메시지 기반으로 멀티 코어 환경에서 CPU 를 최대한 활용할 수 있습니다.</li>
-<li>가동 중인 시스템을 정지하지 않고 프로그램을 변경하는 핫 스와핑(Hot Swapping)이 가능합니다.</li>
-<li>장애가 발생하면 그냥 충돌(Crash) 시키고 재가동되어 복구시킵니다.</li>
+<li>가동 중인 시스템을 정지하지 않고 프로그램을 변경하는 핫 스와핑(<em>Hot Swapping</em>)이 가능합니다.</li>
+<li>장애가 발생하면 그냥 충돌(<em>Crash</em>) 시키고 재가동되어 복구시킵니다.</li>
 </ul>
 <h3 id="관련-키워드">관련 키워드</h3>
 <ul>
@@ -394,7 +394,7 @@ ga('send', 'pageview');
 <h3 id="예제">예제</h3>
 <figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">-module</span><span class="params">(prog)</span>.</span><br><span class="line"><span class="keyword">-export</span><span class="params">([main/<span class="number">0</span>])</span>.</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">main</span><span class="params">()</span> -&gt;</span></span><br><span class="line">  N = read_num(),</span><br><span class="line">  hanoi(N, <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>).</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">read_num</span><span class="params">()</span> -&gt;</span></span><br><span class="line">  <span class="keyword">case</span> io:fread(<span class="string">""</span>, <span class="string">"~d"</span>) <span class="keyword">of</span></span><br><span class="line">    eof -&gt; <span class="number">0</span>;</span><br><span class="line">    &#123;ok, X&#125; -&gt;</span><br><span class="line">      [Y] = X,</span><br><span class="line">      Y</span><br><span class="line">  <span class="keyword">end</span>.</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">hanoi</span><span class="params">(<span class="number">1</span>, From, To, _Via)</span> -&gt;</span> io:format(<span class="string">"~s -&gt; ~s~n"</span>, [From, To]);</span><br><span class="line"><span class="function"><span class="title">hanoi</span><span class="params">(N, From, To, Via)</span> <span class="title">when</span> N &gt; 0 -&gt;</span></span><br><span class="line">  hanoi(N - <span class="number">1</span>, From, Via, To),</span><br><span class="line">  io:format(<span class="string">"~s -&gt; ~s~n"</span>, [From, To]),</span><br><span class="line">  hanoi(N - <span class="number">1</span>, Via, To, From).</span><br></pre></td></tr></table></figure>
 <h2 id="scala">Scala</h2>
-<p><a href="http://www.scala-lang.org" rel="external nofollow noopener noreferrer" target="_blank">Scala</a>(스칼라)는 2003년 Martin Odersky 가 만든 Java 를 업그레이드 한 함수형/객체지향형 언어입니다. Java 보다 간결한 소스코드로 실행할 수 있고 컴파일 후에는 Java 의 바이트코드를 출력합니다. 데이터 분석 (스파크) 등에 많이 사용됩니다.</p>
+<p><a href="http://www.scala-lang.org" rel="external nofollow noopener noreferrer" target="_blank">Scala</a>(스칼라)는 2003년 Martin Odersky 가 만든 Java 를 업그레이드 한 함수형/객체지향형 언어입니다. Java 보다 간결한 소스코드로 실행할 수 있고 컴파일 후에는 Java 의 바이트코드를 출력합니다. 데이터 분석 (<em>Apache Spark</em>) 등에 많이 사용됩니다.</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This file is a "Hello, world!" in Scala language for wandbox.</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">Wandbox</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">    println(<span class="string">"Hello, Scala!"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="특징-v2">특징</h3>
 <ul>
@@ -432,7 +432,7 @@ ga('send', 'pageview');
 <figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">ns</span></span> clojure.examples.hello</span><br><span class="line">   (<span class="symbol">:gen-class</span>))</span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> hello-world []</span><br><span class="line">   (<span class="name">println</span> <span class="string">"Hello World"</span>))</span><br><span class="line">(<span class="name">hello-world</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="특징-v4">특징</h3>
 <ul>
-<li>JVM, CLR(.NET 의 VM), JavaScript 등 기존의 플랫폼 상에서 동작이 가능합니다.</li>
+<li>JVM, CLR(<em>.NET</em> <em>VM</em>), JavaScript 등 기존의 플랫폼 상에서 동작이 가능합니다.</li>
 <li>리스트, 벡터, 맵 등을 시퀀스로 추상화해서 다룰 수 있습니다.</li>
 <li>멀티 메소드(복수의 함수를 묶은 것 같은 특수한 함수)로 런타임 시 호출되는 메소드가 정해지는 것이 가능합니다.</li>
 </ul>
@@ -440,7 +440,7 @@ ga('send', 'pageview');
 <ul>
 <li>Leiningen : Clojure 용 빌드 툴이자 패키지 관리 툴.</li>
 <li>Overtone : Clojure 로 만들어진 오픈소스 신시사이저.</li>
-<li>STM(Software Transactional Memory) : DB 의 커밋/롤백같은 트랜잭션 개념을 프로그래밍에 도입한 것.</li>
+<li>STM(<em>Software Transactional Memory</em>) : DB 의 커밋/롤백같은 트랜잭션 개념을 프로그래밍에 도입한 것.</li>
 </ul>
 <figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">use</span></span> '[closure.java.io])</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> hanoi [n from to via]</span><br><span class="line">  (<span class="name"><span class="builtin-name">if</span></span> (<span class="name"><span class="builtin-name">&gt;</span></span> n <span class="number">1</span>)</span><br><span class="line">    (<span class="name"><span class="builtin-name">do</span></span></span><br><span class="line">      (<span class="name">hanoi</span> (<span class="name"><span class="builtin-name">dec</span></span> n) from via to)</span><br><span class="line">      (<span class="name">println</span> (<span class="name"><span class="builtin-name">format</span></span> <span class="string">"%s -&gt; %s"</span> from to))</span><br><span class="line">      (<span class="name">hanoi</span> (<span class="name"><span class="builtin-name">dec</span></span> n) via to from))</span><br><span class="line">    (<span class="name">println</span> (<span class="name"><span class="builtin-name">format</span></span> <span class="string">"%s -&gt; %s"</span> from to))))</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">doseq</span></span> [n (<span class="name"><span class="builtin-name">line-seq</span></span> (<span class="name">reader</span> *in*))]</span><br><span class="line">  (<span class="name">hanoi</span> (<span class="name">read-string</span> n) 'a 'b 'c))</span><br></pre></td></tr></table></figure>
 <h2 id="go">Go</h2>
@@ -484,7 +484,7 @@ ga('send', 'pageview');
 <ul>
 <li>Option 형을 이용해 NullReferenceException 예외를 방지합니다.</li>
 <li>자료형을 생략할 수 있습니다.</li>
-<li>2가지 종류의 Syntax 가 있습니다. (Lightweight syntax / Verbose syntax)</li>
+<li>2가지 종류의 Syntax 가 있습니다. (<em>Lightweight syntax / Verbose syntax</em>)</li>
 </ul>
 <h3 id="관련-키워드-v7">관련 키워드</h3>
 <ul>
@@ -502,13 +502,13 @@ ga('send', 'pageview');
 <li>오래된 만큼 모듈이 많이 존재합니다.</li>
 <li>문자열 처리가 쉽고 정규 표현식이 폭넓게 사용되는 계기를 마련했습니다.</li>
 <li>Perl 6 은 Perl 5까지와는 다른 언어라고 할 만큼 큰 변화가 있었습니다.</li>
-<li>TMTOWTDI(There’s more than one way to do it) 같은 기능을 여러가지 방법으로 구현할 수 있다는 뜻으로 펄 프로그래밍의 모토입니다.</li>
+<li>TMTOWTDI(<em>There’s more than one way to do it</em>) 같은 기능을 여러가지 방법으로 구현할 수 있다는 뜻으로 펄 프로그래밍의 모토입니다.</li>
 </ul>
 <h3 id="관련-키워드-v8">관련 키워드</h3>
 <ul>
 <li>정규표현식 : 문자열의 패턴 매치를 할 수 있는 표현 방법</li>
 <li>CPAN : Perl 모듈 관리 시스템</li>
-<li>CGI (Common Gateway Interface) : 웹 사이트에서 동적인 페이지를 만드는 간단한 방법</li>
+<li>CGI (<em>Common Gateway Interface</em>) : 웹 사이트에서 동적인 페이지를 만드는 간단한 방법</li>
 </ul>
 <h3 id="예제-v7">예제</h3>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">sub</span> <span class="title">hanoi</span></span>&#123;</span><br><span class="line">  <span class="keyword">my</span> ($n, $from, $to, $via) = @_;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span> ($n &gt; <span class="number">1</span>)&#123;</span><br><span class="line">    $hanoi($n - <span class="number">1</span>, $from, $via, $to);</span><br><span class="line">    <span class="keyword">print</span> $from . <span class="string">" -&gt; "</span> . $to . <span class="string">"\n"</span>;</span><br><span class="line">    &amp;hanoi($n - <span class="number">1</span>, $via, $to, $from);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">print</span> $from . <span class="string">" -&gt; "</span> . $to . <span class="string">"\n"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 표준 입력으로 받아옴</span></span><br><span class="line"><span class="keyword">my</span> $n = &lt;STDIN&gt;;</span><br><span class="line">&amp;hanoi($n, <span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>);</span><br></pre></td></tr></table></figure>

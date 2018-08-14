@@ -31,7 +31,7 @@
 <meta property="og:description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글/네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/07/seo.jpg">
-<meta property="og:updated_time" content="2018-07-07T05:15:50.814Z">
+<meta property="og:updated_time" content="2018-08-14T13:35:55.520Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">
 <meta name="twitter:description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글/네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
@@ -231,7 +231,7 @@ ga('send', 'pageview');
 <h2 id="hexo-autonofollow"><a href="https://github.com/liuzc/hexo-autonofollow" rel="external nofollow noopener noreferrer" target="_blank">hexo-autonofollow</a></h2>
 <p>해당 포스트에서 참고하고 있는 외부 링크에 <code>nofollow</code> 속성을 자동으로 추가해주는 플러그인입니다. 먼저 <code>nofollow</code> 속성이 무엇이고 왜 추가해야하는지 알아보겠습니다.</p>
 <h3 id="nofollow-속성">nofollow 속성</h3>
-<p>검색엔진에서 사용자에게 검색한 결과 페이지를 보여주기 위해 평소에 많은 웹 사이트를 수집해놓습니다. 그러한 작업을 <strong>크롤링</strong> 이라고 하고 크롤링하는 로봇을 <strong>크롤러</strong> 또는 구글의 경우 <strong>구글봇 (Googlebot)</strong> 이라고 합니다. 이 크롤러에게 이 페이지는 수집하지 말라고 알려줄 수 있습니다. 크롤러가 페이지를 수집한다는 것은 검색 결과에 노출될 수 있다는 얘기입니다. 따라서 개인정보나 유료링크 같은 것들은 수집하면 안되겠죠.</p>
+<p>검색엔진에서 사용자에게 검색한 결과 페이지를 보여주기 위해 평소에 많은 웹 사이트를 수집해놓습니다. 그러한 작업을 <strong>크롤링</strong> 이라고 하고 크롤링하는 로봇을 <strong>크롤러</strong> 또는 구글의 경우 <strong>구글봇 (<em>Googlebot</em>)</strong> 이라고 합니다. 이 크롤러에게 이 페이지는 수집하지 말라고 알려줄 수 있습니다. 크롤러가 페이지를 수집한다는 것은 검색 결과에 노출될 수 있다는 얘기입니다. 따라서 개인정보나 유료링크 같은 것들은 수집하면 안되겠죠.</p>
 <p>이 때 사용하는 것이 robot.txt 파일입니다. 크롤러는 홈페이지에 있는 robot.txt 파일을 참고해서 크롤링에서 예외처리할 페이지를 확인합니다. 혹은 간단하게 해당 페이지의 <code>&lt;head&gt;</code> 태그 안에 메타 태그로 표시할 수 있습니다.</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">"nofollow"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>그런데 해당 페이지 내에 있는 개별 링크에 대해서는 어떻게 처리할까요? 이런 작업은 robot.txt 로 처리하는 것이 복잡해서 <code>rel</code> 속성에 <code>nofollow</code> 속성값이 생겼습니다. 이 속성을 통해서 해당 링크는 크롤링하지 않도록 할 수 있습니다. 보통 신뢰할 수 없는 콘텐츠나 유료 링크의 경우 다른 사용자의 검색에 노출되지 않아야 하므로 <code>nofollow</code> 속성을 사용하는 것이 좋습니다.</p>

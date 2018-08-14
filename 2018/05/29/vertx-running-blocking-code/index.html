@@ -30,7 +30,7 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이번 포스팅에서는 Vert.x 에서 Blocking 코드를 어떻게 처리하는지 확인해보겠습니다. Thread Blocking Warning Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-07T05:15:09.917Z">
+<meta property="og:updated_time" content="2018-08-14T13:32:01.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vert.x Blocking Code 처리하기">
 <meta name="twitter:description" content="이번 포스팅에서는 Vert.x 에서 Blocking 코드를 어떻게 처리하는지 확인해보겠습니다. Thread Blocking Warning Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수">
@@ -205,7 +205,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스팅에서는 <a href="https://vertx.io" rel="external nofollow noopener noreferrer" target="_blank">Vert.x</a> 에서 Blocking 코드를 어떻게 처리하는지 확인해보겠습니다.</p>
 <h2 id="thread-blocking-warning">Thread Blocking Warning</h2>
-<p>Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수 있지만 각각 event loop 가 독립적인 single thread 로 작동합니다. 즉, 특정 작업으로 인해 event loop thread 가 block 되면 (해당 event loop 에 할당된 작업들) 전체가 뻗어버리는 것과 같습니다. 따라서 event loop 가 block 되는 것을 막아야 하며, <code>BlockedThreadChecker</code> 가 해당 작업에 어느 정도 시간이 소요되면 다음과 같이 경고를 띄워주고 error 를 발생시킵니다.</p>
+<p>Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수 있지만 각각 event loop 가 독립적인 single thread 로 작동합니다. 즉, 특정 작업으로 인해 event loop thread 가 block 되면 (해당 <em>event loop</em> 에 할당된 작업들) 전체가 뻗어버리는 것과 같습니다. 따라서 event loop 가 block 되는 것을 막아야 하며, <code>BlockedThreadChecker</code> 가 해당 작업에 어느 정도 시간이 소요되면 다음과 같이 경고를 띄워주고 error 를 발생시킵니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">May 29, 2018 5:56:16 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 2149 ms, time limit is 2000</span><br><span class="line">May 29, 2018 5:56:17 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 3150 ms, time limit is 2000</span><br><span class="line">May 29, 2018 5:56:18 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 4151 ms, time limit is 2000</span><br><span class="line">May 29, 2018 5:56:19 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 5151 ms, time limit is 2000</span><br><span class="line">io.vertx.core.VertxException: Thread blocked</span><br><span class="line">        at java.lang.Object.wait(Native Method)</span><br><span class="line">        at java.lang.Object.wait(Object.java:502)</span><br><span class="line">		...</span><br></pre></td></tr></table></figure>
 <h3 id="blocking-되는-경우">blocking 되는 경우</h3>
 <ul>
@@ -219,7 +219,7 @@ ga('send', 'pageview');
 <h3 id="경고-잠재우기">경고 잠재우기</h3>
 <p>blocking 이 크게 문제되지 않는 경우인데 이러한 경고가 거슬린다면 다음 두 가지 방법으로 제한 시간을 늘릴 수 있습니다.</p>
 <h4 id="시스템-프로퍼티로-옵션-주기">시스템 프로퍼티로 옵션 주기</h4>
-<p>CLI 로 Vert.x 를 실행할 경우 다음과 같이 원하는 시간만큼 옵션을 줍니다. (milliseconds)</p>
+<p>CLI 로 Vert.x 를 실행할 경우 다음과 같이 원하는 시간만큼 옵션을 줍니다. (<em>milliseconds</em>)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dvertx.options.blockedThreadCheckInterval=200000000</span><br></pre></td></tr></table></figure>
 <h4 id="vertxoptions-으로-옵션-주기">VertxOptions 으로 옵션 주기</h4>
 <p>Vert.x 생성 시에 <a href="https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html" rel="external nofollow noopener noreferrer" target="_blank">VertxOptions</a> 객체를 이용해 옵션을 전달할 수 있습니다.</p>
@@ -228,14 +228,14 @@ ga('send', 'pageview');
 <p>하지만 event loop 가 blocking 되는 근본적인 문제를 해결한 건 아닙니다.</p>
 <p>Vert.x 에서 blocking 코드를 처리하는 방법에는 세 가지 방법이 있습니다.</p>
 <ol>
-<li>Vert.x 에서 재작성한 API를 사용 (blocking -&gt; non-blocking)</li>
+<li>Vert.x 에서 재작성한 API를 사용 (<em>blocking -&gt; non-blocking</em>)</li>
 <li>executeBlocking 메소드로 처리 (각 작업들의 순서를 지킬 지, 병렬로 처리할지 설정 가능)</li>
-<li>Worker verticle 사용 (Worker thread pool)</li>
+<li>Worker verticle 사용 (<em>Worker thread pool</em>)</li>
 </ol>
 <h3 id="executeblocking-메소드">executeBlocking 메소드</h3>
 <p>버텍스 에서는 blocking 작업들을 non-blocking 처럼 처리하기 위해서 내부적으로 worker pool 을 가지고 있습니다. event loop 에서 blocking 코드를 실행하면 내부적으로 thread를 이용해서 처리하고 callback 을 실행해 event loop 입장에서는 마치 non-blocking 처럼 처리할 수 있습니다. 이 때 사용하는 메소드가 <a href="https://vertx.io/docs/apidocs/io/vertx/core/Vertx.html#executeBlocking-io.vertx.core.Handler-boolean-io.vertx.core.Handler-" rel="external nofollow noopener noreferrer" target="_blank">executeBlocking</a> 메소드입니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Safely execute some blocking code.</span></span><br><span class="line"><span class="comment">// Executes the blocking code in the handler blockingCodeHandler using a thread from the worker pool.</span></span><br><span class="line">&lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">executeBlocking</span><span class="params">(Handler&lt;Future&lt;T&gt;&gt; blockingCodeHandler,</span></span></span><br><span class="line"><span class="function"><span class="params">                         <span class="keyword">boolean</span> ordered,</span></span></span><br><span class="line"><span class="function"><span class="params">                         Handler&lt;AsyncResult&lt;T&gt;&gt; resultHandler)</span></span></span><br></pre></td></tr></table></figure>
-<p>파라미터 중 boolean 값인 ordered 를 이용해서 executeBlocking 메소드가 여러 번 호출되었을 때 순서를 지켜서 호출할 것인지 병렬적으로 실행할 것인지 정해줄 수 있습니다. (기본값 true)</p>
+<p>파라미터 중 boolean 값인 ordered 를 이용해서 executeBlocking 메소드가 여러 번 호출되었을 때 순서를 지켜서 호출할 것인지 병렬적으로 실행할 것인지 정해줄 수 있습니다. (기본값 <em>true</em>)</p>
 <p>기본적인 사용법은 다음과 같습니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vertx.executeBlocking(future -&gt; &#123;</span><br><span class="line">  <span class="comment">// Call some blocking API that takes a significant amount of time to return</span></span><br><span class="line">  String result = someAPI.blockingMethod(<span class="string">"hello"</span>);</span><br><span class="line">  future.complete(result);</span><br><span class="line">&#125;, res -&gt; &#123;</span><br><span class="line">  System.out.println(<span class="string">"The result is: "</span> + res.result());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h3 id="workerexecutor">WorkerExecutor</h3>
@@ -245,7 +245,7 @@ ga('send', 'pageview');
 <p>추가 파라미터로 poolSize 와 maxExecuteTime 도 설정할 수 있습니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> poolSize = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">long</span> maxExecuteTime = <span class="number">120000</span>; <span class="comment">// 2분</span></span><br><span class="line"></span><br><span class="line">WorkerExecutor executor = vertx.createSharedWorkerExecutor(<span class="string">"my-worker-pool"</span>, poolSize, maxExecuteTime);</span><br></pre></td></tr></table></figure>
 <h3 id="worker-pool-과-executor-종료">Worker pool 과 executor 종료</h3>
-<p>Verticle 내에서 생성된 executor 는 verticle 이 종료(undeployed) 되면 자동으로 닫히거나, 사용이 끝난 executor 를 수동으로 닫을 수 있습니다.</p>
+<p>Verticle 내에서 생성된 executor 는 verticle 이 종료(<em>undeployed</em>) 되면 자동으로 닫히거나, 사용이 끝난 executor 를 수동으로 닫을 수 있습니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">executor.close();</span><br></pre></td></tr></table></figure>
 <p>모든 executor 가 닫히면, 해당 worker pool 은 삭제됩니다.</p>
 <h2 id="worker-verticle">Worker Verticle</h2>

@@ -31,7 +31,7 @@
 <meta property="og:description" content="이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다. 검색 최적화 구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://futurecreator.github.io/images/google_search/analytics.jpg">
-<meta property="og:updated_time" content="2018-07-07T05:16:33.300Z">
+<meta property="og:updated_time" content="2018-08-14T13:39:37.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">
 <meta name="twitter:description" content="이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다. 검색 최적화 구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가">
@@ -208,9 +208,9 @@ ga('send', 'pageview');
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/images/google_search/analytics.jpg" alt="https://analytics.google.com/"></p>
 <p>이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다.</p>
 <h2 id="검색-최적화">검색 최적화</h2>
-<p>구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 <strong>크롤링</strong>이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없으면 아무 소용이 없겠죠. 검색 엔진 최적화 (SEO)란 검색 엔진에 잘 수집되서 검색 시 노출이 잘 되도록 하는 기술입니다. 이미 수많은 사람들이 최적화를 하고 있기 때문에 검색 시 노출되려면 필수적으로 해야 합니다. 해도 본전이고 안하면 노출이 거의 안되겠죠.</p>
+<p>구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 <strong>크롤링</strong>이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없으면 아무 소용이 없겠죠. 검색 엔진 최적화 (<em>SEO</em>)란 검색 엔진에 잘 수집되서 검색 시 노출이 잘 되도록 하는 기술입니다. 이미 수많은 사람들이 최적화를 하고 있기 때문에 검색 시 노출되려면 필수적으로 해야 합니다. 해도 본전이고 안하면 노출이 거의 안되겠죠.</p>
 <h2 id="메타-태그">메타 태그</h2>
-<p>메타 태그 (meta tag)는 해당 웹 페이지의 정보를 담은 태그로 <code>&lt;head&gt;</code> 태그 안에 있습니다. 웹 페이지에서 개발자 도구로 소스를 까보시면 확인할 수 있죠. 웹 페이지 제목, 설명, 소셜미디어 관련, 대표 URL, 반응형 웹 여부 등의 정보가 들어가 있습니다. 이 메타태그가 잘 들어가 있어야 검색 엔진이 이 사이트를 잘 인식해서 수집이 잘 됩니다. Hexo 와 테마에서 기본적으로 잘 넣어주지만 몇 가지 손볼 곳이 있습니다.</p>
+<p>메타 태그 (<em>meta tag</em>)는 해당 웹 페이지의 정보를 담은 태그로 <code>&lt;head&gt;</code> 태그 안에 있습니다. 웹 페이지에서 개발자 도구로 소스를 까보시면 확인할 수 있죠. 웹 페이지 제목, 설명, 소셜미디어 관련, 대표 URL, 반응형 웹 여부 등의 정보가 들어가 있습니다. 이 메타태그가 잘 들어가 있어야 검색 엔진이 이 사이트를 잘 인식해서 수집이 잘 됩니다. Hexo 와 테마에서 기본적으로 잘 넣어주지만 몇 가지 손볼 곳이 있습니다.</p>
 <h3 id="대표-url-설정하기">대표 URL 설정하기</h3>
 <p>자동으로 메타 태그를 생성하는 것 중에 <strong>대표 URL</strong> 이 빠져있더군요. Hexo <a href="https://github.com/HyunSeob/hexo-auto-canonical" rel="external nofollow noopener noreferrer" target="_blank">플러그인</a>을 이용해서 자동 생성해봅시다. Hexo 를 설치한 블로그 폴더에서 <code>npm</code> 을 이용해서 플러그인을 설치합니다.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-auto-canonical</span><br></pre></td></tr></table></figure>

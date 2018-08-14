@@ -31,7 +31,7 @@
 <meta property="og:description" content="지난 포스트에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다. Hexo 블로그는 generate 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 GitHub">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://help.github.com/assets/images/help/repository/repo-actions-settings.png">
-<meta property="og:updated_time" content="2018-07-12T15:25:03.531Z">
+<meta property="og:updated_time" content="2018-08-14T13:21:59.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo HTTPS 적용하기(Github Pages)">
 <meta name="twitter:description" content="지난 포스트에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다. Hexo 블로그는 generate 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 GitHub">
@@ -206,7 +206,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>지난 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.</p>
-<p>Hexo 블로그는 <code>generate</code> 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">GitHub Pages</a> 입니다. 저도 처음에 접근하기 쉽고 <code>github.io</code> 도메인이 좋아서 github pages 로 시작했습니다. 다른 포스트에서 차차 다른 호스팅 방식도 다뤄보려고 합니다(Netlify, Gitlab pages 등).</p>
+<p>Hexo 블로그는 <code>generate</code> 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">GitHub Pages</a> 입니다. 저도 처음에 접근하기 쉽고 <code>github.io</code> 도메인이 좋아서 github pages 로 시작했습니다. 다른 포스트에서 차차 다른 호스팅 방식도 다뤄보려고 합니다(<em>Netlify, Gitlab pages</em> 등).</p>
 <h2 id="https">HTTPS</h2>
 <p>HTTPS에 대해서는 이전 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서 자세히 살펴봤습니다. SSL 인증서와 암호화를 통해 클라이언트와 웹 서버 간 안전하게 통신할 수 있는 기술로 누출되면 위험한 정보를 다룰 때 사용합니다.</p>
 <p>물론 Hexo 블로그에서는 대부분 중요한 개인정보, 비밀번호, 신용카드 번호 등을 전송할 필요는 없습니다. 하지만 HTTPS로 연결하면 사용자들에게 신뢰를 줄 수 있고 보안을 강화해놓으면 나쁠 건 없겠죠.</p>
@@ -217,7 +217,7 @@ ga('send', 'pageview');
 <p><img src="https://help.github.com/assets/images/help/pages/enforce-https-checkbox.png" alt="Enforce HTTPS checkbox"></p>
 <h2 id="혼합-콘텐츠-mixed-content">혼합 콘텐츠 Mixed-content</h2>
 <p>Hexo 블로그에 적용해본 결과 딱히 문제가 발생하지 않았습니다. 하지만 HTTPS 적용 시 혼합 콘텐츠로 문제가 나타날 수 있습니다.</p>
-<p>혼합 콘텐츠는 HTTPS 컨텐츠 내에 HTTP 로 요청하는 하위 리소스가 있는 경우를 말합니다. HTTPS 로 안전한 페이지를 요청하지만, 그 페이지가 내부적으로 가지고 있는 리소스를 다시 로드할 때 HTTP 요청이므로 중간자 공격(man-in-the-middle attack)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식
+<p>혼합 콘텐츠는 HTTPS 컨텐츠 내에 HTTP 로 요청하는 하위 리소스가 있는 경우를 말합니다. HTTPS 로 안전한 페이지를 요청하지만, 그 페이지가 내부적으로 가지고 있는 리소스를 다시 로드할 때 HTTP 요청이므로 중간자 공격(<em>man-in-the-middle attack</em>)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식
 ">[1]</span></a></sup>에 취약하게 됩니다.</p>
 <p>HTTP로 이미지, 비디오, 오디오 콘텐츠 등의 리소스를 요청하는 경우 이걸 가로채서 의도하지 않은 콘텐츠로 바꿔치기 할 수 있습니다. 예를 들어 버튼의 이미지를 바꾼다거나, 사진을 부적절한 콘텐츠로 바꾼다거나, 제품의 이미지를 다른 제품으로 대체할 수도 있습니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[혼합 콘텐츠란?](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ko#browser-behavior-with-mixed-content)">[2]</span></a></sup> 이런 위험이 있는 경우 최신 브라우저에서는 경고로 표시합니다.</p>
 <p><img src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/passive-mixed-content-warnings.png?hl=ko" alt="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content"></p>

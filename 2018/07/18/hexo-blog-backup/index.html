@@ -31,7 +31,7 @@
 <meta property="og:description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. Github 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://futurecreator.github.io/2018/07/18/hexo-blog-backup/2018/07/18/hexo-blog-backup/github.png">
-<meta property="og:updated_time" content="2018-07-18T13:53:29.629Z">
+<meta property="og:updated_time" content="2018-08-14T13:21:24.087Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 배포 원리와 백업하기">
 <meta name="twitter:description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. Github 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
@@ -212,7 +212,7 @@ ga('send', 'pageview');
 <p>저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중에야 알게 되었습니다. 리파지토리에 올라가는 건 public 폴더라는 것을 말이죠.</p>
 <h2 id="hexo-deployment">Hexo Deployment</h2>
 <p>제가 2016년 처음 Hexo 블로그를 시작하면서 작성한 <a href="https://futurecreator.github.io/2016/06/14/get-started-with-hexo/">포스트</a>를 보면 github에 새로운 리파지토리를 만들고, <code>hexo generate</code>를 이용해서 빌드를 한 후에 <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Pages</a> 를 이용해서 호스팅하는 과정이 나옵니다. <code>_config.yml</code> 항목에 git repository 주소를 지정하면서 이 소스가 올라가는 거라고 생각했지만 그건 착각이었습니다.</p>
-<p>과정을 한 번 살펴보겠습니다. <code>hexo generate</code> 라는 명령어로 빌드를 하면, Hexo 의 각종 템플릿과 우리가 작성한 <code>.md</code> 파일을 가지고 웹 사이트(html, css, javascript 등)를 만들어줍니다. 이런 프레임워크를 정적 사이트 생성기(Static Site Generator)라고 하는데 Hexo 외에도 많은 서비스들이 있습니다. 그리고 이렇게 나온 결과물은 <code>public</code> 폴더에 떨어지고, <a href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noopener noreferrer" target="_blank">hexo-deployer-git</a> 플러그인을 이용해서 리파지토리에 public 폴더의 내용을 배포합니다. 그러면 github pages 를 통해 <code>github.io</code> 도메인으로 웹 사이트를 볼 수 있게 됩니다.</p>
+<p>과정을 한 번 살펴보겠습니다. <code>hexo generate</code> 라는 명령어로 빌드를 하면, Hexo 의 각종 템플릿과 우리가 작성한 <code>.md</code> 파일을 가지고 웹 사이트(<em>html, css, javascript</em> 등)를 만들어줍니다. 이런 프레임워크를 정적 사이트 생성기(<em>Static Site Generator</em>)라고 하는데 Hexo 외에도 많은 서비스들이 있습니다. 그리고 이렇게 나온 결과물은 <code>public</code> 폴더에 떨어지고, <a href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noopener noreferrer" target="_blank">hexo-deployer-git</a> 플러그인을 이용해서 리파지토리에 public 폴더의 내용을 배포합니다. 그러면 github pages 를 통해 <code>github.io</code> 도메인으로 웹 사이트를 볼 수 있게 됩니다.</p>
 <p>문제는 내가 작성한 마크다운 파일, 수정한 템플릿과 설정 파일 그리고 테마는 따로 저장되는 곳이 없다는 겁니다. 이번 포스팅에서는 현재 사용하고 있는 블로그를 백업하는 방법에 대해 알아보겠습니다.</p>
 <h2 id="repository-선택하기">Repository 선택하기</h2>
 <p><strong>여기서 말하는 리파지토리(저장소)는 github pages 를 이용해 배포하는 리파지토리가 아닌 코드 자체를 백업하기 위한 저장소입니다.</strong></p>
@@ -223,7 +223,7 @@ ga('send', 'pageview');
 </ul>
 <p>gitlab 또한 사용법은 github 와 다르지 않으니, 이 포스트에서 실습은 github 으로 진행되었습니다.</p>
 <h2 id="새-저장소-생성하기">새 저장소 생성하기</h2>
-<p>새 저장소는 총 2개가 필요합니다. 왜냐하면 테마 또한 따로 백업해야 하기 때문입니다. 저는 테마 이름인 ‘hueman’ 과 블로그 자료를 저장할 ‘blog’ 라는 이름으로 만들었습니다.</p>
+<p>새 저장소는 총 2개가 필요합니다. 왜냐하면 테마 또한 따로 백업해야 하기 때문입니다. 저는 테마 이름인 ‘<em>hueman</em>’ 과 블로그 자료를 저장할 ‘<em>blog</em>’ 라는 이름으로 만들었습니다.</p>
 <p><img src="github.png" alt="https://github.com/new"></p>
 <p><a href="http://README.md" rel="external nofollow noopener noreferrer" target="_blank">README.md</a> 파일을 만들지 않고 다른 설정은 건드릴 필요 없이 완료합니다.</p>
 <ul>

@@ -31,7 +31,7 @@
 <meta property="og:description" content="개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다. 개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 PlantUML 이라는 툴을 찾았습니다. 이번 포스팅에서는">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/2018/06/30/easy-diagram-plantuml-hexo-plugin/sample.png">
-<meta property="og:updated_time" content="2018-07-07T05:13:46.229Z">
+<meta property="og:updated_time" content="2018-08-14T13:25:13.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="쉽고 빠른 UML 그리기 (PlantUML)">
 <meta name="twitter:description" content="개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다. 개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 PlantUML 이라는 툴을 찾았습니다. 이번 포스팅에서는">
@@ -212,15 +212,15 @@ ga('send', 'pageview');
 <p>이 툴을 이용하면 어떻게 보여질지 신경쓰는 대신 표현해야 할 로직에 집중할 수 있습니다. 해당 로직을 문법에 따라 표현해주면 PlantUML이 알아서 그려줍니다. 선을 하나 하나 그리고 위치를 조정하고 글꼴을 수정하는 등의 추가적인 작업이 없으니 쉽고 빠릅니다. 물론 세부적인 명령으로 디자인도 수정이 가능합니다. 물론 코드를 generate 하는 등 복잡한 설계의 기능까진 할 수 없지만, 블로그에서 UML을 그리기에는 최적의 툴입니다.</p>
 <p>지원하는 UML 다이어그램은 다음과 같습니다.</p>
 <ul>
-<li>시퀀스 다이어그램 (Sequence diagram)</li>
-<li>유즈케이스 다이어그램 (Usecase diagram)</li>
-<li>클래스 다이어그램 (Class diagram)</li>
-<li>액티비티 다이어그램 (Activity diagram)</li>
-<li>컴포넌트 다이어그램 (Component diagram)</li>
-<li>상태 다이어그램 (State diagram)</li>
-<li>객체 다이어그램 (Object diagram)</li>
-<li>배포 다이어그램 (Deployment diagram)</li>
-<li>타이밍 다이어그램 (Timing diagram)</li>
+<li>시퀀스 다이어그램 (<em>Sequence diagram</em>)</li>
+<li>유즈케이스 다이어그램 (<em>Usecase diagram</em>)</li>
+<li>클래스 다이어그램 (<em>Class diagram</em>)</li>
+<li>액티비티 다이어그램 (<em>Activity diagram</em>)</li>
+<li>컴포넌트 다이어그램 (<em>Component diagram</em>)</li>
+<li>상태 다이어그램 (<em>State diagram</em>)</li>
+<li>객체 다이어그램 (<em>Object diagram</em>)</li>
+<li>배포 다이어그램 (<em>Deployment diagram</em>)</li>
+<li>타이밍 다이어그램 (<em>Timing diagram</em>)</li>
 </ul>
 <p>UML 이외의 다이어그램도 지원한다고 합니다.</p>
 <ul>
@@ -228,7 +228,7 @@ ga('send', 'pageview');
 <li>Archimate Diagram</li>
 <li>Ditaa (PlantUML 과 비슷하게 텍스트로 다이어그램을 그리는 오픈소스)</li>
 <li>Mathematic with AsciiMath or JLaTeXMath notation (수학적 표현을 텍스트로 쉽게 하기)</li>
-<li>Gantt diagram (프로젝트 일정 관리) (beta)</li>
+<li>Gantt diagram (프로젝트 일정 관리) (<em>beta</em>)</li>
 </ul>
 <p>종류도 많고 생소한 것도 많아서 하나씩 페이지에 들어가서 살펴보니 유용한게 많네요. <a href="ttp://plantuml.com/" rel="external nofollow noopener noreferrer" target="_blank">PlantUML</a> 메인 페이지에 있는 <a href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000" rel="external nofollow noopener noreferrer" target="_blank">online generator</a> 를 이용하면 설치 없이 그려볼 수 있습니다. 여기서 모두 소개하기엔 기능이 너무 많아서 가장 친숙한 클래스 다이어그램을 그려보겠습니다.</p>
 <h2 id="클래스-다이어그램">클래스 다이어그램</h2>

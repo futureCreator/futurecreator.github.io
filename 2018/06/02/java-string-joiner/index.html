@@ -30,7 +30,7 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-07T05:14:59.394Z">
+<meta property="og:updated_time" content="2018-08-14T13:29:43.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java StringJoiner (문자열 구분자 붙이기)">
 <meta name="twitter:description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
@@ -204,7 +204,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html" rel="external nofollow noopener noreferrer" target="_blank">StringJoiner</a> 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.</p>
-<p>StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimiter) 를 지정해줄 수 있는게 특징입니다.</p>
+<p>StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(<em>delimiter</em>) 를 지정해줄 수 있는게 특징입니다.</p>
 <h2 id="간단한-예제">간단한 예제</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String first = <span class="string">"관우"</span>;</span><br><span class="line">String second = <span class="string">"장비"</span>;</span><br><span class="line">String third = <span class="string">"조운"</span>;</span><br><span class="line">String fourth = <span class="string">"황충"</span>;</span><br><span class="line">String fifth = <span class="string">"마초"</span>;</span><br></pre></td></tr></table></figure>
 <p>오호대장군 다섯 명이 있다고 할 때, 다섯 명 이름을 “-” 로 붙여서 출력해보도록 합니다.</p>

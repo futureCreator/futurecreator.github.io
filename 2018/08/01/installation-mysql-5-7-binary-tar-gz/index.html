@@ -31,7 +31,7 @@
 <meta property="og:description" content="요즘 ansible 로 MySQL 프로비저닝 스크립트를 짜고 있습니다. 기존 작성되어 있던 MariaDB 스크립트를 참고해서 작성 중인데 MySQL 에서는 동작하지 않는 부분이 좀 있었습니다. 아무래도 둘이 비슷하다고는 해도 각자 버전 업이 계속 되면서 차이점이 생긴 것 같습니다. 이번 포스팅에서는 Unix/Linux  시스템에 바이너리 파일을 이용해서 설">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/2018/08/01/installation-mysql-5-7-binary-tar-gz/package.png">
-<meta property="og:updated_time" content="2018-08-01T12:09:36.440Z">
+<meta property="og:updated_time" content="2018-08-14T13:18:27.199Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="변경된 MySQL 설치 방법 (5.7 이상)">
 <meta name="twitter:description" content="요즘 ansible 로 MySQL 프로비저닝 스크립트를 짜고 있습니다. 기존 작성되어 있던 MariaDB 스크립트를 참고해서 작성 중인데 MySQL 에서는 동작하지 않는 부분이 좀 있었습니다. 아무래도 둘이 비슷하다고는 해도 각자 버전 업이 계속 되면서 차이점이 생긴 것 같습니다. 이번 포스팅에서는 Unix/Linux  시스템에 바이너리 파일을 이용해서 설">
@@ -209,13 +209,13 @@ ga('send', 'pageview');
 <h2 id="binary-package">Binary package</h2>
 <p><img src="package.png" alt="MySQL Installation Layout for Generic Unix/Linux Binary Package"></p>
 <ul>
-<li>bin : mysqld server, 클라이언트, 유틸리티 프로그램 등</li>
-<li>docs : MySQL 메뉴얼</li>
-<li>include : Include (header) 파일</li>
-<li>lib : 라이브러리</li>
-<li>man : Unix 메뉴얼 페이지</li>
-<li>share : 에러메시지, 딕셔너리, database 설치 SQL</li>
-<li>support-files : 기타 파일</li>
+<li><em>bin</em> : mysqld server, 클라이언트, 유틸리티 프로그램 등</li>
+<li><em>docs</em> : MySQL 메뉴얼</li>
+<li><em>include</em> : Include (header) 파일</li>
+<li><em>lib</em> : 라이브러리</li>
+<li><em>man</em> : Unix 메뉴얼 페이지</li>
+<li><em>share</em> : 에러메시지, 딕셔너리, database 설치 SQL</li>
+<li><em>support-files</em> : 기타 파일</li>
 </ul>
 <h2 id="mysql-5-6-이하">MySQL 5.6 이하</h2>
 <p>MySQL 5.6 이하나 MariaDB 같은 경우 <code>mysql_install_db</code> 라는 스크립트를 이용해서 설치했습니다.</p>

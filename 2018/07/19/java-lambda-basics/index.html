@@ -30,7 +30,7 @@
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다. Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-08-09T13:53:34.186Z">
+<meta property="og:updated_time" content="2018-08-14T13:20:48.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Lambda (1) 기본">
 <meta name="twitter:description" content="이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다. Java 8 Lambda Deep Dive   Java Lambda (1) 기본   Java Lambda (2) 타입 추론">
@@ -203,7 +203,7 @@ ga('send', 'pageview');
             <span class="reading-time">⏱ 7 분</span>
         </div>
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스트부터 Java 8 에서 새로 도입된 람다(<em>Lambda</em>)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다.</p>
 <p><strong>Java 8 Lambda Deep Dive</strong></p>
 <ul>
 <li>
@@ -231,7 +231,7 @@ ga('send', 'pageview');
 <h2 id="lambda">Lambda</h2>
 <p>람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대수는 함수를 사용해 수학을 탐구하는 방식이었습니다. 이러한 방식은 리스프에서 람다 함수를 적용한 이후로 프로그래밍 분야에서도 발전해왔습니다.</p>
 <figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 수학에서의 람다 대수 표현식</span><br><span class="line"># x 인자를 받아서 더하는 함수(람다)</span><br><span class="line">λx.x+1</span><br><span class="line"></span><br><span class="line"># Lisp 람다 표현식</span><br><span class="line"># x 인자를 받아서 더하는 함수(람다)</span><br><span class="line">(<span class="name">lambda</span> (<span class="name">arg</span>) (<span class="name">+</span> arg <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
-<p>람다는 <strong>익명 함수</strong> (이름이 없고 내용만 있는 함수)이고, 함수(Funciton)를 정의하는 간편한 방법입니다. 특히 다른 함수에 함수를 인자로 전달할 때 유용합니다.</p>
+<p>람다는 <strong>익명 함수</strong> (이름이 없고 내용만 있는 함수)이고, 함수(<em>Funciton</em>)를 정의하는 간편한 방법입니다. 특히 다른 함수에 함수를 인자로 전달할 때 유용합니다.</p>
 <h2 id="function">Function</h2>
 <p>자바의 람다(함수)와 익명 클래스와 유사하게 사용되지만 기술적으로 차이가 있습니다. 단순히 익명 클래스를 쉽게 사용하기 위한 syntactic sugar 가 아닙니다.</p>
 <ul>
@@ -242,7 +242,7 @@ ga('send', 'pageview');
 <h3 id="이론-상-차이점">이론 상 차이점</h3>
 <p>이 anonymousClass 메소드는 Condition 의 구현체를 인자로 넘겨주며 waitFor 메소드를 호출합니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 클로저</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">anonymousClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> Server server = <span class="keyword">new</span> HttpServer();</span><br><span class="line">  waitFor(<span class="keyword">new</span> Condition()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">	  <span class="function"><span class="keyword">public</span> Boolean <span class="title">isSatisfied</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	    <span class="keyword">return</span> !server.isRunning();</span><br><span class="line">	  &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 람다로 표현</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">closure</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Server server = <span class="keyword">new</span> HttpServer();</span><br><span class="line">  waitFor(() -&gt; !server.isRunning());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>변수 server 는 Condition 클래스의 익명 인스턴스로 복사되어야 합니다. 여기서 사용될 때와 넘겨질 때의 시간 차이 동안 변경되지 않도록 하기 위해 <code>final</code> 로 선언됩니다(최신 버전에서는 갱신되지 않는다고 판단되면 final로 자동 처리). 반면 람다에서는 실행 환경이나 다른 조건들이 복사되지 않습니다.</p>
+<p>변수 server 는 Condition 클래스의 익명 인스턴스로 복사되어야 합니다. 여기서 사용될 때와 넘겨질 때의 시간 차이 동안 변경되지 않도록 하기 위해 <code>final</code> 로 선언됩니다(최신 버전에서는 갱신되지 않는다고 판단되면 <em>final</em> 로 자동 처리). 반면 람다에서는 실행 환경이나 다른 조건들이 복사되지 않습니다.</p>
 <h3 id="점유-문법-capture">점유 문법 Capture</h3>
 <ul>
 <li>익명함수(익명클래스의 메소드)에서 this 는 익명 클래스의 인스턴스를 참조합니다.</li>

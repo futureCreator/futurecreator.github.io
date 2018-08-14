@@ -31,7 +31,7 @@
 <meta property="og:description" content="스프링을 사용하다보니 좋은 프레임워크긴 하지만 지옥같은 XML 설정과 방대한 양의 코드 때문에 애를 먹었습니다. 간단한 소규모 혹은 개인 프로젝트에서도 스프링을 사용하고 싶은데 왠지 무거운 느낌입니다. 그러던 중 예전에 들었던 스프링부트가 생각나서 프로토타입을 만들 때 적용해보기로 했습니다. 많은 설정을 자동화시켜서 훨씬 쉽고 간단하게 사용할 수 있다고 합">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://futurecreator.github.io/images/springboot_get_started/springboot_get_started.png">
-<meta property="og:updated_time" content="2018-08-05T10:45:48.972Z">
+<meta property="og:updated_time" content="2018-08-14T13:38:37.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="스프링 부트 (Spring Boot) 로 시작하는 프레임워크 (Framework)">
 <meta name="twitter:description" content="스프링을 사용하다보니 좋은 프레임워크긴 하지만 지옥같은 XML 설정과 방대한 양의 코드 때문에 애를 먹었습니다. 간단한 소규모 혹은 개인 프로젝트에서도 스프링을 사용하고 싶은데 왠지 무거운 느낌입니다. 그러던 중 예전에 들었던 스프링부트가 생각나서 프로토타입을 만들 때 적용해보기로 했습니다. 많은 설정을 자동화시켜서 훨씬 쉽고 간단하게 사용할 수 있다고 합">
@@ -221,9 +221,9 @@ ga('send', 'pageview');
 <h3 id="스프링-핵심-기능">스프링 핵심 기능</h3>
 <p>스프링의 핵심 기능은 다음과 같습니다. 각각에 대해서 설명하기에는 양이 너무 방대하니 자세한 내용은 다른 포스팅을 통해서 하나씩 알아보기로 하죠.</p>
 <ul>
-<li>의존 주입 (Dependency Injection)</li>
-<li>관점 지향 프로그래밍 (AOP; Aspect-Oriented Programming)</li>
-<li>스프링 MVC 웹 애플리케이션과 RESTful 웹 서비스 프레임워크 (Spring MVC web application and RESTful web service framework)</li>
+<li>의존 주입 (<em>Dependency Injection</em>)</li>
+<li>관점 지향 프로그래밍 (<em>AOP; Aspect-Oriented Programming</em>)</li>
+<li>스프링 MVC 웹 애플리케이션과 RESTful 웹 서비스 프레임워크 (<em>Spring MVC web application and RESTful web service framework</em>)</li>
 <li>JDBC, JPA, JMS 지원</li>
 </ul>
 <h3 id="스프링-모듈">스프링 모듈</h3>
@@ -242,10 +242,10 @@ ga('send', 'pageview');
 </ul>
 <h2 id="스프링-부트-시작하기">스프링 부트 시작하기</h2>
 <h2 id="spring-tool-suite">Spring Tool Suite</h2>
-<p>스프링 부트를 시작하기 위해 <strong>Spring Tool Suite</strong> (이하 STS) 를 설치합니다. STS는 이클립스 (Eclipase) 기반의 스프링 개발 환경입니다.</p>
+<p>스프링 부트를 시작하기 위해 <strong>Spring Tool Suite</strong> (이하 <em>STS</em>) 를 설치합니다. STS는 이클립스 (<em>Eclipase</em>) 기반의 스프링 개발 환경입니다.</p>
 <p>설치는 <a href="https://spring.io/tools" rel="external nofollow noopener noreferrer" target="_blank">STS 홈페이지</a>에서 압축 파일을 다운로드 받아 원하는 곳에 압축을 해제하면 됩니다. 혹은 기존에 사용하는 이클립스에서 스프링 플러그인을 설치해서 사용할 수도 있습니다.</p>
 <h2 id="hello-spring-boot">Hello, Spring Boot!</h2>
-<p>역시 새로 배울 때는 ‘Hello, world’ 죠. 사용자의 이름을 받아서 Hello, World랑 같이 화면에 뿌려보겠습니다.</p>
+<p>역시 새로 배울 때는 ‘<em>Hello, world</em>’ 죠. 사용자의 이름을 받아서 Hello, World랑 같이 화면에 뿌려보겠습니다.</p>
 <h3 id="프로젝트-생성">프로젝트 생성</h3>
 <p><code>new &gt; Spring Starter Project</code> 로 프로젝트를 생성합니다. 프로젝트 이름을 입력하고 메이븐 (Maven) 을 이용해서 진행하겠습니다.</p>
 <p>프로젝트를 생성할 때 미리 POM 파일을 구성할 수 있습니다. 어지간한 건 거의 다 있어서  클릭만하면 되니까 편하군요. 물론 이후에도 POM 파일을 수정 가능합니다. 아래 세 가지 모듈을 선택하고 완료를 누르면 필요한 라이브러리들을 모두 다운받습니다.</p>
@@ -275,7 +275,7 @@ ga('send', 'pageview');
 <h2 id="hello-eric">Hello, Eric!</h2>
 <p>이번에는 이름을 같이 출력하도록 변경해보겠습니다. 다음과 같은 순서로 동작하게 됩니다.</p>
 <ol>
-<li>클라이언트에서 <code>/hello</code> 경로로 서버에 name 을 전달합니다. (GET 방식)</li>
+<li>클라이언트에서 <code>/hello</code> 경로로 서버에 name 을 전달합니다. (<em>GET</em> 방식)</li>
 <li>서버는 문자열을 조립해서 greetings 라는 스트링을 만들고 클라이언트에 응답합니다.</li>
 <li>서버에서 오는 데이터를 클라이언트에서 렌더링하기 위한 템플릿 엔진으로는 Velocity 를 사용하겠습니다.</li>
 <li>Velocity 파일에서는 서버에서 받은 greetings 라는 스트링을 출력합니다.</li>
@@ -289,7 +289,7 @@ ga('send', 'pageview');
 <figure class="highlight java"><figcaption><span>HelloController.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@RequestMapping</span>(<span class="string">"/hello"</span>)</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(Model model, @RequestParam(value = <span class="string">"name"</span>, defaultValue = <span class="string">"Unknown"</span>, required = <span class="keyword">false</span>)</span> String name) </span>&#123;</span><br><span class="line">	</span><br><span class="line">    String greetings = <span class="string">"Hello, "</span> + name + <span class="string">"!"</span>;</span><br><span class="line">    model.addAttribute(<span class="string">"greetings"</span>, greetings);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"hello"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>@RequestParam</code> 어노테이션을 이용해 클라이언트에서 넘어온 <code>name</code> 이라는 파라미터를 받습니다. <code>@RequestParam</code> 은 HttpRequest 로 넘어오는 파라미터와 선언한 변수를 맵핑해주는 역할을 합니다. 만약 name 을 전달하지 않는다면 에러가 납니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RuquestParam</span>(value=<span class="string">"name"</span>, required=<span class="keyword">false</span>) String name</span><br></pre></td></tr></table></figure>
-<p>이런 식으로 필수여부를 <code>false</code> 로 지정하지 않는다면 말이죠. 이럴 때는 빈 값으로 표시됩니다. 우리는 name 이 넘어오지 않는 경우에는 기본값으로 ‘Unknown’ 이라는 문자열이 나오도록 했습니다.</p>
+<p>이런 식으로 필수여부를 <code>false</code> 로 지정하지 않는다면 말이죠. 이럴 때는 빈 값으로 표시됩니다. 우리는 name 이 넘어오지 않는 경우에는 기본값으로 ‘<em>Unknown</em>’ 이라는 문자열이 나오도록 했습니다.</p>
 <h3 id="실행하기-v2">실행하기</h3>
 <p>아까 띄워놓은 서버는 변경이 있을 때 자동 재시작이 되므로 변경사항은 바로 적용됩니다. 이제 접속을 해봅시다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:<span class="comment">//localhost:8080/hello</span></span><br></pre></td></tr></table></figure>
