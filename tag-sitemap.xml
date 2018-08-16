@@ -1003,20 +1003,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/hexo/</loc>
-        <lastmod>2018-08-14T13:40:24.736Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/web/</loc>
-        <lastmod>2018-08-14T13:40:34.358Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/atom/</loc>
         <lastmod>2018-08-14T13:40:34.358Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1031,20 +1017,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/blog/</loc>
-        <lastmod>2018-08-14T13:41:24.496Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/markdown/</loc>
-        <lastmod>2018-08-14T13:41:24.496Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/evernote/</loc>
         <lastmod>2018-08-14T13:41:24.496Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1054,6 +1026,34 @@
     <url>
         <loc>http://futurecreator.github.io/tags/postach/</loc>
         <lastmod>2018-08-14T13:41:24.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/hexo/</loc>
+        <lastmod>2018-08-16T14:01:57.114Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/web/</loc>
+        <lastmod>2018-08-16T14:01:57.114Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/blog/</loc>
+        <lastmod>2018-08-16T14:01:57.114Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/markdown/</loc>
+        <lastmod>2018-08-16T14:01:57.114Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

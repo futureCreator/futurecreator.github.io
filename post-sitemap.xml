@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2016/06/14/get-started-with-hexo/</loc>
+        <lastmod>2018-08-16T14:01:57.114Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2016/06/19/evernote-blog-postach-io/</loc>
         <lastmod>2018-08-14T13:41:24.496Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,14 +25,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/</loc>
         <lastmod>2018-08-14T13:40:34.358Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/14/get-started-with-hexo/</loc>
-        <lastmod>2018-08-14T13:40:24.736Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
