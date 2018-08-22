@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2017/01/27/java-variable-data-type/</loc>
+        <lastmod>2018-08-22T14:17:54.309Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/08/14/java-8-optional/</loc>
         <lastmod>2018-08-16T14:19:07.989Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -113,14 +121,6 @@
     <url>
         <loc>http://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/</loc>
         <lastmod>2018-08-14T13:34:28.035Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2017/01/27/java-variable-data-type/</loc>
-        <lastmod>2018-08-14T13:34:23.024Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

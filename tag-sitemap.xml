@@ -793,20 +793,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/variable/</loc>
-        <lastmod>2018-08-14T13:34:23.024Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/datatype/</loc>
-        <lastmod>2018-08-14T13:34:23.024Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/algorithm/</loc>
         <lastmod>2018-08-14T13:34:28.035Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1045,15 +1031,29 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/java/</loc>
+        <loc>http://futurecreator.github.io/tags/optional/</loc>
         <lastmod>2018-08-16T14:19:07.989Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/optional/</loc>
-        <lastmod>2018-08-16T14:19:07.989Z</lastmod>
+        <loc>http://futurecreator.github.io/tags/java/</loc>
+        <lastmod>2018-08-22T14:17:54.309Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/variable/</loc>
+        <lastmod>2018-08-22T14:17:54.309Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/datatype/</loc>
+        <lastmod>2018-08-22T14:17:54.309Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
