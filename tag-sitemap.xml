@@ -828,27 +828,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/spring/</loc>
-        <lastmod>2018-08-14T13:38:37.521Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/springboot/</loc>
-        <lastmod>2018-08-14T13:38:37.521Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/velocity/</loc>
-        <lastmod>2018-08-14T13:38:37.521Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/search/</loc>
         <lastmod>2018-08-14T13:39:37.245Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1159,6 +1138,27 @@
     <url>
         <loc>http://futurecreator.github.io/tags/release/</loc>
         <lastmod>2018-09-08T19:53:55.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/spring/</loc>
+        <lastmod>2018-09-10T12:50:48.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/springboot/</loc>
+        <lastmod>2018-09-10T12:50:48.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/velocity/</loc>
+        <lastmod>2018-09-10T12:50:48.076Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

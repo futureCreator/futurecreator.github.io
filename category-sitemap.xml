@@ -49,13 +49,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/categories/Programming/Web/</loc>
-        <lastmod>2018-08-14T13:38:37.521Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/categories/Reviews/</loc>
         <lastmod>2018-08-14T13:41:24.496Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -70,13 +63,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/categories/Programming/</loc>
-        <lastmod>2018-09-08T05:22:50.084Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/categories/Programming/Java/</loc>
         <lastmod>2018-09-08T05:22:50.084Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -86,6 +72,20 @@
     <url>
         <loc>http://futurecreator.github.io/categories/Column/</loc>
         <lastmod>2018-09-08T19:53:55.482Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/Programming/</loc>
+        <lastmod>2018-09-10T12:50:48.076Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/Programming/Web/</loc>
+        <lastmod>2018-09-10T12:50:48.076Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
