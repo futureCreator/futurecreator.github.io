@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/08/07/highest-salaries-worldwide-programming-languages-2018/</loc>
+        <lastmod>2018-09-17T12:16:31.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/09/14/what-is-microservices-architecture/</loc>
-        <lastmod>2018-09-14T13:46:25.386Z</lastmod>
+        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -401,14 +409,6 @@
     <url>
         <loc>http://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/</loc>
         <lastmod>2018-08-14T13:18:27.199Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2018/08/07/highest-salaries-worldwide-programming-languages-2018/</loc>
-        <lastmod>2018-08-14T13:15:55.042Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

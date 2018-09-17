@@ -310,27 +310,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/programming-languages/</loc>
-        <lastmod>2018-08-14T13:15:55.042Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/highest-salaries/</loc>
-        <lastmod>2018-08-14T13:15:55.042Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/2018/</loc>
-        <lastmod>2018-08-14T13:15:55.042Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/installation/</loc>
         <lastmod>2018-08-14T13:18:27.199Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1179,35 +1158,56 @@
 
     <url>
         <loc>http://futurecreator.github.io/tags/msa/</loc>
-        <lastmod>2018-09-14T13:46:25.386Z</lastmod>
+        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/microservices/</loc>
-        <lastmod>2018-09-14T13:46:25.386Z</lastmod>
+        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/architecture/</loc>
-        <lastmod>2018-09-14T13:46:25.386Z</lastmod>
+        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/monolith/</loc>
-        <lastmod>2018-09-14T13:46:25.386Z</lastmod>
+        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/introduction/</loc>
-        <lastmod>2018-09-14T13:46:25.386Z</lastmod>
+        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/programming-languages/</loc>
+        <lastmod>2018-09-17T12:16:31.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/highest-salaries/</loc>
+        <lastmod>2018-09-17T12:16:31.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/2018/</loc>
+        <lastmod>2018-09-17T12:16:31.441Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
