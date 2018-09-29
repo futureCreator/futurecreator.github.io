@@ -1115,13 +1115,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/release/</loc>
-        <lastmod>2018-09-08T19:53:55.482Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/spring/</loc>
         <lastmod>2018-09-10T12:50:48.076Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1208,6 +1201,27 @@
     <url>
         <loc>http://futurecreator.github.io/tags/2018/</loc>
         <lastmod>2018-09-17T12:16:31.441Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/java-11/</loc>
+        <lastmod>2018-09-29T14:08:32.510Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/release/</loc>
+        <lastmod>2018-09-29T14:08:32.510Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/lts/</loc>
+        <lastmod>2018-09-29T14:08:32.510Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

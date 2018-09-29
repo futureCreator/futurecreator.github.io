@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="http://futurecreator.github.io/"/>
-  <updated>2018-09-14T13:46:22.787Z</updated>
+  <updated>2018-09-29T14:08:32.510Z</updated>
   <id>http://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 11 릴리즈!</title>
+    <link href="http://futurecreator.github.io/2018/09/29/java-11-released/"/>
+    <id>http://futurecreator.github.io/2018/09/29/java-11-released/</id>
+    <published>2018-09-29T14:06:48.000Z</published>
+    <updated>2018-09-29T14:08:32.510Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>자바 11이 릴리즈됐습니다. 자바 10이 출시된지 6개월만입니다. 오라클은 6개월마다 새 버전을 출시한다고 했고, 특정 버전만 장기간 지원(Long-term support; LTS)한다고 밝혔는데요. 자바 11은 첫 번째 LTS 버전입니다.</p><div class="twitter-wrapper"><blockquote class="twitter-tweet"><a href="https://twitter.com/java/status/928185028714160128" rel="external nofollow noopener noreferrer" target="_blank"></a></blockquote></div><script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script><p>오라클이 이런 버전 정책을 가져가는 이유는 두 가지입니다.</p><ul><li>자바 생태계가 빠르게 발전할 수 있도록 6개월마다 새로운 버전을 릴리즈합니다.</li><li>중간 중간 LTS 버전을 둠으로써 다음 버전으로 마이그레이션할 충분할 시간을 줍니다.</li></ul><p>그럼 자바 11에서 달라진 점을 살펴보겠습니다.</p><h2 id="새로운-기능">새로운 기능</h2><h3 id="nest-기반-접근-제어">Nest 기반 접근 제어</h3><p><a href="https://openjdk.java.net/jeps/181" rel="external nofollow noopener noreferrer" target="_blank">Nest-based access controls</a>. Nest 는 접근 제어 컨텍스트로 논리적으로는 같은 클래스를 분리된 클래스로 컴파일할 수 있게 해줍니다. 그러면 다른 클래스의 private 멤버에 getter/setter 없이 바로 접근 가능합니다. 여러 클래스를 하나의 클래스처럼 묶어줄 수 있는 기술로 보입니다.</p><h3 id="새로운-가비지-컬렉터">새로운 가비지 컬렉터</h3><p><a href="https://openjdk.java.net/jeps/333" rel="external nofollow noopener noreferrer" target="_blank">ZGC: A Scalable Low-Latency Garbage Collector (Experimental)</a>. 성능을 향상시킨 새로운 가비지 컬렉터(Carbage Collector)입니다. 메모리를 자동으로 정리해주는 가비지 컬렉터는 자바의 장점 중 하나이지만, 가비지 컬렉터가 동작할 때 JVM이 애플리케이션을 멈추기 때문에 자바의 단점이기도 합니다. ZGC는 이 시간을 10ms 미만으로 줄이고 15% 이하의 성능 페널티를 목표로 합니다.</p><h3 id="flight-recorder">Flight Recorder</h3><p><a href="https://bugs.openjdk.java.net/browse/JDK-8203664" rel="external nofollow noopener noreferrer" target="_blank">Flight Recorder</a>. 자바 애플리케이션과 HotSpot JVM의 문제 해결을 위한 오버헤드가 낮은 데이터 수집 프레임워크입니다. 이전에는 유료 기능이었지만 오픈소스로 공개되었습니다.</p><h3 id="새로운-표준-http-라이브러리">새로운 표준 HTTP 라이브러리</h3><p><a href="https://openjdk.java.net/jeps/321" rel="external nofollow noopener noreferrer" target="_blank">HTTP Clinet(Standard)</a>. <code>java.net.http</code> 패키지의 새로운 모듈로 flow 기반의 HTTP/1.1과 HTTP/2를 지원합니다. 자바 9과 자바 10에서 사용되었던 <code>jdk.incubator.http</code> 패키지가 표준화되어 <code>java.net.http</code> 패키지로 추가되었습니다.</p><h3 id="tls-1-3">TLS 1.3</h3><p><a href="https://openjdk.java.net/jeps/332" rel="external nofollow noopener noreferrer" target="_blank">Transport Layer Security (TLS) 1.3</a>. <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">TLS</a>는 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">이전 포스트</a>에서 살펴봤던 것처럼 SSL(Secure Socket Layer)의 표준 이름이죠. TLS의 새로운 버전을 구현했습니다.</p><h3 id="람다에서의-var-변수">람다에서의 var 변수</h3><p><a href="https://openjdk.java.net/jeps/323" rel="external nofollow noopener noreferrer" target="_blank">Local-Variable Syntax for Lambda Parameters</a>. 자바 10에서 도입된 var 타입 추론을 업데이트했습니다.</p><h2 id="사라진-기능">사라진 기능</h2><p>사라진 기능도 간단하게 살펴보겠습니다.</p><ul><li><strong>Java EE and CORBA Modules</strong> : 앞으로 EE 나 CORBA 모듈이 필요한 경우 명시적으로 의존을 추가해야 합니다.</li><li><strong>Web Start</strong> : 특별한 대안 없이 삭제되었습니다.</li><li><strong>Applets</strong> : 한동안 대부분 deprecated 되었다가 완전히 삭제되었습니다.</li><li><strong>JavaFX</strong> : FX 라이브러리가 OpenJFX 프로젝트로 옮겨가면서 코어에서 삭제되었습니다.</li></ul><p>자바 11이 릴리즈되었다는 소식에 달라진 점을 간단히 살펴봤습니다. 자바 10을 아직 정리하지 않아서 차차 다른 포스트에서 다뤄볼 예정입니다. 자바 11은 <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" rel="external nofollow noopener noreferrer" target="_blank">오라클 다운로드 페이지</a>에서 다운로드하실 수 있습니다.</p><h2 id="참고">참고</h2><ul><li><a href="https://jdk.java.net/11/release-notes" rel="external nofollow noopener noreferrer" target="_blank">JDK 11 Release Notes | jdk.java.net</a></li><li><a href="https://www.infoq.com/news/2018/09/java11-released" rel="external nofollow noopener noreferrer" target="_blank">Java 11 Released | InfoQ</a></li><li><a href="https://byline.network/2018/09/3-22/" rel="external nofollow noopener noreferrer" target="_blank">오라클 자바 SE 유료화(?)에 대한 오해 셋 | BylineNetwork</a></li></ul><h2 id="related-posts">Related Posts</h2><ul><li><a href="/2018/08/26/java-8-streams/" title="Java 스트림 Stream (1) 총정리">Java 스트림 Stream (1) 총정리</a></li><li><a href="/2018/08/26/java-8-streams-advanced/" title="Java 스트림 Stream (2) 고급">Java 스트림 Stream (2) 고급</a></li><li><a href="/2018/08/10/java-8-lambda-deep-dive/" title="Java 8 람다 Lambda DEEP DIVE">Java 8 람다 Lambda DEEP DIVE</a></li><li><a href="/2018/08/12/java-generics/" title="Java 제네릭 Generics DEEP DIVE">Java 제네릭 Generics DEEP DIVE</a></li><li><a href="/2018/08/14/java-8-optional/" title="Java 8 옵셔널 Optional">Java 8 옵셔널 Optional</a></li><li><a href="/2018/06/04/java-observer-pattern/" title="Java 옵저버 패턴 (Observer Pattern)">Java 옵저버 패턴 (Observer Pattern)</a></li><li><a href="/2017/01/27/java-variable-data-type/" title="자바의 변수와 데이터 타입 (Java Variables & Data type)">자바의 변수와 데이터 타입 (Java Variables & Data type)</a></li><li><a href="/2018/06/02/java-string-concatenation/" title="Java 문자열 연결 방법 비교">Java 문자열 연결 방법 비교</a></li><li><a href="/2018/06/02/java-string-joiner/" title="Java StringJoiner (문자열 구분자 붙이기)">Java StringJoiner (문자열 구분자 붙이기)</a> </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;자바 11이 릴리즈됐습니다. 자바 10이 출시된지 6개월만입니다. 오
+      
+    
+    </summary>
+    
+      <category term="Programming" scheme="http://futurecreator.github.io/categories/Programming/"/>
+    
+      <category term="Java" scheme="http://futurecreator.github.io/categories/Programming/Java/"/>
+    
+    
+      <category term="java_11" scheme="http://futurecreator.github.io/tags/java-11/"/>
+    
+      <category term="release" scheme="http://futurecreator.github.io/tags/release/"/>
+    
+      <category term="lts" scheme="http://futurecreator.github.io/tags/lts/"/>
+    
+  </entry>
   
   <entry>
     <title>마이크로서비스 Microservices (2) API 게이트웨이</title>
@@ -109,6 +140,8 @@
     
       <category term="version" scheme="http://futurecreator.github.io/tags/version/"/>
     
+      <category term="release" scheme="http://futurecreator.github.io/tags/release/"/>
+    
       <category term="versioning" scheme="http://futurecreator.github.io/tags/versioning/"/>
     
       <category term="semver" scheme="http://futurecreator.github.io/tags/semver/"/>
@@ -120,8 +153,6 @@
       <category term="patch" scheme="http://futurecreator.github.io/tags/patch/"/>
     
       <category term="snapshot" scheme="http://futurecreator.github.io/tags/snapshot/"/>
-    
-      <category term="release" scheme="http://futurecreator.github.io/tags/release/"/>
     
   </entry>
   
