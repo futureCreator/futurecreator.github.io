@@ -1136,55 +1136,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/api-gateway/</loc>
-        <lastmod>2018-09-14T13:46:22.787Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/api/</loc>
-        <lastmod>2018-09-14T13:46:22.787Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/msa/</loc>
-        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/microservices/</loc>
-        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/architecture/</loc>
-        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/monolith/</loc>
-        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/introduction/</loc>
-        <lastmod>2018-09-17T12:14:25.732Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/programming-languages/</loc>
         <lastmod>2018-09-17T12:16:31.441Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1222,6 +1173,76 @@
     <url>
         <loc>http://futurecreator.github.io/tags/lts/</loc>
         <lastmod>2018-09-29T14:08:32.510Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/api-gateway/</loc>
+        <lastmod>2018-10-04T14:17:37.119Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/api/</loc>
+        <lastmod>2018-10-04T14:17:37.119Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/architecture/</loc>
+        <lastmod>2018-10-04T14:17:47.144Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/monolith/</loc>
+        <lastmod>2018-10-04T14:17:47.144Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/introduction/</loc>
+        <lastmod>2018-10-04T14:17:47.144Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/msa/</loc>
+        <lastmod>2018-10-04T14:56:49.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/microservices/</loc>
+        <lastmod>2018-10-04T14:56:49.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/ipc/</loc>
+        <lastmod>2018-10-04T14:56:49.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/inter-process-communication/</loc>
+        <lastmod>2018-10-04T14:56:49.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/message/</loc>
+        <lastmod>2018-10-04T14:56:49.031Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
