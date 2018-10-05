@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+        <title>
+            
+                함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가 |
+                    
+                        Writer, IT Blog
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        
+            <meta name="keywords" content="">
+        
+
+        
+        <meta name="description" content="Functional Programming Basics   함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가  함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스) 함수형 프로그래밍 기초 (3) 클로저와 커링 함수형 프로그래밍 기초 (4) 메모제이션과 Lazy 함수형 프로그래밍 기초 (5) 코드 재사용 함수형 프로그래밍 기초 (6) 함수형 디자인 패">
+<meta property="og:type" content="article">
+<meta property="og:title" content="함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가">
+<meta property="og:url" content="http://futurecreator.github.io/2018/10/05/why-functional-programming/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="Functional Programming Basics   함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가  함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스) 함수형 프로그래밍 기초 (3) 클로저와 커링 함수형 프로그래밍 기초 (4) 메모제이션과 Lazy 함수형 프로그래밍 기초 (5) 코드 재사용 함수형 프로그래밍 기초 (6) 함수형 디자인 패">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-10-05T14:41:27.304Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가">
+<meta name="twitter:description" content="Functional Programming Basics   함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가  함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스) 함수형 프로그래밍 기초 (3) 클로저와 커링 함수형 프로그래밍 기초 (4) 메모제이션과 Lazy 함수형 프로그래밍 기초 (5) 코드 재사용 함수형 프로그래밍 기초 (6) 함수형 디자인 패">
+<meta name="twitter:creator" content="@hdhXD">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+        
+        
+        <link rel="canonical" href="http://futurecreator.github.io/2018/10/05/why-functional-programming/">
+        
+        
+            <link rel="icon" href="/images/favicions/favicon6.png">
+        
+        <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="/vendor/titillium-web/styles.css"> -->
+        <!-- <link rel="stylesheet" href="/vendor/source-code-pro/styles.css"> -->
+        <link rel="stylesheet" href="/css/style.css">
+        <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+        
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AWS/">AWS</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    uncategorized
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-why-functional-programming" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가
+        </h1>
+    
+
+            </header>
+        
+        <div class="article-subtitle">
+            <a href="/2018/10/05/why-functional-programming/" class="article-date">
+    <time datetime="2018-10-05T14:41:27.000Z" itemprop="datePublished">2018-10-05</time>
+</a>
+            <!--  -->
+            <span class="reading-time">⏱ 7 분</span>
+        </div>
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="functional-programming-basics">Functional Programming Basics</h2>
+<ul>
+<li>
+<a href="/2018/10/05/why-functional-programming/" title="함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가">함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가</a>
+</li>
+<li>함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)</li>
+<li>함수형 프로그래밍 기초 (3) 클로저와 커링</li>
+<li>함수형 프로그래밍 기초 (4) 메모제이션과 Lazy</li>
+<li>함수형 프로그래밍 기초 (5) 코드 재사용</li>
+<li>함수형 프로그래밍 기초 (6) 함수형 디자인 패턴</li>
+<li>함수형 프로그래밍 기초 (7) 실전 예제</li>
+<li>함수형 프로그래밍 기초 (8) 폴리글랏과 폴리패러다임</li>
+</ul>
+<h2 id="함수형-패러다임">함수형 패러다임</h2>
+<p>새로운 프로그래밍 패러다임에서 중요한 것은 새로운 언어를 배우는 것이 아니라 새로운 방식으로 생각하는 법입니다. 문법을 배우는 건 쉽지만 사고방식을 배우는 건 쉽지 않죠.</p>
+<p>컴퓨터 과학에서는 수십 년 전의 아이디어가 갑자기 주류가 되곤 합니다. 객체지향은 1983년 <a href="https://en.wikipedia.org/wiki/Simula" rel="external nofollow noopener noreferrer" target="_blank">Simula 67</a>이라는 언어에서 처음 등장했지만 1983년 처음 등장한 C++이 보편화된 후에야 주류가 되었습니다. Java 는 초창기에 메모리를 많이 사용해 고성능 애플리케이션에는 적합하지 않았지만 하드웨어가 발전하면서 선호도가 높아졌습니다.</p>
+<p>함수형 언어도 마찬가지입니다. 1930년대 <a href="https://en.wikipedia.org/wiki/Lambda_calculus" rel="external nofollow noopener noreferrer" target="_blank">람다 대수</a> 라는 수학적 표기 방식이 함수형 프로그래밍의 기반이 된 이후 <a href="https://en.wikipedia.org/wiki/Lisp_(programming_language)" rel="external nofollow noopener noreferrer" target="_blank">Lisp</a> 라는 함수형 프로그래밍 언어도 만들어졌습니다. 리스프는 현대적 함수형 프로그래밍의 여러 특징을 가지고 있습니다.</p>
+<p>한동안 객체지향 언어가 유행이었지만 <a href="https://futurecreator.github.io/2018/08/07/highest-salaries-worldwide-programming-languages-2018/">연봉 높은 프로그래밍 언어 순위 2018</a> 을 보면 순위 TOP 10의 언어들은 거의 함수형 언어이고, 주요 언어들도 함수형 기능을 추가하고 있습니다. JavaScript 는 이미 많은 함수형 기능을 지원하고, C++은 2011년 표준에서 람다 블록을 추가했으며, 자바조차도 자바 8에 람다 블록을 도입했습니다. 앞서 이야기한 것처럼 문법 자체가 중요한 것은 아닙니다. 함수형으로 사고방식을 바꾸면 이런 기능을 바로 사용할 수 있습니다.</p>
+<h2 id="객체-지향-프로그래밍과의-차이">객체 지향 프로그래밍과의 차이</h2>
+<div class="twitter-wrapper"><blockquote class="twitter-tweet"><a href="https://twitter.com/mfeathers/status/29581296216" rel="external nofollow noopener noreferrer" target="_blank"></a></blockquote></div><script async defer src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote><p>객체지향은 동작하는 부분을 캡슐화해서 이해할 수 있게 하고, 함수형 프로그래밍은 동작하는 부분을 최소화해서 코드 이해를 돕는다.</p>
+<footer><strong>마이클 페더스</strong><cite>‘레거시 코드 활용 전략' 저자</cite></footer></blockquote>
+<p>객체지향과 함수형의 차이는 상태를 관리하는 점입니다. 객체지향의 경우 객체 안에 상태를 저장합니다. 그리고 해당 상태를 이용해서 제공할 수 있는 기능(메소드)를 추가하고 상태 변화를 ‘누가 어디까지 볼 수 있게 할지’를 설정하고 조정하기 위해 캡슐화, scoping, visibility 등의 기능을 사용합니다. 여기에 쓰레드까지 더해지면 더 복잡해지는데요. 함수형 프로그래밍은 이런 상태를 제어하기보다는 상태를 저장하지 않고 없애는데 주력합니다. <a href="https://en.wikipedia.org/wiki/Function_(mathematics)" rel="external nofollow noopener noreferrer" target="_blank">함수</a>라는 것 자체가 입력값이 들어가면 이에 따른 특정한 출력값이 나오는 것으로 상태를 저장하지 않습니다.</p>
+<p>따라서 매우 간결하게 코드를 작성할 수 있고 이를 위해서는 객체지향과는 다른 방식으로 접근해야 합니다. 객체 지향은 상태를 저장하는 필드와 필드를 이용해 기능을 제공하는 메소드를 붙여서 클래스를 만듭니다. 항상 새로운 자료구조를 사용하게 되는 셈입니다. 하지만 함수형은 몇몇 자료구조(<em>list, set, map</em>)를 이용해 최적화된 동작을 만들어냅니다.</p>
+<h2 id="예제-단어-수-세기">예제) 단어 수 세기</h2>
+<p>객체 지향과 함수형의 차이를 예제로 살펴보겠습니다. 텍스트 파일을 읽고 가장 많이 사용된 단어를 찾은 후 그 단어와 빈도를 정렬된 리스트로 출력하는 예제입니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="CACM의 고정 칼럼인 Programming Perls 의 기고자 존 벤틀리가 초기 컴퓨터과학의 개척자 도널드 커누스에게 요구했던 작업.">[1]</span></a></sup></p>
+<h3 id="java">Java</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashSet;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"><span class="keyword">import</span> java.util.Set;</span><br><span class="line"><span class="keyword">import</span> java.util.TreeMap;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Words</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Set&lt;String&gt; NON_WORDS = <span class="keyword">new</span> HashSet&lt;String&gt;() &#123;&#123;</span><br><span class="line">    add(<span class="string">"the"</span>); add(<span class="string">"and"</span>); add(<span class="string">"of"</span>); add(<span class="string">"to"</span>); add(<span class="string">"a"</span>);</span><br><span class="line">    add(<span class="string">"i"</span>); add(<span class="string">"it"</span>); add(<span class="string">"in"</span>); add(<span class="string">"or"</span>); add(<span class="string">"is"</span>);</span><br><span class="line">    add(<span class="string">"d"</span>); add(<span class="string">"s"</span>); add(<span class="string">"as"</span>); add(<span class="string">"so"</span>); add(<span class="string">"but"</span>);</span><br><span class="line">    add(<span class="string">"be"</span>);</span><br><span class="line">  &#125;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> Map <span class="title">wordFreq</span><span class="params">(String words)</span> </span>&#123;</span><br><span class="line">    TreeMap&lt;String, Integer&gt; wordMap = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">    Matcher m = Pattern.compile(<span class="string">"\\w+"</span>).matcher(words);</span><br><span class="line">    <span class="keyword">while</span> (m.find()) &#123;</span><br><span class="line">      String word = m.group().toLowerCase();</span><br><span class="line">      <span class="keyword">if</span> (!NON_WORDS.contains(word)) &#123;</span><br><span class="line">        <span class="keyword">if</span> (wordMap.get(word) == <span class="keyword">null</span>) &#123;</span><br><span class="line">          wordMap.put(word, <span class="number">1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          wordMap.put(word, wordMap.get(word) + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> wordMap;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>루프를 돌면서 단어인지 아닌지 체크하고 맵을 이용해 갯수를 카운트합니다.</p>
+<h3 id="java-8">Java 8</h3>
+<p>자바 8의 스트림과 람다를 이용해보죠. 정규식 결과를 리스트로 바꿔서 스트림을 생성합니다. 스트림을 생성하면 아주 간결하게 처리할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">wordFreq</span><span class="params">(String words)</span> </span>&#123;</span><br><span class="line">  TreeMap&lt;String, Integer&gt; wordMap = <span class="keyword">new</span> TreeMap&lt;&gt;();</span><br><span class="line">  regexToList(words, <span class="string">"\\w+"</span>).stream()</span><br><span class="line">    .map(String::toLowerCase)</span><br><span class="line">    .filter(w -&gt; !NON_WORDS.contains(w))</span><br><span class="line">    .forEach(w -&gt; wordMap.put(w, wordMap.getOrDefault(w, <span class="number">0</span>) + <span class="number">1</span>));</span><br><span class="line">  <span class="keyword">return</span> wordMap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> List&lt;String&gt; <span class="title">regexToList</span><span class="params">(String words, String regex)</span> </span>&#123;</span><br><span class="line">  List wordList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">  Matcher m = Pattern.compile(regex).matcher(words);</span><br><span class="line">  <span class="keyword">while</span> (m.find())</span><br><span class="line">    wordList.add(m.group());</span><br><span class="line">  <span class="keyword">return</span> wordList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="예제-문자-위치-찾기">예제) 문자 위치 찾기</h2>
+<h3 id="java-v2">Java</h3>
+<p>이번 예제는 주어진 배열 내에서 해당 문자가 처음 발견되는 위치를 리턴하는 예제입니다. 소스는 <a href="https://commons.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Commons</a> 의 <a href="https://commons.apache.org/proper/commons-lang/apidocs/org/apache/commons/lang3/StringUtils.html" rel="external nofollow noopener noreferrer" target="_blank">StringUtils</a>의 <code>indexOfAny</code> 라는 메소드입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexOfAny</span><span class="params">(<span class="keyword">final</span> CharSequence cs, <span class="keyword">final</span> <span class="keyword">char</span>... searchChars)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (isEmpty(cs) || ArrayUtils.isEmpty(searchChars)) &#123;</span><br><span class="line">    <span class="keyword">return</span> INDEX_NOT_FOUND;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">int</span> csLen = cs.length();</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">int</span> csLast = csLen - <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">int</span> searchLen = searchChars.length;</span><br><span class="line">  <span class="keyword">final</span> <span class="keyword">int</span> searchLast = searchLen - <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; csLen; i++) &#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">char</span> ch = cs.charAt(i);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; searchLen; j++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (searchChars[j] == ch) &#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; csLast &amp;&amp; j &lt; searchLast &amp;&amp; Character.isHighSurrogate(ch)) &#123;</span><br><span class="line">          <span class="comment">// ch is a supplementary character</span></span><br><span class="line">          <span class="keyword">if</span> (searchChars[j + <span class="number">1</span>] == cs.charAt(i + <span class="number">1</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> INDEX_NOT_FOUND;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>로직 자체는 단순하지만 복잡하게 구현되어 있습니다. 이중 <code>for</code> 문과 중첩된 <code>if</code> 문 때문에 복잡하게 보입니다.</p>
+<h3 id="scala">Scala</h3>
+<p>이번엔 동일한 기능을 Scala 를 이용해서 구현해보겠습니다.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">firstIndexOfAny</span></span>(input: <span class="type">String</span>, searchChars: <span class="type">Seq</span>[<span class="type">Char</span>]) : <span class="type">Option</span>[<span class="type">Int</span>] = &#123;</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">indexedInput</span> </span>= (<span class="number">0</span> until input.length).zip(input)</span><br><span class="line">  <span class="keyword">val</span> result = <span class="keyword">for</span> (pair &lt;- indexedInput;</span><br><span class="line">                    char &lt;- searchChars;</span><br><span class="line">                    <span class="keyword">if</span> char == pair._2) <span class="keyword">yield</span> pair._1</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (result.isEmpty)</span><br><span class="line">    <span class="type">None</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    <span class="type">Some</span>(result.head)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>먼저 <code>0 until input.length</code> 는 입력된 문자열만큼 자연수 컬렉션을 만들고 <code>zip()</code> 메소드를 이용해 숫자와 문자를 각각 매핑시킵니다. 만약 입력 문자가 “zzabyycdxx” 라면 0~9까지 숫자가 만들어지고 각 문자와 맵핑되어 다음과 같은 컬렉션이 만들어집니다. 앞에 숫자를 인덱스로 사용할 목적입니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vector((0,z), (1,z), (2,a), (3,b), (4,y), (5,y), (6,c), (7,d), (8,x), (9,x))</span><br></pre></td></tr></table></figure>
+<p>그리고 <code>for</code> 문을 이용해서 같은 문자를 찾으면 인덱스를 반환합니다. 마지막으로 null 문제를 피하기 위해서 Option 객체를 사용합니다. Option 객체의 하위 객체에는 값이 있는 Some과 값이 없는 None이 있습니다. 결과 값을 확인해서 해당 객체를 리턴합니다.</p>
+<p>이번 포스트에서는 함수형 프로그래밍에 대해 간단하게 알아봤습니다. 앞으로 좀 더 자세한 내용과 함수형 사고방식을 다루겠습니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788968482960&amp;orderClick=LAG&amp;Kc=" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;함수형 사고&gt;</a></li>
+</ul>
+<h2 id="related-posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/10/05/why-functional-programming/" title="함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가">함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가</a>
+</li>
+<li>함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)</li>
+<li>함수형 프로그래밍 기초 (3) 클로저와 커링</li>
+<li>함수형 프로그래밍 기초 (4) 메모제이션과 Lazy</li>
+<li>함수형 프로그래밍 기초 (5) 코드 재사용</li>
+<li>함수형 프로그래밍 기초 (6) 함수형 디자인 패턴</li>
+<li>함수형 프로그래밍 기초 (7) 실전 예제</li>
+<li>함수형 프로그래밍 기초 (8) 폴리글랏과 폴리패러다임</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">CACM의 고정 칼럼인 Programming Perls 의 기고자 존 벤틀리가 초기 컴퓨터과학의 개척자 도널드 커누스에게 요구했던 작업.<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="medium" href="https://medium.com/@fcreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-medium"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2018/10/04/inter-process-communication-in-microservices/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">마이크로서비스 Microservices (3) 프로세스 간 통신</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">links</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://fc-yume.com/" rel="external nofollow noopener noreferrer" target="_blank">yume</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-kasa.com/" rel="external nofollow noopener noreferrer" target="_blank">kasa</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://fc-jam-dump.com/" rel="external nofollow noopener noreferrer" target="_blank">dump</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer" target="_blank">블로거 후원하기</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2018 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'http://futurecreator.github.io/2018/10/05/why-functional-programming/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+

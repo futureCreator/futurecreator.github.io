@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/10/05/why-functional-programming/</loc>
+        <lastmod>2018-10-05T14:41:27.304Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/10/04/inter-process-communication-in-microservices/</loc>
         <lastmod>2018-10-04T14:56:49.031Z</lastmod>
         <changefreq>weekly</changefreq>
