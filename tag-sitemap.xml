@@ -989,13 +989,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/java/</loc>
-        <lastmod>2018-08-25T15:52:05.210Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/streams/</loc>
         <lastmod>2018-08-25T15:52:05.210Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1243,6 +1236,34 @@
     <url>
         <loc>http://futurecreator.github.io/tags/message/</loc>
         <lastmod>2018-10-04T14:56:49.031Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/java/</loc>
+        <lastmod>2018-10-05T14:43:36.097Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/functional-programming/</loc>
+        <lastmod>2018-10-05T14:43:36.097Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/why/</loc>
+        <lastmod>2018-10-05T14:43:36.097Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/scala/</loc>
+        <lastmod>2018-10-05T14:43:36.097Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
