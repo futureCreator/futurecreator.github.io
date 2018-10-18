@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신  마이크로서비스 Microservices (4) 서비스 디스커버리 마이크로서비스 Microservices (5) 이">
+        <meta name="description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리  마이크로서비스 Microservices (5)">
 <meta name="keywords" content="msa,microservices,architecture,api_gateway,api">
 <meta property="og:type" content="article">
 <meta property="og:title" content="마이크로서비스 Microservices (2) API 게이트웨이">
 <meta property="og:url" content="http://futurecreator.github.io/2018/09/14/microservices-with-api-gateway/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신  마이크로서비스 Microservices (4) 서비스 디스커버리 마이크로서비스 Microservices (5) 이">
+<meta property="og:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리  마이크로서비스 Microservices (5)">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://cdn.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part2-1_amazon-apps.png">
-<meta property="og:updated_time" content="2018-10-04T14:17:37.119Z">
+<meta property="og:updated_time" content="2018-10-18T12:45:33.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="마이크로서비스 Microservices (2) API 게이트웨이">
-<meta name="twitter:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신  마이크로서비스 Microservices (4) 서비스 디스커버리 마이크로서비스 Microservices (5) 이">
+<meta name="twitter:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리  마이크로서비스 Microservices (5)">
 <meta name="twitter:image" content="https://cdn.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part2-1_amazon-apps.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -216,7 +216,9 @@ ga('send', 'pageview');
 <li>
 <a href="/2018/10/04/inter-process-communication-in-microservices/" title="마이크로서비스 Microservices (3) 프로세스 간 통신">마이크로서비스 Microservices (3) 프로세스 간 통신</a>
 </li>
-<li>마이크로서비스 Microservices (4) 서비스 디스커버리</li>
+<li>
+<a href="/2018/10/18/service-discovery-in-microservices/" title="마이크로서비스 Microservices (4) 서비스 디스커버리">마이크로서비스 Microservices (4) 서비스 디스커버리</a>
+</li>
 <li>마이크로서비스 Microservices (5) 이벤트 기반 데이터 관리</li>
 <li>마이크로서비스 Microservices (6) 배포 전략</li>
 <li>마이크로서비스 Microservices (7) 모놀리스 리팩토링</li>
@@ -305,7 +307,9 @@ ga('send', 'pageview');
 <li>
 <a href="/2018/10/04/inter-process-communication-in-microservices/" title="마이크로서비스 Microservices (3) 프로세스 간 통신">마이크로서비스 Microservices (3) 프로세스 간 통신</a>
 </li>
-<li>마이크로서비스 Microservices (4) 서비스 디스커버리</li>
+<li>
+<a href="/2018/10/18/service-discovery-in-microservices/" title="마이크로서비스 Microservices (4) 서비스 디스커버리">마이크로서비스 Microservices (4) 서비스 디스커버리</a>
+</li>
 <li>마이크로서비스 Microservices (5) 이벤트 기반 데이터 관리</li>
 <li>마이크로서비스 Microservices (6) 배포 전략</li>
 <li>마이크로서비스 Microservices (7) 모놀리스 리팩토링</li>
@@ -498,7 +502,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
