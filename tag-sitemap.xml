@@ -303,13 +303,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/deep-dive/</loc>
-        <lastmod>2018-08-14T13:13:25.877Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/installation/</loc>
         <lastmod>2018-08-14T13:18:27.199Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -947,13 +940,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/lambda/</loc>
-        <lastmod>2018-08-25T15:10:11.651Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/closure/</loc>
         <lastmod>2018-08-25T15:10:11.651Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1234,13 +1220,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/java/</loc>
-        <lastmod>2018-10-06T16:07:36.264Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/why/</loc>
         <lastmod>2018-10-06T16:07:36.264Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1285,6 +1264,27 @@
     <url>
         <loc>http://futurecreator.github.io/tags/reduce/</loc>
         <lastmod>2018-10-06T16:10:37.976Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/java/</loc>
+        <lastmod>2018-10-18T12:35:55.201Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/lambda/</loc>
+        <lastmod>2018-10-18T12:35:55.201Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/deep-dive/</loc>
+        <lastmod>2018-10-18T12:35:55.201Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
