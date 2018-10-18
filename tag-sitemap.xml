@@ -1262,13 +1262,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/reduce/</loc>
-        <lastmod>2018-10-06T16:10:37.976Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/filter/</loc>
         <lastmod>2018-10-06T16:10:37.976Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1284,6 +1277,13 @@
 
     <url>
         <loc>http://futurecreator.github.io/tags/fold/</loc>
+        <lastmod>2018-10-06T16:10:37.976Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/reduce/</loc>
         <lastmod>2018-10-06T16:10:37.976Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

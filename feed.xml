@@ -39,13 +39,13 @@
     
       <category term="functional_programming" scheme="http://futurecreator.github.io/tags/functional-programming/"/>
     
-      <category term="reduce" scheme="http://futurecreator.github.io/tags/reduce/"/>
-    
       <category term="filter" scheme="http://futurecreator.github.io/tags/filter/"/>
     
       <category term="map" scheme="http://futurecreator.github.io/tags/map/"/>
     
       <category term="fold" scheme="http://futurecreator.github.io/tags/fold/"/>
+    
+      <category term="reduce" scheme="http://futurecreator.github.io/tags/reduce/"/>
     
   </entry>
   
@@ -321,9 +321,9 @@
     
       <category term="streams" scheme="http://futurecreator.github.io/tags/streams/"/>
     
-      <category term="collect" scheme="http://futurecreator.github.io/tags/collect/"/>
-    
       <category term="reduce" scheme="http://futurecreator.github.io/tags/reduce/"/>
+    
+      <category term="collect" scheme="http://futurecreator.github.io/tags/collect/"/>
     
       <category term="parallel" scheme="http://futurecreator.github.io/tags/parallel/"/>
     
