@@ -317,13 +317,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/tags/deployment/</loc>
-        <lastmod>2018-08-14T13:21:24.087Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/tags/backup/</loc>
         <lastmod>2018-08-14T13:21:24.087Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -1214,91 +1207,168 @@
 
     <url>
         <loc>http://futurecreator.github.io/tags/api-gateway/</loc>
-        <lastmod>2018-10-18T12:45:33.052Z</lastmod>
+        <lastmod>2018-10-19T12:13:43.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/api/</loc>
-        <lastmod>2018-10-18T12:45:33.052Z</lastmod>
+        <lastmod>2018-10-19T12:13:43.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/architecture/</loc>
-        <lastmod>2018-10-18T12:45:39.223Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/monolith/</loc>
-        <lastmod>2018-10-18T12:45:39.223Z</lastmod>
+        <lastmod>2018-10-19T12:13:50.303Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/introduction/</loc>
-        <lastmod>2018-10-18T12:45:39.223Z</lastmod>
+        <lastmod>2018-10-19T12:13:50.303Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/ipc/</loc>
-        <lastmod>2018-10-18T12:45:44.144Z</lastmod>
+        <lastmod>2018-10-19T12:13:56.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/inter-process-communication/</loc>
-        <lastmod>2018-10-18T12:45:44.144Z</lastmod>
+        <lastmod>2018-10-19T12:13:56.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/message/</loc>
-        <lastmod>2018-10-18T12:45:44.144Z</lastmod>
+        <lastmod>2018-10-19T12:13:56.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/aws/</loc>
-        <lastmod>2018-10-18T13:00:05.479Z</lastmod>
+        <lastmod>2018-10-19T12:14:04.650Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/msa/</loc>
-        <lastmod>2018-10-18T13:00:05.479Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/tags/microservices/</loc>
-        <lastmod>2018-10-18T13:00:05.479Z</lastmod>
+        <lastmod>2018-10-19T12:14:04.650Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/service-discovery/</loc>
-        <lastmod>2018-10-18T13:00:05.479Z</lastmod>
+        <lastmod>2018-10-19T12:14:04.650Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://futurecreator.github.io/tags/netflix/</loc>
-        <lastmod>2018-10-18T13:00:05.479Z</lastmod>
+        <lastmod>2018-10-19T12:14:04.650Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/event-driven/</loc>
+        <lastmod>2018-10-19T12:41:22.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/event-sourcing/</loc>
+        <lastmod>2018-10-19T12:41:22.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/cqrs/</loc>
+        <lastmod>2018-10-19T12:41:22.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/data-management/</loc>
+        <lastmod>2018-10-19T12:41:22.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/deployment/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/strategy/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/virtual-machine/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/container/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/docker/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/kubernetes/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/refactoring/</loc>
+        <lastmod>2018-10-19T12:42:46.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/microservices/</loc>
+        <lastmod>2018-10-19T12:42:46.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/tags/monolith/</loc>
+        <lastmod>2018-10-19T12:42:46.037Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

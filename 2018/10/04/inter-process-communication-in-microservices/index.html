@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리  마이크로서비스 Microservices (5)">
+        <meta name="description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리   마이크로서비스 Microservices (5">
 <meta name="keywords" content="msa,microservices,ipc,inter_process_communication,message">
 <meta property="og:type" content="article">
 <meta property="og:title" content="마이크로서비스 Microservices (3) 프로세스 간 통신">
 <meta property="og:url" content="http://futurecreator.github.io/2018/10/04/inter-process-communication-in-microservices/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리  마이크로서비스 Microservices (5)">
+<meta property="og:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리   마이크로서비스 Microservices (5">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://cdn-1.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-monolith-vs-microservices-1024x518.png">
-<meta property="og:updated_time" content="2018-10-18T12:45:44.144Z">
+<meta property="og:updated_time" content="2018-10-19T12:13:56.823Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="마이크로서비스 Microservices (3) 프로세스 간 통신">
-<meta name="twitter:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리  마이크로서비스 Microservices (5)">
+<meta name="twitter:description" content="Microservices Deep Dive   마이크로서비스 Microservices (1) 아키텍처 소개   마이크로서비스 Microservices (2) API 게이트웨이   마이크로서비스 Microservices (3) 프로세스 간 통신   마이크로서비스 Microservices (4) 서비스 디스커버리   마이크로서비스 Microservices (5">
 <meta name="twitter:image" content="https://cdn-1.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-monolith-vs-microservices-1024x518.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -219,9 +219,15 @@ ga('send', 'pageview');
 <li>
 <a href="/2018/10/18/service-discovery-in-microservices/" title="마이크로서비스 Microservices (4) 서비스 디스커버리">마이크로서비스 Microservices (4) 서비스 디스커버리</a>
 </li>
-<li>마이크로서비스 Microservices (5) 이벤트 기반 데이터 관리</li>
-<li>마이크로서비스 Microservices (6) 배포 전략</li>
-<li>마이크로서비스 Microservices (7) 모놀리스 리팩토링</li>
+<li>
+<a href="/2018/10/19/microservices-and-event-driven-data-management/" title="마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리">마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-deployment-strategy/" title="마이크로서비스 Microservices (6) 배포 전략">마이크로서비스 Microservices (6) 배포 전략</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-refactoring-for-monolith/" title="마이크로서비스 Microservices (7) 모놀리스 리팩토링">마이크로서비스 Microservices (7) 모놀리스 리팩토링</a>
+</li>
 </ul>
 <h2 id="프로세스-간-통신">프로세스 간 통신</h2>
 <p>모놀리식(<em>monolithic</em>) 애플리케이션에서는 단순하게 다른 메소드나 함수를 호출하면 됩니다. 하지만 마이크로서비스(<em>Microservices</em>)에서는 서비스 단위로 나뉘어져 있는 분산 시스템이기 때문에 서비스 간 통신이 필요합니다. 이러한 통신을 프로세스 간 통신(<em>inter-process communication</em>)이라고 합니다. 다음 그림에서 왼쪽이 모놀리스, 오른쪽이 마이크로서비스입니다.</p>
@@ -329,9 +335,15 @@ ga('send', 'pageview');
 <li>
 <a href="/2018/10/18/service-discovery-in-microservices/" title="마이크로서비스 Microservices (4) 서비스 디스커버리">마이크로서비스 Microservices (4) 서비스 디스커버리</a>
 </li>
-<li>마이크로서비스 Microservices (5) 이벤트 기반 데이터 관리</li>
-<li>마이크로서비스 Microservices (6) 배포 전략</li>
-<li>마이크로서비스 Microservices (7) 모놀리스 리팩토링</li>
+<li>
+<a href="/2018/10/19/microservices-and-event-driven-data-management/" title="마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리">마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-deployment-strategy/" title="마이크로서비스 Microservices (6) 배포 전략">마이크로서비스 Microservices (6) 배포 전략</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-refactoring-for-monolith/" title="마이크로서비스 Microservices (7) 모놀리스 리팩토링">마이크로서비스 Microservices (7) 모놀리스 리팩토링</a>
+</li>
 </ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://martinfowler.com/articles/richardsonMaturityModel.html" rel="external nofollow noopener noreferrer" target="_blank">Richardson Maturity Model | MARTINFOWLER.COM</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
@@ -521,7 +533,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 

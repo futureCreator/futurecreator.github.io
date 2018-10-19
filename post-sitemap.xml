@@ -7,8 +7,32 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2018/10/19/microservices-refactoring-for-monolith/</loc>
+        <lastmod>2018-10-19T12:42:46.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/10/19/microservices-deployment-strategy/</loc>
+        <lastmod>2018-10-19T12:42:20.217Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2018/10/19/microservices-and-event-driven-data-management/</loc>
+        <lastmod>2018-10-19T12:41:22.235Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/10/18/service-discovery-in-microservices/</loc>
-        <lastmod>2018-10-18T13:00:05.479Z</lastmod>
+        <lastmod>2018-10-19T12:14:04.650Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +40,7 @@
 
     <url>
         <loc>http://futurecreator.github.io/2018/10/04/inter-process-communication-in-microservices/</loc>
-        <lastmod>2018-10-18T12:45:44.144Z</lastmod>
+        <lastmod>2018-10-19T12:13:56.823Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +48,7 @@
 
     <url>
         <loc>http://futurecreator.github.io/2018/09/14/what-is-microservices-architecture/</loc>
-        <lastmod>2018-10-18T12:45:39.223Z</lastmod>
+        <lastmod>2018-10-19T12:13:50.303Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +56,7 @@
 
     <url>
         <loc>http://futurecreator.github.io/2018/09/14/microservices-with-api-gateway/</loc>
-        <lastmod>2018-10-18T12:45:33.052Z</lastmod>
+        <lastmod>2018-10-19T12:13:43.272Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
