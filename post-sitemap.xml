@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>http://futurecreator.github.io/2016/06/28/google-200-ranking-factors-korean-list/</loc>
+        <lastmod>2018-10-22T14:14:07.865Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/2016/06/17/google-search-how-to-work/</loc>
+        <lastmod>2018-10-22T14:14:04.999Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://futurecreator.github.io/2018/10/19/microservices-refactoring-for-monolith/</loc>
         <lastmod>2018-10-19T12:42:46.037Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -287,14 +303,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/2016/06/28/google-200-ranking-factors-korean-list/</loc>
-        <lastmod>2018-08-14T13:35:35.999Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/2016/07/03/flowstate-mac-osx-writing-app/</loc>
         <lastmod>2018-08-14T13:35:03.432Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -569,14 +577,6 @@
     <url>
         <loc>http://futurecreator.github.io/2016/06/16/opengraph-social-meta-tag/</loc>
         <lastmod>2018-07-07T05:16:22.707Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://futurecreator.github.io/2016/06/17/google-search-how-to-work/</loc>
-        <lastmod>2018-07-07T05:16:19.202Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

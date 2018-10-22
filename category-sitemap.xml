@@ -70,13 +70,6 @@
     </url>
 
     <url>
-        <loc>http://futurecreator.github.io/categories/Column/</loc>
-        <lastmod>2018-09-17T12:16:31.441Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://futurecreator.github.io/categories/Programming/Java/</loc>
         <lastmod>2018-10-18T12:35:55.201Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -93,6 +86,13 @@
     <url>
         <loc>http://futurecreator.github.io/categories/Programming/MSA/</loc>
         <lastmod>2018-10-19T12:42:46.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://futurecreator.github.io/categories/Column/</loc>
+        <lastmod>2018-10-22T14:14:07.865Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
