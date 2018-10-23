@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xBAA8;&amp;#xB180;&amp;#xB9AC;&amp;#xC2A4;&amp;#xC5D0;&amp;#xC11C; &amp;#xB9C8;&amp;#xC774;&amp;#xD06C;&amp;#xB85C;&amp;#xC11C;&amp;#xBE44;&amp;#xC2A4;&amp;#xB85C; &amp;#xBAA8;&amp;#xB180;&amp;#xB9AC;&amp;#xC2DD;(monolithic) &amp;#xC560;&amp;#xD50C;&amp;#xB9AC;&amp;#xCF00;&amp;#xC774;&amp;">
+        <meta name="description" content="모놀리스에서 마이크로서비스로 모놀리식(monolithic) 애플리케이션을 마이크로서비스(microservices) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요? 폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다. Martin Fowler 아닙니다. 처음부터 다시 만드는 일은 너무나">
 <meta name="keywords" content="refactoring,microservices,monolith">
 <meta property="og:type" content="article">
 <meta property="og:title" content="마이크로서비스 Microservices (7) 모놀리스 리팩토링">
 <meta property="og:url" content="https://futurecreator.github.io/2018/10/19/microservices-refactoring-for-monolith/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xBAA8;&amp;#xB180;&amp;#xB9AC;&amp;#xC2A4;&amp;#xC5D0;&amp;#xC11C; &amp;#xB9C8;&amp;#xC774;&amp;#xD06C;&amp;#xB85C;&amp;#xC11C;&amp;#xBE44;&amp;#xC2A4;&amp;#xB85C; &amp;#xBAA8;&amp;#xB180;&amp;#xB9AC;&amp;#xC2DD;(monolithic) &amp;#xC560;&amp;#xD50C;&amp;#xB9AC;&amp;#xCF00;&amp;#xC774;&amp;">
+<meta property="og:description" content="모놀리스에서 마이크로서비스로 모놀리식(monolithic) 애플리케이션을 마이크로서비스(microservices) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요? 폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다. Martin Fowler 아닙니다. 처음부터 다시 만드는 일은 너무나">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://www.nginx.com/wp-content/uploads/2016/03/Richardson-microservices-part7-fig.png">
 <meta property="og:updated_time" content="2018-10-23T12:09:56.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="마이크로서비스 Microservices (7) 모놀리스 리팩토링">
-<meta name="twitter:description" content="&amp;#xBAA8;&amp;#xB180;&amp;#xB9AC;&amp;#xC2A4;&amp;#xC5D0;&amp;#xC11C; &amp;#xB9C8;&amp;#xC774;&amp;#xD06C;&amp;#xB85C;&amp;#xC11C;&amp;#xBE44;&amp;#xC2A4;&amp;#xB85C; &amp;#xBAA8;&amp;#xB180;&amp;#xB9AC;&amp;#xC2DD;(monolithic) &amp;#xC560;&amp;#xD50C;&amp;#xB9AC;&amp;#xCF00;&amp;#xC774;&amp;">
+<meta name="twitter:description" content="모놀리스에서 마이크로서비스로 모놀리식(monolithic) 애플리케이션을 마이크로서비스(microservices) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요? 폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다. Martin Fowler 아닙니다. 처음부터 다시 만드는 일은 너무나">
 <meta name="twitter:image" content="https://www.nginx.com/wp-content/uploads/2016/03/Richardson-microservices-part7-fig.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,97 +200,79 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microservices/">microservices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/monolith/">monolith</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/refactoring/">refactoring</a></li></ul>
  -->
-            <span class="reading-time">⏱ 21 분</span>
+            <span class="reading-time">⏱ 4 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="&#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC5D0;&#xC11C;-&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C;">&#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC5D0;&#xC11C; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C;</h2>
-<p>&#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(<em>monolithic</em>) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;(<em>microservices</em>) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC73C;&#xB85C; &#xBC14;&#xAFB8;&#xACE0; &#xC2F6;&#xB2E4;&#xBA74; &#xC5B4;&#xB5BB;&#xAC8C; &#xD558;&#xC2DC;&#xACA0;&#xC2B5;&#xB2C8;&#xAE4C;? &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xB2E4;&#xC2DC; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD560;&#xAE4C;&#xC694;?</p>
-<blockquote><p>&#xD3ED;&#xD30C;&#xC2DC;&#xD0A4;&#xACE0; &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xC791;&#xC131;&#xD574;&#xC57C; &#xD560; &#xB54C;&#xB294; &#xC9C4;&#xC9DC;&#xB85C; &#xD3ED;&#xD30C;&#xD588;&#xC744; &#xB54C; &#xBFD0;&#xC774;&#xB2E4;.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="모놀리스에서-마이크로서비스로">모놀리스에서 마이크로서비스로</h2>
+<p>모놀리식(<em>monolithic</em>) 애플리케이션을 마이크로서비스(<em>microservices</em>) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요?</p>
+<blockquote><p>폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다.</p>
 <footer><strong>Martin Fowler</strong></footer></blockquote>
-<p>&#xC544;&#xB2D9;&#xB2C8;&#xB2E4;. &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xB2E4;&#xC2DC; &#xB9CC;&#xB4DC;&#xB294; &#xC77C;&#xC740; &#xB108;&#xBB34;&#xB098; &#xC5B4;&#xB824;&#xC6B4; &#xC791;&#xC5C5;&#xC774;&#xACE0; &#xD070; &#xC704;&#xD5D8;&#xC774; &#xB530;&#xB974;&#xB294; &#xC791;&#xC5C5;&#xC774;&#xC8E0;. &#xB300;&#xC2E0;&#xC5D0; &#xC810;&#xCC28;&#xC801;&#xC73C;&#xB85C; &#xAC1C;&#xC120;&#xD574;&#xB098;&#xAC00;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xD558;&#xB098;&#xC758; &#xD070; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744; &#xC791;&#xC740; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xC870;&#xAE08;&#xC529; &#xCABC;&#xAC1C;&#xB098;&#xAC00;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xC5F4;&#xB300;&#xC6B0;&#xB9BC;&#xC744; &#xC0C1;&#xC0C1;&#xD574;&#xBD05;&#xC2DC;&#xB2E4;. &#xC5EC;&#xAE30;&#xC5D4; Strangler vine &#xC774;&#xB77C;&#xB294; &#xC2DD;&#xBB3C;&#xC774; &#xC788;&#xB294;&#xB370; &#xC544;&#xB798; &#xC0AC;&#xC9C4;&#xCC98;&#xB7FC; &#xC0DD;&#xACBC;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC5F4;&#xB300;&#xC6B0;&#xB9BC;&#xC740; &#xB098;&#xBB34;&#xAC00; &#xB108;&#xBB34; &#xB9CE;&#xB2E4;&#xBCF4;&#xB2C8; &#xB545;&#xC5D0; &#xC788;&#xC73C;&#xBA74; &#xD587;&#xBE5B;&#xC744; &#xB9CE;&#xC774; &#xBC1B;&#xC744; &#xC218;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC774; &#xC2DD;&#xBB3C;&#xC740; &#xD587;&#xBE5B;&#xC744; &#xBC1B;&#xAE30; &#xC704;&#xD574; &#xB2E4;&#xB978; &#xB098;&#xBB34;&#xB97C; &#xD0C0;&#xACE0; &#xC62C;&#xB77C;&#xAC11;&#xB2C8;&#xB2E4;. &#xACB0;&#xAD6D; &#xC6D0;&#xB798; &#xB098;&#xBB34;&#xB294; &#xC8FD;&#xACE0; &#xC774; &#xC2DD;&#xBB3C;&#xB9CC; &#xB0A8;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>아닙니다. 처음부터 다시 만드는 일은 너무나 어려운 작업이고 큰 위험이 따르는 작업이죠. 대신에 점차적으로 개선해나가야 합니다. 하나의 큰 애플리케이션을 작은 서비스로 조금씩 쪼개나가야 합니다. 열대우림을 상상해봅시다. 여기엔 Strangler vine 이라는 식물이 있는데 아래 사진처럼 생겼습니다. 열대우림은 나무가 너무 많다보니 땅에 있으면 햇빛을 많이 받을 수가 없습니다. 그래서 이 식물은 햇빛을 받기 위해 다른 나무를 타고 올라갑니다. 결국 원래 나무는 죽고 이 식물만 남게 됩니다.</p>
 <p><img src="https://www.nginx.com/wp-content/uploads/2016/03/Richardson-microservices-part7-fig.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p>
-<p>&#xAC11;&#xC790;&#xAE30; &#xC65C; &#xB098;&#xBB34; &#xC774;&#xC57C;&#xAE30;&#xB0D0;&#xAD6C;&#xC694;? &#xC6B0;&#xB9AC;&#xB294; &#xBC14;&#xB85C; &#xC774; &#xC2DD;&#xBB3C;&#xC758; &#xC804;&#xB7B5;&#xC744; &#xB530;&#xB77C; &#xB9AC;&#xD329;&#xD1A0;&#xB9C1; &#xD558;&#xB824;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;. &#xAE30;&#xC874; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744; &#xB530;&#xB77C; &#xC0C8;&#xB85C;&#xC6B4; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0; &#xAE30;&#xC874; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC740; &#xC790;&#xC5F0;&#xC2A4;&#xB7FD;&#xAC8C; &#xC5C6;&#xC5B4;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC774;&#xB97C; &#xC704;&#xD55C; &#xC138; &#xAC00;&#xC9C0; &#xC804;&#xB7B5;&#xC744; &#xD55C; &#xBC88; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h2 id="1-&#xC0BD;&#xC9C8;&#xC740;-&#xADF8;&#xB9CC;">1. &#xC0BD;&#xC9C8;&#xC740; &#xADF8;&#xB9CC;!</h2>
-<p>&#xC6B0;&#xB9AC;&#xAC00; &#xAD6C;&#xB369;&#xC774;&#xC5D0; &#xC788;&#xB2E4;&#xBA74; &#xC0BD;&#xC9C8;&#xC744; &#xBA48;&#xCDB0;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Law of holes](https://en.wikipedia.org/wiki/Law_of_holes)">[1]</span></a></sup> &#xD30C;&#xBA74; &#xD314;&#xC218;&#xB85D; &#xB354; &#xAE4A;&#xC774; &#xBE60;&#xC9C0;&#xAC8C; &#xB418;&#xC8E0;. &#xAD00;&#xB9AC;&#xB418;&#xC9C0; &#xC54A;&#xB294; &#xBAA8;&#xB180;&#xB9AC;&#xC2DD; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC5D0; &#xB531; &#xB9DE;&#xB294; &#xB9D0;&#xC774;&#xC8E0;. &#xC989; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC774; &#xB354; &#xCEE4;&#xC9C0;&#xB294; &#xAC78; &#xB9C9;&#xC544;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xCEE4;&#xC9C0;&#xBA74; &#xCEE4;&#xC9C8;&#xC218;&#xB85D; &#xB354; &#xAD00;&#xB9AC;&#xD558;&#xAE30; &#xC5B4;&#xB824;&#xC6CC;&#xC9C0;&#xAE30; &#xB54C;&#xBB38;&#xC785;&#xB2C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC5EC;&#xAE30;&#xC5D0; &#xC0C8;&#xB85C;&#xC6B4; &#xCF54;&#xB4DC;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xC548;&#xB429;&#xB2C8;&#xB2E4;! &#xB300;&#xC2E0; &#xC0C8;&#xB85C;&#xC6B4; &#xCF54;&#xB4DC;&#xB97C; &#xC0C8;&#xB85C;&#xC6B4; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC774; &#xC774; &#xC804;&#xB7B5;&#xC758; &#xD575;&#xC2EC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>갑자기 왜 나무 이야기냐구요? 우리는 바로 이 식물의 전략을 따라 리팩토링 하려고 합니다. 기존 애플리케이션을 따라 새로운 마이크로서비스를 만들고 기존 애플리케이션은 자연스럽게 없어집니다.</p>
+<p>이를 위한 세 가지 전략을 한 번 살펴보겠습니다.</p>
+<h2 id="1-삽질은-그만">1. 삽질은 그만!</h2>
+<p>우리가 구덩이에 있다면 삽질을 멈춰야 합니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="[Law of holes](https://en.wikipedia.org/wiki/Law_of_holes)">[1]</span></a></sup> 파면 팔수록 더 깊이 빠지게 되죠. 관리되지 않는 모놀리식 애플리케이션에 딱 맞는 말이죠. 즉 모놀리스 애플리케이션이 더 커지는 걸 막아야 합니다. 커지면 커질수록 더 관리하기 어려워지기 때문입니다. 그래서 여기에 새로운 코드를 추가하면 안됩니다! 대신 새로운 코드를 새로운 마이크로서비스로 만드는 것이 이 전략의 핵심입니다.</p>
 <p><img src="https://www.nginx.com/wp-content/uploads/2016/03/Adding_a_secure_microservice_alongside_a_monolithic_application-1024x865.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p>
-<p>&#xC0C8;&#xB85C;&#xC6B4; &#xAE30;&#xB2A5;&#xC744; &#xC0C8;&#xB85C;&#xC6B4; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xB9CC;&#xB4E4;&#xACE0; &#xB098;&#xBA74; &#xC694;&#xCCAD;&#xC744; &#xB77C;&#xC6B0;&#xD305;&#xD574;&#xC904; &#xB77C;&#xC6B0;&#xD130;(<em>router</em>)&#xAC00; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;. &#xB9C8;&#xCE58; API &#xAC8C;&#xC774;&#xD2B8;&#xC6E8;&#xC774;&#xCC98;&#xB7FC; &#xB9D0;&#xC774;&#xC8E0;. &#xADF8;&#xB9AC;&#xACE0; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC640; &#xC0C8;&#xB85C;&#xC6B4; &#xC11C;&#xBE44;&#xC2A4; &#xC0AC;&#xC774;&#xC5D0; &#xAE00;&#xB8E8; &#xCF54;&#xB4DC;(<em>glue code</em>)&#xAC00; &#xD544;&#xC694;&#xD569;&#xB2C8;&#xB2E4;. &#xAE00;&#xB8E8; &#xCF54;&#xB4DC;&#xB294; &#xB450; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC5F0;&#xACB0;&#xD574;&#xC8FC;&#xB294; &#xCF54;&#xB4DC;&#xB97C; &#xB9D0;&#xD558;&#xB294;&#xB370;&#xC694;, &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC0C8;&#xB85C; &#xB9CC;&#xB4E4;&#xAE34; &#xD588;&#xC9C0;&#xB9CC; &#xC544;&#xC9C1; &#xC644;&#xC804;&#xD788; &#xBD84;&#xB9AC;&#xB418;&#xAE30;&#xC5D4; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC644;&#xC804;&#xD558;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xAE00;&#xB8E8; &#xCF54;&#xB4DC;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC5D0;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAC00;&#xC838;&#xC640;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F0; &#xAE00;&#xB8E8; &#xCF54;&#xB4DC;&#xB294; &#xC544;&#xC9C1; &#xC624;&#xC5FC;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xC11C;&#xBE44;&#xC2A4;&#xC640; &#xC624;&#xC5FC;&#xB41C; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xC0AC;&#xC774;&#xB97C; &#xB098;&#xB220;&#xC8FC;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC624;&#xC5FC; &#xBC29;&#xC9C0; &#xB808;&#xC774;&#xC5B4;(<em>anti-corruption layer</em>)&#xB77C;&#xACE0;&#xB3C4; &#xD569;&#xB2C8;&#xB2E4;. &#xAE00;&#xB8E8; &#xCF54;&#xB4DC;&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xAD6C;&#xD604;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>새로운 기능을 새로운 서비스로 만들고 나면 요청을 라우팅해줄 라우터(<em>router</em>)가 필요합니다. 마치 API 게이트웨이처럼 말이죠. 그리고 모놀리스와 새로운 서비스 사이에 글루 코드(<em>glue code</em>)가 필요합니다. 글루 코드는 두 서비스를 연결해주는 코드를 말하는데요, 서비스를 새로 만들긴 했지만 아직 완전히 분리되기엔 데이터가 완전하지 않기 때문에 글루 코드를 이용해 모놀리스에서 데이터를 가져와야 합니다. 이런 글루 코드는 아직 오염되지 않은 서비스와 오염된 모놀리스 사이를 나눠주기 때문에 오염 방지 레이어(<em>anti-corruption layer</em>)라고도 합니다. 글루 코드는 다음과 같이 구현할 수 있습니다.</p>
 <ul>
-<li>&#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xAC00; &#xC81C;&#xACF5;&#xD558;&#xB294; API &#xC0AC;&#xC6A9;</li>
-<li>&#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC758; DB&#xC5D0; &#xBC14;&#xB85C; &#xC811;&#xADFC;</li>
-<li>&#xBAA8;&#xB180;&#xB9AC;&#xC2A4; DB&#xB97C; &#xBCF5;&#xC0AC;&#xD574;&#xC11C; &#xC0C8;&#xB85C;&#xC6B4; &#xC11C;&#xBE44;&#xC2A4;&#xC5D0;&#xC11C; &#xAD00;&#xB9AC;</li>
+<li>모놀리스가 제공하는 API 사용</li>
+<li>모놀리스의 DB에 바로 접근</li>
+<li>모놀리스 DB를 복사해서 새로운 서비스에서 관리</li>
 </ul>
-<p>&#xC774; &#xC804;&#xB7B5;&#xC740; &#xC88B;&#xC9C0;&#xB9CC; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xAC00; &#xC544;&#xC9C1; &#xAC74;&#xC7AC;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xC81C; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xB97C; &#xCABC;&#xAC24; &#xC804;&#xB7B5;&#xC744; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h2 id="2-&#xB808;&#xC774;&#xC5B4;-&#xBD84;&#xB9AC;&#xD558;&#xAE30;">2. &#xB808;&#xC774;&#xC5B4; &#xBD84;&#xB9AC;&#xD558;&#xAE30;</h2>
-<p>&#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xB85C;&#xC9C1;&#xC744; &#xC904;&#xC5EC;&#xAC00;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;&#xC640; &#xBC31;&#xC5D4;&#xB4DC;&#xB97C; &#xBD84;&#xB9AC;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBCF4;&#xD1B5; &#xC5D4;&#xD130;&#xD504;&#xB77C;&#xC774;&#xC988; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC740; 3&#xACC4;&#xCE35; &#xAD6C;&#xC870;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC838; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>이 전략은 좋지만 모놀리스가 아직 건재합니다. 이제 모놀리스를 쪼갤 전략을 살펴보겠습니다.</p>
+<h2 id="2-레이어-분리하기">2. 레이어 분리하기</h2>
+<p>모놀리스 로직을 줄여가기 위해서 프론트엔드와 백엔드를 분리하겠습니다. 보통 엔터프라이즈 애플리케이션은 3계층 구조로 이루어져 있습니다.</p>
 <ul>
-<li>&#xD504;&#xB808;&#xC820;&#xD14C;&#xC774;&#xC158; &#xB808;&#xC774;&#xC5B4;(<em>Presentation layer</em>): HTTP &#xC694;&#xCCAD;&#xC744; &#xB2E4;&#xB8E8;&#xB294; &#xACC4;&#xCE35;. REST API &#xB97C; &#xC81C;&#xACF5;&#xD558;&#xAC70;&#xB098; HTML &#xAE30;&#xBC18;&#xC758; &#xC6F9;  UI&#xB97C; &#xC81C;&#xACF5;.</li>
-<li>&#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1; &#xB808;&#xC774;&#xC5B4;(<em>Business logic layer</em>): &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC758; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1;&#xC774; &#xB4E4;&#xC5B4;&#xC788;&#xB294; &#xD575;&#xC2EC; &#xACC4;&#xCE35;.</li>
-<li>&#xB370;&#xC774;&#xD130; &#xC561;&#xC138;&#xC2A4; &#xB808;&#xC774;&#xC5B4;(<em>Data-access layer</em>): &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB098; &#xBA54;&#xC2DC;&#xC9C0; &#xBE0C;&#xB85C;&#xCEE4;(<em>message brokers</em>)&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xB294; &#xACC4;&#xCE35;.</li>
+<li>프레젠테이션 레이어(<em>Presentation layer</em>): HTTP 요청을 다루는 계층. REST API 를 제공하거나 HTML 기반의 웹  UI를 제공.</li>
+<li>비즈니스 로직 레이어(<em>Business logic layer</em>): 애플리케이션의 비즈니스 로직이 들어있는 핵심 계층.</li>
+<li>데이터 액세스 레이어(<em>Data-access layer</em>): 데이터베이스나 메시지 브로커(<em>message brokers</em>)에 접근하는 계층.</li>
 </ul>
-<p>&#xC5EC;&#xAE30;&#xC11C; &#xD504;&#xB808;&#xC820;&#xD14C;&#xC774;&#xC158; &#xB808;&#xC774;&#xC5B4;&#xC640; &#xB098;&#xBA38;&#xC9C0; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1; &#xB808;&#xC774;&#xC5B4; + &#xB370;&#xC774;&#xD130; &#xC561;&#xC138;&#xC2A4; &#xB808;&#xC774;&#xC5B4;&#xB294; &#xC27D;&#xAC8C; &#xBD84;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xD504;&#xB808;&#xC820;&#xD14C;&#xC774;&#xC158; &#xB808;&#xC774;&#xC5B4;&#xB85C; &#xD558;&#xB098;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E4;&#xACE0;, &#xB098;&#xBA38;&#xC9C0; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1; &#xB808;&#xC774;&#xC5B4;&#xC640; &#xB370;&#xC774;&#xD130; &#xC561;&#xC138;&#xC2A4; &#xB808;&#xC774;&#xC5B4;&#xB97C; &#xD558;&#xB098;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xD574;&#xC11C; &#xB450; &#xAC1C;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xBD84;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xB098;&#xC11C; &#xD504;&#xB808;&#xC820;&#xD14C;&#xC774;&#xC158; &#xB808;&#xC774;&#xC5B4;&#xAC00; &#xD638;&#xCD9C;&#xD560; &#xC218; &#xC788;&#xB294; API &#xB97C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>여기서 프레젠테이션 레이어와 나머지 비즈니스 로직 레이어 + 데이터 액세스 레이어는 쉽게 분리할 수 있습니다. 따라서 프레젠테이션 레이어로 하나의 서비스를 만들고, 나머지 비즈니스 로직 레이어와 데이터 액세스 레이어를 하나의 서비스로 해서 두 개의 서비스로 분리할 수 있습니다. 그리고 나서 프레젠테이션 레이어가 호출할 수 있는 API 를 제공합니다.</p>
 <p><img src="https://www.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part7-refactoring.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p>
-<p>&#xD504;&#xB808;&#xC820;&#xD14C;&#xC774;&#xC158; &#xB808;&#xC774;&#xC5B4;&#xC5D0;&#xB294; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1;&#xC774; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC27D;&#xAC8C; &#xBD84;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC790;&#xC5F0;&#xC2A4;&#xB7FD;&#xAC8C; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB85C;&#xC9C1; &#xCABD;&#xC5D0;&#xC11C; API &#xB97C; &#xC81C;&#xACF5;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7FC; &#xB9C8;&#xC9C0;&#xB9C9; &#xC138; &#xBC88;&#xC9F8; &#xC804;&#xB7B5;&#xC73C;&#xB85C; &#xB098;&#xBA38;&#xC9C0; &#xBD80;&#xBD84;&#xB3C4; &#xBAA8;&#xB450; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xBC14;&#xAFD4;&#xBD05;&#xC2DC;&#xB2E4;.</p>
-<h2 id="3-&#xC11C;&#xBE44;&#xC2A4;-&#xBF51;&#xC544;&#xB0B4;&#xAE30;">3. &#xC11C;&#xBE44;&#xC2A4; &#xBF51;&#xC544;&#xB0B4;&#xAE30;</h2>
-<h3 id="&#xC11C;&#xBE44;&#xC2A4;-&#xACE0;&#xB974;&#xAE30;">&#xC11C;&#xBE44;&#xC2A4; &#xACE0;&#xB974;&#xAE30;</h3>
-<p>&#xC138; &#xBC88;&#xC9F8; &#xC804;&#xB7B5;&#xC740; &#xAE30;&#xC874;&#xC758; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xC18D; &#xBAA8;&#xB4C8;&#xC744; &#xD558;&#xB098;&#xC758; &#xB3C5;&#xB9BD;&#xC801;&#xC778; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xBAA8;&#xB450; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xBD84;&#xB9AC;&#xD558;&#xACE0; &#xB098;&#xBA74; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xB294; &#xC644;&#xC804;&#xD788; &#xC0AC;&#xB77C;&#xC9C0;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>&#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xC548;&#xC5D0;&#xB294; &#xC218;&#xC2ED;&#xC5D0;&#xC11C; &#xC218;&#xBC31; &#xAC1C;&#xC758; &#xBAA8;&#xB4C8;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC5B4;&#xB5A4; &#xBAA8;&#xB4C8;&#xC744; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xBF51;&#xC544;&#xB0B4;&#xC57C; &#xD560;&#xAE4C;&#xC694;?</p>
-<p>&#xC6B0;&#xC120; &#xBF51;&#xC544;&#xB0B4;&#xAE30; &#xC26C;&#xC6B4; &#xBAA8;&#xB4C8;&#xBD80;&#xD130; &#xC791;&#xC5C5;&#xC744; &#xD574;&#xB098;&#xAC00;&#xBA74; &#xBF51;&#xC544;&#xB0B4;&#xB294; &#xC791;&#xC5C5;&#xC5D0; &#xC775;&#xC219;&#xD574;&#xC9C8; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xBCC0;&#xACBD;&#xC774; &#xC790;&#xC8FC; &#xC77C;&#xC5B4;&#xB098;&#xB294; &#xBAA8;&#xB4C8;&#xC744; &#xBA3C;&#xC800; &#xBF51;&#xC544;&#xB0B4;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC65C;&#xB0D0;&#xD558;&#xBA74; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xBF51;&#xC544;&#xB0B4;&#xACE0; &#xB098;&#xBA74; &#xB3C5;&#xB9BD;&#xC801;&#xC73C;&#xB85C; &#xAC1C;&#xBC1C;&#xD558;&#xACE0; &#xBC30;&#xD3EC;&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC2DC;&#xAC04;&#xC744; &#xC544;&#xB084; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC790;&#xC6D0;&#xC744; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBAA8;&#xB4C8;&#xC740; &#xB530;&#xB85C; &#xBF51;&#xC544;&#xB0B4;&#xC11C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xBA74; &#xC778;&#xBA54;&#xBAA8;&#xB9AC; DB &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBAA8;&#xB4C8;&#xC774; &#xC788;&#xB2E4;&#xBA74; &#xBA54;&#xBAA8;&#xB9AC;&#xB97C; &#xB9CE;&#xC774; &#xC7A1;&#xC544;&#xBA39;&#xC744; &#xAC83;&#xC774;&#xACE0;, &#xBCF5;&#xC7A1;&#xD55C; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC744; &#xC218;&#xD589;&#xD558;&#xB294; &#xB85C;&#xC9C1;&#xC774; &#xC788;&#xB2E4;&#xBA74; CPU &#xC790;&#xC6D0;&#xC744; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD560; &#xAC81;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F0; &#xBAA8;&#xB4C8;&#xC740; &#xB530;&#xB85C; &#xBF51;&#xC544;&#xC11C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC11C;&#xBE44;&#xC2A4;&#xAC00; &#xBB49;&#xCCD0;&#xC788;&#xB294; &#xBD80;&#xBD84;&#xB3C4; &#xBF51;&#xC544;&#xB0B4;&#xAE30; &#xC27D;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xD2B9;&#xC815; &#xBAA8;&#xB4C8;&#xB4E4;&#xC774; &#xB2E4;&#xB978; &#xBAA8;&#xB4C8;&#xB4E4;&#xACFC; &#xBE44;&#xB3D9;&#xAE30; &#xBA54;&#xC2DC;&#xC9C0; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xD1B5;&#xC2E0;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xBD84;&#xB9AC;&#xAC00; &#xC27D;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h3 id="&#xC11C;&#xBE44;&#xC2A4;-&#xBF51;&#xC544;&#xB0B4;&#xAE30;">&#xC11C;&#xBE44;&#xC2A4; &#xBF51;&#xC544;&#xB0B4;&#xAE30;</h3>
-<p>&#xBA3C;&#xC800; &#xBF51;&#xC544;&#xB0BC; &#xBAA8;&#xB4C8;&#xACFC; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xC0AC;&#xC774;&#xC5D0; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD569;&#xB2C8;&#xB2E4;. &#xC11C;&#xBE44;&#xC2A4;&#xC640; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xB294; &#xC11C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD544;&#xC694;&#xD574;&#xC11C; &#xC591;&#xBC29;&#xD5A5; API &#xC778; &#xACBD;&#xC6B0;&#xAC00; &#xB9CE;&#xACE0;, &#xC885;&#xC18D;&#xC131;&#xC774; &#xC5BD;&#xD600; &#xC788;&#xC5B4;&#xC11C; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD558;&#xAE30; &#xC5B4;&#xB824;&#xC6B8; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD2B9;&#xD788; &#xB3C4;&#xBA54;&#xC778; &#xBAA8;&#xB378; &#xD328;&#xD134;(<em>Domain Model pattern</em>)&#xC744; &#xC774;&#xC6A9;&#xD574; &#xAD6C;&#xD604;&#xD55C; &#xACBD;&#xC6B0;&#xB77C;&#xBA74; &#xB3C4;&#xBA54;&#xC778; &#xBAA8;&#xB378; &#xD074;&#xB798;&#xC2A4;&#xB97C; &#xB098;&#xB204;&#xAE30;&#xAC00; &#xC5B4;&#xB835;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F0; &#xC885;&#xC18D;&#xC131;&#xC744; &#xB04A;&#xC73C;&#xB824;&#xBA74; &#xC911;&#xC694;&#xD55C; &#xCF54;&#xB4DC;&#xB97C; &#xBCC0;&#xACBD;&#xD574;&#xC57C; &#xD560; &#xB54C;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD558;&#xACE0; &#xB09C; &#xD6C4;&#xC5D0; &#xC774;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xBAA8;&#xB4C8;&#xC744; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xBD84;&#xB9AC;&#xD569;&#xB2C8;&#xB2E4;. &#xC544;&#xB798; &#xADF8;&#xB9BC;&#xC740; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC815;&#xC758;&#xD558;&#xACE0; &#xBD84;&#xB9AC;&#xD558;&#xB294; &#xBAA8;&#xC2B5;&#xC744; &#xBCF4;&#xC5EC;&#xC90D;&#xB2C8;&#xB2E4;. &#xD638;&#xCD9C; &#xAD00;&#xACC4;&#xC5D0; &#xB530;&#xB77C;&#xC11C; API &#xC758; &#xBC29;&#xD5A5;&#xC774; &#xC815;&#xD574;&#xC9D1;&#xB2C8;&#xB2E4;.</p>
+<p>프레젠테이션 레이어에는 비즈니스 로직이 없기 때문에 쉽게 분리할 수 있습니다. 그리고 자연스럽게 비즈니스 로직 쪽에서 API 를 제공할 수 있게 됩니다. 그럼 마지막 세 번째 전략으로 나머지 부분도 모두 마이크로서비스로 바꿔봅시다.</p>
+<h2 id="3-서비스-뽑아내기">3. 서비스 뽑아내기</h2>
+<h3 id="서비스-고르기">서비스 고르기</h3>
+<p>세 번째 전략은 기존의 모놀리스 속 모듈을 하나의 독립적인 마이크로서비스로 만드는 것입니다. 모두 서비스로 분리하고 나면 모놀리스는 완전히 사라지게 됩니다.</p>
+<p>모놀리스 안에는 수십에서 수백 개의 모듈이 있습니다. 어떤 모듈을 서비스로 뽑아내야 할까요?</p>
+<p>우선 뽑아내기 쉬운 모듈부터 작업을 해나가면 뽑아내는 작업에 익숙해질 수 있습니다. 그리고 변경이 자주 일어나는 모듈을 먼저 뽑아내는 것이 좋습니다. 왜냐하면 마이크로서비스로 뽑아내고 나면 독립적으로 개발하고 배포가 가능하기 때문에 시간을 아낄 수 있습니다.</p>
+<p>자원을 많이 사용하는 모듈은 따로 뽑아내서 관리하는 것이 좋습니다. 예를 들면 인메모리 DB 를 사용하는 모듈이 있다면 메모리를 많이 잡아먹을 것이고, 복잡한 알고리즘을 수행하는 로직이 있다면 CPU 자원을 많이 사용할 겁니다. 이런 모듈은 따로 뽑아서 관리하는 것이 좋습니다.</p>
+<p>서비스가 뭉쳐있는 부분도 뽑아내기 쉽습니다. 예를 들어 특정 모듈들이 다른 모듈들과 비동기 메시지 방식으로 통신하는 경우에는 분리가 쉽습니다.</p>
+<h3 id="서비스-뽑아내기">서비스 뽑아내기</h3>
+<p>먼저 뽑아낼 모듈과 모놀리스 사이에 인터페이스를 정의합니다. 서비스와 모놀리스는 서로 데이터가 필요해서 양방향 API 인 경우가 많고, 종속성이 얽혀 있어서 인터페이스를 정의하기 어려울 수 있습니다. 특히 도메인 모델 패턴(<em>Domain Model pattern</em>)을 이용해 구현한 경우라면 도메인 모델 클래스를 나누기가 어렵습니다. 이런 종속성을 끊으려면 중요한 코드를 변경해야 할 때가 있습니다.</p>
+<p>인터페이스를 정의하고 난 후에 이를 이용해서 모놀리스 모듈을 마이크로서비스로 분리합니다. 아래 그림은 인터페이스를 정의하고 분리하는 모습을 보여줍니다. 호출 관계에 따라서 API 의 방향이 정해집니다.</p>
 <p><img src="https://www.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part7-extract-module.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p>
-<p>&#xC774;&#xB7F0; &#xC791;&#xC5C5;&#xC744; &#xBC18;&#xBCF5;&#xD574;&#xC11C; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xB298;&#xB824;&#xAC08;&#xC218;&#xB85D; &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xB294; &#xC791;&#xC544;&#xC9C0;&#xACE0; &#xAC1C;&#xBC1C; &#xC18D;&#xB3C4;&#xB294; &#xBE68;&#xB77C;&#xC9C0;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<h2 id="&#xCC38;&#xACE0;">&#xCC38;&#xACE0;</h2>
+<p>이런 작업을 반복해서 마이크로서비스를 늘려갈수록 모놀리스는 작아지고 개발 속도는 빨라지게 됩니다.</p>
+<h2 id="참고">참고</h2>
 <ul>
 <li><a href="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/" rel="external nofollow noopener noreferrer" target="_blank">Refactoring a Monolith into Microservices | NGINX Blog</a></li>
 </ul>
 <h2 id="related-posts">Related Posts</h2>
 <ul>
 <li>
-<a href="/2018/09/14/what-is-microservices-architecture/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (1) &#xC544;&#xD0A4;&#xD14D;&#xCC98; &#xC18C;&#xAC1C;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (1) &#xC544;&#xD0A4;&#xD14D;&#xCC98; &#xC18C;&#xAC1C;</a>
+<a href="/2018/09/14/what-is-microservices-architecture/" title="마이크로서비스 Microservices (1) 아키텍처 소개">마이크로서비스 Microservices (1) 아키텍처 소개</a>
 </li>
 <li>
-<a href="/2018/09/14/microservices-with-api-gateway/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (2) API &#xAC8C;&#xC774;&#xD2B8;&#xC6E8;&#xC774;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (2) API &#xAC8C;&#xC774;&#xD2B8;&#xC6E8;&#xC774;</a>
+<a href="/2018/09/14/microservices-with-api-gateway/" title="마이크로서비스 Microservices (2) API 게이트웨이">마이크로서비스 Microservices (2) API 게이트웨이</a>
 </li>
 <li>
-<a href="/2018/10/04/inter-process-communication-in-microservices/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (3) &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xAC04; &#xD1B5;&#xC2E0;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (3) &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xAC04; &#xD1B5;&#xC2E0;</a>
+<a href="/2018/10/04/inter-process-communication-in-microservices/" title="마이크로서비스 Microservices (3) 프로세스 간 통신">마이크로서비스 Microservices (3) 프로세스 간 통신</a>
 </li>
 <li>
-<a href="/2018/10/18/service-discovery-in-microservices/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (4) &#xC11C;&#xBE44;&#xC2A4; &#xB514;&#xC2A4;&#xCEE4;&#xBC84;&#xB9AC;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (4) &#xC11C;&#xBE44;&#xC2A4; &#xB514;&#xC2A4;&#xCEE4;&#xBC84;&#xB9AC;</a>
+<a href="/2018/10/18/service-discovery-in-microservices/" title="마이크로서비스 Microservices (4) 서비스 디스커버리">마이크로서비스 Microservices (4) 서비스 디스커버리</a>
 </li>
 <li>
-<a href="/2018/10/19/microservices-and-event-driven-data-management/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (5) &#xC774;&#xBCA4;&#xD2B8; &#xC8FC;&#xB3C4; &#xB370;&#xC774;&#xD130; &#xAD00;&#xB9AC;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (5) &#xC774;&#xBCA4;&#xD2B8; &#xC8FC;&#xB3C4; &#xB370;&#xC774;&#xD130; &#xAD00;&#xB9AC;</a>
+<a href="/2018/10/19/microservices-and-event-driven-data-management/" title="마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리">마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리</a>
 </li>
 <li>
-<a href="/2018/10/19/microservices-deployment-strategy/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (6) &#xBC30;&#xD3EC; &#xC804;&#xB7B5;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (6) &#xBC30;&#xD3EC; &#xC804;&#xB7B5;</a>
+<a href="/2018/10/19/microservices-deployment-strategy/" title="마이크로서비스 Microservices (6) 배포 전략">마이크로서비스 Microservices (6) 배포 전략</a>
 </li>
 <li>
-<a href="/2018/10/19/microservices-refactoring-for-monolith/" title="&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (7) &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xB9AC;&#xD329;&#xD1A0;&#xB9C1;">&#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; Microservices (7) &#xBAA8;&#xB180;&#xB9AC;&#xC2A4; &#xB9AC;&#xD329;&#xD1A0;&#xB9C1;</a>
+<a href="/2018/10/19/microservices-refactoring-for-monolith/" title="마이크로서비스 Microservices (7) 모놀리스 리팩토링">마이크로서비스 Microservices (7) 모놀리스 리팩토링</a>
 </li>
 </ul>
-<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://en.wikipedia.org/wiki/Law_of_holes" rel="external nofollow noopener noreferrer" target="_blank">Law of holes</a><a href="#fnref:1" rev="footnote"> &#x21A9;</a></span></li></ol></div></div><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://en.wikipedia.org/wiki/Law_of_holes" rel="external nofollow noopener noreferrer" target="_blank">Law of holes</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
 
         <div id="bmc" align="center">

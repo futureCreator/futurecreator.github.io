@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xC624;&amp;#xB79C;&amp;#xB9CC;&amp;#xC5D0; Hexo &amp;#xD504;&amp;#xB808;&amp;#xC784;&amp;#xC6CC;&amp;#xD06C;&amp;#xB97C; &amp;#xBCF4;&amp;#xB2C8;&amp;#xAE4C; &amp;#xC2E4;&amp;#xD589;&amp;#xC774; &amp;#xB418;&amp;#xC9C8; &amp;#xC54A;&amp;#xB354;&amp;#xAD70;&amp;#xC694;. npm update,">
+        <meta name="description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
 <meta name="keywords" content="javascript,nodejs,npm,n,update,upgrade,latest,stable,version">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js 버전 관리하기 (설치 &amp; 업데이트)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/05/28/nodejs-npm-update-latest-or-stable-version/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xC624;&amp;#xB79C;&amp;#xB9CC;&amp;#xC5D0; Hexo &amp;#xD504;&amp;#xB808;&amp;#xC784;&amp;#xC6CC;&amp;#xD06C;&amp;#xB97C; &amp;#xBCF4;&amp;#xB2C8;&amp;#xAE4C; &amp;#xC2E4;&amp;#xD589;&amp;#xC774; &amp;#xB418;&amp;#xC9C8; &amp;#xC54A;&amp;#xB354;&amp;#xAD70;&amp;#xC694;. npm update,">
+<meta property="og:description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://camo.githubusercontent.com/e3c6ac1ad2a69e2e969597b69d794658cb64df88/687474703a2f2f6e696d69742e696f2f696d616765732f6e2f6e2e676966">
 <meta property="og:updated_time" content="2018-08-14T13:33:00.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js 버전 관리하기 (설치 &amp; 업데이트)">
-<meta name="twitter:description" content="&amp;#xC624;&amp;#xB79C;&amp;#xB9CC;&amp;#xC5D0; Hexo &amp;#xD504;&amp;#xB808;&amp;#xC784;&amp;#xC6CC;&amp;#xD06C;&amp;#xB97C; &amp;#xBCF4;&amp;#xB2C8;&amp;#xAE4C; &amp;#xC2E4;&amp;#xD589;&amp;#xC774; &amp;#xB418;&amp;#xC9C8; &amp;#xC54A;&amp;#xB354;&amp;#xAD70;&amp;#xC694;. npm update,">
+<meta name="twitter:description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
 <meta name="twitter:image" content="https://camo.githubusercontent.com/e3c6ac1ad2a69e2e969597b69d794658cb64df88/687474703a2f2f6e696d69742e696f2f696d616765732f6e2f6e2e676966">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,82 +200,64 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/latest/">latest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n/">n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stable/">stable</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/upgrade/">upgrade</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
  -->
-            <span class="reading-time">⏱ 8 분</span>
+            <span class="reading-time">⏱ 2 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&#xC624;&#xB79C;&#xB9CC;&#xC5D0; Hexo &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB97C; &#xBCF4;&#xB2C8;&#xAE4C; &#xC2E4;&#xD589;&#xC774; &#xB418;&#xC9C8; &#xC54A;&#xB354;&#xAD70;&#xC694;. <code>npm update</code>, <code>npm install</code>, <code>npm rebuild</code> &#xB2E4; &#xC2E4;&#xD589;&#xD574;&#xBCF4;&#xACE0;, <code>npm outdated</code> &#xB85C; &#xCD5C;&#xC2E0; &#xBC84;&#xC804;&#xC774; &#xC544;&#xB2CC; &#xBAA8;&#xB4C8;&#xB4E4;&#xC744; &#xC0AD;&#xC81C; &#xD6C4; &#xC7AC;&#xC124;&#xCE58;&#xAE4C;&#xC9C0; &#xB2E4; &#xD574;&#xBD24;&#xB294;&#xB370; &#xC548;&#xB418;&#xB354;&#xAD70;&#xC694;. &#xC6D0;&#xC778;&#xC740; Node.js &#xC758; &#xBC84;&#xC804;&#xC774; &#xBC84;&#xC804;&#xC774; &#xB9DE;&#xC9C0; &#xC54A;&#xB294; &#xAC83;&#xC774;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC774;&#xBC88; &#xD3EC;&#xC2A4;&#xD305;&#xC5D0;&#xC11C;&#xB294; Node.js &#xC758; &#xBC84;&#xC804;&#xC744; &#xCD5C;&#xC2E0; &#xBC84;&#xC804; &#xD639;&#xC740; &#xC2A4;&#xD14C;&#xC774;&#xBE14; &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD574;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. <code>npm update</code>, <code>npm install</code>, <code>npm rebuild</code> 다 실행해보고, <code>npm outdated</code> 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다.</p>
+<p>이번 포스팅에서는 Node.js 의 버전을 최신 버전 혹은 스테이블 버전으로 업데이트해보겠습니다.</p>
 <h2 id="n">n</h2>
-<p>n &#xC774;&#xB77C;&#xB294; &#xC2EC;&#xD50C;&#xD55C; &#xC774;&#xB984;&#xC758; &#xD328;&#xD0A4;&#xC9C0;&#xB294; Node.js &#xBC84;&#xC804;&#xC744; &#xAD00;&#xB9AC;&#xD574;&#xC8FC;&#xB294; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC785;&#xB2C8;&#xB2E4;. &#xC774; &#xBAA8;&#xB4C8;&#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xC124;&#xCE58;&#xD574;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>n 이라는 심플한 이름의 패키지는 Node.js 버전을 관리해주는 플러그인입니다. 이 모듈을 이용해서 간단하게 설치해보겠습니다.</p>
 <blockquote>
 <p>Interactively Manage Your Node.js Versions<br>
 Node.js version management: no subshells, no profile setup, no convoluted API, just simple.</p>
 </blockquote>
 <p><img src="https://camo.githubusercontent.com/e3c6ac1ad2a69e2e969597b69d794658cb64df88/687474703a2f2f6e696d69742e696f2f696d616765732f6e2f6e2e676966" alt="https://github.com/tj/n"></p>
-<h2 id="node-js-&#xBC84;&#xC804;-&#xC5C5;&#xADF8;&#xB808;&#xC774;&#xB4DC;">Node.js &#xBC84;&#xC804; &#xC5C5;&#xADF8;&#xB808;&#xC774;&#xB4DC;</h2>
-<h3 id="node-js-&#xBC84;&#xC804;-&#xD655;&#xC778;">Node.js &#xBC84;&#xC804; &#xD655;&#xC778;</h3>
-<p>&#xBA3C;&#xC800; &#xD604;&#xC7AC; &#xC124;&#xCE58;&#xB418;&#xC5B4;&#xC788;&#xB294; &#xBC84;&#xC804;&#xC744; &#xD655;&#xC778;&#xD574;&#xBD05;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="cache-&#xC0AD;&#xC81C;">Cache &#xC0AD;&#xC81C;</h3>
-<p>Node.js &#xC758; &#xD328;&#xD0A4;&#xC9C0;&#xB9E4;&#xB2C8;&#xC800;&#xC778; npm &#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC124;&#xCE58;&#xD558;&#xB294;&#xB370;&#xC694;. &#xCE90;&#xC2DC;&#xAC00; &#xB0A8;&#xC544;&#xC788;&#xB294; &#xACBD;&#xC6B0; &#xC5D0;&#xB7EC;&#xAC00; &#xB0A0; &#xC218; &#xC788;&#xB2E4;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;. &#xCE90;&#xC2DC;&#xB97C; &#xBBF8;&#xB9AC; &#xC0AD;&#xC81C;&#xD574;&#xC90D;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm cache clean -f</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="n-&#xC124;&#xCE58;">n &#xC124;&#xCE58;</h3>
-<p>&#xC704;&#xC5D0;&#xC11C; &#xC0B4;&#xD3B4;&#xBCF8; n &#xBAA8;&#xB4C8;&#xC744; &#xC124;&#xCE58;&#xD574;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g n</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="n-&#xC0AC;&#xC6A9;&#xBC95;">n &#xC0AC;&#xC6A9;&#xBC95;</h3>
-<p>n &#xC0AC;&#xC6A9;&#xBC95;&#xC740; &#xC815;&#xB9D0; &#xAC04;&#xB2E8;&#xD569;&#xB2C8;&#xB2E4;. Node.js &#xBC84;&#xC804;&#xC5D0; &#xB530;&#xB77C;&#xC11C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC124;&#xCE58;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="node-js-버전-업그레이드">Node.js 버전 업그레이드</h2>
+<h3 id="node-js-버전-확인">Node.js 버전 확인</h3>
+<p>먼저 현재 설치되어있는 버전을 확인해봅니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
+<h3 id="cache-삭제">Cache 삭제</h3>
+<p>Node.js 의 패키지매니저인 npm 을 이용해서 대부분의 플러그인을 설치하는데요. 캐시가 남아있는 경우 에러가 날 수 있다고 합니다. 캐시를 미리 삭제해줍니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm cache clean -f</span><br></pre></td></tr></table></figure>
+<h3 id="n-설치">n 설치</h3>
+<p>위에서 살펴본 n 모듈을 설치해보겠습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g n</span><br></pre></td></tr></table></figure>
+<h3 id="n-사용법">n 사용법</h3>
+<p>n 사용법은 정말 간단합니다. Node.js 버전에 따라서 다음과 같이 설치할 수 있습니다.</p>
 <ul>
-<li>&#xCD5C;&#xC2E0; &#xBC84;&#xC804; (<em>Latest official release</em>)</li>
-<li>&#xC548;&#xC815; &#xBC84;&#xC804; (<em>Stable official release</em>)</li>
-<li>LTS &#xBC84;&#xC804; (<em>Long-Term Support official release</em>; &#xC624;&#xB79C; &#xAE30;&#xAC04;&#xB3D9;&#xC548; &#xC548;&#xC815;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xBC84;&#xC804;)</li>
-<li>&#xD2B9;&#xC815; &#xBC84;&#xC804; &#xC124;&#xCE58;</li>
+<li>최신 버전 (<em>Latest official release</em>)</li>
+<li>안정 버전 (<em>Stable official release</em>)</li>
+<li>LTS 버전 (<em>Long-Term Support official release</em>; 오랜 기간동안 안정적으로 사용할 수 있도록 지원하는 버전)</li>
+<li>특정 버전 설치</li>
 </ul>
-<p>&#xC800;&#xB294; &#xCD5C;&#xC2E0; &#xBC84;&#xC804;&#xAE4C;&#xC9C4; &#xD544;&#xC694;&#xC5C6;&#xACE0; &#xC548;&#xC815; &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC124;&#xCE58;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h4 id="&#xCD5C;&#xC2E0;-&#xBC84;&#xC804;-&#xC124;&#xCE58;">&#xCD5C;&#xC2E0; &#xBC84;&#xC804; &#xC124;&#xCE58;</h4>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n latest</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="stable-&#xBC84;&#xC804;-&#xC124;&#xCE58;">Stable &#xBC84;&#xC804; &#xC124;&#xCE58;</h4>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n stable</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="lts-&#xBC84;&#xC804;-&#xC124;&#xCE58;">LTS &#xBC84;&#xC804; &#xC124;&#xCE58;</h4>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n lts</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="&#xD2B9;&#xC815;-&#xBC84;&#xC804;-&#xC124;&#xCE58;">&#xD2B9;&#xC815; &#xBC84;&#xC804; &#xC124;&#xCE58;</h4>
-<p>&#xD544;&#xC694;&#xC5D0; &#xB530;&#xB77C; &#xD2B9;&#xC815; &#xBC84;&#xC804;&#xC744; &#xC124;&#xCE58;&#xD574;&#xC57C;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xB3C4; &#xC0DD;&#xAE41;&#xB2C8;&#xB2E4;. &#xC774;&#xB7F4; &#xB550; <code>n &lt;version&gt;</code> &#xCC98;&#xB7FC; &#xBC84;&#xC804;&#xC744; &#xAC19;&#xC774; &#xC801;&#xC5B4;&#xC8FC;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ n 0.8.14</span><br><span class="line">$ n 0.8.17</span><br><span class="line">$ n 0.9.6</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="&#xBC84;&#xC804;-&#xBCC0;&#xACBD;&#xD558;&#xAE30;">&#xBC84;&#xC804; &#xBCC0;&#xACBD;&#xD558;&#xAE30;</h4>
-<p>&#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xBC84;&#xC804;&#xC774; &#xC124;&#xCE58;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xC5D0; &#xD544;&#xC694;&#xC5D0; &#xB530;&#xB77C; &#xBC84;&#xC804;&#xC744; &#xC120;&#xD0DD;&#xD558;&#xC5EC; &#xBCC0;&#xACBD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xAC04;&#xB2E8;&#xD558;&#xAC8C; <code>n</code> &#xC744; &#xC785;&#xB825;&#xD558;&#xBA74; &#xBC84;&#xC804;&#xC744; &#xD655;&#xC778;&#xD558;&#xACE0; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ n</span><br><span class="line"></span><br><span class="line">  0.8.14</span><br><span class="line">&#x3BF; 0.8.17</span><br><span class="line">  0.9.6</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="&#xBC84;&#xC804;-&#xC0AD;&#xC81C;&#xD558;&#xAE30;">&#xBC84;&#xC804; &#xC0AD;&#xC81C;&#xD558;&#xAE30;</h4>
-<p>&#xC704;&#xC640; &#xAC19;&#xC774; &#xBC84;&#xC804;&#xC774; &#xC5EC;&#xB7EC; &#xAC1C; &#xC124;&#xCE58;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xACBD;&#xC6B0; &#xBC84;&#xC804;&#xC744; &#xC120;&#xD0DD;&#xD574;&#xC11C; &#xC0AD;&#xC81C;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n rm 0.9.4 v0.10.0</span><br><span class="line">$ n - 0.9.4</span><br></pre></td></tr></tbody></table></figure>
-<h4 id="&#xD604;&#xC7AC;-&#xBC84;&#xC804;-&#xC678;&#xC5D0;-&#xBAA8;&#xB4E0;-&#xBC84;&#xC804;-&#xC0AD;&#xC81C;&#xD558;&#xAE30;">&#xD604;&#xC7AC; &#xBC84;&#xC804; &#xC678;&#xC5D0; &#xBAA8;&#xB4E0; &#xBC84;&#xC804; &#xC0AD;&#xC81C;&#xD558;&#xAE30;</h4>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n prune</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="npm-&#xBC84;&#xC804;-&#xC5C5;&#xADF8;&#xB808;&#xC774;&#xB4DC;">npm &#xBC84;&#xC804; &#xC5C5;&#xADF8;&#xB808;&#xC774;&#xB4DC;</h2>
-<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; npm &#xBC84;&#xC804;&#xC744; &#xC62C;&#xB824;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h3 id="&#xD604;&#xC7AC;-&#xBC84;&#xC804;-&#xD655;&#xC778;">&#xD604;&#xC7AC; &#xBC84;&#xC804; &#xD655;&#xC778;</h3>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="npm-&#xC7AC;&#xC124;&#xCE58;">npm &#xC7AC;&#xC124;&#xCE58;</h3>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g npm</span><br></pre></td></tr></tbody></table></figure>
-<h3 id="&#xC124;&#xCE58;-&#xD655;&#xC778;">&#xC124;&#xCE58; &#xD655;&#xC778;</h3>
-<p>&#xBC18;&#xC601;&#xC774; &#xBC14;&#xB85C; &#xC548;&#xB420; &#xC218; &#xC788;&#xC73C;&#xB2C8; &#xD130;&#xBBF8;&#xB110;&#xC744; &#xC885;&#xB8CC; &#xD6C4; &#xB2E4;&#xC2DC; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C;&#xC11C; &#xBC84;&#xC804;&#xC744; &#xD655;&#xC778;&#xD574;&#xBD05;&#xC2DC;&#xB2E4;.</p>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+<p>저는 최신 버전까진 필요없고 안정 버전으로 설치했습니다.</p>
+<h4 id="최신-버전-설치">최신 버전 설치</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n latest</span><br></pre></td></tr></table></figure>
+<h4 id="stable-버전-설치">Stable 버전 설치</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n stable</span><br></pre></td></tr></table></figure>
+<h4 id="lts-버전-설치">LTS 버전 설치</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n lts</span><br></pre></td></tr></table></figure>
+<h4 id="특정-버전-설치">특정 버전 설치</h4>
+<p>필요에 따라 특정 버전을 설치해야하는 경우도 생깁니다. 이럴 땐 <code>n &lt;version&gt;</code> 처럼 버전을 같이 적어주면 됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ n 0.8.14</span><br><span class="line">$ n 0.8.17</span><br><span class="line">$ n 0.9.6</span><br></pre></td></tr></table></figure>
+<h4 id="버전-변경하기">버전 변경하기</h4>
+<p>여러가지 버전이 설치되어 있는 경우에 필요에 따라 버전을 선택하여 변경할 수 있습니다. 간단하게 <code>n</code> 을 입력하면 버전을 확인하고 선택할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ n</span><br><span class="line"></span><br><span class="line">  0.8.14</span><br><span class="line">ο 0.8.17</span><br><span class="line">  0.9.6</span><br></pre></td></tr></table></figure>
+<h4 id="버전-삭제하기">버전 삭제하기</h4>
+<p>위와 같이 버전이 여러 개 설치되어 있는 경우 버전을 선택해서 삭제할 수도 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n rm 0.9.4 v0.10.0</span><br><span class="line">$ n - 0.9.4</span><br></pre></td></tr></table></figure>
+<h4 id="현재-버전-외에-모든-버전-삭제하기">현재 버전 외에 모든 버전 삭제하기</h4>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n prune</span><br></pre></td></tr></table></figure>
+<h2 id="npm-버전-업그레이드">npm 버전 업그레이드</h2>
+<p>이번에는 npm 버전을 올려보겠습니다.</p>
+<h3 id="현재-버전-확인">현재 버전 확인</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<h3 id="npm-재설치">npm 재설치</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g npm</span><br></pre></td></tr></table></figure>
+<h3 id="설치-확인">설치 확인</h3>
+<p>반영이 바로 안될 수 있으니 터미널을 종료 후 다시 실행시켜서 버전을 확인해봅시다.</p>
+
         </div>
 
         <div id="bmc" align="center">

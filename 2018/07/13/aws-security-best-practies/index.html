@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xC774; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xB294; AWS &amp;#xC790;&amp;#xACA9;&amp;#xC99D; &amp;#xC2A4;&amp;#xD130;&amp;#xB514;&amp;#xC5D0;&amp;#xC11C; AWS Security Best Practies &amp;#xBC31;&amp;#xC11C;(2016/08)&amp;#xB97C; &amp;#xD55C;&amp;#xAE00;&amp;#xB85C; &amp;#">
+        <meta name="description" content="이 포스트는 AWS 자격증 스터디에서 AWS Security Best Practies 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할">
 <meta name="keywords" content="aws,security,best,practies,certified">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS 보안 모범 사례 백서 (번역&#x2F;요약)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/13/aws-security-best-practies/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xC774; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xB294; AWS &amp;#xC790;&amp;#xACA9;&amp;#xC99D; &amp;#xC2A4;&amp;#xD130;&amp;#xB514;&amp;#xC5D0;&amp;#xC11C; AWS Security Best Practies &amp;#xBC31;&amp;#xC11C;(2016/08)&amp;#xB97C; &amp;#xD55C;&amp;#xAE00;&amp;#xB85C; &amp;#">
+<meta property="og:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Security Best Practies 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/2018/07/13/aws-security-best-practies/2018/07/13/aws-security-best-practies/srm.png">
 <meta property="og:updated_time" content="2018-07-12T15:52:39.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AWS 보안 모범 사례 백서 (번역&#x2F;요약)">
-<meta name="twitter:description" content="&amp;#xC774; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xB294; AWS &amp;#xC790;&amp;#xACA9;&amp;#xC99D; &amp;#xC2A4;&amp;#xD130;&amp;#xB514;&amp;#xC5D0;&amp;#xC11C; AWS Security Best Practies &amp;#xBC31;&amp;#xC11C;(2016/08)&amp;#xB97C; &amp;#xD55C;&amp;#xAE00;&amp;#xB85C; &amp;#">
+<meta name="twitter:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Security Best Practies 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할">
 <meta name="twitter:image" content="https://futurecreator.github.io/2018/07/13/aws-security-best-practies/2018/07/13/aws-security-best-practies/srm.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,18 +200,18 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/best/">best</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certified/">certified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/practies/">practies</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/security/">security</a></li></ul>
  -->
-            <span class="reading-time">⏱ 18 분</span>
+            <span class="reading-time">⏱ 5 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&#xC774; &#xD3EC;&#xC2A4;&#xD2B8;&#xB294; AWS &#xC790;&#xACA9;&#xC99D; &#xC2A4;&#xD130;&#xB514;&#xC5D0;&#xC11C; <a href="https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf" rel="external nofollow noopener noreferrer" target="_blank">AWS Security Best Practies</a> &#xBC31;&#xC11C;(2016/08)&#xB97C; &#xD55C;&#xAE00;&#xB85C; &#xBC88;&#xC5ED; &#xBC0F; &#xC694;&#xC57D;&#xD55C; &#xC790;&#xB8CC;&#xC785;&#xB2C8;&#xB2E4;. &#xD574;&#xB2F9; &#xD3EC;&#xC2A4;&#xD2B8;&#xB294; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xC5C5;&#xB370;&#xC774;&#xD2B8; &#xB429;&#xB2C8;&#xB2E4;.</p>
-<p>&#xB9C8;&#xC9C0;&#xB9C9; &#xC5C5;&#xB370;&#xC774;&#xD2B8; : 2018/07/12</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 포스트는 AWS 자격증 스터디에서 <a href="https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf" rel="external nofollow noopener noreferrer" target="_blank">AWS Security Best Practies</a> 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.</p>
+<p>마지막 업데이트 : 2018/07/12</p>
 <hr>
-<p>AWS&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; ISO 27001&#xD45C;&#xC900; ISMS(Information Security Managment System)&#xB97C; &#xC27D;&#xAC8C; &#xAD6C;&#xCD95;&#xD560; &#xC218; &#xC788;&#xB2E4;</p>
+<p>AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할 수 있다</p>
 <h2 id="aws-shared-responsibility-model">AWS Shared Responsibility Model</h2>
 <ul>
-<li>AWS&#xB294; &#xD074;&#xB77C;&#xC6B0;&#xB4DC; &#xBCF4;&#xC548; &#xC778;&#xD504;&#xB77C;&#xC640; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xACE0;, &#xACE0;&#xAC1D;&#xC740; OS, &#xD50C;&#xB7AB;&#xD3FC;, &#xB370;&#xC774;&#xD130;&#xC758; &#xBCF4;&#xC548;&#xC5D0; &#xB300;&#xD55C; &#xCC45;&#xC784;&#xC774; &#xC788;&#xB2E4;.</li>
-<li>AWS&#xB294; &#xC138; &#xAC00;&#xC9C0; &#xD0C0;&#xC785;&#xC758; &#xACF5;&#xC720; &#xAD8C;&#xD55C; &#xBAA8;&#xB378;&#xC744; &#xC81C;&#xACF5;&#xD574;&#xC900;&#xB2E4;
+<li>AWS는 클라우드 보안 인프라와 서비스를 제공하고, 고객은 OS, 플랫폼, 데이터의 보안에 대한 책임이 있다.</li>
+<li>AWS는 세 가지 타입의 공유 권한 모델을 제공해준다
 <ul>
 <li>Infrastructure services</li>
 <li>Container services</li>
@@ -220,134 +220,116 @@ ga('send', 'pageview');
 </li>
 </ul>
 <h3 id="understanding-the-aws-secure-global-infrastructure">Understanding the AWS Secure Global InfraStructure</h3>
-<h4 id="identity-and-access-manamgement-iam-&#xC11C;&#xBE44;&#xC2A4;">Identity and Access Manamgement (IAM) &#xC11C;&#xBE44;&#xC2A4;</h4>
+<h4 id="identity-and-access-manamgement-iam-서비스">Identity and Access Manamgement (IAM) 서비스</h4>
 <ul>
-<li>&#xC720;&#xC800;&#xC640; &#xBCF4;&#xC548;&#xC790;&#xACA9;(Password, Access keys, Permission policies)&#xB4F1;&#xC744; &#xC911;&#xC559; &#xC9D1;&#xC911;&#xC801;&#xC73C;&#xB85C; &#xAD00;&#xB9AC;&#xD574;&#xC8FC;&#xB294; &#xC11C;&#xBE44;&#xC2A4;</li>
-<li>&#xD558;&#xB098;&#xC758; AWS account &#xB0B4; &#xAC01;&#xAC01;&#xC758; &#xC774;&#xB984;&#xACFC; &#xBE44;&#xBC00;&#xBC88;&#xD638;, &#xC5D1;&#xC138;&#xC2A4; &#xD0A4;&#xB97C; &#xAC00;&#xC9C4; &#xC720;&#xC800;&#xB97C; &#xC5EC;&#xB7EC;&#xBA85; &#xB9CC;&#xB4E4;&#xC218; &#xC788;&#xB2E4;</li>
-<li>&#xAC01;&#xAC01;&#xC758; &#xC720;&#xC800;&#xB294; &#xACC4;&#xC815; URL&#xC744; &#xD1B5;&#xD574; &#xACC4;&#xC815; &#xCF58;&#xC194;&#xB85C; &#xB85C;&#xADF8;&#xC778; &#xD560; &#xC218; &#xC788;&#xB2E4;</li>
-<li>&#xAC01;&#xAC01;&#xC758; &#xC720;&#xC800;&#xC5D0;&#xAC8C; AWS &#xACC4;&#xC815;&#xB0B4; &#xB9AC;&#xC18C;&#xC2A4;&#xC5D0; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC801;&#xC73C;&#xB85C; &#xC811;&#xADFC;&#xD560; &#xC218;&#xC788;&#xB3C4;&#xB85D; Access key&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4; &#xC904; &#xC218; &#xC788;&#xB2E4;</li>
-<li>&#xAC01; &#xC720;&#xC800;&#xC758; &#xD65C;&#xB3D9;&#xC5D0; &#xB300;&#xD55C; &#xBE44;&#xC6A9;&#xC740; AWS &#xACC4;&#xC815;&#xC73C;&#xB85C; &#xCCAD;&#xAD6C;&#xB41C;&#xB2E4;.</li>
-<li>&#xAD00;&#xB9AC;&#xC790;&#xB3C4; &#xACC4;&#xC815; &#xC790;&#xACA9;&#xBCF4;&#xB2E4;&#xB294; &#xC720;&#xC800;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xC811;&#xADFC;&#xD558;&#xB294; &#xAC83;&#xC744; &#xCD94;&#xCC9C;&#xD55C;&#xB2E4;</li>
+<li>유저와 보안자격(Password, Access keys, Permission policies)등을 중앙 집중적으로 관리해주는 서비스</li>
+<li>하나의 AWS account 내 각각의 이름과 비밀번호, 엑세스 키를 가진 유저를 여러명 만들수 있다</li>
+<li>각각의 유저는 계정 URL을 통해 계정 콘솔로 로그인 할 수 있다</li>
+<li>각각의 유저에게 AWS 계정내 리소스에 프로그래밍적으로 접근할 수있도록 Access key를 만들어 줄 수 있다</li>
+<li>각 유저의 활동에 대한 비용은 AWS 계정으로 청구된다.</li>
+<li>관리자도 계정 자격보다는 유저를 만들어서 접근하는 것을 추천한다</li>
 </ul>
 <h4 id="regions-availability-zones-and-endpoints">Regions, Availability Zones, and Endpoints</h4>
 <ul>
 <li>Region
 <ul>
-<li>&#xBB3C;&#xB9AC;&#xC801; &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;&#xC18C; &#xC704;&#xCE58;</li>
-<li>Network latency &#xBC0F; Regulatory compliance(&#xADDC;&#xC815;&#xC900;&#xC218;, &#xB098;&#xB77C; or &#xC9C0;&#xC5ED;&#xBCC4; &#xBC95; &#xC900;&#xC218;&#xB97C; &#xB9D0;&#xD558;&#xB294; &#xB4EF;)&#xB97C; &#xACE0;&#xB824;&#xD574;&#xC11C; Region&#xC744; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
-<li>&#xD2B9;&#xC815; Region&#xC744; &#xC815;&#xD588;&#xB2E4;&#xBA74; &#xD574;&#xB2F9; &#xC9C0;&#xC5ED; &#xC678;&#xBD80;&#xB85C;&#xB294; &#xB370;&#xC774;&#xD130; &#xBCF5;&#xC81C;&#xAC00; &#xC77C;&#xC5B4;&#xB098;&#xC9C0; &#xC54A;&#xC74C;. &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xCC45;&#xC784;&#xC784;</li>
+<li>물리적 데이터 저장소 위치</li>
+<li>Network latency 및 Regulatory compliance(규정준수, 나라 or 지역별 법 준수를 말하는 듯)를 고려해서 Region을 선택할 수 있음</li>
+<li>특정 Region을 정했다면 해당 지역 외부로는 데이터 복제가 일어나지 않음. 사용자의 책임임</li>
 </ul>
 </li>
 <li>Availability Zone
 <ul>
-<li>Region&#xB0B4;&#xC5D0;&#xC11C; Fault isolation&#xC744; &#xC704;&#xD574; &#xB514;&#xC790;&#xC778;&#xB41C; &#xB17C;&#xB9AC;&#xC801; &#xC9C0;&#xC5ED;&#xAD6C;&#xBD84;</li>
-<li>&#xB2E4;&#xC218;&#xC758; ISP(&#xC778;&#xD130;&#xB137;&#xACF5;&#xAE09;&#xC5C5;&#xC790;)&#xC640; &#xB2E4;&#xB978; &#xC804;&#xC6D0;&#xACF5;&#xAE09;&#xB9DD;&#xC744; &#xC0AC;&#xC6A9;</li>
-<li>&#xAC19;&#xC740; &#xB9AC;&#xC804;&#xB0B4;&#xC5D0; &#xB2E4;&#xB978; &#xAC00;&#xC6A9;&#xACF5;&#xAC04; &#xB07C;&#xB9AC;&#xC758; &#xD1B5;&#xC2E0;&#xC740; LAN&#xC73C;&#xB85C; &#xC5F0;&#xACB0;&#xB418;&#xC5B4;&#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB9E4;&#xC6B0; &#xBE60;&#xB984;</li>
-<li>&#xC7A5;&#xC560;&#xC5D0; &#xB300;&#xCC98;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xB2E4;&#xC218;&#xC758; &#xAC00;&#xC6A9;&#xC601;&#xC5ED;&#xC5D0; &#xC704;&#xCE58; &#xC2DC;&#xD0A4;&#xB294; &#xAC83;&#xC744; &#xCD94;&#xCC9C;&#xD55C;&#xB2E4;</li>
+<li>Region내에서 Fault isolation을 위해 디자인된 논리적 지역구분</li>
+<li>다수의 ISP(인터넷공급업자)와 다른 전원공급망을 사용</li>
+<li>같은 리전내에 다른 가용공간 끼리의 통신은 LAN으로 연결되어있기 때문에 매우 빠름</li>
+<li>장애에 대처하기 위해 시스템을 다수의 가용영역에 위치 시키는 것을 추천한다</li>
 </ul>
 </li>
 <li>Service Endpoint
 <ul>
-<li>Backplane &#xC811;&#xADFC;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xC11C;&#xBE44;&#xC2A4; &#xC564;&#xB4DC;&#xD3EC;&#xC778;&#xD2B8;</li>
-<li>AWS Mangment Consonle&#xC744; &#xC774;&#xC6A9;&#xD55C; Web &#xC811;&#xADFC;</li>
-<li>API&#xB098; CLI&#xB97C; &#xD1B5;&#xD55C; Programming &#xC811;&#xADFC;</li>
+<li>Backplane 접근을 제공하는 서비스 앤드포인트</li>
+<li>AWS Mangment Consonle을 이용한 Web 접근</li>
+<li>API나 CLI를 통한 Programming 접근</li>
 </ul>
 </li>
 </ul>
 <h3 id="sharing-security-responsibility-for-aws-services">Sharing Security Responsibility for AWS Services</h3>
 <p><img src="srm.png" alt="Shared Responsibility Model for Infrastructure Services"></p>
 <ul>
-<li>AWS&#xB294; 3&#xAC00;&#xC9C0; &#xCE74;&#xD14C;&#xACE0;&#xB9AC;&#xB85C; &#xAD6C;&#xBD84;&#xD558;&#xC5EC; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;</li>
-<li>&#xAC01; &#xC11C;&#xBE44;&#xC2A4;&#xB294; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xC811;&#xADFC; &#xBC0F; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;&#xC5D0; &#xB530;&#xB77C; &#xC57D;&#xAC04;&#xC529; &#xB2E4;&#xB978; &#xBCF4;&#xC548; &#xC624;&#xB108;&#xC2ED; &#xBAA8;&#xB378;&#xC774; &#xC81C;&#xACF5;&#xB41C;&#xB2E4;</li>
+<li>AWS는 3가지 카테고리로 구분하여 서비스를 제공한다</li>
+<li>각 서비스는 사용자의 접근 및 사용 방법에 따라 약간씩 다른 보안 오너십 모델이 제공된다</li>
 <li><strong>Infrastruture services</strong>
 <ul>
-<li>&#xCEF4;&#xD4E8;&#xD130; &#xC11C;&#xBE44;&#xC2A4;, &#xC544;&#xB9C8;&#xC874; EC2, &#xC544;&#xB9C8;&#xC874; EBS(Elastic Block Store), Auto Scaling, Amazon VPC(Virtual Private Cloud)</li>
+<li>컴퓨터 서비스, 아마존 EC2, 아마존 EBS(Elastic Block Store), Auto Scaling, Amazon VPC(Virtual Private Cloud)</li>
 </ul>
 </li>
 <li><strong>Container Services</strong>
 <ul>
-<li>&#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; EC2&#xB098; &#xC778;&#xD504;&#xB77C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC704;&#xC5D0;&#xC11C; &#xB3D9;&#xC791;&#xD558;&#xB294; &#xC11C;&#xBE44;&#xC2A4;&#xB4E4;&#xC744; &#xC77C;&#xCEEC;&#xC74C;</li>
-<li>&#xBA87;&#xBA87; &#xD50C;&#xB7AB;&#xD3FC; &#xC774;&#xB098; OS &#xB808;&#xBCA8;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB294; Container &#xAD00;&#xB9AC;&#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC774;&#xC6A9;(&#xBC29;&#xD654;&#xBCBD;, &#xD50C;&#xB7AB;&#xD3FC; &#xB808;&#xBCA8;&#xC758; &#xC790;&#xACA9;&#xC99D;&#xBA85; &#xB4F1;)</li>
-<li>&#xC544;&#xB9C8;&#xC874; RDS(Relational Database Services), &#xC544;&#xB9C8;&#xC874; EMR(Elastic Map Reduce), AWS Elastic Beanstalk</li>
+<li>일반적으로 EC2나 인프라 인스턴스 위에서 동작하는 서비스들을 일컬음</li>
+<li>몇몇 플랫폼 이나 OS 레벨의 서비스는 Container 관리서비스를 이용(방화벽, 플랫폼 레벨의 자격증명 등)</li>
+<li>아마존 RDS(Relational Database Services), 아마존 EMR(Elastic Map Reduce), AWS Elastic Beanstalk</li>
 </ul>
 </li>
 <li><strong>Abstracted Services</strong>
 <ul>
-<li>&#xD50C;&#xB7AB;&#xD3FC;&#xC774;&#xB098; &#xAD00;&#xB9AC; &#xB808;&#xC774;&#xC5B4;&#xB97C; &#xCD94;&#xC0C1;&#xD654;&#xD55C; &#xC11C;&#xBE44;&#xC2A4;(&#xD50C;&#xB7AB;&#xBD04; &#xC0C1;&#xC704;&#xC218;&#xC900;, &#xD50C;&#xB7AB;&#xD3FC; &#xB3C5;&#xB9BD;&#xC801;&#xC774;&#xB77C;&#xB294; &#xB73B;&#xC778;&#xB4EF;)</li>
-<li>High-level &#xC800;&#xC7A5;&#xC18C;, DB, messageing &#xC11C;&#xBE44;&#xC2A4;</li>
-<li>&#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xD074;&#xB77C;&#xC6B0;&#xB4DC; &#xC5B4;&#xD50C;&#xB9AC;&#xCF00;&#xC158;&#xC744; &#xBE4C;&#xB4DC; &#xBC0F; &#xC2E4;&#xD589; &#xAC00;&#xB2A5; &#xD558;&#xBA70; AWS API&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xC561;&#xC138;&#xC2A4; &#xAC00;&#xB2A5;</li>
-<li>AWS&#xB294; &#xC11C;&#xBE44;&#xC2A4; &#xAD6C;&#xC131;&#xC694;&#xC18C; &#xBC0F; &#xC11C;&#xBE44;&#xC2A4;&#xAC00; &#xC0C1;&#xC8FC;&#xD558;&#xB294; OS&#xB97C; &#xAD00;&#xB9AC;</li>
-<li>&#xC0AC;&#xC6A9;&#xC790;&#xB294; &#xAE30;&#xBCF8; &#xC778;&#xD504;&#xB77C;&#xB97C; &#xACF5;&#xC720;&#xD558;&#xACE0;, &#xC11C;&#xBE44;&#xC2A4;&#xB294; &#xBA40;&#xD2F0; &#xD14C;&#xB128;&#xD2B8; &#xD50C;&#xB7AB;&#xD3FC;&#xC744; &#xC81C;&#xACF5;</li>
-<li>&#xC544;&#xB9C8;&#xC874; S3(Simple Storage Service), &#xC544;&#xB9C8;&#xC874; Glacier, &#xC544;&#xB9C8;&#xC874; DynamoDB, &#xC544;&#xB9C8;&#xC874; SQS(Simple Queuing Service), &#xC544;&#xB9C8;&#xC874; SES(Simple Email Service)</li>
+<li>플랫폼이나 관리 레이어를 추상화한 서비스(플랫봄 상위수준, 플랫폼 독립적이라는 뜻인듯)</li>
+<li>High-level 저장소, DB, messageing 서비스</li>
+<li>사용자는 클라우드 어플리케션을 빌드 및 실행 가능 하며 AWS API를 통해서 액세스 가능</li>
+<li>AWS는 서비스 구성요소 및 서비스가 상주하는 OS를 관리</li>
+<li>사용자는 기본 인프라를 공유하고, 서비스는 멀티 테넨트 플랫폼을 제공</li>
+<li>아마존 S3(Simple Storage Service), 아마존 Glacier, 아마존 DynamoDB, 아마존 SQS(Simple Queuing Service), 아마존 SES(Simple Email Service)</li>
 </ul>
 </li>
 </ul>
 <h4 id="shared-responsibility-model-for-infrastrucutr-services">Shared Responsibility Model for Infrastrucutr Services</h4>
 <ul>
-<li>&#xC778;&#xD504;&#xB77C;&#xC11C;&#xBE44;&#xC2A4;&#xB294; &#xD56D;&#xC0C1; &#xC2E4;&#xD589;&#xB41C; &#xD2B9;&#xC815; &#xB9AC;&#xC804;&#xC5D0;&#xC11C; &#xC791;&#xB3D9;&#xD55C;&#xB2E4;</li>
-<li>&#xD558;&#xC9C0;&#xB9CC; &#xB2E4;&#xC218;&#xC758; &#xAC00;&#xC6A9;&#xC601;&#xC5ED;&#xC758; &#xAD6C;&#xC131;&#xC694;&#xC18C;&#xB97C; &#xC798; &#xD65C;&#xC6A9;&#xD558;&#xBA74; &#xAC01;&#xAC01; &#xC11C;&#xBE44;&#xC2A4;&#xC758; &#xAC00;&#xC6A9;&#xC131;&#xC744; &#xCD08;&#xACFC;&#xD558;&#xB294; &#xB192;&#xC740; &#xAC00;&#xC6A9;&#xC131; &#xC218;&#xC900;&#xC744; &#xCDA9;&#xC871;&#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xB2E4;</li>
-<li>&#xBCF4;&#xB2E4; &#xC5C4;&#xACA9;&#xD55C; &#xBE44;&#xC988;&#xB2C8;&#xC2A4; &#xB610;&#xB294; &#xADDC;&#xC815; &#xC900;&#xC218;&#xC0AC;&#xD56D;&#xC774; &#xC5C6;&#xB2E4;&#xBA74; AWS &#xBCF4;&#xC548; &#xAE00;&#xB85C;&#xBC8C; &#xC778;&#xD504;&#xB77C;&#xC678;&#xC5D0; &#xBCF4;&#xC548; &#xB808;&#xC774;&#xC5B4;&#xB97C; &#xCD94;&#xAC00;&#xD560; &#xD544;&#xC694;&#xB294; &#xC5C6;&#xB2E4;</li>
-<li>&#xD2B9;&#xC815; &#xADDC;&#xC815;&#xC900;&#xC218; &#xC694;&#xAD6C;&#xC0AC;&#xD56D;&#xC774; &#xC788;&#xB2E4;&#xBA74;, AWS&#xAC00; &#xC81C;&#xACF5;&#xD574;&#xC8FC;&#xB294; &#xAE30;&#xC220;&#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xC0AC;&#xC6A9;&#xC790; OS, &#xD50C;&#xB7AB;&#xD3FC;&#xACFC; AWS &#xC0AC;&#xC774;&#xC5D0; &#xCD94;&#xAC00;&#xC801;&#xC778; &#xC7A5;&#xCE58;(&#xB370;&#xC774;&#xD130; &#xC554;&#xD638;&#xD654;, &#xB370;&#xC774;&#xD130; &#xBB34;&#xACB0;&#xC131; &#xC778;&#xC99D;, &#xC18C;&#xD504;&#xD2B8;&#xC6E8;&#xC5B4; &#xBC0F; &#xB370;&#xC774;&#xD130; &#xC11C;&#xBA85; &#xB4F1;&#xB4F1;) &#xB123;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xB2E4;</li>
-<li>&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xD45C;&#xC900; AMI&#xB97C; &#xD1B5;&#xD574; EC2&#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xCF30;&#xC744; &#xACBD;&#xC6B0;, SSH&#xB098; RDP&#xB97C; &#xD1B5;&#xD574; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xB824;&#xBA74; OS&#xB808;&#xBCA8;&#xC758; &#xC778;&#xC99D;&#xC744; &#xBC1B;&#xC544;&#xC57C;&#xD55C;&#xB2E4;</li>
-<li>EC2 &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC544;&#xB9C8;&#xC874; EC2 Key pair(&#xC5C5;&#xACC4;&#xD45C;&#xC900;&#xC778; RSA Key pair&#xC758; &#xC77C;&#xC885;)&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218;&#xC788;&#xB2E4;</li>
-<li>EC2 Key pair&#xB294; AWS &#xACC4;&#xC815;&#xC774;&#xB098; IAM &#xC720;&#xC800; &#xC790;&#xACA9;&#xACFC; &#xC0C1;&#xAD00;&#xC5C6;&#xB2E4;
+<li>인프라서비스는 항상 실행된 특정 리전에서 작동한다</li>
+<li>하지만 다수의 가용영역의 구성요소를 잘 활용하면 각각 서비스의 가용성을 초과하는 높은 가용성 수준을 충족시킬 수 있다</li>
+<li>보다 엄격한 비즈니스 또는 규정 준수사항이 없다면 AWS 보안 글로벌 인프라외에 보안 레이어를 추가할 필요는 없다</li>
+<li>특정 규정준수 요구사항이 있다면, AWS가 제공해주는 기술을 사용해 사용자 OS, 플랫폼과 AWS 사이에 추가적인 장치(데이터 암호화, 데이터 무결성 인증, 소프트웨어 및 데이터 서명 등등) 넣을 수도 있다</li>
+<li>사용자가 표준 AMI를 통해 EC2인스턴스를 실행시켰을 경우, SSH나 RDP를 통해 인스턴스에 접근하려면 OS레벨의 인증을 받아야한다</li>
+<li>EC2 인스턴스에 접근하기 위해 아마존 EC2 Key pair(업계표준인 RSA Key pair의 일종)를 사용할 수있다</li>
+<li>EC2 Key pair는 AWS 계정이나 IAM 유저 자격과 상관없다
 <ul>
-<li>AWS&#xACC4;&#xC815;&#xC774;&#xB098; IAM &#xC720;&#xC800; &#xC790;&#xACA9;&#xC740; &#xB2E4;&#xB978; AWS&#xC11C;&#xBE44;&#xC2A4;&#xB4E4;&#xC5D0; &#xB300;&#xD55C; &#xC811;&#xADFC;&#xC744; &#xAD00;&#xB9AC;</li>
-<li>EC2 Key pair&#xB294; &#xC624;&#xC9C1; &#xD2B9;&#xC815; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xB300;&#xD55C; &#xC811;&#xADFC;&#xC744; &#xAD00;&#xB9AC;</li>
+<li>AWS계정이나 IAM 유저 자격은 다른 AWS서비스들에 대한 접근을 관리</li>
+<li>EC2 Key pair는 오직 특정 인스턴스에 대한 접근을 관리</li>
 </ul>
 </li>
-<li>OpenSSL&#xC744; &#xD1B5;&#xD574;&#xC11C; EC2 key pair&#xB97C; &#xB9CC;&#xB4E4; &#xACBD;&#xC6B0;
+<li>OpenSSL을 통해서 EC2 key pair를 만들 경우
 <ul>
-<li>Public key&#xB97C; AWS&#xC5D0; &#xB4F1;&#xB85D;, Private key&#xB97C; &#xC800;&#xC7A5;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;</li>
+<li>Public key를 AWS에 등록, Private key를 저장해서 사용</li>
 </ul>
 </li>
-<li>AWS&#xB97C; &#xD1B5;&#xD574; EC2 key pair&#xB97C; &#xB9CC;&#xB4E4; &#xACBD;&#xC6B0;
+<li>AWS를 통해 EC2 key pair를 만들 경우
 <ul>
-<li>Public key&#xC640; Private Key&#xAC00; &#xCC98;&#xC74C; &#xC778;&#xC2A4;&#xD134;&#xC2A4; &#xC0DD;&#xC131;&#xB54C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC11C; &#xBCF4;&#xC5EC;&#xC9D0;</li>
-<li>Private key&#xB294; &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC; &#xBC0F; &#xC800;&#xC7A5;&#xD574;&#xC11C; &#xC0AC;&#xC6A9;(AWS&#xB294; Private key&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xC9C0; &#xC54A;&#xC74C;)</li>
-<li>Private key &#xBD84;&#xC2E4; &#xC2DC; &#xC0C8; pair&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C;&#xD568;</li>
+<li>Public key와 Private Key가 처음 인스턴스 생성때 만들어서 보여짐</li>
+<li>Private key는 다운로드 및 저장해서 사용(AWS는 Private key를 저장하지 않음)</li>
+<li>Private key 분실 시 새 pair를 만들어야함</li>
 </ul>
 </li>
-<li>cloud-init &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC544;&#xB9C8;&#xC874; EC2 Linux &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E0; &#xACBD;&#xC6B0;
+<li>cloud-init 서비스를 이용해 아마존 EC2 Linux 인스턴스를 만든 경우
 <ul>
-<li>Public key &#xC704;&#xCE58; : ~/.ssh/authorized_keys</li>
-<li>&#xC0AC;&#xC6A9;&#xC790;&#xB294; SSH client&#xB97C; &#xD1B5;&#xD574; &#xC5F0;&#xACB0; &#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>Public key 위치 : ~/.ssh/authorized_keys</li>
+<li>사용자는 SSH client를 통해 연결 할 수 있음</li>
 </ul>
 </li>
-<li>ec2config &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC544;&#xB9C8;&#xC874; EC2 Window &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E0; &#xACBD;&#xC6B0;
+<li>ec2config 서비스를 이용해 아마존 EC2 Window 인스턴스를 만든 경우
 <ul>
-<li>&#xAD00;&#xB9AC;&#xC790; &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB97C; &#xB79C;&#xB364;&#xC73C;&#xB85C; &#xC0DD;&#xC131;, Public key&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC554;&#xD638;&#xD654;</li>
-<li>&#xC0AC;&#xC6A9;&#xC790;&#xB294; AWS &#xCF58;&#xC194;&#xC774;&#xB098; CLI&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xAD00;&#xB9AC;&#xC790; (&#xC554;&#xD638;&#xD654;&#xB41C;) &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB97C; &#xD68D;&#xB4DD;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
-<li>&#xC0AC;&#xC6A9;&#xC790;&#xAC00; Private key&#xB85C; &#xC811;&#xADFC;&#xD558;&#xBA74; Private key&#xB85C; &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB97C; &#xBCF5;&#xD638;&#xD654;&#xD574; &#xC778;&#xC99D; &#xC9C4;&#xD589;</li>
+<li>관리자 비밀번호를 랜덤으로 생성, Public key를 이용해 암호화</li>
+<li>사용자는 AWS 콘솔이나 CLI를 이용해 관리자 (암호화된) 비밀번호를 획득할 수 있음</li>
+<li>사용자가 Private key로 접근하면 Private key로 비밀번호를 복호화해 인증 진행</li>
 </ul>
 </li>
-<li>&#xB354; &#xB192;&#xC740; &#xC218;&#xC900;&#xC758; &#xBCF4;&#xC548;&#xC774; &#xC694;&#xAD6C;&#xB41C;&#xB2E4;&#xBA74;, LDAP &#xD639;&#xC740; Active Directory authentication&#xC744; &#xAD6C;&#xD604;&#xD558;&#xACE0;, &#xC544;&#xB9C8;&#xC874; EC2 key pair &#xC778;&#xC99D;&#xC740; &#xBE44;&#xD65C;&#xC131;&#xD654; &#xC2DC;&#xD0AC; &#xC218; &#xC788;&#xB2E4;</li>
+<li>더 높은 수준의 보안이 요구된다면, LDAP 혹은 Active Directory authentication을 구현하고, 아마존 EC2 key pair 인증은 비활성화 시킬 수 있다</li>
 </ul>
 <h4 id="shared-responsibility-model-for-container-services">Shared Responsibility Model for Container Services</h4>
 <ul>
-<li>&#xC544;&#xB9C8;&#xC874; RDS&#xB098; EMR&#xAC19;&#xC740; Container services&#xC5D0;&#xC11C; AWS&#xB294; &#xAE30;&#xBCF8;&#xC778;&#xD504;&#xB77C;&#xC640; &#xAE30;&#xBC18;&#xC11C;&#xBE44;&#xC2A4;, OS&#xC640; &#xD50C;&#xB7AB;&#xD3FC;&#xC744; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;(&#xADF8; &#xC678;&#xB294; &#xC0AC;&#xC6A9;&#xC790; &#xCC45;&#xC784;&#xC774;&#xB77C;&#xB294; &#xB73B;&#xC73C;&#xB85C; &#xBCF4;&#xC784;, c.f. &#xC778;&#xD504;&#xB77C;&#xC11C;&#xBE44;&#xC2A4;&#xC5D0;&#xC11C; OS&#xC640; &#xD50C;&#xB7AB;&#xD3FC;&#xC740; &#xC0AC;&#xC6A9;&#xC790; &#xCC45;&#xC784;)</li>
-<li>&#xC608;&#xB97C; &#xB4E4;&#xC5B4; &#xC544;&#xB9C8;&#xC874; RDS for Oracle&#xC740; &#xC624;&#xB77C;&#xD074; DB &#xD50C;&#xB7AB;&#xD3FC; &#xC11C;&#xBE44;&#xC2A4;&#xB3C4; &#xD3EC;&#xD568;&#xD55C; Container&#xC758; &#xBAA8;&#xB4E0; layer&#xB97C; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;(&#xB370;&#xC774;&#xD130; &#xBC31;&#xC5C5;&#xACFC; &#xBCF5;&#xAD6C; &#xB3C4;&#xAD6C; &#xB4F1;&#xC744; &#xC81C;&#xACF5;&#xD574;&#xC90C;). &#xADF8;&#xB7EC;&#xB098; Business continuity &#xC640; Disaster recovery (BC/ DR) &#xC815;&#xCC45;&#xC740; &#xC0AC;&#xC6A9;&#xC790; &#xBAAB;&#xC774;&#xB2E4;</li>
-<li>AWS Container Services&#xC5D0;&#xC11C; &#xD574;&#xB2F9;&#xC11C;&#xBE44;&#xC2A4;&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xAE30; &#xC704;&#xD55C; &#xB370;&#xC774;&#xD130;&#xC640; &#xBC29;&#xD654;&#xBCBD; &#xADDC;&#xCE59;&#xC740; &#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xBAAB;&#xC774;&#xB2E4;. &#xC11C;&#xBE44;&#xC2A4; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xC5D0; &#xB300;&#xD55C; Security groups&#xC740; AWS&#xAC00; &#xC81C;&#xACF5;</li>
+<li>아마존 RDS나 EMR같은 Container services에서 AWS는 기본인프라와 기반서비스, OS와 플랫폼을 관리한다(그 외는 사용자 책임이라는 뜻으로 보임, c.f. 인프라서비스에서 OS와 플랫폼은 사용자 책임)</li>
+<li>예를 들어 아마존 RDS for Oracle은 오라클 DB 플랫폼 서비스도 포함한 Container의 모든 layer를 관리한다(데이터 백업과 복구 도구 등을 제공해줌). 그러나 Business continuity 와 Disaster recovery (BC/ DR) 정책은 사용자 몫이다</li>
+<li>AWS Container Services에서 해당서비스에 접근하기 위한 데이터와 방화벽 규칙은 사용자의 몫이다. 서비스 인스턴스에 대한 Security groups은 AWS가 제공</li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
         </div>
 
         <div id="bmc" align="center">

@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xC774;&amp;#xC804; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC778; Hexo &amp;#xAE30;&amp;#xBCF8; &amp;#xC0AC;&amp;#xC6A9;&amp;#xBC95;&amp;#xC5D0;&amp;#xC11C;&amp;#xB294; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8; &amp;#xC0AD;&amp;#xC81C;&amp;#xD558;&amp;#xB294; &amp;#xBC29;&amp;#xBC95;&amp;#xC7">
+        <meta name="description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source/_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
 <meta name="keywords" content="hexo,web,blog,markdown">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 블로그에서 포스트 삭제하는 방법">
 <meta property="og:url" content="https://futurecreator.github.io/2017/01/15/how-to-delete-post-in-hexo/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xC774;&amp;#xC804; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC778; Hexo &amp;#xAE30;&amp;#xBCF8; &amp;#xC0AC;&amp;#xC6A9;&amp;#xBC95;&amp;#xC5D0;&amp;#xC11C;&amp;#xB294; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8; &amp;#xC0AD;&amp;#xC81C;&amp;#xD558;&amp;#xB294; &amp;#xBC29;&amp;#xBC95;&amp;#xC7">
+<meta property="og:description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source/_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/images/thumbnail/delete.jpg">
 <meta property="og:updated_time" content="2018-07-07T05:15:31.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 블로그에서 포스트 삭제하는 방법">
-<meta name="twitter:description" content="&amp;#xC774;&amp;#xC804; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC778; Hexo &amp;#xAE30;&amp;#xBCF8; &amp;#xC0AC;&amp;#xC6A9;&amp;#xBC95;&amp;#xC5D0;&amp;#xC11C;&amp;#xB294; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8; &amp;#xC0AD;&amp;#xC81C;&amp;#xD558;&amp;#xB294; &amp;#xBC29;&amp;#xBC95;&amp;#xC7">
+<meta name="twitter:description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source/_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/thumbnail/delete.jpg">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,90 +200,72 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
  -->
-            <span class="reading-time">⏱ 8 분</span>
+            <span class="reading-time">⏱ 3 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&#xC774;&#xC804; &#xD3EC;&#xC2A4;&#xD2B8;&#xC778; <a href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/">Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</a>&#xC5D0;&#xC11C;&#xB294; &#xD3EC;&#xC2A4;&#xD2B8; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xBC29;&#xBC95;&#xC774; &#xC5C6;&#xC5B4;&#xC11C; &#xBB38;&#xC758;&#xD574;&#xC8FC;&#xC2DC;&#xB294; &#xBD84;&#xB4E4;&#xC774; &#xACC4;&#xC168;&#xC2B5;&#xB2C8;&#xB2E4;. Hexo &#xC5D0;&#xC11C;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xD3EC;&#xC2A4;&#xD2B8;&#xB97C; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xACE0; &#xC788;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC624;&#xB298;&#xC740; Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0;&#xC11C; &#xD3EC;&#xC2A4;&#xD2B8;&#xB97C; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xBC95;&#xC744; &#xC54C;&#xC544;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h2 id="step-1-&#xD3EC;&#xC2A4;&#xD2B8;-&#xD30C;&#xC77C;-&#xBC0F;-&#xD3F4;&#xB354;-&#xC0AD;&#xC81C;&#xD558;&#xAE30;">Step 1. &#xD3EC;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C; &#xBC0F; &#xD3F4;&#xB354; &#xC0AD;&#xC81C;&#xD558;&#xAE30;</h2>
-<p><code>source/_post</code> &#xD3F4;&#xB354; &#xBC11;&#xC758; <code>.md</code> &#xD30C;&#xC77C;&#xACFC; &#xD568;&#xAED8; &#xC0DD;&#xC131;&#xB41C; &#xD3F4;&#xB354; &#xD30C;&#xC77C;&#xC744; &#xC0AD;&#xC81C;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<h2 id="step-2-&#xD074;&#xB9B0;&#xD558;&#xAE30;">Step 2. &#xD074;&#xB9B0;&#xD558;&#xAE30;</h2>
-<p><code>hexo clean</code> &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC774;&#xC6A9;&#xD574; database &#xD30C;&#xC77C;&#xACFC; public &#xD3F4;&#xB354;&#xB97C; &#xC0AD;&#xC81C;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="step-3-&#xC0DD;&#xC131;&#xD558;&#xAE30;">Step 3. &#xC0DD;&#xC131;&#xD558;&#xAE30;</h2>
-<p><code>hexo g</code> &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC0AD;&#xC81C;&#xB41C; &#xD3EC;&#xC2A4;&#xD2B8;&#xB97C; &#xC81C;&#xC678;&#xC2DC;&#xD0A8; &#xD30C;&#xC77C;&#xC744; &#xC7AC;&#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.71 s</span><br><span class="line">INFO  Generated: content.json</span><br><span class="line">INFO  Generated: tag-sitemap.xml</span><br><span class="line">INFO  Generated: post-sitemap.xml</span><br><span class="line">INFO  Generated: category-sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xsl</span><br><span class="line">INFO  Generated: feed.xml</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">...</span><br><span class="line">INFO  Generated: images/postach/postach_main.png</span><br><span class="line">INFO  257 files generated in 4.61 s</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="step-4-&#xBC30;&#xD3EC;&#xD558;&#xAE30;">Step 4. &#xBC30;&#xD3EC;&#xD558;&#xAE30;</h2>
-<p>&#xB85C;&#xCEEC; &#xC11C;&#xBC84;&#xB85C; &#xD14C;&#xC2A4;&#xD2B8;&#xD574;&#xBCF4;&#xBA74; &#xD574;&#xB2F9; &#xD3EC;&#xC2A4;&#xD2B8;&#xB294; &#xC0AD;&#xC81C;&#xB410;&#xC744; &#xAC81;&#xB2C8;&#xB2E4;. &#xC774;&#xC81C; remote &#xC11C;&#xBC84;&#xC5D0; &#xC788;&#xB294; &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xBC18;&#xC601;&#xD558;&#xAE30; &#xC704;&#xD574; <code>hexo d</code> &#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xBC30;&#xD3EC;&#xD558;&#xBA74; &#xC0AD;&#xC81C;&#xAC00; &#xC644;&#xB8CC;&#xB429;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">[master f29b77a] Site updated: 2017-01-13 16:36:22</span><br><span class="line"> 135 files changed, 15 insertions(+), 1071 deletions(-)</span><br><span class="line">To https://github.com/futureCreator/futurecreator.github.io.git</span><br><span class="line">   4a9c14b..f29b77a  HEAD -&gt; master</span><br><span class="line">Branch master set up to track remote branch master from https://github.com/futureCreator/futurecreator.github.io.git.</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></tbody></table></figure>
-<p>Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0;&#xC11C; &#xD3EC;&#xC2A4;&#xD2B8; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xBC95;&#xC744; &#xC54C;&#xC544;&#xBD24;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC815;&#xB9AC;&#xD574;&#xBCF4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 포스트인 <a href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/">Hexo 기본 사용법</a>에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다.</p>
+<h2 id="step-1-포스트-파일-및-폴더-삭제하기">Step 1. 포스트 파일 및 폴더 삭제하기</h2>
+<p><code>source/_post</code> 폴더 밑의 <code>.md</code> 파일과 함께 생성된 폴더 파일을 삭제합니다.</p>
+<h2 id="step-2-클린하기">Step 2. 클린하기</h2>
+<p><code>hexo clean</code> 명령어를 이용해 database 파일과 public 폴더를 삭제합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></table></figure>
+<h2 id="step-3-생성하기">Step 3. 생성하기</h2>
+<p><code>hexo g</code> 명령어를 이용해 삭제된 포스트를 제외시킨 파일을 재생성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.71 s</span><br><span class="line">INFO  Generated: content.json</span><br><span class="line">INFO  Generated: tag-sitemap.xml</span><br><span class="line">INFO  Generated: post-sitemap.xml</span><br><span class="line">INFO  Generated: category-sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xsl</span><br><span class="line">INFO  Generated: feed.xml</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">...</span><br><span class="line">INFO  Generated: images/postach/postach_main.png</span><br><span class="line">INFO  257 files generated in 4.61 s</span><br></pre></td></tr></table></figure>
+<h2 id="step-4-배포하기">Step 4. 배포하기</h2>
+<p>로컬 서버로 테스트해보면 해당 포스트는 삭제됐을 겁니다. 이제 remote 서버에 있는 블로그에 반영하기 위해 <code>hexo d</code> 명령어로 배포하면 삭제가 완료됩니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">[master f29b77a] Site updated: 2017-01-13 16:36:22</span><br><span class="line"> 135 files changed, 15 insertions(+), 1071 deletions(-)</span><br><span class="line">To https://github.com/futureCreator/futurecreator.github.io.git</span><br><span class="line">   4a9c14b..f29b77a  HEAD -&gt; master</span><br><span class="line">Branch master set up to track remote branch master from https://github.com/futureCreator/futurecreator.github.io.git.</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+<p>Hexo 블로그에서 포스트 삭제하는 법을 알아봤습니다. 정리해보면 다음과 같습니다.</p>
 <ol>
-<li>&#xD574;&#xB2F9; &#xD3EC;&#xC2A4;&#xD2B8; &#xD30C;&#xC77C;&#xACFC; &#xD3F4;&#xB354; &#xC0AD;&#xC81C;</li>
+<li>해당 포스트 파일과 폴더 삭제</li>
 <li><code>hexo clean</code></li>
 <li><code>hexo g</code></li>
 <li><code>hexo d</code></li>
 </ol>
-<p>Hexo &#xC758; &#xCEE4;&#xB9E8;&#xB4DC; &#xD658;&#xACBD;&#xC774; &#xC775;&#xC219;&#xD558;&#xC9C0; &#xC54A;&#xAC70;&#xB098; &#xBD88;&#xD3B8;&#xD568;&#xC744; &#xB290;&#xB07C;&#xC2DC;&#xB294; &#xBD84;&#xB4E4;&#xC774;&#xB77C;&#xBA74;, Admin &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC0AC;&#xC6A9;&#xD574;&#xBCF4;&#xC2DC;&#xB294; &#xAC83;&#xB3C4; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;. Admin &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774;&#xB780; Hexo &#xBE14;&#xB85C;&#xADF8; &#xAD00;&#xB9AC;&#xB97C; &#xC27D;&#xAC8C; &#xD574;&#xC8FC;&#xB294; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC73C;&#xB85C;, GUI &#xD658;&#xACBD;&#xC744; &#xC81C;&#xACF5;&#xD574; &#xD55C;&#xACB0; &#xD3B8;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. Admin &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC5D0;&#xB294; <a href="https://github.com/jaredly/hexo-admin" rel="external nofollow noopener noreferrer" target="_blank">hexo-admin</a> &#xACFC; <a href="https://github.com/nihgwu/hexo-hey" rel="external nofollow noopener noreferrer" target="_blank">hexo-hey</a> &#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC800;&#xB294; &#xAC1C;&#xBC1C;&#xC790;&#xB77C; &#xADF8;&#xB7F0;&#xC9C0; &#xC9C1;&#xC811; &#xCE58;&#xB294; &#xB9DB;&#xC774; &#xC88B;&#xC544;&#xC11C; &#xC0AC;&#xC6A9;&#xD574;&#xBCF4;&#xC9C4; &#xC54A;&#xC558;&#xC2B5;&#xB2C8;&#xB2E4;&#xB9CC;, &#xC870;&#xB9CC;&#xAC04; &#xC124;&#xCE58; &#xBC0F; &#xC0AC;&#xC6A9;&#xBC95;&#xC744; &#xD3EC;&#xC2A4;&#xD2B8;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>Hexo 의 커맨드 환경이 익숙하지 않거나 불편함을 느끼시는 분들이라면, Admin 플러그인을 사용해보시는 것도 좋습니다. Admin 플러그인이란 Hexo 블로그 관리를 쉽게 해주는 플러그인으로, GUI 환경을 제공해 한결 편하게 사용하실 수 있습니다. Admin 플러그인에는 <a href="https://github.com/jaredly/hexo-admin" rel="external nofollow noopener noreferrer" target="_blank">hexo-admin</a> 과 <a href="https://github.com/nihgwu/hexo-hey" rel="external nofollow noopener noreferrer" target="_blank">hexo-hey</a> 가 있습니다. 저는 개발자라 그런지 직접 치는 맛이 좋아서 사용해보진 않았습니다만, 조만간 설치 및 사용법을 포스트하겠습니다.</p>
 <p><img src="https://github.com/jaredly/hexo-admin/blob/master/docs/pasted-0.png?raw=true" alt="Hexo Admin Plugin"></p>
 <p><img src="https://github.com/nihgwu/hexo-hey/raw/master/screenshot/1.jpg" alt="Hexo Hey Plugin"></p>
 <h3 id="related-posts">Related Posts</h3>
 <ul>
 <li>
-<a href="/2016/06/14/get-started-with-hexo/" title="&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;">&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
 </li>
 <li>
-<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;">Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
 </li>
 <li>
-<a href="/2016/06/21/hexo-basic-usage/" title="Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;">Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</a>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
 </li>
 <li>
-<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;">Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;</a>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
 </li>
 <li>
-<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)">Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)</a>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
 </li>
 <li>
-<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
 </li>
 <li>
-<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="&#xAD6C;&#xAE00;(Goolge) &#xC0AC;&#xC774;&#xD2B8; &#xB4F1;&#xB85D;(Search Console)&#xACFC; &#xAC80;&#xC0C9;&#xC5D4;&#xC9C4; &#xCD5C;&#xC801;&#xD654;(SEO)">&#xAD6C;&#xAE00;(Goolge) &#xC0AC;&#xC774;&#xD2B8; &#xB4F1;&#xB85D;(Search Console)&#xACFC; &#xAC80;&#xC0C9;&#xC5D4;&#xC9C4; &#xCD5C;&#xC801;&#xD654;(SEO)</a>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
 </li>
 <li>
-<a href="/2016/06/15/hexo-naver-search-webmaster/" title="&#xB124;&#xC774;&#xBC84; &#xC0AC;&#xC774;&#xD2B8; &#xB4F1;&#xB85D;(&#xC6F9;&#xB9C8;&#xC2A4;&#xD130; &#xB3C4;&#xAD6C;)&#xACFC; &#xAC80;&#xC0C9;&#xC5D4;&#xC9C4; &#xCD5C;&#xC801;&#xD654;(SEO)">&#xB124;&#xC774;&#xBC84; &#xC0AC;&#xC774;&#xD2B8; &#xB4F1;&#xB85D;(&#xC6F9;&#xB9C8;&#xC2A4;&#xD130; &#xB3C4;&#xAD6C;)&#xACFC; &#xAC80;&#xC0C9;&#xC5D4;&#xC9C4; &#xCD5C;&#xC801;&#xD654;(SEO)</a>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
 </li>
 <li>
-<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
 </li>
 <li>
-<a href="/2016/06/16/opengraph-social-meta-tag/" title="&#xC624;&#xD508; &#xADF8;&#xB798;&#xD504; (Open Graph) &#xD0DC;&#xADF8;&#xC640; &#xD398;&#xC774;&#xC2A4;&#xBD81; &#xB3C4;&#xBA54;&#xC778; &#xC778;&#xC0AC;&#xC774;&#xD2B8; (Domain Insight)">&#xC624;&#xD508; &#xADF8;&#xB798;&#xD504; (Open Graph) &#xD0DC;&#xADF8;&#xC640; &#xD398;&#xC774;&#xC2A4;&#xBD81; &#xB3C4;&#xBA54;&#xC778; &#xC778;&#xC0AC;&#xC774;&#xD2B8; (Domain Insight)</a>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
 </li>
 <li>
-<a href="/2016/06/17/google-search-how-to-work/" title="&#xAD6C;&#xAE00;(Google) &#xAC80;&#xC0C9; &#xC6D0;&#xB9AC;&#xC640; &#xAC80;&#xC0C9;&#xC774; &#xC798; &#xB418;&#xAC8C; &#xD558;&#xB294; &#xBC29;&#xBC95;">&#xAD6C;&#xAE00;(Google) &#xAC80;&#xC0C9; &#xC6D0;&#xB9AC;&#xC640; &#xAC80;&#xC0C9;&#xC774; &#xC798; &#xB418;&#xAC8C; &#xD558;&#xB294; &#xBC29;&#xBC95;</a>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
 </li>
 <li>
-<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="&#xAC80;&#xC0C9; &#xC5D4;&#xC9C4; &#xCD5C;&#xC801;&#xD654;(SEO)&#xC5D0; &#xC720;&#xC6A9;&#xD55C; Hexo &#xD50C;&#xB7EC;&#xADF8;&#xC778;">&#xAC80;&#xC0C9; &#xC5D4;&#xC9C4; &#xCD5C;&#xC801;&#xD654;(SEO)&#xC5D0; &#xC720;&#xC6A9;&#xD55C; Hexo &#xD50C;&#xB7EC;&#xADF8;&#xC778;</a>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
         </div>
 
         <div id="bmc" align="center">

@@ -207,8 +207,11 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC5D0;&#xC11C; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C;
-&#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(monolithic) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&
+            모놀리스에서 마이크로서비스로
+모놀리식(monolithic) 애플리케이션을 마이크로서비스(microservices) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요?
+폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다.
+Martin Fowler
+아닙니다. 처음부터 다시 만드는 일은 너무나 
         </p>
     </div>
 </article>
@@ -235,8 +238,10 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xBD84;&#xC0B0; &#xB370;&#xC774;&#xD130; &#xAD00;&#xB9AC;&#xC758; &#xC5B4;&#xB824;&#xC6C0;
-&#xBCF4;&#xD1B5; &#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(monolithic) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC15
+            분산 데이터 관리의 어려움
+보통 모놀리식(monolithic) 애플리케이션에서는 하나의 관계형 DB(Relational database)를 사용합니다. DB 작업은 트랜잭션(transaction)이라는 단위로 수행이 되는데 RDB의 장점은 트랜잭션이 ACID하도록 만들어줍니다.
+
+원자성(Atomicity): 작업이 완전히 성공하든지 또는 완전히 실패하도록 
         </p>
     </div>
 </article>
@@ -267,8 +272,9 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; &#xBC30;&#xD3EC; &#xC804;&#xB7B5;
-&#xBAA8;&#xB180;&#xB9AC;&#xC2DD; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC740; &#xD1B5;&#xC9F8;&#x
+            마이크로서비스 배포 전략
+모놀리식 애플리케이션은 통째로 배포되기 때문에 애플리케이션 복사본을 여러 개 실행하는 형식으로 배포합니다. 따라서 N개의 서버에 M개의 애플리케이션 인스턴스가 실행됩니다. 마이크로서비스 배포에 비하면 단순하죠.
+마이크로서비스 애플리케이션은 수십에서 수백 개의 서비스로 이루어져 있습니다. 각 서비스는 다양한 언어와 프레임워크로 만들어
         </p>
     </div>
 </article>
@@ -295,8 +301,11 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC11C;&#xBE44;&#xC2A4; &#xB514;&#xC2A4;&#xCEE4;&#xBC84;&#xB9AC;
-REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;&
+            서비스 디스커버리
+REST API 를 이용해서 다른 서비스를 호출한다고 해봅시다. 요청을 보내기 위해서는 서비스 인스턴스가 있는 곳의 네트워크 정보를 알아야 합니다. IP 주소와 포트 정보가 되겠죠. 물리적 서버에서 돌아가는 경우라면 미리 설정 파일로 빼서 관리할 수 있으므로 큰 문제는 없습니다.
+하지만 클라우드에서는 어떨까요?
+
+클라우드에서 인스턴스는 동
         </p>
     </div>
 </article>
@@ -327,8 +336,8 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xAC04; &#xD1B5;&#xC2E0;
-&#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(monolithic) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC5D0;&#xC11C;&#xB294; &#xB2E8;&#xC21C;&#xD558
+            프로세스 간 통신
+모놀리식(monolithic) 애플리케이션에서는 단순하게 다른 메소드나 함수를 호출하면 됩니다. 하지만 마이크로서비스(Microservices)에서는 서비스 단위로 나뉘어져 있는 분산 시스템이기 때문에 서비스 간 통신이 필요합니다. 이러한 통신을 프로세스 간 통신(inter-process communication)이라고 합니다. 다음 그림
         </p>
     </div>
 </article>
@@ -355,7 +364,11 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xC774;&#xC804; &#xD3EC;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; &#xC544;&#xD0A4;&#xD14D;&#xCC98;&#xC758; &#xAC1C;&#xB150;&#xC744; &#xC0B4;&#xD3B4;&#x
+            이전 포스트에서 마이크로서비스 아키텍처의 개념을 살펴봤습니다. 이번 포스트에서는 마이크로서비스의 중요한 요소 중 하나인 API 게이트웨이(API Gateway)를 알아보겠습니다.
+서비스 직접 호출하기
+먼저 대표적인 쇼핑몰 아마존의 모바일 애플리케이션을 예로 들어보겠습니다.
+
+위 화면은 모바일에서 본 아마존 제품 상세 화면입니다. 간단해보이지만, 실제로 이 
         </p>
     </div>
 </article>
@@ -386,7 +399,8 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xC8FC;&#xBCC0;&#xC5D0;&#xC11C; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; &#xC544;&#xD0A4;&#xD14D;&#xCC98;(Microservices architecture; MSA)&#xC5D0; &#xB300;&#xD55C; &#xC774;&#xC57C;&#x
+            주변에서 마이크로서비스 아키텍처(Microservices architecture; MSA)에 대한 이야기가 많이 들려옵니다. 마이크로서비스가 모든 것을 해결해줄 것처럼 이야기하는 사람이 있는가하면, 서비스 지향 아키텍처(Service-oriented architecture;SOA)랑 다를 게 없는 마케팅 용어에 불과하다고 폄하하는 사람들도 있습니다.
+마이크
         </p>
     </div>
 </article>

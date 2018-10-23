@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xC624;&amp;#xB298;&amp;#xB3C4; &amp;#xC798;&amp;#xB418;&amp;#xB358; Hexo &amp;#xC5D0;&amp;#xC11C; &amp;#xC624;&amp;#xB958;&amp;#xAC00; &amp;#xB098;&amp;#xB124;&amp;#xC694;. &amp;#xC774;&amp;#xC0C1;&amp;#xD558;&amp;#xAC8C; deploy &amp;#xC5D0;&amp;#xC11C; &amp;#xC11C;&amp;#xBC84; &amp;#x">
+        <meta name="description" content="오늘도 잘되던 Hexo 에서 오류가 나네요. 이상하게 deploy 에서 서버 에러가 납니다. 정확히 말해서 git 에 push 할 때 Internal Server Error 가 나면서 Everything up-to-date 메시지가 납니다. 증상 12345678910111213141516171819202122232425262728293031323334$ h">
 <meta name="keywords" content="hexo,error">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 배포(Deploy) 시 Internal Server Error Everything up-to-date 발생 시 해결법">
 <meta property="og:url" content="https://futurecreator.github.io/2017/01/16/push-internal-server-error-in-hexo/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xC624;&amp;#xB298;&amp;#xB3C4; &amp;#xC798;&amp;#xB418;&amp;#xB358; Hexo &amp;#xC5D0;&amp;#xC11C; &amp;#xC624;&amp;#xB958;&amp;#xAC00; &amp;#xB098;&amp;#xB124;&amp;#xC694;. &amp;#xC774;&amp;#xC0C1;&amp;#xD558;&amp;#xAC8C; deploy &amp;#xC5D0;&amp;#xC11C; &amp;#xC11C;&amp;#xBC84; &amp;#x">
+<meta property="og:description" content="오늘도 잘되던 Hexo 에서 오류가 나네요. 이상하게 deploy 에서 서버 에러가 납니다. 정확히 말해서 git 에 push 할 때 Internal Server Error 가 나면서 Everything up-to-date 메시지가 납니다. 증상 12345678910111213141516171819202122232425262728293031323334$ h">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/images/thumbnail/500_2.png">
 <meta property="og:updated_time" content="2018-07-07T05:15:28.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 배포(Deploy) 시 Internal Server Error Everything up-to-date 발생 시 해결법">
-<meta name="twitter:description" content="&amp;#xC624;&amp;#xB298;&amp;#xB3C4; &amp;#xC798;&amp;#xB418;&amp;#xB358; Hexo &amp;#xC5D0;&amp;#xC11C; &amp;#xC624;&amp;#xB958;&amp;#xAC00; &amp;#xB098;&amp;#xB124;&amp;#xC694;. &amp;#xC774;&amp;#xC0C1;&amp;#xD558;&amp;#xAC8C; deploy &amp;#xC5D0;&amp;#xC11C; &amp;#xC11C;&amp;#xBC84; &amp;#x">
+<meta name="twitter:description" content="오늘도 잘되던 Hexo 에서 오류가 나네요. 이상하게 deploy 에서 서버 에러가 납니다. 정확히 말해서 git 에 push 할 때 Internal Server Error 가 나면서 Everything up-to-date 메시지가 납니다. 증상 12345678910111213141516171819202122232425262728293031323334$ h">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/thumbnail/500_2.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,63 +200,45 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/error/">error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
  -->
-            <span class="reading-time">⏱ 6 분</span>
+            <span class="reading-time">⏱ 3 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&#xC624;&#xB298;&#xB3C4; &#xC798;&#xB418;&#xB358; Hexo &#xC5D0;&#xC11C; &#xC624;&#xB958;&#xAC00; &#xB098;&#xB124;&#xC694;. &#xC774;&#xC0C1;&#xD558;&#xAC8C; deploy &#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xC5D0;&#xB7EC;&#xAC00; &#xB0A9;&#xB2C8;&#xB2E4;. &#xC815;&#xD655;&#xD788; &#xB9D0;&#xD574;&#xC11C; git &#xC5D0; push &#xD560; &#xB54C; Internal Server Error &#xAC00; &#xB098;&#xBA74;&#xC11C; Everything up-to-date &#xBA54;&#xC2DC;&#xC9C0;&#xAC00; &#xB0A9;&#xB2C8;&#xB2E4;.</p>
-<h2 id="&#xC99D;&#xC0C1;">&#xC99D;&#xC0C1;</h2>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">[master f50d9ca] Site updated: 2017-01-12 17:11:17</span><br><span class="line"> 7 files changed, 10 insertions(+), 10 deletions(-)</span><br><span class="line">remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (/Users/handongho/Dev/hexo/myBlog/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    at ChildProcess.emit (events.js:172:7)</span><br><span class="line">    at maybeClose (internal/child_process.js:827:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)</span><br><span class="line">    at emitOne (events.js:77:13)</span><br><span class="line">    at Socket.emit (events.js:169:7)</span><br><span class="line">    at Pipe._onclose (net.js:475:12)</span><br><span class="line">FATAL remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line"></span><br><span class="line">Error: remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (/Users/handongho/Dev/hexo/myBlog/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    at ChildProcess.emit (events.js:172:7)</span><br><span class="line">    at maybeClose (internal/child_process.js:827:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)</span><br><span class="line">    at emitOne (events.js:77:13)</span><br><span class="line">    at Socket.emit (events.js:169:7)</span><br><span class="line">    at Pipe._onclose (net.js:475:12)</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="&#xD574;&#xACB0;-&#xBC29;&#xBC95;">&#xD574;&#xACB0; &#xBC29;&#xBC95;</h2>
-<p>&#xBE0C;&#xB7F0;&#xCE58;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xBD80;&#xBD84;&#xC740; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC9C1;&#xC811; &#xD558;&#xB294; &#xBD80;&#xBD84;&#xC774; &#xC544;&#xB2C8;&#xACE0; Hexo &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xD558;&#xB294; &#xBD80;&#xBD84;&#xC774;&#xB77C;&#xC11C; &#xC815;&#xD655;&#xD55C; &#xC6D0;&#xC778;&#xC744; &#xC54C; &#xC218; &#xC5C6;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC560;&#xAFCE;&#xC740; clean &#xACFC; generate &#xB9CC; &#xC5F4;&#xC2EC;&#xD788; &#xBC18;&#xBCF5;&#xD574;&#xB3C4; &#xB3D9;&#xC77C;&#xD55C; &#xC99D;&#xC0C1;&#xC774; &#xB098;&#xD0C0;&#xB0AC;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<p>&#xC815;&#xD655;&#xD55C; &#xC6D0;&#xC778;&#xACFC; &#xD574;&#xACB0;&#xCC45;&#xC740; &#xC544;&#xB2C8;&#xB354;&#xB77C;&#xB3C4; &#xD574;&#xACB0;&#xBC29;&#xBC95;&#xC744; &#xB0A8;&#xACA8;&#xB193;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC800;&#xC758; &#xACBD;&#xC6B0;&#xB294;, generate &#xB97C; &#xD55C;&#xBC88;&#xB9CC; &#xD558;&#xC9C0; &#xC54A;&#xACE0; 2&#xBC88; &#xC774;&#xC0C1; &#xD558;&#xACE0; &#xB09C; &#xD6C4; deploy &#xD558;&#xB2C8;&#xAE4C; &#xC815;&#xC0C1; &#xB3D9;&#xC791;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></tbody></table></figure>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>오늘도 잘되던 Hexo 에서 오류가 나네요. 이상하게 deploy 에서 서버 에러가 납니다. 정확히 말해서 git 에 push 할 때 Internal Server Error 가 나면서 Everything up-to-date 메시지가 납니다.</p>
+<h2 id="증상">증상</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">[master f50d9ca] Site updated: 2017-01-12 17:11:17</span><br><span class="line"> 7 files changed, 10 insertions(+), 10 deletions(-)</span><br><span class="line">remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line">FATAL Something&apos;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html</span><br><span class="line">Error: remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (/Users/handongho/Dev/hexo/myBlog/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    at ChildProcess.emit (events.js:172:7)</span><br><span class="line">    at maybeClose (internal/child_process.js:827:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)</span><br><span class="line">    at emitOne (events.js:77:13)</span><br><span class="line">    at Socket.emit (events.js:169:7)</span><br><span class="line">    at Pipe._onclose (net.js:475:12)</span><br><span class="line">FATAL remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line"></span><br><span class="line">Error: remote: Internal Server Error</span><br><span class="line">Everything up-to-date</span><br><span class="line"></span><br><span class="line">    at ChildProcess.&lt;anonymous&gt; (/Users/handongho/Dev/hexo/myBlog/node_modules/hexo-deployer-git/node_modules/hexo-util/lib/spawn.js:37:17)</span><br><span class="line">    at emitTwo (events.js:87:13)</span><br><span class="line">    at ChildProcess.emit (events.js:172:7)</span><br><span class="line">    at maybeClose (internal/child_process.js:827:16)</span><br><span class="line">    at Socket.&lt;anonymous&gt; (internal/child_process.js:319:11)</span><br><span class="line">    at emitOne (events.js:77:13)</span><br><span class="line">    at Socket.emit (events.js:169:7)</span><br><span class="line">    at Pipe._onclose (net.js:475:12)</span><br></pre></td></tr></table></figure>
+<h2 id="해결-방법">해결 방법</h2>
+<p>브런치를 관리하는 부분은 사용자가 직접 하는 부분이 아니고 Hexo 명령어를 통해서 하는 부분이라서 정확한 원인을 알 수 없었습니다. 애꿎은 clean 과 generate 만 열심히 반복해도 동일한 증상이 나타났습니다.</p>
+<p>정확한 원인과 해결책은 아니더라도 해결방법을 남겨놓습니다. 저의 경우는, generate 를 한번만 하지 않고 2번 이상 하고 난 후 deploy 하니까 정상 동작했습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 <h3 id="related-posts">Related Posts</h3>
 <ul>
 <li>
-<a href="/2016/06/24/hexo-ds-store-error/" title="Hexo .DS_Store TypeError &#xD574;&#xACB0; &#xBC29;&#xBC95;">Hexo .DS_Store TypeError &#xD574;&#xACB0; &#xBC29;&#xBC95;</a>
+<a href="/2016/06/24/hexo-ds-store-error/" title="Hexo .DS_Store TypeError 해결 방법">Hexo .DS_Store TypeError 해결 방법</a>
 </li>
 <li>
-<a href="/2016/06/14/get-started-with-hexo/" title="&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;">&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
 </li>
 <li>
-<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;">Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
 </li>
 <li>
-<a href="/2016/06/21/hexo-basic-usage/" title="Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;">Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</a>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
 </li>
 <li>
-<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;">Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;</a>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
 </li>
 <li>
-<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)">Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)</a>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
 </li>
 <li>
-<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
 </li>
 <li>
-<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
         </div>
 
         <div id="bmc" align="center">

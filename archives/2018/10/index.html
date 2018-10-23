@@ -207,8 +207,11 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xBAA8;&#xB180;&#xB9AC;&#xC2A4;&#xC5D0;&#xC11C; &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4;&#xB85C;
-&#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(monolithic) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&
+            모놀리스에서 마이크로서비스로
+모놀리식(monolithic) 애플리케이션을 마이크로서비스(microservices) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요?
+폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다.
+Martin Fowler
+아닙니다. 처음부터 다시 만드는 일은 너무나 
         </p>
     </div>
 </article>
@@ -235,8 +238,10 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xBD84;&#xC0B0; &#xB370;&#xC774;&#xD130; &#xAD00;&#xB9AC;&#xC758; &#xC5B4;&#xB824;&#xC6C0;
-&#xBCF4;&#xD1B5; &#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(monolithic) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC15
+            분산 데이터 관리의 어려움
+보통 모놀리식(monolithic) 애플리케이션에서는 하나의 관계형 DB(Relational database)를 사용합니다. DB 작업은 트랜잭션(transaction)이라는 단위로 수행이 되는데 RDB의 장점은 트랜잭션이 ACID하도록 만들어줍니다.
+
+원자성(Atomicity): 작업이 완전히 성공하든지 또는 완전히 실패하도록 
         </p>
     </div>
 </article>
@@ -267,8 +272,9 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xB9C8;&#xC774;&#xD06C;&#xB85C;&#xC11C;&#xBE44;&#xC2A4; &#xBC30;&#xD3EC; &#xC804;&#xB7B5;
-&#xBAA8;&#xB180;&#xB9AC;&#xC2DD; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC740; &#xD1B5;&#xC9F8;&#x
+            마이크로서비스 배포 전략
+모놀리식 애플리케이션은 통째로 배포되기 때문에 애플리케이션 복사본을 여러 개 실행하는 형식으로 배포합니다. 따라서 N개의 서버에 M개의 애플리케이션 인스턴스가 실행됩니다. 마이크로서비스 배포에 비하면 단순하죠.
+마이크로서비스 애플리케이션은 수십에서 수백 개의 서비스로 이루어져 있습니다. 각 서비스는 다양한 언어와 프레임워크로 만들어
         </p>
     </div>
 </article>
@@ -295,8 +301,11 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC11C;&#xBE44;&#xC2A4; &#xB514;&#xC2A4;&#xCEE4;&#xBC84;&#xB9AC;
-REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;&
+            서비스 디스커버리
+REST API 를 이용해서 다른 서비스를 호출한다고 해봅시다. 요청을 보내기 위해서는 서비스 인스턴스가 있는 곳의 네트워크 정보를 알아야 합니다. IP 주소와 포트 정보가 되겠죠. 물리적 서버에서 돌아가는 경우라면 미리 설정 파일로 빼서 관리할 수 있으므로 큰 문제는 없습니다.
+하지만 클라우드에서는 어떨까요?
+
+클라우드에서 인스턴스는 동
         </p>
     </div>
 </article>
@@ -327,8 +336,9 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xD568;&#xC218;&#xD615; &#xC811;&#xADFC;
-&#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC5B8;&#xC5B4;&#xC758; &#xBB38;&#xBC95;&#xC744; &#xBC30;&#xC6B0;&#xB294; &#xAC83;&#xC740; 
+            함수형 접근
+함수형 프로그래밍 언어의 문법을 배우는 것은 쉽습니다. 하지만 함수형으로 생각하는 방법을 익히는 것은 쉽지 않습니다. Java 에서 Scala 나 Clojure 로 바꾸는 것보다 문제에 접근하는 방식을 바꾸는 것이 더 중요합니다.
+함수형 프로그래밍은 좀 더 추상화된 레벨에서 코딩할 수 있도록 합니다. 이게 어떤 의미인지 간단한 예제로 살펴보겠습
         </p>
     </div>
 </article>
@@ -355,8 +365,9 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xD568;&#xC218;&#xD615; &#xD328;&#xB7EC;&#xB2E4;&#xC784;
-&#xC0C8;&#xB85C;&#xC6B4; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC5D0;&#xC11C; &#xC911;&#xC694;&#xD55C; &#
+            함수형 패러다임
+새로운 프로그래밍 패러다임에서 중요한 것은 새로운 언어를 배우는 것이 아니라 새로운 방식으로 생각하는 법입니다. 문법을 배우는 건 쉽지만 사고방식을 배우는 건 쉽지 않죠.
+컴퓨터 과학에서는 수십 년 전의 아이디어가 갑자기 주류가 되곤 합니다. 객체지향은 1983년 Simula 67이라는 언어에서 처음 등장했지만 1983년 처음 등장한 C++
         </p>
     </div>
 </article>
@@ -387,8 +398,8 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xAC04; &#xD1B5;&#xC2E0;
-&#xBAA8;&#xB180;&#xB9AC;&#xC2DD;(monolithic) &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC5D0;&#xC11C;&#xB294; &#xB2E8;&#xC21C;&#xD558
+            프로세스 간 통신
+모놀리식(monolithic) 애플리케이션에서는 단순하게 다른 메소드나 함수를 호출하면 됩니다. 하지만 마이크로서비스(Microservices)에서는 서비스 단위로 나뉘어져 있는 분산 시스템이기 때문에 서비스 간 통신이 필요합니다. 이러한 통신을 프로세스 간 통신(inter-process communication)이라고 합니다. 다음 그림
         </p>
     </div>
 </article>

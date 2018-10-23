@@ -207,12 +207,18 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC0B4;&#xD3B4;&#xBCFC; &#xB0B4;&#xC6A9;
+            살펴볼 내용
 
-&#xB3D9;&#xC791; &#xC21C;&#xC11C;
-&#xC131;&#xB2A5; &#xD5A5;&#xC0C1;
-&#xC2A4;&#xD2B8;&#xB9BC; &#xC7AC;&#xC0AC;&#xC6A9;
-&#xC9C0;&#xC5F0; &#xCC98;&#xB9AC;(Lazy 
+동작 순서
+성능 향상
+스트림 재사용
+지연 처리(Lazy Invocation)
+Null-safe 스트림 생성하기
+줄여쓰기(Simplified)
+
+동작 순서
+다음 스트림에서는 최종 작업인 findFirst 메소드를 호출합니다. 과연 출력 결과는 어떨까요?
+12345678910list.stream()  .filter(el -&gt; &#123;  
         </p>
     </div>
 </article>
@@ -239,12 +245,28 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC0B4;&#xD3B4;&#xBCFC; &#xB0B4;&#xC6A9;
+            살펴볼 내용
 
-&#xC0DD;&#xC131;&#xD558;&#xAE30;
+생성하기
 
-&#xBC30;&#xC5F4; / &#xCEEC;&#xB809;&#xC158; / &#xBE48; &#xC2A4;&#xD2B8;&#xB9BC;
-Stream.builder() / Stream.generate() / Stre
+배열 / 컬렉션 / 빈 스트림
+Stream.builder() / Stream.generate() / Stream.iterate()
+기본 타입형 / String / 파일 스트림
+병렬 스트림 / 스트림 연결하기
+
+
+가공하기
+
+Filtering
+Mapping
+Sorting
+Iterating
+
+
+결과 만들기
+
+Calculating
+Redu
         </p>
     </div>
 </article>
@@ -275,8 +297,12 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xC544;&#xD30C;&#xCE58; &#xC2A4;&#xD30C;&#xD06C;(Apache Spark) &#xC2A4;&#xD130;&#xB514;&#xB97C; &#xC704;&#xD574; &#xC815;&#xB9AC;&#xD55C; &#xC790;&#xB8CC;&#xC785;&#xB2C8;&#xB2E4;.
-&#xD558;&#xB461; Ha
+            아파치 스파크(Apache Spark) 스터디를 위해 정리한 자료입니다.
+하둡 Hadoop
+빅 데이터 처리나 데이터 분석 쪽에는 지식이 없어 하둡부터 간단하게 알아봤습니다.
+
+동작 원리
+하둡 프레임워크는 파일 시스템인 HDFS(Hadoop Distributed File System)과 데이터를 처리하는 맵리듀스(MapReduce) 엔진을 합친 것으로 대규모
         </p>
     </div>
 </article>
@@ -303,7 +329,8 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xAC1C;&#xBC1C;&#xD560; &#xB54C; &#xAC1C;&#xBC1C;&#xC790;&#xB97C; &#xAD34;&#xB86D;&#xD788;&#xB294; &#xC608;&#xC678; &#xC911; &#xD558;&#xB098;&#xB294; NullPointerException &#xC785;&#xB2C8;&#xB2E4;. Nu
+            개발할 때 개발자를 괴롭히는 예외 중 하나는 NullPointerException 입니다. NullPointerException 을 피하고 null 체크하는 로직을 줄이기 위해 빈 값일 때 null 대신 초기값을 사용하길 권장하곤 합니다.
+12List&lt;String&gt; names = getNames();names.sort(); // names 가 n
         </p>
     </div>
 </article>
@@ -334,8 +361,9 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            JDK API &#xB97C; &#xC0B4;&#xD3B4;&#xBCF4;&#xBA74; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xCF54;&#xB4DC;&#xB97C; &#xD754;&#xD788; &#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.
-1default &lt;V
+            JDK API 를 살펴보면 다음과 같은 코드를 흔히 볼 수 있습니다.
+1default &lt;V&gt; Function&lt;V, R&gt; compose(Function&lt;? super V, ? extends T&gt; before)
+위 코드는 자바 8에 추가된 함수형 인터페이스  Function 의 compose 라는 디폴트 메소드의 시그니쳐입니다.
         </p>
     </div>
 </article>
@@ -362,8 +390,11 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xB78C;&#xB2E4;&#xC640; &#xD074;&#xB85C;&#xC800;
-&#xC790;&#xBC14; &#xCEE4;&#xBBA4;&#xB2C8;&#xD2F0;&#xC5D0;&#xC11C;&#xB294; &#xD074;&#xB85C;&#xC800;&#xC640; &#xB78C;&#xB2E4;&#xB97C; &#xD63C;&#xC6A9;&#
+            람다와 클로저
+자바 커뮤니티에서는 클로저와 람다를 혼용하면서 개념 상 혼란이 있었습니다. 그래서 자바 8부터 클로저를 지원한다는 글을 보기도 합니다. 이번 포스트에서는 자바에서의 람다와 클로저를 명확히 구분해보고자 합니다.
+먼저 일반적인 클로저부터 살펴보겠습니다.
+클로저 Closure
+보통의 함수는 외부에서 인자를 받아서 로직을 처리합니다. 그런데 클로저는
         </p>
     </div>
 </article>
@@ -394,8 +425,15 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xC608;&#xC678;&#xCC98;&#xB9AC;
-&#xB78C;&#xB2E4; &#xC608;&#xC678;&#xCC98;&#xB9AC;&#xC5D0;&#xC11C; &#xC8FC;&#xC758;&#xD560; &#xC810;&#xC744; &#xB78C;&#xB2E4; &#xC791;&#xC131; &#xBC0F; &#xD638;&#xCD9C;
+            예외처리
+람다 예외처리에서 주의할 점을 람다 작성 및 호출하는 입장으로 나눠서 살펴보겠습니다.
+
+람다를 작성해서 넘겨주는 입장 : 해당 람다가 어떤 환경에서 실행될 지 알 수 없다.
+람다를 받아서 호출(실행)하는 입장 : 람다에서 어떤 예외가 던져질 지 알 수 없다.
+
+예제
+다음 예제는 Runnable 을 순서대로 실행하는 메소드입니다.
+1234public
         </p>
     </div>
 </article>
@@ -422,8 +460,10 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xBCC0;&#xC218; &#xBC94;&#xC704;
-&#xB78C;&#xB2E4;&#xB294; &#xC0C8;&#xB85C;&#xC6B4; &#xBCC0;&#xC218; &#xBC94;&#xC704;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB78C
+            변수 범위
+람다는 새로운 변수 범위를 생성하지 않습니다. 람다 내에서 변수 사용은 둘러싸고 있는 환경의 변수들을 참조합니다. this 나 super 키워드도 마찬가지입니다. 따라서 복잡해지지 않습니다.
+아래 예제에서 i 는 단순히 람다를 둘러싸고 있는 클래스의 필드를 가리키게 됩니다.
+12345678910111213141516171819public stat
         </p>
     </div>
 </article>
@@ -454,7 +494,14 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xC774;&#xC804; &#xD3EC;&#xC2A4;&#xD2B8;&#xC5D0;&#xC11C; &#xD568;&#xC218;&#xD615; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xC0B4;&#xD3B4;&#xBD24;&#xC2B5;&#xB2C8;&#x
+            이전 포스트에서 함수형 인터페이스에 대해서 살펴봤습니다. 이번 포스트에서는 자바에서 기본적으로 제공하는 함수형 인터페이스를 살펴보겠습니다. 기본 API 에서 함수형 인터페이스는 java.util.function 패키지에 정의되어 있습니다.
+
+Functions
+Suppliers
+Consumers
+Predicates
+Operators
+Legacy Functio
         </p>
     </div>
 </article>
@@ -481,8 +528,9 @@ Stream.builder() / Stream.generate() / Stre
     
 
         <p class="article-excerpt">
-            &#xBA54;&#xC18C;&#xB4DC; &#xCC38;&#xC870; Method References
-&#xBA54;&#xC18C;&#xB4DC; &#xCC38;&#xC870;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xAC04;&#xACB0;&#xD558;&#xAC8C; &#xC9C0;&#xCE6D;&#xD560;
+            메소드 참조 Method References
+메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. '참조’라는 말에서 알 수 있듯이 이미 존재하는 이름을 가진 메소드를 람다로써 사용할 수 있도록 참조하는(가리키는) 역할을 합니다.
+즉, 일반 함수를 람다 형태로 사용할 수 있도록 해줍니다. 그리고 메소드를 
         </p>
     </div>
 </article>

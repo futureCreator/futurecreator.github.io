@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xC624;&amp;#xB298;&amp;#xB3C4; Hexo &amp;#xBE14;&amp;#xB85C;&amp;#xADF8;&amp;#xB97C; &amp;#xC5F4;&amp;#xC2EC;&amp;#xD788; &amp;#xD558;&amp;#xB358; &amp;#xC911;&amp;#xC5D0; &amp;#xC54C; &amp;#xC218; &amp;#xC5C6;&amp;#xB294; &amp;#xC5D0;&amp;#xB7EC;&amp;#xB97C; &amp;#xB9CC;&amp;#xB0AC;&amp;#">
+        <meta name="description" content="오늘도 Hexo 블로그를 열심히 하던 중에 알 수 없는 에러를 만났습니다. 이것 때문에 generate 는 커녕 로컬 서버도 안되더군요. 별로 바꾼 것도 없는데 이렇게 되니 당황스러웠습니다. 12ERROR Process failed: layout/.DS_StoreTypeError: Cannot read property &amp;apos;compile&amp;apos; o">
 <meta name="keywords" content="hexo,.DS_Store,error">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo .DS_Store TypeError 해결 방법">
 <meta property="og:url" content="https://futurecreator.github.io/2016/06/24/hexo-ds-store-error/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xC624;&amp;#xB298;&amp;#xB3C4; Hexo &amp;#xBE14;&amp;#xB85C;&amp;#xADF8;&amp;#xB97C; &amp;#xC5F4;&amp;#xC2EC;&amp;#xD788; &amp;#xD558;&amp;#xB358; &amp;#xC911;&amp;#xC5D0; &amp;#xC54C; &amp;#xC218; &amp;#xC5C6;&amp;#xB294; &amp;#xC5D0;&amp;#xB7EC;&amp;#xB97C; &amp;#xB9CC;&amp;#xB0AC;&amp;#">
+<meta property="og:description" content="오늘도 Hexo 블로그를 열심히 하던 중에 알 수 없는 에러를 만났습니다. 이것 때문에 generate 는 커녕 로컬 서버도 안되더군요. 별로 바꾼 것도 없는데 이렇게 되니 당황스러웠습니다. 12ERROR Process failed: layout/.DS_StoreTypeError: Cannot read property &amp;apos;compile&amp;apos; o">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/images/thumbnail/hexo_error_dsstore.png">
 <meta property="og:updated_time" content="2018-07-07T05:15:47.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo .DS_Store TypeError 해결 방법">
-<meta name="twitter:description" content="&amp;#xC624;&amp;#xB298;&amp;#xB3C4; Hexo &amp;#xBE14;&amp;#xB85C;&amp;#xADF8;&amp;#xB97C; &amp;#xC5F4;&amp;#xC2EC;&amp;#xD788; &amp;#xD558;&amp;#xB358; &amp;#xC911;&amp;#xC5D0; &amp;#xC54C; &amp;#xC218; &amp;#xC5C6;&amp;#xB294; &amp;#xC5D0;&amp;#xB7EC;&amp;#xB97C; &amp;#xB9CC;&amp;#xB0AC;&amp;#">
+<meta name="twitter:description" content="오늘도 Hexo 블로그를 열심히 하던 중에 알 수 없는 에러를 만났습니다. 이것 때문에 generate 는 커녕 로컬 서버도 안되더군요. 별로 바꾼 것도 없는데 이렇게 되니 당황스러웠습니다. 12ERROR Process failed: layout/.DS_StoreTypeError: Cannot read property &amp;apos;compile&amp;apos; o">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/thumbnail/hexo_error_dsstore.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,67 +200,49 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DS-Store/">.DS_Store</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/error/">error</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
  -->
-            <span class="reading-time">⏱ 8 분</span>
+            <span class="reading-time">⏱ 2 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&#xC624;&#xB298;&#xB3C4; Hexo &#xBE14;&#xB85C;&#xADF8;&#xB97C; &#xC5F4;&#xC2EC;&#xD788; &#xD558;&#xB358; &#xC911;&#xC5D0; &#xC54C; &#xC218; &#xC5C6;&#xB294; &#xC5D0;&#xB7EC;&#xB97C; &#xB9CC;&#xB0AC;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83; &#xB54C;&#xBB38;&#xC5D0; generate &#xB294; &#xCEE4;&#xB155; &#xB85C;&#xCEEC; &#xC11C;&#xBC84;&#xB3C4; &#xC548;&#xB418;&#xB354;&#xAD70;&#xC694;. &#xBCC4;&#xB85C; &#xBC14;&#xAFBC; &#xAC83;&#xB3C4; &#xC5C6;&#xB294;&#xB370; &#xC774;&#xB807;&#xAC8C; &#xB418;&#xB2C8; &#xB2F9;&#xD669;&#xC2A4;&#xB7EC;&#xC6E0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR Process failed: layout/.DS_Store</span><br><span class="line">TypeError: Cannot read property &apos;compile&apos; of undefined</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="ds-store-&#xD30C;&#xC77C;">.DS_Store &#xD30C;&#xC77C;</h2>
-<p>&#xC77C;&#xB2E8; .DS_Store &#xD30C;&#xC77C;&#xC774; &#xBB54;&#xC9C0; &#xCC3E;&#xC544;&#xBD24;&#xC2B5;&#xB2C8;&#xB2E4;. .DS_Store &#xD30C;&#xC77C;&#xC740; &#xD574;&#xB2F9; &#xD3F4;&#xB354;&#xC758; &#xC124;&#xC815;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xD30C;&#xC77C;&#xC774;&#xB77C;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;. &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xB418;&#xACE0; &#xC810;(.) &#xC744; &#xBD99;&#xC5EC;&#xC11C; &#xC228;&#xAE40;&#xD30C;&#xC77C; &#xCC98;&#xB9AC; &#xB418;&#xC5B4;&#xC788;&#xC5B4;&#xC11C; &#xD3C9;&#xC18C;&#xC5D4; &#xBCF4;&#xC774;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h2 id="&#xD574;&#xACB0;-&#xBC29;&#xBC95;">&#xD574;&#xACB0; &#xBC29;&#xBC95;</h2>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>오늘도 Hexo 블로그를 열심히 하던 중에 알 수 없는 에러를 만났습니다. 이것 때문에 generate 는 커녕 로컬 서버도 안되더군요. 별로 바꾼 것도 없는데 이렇게 되니 당황스러웠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR Process failed: layout/.DS_Store</span><br><span class="line">TypeError: Cannot read property &apos;compile&apos; of undefined</span><br></pre></td></tr></table></figure>
+<h2 id="ds-store-파일">.DS_Store 파일</h2>
+<p>일단 .DS_Store 파일이 뭔지 찾아봤습니다. .DS_Store 파일은 해당 폴더의 설정을 가지고 있는 파일이라고 합니다. 자동으로 생성되고 점(.) 을 붙여서 숨김파일 처리 되어있어서 평소엔 보이지 않습니다.</p>
+<h2 id="해결-방법">해결 방법</h2>
 <h3 id="windows">Windows</h3>
-<p>&#xC77C;&#xB2E8; Windows &#xC5D0;&#xC11C; &#xC791;&#xC5C5;&#xD558;&#xC2DC;&#xB294; &#xBD84;&#xB4E4;&#xC740; .DS_Store &#xD30C;&#xC77C;&#xC774; &#xB098;&#xC62C; &#xC77C;&#xC740; &#xC5C6;&#xC73C;&#xB098; Mac &#xC5D0;&#xC11C; &#xC81C;&#xC791;&#xD55C; &#xD14C;&#xB9C8;&#xB97C; &#xBC1B;&#xC744; &#xACBD;&#xC6B0;&#xC5D0; &#xD14C;&#xB9C8; &#xC548;&#xC5D0; &#xD3EC;&#xD568;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xACBD;&#xC6B0;&#xAC00; &#xC788;&#xB2E4;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7F4; &#xACBD;&#xC6B0;&#xC5D0; &#xADF8;&#xB0E5; &#xC0AD;&#xC81C;&#xD558;&#xC2DC;&#xBA74; &#xB2E4;&#xC2DC;&#xB294; &#xB098;&#xD0C0;&#xB098;&#xC9C0; &#xC54A;&#xC744; &#xAC81;&#xB2C8;&#xB2E4;.</p>
+<p>일단 Windows 에서 작업하시는 분들은 .DS_Store 파일이 나올 일은 없으나 Mac 에서 제작한 테마를 받을 경우에 테마 안에 포함되어 있는 경우가 있다고 합니다. 그럴 경우에 그냥 삭제하시면 다시는 나타나지 않을 겁니다.</p>
 <h3 id="mac">Mac</h3>
-<h4 id="&#xCCAB;&#xBC88;&#xC9F8;-&#xC2DC;&#xB3C4;">&#xCCAB;&#xBC88;&#xC9F8; &#xC2DC;&#xB3C4;</h4>
-<p><a href="https://github.com/hexojs/hexo/issues/1793" rel="external nofollow noopener noreferrer" target="_blank">Stack Overflow</a> &#xC5D0;&#xC11C; &#xAC80;&#xC0C9;&#xD574;&#xBCF8; &#xACB0;&#xACFC; Hexo 3.2.0 &#xC5D0;&#xC11C;&#xB9CC; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xBB38;&#xC81C;&#xC774;&#xB2C8; 3.1.1 &#xB85C; &#xB2E4;&#xC6B4;&#xADF8;&#xB808;&#xC774;&#xB4DC;&#xD558;&#xBA74; &#xB41C;&#xB2E4;&#xB294; &#xC758;&#xACAC;&#xC774; &#xB9CE;&#xC558;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xBC31;&#xC5C5;&#xC744; &#xD574;&#xB193;&#xACE0; &#xB2E4;&#xC6B4;&#xADF8;&#xB808;&#xC774;&#xB4DC; &#xD588;&#xB294;&#xB370;&#xB3C4; &#xB3D9;&#xC77C;&#xD55C; &#xC99D;&#xC0C1;&#xC774; &#xB098;&#xD0C0;&#xB098;&#xB354;&#xAD70;&#xC694;. &#xB313;&#xAE00;&#xB4E4;&#xC744; &#xC77D;&#xC5B4;&#xBCF4;&#xB2C8; &#xBA85;&#xBC31;&#xD55C; &#xBC84;&#xADF8;&#xAC00; &#xB9DE;&#xB294; &#xAC83; &#xAC19;&#xB124;&#xC694;.</p>
-<h4 id="&#xB450;&#xBC88;&#xC9F8;-&#xC2DC;&#xB3C4;">&#xB450;&#xBC88;&#xC9F8; &#xC2DC;&#xB3C4;</h4>
-<p>&#xC774;&#xBC88;&#xC5D0;&#xB294; &#xADF8;&#xB0E5; &#xC544;&#xC608; &#xD3F4;&#xB354;&#xB97C; &#xC5C6;&#xC560;&#xACE0; &#xB2E4;&#xC2DC; &#xB9CC;&#xB4E4;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC0C8; &#xD3F4;&#xB354;&#xC5D0;&#xB2E4;&#xAC00; <code>hexo init</code> &#xBD80;&#xD130; &#xC2DC;&#xC791;&#xD574;&#xC11C; &#xD14C;&#xB9C8;&#xB3C4; &#xBC1B;&#xACE0; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xB3C4; &#xB530;&#xB85C; &#xC124;&#xCE58;&#xD588;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xBB38;&#xC81C;&#xC758; &#xADF8; &#xD30C;&#xC77C;&#xC774; &#xAC19;&#xC774; &#xBCF5;&#xC0AC;&#xB418;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xC870;&#xC2EC;&#xC2A4;&#xB7FD;&#xAC8C; &#xBCF5;&#xC0AC;&#xB97C; &#xD55C; &#xACB0;&#xACFC;! &#xB3D9;&#xC77C;&#xD55C; &#xC99D;&#xC0C1;&#xC774; &#xACC4;&#xC18D; &#xB098;&#xD0C0;&#xB0AC;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
-<h4 id="&#xC138;&#xBC88;&#xC9F8;-&#xC2DC;&#xB3C4;">&#xC138;&#xBC88;&#xC9F8; &#xC2DC;&#xB3C4;</h4>
-<p>&#xC5B4;&#xB835;&#xC0AC;&#xB9AC; &#xB9CC;&#xB4E4;&#xC5B4;&#xB193;&#xC740; &#xBE14;&#xB85C;&#xADF8;&#xAC00; &#xC548;&#xB418;&#xB2C8; &#xCC38; &#xB2F5;&#xB2F5;&#xD558;&#xB354;&#xAD70;&#xC694;. &#xADF8;&#xB798;&#xC11C; &#xB9C8;&#xC74C;&#xC774; &#xC880; &#xAE09;&#xD588;&#xB098; &#xBD05;&#xB2C8;&#xB2E4;. &#xBB38;&#xC81C;&#xC758; &#xD30C;&#xC77C;&#xC778; .DS_Store &#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xC2DC; &#xAC80;&#xC0C9;&#xD574;&#xBCF4;&#xB2C8;, .DS_Store &#xB294; &#xC0AD;&#xC81C;&#xD574;&#xB3C4; &#xBCC4; &#xBB38;&#xC81C;&#xAC00; &#xC5C6;&#xACE0; &#xB2E4;&#xC2DC; &#xC0DD;&#xC131;&#xB418;&#xB294; &#xD30C;&#xC77C;&#xC774;&#xB77C;&#xB294; &#xC810;&#xC785;&#xB2C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xADF8;&#xB0E5; &#xBB38;&#xC81C;&#xC758; &#xD30C;&#xC77C;&#xC744; &#xC0AD;&#xC81C;&#xD558;&#xACE0; generate &#xD588;&#xB354;&#xB2C8; &#xC798; &#xB429;&#xB2C8;&#xB2E4;&#x2026; &#xADF8;&#xB7F0;&#xB370; &#xBA87;&#xBC88; &#xB354; &#xD574;&#xBCF4;&#xB2C8; &#xAC00;&#xB054;&#xC529; &#xBB38;&#xC81C;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xB354;&#xAD70;&#xC694;. &#xC5B4;&#xB5A4; &#xAE30;&#xC900;&#xC778;&#xC9C0;&#xB294; &#xC798; &#xBAA8;&#xB974;&#xACA0;&#xC73C;&#xB098; &#xADF8; &#xB54C;&#xB9C8;&#xB2E4; &#xC0AD;&#xC81C;&#xB97C; &#xD574;&#xC57C;&#xD55C;&#xB2E4;&#xB2C8; &#xC774;&#xAC74; &#xBD84;&#xBA85;&#xD788; &#xBC84;&#xADF8;&#xC778; &#xAC83; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;. compile &#xD558;&#xB294; &#xBD80;&#xBD84;&#xC5D0;&#xC11C; .DS_Store &#xD30C;&#xC77C;&#xC744; &#xC81C;&#xC678;&#xD574;&#xC57C; &#xD558;&#xB294;&#xB370; &#xADF8;&#xB7F0; &#xB85C;&#xC9C1;&#xC774; &#xC5C6;&#xB294; &#xAC83; &#xAC19;&#xB124;&#xC694;. &#xACB0;&#xB860;&#xC740; &#xBB38;&#xC81C;&#xC758; &#xD30C;&#xC77C;&#xC744; &#xC0AD;&#xC81C;&#xD558;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<h4 id="첫번째-시도">첫번째 시도</h4>
+<p><a href="https://github.com/hexojs/hexo/issues/1793" rel="external nofollow noopener noreferrer" target="_blank">Stack Overflow</a> 에서 검색해본 결과 Hexo 3.2.0 에서만 발생하는 문제이니 3.1.1 로 다운그레이드하면 된다는 의견이 많았습니다. 하지만 백업을 해놓고 다운그레이드 했는데도 동일한 증상이 나타나더군요. 댓글들을 읽어보니 명백한 버그가 맞는 것 같네요.</p>
+<h4 id="두번째-시도">두번째 시도</h4>
+<p>이번에는 그냥 아예 폴더를 없애고 다시 만들었습니다. 새 폴더에다가 <code>hexo init</code> 부터 시작해서 테마도 받고 플러그인도 따로 설치했습니다. 그리고 문제의 그 파일이 같이 복사되지 않도록 조심스럽게 복사를 한 결과! 동일한 증상이 계속 나타났습니다.</p>
+<h4 id="세번째-시도">세번째 시도</h4>
+<p>어렵사리 만들어놓은 블로그가 안되니 참 답답하더군요. 그래서 마음이 좀 급했나 봅니다. 문제의 파일인 .DS_Store 에 대해 다시 검색해보니, .DS_Store 는 삭제해도 별 문제가 없고 다시 생성되는 파일이라는 점입니다. 그래서 그냥 문제의 파일을 삭제하고 generate 했더니 잘 됩니다… 그런데 몇번 더 해보니 가끔씩 문제가 발생하더군요. 어떤 기준인지는 잘 모르겠으나 그 때마다 삭제를 해야한다니 이건 분명히 버그인 것 같습니다. compile 하는 부분에서 .DS_Store 파일을 제외해야 하는데 그런 로직이 없는 것 같네요. 결론은 문제의 파일을 삭제하면 됩니다.</p>
 <h3 id="related-posts">Related Posts</h3>
 <ul>
 <li>
-<a href="/2016/06/14/get-started-with-hexo/" title="&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;">&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
 </li>
 <li>
-<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;">Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
 </li>
 <li>
-<a href="/2016/06/21/hexo-basic-usage/" title="Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;">Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</a>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
 </li>
 <li>
-<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;">Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;</a>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
 </li>
 <li>
-<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)">Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)</a>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
 </li>
 <li>
-<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
 </li>
 <li>
-<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
         </div>
 
         <div id="bmc" align="center">

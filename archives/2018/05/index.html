@@ -207,7 +207,9 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            macOS &#xB294; &#xC720;&#xB2C9;&#xC2A4; &#xAE30;&#xBC18;&#xC758; OS &#xB85C; &#xAC1C;&#xBC1C;&#xC744; &#xD558;&#xB2E4;&#xBCF4;&#xBA74; &#xD130;&#xBBF8;&#xB110;&#xC744; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9
+            macOS 는 유닉스 기반의 OS 로 개발을 하다보면 터미널을 많이 사용하기 마련인데 기본으로 제공되는 터미널은 너무 빈약합니다. PuTTY 같은 다른 터미널 클라이언트를 사용했던 분들이라면 더더욱 그럴거구요. 기본적인 색깔 구분도 안되서 사용이 쉽지 않았습니다.
+iTerm2 + zsh + oh my zsh
+터미널 관련 라이브러리들을 찾다보니 zsh 라는 
         </p>
     </div>
 </article>
@@ -234,7 +236,9 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC774;&#xBC88; &#xD3EC;&#xC2A4;&#xD305;&#xC5D0;&#xC11C;&#xB294; Vert.x &#xC5D0;&#xC11C; Blocking &#xCF54;&#xB4DC;&#xB97C; &#xC5B4;&#xB5BB;&#xAC8C; &#xCC98;&#xB9AC;&#xD558;&#xB294;&#xC9C0; &#xD655;&#
+            이번 포스팅에서는 Vert.x 에서 Blocking 코드를 어떻게 처리하는지 확인해보겠습니다.
+Thread Blocking Warning
+Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수 
         </p>
     </div>
 </article>
@@ -265,7 +269,10 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xD68C;&#xC0AC;&#xC5D0;&#xC11C; Vertx. &#xB77C;&#xB294; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB97C; &#xB2E4;&#xB8E8;&#xAC8C; &#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xCC98;&#xC74C; &#xC811;&#
+            회사에서 Vertx. 라는 프레임워크를 다루게 되었습니다. 처음 접할 때 이해하는게 쉽지 않았는데, 알면 알수록 상당히 유용한 프레임워크입니다. Vert.x 에 대해서는 조만간 개념 정리해서 따로 올리도록 하겠습니다.
+
+오늘 포스팅에서는 Verticle 을 여러 개 배포하는 법을 살펴보겠습니다.
+Vert.x 프로젝트를 shadowJar 를 이용해 jar 파
         </p>
     </div>
 </article>
@@ -292,7 +299,8 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC624;&#xB79C;&#xB9CC;&#xC5D0; Hexo &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB97C; &#xBCF4;&#xB2C8;&#xAE4C; &#xC2E4;&#xD589;&#xC774; &#xB418;&#xC9C8; &#xC54A;&#xB354;&#xAD70;&#xC694;. npm update, 
+            오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다.
+이번 포스팅에서는 Node.js 의 버전을 최신 버전
         </p>
     </div>
 </article>

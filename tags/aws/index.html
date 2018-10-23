@@ -207,8 +207,11 @@ ga('send', 'pageview');
     
 
         <p class="article-excerpt">
-            &#xC11C;&#xBE44;&#xC2A4; &#xB514;&#xC2A4;&#xCEE4;&#xBC84;&#xB9AC;
-REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xD638;&#xCD9C;&#xD55C;&#xB2E4;&
+            서비스 디스커버리
+REST API 를 이용해서 다른 서비스를 호출한다고 해봅시다. 요청을 보내기 위해서는 서비스 인스턴스가 있는 곳의 네트워크 정보를 알아야 합니다. IP 주소와 포트 정보가 되겠죠. 물리적 서버에서 돌아가는 경우라면 미리 설정 파일로 빼서 관리할 수 있으므로 큰 문제는 없습니다.
+하지만 클라우드에서는 어떨까요?
+
+클라우드에서 인스턴스는 동
         </p>
     </div>
 </article>
@@ -235,8 +238,11 @@ REST API &#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xB2E4;&#xB978; &#xC11C;&#xB
     
 
         <p class="article-excerpt">
-            &#xBB38;&#xC81C; 1
-CloudFormation &#xC744; &#xC774;&#xC6A9;&#xD574; us-east-1 &#xC5D0;&#xC11C; 2&#xD2F0;&#xC5B4; &#xC6F9; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC744; &#xC2E4;&#xD589;&#xD5
+            문제 1
+CloudFormation 을 이용해 us-east-1 에서 2티어 웹 애플리케이션을 실행한다. us-west-1 에서 개발 스택을 생성하려고 하면 프로세스가 실패한다. 무엇이 문제일까?
+A. 템플릿에서 참조하는 AMI 가 us-west-1 에서 사용 불가.
+B. 템플릿에서 참조하는 IAM 역할이 us-west-1 에서 유효하지 않음.
+C. 두 개
         </p>
     </div>
 </article>
@@ -267,7 +273,23 @@ CloudFormation &#xC744; &#xC774;&#xC6A9;&#xD574; us-east-1 &#xC5D0;&#xC11C; 2&#x
     
 
         <p class="article-excerpt">
-            &#xC774; &#xD3EC;&#xC2A4;&#xD2B8;&#xB294; AWS &#xC790;&#xACA9;&#xC99D; &#xC2A4;&#xD130;&#xB514;&#xC5D0;&#xC11C; AWS Well-Architected Framework &#xBC31;&#xC11C;(2018/06)&#xB97C; &#xD55C;&#xAE00;&#xB85C
+            이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.
+마지막 업데이트 : 2018/07/12
+
+목차
+
+소개
+
+정의
+아키텍쳐에 관하여
+일반적인 디자인 원칙들
+
+
+잘 설계된 프레임워크의 5가지 요소
+
+운영 우수성
+보안
+신뢰
         </p>
     </div>
 </article>
@@ -294,7 +316,10 @@ CloudFormation &#xC744; &#xC774;&#xC6A9;&#xD574; us-east-1 &#xC5D0;&#xC11C; 2&#x
     
 
         <p class="article-excerpt">
-            &#xC774; &#xD3EC;&#xC2A4;&#xD2B8;&#xB294; AWS &#xC790;&#xACA9;&#xC99D; &#xC2A4;&#xD130;&#xB514;&#xC5D0;&#xC11C; AWS Security Best Practies &#xBC31;&#xC11C;(2016/08)&#xB97C; &#xD55C;&#xAE00;&#xB85C; &#
+            이 포스트는 AWS 자격증 스터디에서 AWS Security Best Practies 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.
+마지막 업데이트 : 2018/07/12
+
+AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할
         </p>
     </div>
 </article>
@@ -325,7 +350,7 @@ CloudFormation &#xC744; &#xC774;&#xC6A9;&#xD574; us-east-1 &#xC5D0;&#xC11C; 2&#x
     
 
         <p class="article-excerpt">
-            &#xAC1C;&#xBC1C;&#xC790;&#xB4E4; &#xC0AC;&#xC774;&#xC5D0;&#xC11C; &#xC11C;&#xBC84;&#xB9AC;&#xC2A4; &#xC544;&#xD0A4;&#xD14D;&#xCCD0;&#xC5D0; &#xB300;&#xD574; &#xC774;&#xC57C;&#xAE30;&#xAC00; &#xB9CE;&#
+            개발자들 사이에서 서버리스 아키텍쳐에 대해 이야기가 많이 나오면서 서버리스 컴퓨팅을 손쉽게 제공하는 AWS에도 관심이 많습니다. 저도 서버리스가 궁금해서 AWS에 가입을 하고 공부를 해봤습니다. 처음에는 새로운 개념도 많고 서비스도 많아서 복잡해보였는데 알면 알수록 재밌습니다. 사용자가 다양한 옵션을 간편하게 설정할 수 있고, 입문자가 쉽게 적응할 수 있도
         </p>
     </div>
 </article>

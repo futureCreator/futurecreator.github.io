@@ -22,19 +22,19 @@
         
 
         
-        <meta name="description" content="&amp;#xC774;&amp;#xC804; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC5D0;&amp;#xC11C; github &amp;#xC720;&amp;#xC800; &amp;#xD639;&amp;#xC740; &amp;#xB9AC;&amp;#xD30C;&amp;#xC9C0;&amp;#xD1A0;&amp;#xB9AC;&amp;#xC758; &amp;#xC815;&amp;#xBCF4;&amp;#xB97C; &amp;#xAC00;&amp;#xC9C0;&amp;#xACE0; &amp;#">
+        <meta name="description" content="이전 포스트에서 github 유저 혹은 리파지토리의 정보를 가지고 있는 네임카드를 Hexo 블로그에 달아봤습니다. 저는 사이드바에 달아서 지금 블로그를 보시면 네임카드를 확인해보실 수 있습니다. Github 관련 유용한 플러그인이 하나 또 있어서 추천드리려고 합니다. Hexo 네임카드 추가하기 (Github Card) hexo-github 플러그인 IT 혹">
 <meta name="keywords" content="hexo,github,plugins,repository">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">
 <meta property="og:url" content="https://futurecreator.github.io/2016/06/22/add-github-repository-timeline-badge-to-hexo/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="&amp;#xC774;&amp;#xC804; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC5D0;&amp;#xC11C; github &amp;#xC720;&amp;#xC800; &amp;#xD639;&amp;#xC740; &amp;#xB9AC;&amp;#xD30C;&amp;#xC9C0;&amp;#xD1A0;&amp;#xB9AC;&amp;#xC758; &amp;#xC815;&amp;#xBCF4;&amp;#xB97C; &amp;#xAC00;&amp;#xC9C0;&amp;#xACE0; &amp;#">
+<meta property="og:description" content="이전 포스트에서 github 유저 혹은 리파지토리의 정보를 가지고 있는 네임카드를 Hexo 블로그에 달아봤습니다. 저는 사이드바에 달아서 지금 블로그를 보시면 네임카드를 확인해보실 수 있습니다. Github 관련 유용한 플러그인이 하나 또 있어서 추천드리려고 합니다. Hexo 네임카드 추가하기 (Github Card) hexo-github 플러그인 IT 혹">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/images/thumbnail/github_timeline.jpg">
 <meta property="og:updated_time" content="2018-07-07T05:15:53.571Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">
-<meta name="twitter:description" content="&amp;#xC774;&amp;#xC804; &amp;#xD3EC;&amp;#xC2A4;&amp;#xD2B8;&amp;#xC5D0;&amp;#xC11C; github &amp;#xC720;&amp;#xC800; &amp;#xD639;&amp;#xC740; &amp;#xB9AC;&amp;#xD30C;&amp;#xC9C0;&amp;#xD1A0;&amp;#xB9AC;&amp;#xC758; &amp;#xC815;&amp;#xBCF4;&amp;#xB97C; &amp;#xAC00;&amp;#xC9C0;&amp;#xACE0; &amp;#">
+<meta name="twitter:description" content="이전 포스트에서 github 유저 혹은 리파지토리의 정보를 가지고 있는 네임카드를 Hexo 블로그에 달아봤습니다. 저는 사이드바에 달아서 지금 블로그를 보시면 네임카드를 확인해보실 수 있습니다. Github 관련 유용한 플러그인이 하나 또 있어서 추천드리려고 합니다. Hexo 네임카드 추가하기 (Github Card) hexo-github 플러그인 IT 혹">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/thumbnail/github_timeline.jpg">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -200,56 +200,56 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugins/">plugins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/repository/">repository</a></li></ul>
  -->
-            <span class="reading-time">⏱ 9 분</span>
+            <span class="reading-time">⏱ 3 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>&#xC774;&#xC804; <a href="http://futurecreator.github.io/2016/06/21/add-github-card-to-hexo/">&#xD3EC;&#xC2A4;&#xD2B8;</a>&#xC5D0;&#xC11C; github &#xC720;&#xC800; &#xD639;&#xC740; &#xB9AC;&#xD30C;&#xC9C0;&#xD1A0;&#xB9AC;&#xC758; &#xC815;&#xBCF4;&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB294; &#xB124;&#xC784;&#xCE74;&#xB4DC;&#xB97C; Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xB2EC;&#xC544;&#xBD24;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC800;&#xB294; &#xC0AC;&#xC774;&#xB4DC;&#xBC14;&#xC5D0; &#xB2EC;&#xC544;&#xC11C; &#xC9C0;&#xAE08; &#xBE14;&#xB85C;&#xADF8;&#xB97C; &#xBCF4;&#xC2DC;&#xBA74; &#xB124;&#xC784;&#xCE74;&#xB4DC;&#xB97C; &#xD655;&#xC778;&#xD574;&#xBCF4;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. Github &#xAD00;&#xB828; &#xC720;&#xC6A9;&#xD55C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC774; &#xD558;&#xB098; &#xB610; &#xC788;&#xC5B4;&#xC11C; &#xCD94;&#xCC9C;&#xB4DC;&#xB9AC;&#xB824;&#xACE0; &#xD569;&#xB2C8;&#xB2E4;.</p>
-<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)">Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)</a>
-<h2 id="hexo-github-&#xD50C;&#xB7EC;&#xADF8;&#xC778;">hexo-github &#xD50C;&#xB7EC;&#xADF8;&#xC778;</h2>
-<p>IT &#xD639;&#xC740; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xAD00;&#xB828; &#xD3EC;&#xC2A4;&#xD305;&#xC744; &#xD558;&#xB2E4;&#xBCF4;&#xBA74; &#xC608;&#xC81C; &#xC18C;&#xC2A4;&#xB97C; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xD558;&#xAC8C; &#xB418;&#xACE0;, Github &#xC5D0; &#xC608;&#xC81C; &#xC18C;&#xC2A4;&#xB97C; &#xC62C;&#xB824;&#xB193;&#xACE0; &#xCC38;&#xACE0;&#xD558;&#xB294; &#xBC29;&#xC2DD;&#xC744; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7F0;&#xB370; &#xB9CC;&#xC57D; &#xD3EC;&#xC2A4;&#xD305;&#xC744; &#xD55C; &#xC774;&#xD6C4;&#xC5D0; &#xD574;&#xB2F9; &#xB9AC;&#xD30C;&#xC9C0;&#xD1A0;&#xB9AC;&#xC5D0; &#xBCC0;&#xD654;&#xAC00; &#xC0DD;&#xAE34;&#xB2E4;&#xBA74; &#xC5B4;&#xB5A8;&#xAE4C;&#xC694;? &#xACC4;&#xC18D; &#xC218;&#xC815;&#xACFC; &#xCEE4;&#xBC0B;&#xC744; &#xBC18;&#xBCF5;&#xD558;&#xBA74;&#xC11C; &#xC774;&#xC804; &#xC18C;&#xC2A4;&#xC640; &#xB9CE;&#xC774; &#xB2EC;&#xB77C;&#xC9C4;&#xB2E4;&#xBA74;, &#xD574;&#xB2F9; &#xD3EC;&#xC2A4;&#xD2B8;&#xC5D0; &#xAC00;&#xC11C; &#xCEE4;&#xBC0B;&#xBC84;&#xC804;&#xC744; &#xC801;&#xC5B4;&#xB193;&#xAC70;&#xB098; &#xC218;&#xC815;&#xC744; &#xD574;&#xC57C;&#xD560; &#xAC81;&#xB2C8;&#xB2E4;.</p>
-<p><a href="https://github.com/akfish/hexo-github" rel="external nofollow noopener noreferrer" target="_blank">hexo-github</a> &#xB294; &#xC774;&#xB7F0; &#xBB38;&#xC81C;&#xB97C; &#xD574;&#xACB0;&#xD560; &#xC218; &#xC788;&#xB294; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC785;&#xB2C8;&#xB2E4;. &#xD574;&#xB2F9; &#xB9AC;&#xD30C;&#xC9C0;&#xD1A0;&#xB9AC;&#xC758; &#xCEE4;&#xBC0B;&#xBC84;&#xC804;&#xACFC; &#xC2E4;&#xC2DC;&#xAC04; &#xD0C0;&#xC784;&#xB77C;&#xC778; &#xC815;&#xBCF4;&#xB97C; &#xBC43;&#xC9C0; &#xD615;&#xD0DC;&#xB85C; &#xBCF4;&#xC5EC;&#xC90D;&#xB2C8;&#xB2E4;.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 <a href="http://futurecreator.github.io/2016/06/21/add-github-card-to-hexo/">포스트</a>에서 github 유저 혹은 리파지토리의 정보를 가지고 있는 네임카드를 Hexo 블로그에 달아봤습니다. 저는 사이드바에 달아서 지금 블로그를 보시면 네임카드를 확인해보실 수 있습니다. Github 관련 유용한 플러그인이 하나 또 있어서 추천드리려고 합니다.</p>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
+<h2 id="hexo-github-플러그인">hexo-github 플러그인</h2>
+<p>IT 혹은 프로그래밍 관련 포스팅을 하다보면 예제 소스를 많이 사용하게 되고, Github 에 예제 소스를 올려놓고 참고하는 방식을 사용합니다. 그런데 만약 포스팅을 한 이후에 해당 리파지토리에 변화가 생긴다면 어떨까요? 계속 수정과 커밋을 반복하면서 이전 소스와 많이 달라진다면, 해당 포스트에 가서 커밋버전을 적어놓거나 수정을 해야할 겁니다.</p>
+<p><a href="https://github.com/akfish/hexo-github" rel="external nofollow noopener noreferrer" target="_blank">hexo-github</a> 는 이런 문제를 해결할 수 있는 플러그인입니다. 해당 리파지토리의 커밋버전과 실시간 타임라인 정보를 뱃지 형태로 보여줍니다.</p>
 <p><img src="https://github.com/akfish/hexo-github/blob/master/capture.gif?raw=true" alt="https://github.com/akfish/hexo-github"></p>
-<p>&#xBC18;&#xC751;&#xD615;&#xC774;&#xB77C; &#xAF64; &#xC774;&#xC058;&#xAC8C; &#xB3D9;&#xC791;&#xD558;&#xB124;&#xC694;. &#xD074;&#xB9AD;&#xD558;&#xBA74; &#xD574;&#xB2F9; &#xCEE4;&#xBC0B; &#xBC84;&#xC804;&#xC758; &#xC18C;&#xC2A4; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xC774;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<h2 id="&#xC124;&#xCE58;">&#xC124;&#xCE58;</h2>
-<p>Hexo &#xC124;&#xCE58;&#xD55C; &#xD3F4;&#xB354;&#xC5D0;&#xC11C; &#xB2E4;&#xC74C; &#xBA85;&#xB839;&#xC5B4;&#xB85C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC124;&#xCE58;&#xD569;&#xB2C8;&#xB2E4;.</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-github --save</span><br></pre></td></tr></tbody></table></figure>
-<h2 id="&#xC0AC;&#xC6A9;&#xBC95;">&#xC0AC;&#xC6A9;&#xBC95;</h2>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% github user repo referenced_commit [auto_expand = true | false] [width = 100%] %}</span><br></pre></td></tr></tbody></table></figure>
-<p><a href="http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/">&#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778;</a> &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD569;&#xB2C8;&#xB2E4;. &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC740; &#xCF54;&#xB4DC;&#xB97C; &#xC27D;&#xAC8C; &#xC0BD;&#xC785;&#xD558;&#xB294; Hexo &#xC758; &#xBB38;&#xBC95;&#xC774;&#xB77C;&#xACE0; &#xBCF4;&#xC2DC;&#xBA74; &#xB418;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. (<code>[]</code> &#xB85C; &#xD45C;&#xC2DC;&#xB418;&#xC5B4; &#xC788;&#xB294; &#xC635;&#xC158;&#xC740; &#xD544;&#xC218;&#xAC12;&#xC774; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.)</p>
-<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;">Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;</a>
+<p>반응형이라 꽤 이쁘게 동작하네요. 클릭하면 해당 커밋 버전의 소스 페이지로 이동합니다.</p>
+<h2 id="설치">설치</h2>
+<p>Hexo 설치한 폴더에서 다음 명령어로 플러그인을 설치합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-github --save</span><br></pre></td></tr></table></figure>
+<h2 id="사용법">사용법</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% github user repo referenced_commit [auto_expand = true | false] [width = 100%] %&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/">태그 플러그인</a> 형식으로 동작합니다. 태그 플러그인은 코드를 쉽게 삽입하는 Hexo 의 문법이라고 보시면 되겠습니다. (<code>[]</code> 로 표시되어 있는 옵션은 필수값이 아닙니다.)</p>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
 <table>
 <thead>
 <tr>
-<th>&#xC635;&#xC158;</th>
-<th>&#xC124;&#xBA85;</th>
+<th>옵션</th>
+<th>설명</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>user</td>
-<td>GitHub &#xC720;&#xC800; &#xC774;&#xB984;</td>
+<td>GitHub 유저 이름</td>
 </tr>
 <tr>
 <td>repo</td>
-<td>GitHub &#xC720;&#xC800;&#xC758; &#xB9AC;&#xD30C;&#xC9C0;&#xD1A0;&#xB9AC; &#xC774;&#xB984;</td>
+<td>GitHub 유저의 리파지토리 이름</td>
 </tr>
 <tr>
 <td>commit</td>
-<td>&#xCEE4;&#xBC0B; &#xBC84;&#xC804; (SHA). full SHA &#xAC00; &#xC544;&#xB2C8;&#xB354;&#xB77C;&#xB3C4; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</td>
+<td>커밋 버전 (SHA). full SHA 가 아니더라도 가능합니다.</td>
 </tr>
 <tr>
 <td>auto_expand</td>
-<td>&#xD0C0;&#xC784;&#xB77C;&#xC778;&#xC774; &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xD655;&#xC7A5;&#xB41C; &#xCC44;&#xB85C; &#xD45C;&#xC2DC;&#xB429;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; sync &#xB294; &#xCC98;&#xC74C; &#xC5F4;&#xB9B4; &#xB54C; &#xD55C;&#xBC88;&#xB9CC; &#xC218;&#xD589;&#xB429;&#xB2C8;&#xB2E4;. <code>true</code> &#xB610;&#xB294; <code>false</code>. (Optional, &#xAE30;&#xBCF8;&#xAC12;&#xC740; <code>false</code>)</td>
+<td>타임라인이 처음부터 확장된 채로 표시됩니다. 따라서 sync 는 처음 열릴 때 한번만 수행됩니다. <code>true</code> 또는 <code>false</code>. (Optional, 기본값은 <code>false</code>)</td>
 </tr>
 <tr>
 <td>width</td>
-<td>&#xC704;&#xC82F;&#xC758; &#xB113;&#xC774;. &#xC720;&#xD6A8;&#xD55C; CSS &#xAC12;&#xC774;&#xBA74; &#xC785;&#xB825; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;. (Optional, &#xAE30;&#xBCF8;&#xAC12;&#xC740; 100%)</td>
+<td>위젯의 넓이. 유효한 CSS 값이면 입력 가능합니다. (Optional, 기본값은 100%)</td>
 </tr>
 </tbody>
 </table>
-<h2 id="&#xACB0;&#xACFC;">&#xACB0;&#xACFC;</h2>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">{% github futurecreator SpringBootGetStarted eb86ae0 %}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="결과">결과</h2>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% github futurecreator SpringBootGetStarted eb86ae0 %&#125;</span><br></pre></td></tr></table></figure>
 <div id="badge-container-futurecreator-SpringBootGetStarted-eb86ae0" class="hexo-github" style="width: 100%"></div>
 <script src="/hexo-github/badge.js"></script>
 <script type="text/javascript">
@@ -258,51 +258,33 @@ ga('send', 'pageview');
   new Badge("#badge-container-futurecreator-SpringBootGetStarted-eb86ae0", "futurecreator", "SpringBootGetStarted", "eb86ae0", false);
 </script>
 
-<figure class="highlight java"><figcaption><span>HelloController.java</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>{</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RequestMapping</span>(<span class="string">&quot;/hello&quot;</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(Model model,</span></span></span><br><span class="line"><span class="function"><span class="params">			@RequestParam(value = <span class="string">&quot;name&quot;</span>, defaultValue = <span class="string">&quot;Unknown&quot;</span>, required = <span class="keyword">false</span>)</span> String name) </span>{</span><br><span class="line"></span><br><span class="line">		String greetings = <span class="string">&quot;Hello, &quot;</span> + name + <span class="string">&quot;!&quot;</span>;</span><br><span class="line"></span><br><span class="line">		model.addAttribute(<span class="string">&quot;greetings&quot;</span>, greetings);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">	}</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-<p>&#xD574;&#xB2F9; &#xCEE4;&#xBC0B;&#xBC84;&#xC804;&#xC774; &#xC798; &#xD45C;&#xC2DC;&#xB418;&#xB124;&#xC694;. github &#xC5D0; &#xC18C;&#xC2A4;&#xB97C; &#xC62C;&#xB824;&#xB193;&#xACE0; &#xD558;&#xB294; &#xD3EC;&#xC2A4;&#xD305;&#xC5D0;&#xB294; &#xBB34;&#xC870;&#xAC74; &#xC368;&#xC57C;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. Hexo &#xCD94;&#xCC9C; &#xD50C;&#xB7EC;&#xADF8;&#xC778; &#xD3EC;&#xC2A4;&#xD2B8;&#xB97C; &#xC791;&#xC131; &#xC911;&#xC778;&#xB370; &#xC591;&#xC774; &#xB108;&#xBB34; &#xB9CE;&#xC544;&#xC11C; &#xD55C;&#xAEBC;&#xBC88;&#xC5D0;&#xB294; &#xD798;&#xB4E4;&#xACE0; &#xD55C;&#xB450;&#xAC1C;&#xC529; &#xACC4;&#xC18D; &#xC62C;&#xB9B4; &#xC608;&#xC815;&#xC785;&#xB2C8;&#xB2E4;. &#xC81C;&#xAC00; &#xC9C1;&#xC811; &#xC0AC;&#xC6A9;&#xD574;&#xBCF4;&#xACE0; &#xC720;&#xC6A9;&#xD55C; &#xD50C;&#xB7EC;&#xADF8;&#xC778;&#xC744; &#xC18C;&#xAC1C;&#xD558;&#xB3C4;&#xB85D; &#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><figcaption><span>HelloController.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@RequestMapping</span>(<span class="string">"/hello"</span>)</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">hello</span><span class="params">(Model model,</span></span></span><br><span class="line"><span class="function"><span class="params">			@RequestParam(value = <span class="string">"name"</span>, defaultValue = <span class="string">"Unknown"</span>, required = <span class="keyword">false</span>)</span> String name) </span>&#123;</span><br><span class="line"></span><br><span class="line">		String greetings = <span class="string">"Hello, "</span> + name + <span class="string">"!"</span>;</span><br><span class="line"></span><br><span class="line">		model.addAttribute(<span class="string">"greetings"</span>, greetings);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="string">"hello"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>해당 커밋버전이 잘 표시되네요. github 에 소스를 올려놓고 하는 포스팅에는 무조건 써야겠습니다. Hexo 추천 플러그인 포스트를 작성 중인데 양이 너무 많아서 한꺼번에는 힘들고 한두개씩 계속 올릴 예정입니다. 제가 직접 사용해보고 유용한 플러그인을 소개하도록 하겠습니다.</p>
 <h3 id="related-posts">Related Posts</h3>
 <ul>
 <li>
-<a href="/2016/06/14/get-started-with-hexo/" title="&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;">&#xC6CC;&#xB4DC;&#xD504;&#xB808;&#xC2A4;&#xBCF4;&#xB2E4; &#xC26C;&#xC6B4; Hexo &#xBE14;&#xB85C;&#xADF8; &#xC2DC;&#xC791;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
 </li>
 <li>
-<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;">Hexo &#xCD94;&#xCC9C; &#xD14C;&#xB9C8;, Hueman &#xC801;&#xC6A9;&#xD558;&#xAE30;</a>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
 </li>
 <li>
-<a href="/2016/06/21/hexo-basic-usage/" title="Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;">Hexo &#xAE30;&#xBCF8; &#xC0AC;&#xC6A9;&#xBC95;</a>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
 </li>
 <li>
-<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;">Hexo &#xD0DC;&#xADF8; &#xD50C;&#xB7EC;&#xADF8;&#xC778; (Tag plugins) &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;</a>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
 </li>
 <li>
-<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)">Hexo &#xB124;&#xC784;&#xCE74;&#xB4DC; &#xCD94;&#xAC00;&#xD558;&#xAE30; (Github Card)</a>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
 </li>
 <li>
-<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xC5D0; Github &#xC800;&#xC7A5;&#xC18C; &#xD0C0;&#xC784;&#xB77C;&#xC778; (Repository timeline) &#xC815;&#xBCF4; &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
 </li>
 <li>
-<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;">Hexo &#xBE14;&#xB85C;&#xADF8;&#xC5D0; &#xAD6C;&#xAE00; &#xC560;&#xB4DC;&#xC13C;&#xC2A4;(Adsense) &#xCD94;&#xAC00;&#xD558;&#xAE30;</a>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
         </div>
 
         <div id="bmc" align="center">
