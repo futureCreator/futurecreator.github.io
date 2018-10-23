@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
     <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
@@ -22,33 +22,31 @@
         
 
         
-        <meta name="description" content="StringBuilder / StringBuffer / + 연산자 / concat 메소드 Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다. String.concat() Spring 클래스에는 문자열을 이어주는 concat 메소드">
+        <meta name="description" content="StringBuilder / StringBuffer / + &amp;#xC5F0;&amp;#xC0B0;&amp;#xC790; / concat &amp;#xBA54;&amp;#xC18C;&amp;#xB4DC; Java &amp;#xC5D0;&amp;#xC11C; &amp;#xBB38;&amp;#xC790;&amp;#xC5F4;&amp;#xC744; &amp;#xC5F0;&amp;#xACB0;&amp;#xD574; &amp;#xBD99;&amp;#xC77C; &amp;#xB54C; &amp;#">
 <meta name="keywords" content="string,concat,stringbuilder,stringbuffer,plusoperator">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 문자열 연결 방법 비교">
-<meta property="og:url" content="http://futurecreator.github.io/2018/06/02/java-string-concatenation/index.html">
+<meta property="og:url" content="https://futurecreator.github.io/2018/06/02/java-string-concatenation/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="StringBuilder / StringBuffer / + 연산자 / concat 메소드 Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다. String.concat() Spring 클래스에는 문자열을 이어주는 concat 메소드">
+<meta property="og:description" content="StringBuilder / StringBuffer / + &amp;#xC5F0;&amp;#xC0B0;&amp;#xC790; / concat &amp;#xBA54;&amp;#xC18C;&amp;#xB4DC; Java &amp;#xC5D0;&amp;#xC11C; &amp;#xBB38;&amp;#xC790;&amp;#xC5F4;&amp;#xC744; &amp;#xC5F0;&amp;#xACB0;&amp;#xD574; &amp;#xBD99;&amp;#xC77C; &amp;#xB54C; &amp;#">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://docs.google.com/spreadsheets/d/1dV4Pbe2_ZCsc9TDBYsN9u69a2a3xSjCAzxKR7I6fxzg/pubchart?oid=1847999196&amp;format=image">
 <meta property="og:updated_time" content="2018-09-08T05:22:50.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 문자열 연결 방법 비교">
-<meta name="twitter:description" content="StringBuilder / StringBuffer / + 연산자 / concat 메소드 Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다. String.concat() Spring 클래스에는 문자열을 이어주는 concat 메소드">
+<meta name="twitter:description" content="StringBuilder / StringBuffer / + &amp;#xC5F0;&amp;#xC0B0;&amp;#xC790; / concat &amp;#xBA54;&amp;#xC18C;&amp;#xB4DC; Java &amp;#xC5D0;&amp;#xC11C; &amp;#xBB38;&amp;#xC790;&amp;#xC5F4;&amp;#xC744; &amp;#xC5F0;&amp;#xACB0;&amp;#xD574; &amp;#xBD99;&amp;#xC77C; &amp;#xB54C; &amp;#">
 <meta name="twitter:image" content="https://docs.google.com/spreadsheets/d/1dV4Pbe2_ZCsc9TDBYsN9u69a2a3xSjCAzxKR7I6fxzg/pubchart?oid=1847999196&amp;format=image">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
         
         
-        <link rel="canonical" href="http://futurecreator.github.io/2018/06/02/java-string-concatenation/">
+        <link rel="canonical" href="https://futurecreator.github.io/2018/06/02/java-string-concatenation/">
         
         
             <link rel="icon" href="/images/favicions/favicon6.png">
         
         <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-        <!-- <link rel="stylesheet" href="/vendor/titillium-web/styles.css"> -->
-        <!-- <link rel="stylesheet" href="/vendor/source-code-pro/styles.css"> -->
         <link rel="stylesheet" href="/css/style.css">
         <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
         
@@ -202,36 +200,55 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/concat/">concat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plusoperator/">plusoperator</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/string/">string</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stringbuffer/">stringbuffer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stringbuilder/">stringbuilder</a></li></ul>
  -->
-            <span class="reading-time">⏱ 2 분</span>
+            <span class="reading-time">⏱ 8 분</span>
         </div>
-        <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="stringbuilder-stringbuffer-연산자-concat-메소드">StringBuilder / StringBuffer / + 연산자 / concat 메소드</h2>
-<p>Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다.</p>
-<h2 id="string-concat"><em>String.concat()</em></h2>
-<p>Spring 클래스에는 문자열을 이어주는 concat 메소드가 있습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String abc = <span class="string">"A"</span>.concat(<span class="string">"B"</span>).concat(<span class="string">"C"</span>); <span class="comment">// ABC</span></span><br></pre></td></tr></table></figure>
-<p>Java 에서 String 은 불변(<em>immutalble</em>) 한 특성을 가집니다. 따라서 새로운 문자열을 더할 때마다 새로운 인스턴스를 생성하기 때문에 성능 상이나 속도 면에서 비효율적입니다. 예제처럼 간단한 경우라면 모를까 보고서를 생성하는 등 문자열 처리가 많은 작업을 할수록 이슈가 될 수 있습니다.</p>
-<h2 id="stringbuilder">StringBuilder</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String abc = <span class="keyword">new</span> StringBuilder()</span><br><span class="line">  .append(<span class="string">"A"</span>)</span><br><span class="line">  .append(<span class="string">"B"</span>)</span><br><span class="line">  .append(<span class="string">"C"</span>).toString();</span><br></pre></td></tr></table></figure>
-<p>내부적으로 문자열을 가지고 문자열을 변경하는 메소드를 제공합니다. Java 에서 String 은 불변(<em>immutalble</em>) 하기 때문에 수정 시에 새로운 인스턴스를 만들게 됩니다. 하지만 StringBuilder 를 사용하면 문자열을 계속해서 앞뒤로 덧붙이거나 중간에 문자열을 삽입 삭제하는 등 다양한 연산이 가능합니다.</p>
-<h2 id="연산자">+ 연산자</h2>
-<p><code>+</code> 연산자로도 문자열을 붙일 수가 있습니다. <code>+</code> 연산자의 경우 Java 1.5 이전에는 concat 메소드와 동일하게 새로운 String 인스턴스를 생성했지만, Java 1.5 부터는 내부적으로 StringBuilder 로 변환해서 처리하기 때문에 StringBuilder 와 동일하다고 보시면 됩니다. 간단한 경우에 StringBuilder 보다 훨씬 가독성이 좋으니 + 연산자를 사용하는게 좋습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// StringBuilder 와 동일</span></span><br><span class="line">String abc = <span class="string">"A"</span> + <span class="string">"B"</span> + <span class="string">"C"</span>;	<span class="comment">// ABC</span></span><br></pre></td></tr></table></figure>
-<h2 id="연산자-그리고-stringbuilder">+ 연산자 그리고 StringBuilder</h2>
-<p>그렇다면 StringBuilder 를 쓸 이유가 없을까요? 아닙니다.<br>
-간단한 문자열 조합은 <code>+</code> 연산으로 충분하지만 만들 때마다 StringBuilder 인스턴스를 생성합니다. 따라서 반복문에서 문자열을 조합하는 것처럼 StringBuilder 인스턴스를 생성해서 여러 작업을 하는 경우에는 StringBuilder 를 쓰는게 좋습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">"foo"</span>, <span class="string">"bar"</span>, <span class="string">"baz"</span>, <span class="string">"qux"</span>);</span><br><span class="line"></span><br><span class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span> (String s : list) &#123;</span><br><span class="line">  sb.append(s);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(sb);</span><br></pre></td></tr></table></figure>
-<p>다음과 같이 반복문 상에서 문자열 조합에 대한 성능을 비교해볼 수 있습니다.</p>
-<p><img src="https://docs.google.com/spreadsheets/d/1dV4Pbe2_ZCsc9TDBYsN9u69a2a3xSjCAzxKR7I6fxzg/pubchart?oid=1847999196&amp;format=image" alt="http://www.pellegrino.link/2015/08/22/string-concatenation-with-java-8.html"></p>
-<h2 id="stringbuilder-그리고-stringbuffer">StringBuilder 그리고 StringBuffer</h2>
-<p>두 클래스의 차이는 multithreaded 환경에서 동기화 보장이 되어있느냐의 차이입니다. multithreaded 환경에서는 StringBuffer 를 사용하셔야 합니다.</p>
-<h2 id="결론">결론</h2>
-<ol>
-<li>기본적으로 + 연산자를 쓰자.</li>
-<li>multithreaded 환경에서는 StringBuffer</li>
-<li>반복문에서의 작업이나 다양한 문자열 작업 처리는 StringBuilder 또는 StringBuffer</li>
-</ol>
 
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="stringbuilder-stringbuffer-&#xC5F0;&#xC0B0;&#xC790;-concat-&#xBA54;&#xC18C;&#xB4DC;">StringBuilder / StringBuffer / + &#xC5F0;&#xC0B0;&#xC790; / concat &#xBA54;&#xC18C;&#xB4DC;</h2>
+<p>Java &#xC5D0;&#xC11C; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xC5F0;&#xACB0;&#xD574; &#xBD99;&#xC77C; &#xB54C; &#xBE44;&#xC2B7;&#xD55C; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xB294; StringBuffer, StringBuilder, + &#xC5F0;&#xC0B0;&#xC790;, concat &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC5B4;&#xB5A4; &#xC810;&#xC774; &#xB2E4;&#xB978;&#xC9C0; &#xBE44;&#xAD50;&#xD574;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="string-concat"><em>String.concat()</em></h2>
+<p>Spring &#xD074;&#xB798;&#xC2A4;&#xC5D0;&#xB294; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xC774;&#xC5B4;&#xC8FC;&#xB294; concat &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String abc = <span class="string">&quot;A&quot;</span>.concat(<span class="string">&quot;B&quot;</span>).concat(<span class="string">&quot;C&quot;</span>); <span class="comment">// ABC</span></span><br></pre></td></tr></tbody></table></figure>
+<p>Java &#xC5D0;&#xC11C; String &#xC740; &#xBD88;&#xBCC0;(<em>immutalble</em>) &#xD55C; &#xD2B9;&#xC131;&#xC744; &#xAC00;&#xC9D1;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xC0C8;&#xB85C;&#xC6B4; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xB354;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xC0C8;&#xB85C;&#xC6B4; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC131;&#xB2A5; &#xC0C1;&#xC774;&#xB098; &#xC18D;&#xB3C4; &#xBA74;&#xC5D0;&#xC11C; &#xBE44;&#xD6A8;&#xC728;&#xC801;&#xC785;&#xB2C8;&#xB2E4;. &#xC608;&#xC81C;&#xCC98;&#xB7FC; &#xAC04;&#xB2E8;&#xD55C; &#xACBD;&#xC6B0;&#xB77C;&#xBA74; &#xBAA8;&#xB97C;&#xAE4C; &#xBCF4;&#xACE0;&#xC11C;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xB4F1; &#xBB38;&#xC790;&#xC5F4; &#xCC98;&#xB9AC;&#xAC00; &#xB9CE;&#xC740; &#xC791;&#xC5C5;&#xC744; &#xD560;&#xC218;&#xB85D; &#xC774;&#xC288;&#xAC00; &#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="stringbuilder">StringBuilder</h2>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String abc = <span class="keyword">new</span> StringBuilder()</span><br><span class="line">  .append(<span class="string">&quot;A&quot;</span>)</span><br><span class="line">  .append(<span class="string">&quot;B&quot;</span>)</span><br><span class="line">  .append(<span class="string">&quot;C&quot;</span>).toString();</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xBCC0;&#xACBD;&#xD558;&#xB294; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;. Java &#xC5D0;&#xC11C; String &#xC740; &#xBD88;&#xBCC0;(<em>immutalble</em>) &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC218;&#xC815; &#xC2DC;&#xC5D0; &#xC0C8;&#xB85C;&#xC6B4; &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xB9CC;&#xB4E4;&#xAC8C; &#xB429;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; StringBuilder &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xACC4;&#xC18D;&#xD574;&#xC11C; &#xC55E;&#xB4A4;&#xB85C; &#xB367;&#xBD99;&#xC774;&#xAC70;&#xB098; &#xC911;&#xAC04;&#xC5D0; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xC0BD;&#xC785; &#xC0AD;&#xC81C;&#xD558;&#xB294; &#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xC5F0;&#xC0B0;&#xC774; &#xAC00;&#xB2A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xC5F0;&#xC0B0;&#xC790;">+ &#xC5F0;&#xC0B0;&#xC790;</h2>
+<p><code>+</code> &#xC5F0;&#xC0B0;&#xC790;&#xB85C;&#xB3C4; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xBD99;&#xC77C; &#xC218;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <code>+</code> &#xC5F0;&#xC0B0;&#xC790;&#xC758; &#xACBD;&#xC6B0; Java 1.5 &#xC774;&#xC804;&#xC5D0;&#xB294; concat &#xBA54;&#xC18C;&#xB4DC;&#xC640; &#xB3D9;&#xC77C;&#xD558;&#xAC8C; &#xC0C8;&#xB85C;&#xC6B4; String &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD588;&#xC9C0;&#xB9CC;, Java 1.5 &#xBD80;&#xD130;&#xB294; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; StringBuilder &#xB85C; &#xBCC0;&#xD658;&#xD574;&#xC11C; &#xCC98;&#xB9AC;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; StringBuilder &#xC640; &#xB3D9;&#xC77C;&#xD558;&#xB2E4;&#xACE0; &#xBCF4;&#xC2DC;&#xBA74; &#xB429;&#xB2C8;&#xB2E4;. &#xAC04;&#xB2E8;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0; StringBuilder &#xBCF4;&#xB2E4; &#xD6E8;&#xC52C; &#xAC00;&#xB3C5;&#xC131;&#xC774; &#xC88B;&#xC73C;&#xB2C8; + &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294;&#xAC8C; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// StringBuilder &#xC640; &#xB3D9;&#xC77C;</span></span><br><span class="line">String abc = <span class="string">&quot;A&quot;</span> + <span class="string">&quot;B&quot;</span> + <span class="string">&quot;C&quot;</span>;	<span class="comment">// ABC</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="&#xC5F0;&#xC0B0;&#xC790;-&#xADF8;&#xB9AC;&#xACE0;-stringbuilder">+ &#xC5F0;&#xC0B0;&#xC790; &#xADF8;&#xB9AC;&#xACE0; StringBuilder</h2>
+<p>&#xADF8;&#xB807;&#xB2E4;&#xBA74; StringBuilder &#xB97C; &#xC4F8; &#xC774;&#xC720;&#xAC00; &#xC5C6;&#xC744;&#xAE4C;&#xC694;? &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;.<br>
+&#xAC04;&#xB2E8;&#xD55C; &#xBB38;&#xC790;&#xC5F4; &#xC870;&#xD569;&#xC740; <code>+</code> &#xC5F0;&#xC0B0;&#xC73C;&#xB85C; &#xCDA9;&#xBD84;&#xD558;&#xC9C0;&#xB9CC; &#xB9CC;&#xB4E4; &#xB54C;&#xB9C8;&#xB2E4; StringBuilder &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; &#xBC18;&#xBCF5;&#xBB38;&#xC5D0;&#xC11C; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xC870;&#xD569;&#xD558;&#xB294; &#xAC83;&#xCC98;&#xB7FC; StringBuilder &#xC778;&#xC2A4;&#xD134;&#xC2A4;&#xB97C; &#xC0DD;&#xC131;&#xD574;&#xC11C; &#xC5EC;&#xB7EC; &#xC791;&#xC5C5;&#xC744; &#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; StringBuilder &#xB97C; &#xC4F0;&#xB294;&#xAC8C; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = Arrays.asList(<span class="string">&quot;foo&quot;</span>, <span class="string">&quot;bar&quot;</span>, <span class="string">&quot;baz&quot;</span>, <span class="string">&quot;qux&quot;</span>);</span><br><span class="line"></span><br><span class="line">StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line"><span class="keyword">for</span> (String s : list) {</span><br><span class="line">  sb.append(s);</span><br><span class="line">}</span><br><span class="line">System.out.println(sb);</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xBC18;&#xBCF5;&#xBB38; &#xC0C1;&#xC5D0;&#xC11C; &#xBB38;&#xC790;&#xC5F4; &#xC870;&#xD569;&#xC5D0; &#xB300;&#xD55C; &#xC131;&#xB2A5;&#xC744; &#xBE44;&#xAD50;&#xD574;&#xBCFC; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><img src="https://docs.google.com/spreadsheets/d/1dV4Pbe2_ZCsc9TDBYsN9u69a2a3xSjCAzxKR7I6fxzg/pubchart?oid=1847999196&amp;format=image" alt="http://www.pellegrino.link/2015/08/22/string-concatenation-with-java-8.html"></p>
+<h2 id="stringbuilder-&#xADF8;&#xB9AC;&#xACE0;-stringbuffer">StringBuilder &#xADF8;&#xB9AC;&#xACE0; StringBuffer</h2>
+<p>&#xB450; &#xD074;&#xB798;&#xC2A4;&#xC758; &#xCC28;&#xC774;&#xB294; multithreaded &#xD658;&#xACBD;&#xC5D0;&#xC11C; &#xB3D9;&#xAE30;&#xD654; &#xBCF4;&#xC7A5;&#xC774; &#xB418;&#xC5B4;&#xC788;&#xB290;&#xB0D0;&#xC758; &#xCC28;&#xC774;&#xC785;&#xB2C8;&#xB2E4;. multithreaded &#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; StringBuffer &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC154;&#xC57C; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xACB0;&#xB860;">&#xACB0;&#xB860;</h2>
+<ol>
+<li>&#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; + &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC4F0;&#xC790;.</li>
+<li>multithreaded &#xD658;&#xACBD;&#xC5D0;&#xC11C;&#xB294; StringBuffer</li>
+<li>&#xBC18;&#xBCF5;&#xBB38;&#xC5D0;&#xC11C;&#xC758; &#xC791;&#xC5C5;&#xC774;&#xB098; &#xB2E4;&#xC591;&#xD55C; &#xBB38;&#xC790;&#xC5F4; &#xC791;&#xC5C5; &#xCC98;&#xB9AC;&#xB294; StringBuilder &#xB610;&#xB294; StringBuffer</li>
+</ol>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         </div>
 
         <div id="bmc" align="center">
@@ -461,7 +478,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'futurecreator';
     
     
-    var disqus_url = 'http://futurecreator.github.io/2018/06/02/java-string-concatenation/';
+    var disqus_url = 'https://futurecreator.github.io/2018/06/02/java-string-concatenation/';
     
     (function() {
     var dsq = document.createElement('script');

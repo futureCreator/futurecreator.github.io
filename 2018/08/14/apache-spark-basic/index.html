@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
     <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
@@ -22,33 +22,31 @@
         
 
         
-        <meta name="description" content="아파치 스파크(Apache Spark) 스터디를 위해 정리한 자료입니다. 하둡 Hadoop 빅 데이터 처리나 데이터 분석 쪽에는 지식이 없어 하둡부터 간단하게 알아봤습니다.  동작 원리 하둡 프레임워크는 파일 시스템인 HDFS(Hadoop Distributed File System)과 데이터를 처리하는 맵리듀스(MapReduce) 엔진을 합친 것으로 대규모">
+        <meta name="description" content="&amp;#xC544;&amp;#xD30C;&amp;#xCE58; &amp;#xC2A4;&amp;#xD30C;&amp;#xD06C;(Apache Spark) &amp;#xC2A4;&amp;#xD130;&amp;#xB514;&amp;#xB97C; &amp;#xC704;&amp;#xD574; &amp;#xC815;&amp;#xB9AC;&amp;#xD55C; &amp;#xC790;&amp;#xB8CC;&amp;#xC785;&amp;#xB2C8;&amp;#xB2E4;. &amp;#xD558;&amp;#xB461; Ha">
 <meta name="keywords" content="basic,spark,hadoop,apache">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spark 아파치 스파크 (1) 소개">
-<meta property="og:url" content="http://futurecreator.github.io/2018/08/14/apache-spark-basic/index.html">
+<meta property="og:url" content="https://futurecreator.github.io/2018/08/14/apache-spark-basic/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="아파치 스파크(Apache Spark) 스터디를 위해 정리한 자료입니다. 하둡 Hadoop 빅 데이터 처리나 데이터 분석 쪽에는 지식이 없어 하둡부터 간단하게 알아봤습니다.  동작 원리 하둡 프레임워크는 파일 시스템인 HDFS(Hadoop Distributed File System)과 데이터를 처리하는 맵리듀스(MapReduce) 엔진을 합친 것으로 대규모">
+<meta property="og:description" content="&amp;#xC544;&amp;#xD30C;&amp;#xCE58; &amp;#xC2A4;&amp;#xD30C;&amp;#xD06C;(Apache Spark) &amp;#xC2A4;&amp;#xD130;&amp;#xB514;&amp;#xB97C; &amp;#xC704;&amp;#xD574; &amp;#xC815;&amp;#xB9AC;&amp;#xD55C; &amp;#xC790;&amp;#xB8CC;&amp;#xC785;&amp;#xB2C8;&amp;#xB2E4;. &amp;#xD558;&amp;#xB461; Ha">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://toppertips.com/wp-content/uploads/2018/03/Hadoop-1.0-to-3.0-History-768x396.png">
 <meta property="og:updated_time" content="2018-08-14T13:07:41.855Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spark 아파치 스파크 (1) 소개">
-<meta name="twitter:description" content="아파치 스파크(Apache Spark) 스터디를 위해 정리한 자료입니다. 하둡 Hadoop 빅 데이터 처리나 데이터 분석 쪽에는 지식이 없어 하둡부터 간단하게 알아봤습니다.  동작 원리 하둡 프레임워크는 파일 시스템인 HDFS(Hadoop Distributed File System)과 데이터를 처리하는 맵리듀스(MapReduce) 엔진을 합친 것으로 대규모">
+<meta name="twitter:description" content="&amp;#xC544;&amp;#xD30C;&amp;#xCE58; &amp;#xC2A4;&amp;#xD30C;&amp;#xD06C;(Apache Spark) &amp;#xC2A4;&amp;#xD130;&amp;#xB514;&amp;#xB97C; &amp;#xC704;&amp;#xD574; &amp;#xC815;&amp;#xB9AC;&amp;#xD55C; &amp;#xC790;&amp;#xB8CC;&amp;#xC785;&amp;#xB2C8;&amp;#xB2E4;. &amp;#xD558;&amp;#xB461; Ha">
 <meta name="twitter:image" content="http://toppertips.com/wp-content/uploads/2018/03/Hadoop-1.0-to-3.0-History-768x396.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
         
         
-        <link rel="canonical" href="http://futurecreator.github.io/2018/08/14/apache-spark-basic/">
+        <link rel="canonical" href="https://futurecreator.github.io/2018/08/14/apache-spark-basic/">
         
         
             <link rel="icon" href="/images/favicions/favicon6.png">
         
         <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-        <!-- <link rel="stylesheet" href="/vendor/titillium-web/styles.css"> -->
-        <!-- <link rel="stylesheet" href="/vendor/source-code-pro/styles.css"> -->
         <link rel="stylesheet" href="/css/style.css">
         <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
         
@@ -202,128 +200,147 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/apache/">apache</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hadoop/">hadoop</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
  -->
-            <span class="reading-time">⏱ 5 분</span>
+            <span class="reading-time">⏱ 24 분</span>
         </div>
+
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><a href="https://spark.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">아파치 스파크(Apache Spark)</a> 스터디를 위해 정리한 자료입니다.</p>
-<h2 id="하둡-hadoop">하둡 Hadoop</h2>
-<p>빅 데이터 처리나 데이터 분석 쪽에는 지식이 없어 하둡부터 간단하게 알아봤습니다.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><a href="https://spark.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">&#xC544;&#xD30C;&#xCE58; &#xC2A4;&#xD30C;&#xD06C;(Apache Spark)</a> &#xC2A4;&#xD130;&#xB514;&#xB97C; &#xC704;&#xD574; &#xC815;&#xB9AC;&#xD55C; &#xC790;&#xB8CC;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xD558;&#xB461;-hadoop">&#xD558;&#xB461; Hadoop</h2>
+<p>&#xBE45; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC;&#xB098; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D; &#xCABD;&#xC5D0;&#xB294; &#xC9C0;&#xC2DD;&#xC774; &#xC5C6;&#xC5B4; &#xD558;&#xB461;&#xBD80;&#xD130; &#xAC04;&#xB2E8;&#xD558;&#xAC8C; &#xC54C;&#xC544;&#xBD24;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p><img src="http://toppertips.com/wp-content/uploads/2018/03/Hadoop-1.0-to-3.0-History-768x396.png" alt="http://toppertips.com/hadoop-3-0-architecture/"></p>
-<h3 id="동작-원리">동작 원리</h3>
-<p>하둡 프레임워크는 파일 시스템인 HDFS(<em>Hadoop Distributed File System</em>)과 데이터를 처리하는 맵리듀스(<em>MapReduce</em>) 엔진을 합친 것으로 대규모 클러스터 상의 데이터 처리를 다음과 같은 방식으로 단순화합니다.</p>
+<h3 id="&#xB3D9;&#xC791;-&#xC6D0;&#xB9AC;">&#xB3D9;&#xC791; &#xC6D0;&#xB9AC;</h3>
+<p>&#xD558;&#xB461; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB294; &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC778; HDFS(<em>Hadoop Distributed File System</em>)&#xACFC; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;(<em>MapReduce</em>) &#xC5D4;&#xC9C4;&#xC744; &#xD569;&#xCE5C; &#xAC83;&#xC73C;&#xB85C; &#xB300;&#xADDC;&#xBAA8; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xC0C1;&#xC758; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC;&#xB97C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xB2E8;&#xC21C;&#xD654;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <ol>
-<li>잡을 잘게 분할하고 클러스터의 모든 노드로 매핑(<em>map</em>)</li>
-<li>각 노드는 잡을 처리한 중간결과를 생성하고</li>
-<li>분할된 중간 결과를 집계(<em>reduce</em>)해서 최종 결과를 낸다.</li>
+<li>&#xC7A1;&#xC744; &#xC798;&#xAC8C; &#xBD84;&#xD560;&#xD558;&#xACE0; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xC758; &#xBAA8;&#xB4E0; &#xB178;&#xB4DC;&#xB85C; &#xB9E4;&#xD551;(<em>map</em>)</li>
+<li>&#xAC01; &#xB178;&#xB4DC;&#xB294; &#xC7A1;&#xC744; &#xCC98;&#xB9AC;&#xD55C; &#xC911;&#xAC04;&#xACB0;&#xACFC;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0;</li>
+<li>&#xBD84;&#xD560;&#xB41C; &#xC911;&#xAC04; &#xACB0;&#xACFC;&#xB97C; &#xC9D1;&#xACC4;(<em>reduce</em>)&#xD574;&#xC11C; &#xCD5C;&#xC885; &#xACB0;&#xACFC;&#xB97C; &#xB0B8;&#xB2E4;.</li>
 </ol>
-<p>이를 통해서 데이터를 여러 노드로 분산(<em>distribution</em>)하고 전체 연산을 잘게 나누어 동시에 처리하는 병렬 처리(<em>parallelization</em>)가 가능하고,  부분적으로 장애가 발생할 경우 전체 시스템은 동작할 수 있는 장애 내성(<em>fault tolerance</em>)을 갖는 시스템을 만들 수 있습니다.</p>
-<p>맵리듀스의 핵심은 최소한의 API(<code>map</code>과 <code>reduce</code>) 만 노출해 대규모 분산 시스템을 다루는 복잡한 작업을 감추고, 병렬 처리를 프로그래밍적 방법으로 지원하는 점입니다. 또한 다루는 데이터가 크기 때문에 데이터를 가져와서 처리하는 것이 아니라, 데이터가 저장된 곳으로 프로그램을 전송합니다. 이 점이 바로 기존 데이터 웨어하우스 및 관계형 데이터베이스와 맵리듀스의 가장 큰 차이점입니다.</p>
-<h3 id="한계">한계</h3>
+<p>&#xC774;&#xB97C; &#xD1B5;&#xD574;&#xC11C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC5EC;&#xB7EC; &#xB178;&#xB4DC;&#xB85C; &#xBD84;&#xC0B0;(<em>distribution</em>)&#xD558;&#xACE0; &#xC804;&#xCCB4; &#xC5F0;&#xC0B0;&#xC744; &#xC798;&#xAC8C; &#xB098;&#xB204;&#xC5B4; &#xB3D9;&#xC2DC;&#xC5D0; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xBCD1;&#xB82C; &#xCC98;&#xB9AC;(<em>parallelization</em>)&#xAC00; &#xAC00;&#xB2A5;&#xD558;&#xACE0;,  &#xBD80;&#xBD84;&#xC801;&#xC73C;&#xB85C; &#xC7A5;&#xC560;&#xAC00; &#xBC1C;&#xC0DD;&#xD560; &#xACBD;&#xC6B0; &#xC804;&#xCCB4; &#xC2DC;&#xC2A4;&#xD15C;&#xC740; &#xB3D9;&#xC791;&#xD560; &#xC218; &#xC788;&#xB294; &#xC7A5;&#xC560; &#xB0B4;&#xC131;(<em>fault tolerance</em>)&#xC744; &#xAC16;&#xB294; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;&#xC758; &#xD575;&#xC2EC;&#xC740; &#xCD5C;&#xC18C;&#xD55C;&#xC758; API(<code>map</code>&#xACFC; <code>reduce</code>) &#xB9CC; &#xB178;&#xCD9C;&#xD574; &#xB300;&#xADDC;&#xBAA8; &#xBD84;&#xC0B0; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xB2E4;&#xB8E8;&#xB294; &#xBCF5;&#xC7A1;&#xD55C; &#xC791;&#xC5C5;&#xC744; &#xAC10;&#xCD94;&#xACE0;, &#xBCD1;&#xB82C; &#xCC98;&#xB9AC;&#xB97C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC801; &#xBC29;&#xBC95;&#xC73C;&#xB85C; &#xC9C0;&#xC6D0;&#xD558;&#xB294; &#xC810;&#xC785;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xB2E4;&#xB8E8;&#xB294; &#xB370;&#xC774;&#xD130;&#xAC00; &#xD06C;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAC00;&#xC838;&#xC640;&#xC11C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC544;&#xB2C8;&#xB77C;, &#xB370;&#xC774;&#xD130;&#xAC00; &#xC800;&#xC7A5;&#xB41C; &#xACF3;&#xC73C;&#xB85C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC804;&#xC1A1;&#xD569;&#xB2C8;&#xB2E4;. &#xC774; &#xC810;&#xC774; &#xBC14;&#xB85C; &#xAE30;&#xC874; &#xB370;&#xC774;&#xD130; &#xC6E8;&#xC5B4;&#xD558;&#xC6B0;&#xC2A4; &#xBC0F; &#xAD00;&#xACC4;&#xD615; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC640; &#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;&#xC758; &#xAC00;&#xC7A5; &#xD070; &#xCC28;&#xC774;&#xC810;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xD55C;&#xACC4;">&#xD55C;&#xACC4;</h3>
 <ul>
-<li>맵리듀스 잡의 결과를 다른 잡에서 사용하려면 이 결과를 HDFS 에 저장해야 하기 때문에, 이전 잡의 결과가 다음 잡의 입력이 되는 반복 알고리즘에는 본질적으로 맞지 않습니다.</li>
-<li>나눴다가 다시 합치는 하둡의 2단계 패러다임을 적용하기 경우가 있습니다.</li>
-<li>하둡은 low-level 프레임워크이다 보니 데이터를 조작하는 high-level 프레임워크나 도구가 많아 환경이 복잡해졌습니다.</li>
+<li>&#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4; &#xC7A1;&#xC758; &#xACB0;&#xACFC;&#xB97C; &#xB2E4;&#xB978; &#xC7A1;&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD558;&#xB824;&#xBA74; &#xC774; &#xACB0;&#xACFC;&#xB97C; HDFS &#xC5D0; &#xC800;&#xC7A5;&#xD574;&#xC57C; &#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xC774;&#xC804; &#xC7A1;&#xC758; &#xACB0;&#xACFC;&#xAC00; &#xB2E4;&#xC74C; &#xC7A1;&#xC758; &#xC785;&#xB825;&#xC774; &#xB418;&#xB294; &#xBC18;&#xBCF5; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xC5D0;&#xB294; &#xBCF8;&#xC9C8;&#xC801;&#xC73C;&#xB85C; &#xB9DE;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xB098;&#xB234;&#xB2E4;&#xAC00; &#xB2E4;&#xC2DC; &#xD569;&#xCE58;&#xB294; &#xD558;&#xB461;&#xC758; 2&#xB2E8;&#xACC4; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xAE30; &#xACBD;&#xC6B0;&#xAC00; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xD558;&#xB461;&#xC740; low-level &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xC774;&#xB2E4; &#xBCF4;&#xB2C8; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC870;&#xC791;&#xD558;&#xB294; high-level &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB098; &#xB3C4;&#xAD6C;&#xAC00; &#xB9CE;&#xC544; &#xD658;&#xACBD;&#xC774; &#xBCF5;&#xC7A1;&#xD574;&#xC84C;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
 </ul>
-<h2 id="스파크-spark">스파크 Spark</h2>
+<h2 id="&#xC2A4;&#xD30C;&#xD06C;-spark">&#xC2A4;&#xD30C;&#xD06C; Spark</h2>
 <p><img src="http://backtobazics.com/wp-content/themes/twentyfourteen/images/spark/spark-architecture-and-ecosystem.png" alt="http://backtobazics.com/big-data/spark/understanding-apache-spark-architecture/"></p>
-<h3 id="기능">기능</h3>
-<p>빅데이터 애플리케이션에 필요한 대부분의 기능을 지원합니다.</p>
+<h3 id="&#xAE30;&#xB2A5;">&#xAE30;&#xB2A5;</h3>
+<p>&#xBE45;&#xB370;&#xC774;&#xD130; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB300;&#xBD80;&#xBD84;&#xC758; &#xAE30;&#xB2A5;&#xC744; &#xC9C0;&#xC6D0;&#xD569;&#xB2C8;&#xB2E4;.</p>
 <ul>
-<li>맵리듀스와 유사한 일괄 처리 기능</li>
-<li>실시간 데이터 처리 기능 (<em>Spark Streaming</em>)</li>
-<li>SQL과 유사한 정형 데이터 처리 기능 (<em>Spark SQL</em>)</li>
-<li>그래프 알고리즘 (<em>Spark GraphX</em>)</li>
-<li>머신 러닝 알고리즘 (<em>Spark MLlib</em>)</li>
+<li>&#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;&#xC640; &#xC720;&#xC0AC;&#xD55C; &#xC77C;&#xAD04; &#xCC98;&#xB9AC; &#xAE30;&#xB2A5;</li>
+<li>&#xC2E4;&#xC2DC;&#xAC04; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC; &#xAE30;&#xB2A5; (<em>Spark Streaming</em>)</li>
+<li>SQL&#xACFC; &#xC720;&#xC0AC;&#xD55C; &#xC815;&#xD615; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC; &#xAE30;&#xB2A5; (<em>Spark SQL</em>)</li>
+<li>&#xADF8;&#xB798;&#xD504; &#xC54C;&#xACE0;&#xB9AC;&#xC998; (<em>Spark GraphX</em>)</li>
+<li>&#xBA38;&#xC2E0; &#xB7EC;&#xB2DD; &#xC54C;&#xACE0;&#xB9AC;&#xC998; (<em>Spark MLlib</em>)</li>
 </ul>
-<h3 id="장점">장점</h3>
-<p>스파크는 메모리 효율을 높여서 하둡의 맵리듀스보다 10~100배 빠르게 설계되었습니다. 맵리듀스처럼 잡에 필요한 데이터를 디스크에 매번 가져오는 대신, 데이터를 메모리에 캐시로 저장하는 인-메모리 실행 모델로 비약적인 성능을 향상시켰습니다. 이러한 성능 향상은 특히 머신 러닝, 그래프 알고리즘 등 반복 알고리즘과 기타 데이터를 재사용하는 모든 유형의 작업에 많은 영향을 줍니다.</p>
-<p>사용자가 클러스터를 다루고 있다는 사실을 인지할 필요가 없도록 설계된 컬렉션 기반의 API 제공합니다. 또한 맵리듀스는 기본적으로 메인, 매퍼, 리듀스 클래스 세 가지를 만들어야 하지만 스파크는 동일한 문제를 간단한 코드로 짤 수 있습니다.</p>
-<p>로컬 프로그램을 작성하는 것과 유사한 방식으로 분산 프로그램을 작성할 수 있습니다. 그리고 여러 노드에 분산된 데이터를 참조하고 복잡한 병렬 프로그래밍으로 자동 변환됩니다.</p>
-<p>스칼라, 자바, 파이썬, R 을 지원합니다. 특히 스칼라를 사용하면 융통성, 유연성, 데이터 분석에 적합한 함수형 프로그래밍 개념을 사용할 수 있습니다.</p>
-<p>대화형 콘솔인 스파크 shell(<em>Read-Eval-Print Loop, REPL</em>)을 이용해 간단한 실험을 하거나 테스트를 할 수 있습니다. 프로그램 문제를 테스트하기 위해 컴파일과 배포를 반복하지 않아도 되며, 전체 데이터를 처리하는 작업도 REPL에서 처리할 수 있습니다.</p>
-<p>스파크는 다양한 유형의 클러스터 매니저를 사용할 수 있다. 스파크 standalone 클러스터, 하둡 YARN(<em>Yet Another Resource Negotiator</em>) 클러스터, 아파치 메소스(<em>Mesos</em>) 클러스터 등을 사용할 수 있습니다.</p>
-<p>일괄 처리 작업이나 데이터 마이닝 같은 온라인 분석 처리 (<em>Online Analytical Processing, OLAP</em>)에 유용합니다.</p>
-<h3 id="단점">단점</h3>
-<p>데이터 셋이 적어서 단일 노드로 충분한 애플리케이션에서 스파크는 분산 아키텍처로 인해 오히려 성능이 떨어집니다. 또한 대량의 트랜잭션을 빠르게 처리해야 하는 애플리케이션은 스파크가 온라인 트랜잭션 처리를 염두에 두고 설계되지 않았기 때문에 유용하지 않습니다.</p>
-<h2 id="컴포넌트">컴포넌트</h2>
+<h3 id="&#xC7A5;&#xC810;">&#xC7A5;&#xC810;</h3>
+<p>&#xC2A4;&#xD30C;&#xD06C;&#xB294; &#xBA54;&#xBAA8;&#xB9AC; &#xD6A8;&#xC728;&#xC744; &#xB192;&#xC5EC;&#xC11C; &#xD558;&#xB461;&#xC758; &#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;&#xBCF4;&#xB2E4; 10~100&#xBC30; &#xBE60;&#xB974;&#xAC8C; &#xC124;&#xACC4;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;&#xCC98;&#xB7FC; &#xC7A1;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xB9E4;&#xBC88; &#xAC00;&#xC838;&#xC624;&#xB294; &#xB300;&#xC2E0;, &#xB370;&#xC774;&#xD130;&#xB97C; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xCE90;&#xC2DC;&#xB85C; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xC778;-&#xBA54;&#xBAA8;&#xB9AC; &#xC2E4;&#xD589; &#xBAA8;&#xB378;&#xB85C; &#xBE44;&#xC57D;&#xC801;&#xC778; &#xC131;&#xB2A5;&#xC744; &#xD5A5;&#xC0C1;&#xC2DC;&#xCF30;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB7EC;&#xD55C; &#xC131;&#xB2A5; &#xD5A5;&#xC0C1;&#xC740; &#xD2B9;&#xD788; &#xBA38;&#xC2E0; &#xB7EC;&#xB2DD;, &#xADF8;&#xB798;&#xD504; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xB4F1; &#xBC18;&#xBCF5; &#xC54C;&#xACE0;&#xB9AC;&#xC998;&#xACFC; &#xAE30;&#xD0C0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC7AC;&#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xC720;&#xD615;&#xC758; &#xC791;&#xC5C5;&#xC5D0; &#xB9CE;&#xC740; &#xC601;&#xD5A5;&#xC744; &#xC90D;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB97C; &#xB2E4;&#xB8E8;&#xACE0; &#xC788;&#xB2E4;&#xB294; &#xC0AC;&#xC2E4;&#xC744; &#xC778;&#xC9C0;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xB3C4;&#xB85D; &#xC124;&#xACC4;&#xB41C; &#xCEEC;&#xB809;&#xC158; &#xAE30;&#xBC18;&#xC758; API &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xB9F5;&#xB9AC;&#xB4C0;&#xC2A4;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; &#xBA54;&#xC778;, &#xB9E4;&#xD37C;, &#xB9AC;&#xB4C0;&#xC2A4; &#xD074;&#xB798;&#xC2A4; &#xC138; &#xAC00;&#xC9C0;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD558;&#xC9C0;&#xB9CC; &#xC2A4;&#xD30C;&#xD06C;&#xB294; &#xB3D9;&#xC77C;&#xD55C; &#xBB38;&#xC81C;&#xB97C; &#xAC04;&#xB2E8;&#xD55C; &#xCF54;&#xB4DC;&#xB85C; &#xC9E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB85C;&#xCEEC; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD558;&#xB294; &#xAC83;&#xACFC; &#xC720;&#xC0AC;&#xD55C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xBD84;&#xC0B0; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC5EC;&#xB7EC; &#xB178;&#xB4DC;&#xC5D0; &#xBD84;&#xC0B0;&#xB41C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC38;&#xC870;&#xD558;&#xACE0; &#xBCF5;&#xC7A1;&#xD55C; &#xBCD1;&#xB82C; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC73C;&#xB85C; &#xC790;&#xB3D9; &#xBCC0;&#xD658;&#xB429;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC2A4;&#xCE7C;&#xB77C;, &#xC790;&#xBC14;, &#xD30C;&#xC774;&#xC36C;, R &#xC744; &#xC9C0;&#xC6D0;&#xD569;&#xB2C8;&#xB2E4;. &#xD2B9;&#xD788; &#xC2A4;&#xCE7C;&#xB77C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xC735;&#xD1B5;&#xC131;, &#xC720;&#xC5F0;&#xC131;, &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D;&#xC5D0; &#xC801;&#xD569;&#xD55C; &#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xAC1C;&#xB150;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB300;&#xD654;&#xD615; &#xCF58;&#xC194;&#xC778; &#xC2A4;&#xD30C;&#xD06C; shell(<em>Read-Eval-Print Loop, REPL</em>)&#xC744; &#xC774;&#xC6A9;&#xD574; &#xAC04;&#xB2E8;&#xD55C; &#xC2E4;&#xD5D8;&#xC744; &#xD558;&#xAC70;&#xB098; &#xD14C;&#xC2A4;&#xD2B8;&#xB97C; &#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD504;&#xB85C;&#xADF8;&#xB7A8; &#xBB38;&#xC81C;&#xB97C; &#xD14C;&#xC2A4;&#xD2B8;&#xD558;&#xAE30; &#xC704;&#xD574; &#xCEF4;&#xD30C;&#xC77C;&#xACFC; &#xBC30;&#xD3EC;&#xB97C; &#xBC18;&#xBCF5;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB418;&#xBA70;, &#xC804;&#xCCB4; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xC791;&#xC5C5;&#xB3C4; REPL&#xC5D0;&#xC11C; &#xCC98;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC2A4;&#xD30C;&#xD06C;&#xB294; &#xB2E4;&#xC591;&#xD55C; &#xC720;&#xD615;&#xC758; &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB9E4;&#xB2C8;&#xC800;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC2A4;&#xD30C;&#xD06C; standalone &#xD074;&#xB7EC;&#xC2A4;&#xD130;, &#xD558;&#xB461; YARN(<em>Yet Another Resource Negotiator</em>) &#xD074;&#xB7EC;&#xC2A4;&#xD130;, &#xC544;&#xD30C;&#xCE58; &#xBA54;&#xC18C;&#xC2A4;(<em>Mesos</em>) &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xB4F1;&#xC744; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC77C;&#xAD04; &#xCC98;&#xB9AC; &#xC791;&#xC5C5;&#xC774;&#xB098; &#xB370;&#xC774;&#xD130; &#xB9C8;&#xC774;&#xB2DD; &#xAC19;&#xC740; &#xC628;&#xB77C;&#xC778; &#xBD84;&#xC11D; &#xCC98;&#xB9AC; (<em>Online Analytical Processing, OLAP</em>)&#xC5D0; &#xC720;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h3 id="&#xB2E8;&#xC810;">&#xB2E8;&#xC810;</h3>
+<p>&#xB370;&#xC774;&#xD130; &#xC14B;&#xC774; &#xC801;&#xC5B4;&#xC11C; &#xB2E8;&#xC77C; &#xB178;&#xB4DC;&#xB85C; &#xCDA9;&#xBD84;&#xD55C; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC5D0;&#xC11C; &#xC2A4;&#xD30C;&#xD06C;&#xB294; &#xBD84;&#xC0B0; &#xC544;&#xD0A4;&#xD14D;&#xCC98;&#xB85C; &#xC778;&#xD574; &#xC624;&#xD788;&#xB824; &#xC131;&#xB2A5;&#xC774; &#xB5A8;&#xC5B4;&#xC9D1;&#xB2C8;&#xB2E4;. &#xB610;&#xD55C; &#xB300;&#xB7C9;&#xC758; &#xD2B8;&#xB79C;&#xC7AD;&#xC158;&#xC744; &#xBE60;&#xB974;&#xAC8C; &#xCC98;&#xB9AC;&#xD574;&#xC57C; &#xD558;&#xB294; &#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158;&#xC740; &#xC2A4;&#xD30C;&#xD06C;&#xAC00; &#xC628;&#xB77C;&#xC778; &#xD2B8;&#xB79C;&#xC7AD;&#xC158; &#xCC98;&#xB9AC;&#xB97C; &#xC5FC;&#xB450;&#xC5D0; &#xB450;&#xACE0; &#xC124;&#xACC4;&#xB418;&#xC9C0; &#xC54A;&#xC558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC720;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;">&#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;</h2>
 <h3 id="spark-core">Spark Core</h3>
 <ul>
-<li>스파크 잡과 다른 스파크 컴포넌트에 필요한 기본 기능을 제공합니다.</li>
-<li>특히 분산 데이터 컬렉션(데이터셋)을 추상화한 객체인 RDD(<em>Resilent Distributed Dataset</em>)로 다양한 연산 및 변환 메소드를 제공합니다. RDD 는 노드에 장애가 발생해도 데이터셋을 재구성할 수 있는 복원성을 가지고 있습니다.</li>
-<li>스파크 코어는 HDFS, GlusterFS, 아마존 S3 등 다양한 파일 시스템에 접근할 수 있습니다.</li>
-<li>공유 변수(<em>broadcast variable</em>)와 누적 변수(<em>accumulator</em>)를 사용해 컴퓨팅 노드 간 정보 공유합니다.</li>
-<li>스파크 코어에는 네트워킹, 보안, 스케쥴링 및 데이터 셔플링(<em>shuffling</em>) 등 기본 기능을 제공합니다.</li>
+<li>&#xC2A4;&#xD30C;&#xD06C; &#xC7A1;&#xACFC; &#xB2E4;&#xB978; &#xC2A4;&#xD30C;&#xD06C; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xC5D0; &#xD544;&#xC694;&#xD55C; &#xAE30;&#xBCF8; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xD2B9;&#xD788; &#xBD84;&#xC0B0; &#xB370;&#xC774;&#xD130; &#xCEEC;&#xB809;&#xC158;(&#xB370;&#xC774;&#xD130;&#xC14B;)&#xC744; &#xCD94;&#xC0C1;&#xD654;&#xD55C; &#xAC1D;&#xCCB4;&#xC778; RDD(<em>Resilent Distributed Dataset</em>)&#xB85C; &#xB2E4;&#xC591;&#xD55C; &#xC5F0;&#xC0B0; &#xBC0F; &#xBCC0;&#xD658; &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;. RDD &#xB294; &#xB178;&#xB4DC;&#xC5D0; &#xC7A5;&#xC560;&#xAC00; &#xBC1C;&#xC0DD;&#xD574;&#xB3C4; &#xB370;&#xC774;&#xD130;&#xC14B;&#xC744; &#xC7AC;&#xAD6C;&#xC131;&#xD560; &#xC218; &#xC788;&#xB294; &#xBCF5;&#xC6D0;&#xC131;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC2A4;&#xD30C;&#xD06C; &#xCF54;&#xC5B4;&#xB294; HDFS, GlusterFS, &#xC544;&#xB9C8;&#xC874; S3 &#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xD30C;&#xC77C; &#xC2DC;&#xC2A4;&#xD15C;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xACF5;&#xC720; &#xBCC0;&#xC218;(<em>broadcast variable</em>)&#xC640; &#xB204;&#xC801; &#xBCC0;&#xC218;(<em>accumulator</em>)&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xCEF4;&#xD4E8;&#xD305; &#xB178;&#xB4DC; &#xAC04; &#xC815;&#xBCF4; &#xACF5;&#xC720;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC2A4;&#xD30C;&#xD06C; &#xCF54;&#xC5B4;&#xC5D0;&#xB294; &#xB124;&#xD2B8;&#xC6CC;&#xD0B9;, &#xBCF4;&#xC548;, &#xC2A4;&#xCF00;&#xC974;&#xB9C1; &#xBC0F; &#xB370;&#xC774;&#xD130; &#xC154;&#xD50C;&#xB9C1;(<em>shuffling</em>) &#xB4F1; &#xAE30;&#xBCF8; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <h3 id="spark-sql">Spark SQL</h3>
 <ul>
-<li>스파크와 하이브 SQL 이 지원하는 SQL 을 사용해 대규모 분산 정형 데이터를 다룰 수 있습니다.</li>
-<li>JSON 파일, Parquet 파일, RDB 테이블, 하이브 테이블 등 다양한 정형 데이터를 읽고 쓸 수 있습니다.</li>
-<li>DataFraem 과 Dataset 에 적용된 연산을 일정 시점에 RDD 연산으로 변환해 일반 스파크 잡으로 실행 합니다.</li>
+<li>&#xC2A4;&#xD30C;&#xD06C;&#xC640; &#xD558;&#xC774;&#xBE0C; SQL &#xC774; &#xC9C0;&#xC6D0;&#xD558;&#xB294; SQL &#xC744; &#xC0AC;&#xC6A9;&#xD574; &#xB300;&#xADDC;&#xBAA8; &#xBD84;&#xC0B0; &#xC815;&#xD615; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB2E4;&#xB8F0; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>JSON &#xD30C;&#xC77C;, Parquet &#xD30C;&#xC77C;, RDB &#xD14C;&#xC774;&#xBE14;, &#xD558;&#xC774;&#xBE0C; &#xD14C;&#xC774;&#xBE14; &#xB4F1; &#xB2E4;&#xC591;&#xD55C; &#xC815;&#xD615; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC77D;&#xACE0; &#xC4F8; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>DataFraem &#xACFC; Dataset &#xC5D0; &#xC801;&#xC6A9;&#xB41C; &#xC5F0;&#xC0B0;&#xC744; &#xC77C;&#xC815; &#xC2DC;&#xC810;&#xC5D0; RDD &#xC5F0;&#xC0B0;&#xC73C;&#xB85C; &#xBCC0;&#xD658;&#xD574; &#xC77C;&#xBC18; &#xC2A4;&#xD30C;&#xD06C; &#xC7A1;&#xC73C;&#xB85C; &#xC2E4;&#xD589; &#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <h3 id="spark-streaming">Spark Streaming</h3>
 <ul>
-<li>실시간 스트리밍 데이터를 처리하는 프레임워크입니다.</li>
-<li>HDFS, 아파치 카프카(<em>Kafka</em>), 아파치 플럼(<em>Flume</em>), 트위터, ZeroMQ 와 더불어 커스텀 리소스도 사용할 수 있습니다.</li>
-<li>이산 스트림(<em>Discretized Stream, DStream</em>) 방식으로 스트리밍 데이터를 표현하는데, 가장 마지막 타임 윈도 안에 유입된 데이터를 RDD 로 구성해 주기적으로 생성합니다.</li>
-<li>다른 스파크 컴포넌트와 함께 사용할 수 있어 실시간 데이터 처리를 머신 러닝 작업, SQL 작업, 그래프 연산 등을 통합할 수 있습니다.</li>
+<li>&#xC2E4;&#xC2DC;&#xAC04; &#xC2A4;&#xD2B8;&#xB9AC;&#xBC0D; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xC785;&#xB2C8;&#xB2E4;.</li>
+<li>HDFS, &#xC544;&#xD30C;&#xCE58; &#xCE74;&#xD504;&#xCE74;(<em>Kafka</em>), &#xC544;&#xD30C;&#xCE58; &#xD50C;&#xB7FC;(<em>Flume</em>), &#xD2B8;&#xC704;&#xD130;, ZeroMQ &#xC640; &#xB354;&#xBD88;&#xC5B4; &#xCEE4;&#xC2A4;&#xD140; &#xB9AC;&#xC18C;&#xC2A4;&#xB3C4; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
+<li>&#xC774;&#xC0B0; &#xC2A4;&#xD2B8;&#xB9BC;(<em>Discretized Stream, DStream</em>) &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC2A4;&#xD2B8;&#xB9AC;&#xBC0D; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD45C;&#xD604;&#xD558;&#xB294;&#xB370;, &#xAC00;&#xC7A5; &#xB9C8;&#xC9C0;&#xB9C9; &#xD0C0;&#xC784; &#xC708;&#xB3C4; &#xC548;&#xC5D0; &#xC720;&#xC785;&#xB41C; &#xB370;&#xC774;&#xD130;&#xB97C; RDD &#xB85C; &#xAD6C;&#xC131;&#xD574; &#xC8FC;&#xAE30;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.</li>
+<li>&#xB2E4;&#xB978; &#xC2A4;&#xD30C;&#xD06C; &#xCEF4;&#xD3EC;&#xB10C;&#xD2B8;&#xC640; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC5B4; &#xC2E4;&#xC2DC;&#xAC04; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC;&#xB97C; &#xBA38;&#xC2E0; &#xB7EC;&#xB2DD; &#xC791;&#xC5C5;, SQL &#xC791;&#xC5C5;, &#xADF8;&#xB798;&#xD504; &#xC5F0;&#xC0B0; &#xB4F1;&#xC744; &#xD1B5;&#xD569;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <h3 id="spark-mllib">Spark MLlib</h3>
 <ul>
-<li>머신 러닝 알고리즘 라이브러리입니다.</li>
-<li>RDD 또는 DataFrame 의 데이터셋을 변환하는 머신 러닝 모델을 구현할 수 있습니다.</li>
+<li>&#xBA38;&#xC2E0; &#xB7EC;&#xB2DD; &#xC54C;&#xACE0;&#xB9AC;&#xC998; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xC785;&#xB2C8;&#xB2E4;.</li>
+<li>RDD &#xB610;&#xB294; DataFrame &#xC758; &#xB370;&#xC774;&#xD130;&#xC14B;&#xC744; &#xBCC0;&#xD658;&#xD558;&#xB294; &#xBA38;&#xC2E0; &#xB7EC;&#xB2DD; &#xBAA8;&#xB378;&#xC744; &#xAD6C;&#xD604;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <h3 id="spark-graphx">Spark GraphX</h3>
 <ul>
-<li>그래프는 정점과 두 정점을 잇는 간선으로 구성된 데이터 구조입니다.</li>
-<li>그래프 RDD(EdgeRDD 및 VertexRDD) 형태의 그래프 구조를 만들 수 있는 기능을 제공합니다.</li>
+<li>&#xADF8;&#xB798;&#xD504;&#xB294; &#xC815;&#xC810;&#xACFC; &#xB450; &#xC815;&#xC810;&#xC744; &#xC787;&#xB294; &#xAC04;&#xC120;&#xC73C;&#xB85C; &#xAD6C;&#xC131;&#xB41C; &#xB370;&#xC774;&#xD130; &#xAD6C;&#xC870;&#xC785;&#xB2C8;&#xB2E4;.</li>
+<li>&#xADF8;&#xB798;&#xD504; RDD(EdgeRDD &#xBC0F; VertexRDD) &#xD615;&#xD0DC;&#xC758; &#xADF8;&#xB798;&#xD504; &#xAD6C;&#xC870;&#xB97C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xB294; &#xAE30;&#xB2A5;&#xC744; &#xC81C;&#xACF5;&#xD569;&#xB2C8;&#xB2E4;.</li>
 </ul>
 <h2 id="spark-ecosystem">Spark Ecosystem</h2>
-<p>기존 하둡의 생태계(<em>ecosystem</em>)는 다음과 같습니다.</p>
+<p>&#xAE30;&#xC874; &#xD558;&#xB461;&#xC758; &#xC0DD;&#xD0DC;&#xACC4;(<em>ecosystem</em>)&#xB294; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
 <p><img src="http://www.bogotobogo.com/Hadoop/images/Ecosystem/Hadoop_Ecosystem3.png" alt="http://www.bogotobogo.com/Hadoop/BigData_hadoop_Ecosystem.php"></p>
-<h3 id="데이터-변환-및-조작하는-함수를-제공하는-분석-도구">데이터 변환 및 조작하는 함수를 제공하는 분석 도구</h3>
+<h3 id="&#xB370;&#xC774;&#xD130;-&#xBCC0;&#xD658;-&#xBC0F;-&#xC870;&#xC791;&#xD558;&#xB294;-&#xD568;&#xC218;&#xB97C;-&#xC81C;&#xACF5;&#xD558;&#xB294;-&#xBD84;&#xC11D;-&#xB3C4;&#xAD6C;">&#xB370;&#xC774;&#xD130; &#xBCC0;&#xD658; &#xBC0F; &#xC870;&#xC791;&#xD558;&#xB294; &#xD568;&#xC218;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xBD84;&#xC11D; &#xB3C4;&#xAD6C;</h3>
 <ul>
-<li><a href="https://mahout.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Mahout</a> : 스케일러블한 머신 러닝 프레임워크</li>
-<li><a href="http://giraph.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Giraph</a> : 빅데이터 그래프 프로세싱</li>
-<li><a href="https://pig.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Pig</a> : 대용량 데이터 분석 플랫폼</li>
-<li><a href="https://hive.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Hive</a> : 데이터 웨어하우스</li>
-<li><a href="https://drill.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Drill</a> : 대규모 데이터의 SQL 분석 제공</li>
-<li><a href="https://impala.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Impala</a> : SQL 병렬 처리 엔진</li>
+<li><a href="https://mahout.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Mahout</a> : &#xC2A4;&#xCF00;&#xC77C;&#xB7EC;&#xBE14;&#xD55C; &#xBA38;&#xC2E0; &#xB7EC;&#xB2DD; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;</li>
+<li><a href="http://giraph.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Giraph</a> : &#xBE45;&#xB370;&#xC774;&#xD130; &#xADF8;&#xB798;&#xD504; &#xD504;&#xB85C;&#xC138;&#xC2F1;</li>
+<li><a href="https://pig.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Pig</a> : &#xB300;&#xC6A9;&#xB7C9; &#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D; &#xD50C;&#xB7AB;&#xD3FC;</li>
+<li><a href="https://hive.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Hive</a> : &#xB370;&#xC774;&#xD130; &#xC6E8;&#xC5B4;&#xD558;&#xC6B0;&#xC2A4;</li>
+<li><a href="https://drill.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Drill</a> : &#xB300;&#xADDC;&#xBAA8; &#xB370;&#xC774;&#xD130;&#xC758; SQL &#xBD84;&#xC11D; &#xC81C;&#xACF5;</li>
+<li><a href="https://impala.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Impala</a> : SQL &#xBCD1;&#xB82C; &#xCC98;&#xB9AC; &#xC5D4;&#xC9C4;</li>
 </ul>
-<h3 id="클러스터-관리-도구">클러스터 관리 도구</h3>
+<h3 id="&#xD074;&#xB7EC;&#xC2A4;&#xD130;-&#xAD00;&#xB9AC;-&#xB3C4;&#xAD6C;">&#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xAD00;&#xB9AC; &#xB3C4;&#xAD6C;</h3>
 <ul>
-<li><a href="https://ambari.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Ambari</a> : 클러스터 관리 도구 (프로비저닝, 관리, 모니터링 등)</li>
+<li><a href="https://ambari.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Ambari</a> : &#xD074;&#xB7EC;&#xC2A4;&#xD130; &#xAD00;&#xB9AC; &#xB3C4;&#xAD6C; (&#xD504;&#xB85C;&#xBE44;&#xC800;&#xB2DD;, &#xAD00;&#xB9AC;, &#xBAA8;&#xB2C8;&#xD130;&#xB9C1; &#xB4F1;)</li>
 </ul>
-<h3 id="하둡과-다른-시스템-간-데이터-전송하는-인터페이스-도구">하둡과 다른 시스템 간 데이터 전송하는 인터페이스 도구</h3>
+<h3 id="&#xD558;&#xB461;&#xACFC;-&#xB2E4;&#xB978;-&#xC2DC;&#xC2A4;&#xD15C;-&#xAC04;-&#xB370;&#xC774;&#xD130;-&#xC804;&#xC1A1;&#xD558;&#xB294;-&#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;-&#xB3C4;&#xAD6C;">&#xD558;&#xB461;&#xACFC; &#xB2E4;&#xB978; &#xC2DC;&#xC2A4;&#xD15C; &#xAC04; &#xB370;&#xC774;&#xD130; &#xC804;&#xC1A1;&#xD558;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xB3C4;&#xAD6C;</h3>
 <ul>
-<li><a href="http://sqoop.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Sqoop</a> : 하둡과 다른 데이터 저장소 간 대용량 데이터 전송</li>
-<li><a href="https://flume.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Flume</a> : 대용량 로그 데이터를 수집</li>
-<li><a href="http://chukwa.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Chukwa</a> : 대용량 로그 데이터 수집 및 분석
+<li><a href="http://sqoop.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Sqoop</a> : &#xD558;&#xB461;&#xACFC; &#xB2E4;&#xB978; &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;&#xC18C; &#xAC04; &#xB300;&#xC6A9;&#xB7C9; &#xB370;&#xC774;&#xD130; &#xC804;&#xC1A1;</li>
+<li><a href="https://flume.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Flume</a> : &#xB300;&#xC6A9;&#xB7C9; &#xB85C;&#xADF8; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC218;&#xC9D1;</li>
+<li><a href="http://chukwa.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Chukwa</a> : &#xB300;&#xC6A9;&#xB7C9; &#xB85C;&#xADF8; &#xB370;&#xC774;&#xD130; &#xC218;&#xC9D1; &#xBC0F; &#xBD84;&#xC11D;
 <ul>
 <li><a href="https://groups.google.com/a/cloudera.org/forum/#!topic/flume-user/BMtsyGedcPo" rel="external nofollow noopener noreferrer" target="_blank">Flume comparison to Chukwa</a></li>
 </ul>
 </li>
-<li><a href="http://storm.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Storm</a> : 실시간 데이터 처리</li>
+<li><a href="http://storm.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Storm</a> : &#xC2E4;&#xC2DC;&#xAC04; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC;</li>
 </ul>
-<h3 id="기본적인-데이터-스토리지-동기화-스케줄링-등을-제공하는-인프라도구">기본적인 데이터 스토리지, 동기화, 스케줄링 등을 제공하는 인프라도구</h3>
+<h3 id="&#xAE30;&#xBCF8;&#xC801;&#xC778;-&#xB370;&#xC774;&#xD130;-&#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;-&#xB3D9;&#xAE30;&#xD654;-&#xC2A4;&#xCF00;&#xC904;&#xB9C1;-&#xB4F1;&#xC744;-&#xC81C;&#xACF5;&#xD558;&#xB294;-&#xC778;&#xD504;&#xB77C;&#xB3C4;&#xAD6C;">&#xAE30;&#xBCF8;&#xC801;&#xC778; &#xB370;&#xC774;&#xD130; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;, &#xB3D9;&#xAE30;&#xD654;, &#xC2A4;&#xCF00;&#xC904;&#xB9C1; &#xB4F1;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xC778;&#xD504;&#xB77C;&#xB3C4;&#xAD6C;</h3>
 <ul>
-<li><a href="http://oozie.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Oozie</a> : 워크플로우 스케쥴러</li>
-<li><a href="https://hbase.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache HBase</a> : 비관계형(<em>non-relational</em>) 분산(<em>distributed</em>) 데이터베이스</li>
-<li><a href="https://zookeeper.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Zookeeper</a> : 분산된 시스템을 관리하는 코디네이션 서비스(<em>coordination service</em>)</li>
+<li><a href="http://oozie.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Oozie</a> : &#xC6CC;&#xD06C;&#xD50C;&#xB85C;&#xC6B0; &#xC2A4;&#xCF00;&#xC974;&#xB7EC;</li>
+<li><a href="https://hbase.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache HBase</a> : &#xBE44;&#xAD00;&#xACC4;&#xD615;(<em>non-relational</em>) &#xBD84;&#xC0B0;(<em>distributed</em>) &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;</li>
+<li><a href="https://zookeeper.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Zookeeper</a> : &#xBD84;&#xC0B0;&#xB41C; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xCF54;&#xB514;&#xB124;&#xC774;&#xC158; &#xC11C;&#xBE44;&#xC2A4;(<em>coordination service</em>)</li>
 </ul>
-<h3 id="스파크로-대체할-수-있는-기능">스파크로 대체할 수 있는 기능</h3>
+<h3 id="&#xC2A4;&#xD30C;&#xD06C;&#xB85C;-&#xB300;&#xCCB4;&#xD560;-&#xC218;-&#xC788;&#xB294;-&#xAE30;&#xB2A5;">&#xC2A4;&#xD30C;&#xD06C;&#xB85C; &#xB300;&#xCCB4;&#xD560; &#xC218; &#xC788;&#xB294; &#xAE30;&#xB2A5;</h3>
 <ul>
-<li>그래프 프로세싱 Giraph -&gt; Spark GraphX</li>
-<li>머신러닝 Mahout -&gt; Spark MLlib</li>
-<li>실시간 데이터 처리 Storm -&gt; Spark Streaming (2.2.1 이하는 완벽 대체 불가)</li>
-<li>데이터 분석 Pig, 데이터 전송 Sqoop -&gt; Spark Core 와 Spark SQL 로 대체</li>
-<li>SQL 관련 Impala, Drill -&gt; Spark SQL 을 포괄하는 기능으로 함께 사용할 수 있음</li>
-<li>인프라 관련 도구는 대체할 수 없음</li>
+<li>&#xADF8;&#xB798;&#xD504; &#xD504;&#xB85C;&#xC138;&#xC2F1; Giraph -&gt; Spark GraphX</li>
+<li>&#xBA38;&#xC2E0;&#xB7EC;&#xB2DD; Mahout -&gt; Spark MLlib</li>
+<li>&#xC2E4;&#xC2DC;&#xAC04; &#xB370;&#xC774;&#xD130; &#xCC98;&#xB9AC; Storm -&gt; Spark Streaming (2.2.1 &#xC774;&#xD558;&#xB294; &#xC644;&#xBCBD; &#xB300;&#xCCB4; &#xBD88;&#xAC00;)</li>
+<li>&#xB370;&#xC774;&#xD130; &#xBD84;&#xC11D; Pig, &#xB370;&#xC774;&#xD130; &#xC804;&#xC1A1; Sqoop -&gt; Spark Core &#xC640; Spark SQL &#xB85C; &#xB300;&#xCCB4;</li>
+<li>SQL &#xAD00;&#xB828; Impala, Drill -&gt; Spark SQL &#xC744; &#xD3EC;&#xAD04;&#xD558;&#xB294; &#xAE30;&#xB2A5;&#xC73C;&#xB85C; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC74C;</li>
+<li>&#xC778;&#xD504;&#xB77C; &#xAD00;&#xB828; &#xB3C4;&#xAD6C;&#xB294; &#xB300;&#xCCB4;&#xD560; &#xC218; &#xC5C6;&#xC74C;</li>
 </ul>
-<h2 id="참고">참고</h2>
+<h2 id="&#xCC38;&#xACE0;">&#xCC38;&#xACE0;</h2>
 <ul>
-<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160504798&amp;orderClick=LEA&amp;Kc=" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;스파크를 다루는 기술 Spark in Action&gt;</a></li>
+<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160504798&amp;orderClick=LEA&amp;Kc=" rel="external nofollow noopener noreferrer" target="_blank">&#xB3C4;&#xC11C; &lt;&#xC2A4;&#xD30C;&#xD06C;&#xB97C; &#xB2E4;&#xB8E8;&#xB294; &#xAE30;&#xC220; Spark in Action&gt;</a></li>
 </ul>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         </div>
 
         <div id="bmc" align="center">
@@ -553,7 +570,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'futurecreator';
     
     
-    var disqus_url = 'http://futurecreator.github.io/2018/08/14/apache-spark-basic/';
+    var disqus_url = 'https://futurecreator.github.io/2018/08/14/apache-spark-basic/';
     
     (function() {
     var dsq = document.createElement('script');

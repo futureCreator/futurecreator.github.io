@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
     <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
@@ -22,31 +22,29 @@
         
 
         
-        <meta name="description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
+        <meta name="description" content="StringBuilder &amp;#xB610;&amp;#xB294; StringBuffer &amp;#xB97C; &amp;#xC0AC;&amp;#xC6A9;&amp;#xD558;&amp;#xB2E4;&amp;#xBCF4;&amp;#xBA74; &amp;#xC911;&amp;#xAC04; &amp;#xC911;&amp;#xAC04;&amp;#xC5D0; &amp;#xACF5;&amp;#xBC31;(&amp;#xBB38;&amp;#xC790;)&amp;#xC744; &amp;#xB123;&amp;#xC5">
 <meta name="keywords" content="stringjoiner,delimiter">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java StringJoiner (문자열 구분자 붙이기)">
-<meta property="og:url" content="http://futurecreator.github.io/2018/06/02/java-string-joiner/index.html">
+<meta property="og:url" content="https://futurecreator.github.io/2018/06/02/java-string-joiner/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
+<meta property="og:description" content="StringBuilder &amp;#xB610;&amp;#xB294; StringBuffer &amp;#xB97C; &amp;#xC0AC;&amp;#xC6A9;&amp;#xD558;&amp;#xB2E4;&amp;#xBCF4;&amp;#xBA74; &amp;#xC911;&amp;#xAC04; &amp;#xC911;&amp;#xAC04;&amp;#xC5D0; &amp;#xACF5;&amp;#xBC31;(&amp;#xBB38;&amp;#xC790;)&amp;#xC744; &amp;#xB123;&amp;#xC5">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2018-08-14T13:29:43.912Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java StringJoiner (문자열 구분자 붙이기)">
-<meta name="twitter:description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
+<meta name="twitter:description" content="StringBuilder &amp;#xB610;&amp;#xB294; StringBuffer &amp;#xB97C; &amp;#xC0AC;&amp;#xC6A9;&amp;#xD558;&amp;#xB2E4;&amp;#xBCF4;&amp;#xBA74; &amp;#xC911;&amp;#xAC04; &amp;#xC911;&amp;#xAC04;&amp;#xC5D0; &amp;#xACF5;&amp;#xBC31;(&amp;#xBB38;&amp;#xC790;)&amp;#xC744; &amp;#xB123;&amp;#xC5">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
         
         
-        <link rel="canonical" href="http://futurecreator.github.io/2018/06/02/java-string-joiner/">
+        <link rel="canonical" href="https://futurecreator.github.io/2018/06/02/java-string-joiner/">
         
         
             <link rel="icon" href="/images/favicions/favicon6.png">
         
         <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-        <!-- <link rel="stylesheet" href="/vendor/titillium-web/styles.css"> -->
-        <!-- <link rel="stylesheet" href="/vendor/source-code-pro/styles.css"> -->
         <link rel="stylesheet" href="/css/style.css">
         <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
         
@@ -200,28 +198,47 @@ ga('send', 'pageview');
             <!-- 
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/delimiter/">delimiter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stringjoiner/">stringjoiner</a></li></ul>
  -->
-            <span class="reading-time">⏱ 2 분</span>
+            <span class="reading-time">⏱ 6 분</span>
         </div>
-        <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html" rel="external nofollow noopener noreferrer" target="_blank">StringJoiner</a> 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.</p>
-<p>StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(<em>delimiter</em>) 를 지정해줄 수 있는게 특징입니다.</p>
-<h2 id="간단한-예제">간단한 예제</h2>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String first = <span class="string">"관우"</span>;</span><br><span class="line">String second = <span class="string">"장비"</span>;</span><br><span class="line">String third = <span class="string">"조운"</span>;</span><br><span class="line">String fourth = <span class="string">"황충"</span>;</span><br><span class="line">String fifth = <span class="string">"마초"</span>;</span><br></pre></td></tr></table></figure>
-<p>오호대장군 다섯 명이 있다고 할 때, 다섯 명 이름을 “-” 로 붙여서 출력해보도록 합니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">관우-장비-조운-황충-마초</span><br></pre></td></tr></table></figure>
-<h3 id="string-operator">String + operator</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String 오호대장군 = first + <span class="string">"-"</span> + <span class="string">"second"</span> + <span class="string">"-"</span> + third + <span class="string">"-"</span> + fourth + <span class="string">"-"</span> + fifth;</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
-<h3 id="stringbuffer-stringbuilder">StringBuffer / StringBuilder</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">sb.append(first);</span><br><span class="line">sb.append(<span class="string">"-"</span>);</span><br><span class="line">sb.append(second);</span><br><span class="line">sb.append(<span class="string">"-"</span>);</span><br><span class="line">sb.append(third);</span><br><span class="line">sb.append(<span class="string">"-"</span>);</span><br><span class="line">sb.append(fourth);</span><br><span class="line">sb.append(<span class="string">"-"</span>);</span><br><span class="line">sb.append(fifth);</span><br><span class="line">sb.append(<span class="string">"-"</span>);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = sb.toString();</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
-<h3 id="stringjoiner">StringJoiner</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">StringJoiner sj = <span class="keyword">new</span> StringJoiner(<span class="string">"-"</span>);</span><br><span class="line"></span><br><span class="line">sj.add(first);</span><br><span class="line">sj.add(second);</span><br><span class="line">sj.add(third);</span><br><span class="line">sj.add(fourth);</span><br><span class="line">sj.add(fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = sj.toString();</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
-<p>자동으로 구분자를 사이사이에 붙여주기 때문에 코드가 훨씬 줄었습니다.  그리고 prefix 와 suffix 도 붙여줄 수 있습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// public StringJoiner(CharSequence delimiter, CharSequence prefix, CharSequence suffix)</span></span><br><span class="line">StringJoiner sj = <span class="keyword">new</span> StringJoiner(<span class="string">"-"</span>, <span class="string">"["</span>, <span class="string">"]"</span>);</span><br><span class="line"></span><br><span class="line">sj.add(first);</span><br><span class="line">sj.add(second);</span><br><span class="line">sj.add(third);</span><br><span class="line">sj.add(fourth);</span><br><span class="line">sj.add(fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = sj.toString();</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[관우-장비-조운-황충-마초]</span><br></pre></td></tr></table></figure>
-<p>StringJoiner 은 stream 을 이용해서 쉽게 사용할 수 있습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; 장군들 = Arrays.asList(first, second, third, fourth, fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = 장군들.stream().collect(Collectors.joining(<span class="string">"-"</span>, <span class="string">"["</span>, <span class="string">"]"</span>));</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
-<p>이처럼 StringJoiner 는 공백이나 구분자를 반복해서 붙여야하는 경우에 유용하게 사용하실 수 있습니다.</p>
 
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>StringBuilder &#xB610;&#xB294; StringBuffer &#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB2E4;&#xBCF4;&#xBA74; &#xC911;&#xAC04; &#xC911;&#xAC04;&#xC5D0; &#xACF5;&#xBC31;(&#xBB38;&#xC790;)&#xC744; &#xB123;&#xC5B4;&#xC57C;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xADC0;&#xCC2E;&#xACE0; &#xAC00;&#xB3C5;&#xC131;&#xB3C4; &#xB5A8;&#xC5B4;&#xC9C0;&#xB294; &#xBA74;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD639;&#xC2DC;&#xB098; &#xD558;&#xACE0; &#xBD24;&#xB354;&#xB2C8; Java 8 &#xC5D0; &#xCD94;&#xAC00;&#xB41C; <a href="https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html" rel="external nofollow noopener noreferrer" target="_blank">StringJoiner</a> &#xB77C;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xAC00; &#xC788;&#xB354;&#xB77C;&#xAD6C;&#xC694;. &#xC4F8;&#xB9CC;&#xD55C; &#xAC83; &#xAC19;&#xC544;&#xC11C; &#xC18C;&#xAC1C;&#xB4DC;&#xB9BD;&#xB2C8;&#xB2E4;.</p>
+<p>StringJoiner &#xB294; &#xC5EC;&#xB7EC; &#xBB38;&#xC790;&#xB4E4;&#xC744; &#xC5F0;&#xACB0;&#xD560; &#xB54C; &#xBD99;&#xC77C; &#xAD6C;&#xBD84;&#xC790;(<em>delimiter</em>) &#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC904; &#xC218; &#xC788;&#xB294;&#xAC8C; &#xD2B9;&#xC9D5;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xAC04;&#xB2E8;&#xD55C;-&#xC608;&#xC81C;">&#xAC04;&#xB2E8;&#xD55C; &#xC608;&#xC81C;</h2>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String first = <span class="string">&quot;&#xAD00;&#xC6B0;&quot;</span>;</span><br><span class="line">String second = <span class="string">&quot;&#xC7A5;&#xBE44;&quot;</span>;</span><br><span class="line">String third = <span class="string">&quot;&#xC870;&#xC6B4;&quot;</span>;</span><br><span class="line">String fourth = <span class="string">&quot;&#xD669;&#xCDA9;&quot;</span>;</span><br><span class="line">String fifth = <span class="string">&quot;&#xB9C8;&#xCD08;&quot;</span>;</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70; &#xB2E4;&#xC12F; &#xBA85;&#xC774; &#xC788;&#xB2E4;&#xACE0; &#xD560; &#xB54C;, &#xB2E4;&#xC12F; &#xBA85; &#xC774;&#xB984;&#xC744; &#x201C;-&#x201D; &#xB85C; &#xBD99;&#xC5EC;&#xC11C; &#xCD9C;&#xB825;&#xD574;&#xBCF4;&#xB3C4;&#xB85D; &#xD569;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#xAD00;&#xC6B0;-&#xC7A5;&#xBE44;-&#xC870;&#xC6B4;-&#xD669;&#xCDA9;-&#xB9C8;&#xCD08;</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="string-operator">String + operator</h3>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String &#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70; = first + <span class="string">&quot;-&quot;</span> + <span class="string">&quot;second&quot;</span> + <span class="string">&quot;-&quot;</span> + third + <span class="string">&quot;-&quot;</span> + fourth + <span class="string">&quot;-&quot;</span> + fifth;</span><br><span class="line">System.out.println(&#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70;);</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="stringbuffer-stringbuilder">StringBuffer / StringBuilder</h3>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">sb.append(first);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(second);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(third);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(fourth);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(fifth);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line"></span><br><span class="line">String &#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70; = sb.toString();</span><br><span class="line">System.out.println(&#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70;);</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="stringjoiner">StringJoiner</h3>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">StringJoiner sj = <span class="keyword">new</span> StringJoiner(<span class="string">&quot;-&quot;</span>);</span><br><span class="line"></span><br><span class="line">sj.add(first);</span><br><span class="line">sj.add(second);</span><br><span class="line">sj.add(third);</span><br><span class="line">sj.add(fourth);</span><br><span class="line">sj.add(fifth);</span><br><span class="line"></span><br><span class="line">String &#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70; = sj.toString();</span><br><span class="line">System.out.println(&#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70;);</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xAD6C;&#xBD84;&#xC790;&#xB97C; &#xC0AC;&#xC774;&#xC0AC;&#xC774;&#xC5D0; &#xBD99;&#xC5EC;&#xC8FC;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xCF54;&#xB4DC;&#xAC00; &#xD6E8;&#xC52C; &#xC904;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.  &#xADF8;&#xB9AC;&#xACE0; prefix &#xC640; suffix &#xB3C4; &#xBD99;&#xC5EC;&#xC904; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// public StringJoiner(CharSequence delimiter, CharSequence prefix, CharSequence suffix)</span></span><br><span class="line">StringJoiner sj = <span class="keyword">new</span> StringJoiner(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;[&quot;</span>, <span class="string">&quot;]&quot;</span>);</span><br><span class="line"></span><br><span class="line">sj.add(first);</span><br><span class="line">sj.add(second);</span><br><span class="line">sj.add(third);</span><br><span class="line">sj.add(fourth);</span><br><span class="line">sj.add(fifth);</span><br><span class="line"></span><br><span class="line">String &#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70; = sj.toString();</span><br><span class="line">System.out.println(&#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70;);</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[&#xAD00;&#xC6B0;-&#xC7A5;&#xBE44;-&#xC870;&#xC6B4;-&#xD669;&#xCDA9;-&#xB9C8;&#xCD08;]</span><br></pre></td></tr></tbody></table></figure>
+<p>StringJoiner &#xC740; stream &#xC744; &#xC774;&#xC6A9;&#xD574;&#xC11C; &#xC27D;&#xAC8C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<figure class="highlight java"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; &#xC7A5;&#xAD70;&#xB4E4; = Arrays.asList(first, second, third, fourth, fifth);</span><br><span class="line"></span><br><span class="line">String &#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70; = &#xC7A5;&#xAD70;&#xB4E4;.stream().collect(Collectors.joining(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;[&quot;</span>, <span class="string">&quot;]&quot;</span>));</span><br><span class="line">System.out.println(&#xC624;&#xD638;&#xB300;&#xC7A5;&#xAD70;);</span><br></pre></td></tr></tbody></table></figure>
+<p>&#xC774;&#xCC98;&#xB7FC; StringJoiner &#xB294; &#xACF5;&#xBC31;&#xC774;&#xB098; &#xAD6C;&#xBD84;&#xC790;&#xB97C; &#xBC18;&#xBCF5;&#xD574;&#xC11C; &#xBD99;&#xC5EC;&#xC57C;&#xD558;&#xB294; &#xACBD;&#xC6B0;&#xC5D0; &#xC720;&#xC6A9;&#xD558;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xC2E4; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         </div>
 
         <div id="bmc" align="center">
@@ -451,7 +468,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'futurecreator';
     
     
-    var disqus_url = 'http://futurecreator.github.io/2018/06/02/java-string-joiner/';
+    var disqus_url = 'https://futurecreator.github.io/2018/06/02/java-string-joiner/';
     
     (function() {
     var dsq = document.createElement('script');
