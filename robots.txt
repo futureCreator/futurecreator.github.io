@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: /sitemap.xml
+Sitemap: https://futurecreator.github.io/sitemap.xml
