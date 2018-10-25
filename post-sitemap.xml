@@ -7,6 +7,38 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2018/07/04/aws-certified/</loc>
+        <lastmod>2018-10-25T13:06:02.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/07/13/aws-security-best-practies/</loc>
+        <lastmod>2018-10-25T13:06:00.264Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/07/13/aws-well-architected-framework/</loc>
+        <lastmod>2018-10-25T13:05:58.415Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/07/18/aws-certified-developer-associate-sample-exam-questions/</loc>
+        <lastmod>2018-10-25T13:05:52.907Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
         <lastmod>2018-10-25T13:03:42.103Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -439,14 +471,6 @@
     </url>
 
     <url>
-        <loc>https://futurecreator.github.io/2018/07/04/aws-certified/</loc>
-        <lastmod>2018-08-14T13:24:14.128Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://futurecreator.github.io/2018/07/07/hexo-change-font-face-no-cdn/</loc>
         <lastmod>2018-08-14T13:23:38.306Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -513,30 +537,6 @@
     <url>
         <loc>https://futurecreator.github.io/2018/06/20/hexo-twitter-plugin/</loc>
         <lastmod>2018-08-08T13:59:39.464Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/07/13/aws-well-architected-framework/</loc>
-        <lastmod>2018-07-19T11:42:52.398Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/07/18/aws-certified-developer-associate-sample-exam-questions/</loc>
-        <lastmod>2018-07-18T13:46:51.285Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/07/13/aws-security-best-practies/</loc>
-        <lastmod>2018-07-12T15:52:39.445Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
