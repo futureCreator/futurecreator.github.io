@@ -31,7 +31,7 @@
 <meta property="og:description" content="최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다. IT Infrastructure IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://cloud.google.com/images/locations/regions.png">
-<meta property="og:updated_time" content="2018-11-08T15:38:09.174Z">
+<meta property="og:updated_time" content="2018-11-12T11:41:16.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="개발자를 위한 인프라 기초 총정리">
 <meta name="twitter:description" content="최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다. IT Infrastructure IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사">
@@ -653,14 +653,14 @@ ga('send', 'pageview');
 </li>
 </ul>
 <h3 id="continuous-integration-와-인프라">Continuous Integration 와 인프라</h3>
-<p><img src="http://www.pepgotesting.com/wp-content/uploads/2015/02/CI.png" alt="http://www.pepgotesting.com/continuous-integration/"></p>
+<p><img src="ci.png" alt="http://www.pepgotesting.com/continuous-integration/"></p>
 <p>지속적인 통합은 제대로 동작하는 코드를 자동으로 유지하기 위한 방법입니다. CI 환경이 구성되어 있지 않으면 빌드가 깨지는 경우도 많고 심지어 깨진 걸 모르는경우도 있습니다.  CI 환경에서 개발자가 코드를 커밋하면 Jenkins 와 같은 인테그레이션 툴이 코드 커밋을 감지해 자동으로 빌드와 테스트를 수행하고 코드 품질을 점검합니다. 문제가 있을 경우 해당 개발자에게  피드백이 가서 빠르게 조치하고 좋은 품질의 코드를 계속 유지할 수 있습니다.</p>
 <p>단위 테스트를 통과한 모듈이 다른 환경에서도 똑같이 동작한다는 보장은 없습니다. 각종 설정이나 네트워크, 권한 등 인프라 환경에 의존하는 부분이 많은데요, 이러한 부분을 코드로 관리한다면 개발 멤버가 항상 동일한 환경에서 개발할 수 있어 테스트가 쉽고 환경 구성 관리가 더욱 쉬워집니다.</p>
 <h3 id="continuous-delivery-와-인프라">Continuous Delivery 와 인프라</h3>
-<p><img src="http://www.pepgotesting.com/wp-content/uploads/2015/02/Waterfall.png" alt="http://www.pepgotesting.com/continuous-integration/"></p>
+<p><img src="waterfall.png" alt="http://www.pepgotesting.com/continuous-integration/"></p>
 <p>폭포수 모델에서는 처음 요구사항을 정의하는 시기와 실제로 SW를 고객에게 전달(<em>delivery</em>)하는 시기가 워낙 차이가 나다보니 문제가 생기곤 합니다. 물론 그 과정에서 고객이 아예 관여하지 않는 것은 아니지만, 대규모 프로젝트의 경우 몇 년이 소요되기도 하다보니 계속 변화하는 고객의 생각과 니즈를 충족시키기 어렵습니다.</p>
 <p>고객의 입장에서는 시간이 지나면서 다른 기능이 계속 눈에 들어오다보니 실제 결과물이 마음에 차지 않게 되고, 개발하는 입장에서는 처음에 말한대로 다 만들었는데 개발 막바지에 수정이나 추가 개발을 해야하는 상황이 되는 것이죠.</p>
-<p><img src="http://www.pepgotesting.com/wp-content/uploads/2015/02/Agile.png" alt="http://www.pepgotesting.com/continuous-integration/"></p>
+<p><img src="cd.png" alt="http://www.pepgotesting.com/continuous-integration/"></p>
 <p>그래서 서로를 만족시키기는 방법은 고객의 니즈는 변한다는 것을 인정하고, 그 대신 개발 사이클 자체를 짧게 해서 개발과 릴리즈를 반복하는 것입니다. 실제로 동작하는 SW 를 고객에게 주기적으로 딜리버리함으로써 고객의 피드백을 받고 반영하는 것을 Continuous Delivery 라고 합니다.</p>
 <p>그런데 지속적으로 딜리버리하는 과정에서 테스트 환경과 실제 운영 환경이 달라서 문제가 발생하기도 합니다. 인프라 환경도 포함한 애플리케이션 실행 환경을 그대로 제품 환경에 딜리버리할 수 있다면 안전하게 버전업을 할 수 있게 됩니다.</p>
 <h2 id="가상화-virtualization">가상화 Virtualization</h2>
@@ -671,7 +671,8 @@ ga('send', 'pageview');
 <p><img src="https://www.redhat.com/cms/managed-files/server-usage-for-virtualization-500x131.png" alt="https://www.redhat.com/ko/topics/virtualization/what-is-virtualization"></p>
 <p>특히 하나의 서버 자원을 여러 사용자들이 나눠서 사용하는 클라우드 컴퓨팅의 기반이 됩니다.</p>
 <h3 id="호스트형-서버-가상화">호스트형 서버 가상화</h3>
-<p><img src="http://www.govmlab.com/wp-content/uploads/2015/05/HostedArchictecture.png" alt="http://www.govmlab.com/news-section-3/"></p>
+<p><img src="host-server-virtualization.png" alt="http://www.govmlab.com/news-section-3/"></p>
+<p><img src="http://www.govmlab.com/wp-content/uploads/2015/05/HostedArchictecture.png" alt=""></p>
 <p>하드웨어 위에 호스트 OS 를 설치하고 OS에서 가상화 SW를 이용해 게스트 OS를 작동시키는 기술입니다. 가상화 SW 를 설치하면 쉽게 가상 환경을 구축할 수 있기 때문에 개발 환경 구축 등에 주로 사용합니다. 오라클의 Virtual Box 나 VMware 가 있습니다.</p>
 <p>하지만 OS 상에서 또 다른 OS 가 돌아가므로 자원이 많이 소비되고 느리다는 단점이 있습니다.</p>
 <h3 id="하이퍼바이저형-가상화">하이퍼바이저형 가상화</h3>
@@ -698,6 +699,11 @@ ga('send', 'pageview');
 <li><a href="https://aws.amazon.com/ko/eks/" rel="external nofollow noopener noreferrer" target="_blank">Amzon EKS (Amazon Elastic Container Service for Kubernetes)</a></li>
 <li><a href="https://azure.microsoft.com/ko-kr/overview/containers/" rel="external nofollow noopener noreferrer" target="_blank">Azure Container Service</a></li>
 <li><a href="https://cloud.google.com/kubernetes-engine/" rel="external nofollow noopener noreferrer" target="_blank">Google Kubernetes Engine</a></li>
+</ul>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a href="https://kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;barcode=9788956747903" rel="external nofollow noopener noreferrer" target="_blank">완벽한 IT 인프라 구축을 위한 Docker</a></li>
+<li><a href="https://www.redhat.com/ko/topics/virtualization/what-is-virtualization" rel="external nofollow noopener noreferrer" target="_blank">가상화란? | Red Hat</a></li>
 </ul>
 <h2 id="releated-posts">Releated Posts</h2>
 <ul>
