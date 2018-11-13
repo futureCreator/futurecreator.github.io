@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/</loc>
+        <lastmod>2018-11-13T11:49:01.081Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2018/11/12/my-best-programming-font-top-3/</loc>
-        <lastmod>2018-11-12T14:31:05.665Z</lastmod>
+        <lastmod>2018-11-13T11:45:35.259Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -481,14 +489,6 @@
     <url>
         <loc>https://futurecreator.github.io/2018/06/18/hexo-symbols-count-reading-time-plugin/</loc>
         <lastmod>2018-08-14T13:25:40.647Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/</loc>
-        <lastmod>2018-08-14T13:25:13.410Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

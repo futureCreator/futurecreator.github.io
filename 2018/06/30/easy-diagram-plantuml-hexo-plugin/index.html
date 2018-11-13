@@ -31,7 +31,7 @@
 <meta property="og:description" content="개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다. 개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 PlantUML 이라는 툴을 찾았습니다. 이번 포스팅에서는">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/2018/06/30/easy-diagram-plantuml-hexo-plugin/sample.png">
-<meta property="og:updated_time" content="2018-08-14T13:25:13.410Z">
+<meta property="og:updated_time" content="2018-11-13T11:49:01.081Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="쉽고 빠른 UML 그리기 (PlantUML)">
 <meta name="twitter:description" content="개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다. 개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 PlantUML 이라는 툴을 찾았습니다. 이번 포스팅에서는">
@@ -205,7 +205,7 @@ ga('send', 'pageview');
 
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다.</p>
-<p>개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 <a href="ttp://plantuml.com/" rel="external nofollow noopener noreferrer" target="_blank">PlantUML</a> 이라는 툴을 찾았습니다. 이번 포스팅에서는 코드를 짜듯이 UML을 간편하게 그릴 수 있는 PlantUML 과 Hexo 적용할 수 있는 플러그인 <a href="https://github.com/oohcoder/hexo-tag-plantuml" rel="external nofollow noopener noreferrer" target="_blank">hex-tag-plantuml</a> 을 알아보겠습니다.</p>
+<p>개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 <a href="http://plantuml.com/" rel="external nofollow noopener noreferrer" target="_blank">PlantUML</a> 이라는 툴을 찾았습니다. 이번 포스팅에서는 코드를 짜듯이 UML을 간편하게 그릴 수 있는 PlantUML 과 Hexo 적용할 수 있는 플러그인 <a href="https://github.com/oohcoder/hexo-tag-plantuml" rel="external nofollow noopener noreferrer" target="_blank">hex-tag-plantuml</a> 을 알아보겠습니다.</p>
 <h2 id="plantuml">PlantUML</h2>
 <p><img src="sample.png" alt="http://plantuml.com/"></p>
 <p>이 툴을 이용하면 어떻게 보여질지 신경쓰는 대신 표현해야 할 로직에 집중할 수 있습니다. 해당 로직을 문법에 따라 표현해주면 PlantUML이 알아서 그려줍니다. 선을 하나 하나 그리고 위치를 조정하고 글꼴을 수정하는 등의 추가적인 작업이 없으니 쉽고 빠릅니다. 물론 세부적인 명령으로 디자인도 수정이 가능합니다. 물론 코드를 generate 하는 등 복잡한 설계의 기능까진 할 수 없지만, 블로그에서 UML을 그리기에는 최적의 툴입니다.</p>
@@ -238,7 +238,7 @@ ga('send', 'pageview');
 <h2 id="차근-차근-그려보기">차근 차근 그려보기</h2>
 <p>그럼 차근차근 그려보면서 대략적인 문법을 살펴보겠습니다.</p>
 <p>먼저 class 와 interface를 그립니다. Java 와 비슷해서 익숙한 문법입니다.</p>
-<img src="http://www.plantuml.com/plantuml/svg/oymhIIrAIqnELV1FAaujAaijKgZcuYpBpqnHA2r8IIn9rT2qvghbuahEIImkLWWkJSfAJIu1AV79B2wnWUcnKyY7iegvE1DJKZJWXkLhSd4MfURcbwMYYe5joCiloKohX8aNQsXorG80">
+<img src="http://www.plantuml.com/plantuml/svg/oymhIIrAIqnELV1FAaujAaijKgZcUjJGpLcMdvcYK5gGabYIgg5fpLNBnPMSarXSh11ScfILcbm2LUMJMLnY0zDffv0FPHM39HDJKZJWfkPhWiMAKdFpor8nXC6svUMNPAPLmgIADJIvQW40">
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Observer</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Subject</span> </span>&#123;</span><br><span class="line">  List&lt;Observer&gt; observers</span><br><span class="line">  add(Observer o)</span><br><span class="line">  remove(Observer o)</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">notifyObservers</span><span class="params">()</span></span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
 <p>필드와 메소드에 접근제어지시자를 붙여줄 수 있습니다. 그리고 인터페이스에 있는 update 메소드는 추상 메소드로 표시하겠습니다.</p>
 <ul>
@@ -274,10 +274,10 @@ ga('send', 'pageview');
 <h2 id="hexo-에-적용하기">Hexo 에 적용하기</h2>
 <p>PlantUML 은 JVM 상에서 동작하고 <code>java -jar</code> 명령어를 이용해 문법에 따라 작성된 text 파일을 다이어그램으로 그린 png 로 바꿔줍니다. 하지만 PlantUML을 지원하는 Hexo 플러그인 <a href="https://github.com/oohcoder/hexo-tag-plantuml" rel="external nofollow noopener noreferrer" target="_blank">hex-tag-plantuml</a> 을 설치하면 따로 PlantUML 을 설치할 필요가 없습니다.</p>
 <h3 id="설치하기">설치하기</h3>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-tag-plantuml --save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install hexo-tag-plantuml --save</span><br></pre></td></tr></table></figure>
 <h3 id="사용하기">사용하기</h3>
 <p>다음과 같은 태그를 이용해 사용하실 수 있습니다.</p>
-<img src="http://www.plantuml.com/plantuml/svg/SyfFqhLppCbCJbMmKiX8pSd91m00">
+<img src="http://www.plantuml.com/plantuml/svg/UzJGhG04Jlb9kdQEEPd9gGfM2XcfEJdv0000">
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% plantuml %&#125;</span><br><span class="line">    Bob-&gt;Alice : hello</span><br><span class="line">&#123;% endplantuml %&#125;</span><br></pre></td></tr></table></figure>
 <p>이번 포스팅에서는 각종 다이어그램을 텍스트로 간단하게 그릴 수 있는 PlantUML을 알아봤습니다. 이제 간단하게 보여줄 UML이 필요할 때 쉽게 그릴 수 있습니다.</p>
 <h3 id="related-posts">Related Posts</h3>
