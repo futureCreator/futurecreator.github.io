@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
+        <lastmod>2018-11-15T17:34:41.045Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/</loc>
         <lastmod>2018-11-13T11:49:01.081Z</lastmod>
         <changefreq>weekly</changefreq>
