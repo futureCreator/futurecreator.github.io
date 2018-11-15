@@ -7,6 +7,22 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2018/07/04/aws-certified/</loc>
+        <lastmod>2018-11-15T23:51:15.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
+        <lastmod>2018-11-15T23:49:59.232Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/</loc>
         <lastmod>2018-11-15T23:46:41.543Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,22 +65,6 @@
     <url>
         <loc>https://futurecreator.github.io/2017/01/27/java-variable-data-type/</loc>
         <lastmod>2018-10-26T13:17:49.076Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
-        <lastmod>2018-10-26T11:56:41.378Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/07/04/aws-certified/</loc>
-        <lastmod>2018-10-25T13:06:02.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
