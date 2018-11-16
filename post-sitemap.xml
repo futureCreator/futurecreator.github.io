@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/</loc>
+        <lastmod>2018-11-16T15:11:55.492Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
         <lastmod>2018-11-16T14:47:05.535Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -25,14 +33,6 @@
     <url>
         <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
         <lastmod>2018-11-15T23:49:59.232Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/</loc>
-        <lastmod>2018-11-15T23:46:41.543Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
