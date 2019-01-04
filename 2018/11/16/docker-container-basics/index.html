@@ -31,7 +31,7 @@
 <meta property="og:description" content="이전 개발자를 위한 인프라 기초 총정리 포스트에서 컨테이너와 도커에 대해 간단히 살펴봤습니다. 이해하기 어려운 개념은 아니지만 막상 뭔가를 하려면 막막할 수 있는데요, 이번 포스트에서는 도커의 컴포넌트와 내부 기술을 알아보고 가상 환경을 구축해서 도커를 설치하고 실행해보려고 합니다. 도커 Docker 애플리케이션은 하드웨어, OS, 미들웨어 등 인프라 환경">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/1600/1*easlVE_DOqRDUDkVINRI9g.png">
-<meta property="og:updated_time" content="2018-12-15T15:04:08.799Z">
+<meta property="og:updated_time" content="2019-01-04T13:53:25.873Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="도커 Docker 기초 확실히 다지기">
 <meta name="twitter:description" content="이전 개발자를 위한 인프라 기초 총정리 포스트에서 컨테이너와 도커에 대해 간단히 살펴봤습니다. 이해하기 어려운 개념은 아니지만 막상 뭔가를 하려면 막막할 수 있는데요, 이번 포스트에서는 도커의 컴포넌트와 내부 기술을 알아보고 가상 환경을 구축해서 도커를 설치하고 실행해보려고 합니다. 도커 Docker 애플리케이션은 하드웨어, OS, 미들웨어 등 인프라 환경">
@@ -414,9 +414,9 @@ ga('send', 'pageview');
 <p>설치 과정을 <a href="https://futurecreator.github.io/2018/06/16/record-terminal-asciinema/">asciinema</a> 영상으로 확인하실 수 있습니다. asciinema 는 터미널 녹화 서비스로 영상 내 텍스트를 복사할 수 있습니다.</p>
 <script type="text/javascript" src="https://asciinema.org/a/211919.js" id="asciicast-211919" async></script>
 <p>Windows 에서 PuTTY 와 같은 클라이언트로 접속하고 싶으실 경우엔 해당 vagrant 폴더 안에 <code>.vagrant/machines/default/virtualbox</code> 경로 안에 있는 private_key 파일을 가져다 PuTTYgen 로 <code>.ppk</code> 파일을 생성하신 후에 접속 시 사용하시면 됩니다.</p>
-<p>Vagrnat 는 사용하다보면 <code>vagrant up</code> 이 잘 안되는 경우가 있습니다. <code>vagrant status</code> 를 해보면 제대로 실행이 됐는지 확인해볼 수 있습니다. 제 경우는 macOS 는 큰 문제가 없었고 Windows 7 에서 간간히 발생했는데, 이런 경우엔 <code>vagrnat halt</code> 와 <code>vagrant up</code> 을 반복하면 신기하게도 잘 올라갑니다. 또는 그냥 VirtualBox 에서 VM 을 실행 후 접속해도 됩니다.</p>
+<p>(추가) Vagrant 는 사용하다보면 <code>vagrant up</code> 이 잘 안되는 경우가 있습니다. <code>vagrant status</code> 를 해보면 제대로 실행이 됐는지 확인해볼 수 있습니다. 제 경우는 macOS 는 큰 문제가 없었고 Windows 7 에서 간간히 발생했는데, 이런 경우엔 <code>vagrant halt</code> 와 <code>vagrant up</code> 을 반복하면 신기하게도 잘 올라갑니다. Vagrant 버전을 업그레이드하는 것도 하나의 방법입니다. 또는 그냥 VirtualBox 에서 VM 을 실행 후 접속하는 것이 가장 잘 됩니다.</p>
 <h3 id="클라우드-vm-인스턴스">클라우드 VM 인스턴스</h3>
-<p>세 번째 방법은 클라우드 서비스를 사용하는 겁니다. 사실 학습 환경은 Vagrnat 로도 충분하지만 Vagrant 를 이용하는 것이 복잡하거나 로컬 리소스를 사용하길 원하지 않을 수도 있습니다. 또는 간단한 프로젝트를 만들어서 서비스하려면 클라우드를 이용하는 것이 좋겠죠. 그래서 AWS(<em>Amazon Web Service</em>)와 GCP(<em>Google Cloud Platform</em>)를 이용해 VM 인스턴스를 생성 후 도커를 설치해보려고 합니다. 일단 Vagrant 기반으로 진행하고 클라우드 기반은 뒤에서 다시 다루겠습니다.</p>
+<p>세 번째 방법은 클라우드 서비스를 사용하는 겁니다. 사실 학습 환경은 vagrant 로도 충분하지만 Vagrant 를 이용하는 것이 복잡하거나 로컬 리소스를 사용하길 원하지 않을 수도 있습니다. 또는 간단한 프로젝트를 만들어서 서비스하려면 클라우드를 이용하는 것이 좋겠죠. 그래서 AWS(<em>Amazon Web Service</em>)와 GCP(<em>Google Cloud Platform</em>)를 이용해 VM 인스턴스를 생성 후 도커를 설치해보려고 합니다. 일단 Vagrant 기반으로 진행하고 클라우드 기반은 뒤에서 다시 다루겠습니다.</p>
 <h2 id="도커-설치와-실행">도커 설치와 실행</h2>
 <p>환경도 다 준비되었으니 도커를 설치해보겠습니다.</p>
 <h3 id="도커-에디션과-릴리즈">도커 에디션과 릴리즈</h3>
@@ -858,7 +858,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2018 Eric Han</p>
+                <p>&copy; 2019 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
