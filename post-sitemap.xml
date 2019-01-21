@@ -7,6 +7,38 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
+        <lastmod>2019-01-21T12:55:38.885Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/</loc>
+        <lastmod>2019-01-21T12:55:33.177Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
+        <lastmod>2019-01-21T12:55:22.316Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/12/15/aws-reinvent-2018-summary/</loc>
+        <lastmod>2019-01-21T12:55:16.166Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/</loc>
         <lastmod>2019-01-19T08:41:18.558Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -15,40 +47,8 @@
     </url>
 
     <url>
-        <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
-        <lastmod>2019-01-04T13:53:25.873Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/</loc>
-        <lastmod>2018-12-15T15:04:24.699Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/12/15/aws-reinvent-2018-summary/</loc>
-        <lastmod>2018-12-15T14:36:28.592Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://futurecreator.github.io/2018/07/04/aws-certified/</loc>
         <lastmod>2018-11-15T23:51:15.034Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
-        <lastmod>2018-11-15T23:49:59.232Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
