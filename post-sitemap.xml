@@ -7,8 +7,8 @@
     </url>
 
     <url>
-        <loc>https://futurecreator.github.io/2018/08/07/highest-salaries-worldwide-programming-languages-2018/</loc>
-        <lastmod>2019-01-24T13:45:38.465Z</lastmod>
+        <loc>https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/</loc>
+        <lastmod>2019-02-18T16:09:26.023Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -16,7 +16,15 @@
 
     <url>
         <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
-        <lastmod>2019-01-21T12:55:38.885Z</lastmod>
+        <lastmod>2019-02-18T16:01:45.187Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/08/07/highest-salaries-worldwide-programming-languages-2018/</loc>
+        <lastmod>2019-01-24T13:45:38.465Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -41,14 +49,6 @@
     <url>
         <loc>https://futurecreator.github.io/2018/12/15/aws-reinvent-2018-summary/</loc>
         <lastmod>2019-01-21T12:55:16.166Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/</loc>
-        <lastmod>2019-01-19T08:41:18.558Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
