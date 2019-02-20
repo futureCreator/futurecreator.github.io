@@ -20,19 +20,19 @@
     
 
     
-    <meta name="description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. Github 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
+    <meta name="description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. GitHub 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 GitHub 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
 <meta name="keywords" content="hexo,deployment,backup,hosting">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 배포 원리와 백업하기">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/18/hexo-blog-backup/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. Github 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
+<meta property="og:description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. GitHub 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 GitHub 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/2018/07/18/hexo-blog-backup/2018/07/18/hexo-blog-backup/github.png">
-<meta property="og:updated_time" content="2018-08-14T13:21:24.087Z">
+<meta property="og:updated_time" content="2019-02-20T14:28:15.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo 배포 원리와 백업하기">
-<meta name="twitter:description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. Github 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
+<meta name="twitter:description" content="Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.  컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. GitHub 에 올려놨으니 다시 받으면 살릴 수 있을까요?  저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 GitHub 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중">
 <meta name="twitter:image" content="https://futurecreator.github.io/2018/07/18/hexo-blog-backup/2018/07/18/hexo-blog-backup/github.png">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
@@ -206,21 +206,22 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.</p>
 <blockquote>
-<p>컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. Github 에 올려놨으니 다시 받으면 살릴 수 있을까요?</p>
+<p>컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. GitHub 에 올려놨으니 다시 받으면 살릴 수 있을까요?</p>
 </blockquote>
-<p>저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 github 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중에야 알게 되었습니다. 리파지토리에 올라가는 건 public 폴더라는 것을 말이죠.</p>
+<p>저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 GitHub 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중에야 알게 되었습니다. 리파지토리에 올라가는 건 public 폴더라는 것을 말이죠.</p>
 <h2 id="hexo-deployment">Hexo Deployment</h2>
-<p>제가 2016년 처음 Hexo 블로그를 시작하면서 작성한 <a href="https://futurecreator.github.io/2016/06/14/get-started-with-hexo/">포스트</a>를 보면 github에 새로운 리파지토리를 만들고, <code>hexo generate</code>를 이용해서 빌드를 한 후에 <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Pages</a> 를 이용해서 호스팅하는 과정이 나옵니다. <code>_config.yml</code> 항목에 git repository 주소를 지정하면서 이 소스가 올라가는 거라고 생각했지만 그건 착각이었습니다.</p>
+<p>제가 2016년 처음 Hexo 블로그를 시작하면서 작성한 <a href="https://futurecreator.github.io/2016/06/14/get-started-with-hexo/">포스트</a>를 보면 GitHub에 새로운 리파지토리를 만들고, <code>hexo generate</code>를 이용해서 빌드를 한 후에 <a href="https://pages.github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github Pages</a> 를 이용해서 호스팅하는 과정이 나옵니다. <code>_config.yml</code> 항목에 git repository 주소를 지정하면서 이 소스가 올라가는 거라고 생각했지만 그건 착각이었습니다.</p>
 <p>과정을 한 번 살펴보겠습니다. <code>hexo generate</code> 라는 명령어로 빌드를 하면, Hexo 의 각종 템플릿과 우리가 작성한 <code>.md</code> 파일을 가지고 웹 사이트(<em>html, css, javascript</em> 등)를 만들어줍니다. 이런 프레임워크를 정적 사이트 생성기(<em>Static Site Generator</em>)라고 하는데 Hexo 외에도 많은 서비스들이 있습니다. 그리고 이렇게 나온 결과물은 <code>public</code> 폴더에 떨어지고, <a href="https://github.com/hexojs/hexo-deployer-git" rel="external nofollow noopener noreferrer" target="_blank">hexo-deployer-git</a> 플러그인을 이용해서 리파지토리에 public 폴더의 내용을 배포합니다. 그러면 github pages 를 통해 <code>github.io</code> 도메인으로 웹 사이트를 볼 수 있게 됩니다.</p>
 <p>문제는 내가 작성한 마크다운 파일, 수정한 템플릿과 설정 파일 그리고 테마는 따로 저장되는 곳이 없다는 겁니다. 이번 포스팅에서는 현재 사용하고 있는 블로그를 백업하는 방법에 대해 알아보겠습니다.</p>
 <h2 id="repository-선택하기">Repository 선택하기</h2>
 <p><strong>여기서 말하는 리파지토리(저장소)는 github pages 를 이용해 배포하는 리파지토리가 아닌 코드 자체를 백업하기 위한 저장소입니다.</strong></p>
-<p>가장 먼저 사용할 수 있는 것은 <a href="https://github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github</a> 입니다. 대부분 github 를 이용해서 배포하고 계실거구요. 배포 폴더야 퍼블릭이라도 상관없습니다만, 각종 템플릿과 마크다운 파일은 공개하기 꺼려지실 수도 있습니다. github 에서는 프라이빗 리파지토리는 유료입니다. 무료로 프라이빗 리파지토리를 사용하고 싶다면 <a href="https://about.gitlab.com/" rel="external nofollow noopener noreferrer" target="_blank">Gitlab</a> 이 있습니다. 오픈 소스라면 많은 개발자들이 있는 github 가 유리하겠지만, 오픈 소스가 아닌 이상 gitlab이 좋은 선택이 될 수 있습니다.</p>
+<p>가장 먼저 사용할 수 있는 것은 <a href="https://github.com/" rel="external nofollow noopener noreferrer" target="_blank">Github</a> 입니다. 대부분 github 를 이용해서 배포하고 계실거구요. 배포 폴더야 퍼블릭이라도 상관없습니다만, 각종 템플릿과 마크다운 파일은 공개하기 꺼려지실 수도 있습니다. GitHub 에서는 프라이빗 리파지토리는 유료입니다. 무료로 프라이빗 리파지토리를 사용하고 싶다면 <a href="https://about.gitlab.com/" rel="external nofollow noopener noreferrer" target="_blank">Gitlab</a> 이 있습니다. 오픈 소스라면 많은 개발자들이 있는 GitHub 가 유리하겠지만, 오픈 소스가 아닌 이상 gitlab이 좋은 선택이 될 수 있습니다.</p>
 <ul>
 <li>Github : 공개 저장소 무료, 비공개 저장소 유료 / 사용자 많고 오픈소스 프로젝트에 유리</li>
 <li>Gitlab : 공개 저장소 무료, 비공개 저장소 유료 / 비공개 프로젝트에 유리 / CI,CD 지원</li>
 </ul>
 <p>gitlab 또한 사용법은 github 와 다르지 않으니, 이 포스트에서 실습은 github 으로 진행되었습니다.</p>
+<p>수정: GitHub에서 프라이빗 리자피토리를 무료로 전환했습니다(2019/01/07)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="https://github.blog/2019-01-07-new-year-new-github/">[1]</span></a></sup> 이제 GitHub에서도 프라이빗 리파지토리를 얼마든지 사용 가능합니다.</p>
 <h2 id="새-저장소-생성하기">새 저장소 생성하기</h2>
 <p>새 저장소는 총 2개가 필요합니다. 왜냐하면 테마 또한 따로 백업해야 하기 때문입니다. 저는 테마 이름인 ‘<em>hueman</em>’ 과 블로그 자료를 저장할 ‘<em>blog</em>’ 라는 이름으로 만들었습니다.</p>
 <p><img src="github.png" alt="https://github.com/new"></p>
@@ -262,9 +263,10 @@ ga('send', 'pageview');
 <a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
 </li>
 <li>
-<a href="/2018/07/13/hexo-https-github-pages/" title="Hexo HTTPS 적용하기(Github Pages)">Hexo HTTPS 적용하기(Github Pages)</a></li>
+<a href="/2018/07/13/hexo-https-github-pages/" title="Hexo HTTPS 적용하기(Github Pages)">Hexo HTTPS 적용하기(Github Pages)</a>
+</li>
 </ul>
-
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://github.blog/2019-01-07-new-year-new-github/<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
         </div>
 
         <div id="bmc" align="center">
