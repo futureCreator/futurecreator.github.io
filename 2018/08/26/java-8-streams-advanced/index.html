@@ -20,18 +20,18 @@
     
 
     
-    <meta name="description" content="살펴볼 내용  동작 순서 성능 향상 스트림 재사용 지연 처리(Lazy Invocation) Null-safe 스트림 생성하기 줄여쓰기(Simplified)  동작 순서 다음 스트림에서는 최종 작업인 findFirst 메소드를 호출합니다. 과연 출력 결과는 어떨까요? 12345678910list.stream()  .filter(el -&amp;gt; &amp;#123;">
+    <meta name="description" content="이전 포스트에 이어서 Java 8의 스트림(Stream)을 살펴봅니다. 자바 8 스트림은 총 두 개의 포스트로, 기본적인 내용을 총정리하는 이전 포스트와 좀 더 고급 내용을 다루는 이번 포스트로 나뉘어져 있습니다.   Java 스트림 Stream (1) 총정리   Java 스트림 Stream (2) 고급   살펴볼 내용 이번 포스트에서 다루는 내용은 다음과">
 <meta name="keywords" content="java,streams,advanced,lazy_invocation,null_safe,simplified">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 스트림 Stream (2) 고급">
 <meta property="og:url" content="https://futurecreator.github.io/2018/08/26/java-8-streams-advanced/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="살펴볼 내용  동작 순서 성능 향상 스트림 재사용 지연 처리(Lazy Invocation) Null-safe 스트림 생성하기 줄여쓰기(Simplified)  동작 순서 다음 스트림에서는 최종 작업인 findFirst 메소드를 호출합니다. 과연 출력 결과는 어떨까요? 12345678910list.stream()  .filter(el -&amp;gt; &amp;#123;">
+<meta property="og:description" content="이전 포스트에 이어서 Java 8의 스트림(Stream)을 살펴봅니다. 자바 8 스트림은 총 두 개의 포스트로, 기본적인 내용을 총정리하는 이전 포스트와 좀 더 고급 내용을 다루는 이번 포스트로 나뉘어져 있습니다.   Java 스트림 Stream (1) 총정리   Java 스트림 Stream (2) 고급   살펴볼 내용 이번 포스트에서 다루는 내용은 다음과">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-23T12:11:19.937Z">
+<meta property="og:updated_time" content="2019-02-21T12:13:03.384Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 스트림 Stream (2) 고급">
-<meta name="twitter:description" content="살펴볼 내용  동작 순서 성능 향상 스트림 재사용 지연 처리(Lazy Invocation) Null-safe 스트림 생성하기 줄여쓰기(Simplified)  동작 순서 다음 스트림에서는 최종 작업인 findFirst 메소드를 호출합니다. 과연 출력 결과는 어떨까요? 12345678910list.stream()  .filter(el -&amp;gt; &amp;#123;">
+<meta name="twitter:description" content="이전 포스트에 이어서 Java 8의 스트림(Stream)을 살펴봅니다. 자바 8 스트림은 총 두 개의 포스트로, 기본적인 내용을 총정리하는 이전 포스트와 좀 더 고급 내용을 다루는 이번 포스트로 나뉘어져 있습니다.   Java 스트림 Stream (1) 총정리   Java 스트림 Stream (2) 고급   살펴볼 내용 이번 포스트에서 다루는 내용은 다음과">
 <meta name="twitter:creator" content="@hdhXD">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
@@ -198,11 +198,21 @@ ga('send', 'pageview');
     <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/advanced/">advanced</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lazy-invocation/">lazy_invocation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/null-safe/">null_safe</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/simplified/">simplified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/streams/">streams</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                8 분</span>
+                9 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="살펴볼-내용">살펴볼 내용</h2>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 포스트에 이어서 Java 8의 스트림(Stream)을 살펴봅니다. 자바 8 스트림은 총 두 개의 포스트로, 기본적인 내용을 총정리하는 이전 포스트와 좀 더 고급 내용을 다루는 이번 포스트로 나뉘어져 있습니다.</p>
+<ul>
+<li>
+<a href="/2018/08/26/java-8-streams/" title="Java 스트림 Stream (1) 총정리">Java 스트림 Stream (1) 총정리</a>
+</li>
+<li>
+<a href="/2018/08/26/java-8-streams-advanced/" title="Java 스트림 Stream (2) 고급">Java 스트림 Stream (2) 고급</a>
+</li>
+</ul>
+<h2 id="살펴볼-내용">살펴볼 내용</h2>
+<p>이번 포스트에서 다루는 내용은 다음과 같습니다. 이번 내용이 어렵다면 이전 포스트를 참고하시는 것도 좋습니다.</p>
 <ul>
 <li>동작 순서</li>
 <li>성능 향상</li>
