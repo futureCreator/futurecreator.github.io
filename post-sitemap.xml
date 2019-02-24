@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/</loc>
+        <lastmod>2019-02-24T16:44:04.109Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2018/08/26/java-8-streams-advanced/</loc>
         <lastmod>2019-02-21T12:13:03.384Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -24,7 +32,7 @@
 
     <url>
         <loc>https://futurecreator.github.io/2018/07/18/hexo-blog-backup/</loc>
-        <lastmod>2019-02-20T14:28:15.125Z</lastmod>
+        <lastmod>2019-02-20T14:47:42.416Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
