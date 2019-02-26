@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://futurecreator.github.io/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/</loc>
+        <lastmod>2019-02-26T15:14:33.092Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/</loc>
         <lastmod>2019-02-24T16:44:04.109Z</lastmod>
         <changefreq>weekly</changefreq>
