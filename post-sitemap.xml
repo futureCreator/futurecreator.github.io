@@ -7,16 +7,40 @@
     </url>
 
     <url>
-        <loc>https://futurecreator.github.io/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/</loc>
-        <lastmod>2019-02-26T15:14:33.092Z</lastmod>
+        <loc>https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/</loc>
+        <lastmod>2019-02-27T15:48:52.409Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/</loc>
-        <lastmod>2019-02-24T16:44:04.109Z</lastmod>
+        <loc>https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/</loc>
+        <lastmod>2019-02-27T15:46:04.890Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/12/15/aws-reinvent-2018-summary/</loc>
+        <lastmod>2019-02-27T15:45:53.934Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
+        <lastmod>2019-02-27T15:45:39.065Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://futurecreator.github.io/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/</loc>
+        <lastmod>2019-02-26T15:18:20.314Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -47,22 +71,6 @@
     </url>
 
     <url>
-        <loc>https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/</loc>
-        <lastmod>2019-02-18T16:09:26.023Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/11/16/docker-container-basics/</loc>
-        <lastmod>2019-02-18T16:01:45.187Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>https://futurecreator.github.io/2018/08/07/highest-salaries-worldwide-programming-languages-2018/</loc>
         <lastmod>2019-01-24T13:45:38.465Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -81,14 +89,6 @@
     <url>
         <loc>https://futurecreator.github.io/2018/10/25/google-cloud-summit-seoul-2018/</loc>
         <lastmod>2019-01-21T12:55:22.316Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://futurecreator.github.io/2018/12/15/aws-reinvent-2018-summary/</loc>
-        <lastmod>2019-01-21T12:55:16.166Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

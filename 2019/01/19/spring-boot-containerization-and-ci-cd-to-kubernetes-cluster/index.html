@@ -29,7 +29,7 @@
 <meta property="og:description" content="이번 포스트에서는 간단한 스프링 부트(Spring Boot) 애플리케이션을 만들고 컨테이너화(Containerize)하는 방법을 알아봅니다. 그리고 다양한 툴을 이용해 도커 이미지를 지속적으로 빌드하고 배포할 수 있는 CI/CD 환경을 구성하고 쿠버네티스(Kubernetes) 클러스터에 배포하는 과정을 살펴봅니다. 살펴볼 내용은 다음과 같습니다.  컨테이너">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/virtual-machine-vs-container.png">
-<meta property="og:updated_time" content="2019-02-18T16:09:26.023Z">
+<meta property="og:updated_time" content="2019-02-27T15:46:04.890Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="스프링 부트 컨테이너와 CI&#x2F;CD 환경 구성하기">
 <meta name="twitter:description" content="이번 포스트에서는 간단한 스프링 부트(Spring Boot) 애플리케이션을 만들고 컨테이너화(Containerize)하는 방법을 알아봅니다. 그리고 다양한 툴을 이용해 도커 이미지를 지속적으로 빌드하고 배포할 수 있는 CI/CD 환경을 구성하고 쿠버네티스(Kubernetes) 클러스터에 배포하는 과정을 살펴봅니다. 살펴볼 내용은 다음과 같습니다.  컨테이너">
@@ -514,13 +514,13 @@ ga('send', 'pageview');
 <a href="/2018/11/09/it-infrastructure-basics/" title="개발자를 위한 인프라 기초 총정리">개발자를 위한 인프라 기초 총정리</a>
 </li>
 <li>
-<a href="/2018/10/25/google-cloud-summit-seoul-2018/" title="구글 클라우드 서밋 서울 2018 후기">구글 클라우드 서밋 서울 2018 후기</a>
-</li>
-<li>
 <a href="/2018/07/04/aws-certified/" title="AWS 자격증 준비하기">AWS 자격증 준비하기</a>
 </li>
 <li>
 <a href="/2018/12/15/aws-reinvent-2018-summary/" title="AWS re:Invent 2018 한 방에 정리하기">AWS re:Invent 2018 한 방에 정리하기</a>
+</li>
+<li>
+<a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/" title="개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a>
 </li>
 </ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">롤링 업데이트(Rolling Update)란 기존 서비스를 유지하면서 업데이트하기 위한 방법으로, 여러 개의 인스턴스가 있을 때 하나씩 새로운 버전의 인스턴스로 교체하는 방법입니다.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">빌드 설정이 친숙하지 않은 개발자를 위해 사전에 정의된 CI/CD 설정으로 빌드 작업을 자동화하는 <a href="https://about.gitlab.com/product/auto-devops/" rel="external nofollow noopener noreferrer" target="_blank">Auto DevOps</a>라는 기능도 있습니다. <code>Auto Build</code>, <code>Auto Test</code>, <code>Auto Deploy</code> 등 기능을 제공합니다. GitLab 11.3부터 모든 프로젝트에 Auto DevOps가 기본적으로 설정되어 있어 코드를 처음 올리면 파이프라인 작업이 수행됩니다. 물론 완벽히 구성하지 않은 상태여서 첫 번째 파이프라인 작업이 실패한다면 해당 설정은 disabled 됩니다.<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
