@@ -1,1 +1,32 @@
-(function(a){a(".main-body-content img").each(function(){a(this).attr("data-url",a(this).attr("src"));a(this).removeAttr("src");a(this).addClass("scrollLoading");a(this).wrap('<div class="scrollLoading-wrap"></div>')});var t,i=setInterval(function(){if(t<=0)clearInterval(i);r()},500);var r=function(){a(".scrollLoading").each(function(t,i){if(a(this).height()>0&&a(this).parents(".scrollLoading-wrap").length){if(a(this).parent().hasClass("scrollLoading-wrap"))a(this).unwrap();else a(this).parent().unwrap()}});t=a(".scrollLoading-wrap").length};a(".scrollLoading").scrollLoading()})(jQuery);
+(function($){
+
+  // Image scroll loading
+  $('.main-body-content img').each(function() {
+    $(this).attr('data-url', $(this).attr('src'));
+    $(this).removeAttr('src');
+    $(this).addClass('scrollLoading');
+    $(this).wrap('<div class="scrollLoading-wrap"></div>');
+  });
+
+  var imgCount,
+      timer = setInterval(function () {
+        if(imgCount <= 0)
+          clearInterval(timer);
+        isLoaded();
+      }, 500);
+
+  var isLoaded = function () {
+    $('.scrollLoading').each(function (i, img) {
+      if($(this).height() > 0 && $(this).parents('.scrollLoading-wrap').length) {
+        if($(this).parent().hasClass('scrollLoading-wrap'))
+          $(this).unwrap();
+        else
+          $(this).parent().unwrap();
+      }
+    });
+    imgCount = $('.scrollLoading-wrap').length;
+  }
+
+  $('.scrollLoading').scrollLoading();
+
+})(jQuery);
