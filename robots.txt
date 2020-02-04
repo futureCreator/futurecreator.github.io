@@ -1,2 +1,3 @@
 User-agent: *
+Allow: /ads.txt
 Sitemap: https://futurecreator.github.io/sitemap.xml
