@@ -24,7 +24,7 @@
 <meta property="og:description" content="최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다. IT Infrastructure IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2019-01-21T12:55:33.177Z">
+<meta property="og:updated_time" content="2020-02-11T12:54:06.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="개발자를 위한 인프라 기초 총정리">
 <meta name="twitter:description" content="최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다. IT Infrastructure IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사">
@@ -434,7 +434,7 @@ ga('send', 'pageview');
 <h5 id="네트워크-필터링">네트워크 필터링</h5>
 <p>리눅스는 원래 네트워크 상에서 여러 사용자가 이용하는 것을 전제로 만든 OS 이므로 네트워크 관련 기능이 많습니다. iptables는 리눅스에 내장된 패킷 필터링 및 NAT를 설정할 수 있는 기능입니다.</p>
 <h5 id="selinux-security-enhanced-linux">SELinux(Security-Enhanced Linux)</h5>
-<p>SELinux는 미국 국가안전보장국이 제공하는 리눅스 커널에 강제 액세스 제어 기능을 추가한 기능입니다. 리눅스는 root 사용자가 퍼미션에 상관없이 모든 액세스가 가능해서 root 계정이 도난당하면 시스템에 치명적인 영향을 줄 수 있는 단점이 있는데요. SELinux는 프로세스마다 액세스 제한을 거는 TE(<em>Type Enforcement</em>)와 root 를 포함한 모든 사용자에게 제어를 거는 RBAC(<em>Roll-base Access Control</em>) 등으로 root 에게 권한이 집중되는 것을 막아줍니다.</p>
+<p>SELinux는 미국 국가안전보장국이 제공하는 리눅스 커널에 강제 액세스 제어 기능을 추가한 기능입니다. 리눅스는 root 사용자가 퍼미션에 상관없이 모든 액세스가 가능해서 root 계정이 도난당하면 시스템에 치명적인 영향을 줄 수 있는 단점이 있는데요. SELinux는 프로세스마다 액세스 제한을 거는 TE(<em>Type Enforcement</em>)와 root 를 포함한 모든 사용자에게 제어를 거는 RBAC(<em>Role-based Access Control</em>) 등으로 root 에게 권한이 집중되는 것을 막아줍니다.</p>
 <h3 id="리눅스-배포판-linux-distribution">리눅스 배포판 Linux Distribution</h3>
 <p>보통 리눅스는 커널 위에 각종 커맨드, 라이브러리, 애플리케이션 등을 포함해 배포판이라는 패키지 형태로 배포됩니다. 굉장히 다양한 배포판이 있는데요. 그도 그럴것이 사람마다 원하는 프로그램이 다르고 오픈소스라서 개인 또는 기업이 직접 수정해서 사용할 수 있기 때문입니다.</p>
 <table>
