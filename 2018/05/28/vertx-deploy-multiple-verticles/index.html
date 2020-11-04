@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+    <title>
+        
+        Vert.x verticle 여러 개 배포하기 |
+        
+        Writer, IT Blog
+    </title>
+    
+    <meta name="description" content="회사에서 Vertx. 라는 프레임워크를 다루게 되었습니다. 처음 접할 때 이해하는게 쉽지 않았는데, 알면 알수록 상당히 유용한 프레임워크입니다. Vert.x 에 대해서는 조만간 개념 정리해서 따로 올리도록 하겠습니다.  오늘 포스팅에서는 Verticle 을 여러 개 배포하는 법을 살펴보겠습니다. Vert.x 프로젝트를 shadowJar 를 이용해 jar 파">
+<meta name="keywords" content="java,vertx,verticle,deploy,multiple">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vert.x verticle 여러 개 배포하기">
+<meta property="og:url" content="https://futurecreator.github.io/2018/05/28/vertx-deploy-multiple-verticles/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="회사에서 Vertx. 라는 프레임워크를 다루게 되었습니다. 처음 접할 때 이해하는게 쉽지 않았는데, 알면 알수록 상당히 유용한 프레임워크입니다. Vert.x 에 대해서는 조만간 개념 정리해서 따로 올리도록 하겠습니다.  오늘 포스팅에서는 Verticle 을 여러 개 배포하는 법을 살펴보겠습니다. Vert.x 프로젝트를 shadowJar 를 이용해 jar 파">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
+<meta property="og:updated_time" content="2018-08-14T13:32:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vert.x verticle 여러 개 배포하기">
+<meta name="twitter:description" content="회사에서 Vertx. 라는 프레임워크를 다루게 되었습니다. 처음 접할 때 이해하는게 쉽지 않았는데, 알면 알수록 상당히 유용한 프레임워크입니다. Vert.x 에 대해서는 조만간 개념 정리해서 따로 올리도록 하겠습니다.  오늘 포스팅에서는 Verticle 을 여러 개 배포하는 법을 살펴보겠습니다. Vert.x 프로젝트를 shadowJar 를 이용해 jar 파">
+<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
+<meta name="twitter:creator" content="@hdhXD">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+    
+    <link rel="canonical" href="https://futurecreator.github.io/2018/05/28/vertx-deploy-multiple-verticles/">
+    
+    
+    <link rel="icon" href="/images/favicions/favicon6.png">
+    
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Automation/">Automation</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Vert-x/">Vert.x</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-vertx-deploy-multiple-verticles" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            
+    
+        <h1 class="article-title" itemprop="name">
+        Vert.x verticle 여러 개 배포하기
+        </h1>
+    
+
+        </header>
+        
+        <div class="article-subtitle">
+            🗓
+            <a href="/2018/05/28/vertx-deploy-multiple-verticles/" class="article-date">
+    <time datetime="2018-05-28T11:43:58.000Z" itemprop="datePublished">2018-05-28</time>
+</a>
+            <!-- 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deploy/">deploy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/multiple/">multiple</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/verticle/">verticle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vertx/">vertx</a></li></ul>
+ -->
+            <span class="reading-time">⏱ 소요시간
+                8 분</span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>회사에서 <a href="https://vertx.io/" rel="external nofollow noopener noreferrer" target="_blank">Vertx.</a> 라는 프레임워크를 다루게 되었습니다. 처음 접할 때 이해하는게 쉽지 않았는데, 알면 알수록 상당히 유용한 프레임워크입니다. Vert.x 에 대해서는 조만간 개념 정리해서 따로 올리도록 하겠습니다.</p>
+<p><img src="https://vertx.io/assets/logo-sm.png" alt="https://vertx.io/"></p>
+<p>오늘 포스팅에서는 Verticle 을 여러 개 배포하는 법을 살펴보겠습니다.</p>
+<p>Vert.x 프로젝트를 shadowJar 를 이용해 jar 파일로 떨군 후 리눅스에서 실행시키는 건 간단해서 별 문제가 안됐습니다. 문제는 shadowJar config 에서 MainVerticle 를 하나만 지정할 수 있기 때문에 verticle 을 여러 개 사용하려면 다른 방법이 필요했습니다.</p>
+<h2 id="main-verticle-만들기">Main Verticle 만들기</h2>
+<p><code>App.java</code> 라는 메인 버티클을 먼저 만들고 MainVerticle 로 지정해주겠습니다.</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">shadowJar &#123;</span><br><span class="line">  mainClassName = <span class="string">'io.vertx.core.Launcher'</span></span><br><span class="line">  classifier = <span class="string">'fat'</span></span><br><span class="line">  manifest &#123;</span><br><span class="line">    attributes <span class="string">'Main-Verticle'</span>: <span class="string">'com.future.creator.App'</span></span><br><span class="line">  &#125;</span><br><span class="line">  mergeServiceFiles &#123;</span><br><span class="line">    include <span class="string">'META-INF/services/io.vertx.core.spi.VerticleFactory'</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="verticle-하나를-배포하기">Verticle 하나를 배포하기</h2>
+<p>물론 MainVerticle 을 지정해주면 별 거 없이 돌아가겠지만 <code>deployVerticle</code> 메소드를 이용해 수동으로 배포하는 법을 살펴보겠습니다.</p>
+<p>실제 로직이 들어간 verticle 을 <code>TestVerticle</code> 이라고 할 때 다음과 같이 <code>App.java</code> 를 작성할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Verticle myVerticle = <span class="keyword">new</span> MyVerticle();</span><br><span class="line">vertx.deployVerticle(myVerticle);</span><br><span class="line"></span><br><span class="line">vertx.deployVerticle(<span class="string">"com.future.creator.TestVerticle"</span>);</span><br></pre></td></tr></table></figure>
+<p>verticle 배포는 async 로 처리되기 때문에 callback 을 넘겨줘서 배포가 완료될 시점에 처리할 작업을 정의할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vertx.deployVerticle(<span class="string">"com.future.creator.TestVerticle"</span>, res -&gt; &#123;</span><br><span class="line">	<span class="keyword">if</span> (res.succeeded()) &#123;</span><br><span class="line">		System.out.println(<span class="string">"Deployment id is: "</span> + res.result());</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">"Deployment failed!"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="verticle-여러-개-배포하기">Verticle 여러 개 배포하기</h2>
+<p>이런 식으로 MainVerticle 을 하나 만들어놓고 배포할 verticle 들을 전부 배포해주시면 되는데요,<br>
+여러 verticle 을 배포할 경우엔 각각 async 방식으로 돌기 때문에 전체적인 결과를 한번에 확인하기가 어렵습니다.<br>
+이럴 땐 Vert.x API 중 CompositeFuture 를 이용하면 비동기 결과를 묶어서 확인 후 처리할 수 있습니다.</p>
+<ul>
+<li>CompositeFuture.all 전부 성공하거나 하나라도 실패할 경우 리턴</li>
+<li>CompositeFuture.any 하나가 성공하거나 전부 다 실패할 경우 리턴</li>
+<li>CompositeFuture.join 전부 성공하거나 전부 완료되었지만 하나라도 실패할 경우 리턴</li>
+</ul>
+<p>이를 이용해서 코드를 작성하면 다음과 같습니다. 저는 모두 성공하면 성공, 하나라도 실패하면 실패하는 all 을 이용했습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">AbstractVerticle</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(App.class);</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">(Future&lt;Void&gt; startFuture)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line"></span><br><span class="line">    LOGGER.info(<span class="string">"START DEPLOYMENT"</span>);</span><br><span class="line">    LOGGER.info(<span class="string">"Using &#123;&#125; Event Loops."</span>, <span class="number">2</span> * Runtime.getRuntime().availableProcessors());</span><br><span class="line"></span><br><span class="line">    Future&lt;String&gt; future1 = Future.future();</span><br><span class="line">    Future&lt;String&gt; future2 = Future.future();</span><br><span class="line">    Future&lt;String&gt; future3 = Future.future();</span><br><span class="line"></span><br><span class="line">    vertx.deployVerticle(<span class="string">"com.future.creator.TestVerticle1"</span>, future1.completer());</span><br><span class="line">    vertx.deployVerticle(<span class="string">"com.future.creator.TestVerticle2"</span>, future2.completer());</span><br><span class="line">    vertx.deployVerticle(<span class="string">"com.future.creator.TestVerticle3"</span>, future3.completer());</span><br><span class="line"></span><br><span class="line">    CompositeFuture.all(future1, future2, future3).setHandler(ar -&gt; &#123;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (ar.succeeded()) &#123;</span><br><span class="line"></span><br><span class="line">        LOGGER.info(<span class="string">"All Verticles deployed."</span>);</span><br><span class="line"></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        String cause = ar.cause() == <span class="keyword">null</span> ? <span class="string">""</span> : ar.cause().getMessage();</span><br><span class="line"></span><br><span class="line">        LOGGER.info(<span class="string">"Verticle deployment failed : &#123;&#125;"</span>, cause);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!startFuture.failed())</span><br><span class="line">          startFuture.fail(cause);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="배포-결과-확인">배포 결과 확인</h2>
+<p>Linux command 를 실행하는 TestVerticle 을 3개 만들어서 한번에 실행시켜 봤습니다.</p>
+<h3 id="모두-성공하는-경우">모두 성공하는 경우</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-- 배포 시작</span><br><span class="line">01:31:56.461 [vert.x-eventloop-thread-0] INFO  com.future.creator.App - START DEPLOYMENT</span><br><span class="line">01:31:56.468 [vert.x-eventloop-thread-0] INFO  com.future.creator.App - Using 2 Event Loops.</span><br><span class="line"></span><br><span class="line">-- 0, 1 Thread 2개에서 각각 작업 시작함</span><br><span class="line">01:31:56.516 [vert.x-eventloop-thread-1] DEBUG o.z.exec.ProcessExecutor - Executing [java, -version].</span><br><span class="line">01:31:56.523 [vert.x-eventloop-thread-0] DEBUG o.z.exec.ProcessExecutor - Executing [java, -version].</span><br><span class="line">01:31:56.554 [vert.x-eventloop-thread-1] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@19a240e</span><br><span class="line">01:31:56.561 [vert.x-eventloop-thread-0] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@f08c85</span><br><span class="line"></span><br><span class="line">-- 작업 종료 deploy 종료</span><br><span class="line">01:31:57.149 [vert.x-eventloop-thread-0] DEBUG o.zeroturnaround.exec.WaitForProcess - java.lang.UNIXProcess@f08c85 stopped with exit code 0</span><br><span class="line">01:31:57.154 [vert.x-eventloop-thread-0] INFO  com.future.creator.TestVerticle2</span><br><span class="line">01:31:57.168 [vert.x-eventloop-thread-1] DEBUG o.zeroturnaround.exec.WaitForProcess - java.lang.UNIXProcess@19a240e stopped with exit code 0</span><br><span class="line">01:31:57.169 [vert.x-eventloop-thread-1] INFO  com.future.creator.TestVerticle1</span><br><span class="line"></span><br><span class="line">-- 나머지 하나 verticle3 deploy 중</span><br><span class="line">01:31:57.169 [vert.x-eventloop-thread-1] DEBUG o.z.exec.ProcessExecutor - Executing [java, -version].</span><br><span class="line">01:31:57.182 [vert.x-eventloop-thread-1] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@169db54</span><br><span class="line">01:31:57.518 [vert.x-eventloop-thread-1] DEBUG o.zeroturnaround.exec.WaitForProcess - java.lang.UNIXProcess@169db54 stopped with exit code 0</span><br><span class="line">01:31:57.519 [vert.x-eventloop-thread-1] INFO  com.future.creator.TestVerticle3</span><br><span class="line"></span><br><span class="line">-- 모두 deploy 완료</span><br><span class="line">01:31:57.520 [vert.x-eventloop-thread-0] INFO  com.future.creator.App - All Verticles deployed.</span><br></pre></td></tr></table></figure>
+<h3 id="실패하는-경우">실패하는 경우</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">-- deploy 시작</span><br><span class="line">01:29:14.074 [vert.x-eventloop-thread-0] INFO  com.future.creator.App - START DEPLOYMENT</span><br><span class="line">01:29:14.106 [vert.x-eventloop-thread-0] INFO  com.future.creator.App - Using 2 Event Loops.</span><br><span class="line"></span><br><span class="line">-- verticle 1에서 deploy 실패</span><br><span class="line">-- 각각 deploy 중인데 이미 verticle 1이 실패하였으므로 벌써 전체 deploy 는 실패로 판정됨.</span><br><span class="line">01:29:14.203 [vert.x-eventloop-thread-0] INFO  com.future.creator.App - Verticle deployment failed : com.future.creator.TestVerticle1</span><br><span class="line"></span><br><span class="line">-- 0, 1 쓰레드에서 verticle 2, 3 deploy</span><br><span class="line">01:29:14.245 [vert.x-eventloop-thread-1] DEBUG o.z.exec.ProcessExecutor - Executing [java, -version].</span><br><span class="line">01:29:14.247 [vert.x-eventloop-thread-0] DEBUG o.z.exec.ProcessExecutor - Executing [java, -version].</span><br><span class="line">01:29:14.307 [vert.x-eventloop-thread-1] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@eeea38</span><br><span class="line">01:29:14.344 [vert.x-eventloop-thread-0] DEBUG o.z.exec.ProcessExecutor - Started java.lang.UNIXProcess@c8642a</span><br><span class="line">01:29:14.870 [vert.x-eventloop-thread-0] DEBUG o.zeroturnaround.exec.WaitForProcess - java.lang.UNIXProcess@c8642a stopped with exit code 0</span><br><span class="line">01:29:14.901 [vert.x-eventloop-thread-0] INFO  com.future.creator.TestVerticle3</span><br><span class="line">01:29:14.937 [vert.x-eventloop-thread-1] DEBUG o.zeroturnaround.exec.WaitForProcess - java.lang.UNIXProcess@eeea38 stopped with exit code 0</span><br><span class="line">01:29:14.939 [vert.x-eventloop-thread-1] INFO  com.future.creator.TestVerticle2</span><br><span class="line">io.vertx.core.impl.NoStackTraceThrowable: com.future.creator.TestVerticle1</span><br><span class="line"></span><br><span class="line">-- future를 fail 처리했기 때문에 deploy 실패함.</span><br><span class="line">-- 이거 없으면 error 있어도 그냥 전체 배포했다고 완료됨.</span><br><span class="line">May 25, 2018 1:29:14 AM io.vertx.core.impl.launcher.commands.VertxIsolatedDeployer</span><br><span class="line">SEVERE: Failed in deploying verticle</span><br><span class="line"></span><br><span class="line">io.vertx.core.impl.NoStackTraceThrowable: com.future.creator.TestVerticle1</span><br><span class="line">io.vertx.core.impl.NoStackTraceThrowable: com.future.creator.TestVerticle1</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/05/29/vertx-running-blocking-code/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Vert.x Blocking Code 처리하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/05/28/nodejs-npm-update-latest-or-stable-version/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Node.js 버전 관리하기 (설치 &amp; 업데이트)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2020 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/05/28/vertx-deploy-multiple-verticles/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+

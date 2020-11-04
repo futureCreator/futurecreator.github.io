@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+    <title>
+        
+        Java Lambda (3) 메소드 참조 |
+        
+        Writer, IT Blog
+    </title>
+    
+    <meta name="description" content="메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. &apos;참조’라는 말에서 알 수 있듯이 이미 존재하는 이름을 가진 메소드를 람다로써 사용할 수 있도록 참조하는(가리키는) 역할을 합니다. 즉, 일반 함수를 람다 형태로 사용할 수 있도록 해줍니다. 그리고 메소드를">
+<meta name="keywords" content="java,lambda,method_references">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Lambda (3) 메소드 참조">
+<meta property="og:url" content="https://futurecreator.github.io/2018/08/02/java-lambda-method-references/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. &apos;참조’라는 말에서 알 수 있듯이 이미 존재하는 이름을 가진 메소드를 람다로써 사용할 수 있도록 참조하는(가리키는) 역할을 합니다. 즉, 일반 함수를 람다 형태로 사용할 수 있도록 해줍니다. 그리고 메소드를">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
+<meta property="og:updated_time" content="2018-10-23T12:11:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java Lambda (3) 메소드 참조">
+<meta name="twitter:description" content="메소드 참조 Method References 메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. &apos;참조’라는 말에서 알 수 있듯이 이미 존재하는 이름을 가진 메소드를 람다로써 사용할 수 있도록 참조하는(가리키는) 역할을 합니다. 즉, 일반 함수를 람다 형태로 사용할 수 있도록 해줍니다. 그리고 메소드를">
+<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
+<meta name="twitter:creator" content="@hdhXD">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+    
+    <link rel="canonical" href="https://futurecreator.github.io/2018/08/02/java-lambda-method-references/">
+    
+    
+    <link rel="icon" href="/images/favicions/favicon6.png">
+    
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Automation/">Automation</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-java-lambda-method-references" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            
+    
+        <h1 class="article-title" itemprop="name">
+        Java Lambda (3) 메소드 참조
+        </h1>
+    
+
+        </header>
+        
+        <div class="article-subtitle">
+            🗓
+            <a href="/2018/08/02/java-lambda-method-references/" class="article-date">
+    <time datetime="2018-08-01T15:07:36.000Z" itemprop="datePublished">2018-08-02</time>
+</a>
+            <!-- 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/method-references/">method_references</a></li></ul>
+ -->
+            <span class="reading-time">⏱ 소요시간
+                7 분</span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="메소드-참조-method-references">메소드 참조 Method References</h2>
+<p>메소드 참조는 메소드를 간결하게 지칭할 수 있는 방법으로 람다가 쓰이는 곳 어디서나 사용할 수 있습니다. '참조’라는 말에서 알 수 있듯이 이미 존재하는 이름을 가진 메소드를 람다로써 사용할 수 있도록 참조하는(가리키는) 역할을 합니다.</p>
+<p>즉, 일반 함수를 람다 형태로 사용할 수 있도록 해줍니다. 그리고 메소드를 호출(실행)하는 것이 아니라 참조만 하기 때문에, 이름 뒤에 소괄호는 쓰지 않습니다.</p>
+<p>우리가 메소드 참조로 작성하면 컴파일러는 메소드를 참조를 보고 람다를 생성합니다. 사용법은 다음과 같습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 원래 함수</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">valueOf</span><span class="params">(Object obj)</span> </span>&#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Class::method 형태로 사용</span></span><br><span class="line">String::valueOf</span><br><span class="line"></span><br><span class="line"><span class="comment">// 메소드 () 소괄호는 쓰지 않는다.</span></span><br><span class="line">String::valueOf(); <span class="comment">// error</span></span><br></pre></td></tr></table></figure>
+<p>메소드 참초를 이용해 동일한 형식의 람다를 해당 인터페이스에 할당할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line">  <span class="function">String <span class="title">theNameIsUnimporant</span><span class="params">(Object object)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Example a = String::valueOf;</span><br></pre></td></tr></table></figure>
+<p>다양한 메소드 참조를 살펴보겠습니다.</p>
+<ol>
+<li>기본 사용법</li>
+<li>생성자 참조</li>
+<li>스태틱 메소드 참조</li>
+<li>인스턴스 메소드 참조 (1)</li>
+<li>인스턴스 메소드 참조 (2)</li>
+</ol>
+<h2 id="기본">기본</h2>
+<p>기본적인 사용법입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 람다로 사용하기 위한 함수형 인터페이스 작성</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Conversion</span> </span>&#123;</span><br><span class="line">  <span class="function">String <span class="title">convert</span><span class="params">(Integer number)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Conversion 을 사용하는 메소드</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">convert</span><span class="params">(Integer number, Conversion function)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> function.convert(number);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 메소드 참조를 동일한 람다로 변환하기 위한 충분한 정보를 제공함</span></span><br><span class="line"><span class="comment">// Convert 메소드를 호출할 때 람다를 인자로 넘겨줄 수 있다.</span></span><br><span class="line">convert(<span class="number">100</span>, (number) -&gt; String.valueOf(number));</span><br><span class="line"></span><br><span class="line"><span class="comment">// valueOf() 메소드가 Integer 를 받고 String 을 반환하는 조건에 일치한다</span></span><br><span class="line"><span class="comment">// 따라서 메소드 참조로 대체할 수 있음</span></span><br><span class="line">convert(<span class="number">100</span>, String::valueOf);</span><br></pre></td></tr></table></figure>
+<h2 id="생성자-참조">생성자 참조</h2>
+<p>실제로 생성자를 호출해서 인스턴스를 생성하는 것이 아니라 생성자 메소드를 참조하는 것 뿐입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String::<span class="keyword">new</span></span><br><span class="line">() -&gt; <span class="keyword">new</span> String() <span class="comment">// 위 코드와 같은 의미</span></span><br></pre></td></tr></table></figure>
+<p>예제를 살펴보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Factory 는 임의의 객체를 반환하는 create 메소드를 가진 함수형 인터페이스</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Factory</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">  <span class="function">T <span class="title">create</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 새로운 리스트를 만들고 10개의 빈 객체를 저장한다고 하자.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">usage</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  List&lt;Object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    list.add(<span class="keyword">new</span> Object());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 객체 생성하는 부분을 다음과 같이 메소드로 뽑아낸다.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">usage</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  initialize(list, ...);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">initialize</span><span class="params">(List&lt;Object&gt; list, Factory&lt;Object&gt; factory)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    list.add(factory.create());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 그럼 다음과 같이 사용할 수 있다.</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">usage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  List&lt;Object&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  init(list, () -&gt; <span class="keyword">new</span> Object());</span><br><span class="line">  init(list, Object::<span class="keyword">new</span>); <span class="comment">// 메소드 참조</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>제네릭 타입을 추가해도 잘 동작합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">usage</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">  initialize(list, String::<span class="keyword">new</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">initialize</span> <span class="params">(List&lt;T&gt; list, Factory&lt;T&gt; factory)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    list.add(factory.create());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>인자를 받는 생성자의 경우를 생각해보겠습니다. 컴파일러가 함수형 인터페이스를 통해 어떤 생성자를 사용할 지 판단합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Person 클래스와 여러 인자를 받는 생성자</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String forename, String surname, LocalDate birthday, Gender gender, String emailAddress, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// initialize</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Person 객체를 리턴하는 함수형 인터페이스</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">PersonFactory</span> </span>&#123;</span><br><span class="line">  <span class="function">Person <span class="title">create</span><span class="params">(String forename, String surname, LocalDate birthday, Gender gender, String emailAddress, <span class="keyword">int</span> age)</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">example</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  List&lt;Person&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 이렇게 사용할 수도 있지만</span></span><br><span class="line">  PersonFactory factory = (a, b, c, d, e, f) -&gt; <span class="keyword">new</span> Person(a, b, c, d, e, f);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 이렇게 처리해도 적합한 생성자를 유추한다.</span></span><br><span class="line">  PersonFactory factory = Person::<span class="keyword">new</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 람다를 넘겨주기</span></span><br><span class="line">  init(list, factory, a, b, c, d, e, f);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 인라인으로 처리 가능</span></span><br><span class="line">  init(list, Person::<span class="keyword">new</span>, a, b, c, d, e, f);</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">(List&lt;Person&gt; list, PersonFactory factory, String forename, String surname, LocalDate birthday, Gender gender, String emailAddress, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    list.add(factory.create(forename, surname, birthday, gender, emailAddress, age));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="스태틱-메소드-참조">스태틱 메소드 참조</h2>
+<p>메소드 참조는 스태틱 메소드를 직접적으로 가리킬 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String::valueOf</span><br><span class="line">x -&gt; String.valueOf(x) <span class="comment">// 위와 동일</span></span><br></pre></td></tr></table></figure>
+<p>예제를 살펴보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Comparators</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">asc</span><span class="params">(Integer first, Integer second)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> first.compareTo(second);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 스태틱 메소드를 람다로 사용하는 경우</span></span><br><span class="line">Collections.sort(Arrays.asList(<span class="number">5</span>, <span class="number">12</span>, <span class="number">4</span>), (a, b) -&gt; Comparators.asc(a, b));</span><br><span class="line">Collections.sort(Arrays.asList(<span class="number">5</span>, <span class="number">12</span>, <span class="number">4</span>), Comparators::asc); <span class="comment">// 메소드 참조</span></span><br></pre></td></tr></table></figure>
+<h2 id="인스턴스-메소드-참조-1">인스턴스 메소드 참조 (1)</h2>
+<p>특정 인스턴스의 메소드를 참조할 수 있습니다. 클래스 이름이 아닌 인스턴스명을 적어주면 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">x::toString <span class="comment">// x 는 접근하고자 하는 인스턴스</span></span><br><span class="line">() -&gt; x.toString() <span class="comment">// 위와 동일</span></span><br></pre></td></tr></table></figure>
+<p>이러한 방법은 이미 정의되어 있는 메소드를 (함수형 인터페이스가 맞다면) 람다로 재사용할 수 있게 해줍니다. 함수형 인터페이스 간의 전환도 가능합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Callable&lt;String&gt; c = () -&gt; <span class="string">"Hello"</span>; <span class="comment">// 함수형 메소드는 call</span></span><br><span class="line">Factory&lt;String&gt; f = c::call; <span class="comment">// 다른 함수형 인터페이스를 사용 가능</span></span><br></pre></td></tr></table></figure>
+<p>좀 더 자세한 예제를 살펴보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">example</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">  String x = <span class="string">"hello"</span>;</span><br><span class="line">  <span class="comment">// 함수형 인터페이스 시그니처에 맞는 인스턴스 메소드를 전달할 수 있다!</span></span><br><span class="line">  function(x::toString); <span class="comment">// 내부에는 x 가 없고 외부 범위의 x 에 접근하는 클로저</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">function</span><span class="params">(Supplier&lt;String&gt; supplier)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> sullier.get();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="인스턴스-메소드-참조-2">인스턴스 메소드 참조 (2)</h2>
+<p>앞에서 살펴 본 내용에 따르면 다음 메소드 참조에서 <code>Obejct</code> 는 클래스를 의미할 것입니다. 하지만 여기서 <code>toString</code> 메소드는 스태틱 메소드가 아니라 일반적인 인스턴스 메소드입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object::toString</span><br></pre></td></tr></table></figure>
+<p>어떤 점이 다른걸까요?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">() -&gt; x.toString() <span class="comment">// 클로저라서 알고 있었다</span></span><br><span class="line">(x) -&gt; x.toString() <span class="comment">// 외부에서 받아오기 때문에 알 수 없음</span></span><br></pre></td></tr></table></figure>
+<p>헷갈릴 수 있는데 좀 더 자세히 살펴보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">lambdaExample</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  function(<span class="string">"value"</span>, x -&gt; x.toString()); <span class="comment">// 넘겨 받은 x 를 사용</span></span><br><span class="line">  function(<span class="string">"value"</span>, String::toString); <span class="comment">// 메소드 참조</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">function</span><span class="params">(String value, Function&lt;String, String&gt; function)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> function.apply(value); <span class="comment">// 클로저 아님</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>내부적으로는 인스턴스 메소드 참조 (1)은 클로저이고, (2)는 람다입니다. (1)은 미리 알 수 있는 특정 객체의 인스턴스 메소드이고, (2)는 나중에 전달받는 임의의 객체의 인스턴스라고 볼 수 있습니다.</p>
+<h2 id="요약">요약</h2>
+<p>이번 포스팅에서 살펴본 메소드 참조를 정리해보겠습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[The Java Tutorials : Method References](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
+">[1]</span></a></sup></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 생성자 참조</span></span><br><span class="line">String::<span class="keyword">new</span> <span class="comment">// ClassName::new</span></span><br><span class="line">() -&gt; <span class="keyword">new</span> String()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 정적 메소드 참조</span></span><br><span class="line">String::valueOf <span class="comment">// ClassName::staticMethodName</span></span><br><span class="line">(s) -&gt; String.valueOf(s)</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 인스턴스 메소드 참조 (1) 클로저</span></span><br><span class="line">x::toString <span class="comment">// instanceName::instanceMethodName</span></span><br><span class="line">() -&gt; <span class="string">"hello"</span>.toString()</span><br><span class="line">  </span><br><span class="line"><span class="comment">// 인스턴스 메소드 참조 (2) 람다</span></span><br><span class="line">String::toString <span class="comment">// ClassName::instanceMethodName</span></span><br><span class="line">(s) -&gt; s.toString()</span><br></pre></td></tr></table></figure>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378&amp;OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&amp;a=A100532541&amp;l=9999&amp;l_cd1=0&amp;u_id=jjtlu78nwo016iuh02yqe&amp;l_cd2=0&amp;tu=http%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;자바 람다 배우기&gt;</a></li>
+</ul>
+<h2 id="related-posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/19/java-lambda-basics/" title="Java Lambda (1) 기본">Java Lambda (1) 기본</a>
+</li>
+<li>
+<a href="/2018/07/20/java-lambda-type-inference-functional-interface/" title="Java Lambda (2) 타입 추론과 함수형 인터페이스">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-and-closure/" title="Java Lambda (7) 람다와 클로저">Java Lambda (7) 람다와 클로저</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html" rel="external nofollow noopener noreferrer" target="_blank">The Java Tutorials : Method References</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/02/java-jdk-functional-interfaces-api/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java Lambda (4) 기본으로 제공되는 함수형 인터페이스
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/08/01/installation-mysql-5-7-binary-tar-gz/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">변경된 MySQL 설치 방법 (5.7 이상)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2020 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/08/02/java-lambda-method-references/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+    <title>
+        
+        Java Lambda (7) 람다와 클로저 |
+        
+        Writer, IT Blog
+    </title>
+    
+    <meta name="description" content="람다와 클로저 자바 커뮤니티에서는 클로저와 람다를 혼용하면서 개념 상 혼란이 있었습니다. 그래서 자바 8부터 클로저를 지원한다는 글을 보기도 합니다. 이번 포스트에서는 자바에서의 람다와 클로저를 명확히 구분해보고자 합니다. 먼저 일반적인 클로저부터 살펴보겠습니다. 클로저 Closure 보통의 함수는 외부에서 인자를 받아서 로직을 처리합니다. 그런데 클로저는">
+<meta name="keywords" content="java,lambda,closure">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Lambda (7) 람다와 클로저">
+<meta property="og:url" content="https://futurecreator.github.io/2018/08/09/java-lambda-and-closure/index.html">
+<meta property="og:site_name" content="Writer, IT Blog">
+<meta property="og:description" content="람다와 클로저 자바 커뮤니티에서는 클로저와 람다를 혼용하면서 개념 상 혼란이 있었습니다. 그래서 자바 8부터 클로저를 지원한다는 글을 보기도 합니다. 이번 포스트에서는 자바에서의 람다와 클로저를 명확히 구분해보고자 합니다. 먼저 일반적인 클로저부터 살펴보겠습니다. 클로저 Closure 보통의 함수는 외부에서 인자를 받아서 로직을 처리합니다. 그런데 클로저는">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
+<meta property="og:updated_time" content="2018-10-23T12:11:31.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java Lambda (7) 람다와 클로저">
+<meta name="twitter:description" content="람다와 클로저 자바 커뮤니티에서는 클로저와 람다를 혼용하면서 개념 상 혼란이 있었습니다. 그래서 자바 8부터 클로저를 지원한다는 글을 보기도 합니다. 이번 포스트에서는 자바에서의 람다와 클로저를 명확히 구분해보고자 합니다. 먼저 일반적인 클로저부터 살펴보겠습니다. 클로저 Closure 보통의 함수는 외부에서 인자를 받아서 로직을 처리합니다. 그런데 클로저는">
+<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
+<meta name="twitter:creator" content="@hdhXD">
+<meta property="fb:admins" content="100001774570174">
+<meta property="fb:app_id" content="1652051021784453">
+    
+    <link rel="canonical" href="https://futurecreator.github.io/2018/08/09/java-lambda-and-closure/">
+    
+    
+    <link rel="icon" href="/images/favicions/favicon6.png">
+    
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+    
+    
+        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+    
+    
+        <script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+    
+    
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-2948714191026958",
+      enable_page_level_ads: true
+    });
+  </script>
+
+    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+</head></html>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                        <h2 class="subtitle-wrap">
+                            <p class="subtitle">
+                                Eric Han&#39;s IT Blog Powered by Hexo
+                            </p>
+                        </h2>
+                        
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Automation/">Automation</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+                            <article id="post-java-lambda-and-closure" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+        <header class="article-header">
+            
+    
+        <h1 class="article-title" itemprop="name">
+        Java Lambda (7) 람다와 클로저
+        </h1>
+    
+
+        </header>
+        
+        <div class="article-subtitle">
+            🗓
+            <a href="/2018/08/09/java-lambda-and-closure/" class="article-date">
+    <time datetime="2018-08-09T13:52:24.000Z" itemprop="datePublished">2018-08-09</time>
+</a>
+            <!-- 
+    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/closure/">closure</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li></ul>
+ -->
+            <span class="reading-time">⏱ 소요시간
+                6 분</span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="람다와-클로저">람다와 클로저</h2>
+<p>자바 커뮤니티에서는 클로저와 람다를 혼용하면서 개념 상 혼란이 있었습니다. 그래서 자바 8부터 클로저를 지원한다는 글을 보기도 합니다. 이번 포스트에서는 자바에서의 람다와 클로저를 명확히 구분해보고자 합니다.</p>
+<p>먼저 일반적인 클로저부터 살펴보겠습니다.</p>
+<h2 id="클로저-closure">클로저 Closure</h2>
+<p>보통의 함수는 외부에서 인자를 받아서 로직을 처리합니다. 그런데 클로저는 자신을 둘러싼 context 내의 변수에 접근할 수 있습니다. 즉, 외부 범위의 변수를 함수 내부로 바인딩하는 기술입니다.</p>
+<p>특이한 점은 자신을 둘러싼 외부 함수가 종료되더라도 이 값이 유지가 됩니다. 함수에서 사용하는 값들은 클로저가 생성되는 시점에서 정의되고 함수 자체가 복사되어 따로 존재하기 때문입니다. 코드를 살펴보겠습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function add(x)</span><br><span class="line">  function addX(y)</span><br><span class="line">    return y + x</span><br><span class="line">  return addX</span><br></pre></td></tr></table></figure>
+<p>함수 <code>addX</code> 내부에서 <code>x</code> 는 현재 함수를 둘러싸고 있는 외부 컨텍스트에 존재합니다. <code>add</code> 에서 이 함수가 리턴되는데 <code>x</code> 의 값(value)이나 참조(reference)를 복사한 클로저가 리턴됩니다. 함수를 일급 객체 (<em>first-class citizens</em>) 로 취급하는 언어에서는 이를 변수로 받아서 사용이 가능합니다. 넣어주는 <code>x</code> 값에 따라 함수가 생성되는 것을 볼 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">variable add1 = add(1) // return y + 1</span><br><span class="line">variable add5 = add(5) // return y + 5</span><br><span class="line"></span><br><span class="line">assert add1(3) = 4</span><br><span class="line">assert add5(3) = 8</span><br></pre></td></tr></table></figure>
+<h2 id="자바-속-클로저">자바 속 클로저</h2>
+<p>그렇다면 자바에서의 클로저는 어떨까요? 클래스 내부의 필드에 접근하는 메소드를 생각해봅시다. 이미 자바에서는 클로저가 있습니다. 메소드 내에서 외부 컨텍스트의 변수를 참조하기 때문이죠. 하지만 메소드는 함수가 아니고, 일급 객체도 아니다.</p>
+<p>자바에서의 클로저 예제를 살펴보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClosureTest</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Integer b = <span class="number">2</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">private</span> Stream&lt;Integer&gt; <span class="title">calculate</span><span class="params">(Stream&lt;Integer&gt; stream, Integer a)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> stream.map(t -&gt; t * a + b);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    List&lt;Integer&gt; list = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">    List&lt;Integer&gt; result = <span class="keyword">new</span> ClosureTest()</span><br><span class="line">      .calculate(list.stream(), <span class="number">3</span>)</span><br><span class="line">      .collect(Collectors.toList());</span><br><span class="line">    System.out.println(result); <span class="comment">// [5, 8, 11, 14, 17]</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>calculate</code> 메소드에서 <code>map</code> 메소드를 호출하고 있습니다. 여기서 인자로 넘어가는 람다가 있는데 내부에서 외부 변수인 <code>a</code>와 <code>b</code>를 참조하고 있습니다. 이 때 <code>a</code> 와 <code>b</code> 는 컴파일러가 <code>final</code> 로 간주합니다. 내부에서 필요로 하는 정보를 넘길 때 값이 변경되면 의도하지 않은 결과가 나올 수 있기 때문에, 해당 값은 변하지 않아야 합니다. 따라서 컴파일러는 해당 값을 상수로 취급하는 거죠. 이전 <a href="https://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/">포스트</a>에서 유사 파이널(<em>effectively final</em>)을 살펴봤었죠. 따라서 값을 변경하려고 하면 다음과 같은 컴파일 에러를 볼 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> Stream&lt;Integer&gt; <span class="title">calculate</span><span class="params">(Stream&lt;Integer&gt; stream, Integer a)</span> </span>&#123;</span><br><span class="line">  a = <span class="number">10</span>; <span class="comment">// 값 변경 불가</span></span><br><span class="line">  <span class="comment">// Variable used in lambda expression should be final or effectively final</span></span><br><span class="line">  <span class="keyword">return</span> stream.map(t -&gt; t * a + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이를 우회하는 방법은 이전 포스트에서 살펴본 것처럼 객체를 이용하면 됩니다. 객체를 사용하기 위해서 다음과 같이 예제를 변경해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ClosureTest</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Integer b = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> Integer <span class="title">getB</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> Stream&lt;Integer&gt; <span class="title">calculate</span><span class="params">(Stream&lt;Integer&gt; stream, Int a)</span> </span>&#123;</span><br><span class="line">    a.setValue(<span class="number">10</span>); <span class="comment">// 값 변경 가능</span></span><br><span class="line">    <span class="keyword">return</span> stream.map(t -&gt; t * a.value + getB());</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Int</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">int</span> value;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="title">Int</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = value;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setValue</span><span class="params">(<span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그렇게 되면 참조값이 <code>final</code> 이기 때문에 객체 안의 값은 변경할 수 있게 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String... args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  List&lt;Integer&gt; list = Arrays.asList(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);</span><br><span class="line">  List&lt;Integer&gt; result = <span class="keyword">new</span> ClosureTest()</span><br><span class="line">    .calculate(list.stream(), <span class="keyword">new</span> Int(<span class="number">3</span>))</span><br><span class="line">    .collect(Collectors.toList());</span><br><span class="line">  System.out.println(result); <span class="comment">// [12, 22, 32, 42, 52]</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>하지만 이는 side effect 를 발생시킬 수 있어 위험한 방법입니다.</p>
+<h2 id="차이점">차이점</h2>
+<p>람다와 클로저는 모두 익명의 특정 기능 블록입니다. 차이점은 클로저는 외부 변수를 참조하고, 람다는 매개변수만 참조한다는 겁니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Lambda.</span></span><br><span class="line">(server) -&gt; server.isRunning();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Closure. 외부의 server 라는 변수를 참조</span></span><br><span class="line">() -&gt; server.isRunning();</span><br></pre></td></tr></table></figure>
+<p>클로저는 외부에 의존성이 있고, 람다는 외부에 의존성이 없는 스태틱 메소드와 비슷합니다.</p>
+<p>다음 예제는 폴링 후 조건에 따라 대기하는 메소드입니다. Predicate 를 이용해 검증하고 결과에 따라 짧은 시간 동안 멈춥니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">waitFor</span><span class="params">(T input, Predicate&lt;T&gt; predicate)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (!predicate.test(input)) &#123;</span><br><span class="line">    Thread.sleep(<span class="number">250</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>어떤 HTTP 서버가 구동 중인지 확인하는 간단한 람다를 넘겨보겠습니다. 이때 매개변수를 참조하고 있기 때문에 그 외의 외부 변수에 대한 참조가 없죠. 런타임에 제공하는 서버 변수를 컴파일러가 참고할 필요가 없는 람다입니다. 외부 변수에 영향이 없기 때문에 더 효율적으로 동작합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">waitFor(<span class="keyword">new</span> HttpServer(), (server) -&gt; !server.isRunning());</span><br><span class="line">waitFor(<span class="keyword">new</span> HttpServer(), HttpServer::isRunning); <span class="comment">// 메소드 참조</span></span><br></pre></td></tr></table></figure>
+<p>이번엔 동일한 로직을 클로저를 이용해 구현해보겠습니다. 인자 없이 <code>boolean</code> 값을 리턴하는 함수형 인터페이스를 하나 만듭니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">waitFor</span><span class="params">(Condition condition)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">  <span class="keyword">while</span> (!condition.isSatisfied()) &#123;</span><br><span class="line">    Thread.sleep(<span class="number">250</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Condition</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">boolean</span> <span class="title">isSatisfied</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>받아오는 정보가 없기 때문에 여기서는 판단에 필요한 정보를 외부에서 참조해야한다는 것을 알 수 있습니다. 이 변수는 컴파일러에 의해 복사됩니다. 이것은 클로저입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">closure</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">  HttpServer server = <span class="keyword">new</span> HttpServer();</span><br><span class="line">  waitFor(() -&gt; !server.isRunning());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>자바에서 클로저는 함수의 인스턴스입니다. 람다가 스태틱 메소드와 비슷하다면 외부 변수를 참조하는 익명 클래스가 클로저와 비슷하다고 볼 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">anonymousClassClosure</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">  HttpServer server = <span class="keyword">new</span> HttpServer();</span><br><span class="line">  waitFor(<span class="keyword">new</span> Condition() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isSatisfied</span><span class="params">()</span> </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> !server.isRunning();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>설명이 길었는데, 결론은 람다는 클로저를 포함하는 더 큰 개념이라고 볼 수 있습니다. 람다가 자신의 범위 밖에 있는 변수를 사용하면 그것은 람다인 동시에 클로저입니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Closure_(computer_programming)" rel="external nofollow noopener noreferrer" target="_blank">Closure (computer programming) Wikipedia</a></li>
+<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378&amp;OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&amp;a=A100532541&amp;l=9999&amp;l_cd1=0&amp;u_id=jjtlu78nwo016iuh02yqe&amp;l_cd2=0&amp;tu=http%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;자바 람다 배우기&gt;</a></li>
+<li><a href="https://dzone.com/articles/whats-wrong-java-8-currying-vs" rel="external nofollow noopener noreferrer" target="_blank">What’s Wrong with Java 8: Currying vs Closures</a></li>
+</ul>
+<h2 id="related-posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/19/java-lambda-basics/" title="Java Lambda (1) 기본">Java Lambda (1) 기본</a>
+</li>
+<li>
+<a href="/2018/07/20/java-lambda-type-inference-functional-interface/" title="Java Lambda (2) 타입 추론과 함수형 인터페이스">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-and-closure/" title="Java Lambda (7) 람다와 클로저">Java Lambda (7) 람다와 클로저</a></li>
+</ul>
+
+        </div>
+
+        <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 광고 -->
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/12/java-generics/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java 제네릭 Generics DEEP DIVE
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/08/09/java-lambda-handling-exception/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java Lambda (6) 예외 처리</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Skycrapper -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2020 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/08/09/java-lambda-and-closure/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+    
+        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    
+        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+        <script src="/vendor/scrollLoading/main.js"></script>
+    
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+
