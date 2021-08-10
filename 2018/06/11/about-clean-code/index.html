@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -15,21 +21,22 @@
         Writer, IT Blog
     </title>
     
-    <meta name="description" content="사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다. 기술적 부채 Technical Debt라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 &apos;빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다.">
-<meta name="keywords" content="clean,code">
+    <meta name="description" content="사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다. 기술적 부채 Technical Debt라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 &#39;빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="클린코드가 시작되는 곳">
 <meta property="og:url" content="https://futurecreator.github.io/2018/06/11/about-clean-code/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다. 기술적 부채 Technical Debt라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 &apos;빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다.">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다. 기술적 부채 Technical Debt라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 &#39;빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다.">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-07-07T05:14:33.267Z">
+<meta property="article:published_time" content="2018-06-11T13:02:09.000Z">
+<meta property="article:modified_time" content="2018-07-07T05:14:33.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="clean">
+<meta property="article:tag" content="code">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="클린코드가 시작되는 곳">
-<meta name="twitter:description" content="사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다. 기술적 부채 Technical Debt라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 &apos;빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다.">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +45,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +88,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +101,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +157,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +187,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-about-clean-code" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-about-clean-code" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,10 +203,10 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/06/11/about-clean-code/" class="article-date">
-    <time datetime="2018-06-11T13:02:09.000Z" itemprop="datePublished">2018-06-11</time>
+    <time datetime="2018-06-11T13:02:09.000Z" itemprop="datePublished">2018/06/11</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clean/">clean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/">code</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/clean/" rel="tag">clean</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code/" rel="tag">code</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
                 3 분</span>
@@ -201,7 +215,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다.</p>
 <h2 id="기술적-부채">기술적 부채</h2>
-<p><a href="https://en.wikipedia.org/wiki/Technical_debt" rel="external nofollow noopener noreferrer" target="_blank">Technical Debt</a>라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 '빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다. 이 빚은 당장은 편하지만 이자가 점점 붙어서 나중에 감당하기 어려운 수준까지 늘어날 수 있습니다. 바로 소프트웨어의 품질에 관련된 빚입니다.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Technical_debt">Technical Debt</a>라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 '빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다. 이 빚은 당장은 편하지만 이자가 점점 붙어서 나중에 감당하기 어려운 수준까지 늘어날 수 있습니다. 바로 소프트웨어의 품질에 관련된 빚입니다.</p>
 <p>이 빚은 개발 프로세스의 압박, 테스트 코드와 문서의 부재, 오너쉽과 협업의 부재 등 개발 과정에서 전반적으로 나타날 수 있는 문제들입니다. 현실에서도 적당한 부채는 도움이 되듯이, 프로젝트 상 자원의 한계 때문에 어느 정도의 빚은 가지고 가게 됩니다. 하지만 과도한 빚으로 인해 SW의 품질이 낮아지고 이는 개발 당시에는 큰 문제가 없어보이지만 향후 운영 과정에서 눈덩이처럼 불어나 닥쳐오는 빚이 됩니다.</p>
 <p>이 모든 것이 코딩에서만 비롯되는 문제는 아니지만, 클린코드와 리팩토링은 코드에 관련된 내용입니다. 사실 클린코드는 이미 수년전부터 너무나 많이 회자되었고, 대부분 많이 들어보셨을 내용입니다. 하지만 그럼에도 불구하고 지금까지 클린코드와 코드 품질에 대해 이야기가 나오는 것은 SW 개발의 특성 상 코드의 품질을 정의하거나 측정하고 관리하는 것이 쉽지 않기 때문일겁니다.</p>
 <h2 id="클린하지-않을-이유">클린하지 않을 이유</h2>
@@ -241,7 +255,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -302,7 +316,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -326,14 +340,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -342,7 +348,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -404,7 +410,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -431,18 +437,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

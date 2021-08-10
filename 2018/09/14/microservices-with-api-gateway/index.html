@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,24 @@
     </title>
     
     <meta name="description" content="이전 포스트에서 마이크로서비스 아키텍처의 개념을 살펴봤습니다. 이번 포스트에서는 마이크로서비스의 중요한 요소 중 하나인 API 게이트웨이(API Gateway)를 알아보겠습니다. 서비스 직접 호출하기 먼저 대표적인 쇼핑몰 아마존의 모바일 애플리케이션을 예로 들어보겠습니다.  위 화면은 모바일에서 본 아마존 제품 상세 화면입니다. 간단해보이지만, 실제로 이">
-<meta name="keywords" content="msa,microservices,architecture,api_gateway,api">
 <meta property="og:type" content="article">
 <meta property="og:title" content="마이크로서비스 Microservices (2) API 게이트웨이">
 <meta property="og:url" content="https://futurecreator.github.io/2018/09/14/microservices-with-api-gateway/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이전 포스트에서 마이크로서비스 아키텍처의 개념을 살펴봤습니다. 이번 포스트에서는 마이크로서비스의 중요한 요소 중 하나인 API 게이트웨이(API Gateway)를 알아보겠습니다. 서비스 직접 호출하기 먼저 대표적인 쇼핑몰 아마존의 모바일 애플리케이션을 예로 들어보겠습니다.  위 화면은 모바일에서 본 아마존 제품 상세 화면입니다. 간단해보이지만, 실제로 이">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-10-23T12:11:09.349Z">
+<meta property="article:published_time" content="2018-09-14T13:42:41.000Z">
+<meta property="article:modified_time" content="2018-10-23T12:11:09.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="msa">
+<meta property="article:tag" content="microservices">
+<meta property="article:tag" content="architecture">
+<meta property="article:tag" content="api_gateway">
+<meta property="article:tag" content="api">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="마이크로서비스 Microservices (2) API 게이트웨이">
-<meta name="twitter:description" content="이전 포스트에서 마이크로서비스 아키텍처의 개념을 살펴봤습니다. 이번 포스트에서는 마이크로서비스의 중요한 요소 중 하나인 API 게이트웨이(API Gateway)를 알아보겠습니다. 서비스 직접 호출하기 먼저 대표적인 쇼핑몰 아마존의 모바일 애플리케이션을 예로 들어보겠습니다.  위 화면은 모바일에서 본 아마존 제품 상세 화면입니다. 간단해보이지만, 실제로 이">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +48,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +91,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +104,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +160,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +190,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-microservices-with-api-gateway" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-microservices-with-api-gateway" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +206,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/09/14/microservices-with-api-gateway/" class="article-date">
-    <time datetime="2018-09-14T13:42:41.000Z" itemprop="datePublished">2018-09-14</time>
+    <time datetime="2018-09-14T13:42:41.000Z" itemprop="datePublished">2018/09/14</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api/">api</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api-gateway/">api_gateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/">architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microservices/">microservices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/msa/">msa</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api/" rel="tag">api</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api-gateway/" rel="tag">api_gateway</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/" rel="tag">architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microservices/" rel="tag">microservices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/msa/" rel="tag">msa</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                5 분</span>
+                9 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -232,7 +249,7 @@ ga('send', 'pageview');
 <li>각 서비스의 API 가 웹 친화적(<em>web-friendly</em>)이지 않을 수 있습니다. HTTP 가 아닌 Thrift binary RPC 나 AMQP 메시징 프로토콜을 사용할 수도 있습니다. 이럴 경우 클라이언트에서 직접 호출하기 어렵습니다.</li>
 <li>서비스의 리팩토링이 어려워집니다. 하나의 서비스가 커져서 여러 서비스로 나누거나, 반대로 여러 서비스를 하나의 서비스로 합칠 때 호출단까지 같이 수정해야하기 때문에 작업이 어렵습니다.</li>
 </ul>
-<h2 id="api-게이트웨이-사용하기">API 게이트웨이 사용하기</h2>
+<h2 id="API-게이트웨이-사용하기">API 게이트웨이 사용하기</h2>
 <p>이런 문제를 해결하기 위해 서비스들의 엔드포인트를 하나로 묶을 수 있는 API 게이트웨이가 필요합니다. 각 서비스를 직접 호출하지않고 모든 요청이 API 게이트웨이를 통하게 만드는 것입니다. 예제에서 API 게이트웨이는 하나의 요청에 여러 서비스를 호출한 후 하나의 결과로 취합해서 보내줄 겁니다.</p>
 <p><img src="https://cdn.wp.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part2-3_api-gateway.png" alt="https://www.nginx.com/blog/building-microservices-using-an-api-gateway/"></p>
 <h3 id="기능과-장점">기능과 장점</h3>
@@ -255,14 +272,14 @@ ga('send', 'pageview');
 </ul>
 <h2 id="구현-시-고려사항">구현 시 고려사항</h2>
 <h3 id="비동기-반응형-프로그래밍">비동기, 반응형 프로그래밍</h3>
-<p>API 게이트웨이는 많은 요청을 처리하기 위해 비동기(<em>asynchronous</em>), 논블락킹(<em>nonblocking</em>) I/O 기반으로 설계되어야 합니다. 한 요청을 받아 서비스를 호출할 때 해당 서비스가 지연되거나 응답이 없는 경우, 동기(<em>synchronous</em>), 블락킹(<em>blocking</em>) 모델이라면 전체 서비스에 지연이 생길 겁니다. JVM 위에서 동작하는 NIO 기반 프레임워크는 <a href="https://netty.io/" rel="external nofollow noopener noreferrer" target="_blank">Netty</a>, <a href="https://vertx.io/" rel="external nofollow noopener noreferrer" target="_blank">Vert.x</a>, <a href="https://projectreactor.io/" rel="external nofollow noopener noreferrer" target="_blank">Spring Reactor</a> 등이 있습니다. JVM 을 사용하지 않는 환경에서는 대표적으로 <a href="https://nodejs.org/ko/" rel="external nofollow noopener noreferrer" target="_blank">Node.js</a> 가 있습니다.</p>
+<p>API 게이트웨이는 많은 요청을 처리하기 위해 비동기(<em>asynchronous</em>), 논블락킹(<em>nonblocking</em>) I/O 기반으로 설계되어야 합니다. 한 요청을 받아 서비스를 호출할 때 해당 서비스가 지연되거나 응답이 없는 경우, 동기(<em>synchronous</em>), 블락킹(<em>blocking</em>) 모델이라면 전체 서비스에 지연이 생길 겁니다. JVM 위에서 동작하는 NIO 기반 프레임워크는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://netty.io/">Netty</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://vertx.io/">Vert.x</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://projectreactor.io/">Spring Reactor</a> 등이 있습니다. JVM 을 사용하지 않는 환경에서는 대표적으로 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://nodejs.org/ko/">Node.js</a> 가 있습니다.</p>
 <p>API 를 비동기로 구축하다보면 흔히 ‘콜백 지옥’이라 부르는 얽히고설켜 복잡한 콜백 함수들을 다루게 됩니다. 이럴 땐 반응형 프로그래밍 모델(<em>Reactive programming model</em>)을 고려해보는 것이 좋습니다. 반응형 프로그래밍은 데이터를 다루는 방식이 다릅니다. 기존 프로그램처럼 필요한 데이터를 당겨오는(<em>pull</em>) 방식이 아니라 데이터 변화가 발생했을 때 새로운 데이터를 보내주는(<em>push</em>) 방식입니다.</p>
-<p>리액티브 방식은 스칼라(<em>Scala</em>)의 <a href="https://docs.scala-lang.org/overviews/core/futures.html" rel="external nofollow noopener noreferrer" target="_blank">Future</a>, 자바 8의 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" rel="external nofollow noopener noreferrer" target="_blank">CompletableFuture</a>, 자바스크립트의 <a href="https://developers.google.com/web/fundamentals/primers/promises?hl=ko" rel="external nofollow noopener noreferrer" target="_blank">Promise</a> 등을 이용해 구현할 수 있습니다. 그리고 RxJava<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="RxJava 는 넷플릭스(*Netflix*)에서는 REST 기반의 API 호출 횟수와 서비스의 전반적인 성능을 개선하면서 .NET 환경의 리액티브 확장 라이브러리(*Rx*)를 JVM 에 포팅하여 만들었다.">[1]</span></a></sup>, RxJS 와 같은 <a href="http://reactivex.io/" rel="external nofollow noopener noreferrer" target="_blank">ReactiveX</a> 를 사용하는 것도 좋은 방법입니다.</p>
+<p>리액티브 방식은 스칼라(<em>Scala</em>)의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.scala-lang.org/overviews/core/futures.html">Future</a>, 자바 8의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture</a>, 자바스크립트의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/web/fundamentals/primers/promises?hl=ko">Promise</a> 등을 이용해 구현할 수 있습니다. 그리고 RxJava<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="RxJava 는 넷플릭스(*Netflix*)에서는 REST 기반의 API 호출 횟수와 서비스의 전반적인 성능을 개선하면서 .NET 환경의 리액티브 확장 라이브러리(*Rx*)를 JVM 에 포팅하여 만들었다.">[1]</span></a></sup>, RxJS 와 같은 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://reactivex.io/">ReactiveX</a> 를 사용하는 것도 좋은 방법입니다.</p>
 <h3 id="프로세스-간-통신">프로세스 간 통신</h3>
 <p>마이크로서비스에서 분산된 서비스가 서로 통신하기 위해서는 프로세스 간 통신(<em>inter-process communication; IPC</em>) 매커니즘이 필요합니다. 각 서비스들이 사용하는 방식이 다를 경우 API 게이트웨이는 다양한 방식을 지원해야 합니다.</p>
 <ul>
-<li>비동기 메시징 기반(<em>asynchronous, messaging‑based mechanism</em>) : <a href="https://en.wikipedia.org/wiki/Java_Message_Service" rel="external nofollow noopener noreferrer" target="_blank">JMS</a>(<em>Java Message Service</em>), <a href="https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol" rel="external nofollow noopener noreferrer" target="_blank">AMQP</a>(<em>Advanced Message Queuing Protocol</em>) 등</li>
-<li>동기 방식(<em>synchronous mechanism</em>) : HTTP, <a href="https://thrift.apache.org/" rel="external nofollow noopener noreferrer" target="_blank">Apache Thrift</a> 등</li>
+<li>비동기 메시징 기반(<em>asynchronous, messaging‑based mechanism</em>) : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Java_Message_Service">JMS</a>(<em>Java Message Service</em>), <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">AMQP</a>(<em>Advanced Message Queuing Protocol</em>) 등</li>
+<li>동기 방식(<em>synchronous mechanism</em>) : HTTP, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://thrift.apache.org/">Apache Thrift</a> 등</li>
 </ul>
 <h3 id="서비스-디스커버리">서비스 디스커버리</h3>
 <p>API 게이트웨이는 각 서비스를 호출하기 위해 IP 주소와 포트를 알고 있어야 합니다. 기존 환경에서는 이러한 서버의 위치가 고정이라 문제가 없지만, 클라우드 기반에서는 각 서비스가 동적으로 할당된 서버에 배포되면서 해당 서비스의 위치를 파악하는 것이 어려워졌습니다. 이렇게 해당 서비스의 위치를 찾는 기술을 서비스 디스커버리(<em>Service Discovery</em>)라고 합니다. API 게이트웨이는 서버 사이드, 혹은 클라이언트 사이드 기준으로 서비스 디스커버리를 구현할 수 있습니다.</p>
@@ -270,9 +287,9 @@ ga('send', 'pageview');
 <p>마이크로서비스에서 각 서비스는 독립적으로 배포되기 때문에 부분별로 장애가 발생할 수 있습니다. API 게이트웨이는 각 서비스를 호출하면서 해당 서비스에서 장애가 났을 경우 사용자가 경험을 해치지 않도록 매끄럽게 처리해야 합니다. 에러를 던져줄 수도, 에러 화면으로 라우팅할 수도, 또는 기본값이나 캐시된 값을 보여줄 수도 있습니다.</p>
 <h2 id="참고">참고</h2>
 <ul>
-<li><a href="https://www.nginx.com/blog/building-microservices-using-an-api-gateway/" rel="external nofollow noopener noreferrer" target="_blank">Building Microservices: Using an API Gateway | NGINX</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nginx.com/blog/building-microservices-using-an-api-gateway/">Building Microservices: Using an API Gateway | NGINX</a></li>
 </ul>
-<h2 id="related-posts">Related Posts</h2>
+<h2 id="Related-Posts">Related Posts</h2>
 <ul>
 <li>
 <a href="/2018/09/14/what-is-microservices-architecture/" title="마이크로서비스 Microservices (1) 아키텍처 소개">마이크로서비스 Microservices (1) 아키텍처 소개</a>
@@ -315,7 +332,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -376,7 +393,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -400,14 +417,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -416,7 +425,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -478,7 +487,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -505,18 +514,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

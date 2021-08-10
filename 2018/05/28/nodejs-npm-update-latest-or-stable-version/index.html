@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,28 @@
     </title>
     
     <meta name="description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
-<meta name="keywords" content="javascript,nodejs,npm,n,update,upgrade,latest,stable,version">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js 버전 관리하기 (설치 &amp; 업데이트)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/05/28/nodejs-npm-update-latest-or-stable-version/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-08-14T13:33:00.382Z">
+<meta property="article:published_time" content="2018-05-27T16:35:48.000Z">
+<meta property="article:modified_time" content="2018-08-14T13:33:00.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="nodejs">
+<meta property="article:tag" content="npm">
+<meta property="article:tag" content="n">
+<meta property="article:tag" content="update">
+<meta property="article:tag" content="upgrade">
+<meta property="article:tag" content="latest">
+<meta property="article:tag" content="stable">
+<meta property="article:tag" content="version">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js 버전 관리하기 (설치 &amp; 업데이트)">
-<meta name="twitter:description" content="오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다. 이번 포스팅에서는 Node.js 의 버전을 최신 버전">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +52,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +95,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +108,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +164,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +194,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-nodejs-npm-update-latest-or-stable-version" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-nodejs-npm-update-latest-or-stable-version" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +210,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/05/28/nodejs-npm-update-latest-or-stable-version/" class="article-date">
-    <time datetime="2018-05-27T16:35:48.000Z" itemprop="datePublished">2018-05-28</time>
+    <time datetime="2018-05-27T16:35:48.000Z" itemprop="datePublished">2018/05/28</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/latest/">latest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n/">n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stable/">stable</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/">update</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/upgrade/">upgrade</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/">version</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/" rel="tag">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/latest/" rel="tag">latest</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/n/" rel="tag">n</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/" rel="tag">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stable/" rel="tag">stable</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/update/" rel="tag">update</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/upgrade/" rel="tag">upgrade</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/version/" rel="tag">version</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                2 분</span>
+                6 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -208,11 +229,11 @@ ga('send', 'pageview');
 Node.js version management: no subshells, no profile setup, no convoluted API, just simple.</p>
 </blockquote>
 <p><img src="https://camo.githubusercontent.com/e3c6ac1ad2a69e2e969597b69d794658cb64df88/687474703a2f2f6e696d69742e696f2f696d616765732f6e2f6e2e676966" alt="https://github.com/tj/n"></p>
-<h2 id="node-js-버전-업그레이드">Node.js 버전 업그레이드</h2>
-<h3 id="node-js-버전-확인">Node.js 버전 확인</h3>
+<h2 id="Node-js-버전-업그레이드">Node.js 버전 업그레이드</h2>
+<h3 id="Node-js-버전-확인">Node.js 버전 확인</h3>
 <p>먼저 현재 설치되어있는 버전을 확인해봅니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
-<h3 id="cache-삭제">Cache 삭제</h3>
+<h3 id="Cache-삭제">Cache 삭제</h3>
 <p>Node.js 의 패키지매니저인 npm 을 이용해서 대부분의 플러그인을 설치하는데요. 캐시가 남아있는 경우 에러가 날 수 있다고 합니다. 캐시를 미리 삭제해줍니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm cache clean -f</span><br></pre></td></tr></table></figure>
 <h3 id="n-설치">n 설치</h3>
@@ -229,9 +250,9 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
 <p>저는 최신 버전까진 필요없고 안정 버전으로 설치했습니다.</p>
 <h4 id="최신-버전-설치">최신 버전 설치</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n latest</span><br></pre></td></tr></table></figure>
-<h4 id="stable-버전-설치">Stable 버전 설치</h4>
+<h4 id="Stable-버전-설치">Stable 버전 설치</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n stable</span><br></pre></td></tr></table></figure>
-<h4 id="lts-버전-설치">LTS 버전 설치</h4>
+<h4 id="LTS-버전-설치">LTS 버전 설치</h4>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n lts</span><br></pre></td></tr></table></figure>
 <h4 id="특정-버전-설치">특정 버전 설치</h4>
 <p>필요에 따라 특정 버전을 설치해야하는 경우도 생깁니다. 이럴 땐 <code>n &lt;version&gt;</code> 처럼 버전을 같이 적어주면 됩니다.</p>
@@ -243,7 +264,7 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
 <p>위와 같이 버전이 여러 개 설치되어 있는 경우 버전을 선택해서 삭제할 수도 있습니다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ n rm 0.9.4 v0.10.0</span><br><span class="line">$ n - 0.9.4</span><br></pre></td></tr></table></figure>
 <h4 id="현재-버전-외에-모든-버전-삭제하기">현재 버전 외에 모든 버전 삭제하기</h4>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n prune</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ n prune </span><br></pre></td></tr></table></figure>
 <h2 id="npm-버전-업그레이드">npm 버전 업그레이드</h2>
 <p>이번에는 npm 버전을 올려보겠습니다.</p>
 <h3 id="현재-버전-확인">현재 버전 확인</h3>
@@ -271,7 +292,7 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -332,7 +353,7 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -356,14 +377,6 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -372,7 +385,7 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -434,7 +447,7 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -461,18 +474,26 @@ Node.js version management: no subshells, no profile setup, no convoluted API, j
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

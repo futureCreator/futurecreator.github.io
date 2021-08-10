@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,24 @@
     </title>
     
     <meta name="description" content="함수형 접근 함수형 프로그래밍 언어의 문법을 배우는 것은 쉽습니다. 하지만 함수형으로 생각하는 방법을 익히는 것은 쉽지 않습니다. Java 에서 Scala 나 Clojure 로 바꾸는 것보다 문제에 접근하는 방식을 바꾸는 것이 더 중요합니다. 함수형 프로그래밍은 좀 더 추상화된 레벨에서 코딩할 수 있도록 합니다. 이게 어떤 의미인지 간단한 예제로 살펴보겠습">
-<meta name="keywords" content="functional_programming,filter,map,fold,reduce">
 <meta property="og:type" content="article">
 <meta property="og:title" content="함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/10/07/functional-programming-filter-map-fold-reduce/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="함수형 접근 함수형 프로그래밍 언어의 문법을 배우는 것은 쉽습니다. 하지만 함수형으로 생각하는 방법을 익히는 것은 쉽지 않습니다. Java 에서 Scala 나 Clojure 로 바꾸는 것보다 문제에 접근하는 방식을 바꾸는 것이 더 중요합니다. 함수형 프로그래밍은 좀 더 추상화된 레벨에서 코딩할 수 있도록 합니다. 이게 어떤 의미인지 간단한 예제로 살펴보겠습">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-10-23T12:10:49.463Z">
+<meta property="article:published_time" content="2018-10-06T16:08:28.000Z">
+<meta property="article:modified_time" content="2018-10-23T12:10:49.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="functional_programming">
+<meta property="article:tag" content="filter">
+<meta property="article:tag" content="map">
+<meta property="article:tag" content="fold">
+<meta property="article:tag" content="reduce">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)">
-<meta name="twitter:description" content="함수형 접근 함수형 프로그래밍 언어의 문법을 배우는 것은 쉽습니다. 하지만 함수형으로 생각하는 방법을 익히는 것은 쉽지 않습니다. Java 에서 Scala 나 Clojure 로 바꾸는 것보다 문제에 접근하는 방식을 바꾸는 것이 더 중요합니다. 함수형 프로그래밍은 좀 더 추상화된 레벨에서 코딩할 수 있도록 합니다. 이게 어떤 의미인지 간단한 예제로 살펴보겠습">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +48,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +91,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +104,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +160,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +190,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-functional-programming-filter-map-fold-reduce" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-functional-programming-filter-map-fold-reduce" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +206,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/10/07/functional-programming-filter-map-fold-reduce/" class="article-date">
-    <time datetime="2018-10-06T16:08:28.000Z" itemprop="datePublished">2018-10-07</time>
+    <time datetime="2018-10-06T16:08:28.000Z" itemprop="datePublished">2018/10/07</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/filter/">filter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fold/">fold</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-programming/">functional_programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/map/">map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reduce/">reduce</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/filter/" rel="tag">filter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/fold/" rel="tag">fold</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-programming/" rel="tag">functional_programming</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/map/" rel="tag">map</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/reduce/" rel="tag">reduce</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                10 분</span>
+                37 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -211,7 +228,7 @@ ga('send', 'pageview');
 <p>그래서 만약 입력 값이 “tony”, “a”, “steve”, “captain” 라면 반환값은 “Tony,Steve,Captain”이라는 문자열이 됩니다.</p>
 <h3 id="일반적인-처리">일반적인 처리</h3>
 <p>먼저 자바로 로직을 구현해봅시다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TheCompanyProcess</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">cleanNames</span><span class="params">(List&lt;String&gt; names)</span> </span>&#123;</span><br><span class="line">    StringBuilder result = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">      <span class="keyword">if</span> (name.length() &gt; <span class="number">1</span>)</span><br><span class="line">        result.append(capitalizeString(name)).append(<span class="string">" ,"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.substring(<span class="number">0</span>, result.length() - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> String <span class="title">capitalizeString</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + s.substring(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TheCompanyProcess</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">cleanNames</span><span class="params">(List&lt;String&gt; names)</span> </span>&#123;</span><br><span class="line">    StringBuilder result = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    <span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">      <span class="keyword">if</span> (name.length() &gt; <span class="number">1</span>)</span><br><span class="line">        result.append(capitalizeString(name)).append(<span class="string">&quot; ,&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.substring(<span class="number">0</span>, result.length() - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">private</span> String <span class="title">capitalizeString</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> s.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + s.substring(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>어려운 로직은 아니죠. 코드를 자세히 살펴보면 작성한 로직을 다음 세 개의 그룹으로 묶어서(추상화) 생각해 볼 수 있습니다.</p>
 <ul>
 <li>한 글자 이름을 걸러내고(<em>filter</em>)</li>
@@ -220,22 +237,22 @@ ga('send', 'pageview');
 </ul>
 <h3 id="함수형-처리">함수형 처리</h3>
 <p>함수형 프로그래밍에서는 이러한 필터, 변경, 변환하는 작업을 쉽게 할 수 있도록 해줍니다. 해당 작업을 루프 안에서 직접 기술하는 것이 아니라 추상화된 메소드(filter, transform, convert)를 이용해 작업할 수 있고, 세부 사항에 대한 내용은 함수를 인자로 넘겨줘서 처리할 수 있습니다. 의사코드를 한번 볼까요?</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listOfNames</span><br><span class="line">  -&gt; filter(x.length &gt; 1)</span><br><span class="line">  -&gt; transform(x.capitalize)</span><br><span class="line">  -&gt; convert(x + &quot;,&quot; + y)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listOfNames</span><br><span class="line">  -&gt; filter(x.length &gt; 1)</span><br><span class="line">  -&gt; transform(x.capitalize)</span><br><span class="line">  -&gt; convert(x + &quot;,&quot; + y)</span><br></pre></td></tr></table></figure>
 <p>위에서 작성했던 일반적인 코드와 다른 점이 보이시나요? 우리가 풀어야 할 문제에 대해 더 추상적인 레벨에서 접근할 수 있고, 세부적으로 처리해야 하는 작업의 내용은 함수 인자(람다)를 이용해 전달합니다.</p>
 <p>이 개념을 스칼라로 구현해보겠습니다.</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> employees = <span class="type">List</span>(<span class="string">"tony"</span>, <span class="string">"a"</span>, <span class="string">"steve"</span>, <span class="string">"captain"</span>, <span class="string">"b"</span>, <span class="string">"thor"</span>, <span class="string">"hulk"</span>, <span class="string">"c"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> result = employees</span><br><span class="line">  .filter(_.length &gt; <span class="number">1</span>)</span><br><span class="line">  .map(_.capitalize)</span><br><span class="line">  .reduce(_ + <span class="string">","</span> + _)</span><br></pre></td></tr></table></figure>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> employees = <span class="type">List</span>(<span class="string">&quot;tony&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;steve&quot;</span>, <span class="string">&quot;captain&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;thor&quot;</span>, <span class="string">&quot;hulk&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> result = employees</span><br><span class="line">  .filter(_.length &gt; <span class="number">1</span>)</span><br><span class="line">  .map(_.capitalize)</span><br><span class="line">  .reduce(_ + <span class="string">&quot;,&quot;</span> + _)</span><br></pre></td></tr></table></figure>
 <p>의사코드와 거의 똑같습니다. 아주 간결하고 쉽게 읽히죠. 물론 함수의 이름은 <code>map</code> 이나 <code>reduce</code> 로 바뀌었지만 역할은 같습니다. 그리고 인자로 넘어가는 함수 모두 사용하는 변수의 이름은 크게 상관이 없기 때문에 스칼라에서는 이름을 생략하고 언더바(<code>_</code>)를 사용합니다.</p>
 <p>이번엔 자바 8을 이용해 구현해보겠습니다. 자바는 스트림을 이용해서 처리할 수 있습니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">cleanNamesWithJava8</span><span class="params">(List&lt;String&gt; names)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (names == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">  <span class="keyword">return</span> names.stream()</span><br><span class="line">    .filter(name -&gt; name.length() &gt; <span class="number">1</span>)</span><br><span class="line">    .map(<span class="keyword">this</span>::capitalize)</span><br><span class="line">    .collect(Collectors.joining(<span class="string">","</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> String <span class="title">capitalize</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> s.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + s.substring(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">cleanNamesWithJava8</span><span class="params">(List&lt;String&gt; names)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (names == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> names.stream()</span><br><span class="line">    .filter(name -&gt; name.length() &gt; <span class="number">1</span>)</span><br><span class="line">    .map(<span class="keyword">this</span>::capitalize)</span><br><span class="line">    .collect(Collectors.joining(<span class="string">&quot;,&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> String <span class="title">capitalize</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> s.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + s.substring(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>이번엔 Groovy 로 작성해볼까요? <code>findAll</code> 을 이용해서 해당 조건을 만족하는 요소를 걸러내고 <code>map</code>의 그루비 버전인 <code>collect</code> 를 이용해서 맵핑하고 <code>join</code> 을 이용해 하나의 문자열로 변환합니다. 스칼라처럼 인자를 간단하게 치환하는데 그루비에서는 <code>it</code> 라는 키워드를 사용합니다.</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TheCompanyProcess</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> String cleanNames(listOfNames) &#123;</span><br><span class="line">    listOfNames</span><br><span class="line">    .findAll &#123; it.length() &gt; <span class="number">1</span> &#125;</span><br><span class="line">    .collect &#123; it.capitalize() &#125;</span><br><span class="line">    .join <span class="string">','</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TheCompanyProcess</span> &#123;</span></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> String cleanNames(listOfNames) &#123;</span><br><span class="line">    listOfNames</span><br><span class="line">    .findAll &#123; it.length() &gt; <span class="number">1</span> &#125;</span><br><span class="line">    .collect &#123; it.capitalize() &#125;</span><br><span class="line">    .join <span class="string">&#x27;,&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>마지막으로 클로저를 살펴보겠습니다. 클로저가 익숙하지 않으면 코드를 읽기 어려울 수 있습니다. 😅 하지만 자세한 문법을 몰라도 어떤 식으로 이루어졌는지는 살펴볼 수 있습니다. 클로저는 안에서 밖으로 실행됩니다. 그래서 제일 안쪽인 매개변수 <code>list-of-emps</code>  부터 시작해서 <code>(filter )</code>, <code>(map )</code>, <code>(reduce )</code> 순으로 실행됩니다.</p>
-<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">ns</span></span> trans.core</span><br><span class="line">  (<span class="symbol">:require</span> [clojure.string <span class="symbol">:as</span> s]))</span><br><span class="line"></span><br><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> process [list-of-emps]</span><br><span class="line">  (<span class="name"><span class="builtin-name">reduce</span></span> str (<span class="name">interpose</span> <span class="string">","</span></span><br><span class="line">    (<span class="name"><span class="builtin-name">map</span></span> s/capitalize (<span class="name"><span class="builtin-name">filter</span></span> #(<span class="name"><span class="builtin-name">&lt;</span></span> <span class="number">1</span> (<span class="name"><span class="builtin-name">count</span></span> %)) list-of-emps)))))</span><br></pre></td></tr></table></figure>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">ns</span></span> trans.core</span><br><span class="line">  (<span class="symbol">:require</span> [clojure.string <span class="symbol">:as</span> s]))</span><br><span class="line"></span><br><span class="line">(<span class="keyword">defn</span> <span class="title">process</span> [list-of-emps]</span><br><span class="line">  (<span class="name"><span class="builtin-name">reduce</span></span> str (<span class="name">interpose</span> <span class="string">&quot;,&quot;</span></span><br><span class="line">    (<span class="name"><span class="builtin-name">map</span></span> s/capitalize (<span class="name"><span class="builtin-name">filter</span></span> #(<span class="name"><span class="builtin-name">&lt;</span></span> <span class="number">1</span> (<span class="name"><span class="builtin-name">count</span></span> %)) list-of-emps)))))</span><br></pre></td></tr></table></figure>
 <p>참고로 클로저에서는 이렇게 함수가 중첩되면 알아보기 어려워지기 때문에 thread-last(<code>-&gt;&gt;</code>)라는 매크로를 이용해서 가독성을 높일 수 있습니다. 이렇게 되면 왼쪽에서 오른쪽으로 실행되는 순서가 바뀝니다.</p>
-<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="builtin-name">defn</span></span> process2 [list-of-emps]</span><br><span class="line">  (<span class="name"><span class="builtin-name">-&gt;&gt;</span></span> list-of-emps</span><br><span class="line">       (<span class="name"><span class="builtin-name">filter</span></span> #(<span class="name"><span class="builtin-name">&lt;</span></span> <span class="number">1</span> (<span class="name"><span class="builtin-name">count</span></span> %)))</span><br><span class="line">       (<span class="name"><span class="builtin-name">map</span></span> s/capitalize)</span><br><span class="line">       (<span class="name">interpose</span> <span class="string">","</span>)</span><br><span class="line">       (<span class="name"><span class="builtin-name">reduce</span></span> str)))</span><br></pre></td></tr></table></figure>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">defn</span> <span class="title">process2</span> [list-of-emps]</span><br><span class="line">  (<span class="name"><span class="builtin-name">-&gt;&gt;</span></span> list-of-emps</span><br><span class="line">       (<span class="name"><span class="builtin-name">filter</span></span> #(<span class="name"><span class="builtin-name">&lt;</span></span> <span class="number">1</span> (<span class="name"><span class="builtin-name">count</span></span> %)))</span><br><span class="line">       (<span class="name"><span class="builtin-name">map</span></span> s/capitalize)</span><br><span class="line">       (<span class="name">interpose</span> <span class="string">&quot;,&quot;</span>)</span><br><span class="line">       (<span class="name"><span class="builtin-name">reduce</span></span> str)))</span><br></pre></td></tr></table></figure>
 <p>지금까지 일반적으로 작성한 코드와 함수형으로 작성한 의사코드, 그리고 의사코드를 구현한 코드를 살펴봤습니다. 자바, 스칼라, 그루비, 클로저 모두 함수 이름이나 문법은 조금씩 달랐지만 함수형 프로그래밍의 주요 개념을  포함하고 있습니다.</p>
 <p>함수형으로 작성하면 더 추상적인 레벨에서 코드를 작성할 수 있습니다. 이렇게 추상적으로 작업을 하면 코드가 간결할 뿐만 아니라 런타임에서 최적화를 해줘서 성능을 높여주고 엔진 레벨에서 처리해야 하는 코드에 신경쓰지 않게 도와줍니다. 예를 들어 쓰레드를 이용해 병렬 처리를 해야 할 경우엔 <code>par</code> 를 붙여서 병렬 스트림을 만들기만 하면 됩니다.</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parallelResut = names</span><br><span class="line">  .par</span><br><span class="line">  .fileter(_.length() &gt; <span class="number">1</span>)</span><br><span class="line">  .map(_.capitalize)</span><br><span class="line">  .reduce(_ + <span class="string">","</span> + _)</span><br></pre></td></tr></table></figure>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parallelResut = names</span><br><span class="line">  .par</span><br><span class="line">  .fileter(_.length() &gt; <span class="number">1</span>)</span><br><span class="line">  .map(_.capitalize)</span><br><span class="line">  .reduce(_ + <span class="string">&quot;,&quot;</span> + _)</span><br></pre></td></tr></table></figure>
 <h2 id="함수형-작업">함수형 작업</h2>
 <p>앞에서 사용했던 함수형 작업은 다음과 같습니다.</p>
 <ul>
@@ -244,13 +261,13 @@ ga('send', 'pageview');
 <li>폴드/리듀스 fold/reduce</li>
 </ul>
 <h3 id="필터-filter">필터 filter</h3>
-<p><img src="filter.png" alt=""></p>
+<p><img src="filter.png" alt></p>
 <p>필터는 큰 컬렉션에서 조건에 맞는 작은 컬렉션을 만들어내는 연산입니다. 데이터를 필터링해서 걸러내는 거라고 볼 수 있습니다.</p>
 <h3 id="맵-map">맵 map</h3>
-<p><img src="map.png" alt=""></p>
+<p><img src="map.png" alt></p>
 <p>맵은 해당 값에 함수를 적용해 새로운 컬렉션을 만드는 연산입니다. 값을 매핑하는 거라고 볼 수 있습니다.</p>
 <h3 id="폴드-리듀스-fold-reduce">폴드/리듀스 fold/reduce</h3>
-<p><img src="fold.png" alt=""></p>
+<p><img src="fold.png" alt></p>
 <p>폴드 또는 리듀스는 언어들 사이에서도 이름이 다양하고 조금씩 의미도 다릅니다. 이 작업은 연산(<em>operation</em>)과 누산기(<em>accumulator</em>)를 가지고 컬렉션에 있는 값을 처리해 더 작은 컬렉션이나 단일 값을 만드는 작업입니다. 그림은 목록에 있는 값을 모두 더하는 작업입니다. 여기 누산기에 초기 값이 있는 경우도 있습니다.</p>
 <h2 id="예제-자연수-분류하기">예제) 자연수 분류하기</h2>
 <p>다른 예제를 살펴봅니다. 고대 그리스의 수학자 Nicomachus 는 자연수를 과잉수, 완전수, 부족수로 나누는 분류법을 고안했다고 합니다. 여기서 완전수는 자신을 뺀 약수의 합과 같습니다. 예를 들면 6의 약수는 1, 2, 3, 6으로 1 + 2 + 3 = 6이므로 완전수입니다. 28도 1 + 2 + 4 + 7 + 14 = 28이므로 완전수입니다. 여기서 자신을 뺀 약수의 합을 진약수의 합(<em>aliquot sum</em>)이라고 합니다.</p>
@@ -273,9 +290,9 @@ ga('send', 'pageview');
 <p><code>factorsOf</code>메소드는 스트림을 생성하고 약수만 필터링합니다. 스트림은 종료 작업을 하기 전까지는 계속해서 작업을 할 수 있죠. 여기서는 <code>sum()</code>은 스트림을 종료하고 값을 생성해줍니다.</p>
 <h2 id="참고">참고</h2>
 <ul>
-<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788968482960&amp;orderClick=LAG&amp;Kc=" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;함수형 사고&gt;</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788968482960&amp;orderClick=LAG&amp;Kc=">도서 &lt;함수형 사고&gt;</a></li>
 </ul>
-<h2 id="related-posts">Related Posts</h2>
+<h2 id="Related-Posts">Related Posts</h2>
 <ul>
 <li>
 <a href="/2018/10/05/why-functional-programming/" title="함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가">함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가</a>
@@ -309,7 +326,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -370,7 +387,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -394,14 +411,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -410,7 +419,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -472,7 +481,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -499,18 +508,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

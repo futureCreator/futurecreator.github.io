@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,22 @@
     </title>
     
     <meta name="description" content="이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다. Lambda 람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대">
-<meta name="keywords" content="java,lambda,basics">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Lambda (1) 기본">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/19/java-lambda-basics/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다. Lambda 람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-10-23T12:11:55.237Z">
+<meta property="article:published_time" content="2018-07-19T11:36:31.000Z">
+<meta property="article:modified_time" content="2018-10-23T12:11:55.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="lambda">
+<meta property="article:tag" content="basics">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java Lambda (1) 기본">
-<meta name="twitter:description" content="이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다. Lambda 람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +46,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +89,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +102,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +158,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +188,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-java-lambda-basics" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-java-lambda-basics" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,22 +204,22 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/07/19/java-lambda-basics/" class="article-date">
-    <time datetime="2018-07-19T11:36:31.000Z" itemprop="datePublished">2018-07-19</time>
+    <time datetime="2018-07-19T11:36:31.000Z" itemprop="datePublished">2018/07/19</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basics/">basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/">lambda</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basics/" rel="tag">basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                6 분</span>
+                23 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스트부터 Java 8 에서 새로 도입된 람다(<em>Lambda</em>)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다.</p>
-<h2 id="lambda">Lambda</h2>
+<h2 id="Lambda">Lambda</h2>
 <p>람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대수는 함수를 사용해 수학을 탐구하는 방식이었습니다. 이러한 방식은 리스프에서 람다 함수를 적용한 이후로 프로그래밍 분야에서도 발전해왔습니다.</p>
 <figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 수학에서의 람다 대수 표현식</span><br><span class="line"># x 인자를 받아서 더하는 함수(람다)</span><br><span class="line">λx.x+1</span><br><span class="line"></span><br><span class="line"># Lisp 람다 표현식</span><br><span class="line"># x 인자를 받아서 더하는 함수(람다)</span><br><span class="line">(<span class="name">lambda</span> (<span class="name">arg</span>) (<span class="name">+</span> arg <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
 <p>람다는 <strong>익명 함수</strong> (이름이 없고 내용만 있는 함수)이고, 함수(<em>Funciton</em>)를 정의하는 간편한 방법입니다. 특히 다른 함수에 함수를 인자로 전달할 때 유용합니다.</p>
-<h2 id="function">Function</h2>
+<h2 id="Function">Function</h2>
 <p>자바의 람다(함수)와 익명 클래스와 유사하게 사용되지만 기술적으로 차이가 있습니다. 단순히 익명 클래스를 쉽게 사용하기 위한 syntactic sugar 가 아닙니다.</p>
 <ul>
 <li>익명 클래스는 인스턴스를 생성해야 하지만, 함수는 평가될 때마다 새로 생성되지 않습니다. 함수를 위한 메모리 할당은 자바 힙의 Permanent 영역에 한 번 저장됩니다.</li>
@@ -215,18 +230,18 @@ ga('send', 'pageview');
 <p>이 anonymousClass 메소드는 Condition 의 구현체를 인자로 넘겨주며 waitFor 메소드를 호출합니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 클로저</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">anonymousClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="keyword">final</span> Server server = <span class="keyword">new</span> HttpServer();</span><br><span class="line">  waitFor(<span class="keyword">new</span> Condition()&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">	  <span class="function"><span class="keyword">public</span> Boolean <span class="title">isSatisfied</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	    <span class="keyword">return</span> !server.isRunning();</span><br><span class="line">	  &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 람다로 표현</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">closure</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  Server server = <span class="keyword">new</span> HttpServer();</span><br><span class="line">  waitFor(() -&gt; !server.isRunning());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>변수 server 는 Condition 클래스의 익명 인스턴스로 복사되어야 합니다. 여기서 사용될 때와 넘겨질 때의 시간 차이 동안 변경되지 않도록 하기 위해 <code>final</code> 로 선언됩니다(최신 버전에서는 갱신되지 않는다고 판단되면 <em>final</em> 로 자동 처리). 반면 람다에서는 실행 환경이나 다른 조건들이 복사되지 않습니다.</p>
-<h3 id="점유-문법-capture">점유 문법 Capture</h3>
+<h3 id="점유-문법-Capture">점유 문법 Capture</h3>
 <ul>
 <li>익명함수(익명클래스의 메소드)에서 this 는 익명 클래스의 인스턴스를 참조합니다.</li>
 <li>람다에서 this는 그것을 둘러싼 범위를 참조합니다.</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String firstName = <span class="string">"Jack"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">example</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; addSurname = surname -&gt; &#123;</span><br><span class="line">		  <span class="comment">// this.firstName 과 동일함</span></span><br><span class="line">      <span class="keyword">return</span> firstName + <span class="string">" "</span> + surname;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String firstName = <span class="string">&quot;Jack&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">example</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; addSurname = surname -&gt; &#123;</span><br><span class="line">		  <span class="comment">// this.firstName 과 동일함</span></span><br><span class="line">      <span class="keyword">return</span> firstName + <span class="string">&quot; &quot;</span> + surname;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>예제에서 this 는 람다를 둘러싼 범위 -&gt; Example 클래스를 참조하기 때문에 Jack 을 가리킵니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String firstName = <span class="string">"Charlie"</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">anotherExample</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; addSurname = <span class="keyword">new</span> Function&lt;String, String&gt;() &#123;</span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(String surname)</span> </span>&#123;</span><br><span class="line">	      <span class="comment">// this.firstName 은 컴파일 에러</span></span><br><span class="line">        <span class="keyword">return</span> Example.<span class="keyword">this</span>.firstName + <span class="string">" "</span> + surname; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Example</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String firstName = <span class="string">&quot;Charlie&quot;</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">anotherExample</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; addSurname = <span class="keyword">new</span> Function&lt;String, String&gt;() &#123;</span><br><span class="line">      <span class="meta">@Override</span></span><br><span class="line">      <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(String surname)</span> </span>&#123;</span><br><span class="line">	      <span class="comment">// this.firstName 은 컴파일 에러</span></span><br><span class="line">        <span class="keyword">return</span> Example.<span class="keyword">this</span>.firstName + <span class="string">&quot; &quot;</span> + surname; </span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>익명 클래스에서는 this 키워드는 익명 클래스의 인스턴스를 의미하기 때문에 firstName 이 없습니다. 따라서 <code>Example.this.firstName</code> 과 같이 접근해야 합니다.</p>
-<h3 id="섀도잉-shadowing">섀도잉 Shadowing</h3>
+<h3 id="섀도잉-Shadowing">섀도잉 Shadowing</h3>
 <p>섀도잉은 외부, 내부에 동일한 이름의 변수가 존재할 때 내부 범위의 변수가 우선되기 때문에, 외부 범위의 변수가 덮어씌워지는 것을 말합니다. 가려진다고 해서 섀도잉이라고 합니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShadowingExample</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String firstName = <span class="string">"Charlie"</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shadowingExample</span><span class="params">(String firstName)</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; addSurname = surname -&gt; &#123;</span><br><span class="line">      <span class="comment">// firstName -&gt; 매개변수</span></span><br><span class="line">      <span class="comment">// this.firstName -&gt; "Charlie"</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">" "</span> + surname;  </span><br><span class="line">      &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ShadowingExample</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> String firstName = <span class="string">&quot;Charlie&quot;</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">shadowingExample</span><span class="params">(String firstName)</span> </span>&#123;</span><br><span class="line">    Function&lt;String, String&gt; addSurname = surname -&gt; &#123;</span><br><span class="line">      <span class="comment">// firstName -&gt; 매개변수</span></span><br><span class="line">      <span class="comment">// this.firstName -&gt; &quot;Charlie&quot;</span></span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">this</span>.firstName + <span class="string">&quot; &quot;</span> + surname;  </span><br><span class="line">      &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>람다 내부에서 this 가 사용되었기 때문에 그것을 둘러싸고 있는 범위를 참조합니다. this 사용 시에는 Charlie 를 가리키고 this 없이 firstName 은 매개변수를 가리키게 됩니다.</p>
 <h2 id="기본-문법">기본 문법</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Arrays.sort() 와 익명 클래스</span></span><br><span class="line">Arrays.sort(numbers, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer first, Integer second)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> first.compareTo(second);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Arrays.sort() 와 람다</span></span><br><span class="line">Arrays.sort(numbers, (first, second) -&gt; first.compareTo(second));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 사실 익명 클래스 인스턴스인 것처럼 처리하고 있다</span></span><br><span class="line">Comparator&lt;Integer&gt; asc = (first, second) -&gt; first.compareTo(second);</span><br><span class="line">Arrays.sort(numbers, asc);</span><br></pre></td></tr></table></figure>
@@ -241,12 +256,12 @@ ga('send', 'pageview');
 <p>함수의 인자가 하나라면 인자를 둘러싼 괄호도 생략할 수 있습니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// x 를 받아서 x + 1 을 리턴하는 람다</span></span><br><span class="line">(x) -&gt; x + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">// 인자 괄호 생략</span></span><br><span class="line">x -&gt; x + <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <h3 id="문법-요약">문법 요약</h3>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 인자 -&gt; 바디</span></span><br><span class="line">(<span class="keyword">int</span> x, <span class="keyword">int</span> y) -&gt; &#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 인자 타입 생략 - 컴파일러가 추론</span></span><br><span class="line">(x, y) -&gt; &#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// return 및 중괄호 생략</span></span><br><span class="line">(x, y) -&gt; x + y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 인자가 하나인 경우 인자 괄호 생략</span></span><br><span class="line">x-&gt; x * <span class="number">2</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">// 인자가 없으면 빈 괄호로 표시</span></span><br><span class="line">() -&gt; System.out.println(<span class="string">"Hey there!"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 메소드 참조 Method reference</span></span><br><span class="line"><span class="comment">// (value -&gt; System.out.println(value)) 의 축약형</span></span><br><span class="line">System.out::println</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 인자 -&gt; 바디</span></span><br><span class="line">(<span class="keyword">int</span> x, <span class="keyword">int</span> y) -&gt; &#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 인자 타입 생략 - 컴파일러가 추론</span></span><br><span class="line">(x, y) -&gt; &#123; <span class="keyword">return</span> x + y; &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// return 및 중괄호 생략</span></span><br><span class="line">(x, y) -&gt; x + y</span><br><span class="line"></span><br><span class="line"><span class="comment">// 인자가 하나인 경우 인자 괄호 생략</span></span><br><span class="line">x-&gt; x * <span class="number">2</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">// 인자가 없으면 빈 괄호로 표시</span></span><br><span class="line">() -&gt; System.out.println(<span class="string">&quot;Hey there!&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 메소드 참조 Method reference</span></span><br><span class="line"><span class="comment">// (value -&gt; System.out.println(value)) 의 축약형</span></span><br><span class="line">System.out::println</span><br></pre></td></tr></table></figure>
 <h2 id="참고">참고</h2>
 <ul>
-<li><a href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378" rel="external nofollow noopener noreferrer" target="_blank">도서 &lt;자바 람다 배우기&gt;</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378">도서 &lt;자바 람다 배우기&gt;</a></li>
 </ul>
-<h2 id="related-posts">Related Posts</h2>
+<h2 id="Related-Posts">Related Posts</h2>
 <ul>
 <li>
 <a href="/2018/07/19/java-lambda-basics/" title="Java Lambda (1) 기본">Java Lambda (1) 기본</a>
@@ -288,7 +303,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -349,7 +364,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -373,14 +388,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -389,7 +396,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -451,7 +458,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -478,18 +485,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

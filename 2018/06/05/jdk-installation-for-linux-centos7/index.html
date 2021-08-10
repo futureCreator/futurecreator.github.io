@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,22 @@
     </title>
     
     <meta name="description" content="급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다. 설치 파일 다운로드 JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다. 다른 방법으로는 웹 상의 파">
-<meta name="keywords" content="linux,centos7,jdk">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS7 JDK 설치 및 버전 관리">
 <meta property="og:url" content="https://futurecreator.github.io/2018/06/05/jdk-installation-for-linux-centos7/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다. 설치 파일 다운로드 JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다. 다른 방법으로는 웹 상의 파">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-07-07T05:14:52.968Z">
+<meta property="article:published_time" content="2018-06-05T12:22:22.000Z">
+<meta property="article:modified_time" content="2018-07-07T05:14:52.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="centos7">
+<meta property="article:tag" content="jdk">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS7 JDK 설치 및 버전 관리">
-<meta name="twitter:description" content="급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다. 설치 파일 다운로드 JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다. 다른 방법으로는 웹 상의 파">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +46,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +89,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +102,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +158,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +188,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-jdk-installation-for-linux-centos7" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-jdk-installation-for-linux-centos7" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,46 +204,46 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/06/05/jdk-installation-for-linux-centos7/" class="article-date">
-    <time datetime="2018-06-05T12:22:22.000Z" itemprop="datePublished">2018-06-05</time>
+    <time datetime="2018-06-05T12:22:22.000Z" itemprop="datePublished">2018/06/05</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7/">centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdk/">jdk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos7/" rel="tag">centos7</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jdk/" rel="tag">jdk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/" rel="tag">linux</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                4 분</span>
+                11 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다.</p>
 <h2 id="설치-파일-다운로드">설치 파일 다운로드</h2>
-<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" rel="external nofollow noopener noreferrer" target="_blank">JDK 다운로드 페이지</a> 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK 다운로드 페이지</a> 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다.</p>
 <p>다른 방법으로는 웹 상의 파일 다운로드 명령어인 <code>wget</code> 을 이용해서 바로 받을 수 있습니다. 다운로드 페이지에서 원하는 버전 다운로드 링크 주소를 복사해서 다음처럼 명령어를 입력하시면 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget --no-check-certificate --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget --no-check-certificate --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
 <p>혹시나 <code>wget</code> 이 없다면 다음 명령어로 설치하시면 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install wget -y</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install wget -y</span><br></pre></td></tr></table></figure>
 <h2 id="설치하기">설치하기</h2>
 <p>설치는 그냥 원하시는 폴더에 압축을 풀면 끝납니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 디렉토리 생성</span><br><span class="line">$ mkdir /usr/local/java</span><br><span class="line"></span><br><span class="line"># 파일 이동</span><br><span class="line">$ mv jdk-8u171-linux-x64.tar.gz /usr/local/java</span><br><span class="line"></span><br><span class="line"># 압축 해제</span><br><span class="line">$ tar xvzf jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 디렉토리 생성</span><br><span class="line">$ mkdir /usr/local/java</span><br><span class="line"></span><br><span class="line"># 파일 이동</span><br><span class="line">$ mv jdk-8u171-linux-x64.tar.gz /usr/local/java</span><br><span class="line"></span><br><span class="line"># 압축 해제</span><br><span class="line">$ tar xvzf jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
 <h2 id="버전-관리하기">버전 관리하기</h2>
 <p><code>alternatives</code> 명령어는 심볼릭 링크를 관리할 수 있는 툴입니다. 이를 이용해서 설치된 자바 버전 중 필요한 자바 버전을 선택해 심볼릭 링크를 설정해줄 수 있습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives</span><br><span class="line">alternatives version 1.7.4 - Copyright (C) 2001 Red Hat, Inc.</span><br><span class="line">This may be freely redistributed under the terms of the GNU Public License.</span><br><span class="line"></span><br><span class="line">usage: alternatives --install &lt;link&gt; &lt;name&gt; &lt;path&gt; &lt;priority&gt;</span><br><span class="line">                    [--initscript &lt;service&gt;]</span><br><span class="line">                    [--family &lt;family&gt;]</span><br><span class="line">                    [--slave &lt;link&gt; &lt;name&gt; &lt;path&gt;]*</span><br><span class="line">       alternatives --remove &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --auto &lt;name&gt;</span><br><span class="line">       alternatives --config &lt;name&gt;</span><br><span class="line">       alternatives --display &lt;name&gt;</span><br><span class="line">       alternatives --set &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --list</span><br><span class="line"></span><br><span class="line">common options: --verbose --test --help --usage --version --keep-missing</span><br><span class="line">                --altdir &lt;directory&gt; --admindir &lt;directory&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives</span><br><span class="line">alternatives version 1.7.4 - Copyright (C) 2001 Red Hat, Inc.</span><br><span class="line">This may be freely redistributed under the terms of the GNU Public License.</span><br><span class="line"></span><br><span class="line">usage: alternatives --install &lt;link&gt; &lt;name&gt; &lt;path&gt; &lt;priority&gt;</span><br><span class="line">                    [--initscript &lt;service&gt;]</span><br><span class="line">                    [--family &lt;family&gt;]</span><br><span class="line">                    [--slave &lt;link&gt; &lt;name&gt; &lt;path&gt;]*</span><br><span class="line">       alternatives --remove &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --auto &lt;name&gt;</span><br><span class="line">       alternatives --config &lt;name&gt;</span><br><span class="line">       alternatives --display &lt;name&gt;</span><br><span class="line">       alternatives --set &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --list</span><br><span class="line"></span><br><span class="line">common options: --verbose --test --help --usage --version --keep-missing</span><br><span class="line">                --altdir &lt;directory&gt; --admindir &lt;directory&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="심볼릭-링크-생성하기">심볼릭 링크 생성하기</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --install /usr/bin/java java /usr/local/java/jdk1.8.0_171/bin/java 1</span><br><span class="line">$ alternatives --install /usr/bin/java javac /usr/local/java/jdk1.8.0_171/bin/javac 1</span><br><span class="line">$ alternatives --install /usr/bin/java javaws /usr/local/java/jdk1.8.0_171/bin/javaws 1</span><br><span class="line"></span><br><span class="line">$ alternatives --set java /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">$ alternatives --set javac /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">$ alternatives --set javaws /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --install /usr/bin/java java /usr/local/java/jdk1.8.0_171/bin/java 1</span><br><span class="line">$ alternatives --install /usr/bin/java javac /usr/local/java/jdk1.8.0_171/bin/javac 1</span><br><span class="line">$ alternatives --install /usr/bin/java javaws /usr/local/java/jdk1.8.0_171/bin/javaws 1</span><br><span class="line"></span><br><span class="line">$ alternatives --set java /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">$ alternatives --set javac /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">$ alternatives --set javaws /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
 <h3 id="심볼릭-링크-설정하기">심볼릭 링크 설정하기</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br></pre></td></tr></table></figure>
 <p>위 명령어를 입력하면 java 로 정의된 심볼릭 링크들을 볼 수 있는데 제가 몇 번 삽질해서 잘못 등록한 자바 버전들을 볼 수 있습니다. 여기서 특정 버전을 골라서 선택할 수 있습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br><span class="line"></span><br><span class="line">There are 4 programs which provide &apos;java&apos;.</span><br><span class="line"></span><br><span class="line">  Selection    Command</span><br><span class="line">-----------------------------------------------</span><br><span class="line"> + 1           /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">   2           /usr/local/java/jdk1.8.0_112/bin/java</span><br><span class="line">*  3           /bin/java</span><br><span class="line">   4           /usr/local/java/jdk1.8.0_171//bin/java</span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number:</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br><span class="line"></span><br><span class="line">There are 4 programs which provide &#x27;java&#x27;.</span><br><span class="line"></span><br><span class="line">  Selection    Command</span><br><span class="line">-----------------------------------------------</span><br><span class="line"> + 1           /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">   2           /usr/local/java/jdk1.8.0_112/bin/java</span><br><span class="line">*  3           /bin/java</span><br><span class="line">   4           /usr/local/java/jdk1.8.0_171//bin/java</span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number:</span><br></pre></td></tr></table></figure>
 <h3 id="심볼릭-링크-삭제">심볼릭 링크 삭제</h3>
 <p>잘못 등록한 심볼릭 링크를 삭제해보겠습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --remove java /usr/local/java/jdk1.8.0_171//bin/java</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --remove java /usr/local/java/jdk1.8.0_171//bin/java</span><br></pre></td></tr></table></figure>
 <h3 id="심볼릭-링크-리스트-조회">심볼릭 링크 리스트 조회</h3>
 <p><code>--list</code> 옵션으로 잘 정의되었는지 확인해보겠습니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --list</span><br><span class="line">java    manual  /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">javac   manual  /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">javaws  manual  /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
-<h2 id="java-home-환경변수-설정하기">JAVA_HOME 환경변수 설정하기</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --list</span><br><span class="line">java    manual  /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">javac   manual  /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">javaws  manual  /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
+<h2 id="JAVA-HOME-환경변수-설정하기">JAVA_HOME 환경변수 설정하기</h2>
 <p><code>/etc/profile</code> 파일 밑에 다음 명령어를 추가하시면 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/profile</span><br><span class="line">export JAVA_HOME=$(readlink -f /usr/bin/java | sed &quot;s:bin/java::&quot;)</span><br><span class="line"></span><br><span class="line"># 변경 사항 반영</span><br><span class="line">$ . /etc/profile</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/profile</span><br><span class="line">export JAVA_HOME=$(readlink -f /usr/bin/java | sed &quot;s:bin/java::&quot;)</span><br><span class="line"></span><br><span class="line"># 변경 사항 반영</span><br><span class="line">$ . /etc/profile</span><br></pre></td></tr></table></figure>
 <h2 id="설치-확인하기">설치 확인하기</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version &quot;1.8.0_171&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_171-b11)</span><br><span class="line">Java HotSpot(TM) Client VM (build 25.171-b11, mixed mode)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version &quot;1.8.0_171&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_171-b11)</span><br><span class="line">Java HotSpot(TM) Client VM (build 25.171-b11, mixed mode)</span><br></pre></td></tr></table></figure>
 <p>이상으로 CentOS 7 에서 JDK 를 설치하고 버전 관리하는 법을 알아봤습니다.</p>
 
         </div>
@@ -249,7 +264,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -310,7 +325,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -334,14 +349,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -350,7 +357,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -412,7 +419,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -439,18 +446,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

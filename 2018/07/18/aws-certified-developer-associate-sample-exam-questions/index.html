@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,24 @@
     </title>
     
     <meta name="description" content="문제 1 CloudFormation 을 이용해 us-east-1 에서 2티어 웹 애플리케이션을 실행한다. us-west-1 에서 개발 스택을 생성하려고 하면 프로세스가 실패한다. 무엇이 문제일까? A. 템플릿에서 참조하는 AMI 가 us-west-1 에서 사용 불가. B. 템플릿에서 참조하는 IAM 역할이 us-west-1 에서 유효하지 않음. C. 두 개">
-<meta name="keywords" content="aws,certified,developer,sample,exam">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS 개발자 자격증 샘플 문항 (번역&#x2F;해설)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/18/aws-certified-developer-associate-sample-exam-questions/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="문제 1 CloudFormation 을 이용해 us-east-1 에서 2티어 웹 애플리케이션을 실행한다. us-west-1 에서 개발 스택을 생성하려고 하면 프로세스가 실패한다. 무엇이 문제일까? A. 템플릿에서 참조하는 AMI 가 us-west-1 에서 사용 불가. B. 템플릿에서 참조하는 IAM 역할이 us-west-1 에서 유효하지 않음. C. 두 개">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-10-25T13:05:52.907Z">
+<meta property="article:published_time" content="2018-07-18T13:45:54.000Z">
+<meta property="article:modified_time" content="2018-10-25T13:05:52.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="aws">
+<meta property="article:tag" content="certified">
+<meta property="article:tag" content="developer">
+<meta property="article:tag" content="sample">
+<meta property="article:tag" content="exam">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AWS 개발자 자격증 샘플 문항 (번역&#x2F;해설)">
-<meta name="twitter:description" content="문제 1 CloudFormation 을 이용해 us-east-1 에서 2티어 웹 애플리케이션을 실행한다. us-west-1 에서 개발 스택을 생성하려고 하면 프로세스가 실패한다. 무엇이 문제일까? A. 템플릿에서 참조하는 AMI 가 us-west-1 에서 사용 불가. B. 템플릿에서 참조하는 IAM 역할이 us-west-1 에서 유효하지 않음. C. 두 개">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +48,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +91,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +104,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +160,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +190,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-aws-certified-developer-associate-sample-exam-questions" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-aws-certified-developer-associate-sample-exam-questions" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +206,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/07/18/aws-certified-developer-associate-sample-exam-questions/" class="article-date">
-    <time datetime="2018-07-18T13:45:54.000Z" itemprop="datePublished">2018-07-18</time>
+    <time datetime="2018-07-18T13:45:54.000Z" itemprop="datePublished">2018/07/18</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certified/">certified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/developer/">developer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exam/">exam</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sample/">sample</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certified/" rel="tag">certified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/developer/" rel="tag">developer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/exam/" rel="tag">exam</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sample/" rel="tag">sample</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                23 분</span>
+                29 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -214,19 +231,19 @@ B. The IAM roles referenced in the template are not valid in us-west-1.<br>
 C. Two ELB Classic Load Balancers cannot have the same Name tag.<br>
 D. CloudFormation templates can be launched only in a single region.</p>
 <hr>
-<p>정답 : A. <a href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/AMIs.html" rel="external nofollow noopener noreferrer" target="_blank">AMI</a> 는 리젼 안에 저장되고 다른 리젼에서는 접근할 수 없다. AMI 를 다른 리젼에서 사용하기 위해서는, 해당 리젼으로 복사해야 한다. IAM 롤은 계정 전체에서 유효하다.</p>
+<p>정답 : A. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/AMIs.html">AMI</a> 는 리젼 안에 저장되고 다른 리젼에서는 접근할 수 없다. AMI 를 다른 리젼에서 사용하기 위해서는, 해당 리젼으로 복사해야 한다. IAM 롤은 계정 전체에서 유효하다.</p>
 <p>A – AMIs are stored in a region and cannot be accessed in other regions. To use the AMI in another region, you must copy it to that region. IAM roles are valid across the entire account.</p>
 <hr>
-<h3 id="인스턴스-및-ami">인스턴스 및 AMI</h3>
+<h3 id="인스턴스-및-AMI">인스턴스 및 AMI</h3>
 <p>*Amazon 머신 이미지(AMI)*은 필요한 소프트웨어가 이미 구성되어 있는 템플릿입니다(예: 운영 체제, 애플리케이션 서버, 애플리케이션). AMI에서 <em>인스턴스</em>를 바로 시작하실 수 있는데, 이 인스턴스는 AMI의 사본으로, 클라우드에서 실행되는 가상 서버입니다. 다음 그림과 같이, 한 AMI로 여러 인스턴스를 실행할 수 있습니다.</p>
 <p><img src="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/images/architecture_ami_instance.png" alt=" AMI에서 여러 개의 인스턴스 시작 "></p>
 <p>중지하거나 종료할 때까지 또는 실패하기 전까지 인스턴스는 계속 실행됩니다. 인스턴스가 실패하면 AMI에서 새로 실행할 수 있습니다.</p>
 <h3 id="인스턴스">인스턴스</h3>
-<p>동일한 AMI에서 다른 유형의 인스턴스를 실행할 수 있습니다. <em>인스턴스 유형</em>에 따라 인스턴스에 사용되는 호스트 컴퓨터의 하드웨어가 결정됩니다. 각 인스턴스 유형은 서로 다른 컴퓨팅 및 메모리 기능을 제공합니다. 인스턴스에서 실행하려는 애플리케이션 또는 소프트웨어에 필요한 메모리 양과 컴퓨팅 파워를 기준으로 인스턴스 유형을 선택하십시오. Amazon EC2 인스턴스 유형별 하드웨어 사양에 대한 자세한 내용은 <a href="https://aws.amazon.com/ec2/instance-types/" rel="external nofollow noopener noreferrer" target="_blank">Amazon EC2 인스턴스 유형</a> 단원을 참조하십시오.</p>
+<p>동일한 AMI에서 다른 유형의 인스턴스를 실행할 수 있습니다. <em>인스턴스 유형</em>에 따라 인스턴스에 사용되는 호스트 컴퓨터의 하드웨어가 결정됩니다. 각 인스턴스 유형은 서로 다른 컴퓨팅 및 메모리 기능을 제공합니다. 인스턴스에서 실행하려는 애플리케이션 또는 소프트웨어에 필요한 메모리 양과 컴퓨팅 파워를 기준으로 인스턴스 유형을 선택하십시오. Amazon EC2 인스턴스 유형별 하드웨어 사양에 대한 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ec2/instance-types/">Amazon EC2 인스턴스 유형</a> 단원을 참조하십시오.</p>
 <p>일단 인스턴스가 시작되면, 인스턴스는 다른 컴퓨터와 다를 것이 없고, 어느 컴퓨터와 동일한 방식으로 다루시면 됩니다. 인스턴스의 완벽한 통제가 가능하며, 루트 권한이 필요한 명령어는 <strong>sudo</strong>를 사용해 실행할 수 있습니다.</p>
-<h3 id="ami">AMI</h3>
+<h3 id="AMI">AMI</h3>
 <p>Amazon Web Services(AWS)에서는 자주 사용되는 소프트웨어 구성을 포함하는 다양한 Amazon 머신 이미지(AMI)가 공개 게시하고 있습니다. 그 뿐 아니라 AWS 개발자 커뮤니티 회원들이 올린 자체 구성 AMI도 게시되어 있습니다. 또한 얼마든지 사용자 정의된 AMI을 생성할 수 있어서, 고객님께서 필요하신 기능을 모두 갖춘 새로운 인스턴스를 쉽고 빠르게 시작할 수 있습니다. 예를 들어 고객님의 애플리케이션이 웹사이트나 웹 서비스인 경우, 웹 서버와 관련 고정 콘텐츠, 그리고 동적 페이지에 사용할 코드가 포함된 AMI를 정의해 만드실 수 있습니다. 그래서, 이 AMI에서 인스턴스가 시작이 되면, 고객님의 웹 서버가 자동으로 시작되고 애플리케이션은 바로 Request를 처리할 수 있습니다.</p>
-<h3 id="리전-간-ami-복사">리전 간 AMI 복사</h3>
+<h3 id="리전-간-AMI-복사">리전 간 AMI 복사</h3>
 <p>지리적으로 다른 리전 간에 AMI를 복사하면 다음과 같은 이점이 제공됩니다.</p>
 <ul>
 <li>일관적인 글로벌 배포: 한 리전에서 다른 리전으로 AMI를 복사하면 동일한 AMI를 기반으로 하는 일관적인 인스턴스를 여러 리전에서 시작할 수 있습니다.</li>
@@ -255,9 +272,9 @@ D. Requeue the message with a DelaySeconds of 30 seconds.</p>
 <p>정답 : C. 큐를 설정해놓으면, 큐에서 가져간 메시지를 최대 횟수만큼 재시도한 후 자동으로 데드 레터 큐로 보내지게 된다. 그것을 찾을 때까지 저장된다.</p>
 <p>C – After a message is taken from the queue and returned for the maximum number of retries, it is automatically sent to a dead letter queue, if one has been configured. It stays there until you retrieve it for forensic purposes.</p>
 <hr>
-<h3 id="amazon-simple-queue-service">Amazon Simple Queue Service</h3>
+<h3 id="Amazon-Simple-Queue-Service">Amazon Simple Queue Service</h3>
 <p>Amazon Simple Queue Service(Amazon SQS)는 마이크로 서비스, 분산 시스템 및 서버리스 애플리케이션을 쉽게 분리하고 확장할 수 있게 해주는 완전관리형 메시지 대기열 서비스입니다. Amazon SQS를 사용하면 분산된 애플리케이션 구성 요소 간 데이터 이동이 가능하며, 이러한 구성 요소의 결합을 해제할 수 있습니다.</p>
-<h3 id="amazon-sqs-배달-못한-편지-대기열">Amazon SQS 배달 못한 편지 대기열</h3>
+<h3 id="Amazon-SQS-배달-못한-편지-대기열">Amazon SQS 배달 못한 편지 대기열</h3>
 <p>Amazon SQS는 다른 대기열(<em>소스 대기열</em>)이 처리(소비)하지 못한 메시지를 보낼 수 있는 <em>배달 못한 편지 대기열</em>을 지원합니다. 배달 못한 편지 대기열은 문제가 있는 메시지를 구분하여 처리가 실패한 이유를 확인할 수 있으므로 애플리케이션 또는 메시징 시스템을 디버깅하는 데 유용합니다.</p>
 <p>생성자 또는 소비자 애플리케이션 내부의 오류 상태 또는 애플리케이션 코드에 문제를 발생시키는 예기치 않은 상태 변경 등의 다양한 문제로 인해 메시지를 처리할 수 없는 경우가 있습니다.</p>
 <p><em>리드라이브 정책</em>은 <em>소스 대기열</em>, <em>배달 못한 편지 대기열</em>, 그리고 소스 대기열의 소비자가 메시지 처리에 실패한 횟수가 정해진 숫자에 도달하면 Amazon SQS가 소스 대기열에서 배달 못한 편지 대기열로 메시지를 옮기도록 하는 조건 등을 지정합니다. 예를 들어, 소스 대기열의 리드라이브 정책에 <code>maxReceiveCount</code>가 5로 설정되어 있을 때 소스 대기열의 소비자가 메시지 하나를 5번 받았는데 한 번도 삭제하지 못하는 경우, Amazon SQS는 이 메시지를 배달 못한 대기열로 옮깁니다.</p>
@@ -288,7 +305,7 @@ D. Enroll the instance in an Active Directory domain and use AD authentication.<
 <p>정답 : B. IAM 롤은 임시 보안 토큰에 기반하고 있어서 자동적으로 순환된다. 키를 소스 코드 내에서 다루는 것은 불가능하고 아주 나쁜 아이디어다. S3 버켓에 대한 자격 증명이 없으면 S3 버킷에서 자격 증명을 검색할 수 없다. Active Directory 인증은 AWS 리소스에 접근할 권한을 얻을 수 없다.</p>
 <p>B – IAM roles are based on temporary security tokens, so they are rotated automatically. Keys in the source code cannot be rotated (and are a very bad idea). It’s impossible to retrieve credentials from an S3 bucket if you don’t already have credentials for that bucket. Active Directory authorization will not grant access to AWS resources.</p>
 <hr>
-<h3 id="iam">IAM</h3>
+<h3 id="IAM">IAM</h3>
 <p>IAM(AWS Identity and Access Management)은 AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스입니다. IAM을 사용하여 리소스를 사용하도록 인증(로그인) 및 권한 부여(권한 있음)된 대상을 제어합니다.</p>
 <hr>
 <h2 id="문제-4">문제 4</h2>
@@ -307,7 +324,7 @@ D. Getting an object from Amazon S3 after it was deleted</p>
 <hr>
 <p>정답 : D. S3 has eventual consistency for overwrite PUTS and DELETES.</p>
 <hr>
-<h3 id="amazon-s3">Amazon S3</h3>
+<h3 id="Amazon-S3">Amazon S3</h3>
 <p>Amazon Simple Storage Service는 인터넷용 스토리지 서비스입니다. 개발자가 보다 쉽게 웹 규모 컴퓨팅 작업을 할 수 있도록 설계되었습니다.</p>
 <p>Amazon S3에서 제공하는 단순한 웹 서비스 인터페이스를 사용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있습니다. 또한 개발자는 Amazon이 자체 웹 사이트의 글로벌 네트워크 운영에 사용하는 것과 같은 높은 확장성과 신뢰성을 갖춘 빠르고 경제적인 데이터 스토리지 인프라에 액세스할 수 있습니다.</p>
 <hr>
@@ -344,8 +361,8 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 <p>정답 : C. 특정 CustomerID 로 쿼리를 날려야하기 때문에 글로벌 보조 인덱스는 다른 파티션 키가 필요하다. 원하는 날짜 범위로 찾기 위해서 정렬키로는 PurchaseDate 가 필요하다. 원하는 항목인 TotalPurchaseValue 를 프로젝트하는 것은 모두 동일하다.</p>
 <p>C – The query is for a particular CustomerID, so a Global Secondary Index is needed for a different partition key. To retrieve only the desired date range, the PurchaseDate must be the sort key. Projecting the TotalPurchaseValue into the index provides all the data needed to satisfy the use case.</p>
 <hr>
-<h3 id="amazon-dynamodb">Amazon DynamoDB</h3>
-<p>Amazon DynamoDB는 완전관리형 <a href="https://aws.amazon.com/ko/nosql/" rel="external nofollow noopener noreferrer" target="_blank">NoSQL 데이터베이스</a> 서비스로서 원활한 확장성과 함께 빠르고 예측 가능한 성능을 제공합니다. Amazon DynamoDB를 사용하여 데이터 규모에  관계없이 데이터를 저장 및 검색하고, 어떤 수준의 요청 트래픽이라도 처리할 수 있는 데이터베이스 테이블을 생성할 수 있습니다.  Amazon DynamoDB는 테이블의 데이터와 트래픽을 충분한 수의 서버로 자동 분산하여 고객이 지정한 요청 용량과 저장된  데이터 규모를 처리하면서도 일관되고 빠른 성능을 발휘합니다.</p>
+<h3 id="Amazon-DynamoDB">Amazon DynamoDB</h3>
+<p>Amazon DynamoDB는 완전관리형 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/nosql/">NoSQL 데이터베이스</a> 서비스로서 원활한 확장성과 함께 빠르고 예측 가능한 성능을 제공합니다. Amazon DynamoDB를 사용하여 데이터 규모에  관계없이 데이터를 저장 및 검색하고, 어떤 수준의 요청 트래픽이라도 처리할 수 있는 데이터베이스 테이블을 생성할 수 있습니다.  Amazon DynamoDB는 테이블의 데이터와 트래픽을 충분한 수의 서버로 자동 분산하여 고객이 지정한 요청 용량과 저장된  데이터 규모를 처리하면서도 일관되고 빠른 성능을 발휘합니다.</p>
 <ul>
 <li>기본키 : 파티션 키</li>
 <li>복합 기본 키 : 파티션 키 + 정렬 키</li>
@@ -354,13 +371,13 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 <p>Amazon DynamoDB는 지정된 기본 키 값을 사용하여 테이블의 항목에 신속하게 액세스할 수 있습니다. 그러나 많은 애플리케이션에서는 주요 키가 아닌 속성을 가진 데이터에 효율적으로 액세스할 수 있다는 장점을 활용하기 위해 하나 이상의 보조(또는 대체) 키를 사용하기도 합니다. 이를 위해 테이블에서 하나 이상의 보조 인덱스를 생성하고 이 인덱스에 대해 <code>Query</code> 또는 <code>Scan</code> 요청을 발급할 수 있습니다.</p>
 <p><em>보조 인덱스</em>는 대체 키와 함께 테이블의 속성 하위 집합을 포함하여 <code>Query</code> 작업을 지원하는 데이터 구조입니다. 테이블에서 <code>Query</code>를 사용하는 것과 거의 같은 방식으로 <code>Query</code>를 사용하여 인덱스에서 데이터를 가져올 수 있습니다. 한 테이블에 여러 보조 인덱스es를 포함할 수 있어 서로 다른 여러 쿼리 패턴에 애플리케이션 액세스가 제공됩니다.</p>
 <ul>
-<li><a href="https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/GSI.html" rel="external nofollow noopener noreferrer" target="_blank">Global secondary index</a> - 파티션 키 및 정렬 키가 기본 테이블의 파티션 및 정렬 키와 다를 수 있는 인덱스. 모든 파티션에서 인덱스의 쿼리가 기본 테이블의 모든 데이터에 적용될 수 있으므로 글로벌 보조 인덱스는 &quot;글로벌&quot;하게 간주됩니다.</li>
-<li><a href="https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/LSI.html" rel="external nofollow noopener noreferrer" target="_blank">로컬 보조 인덱스</a> - 기본 테이블과 파티션 키는 동일하지만 정렬 키는 다른 인덱스. local secondary index는 local secondary index의 모든 파티션이 동일한 파티션 키 값을 가진 기본 테이블 파티션으로 한정된다는 의미에서 &quot;로컬&quot;입니다.</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/GSI.html">Global secondary index</a> - 파티션 키 및 정렬 키가 기본 테이블의 파티션 및 정렬 키와 다를 수 있는 인덱스. 모든 파티션에서 인덱스의 쿼리가 기본 테이블의 모든 데이터에 적용될 수 있으므로 글로벌 보조 인덱스는 &quot;글로벌&quot;하게 간주됩니다.</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/LSI.html">로컬 보조 인덱스</a> - 기본 테이블과 파티션 키는 동일하지만 정렬 키는 다른 인덱스. local secondary index는 local secondary index의 모든 파티션이 동일한 파티션 키 값을 가진 기본 테이블 파티션으로 한정된다는 의미에서 &quot;로컬&quot;입니다.</li>
 </ul>
 <hr>
 <h2 id="문제-6">문제 6</h2>
 <p>당신의 CloudFormation 템플릿은 다음 Mappings section 을 따른다.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"Mappings": &#123;</span><br><span class="line">    "RegionMap": &#123;</span><br><span class="line">        "us-east-1" : &#123; "32" : "ami-6411e20d"&#125;,</span><br><span class="line">        "us-west-1" : &#123; "32" : "ami-c9c7978c"&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Mappings&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;RegionMap&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;us-east-1&quot;</span> : &#123; <span class="attr">&quot;32&quot;</span> : <span class="string">&quot;ami-6411e20d&quot;</span>&#125;,</span><br><span class="line">        <span class="attr">&quot;us-west-1&quot;</span> : &#123; <span class="attr">&quot;32&quot;</span> : <span class="string">&quot;ami-c9c7978c&quot;</span>&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>스택이 us-east-1 에서 실행될 때, “ami-6411e20d” 값이 발생하는 JSON 스니펫은 무엇인가?</p>
 <ol>
 <li>{ “Fn::FindInMap” : [ “Mappings”, { “RegionMap” : [“us-east-1”, “us-west-1”] }, “32”]}</li>
@@ -373,13 +390,13 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 </ol>
 <p>Which JSON snippet will result in the value “ami-6411e20d” when a stack is launched in us-east-1?</p>
 <hr>
-<p>정답 : C – Learn how to create and reference mappings <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html" rel="external nofollow noopener noreferrer" target="_blank">here</a>.</p>
+<p>정답 : C – Learn how to create and reference mappings <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html">here</a>.</p>
 <hr>
-<h3 id="mapping">Mapping</h3>
+<h3 id="Mapping">Mapping</h3>
 <p><code>Mappings</code> 섹션(선택 사항)은 키를 해당하는 명명된 값 세트와 맞춥니다. 예를 들어 리전에 따라 값을 설정하려면 리전 이름을 키로 사용하고 각각의 특정 리전에 대해 지정할 값을 포함하는 매핑을 생성할 수 있습니다. <code>Fn::FindInMap</code> 내장 함수를 사용하여 맵에서 값을 불러올 수 있습니다.</p>
 <p><code>Mappings</code> 섹션은 키 이름 <code>Mappings</code>로 이루어집니다. 매핑의 키는 문자열이어야 합니다. 값은 <code>String</code>이나 <code>List</code> 유형이 될 수 있습니다.  다음 예제는 <code>Mapping01</code>(논리적 이름)이라는 매핑 하나가 있는 <code>Mappings</code> 섹션을 보여줍니다.</p>
 <h3 id="매핑에서-값-반환">매핑에서 값 반환</h3>
-<p><code>Fn::FindInMap</code> 함수를 사용하여 지정한 키에 따라 명명된 값을 반환할 수 있습니다. 다음 예제 템플릿에는 <code>FindInMap</code> 함수를 통해 <code>ImageId</code> 속성이 할당된 Amazon EC2 리소스가 포함되어 있습니다. <code>FindInMap</code> 함수는 키를 스택이 생성되는 리전(<a href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html" rel="external nofollow noopener noreferrer" target="_blank">AWS::Region 가상 파라미터</a> 사용)으로 지정하고 <code>32</code>를 매핑할 값으로 지정합니다.</p>
+<p><code>Fn::FindInMap</code> 함수를 사용하여 지정한 키에 따라 명명된 값을 반환할 수 있습니다. 다음 예제 템플릿에는 <code>FindInMap</code> 함수를 통해 <code>ImageId</code> 속성이 할당된 Amazon EC2 리소스가 포함되어 있습니다. <code>FindInMap</code> 함수는 키를 스택이 생성되는 리전(<a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html">AWS::Region 가상 파라미터</a> 사용)으로 지정하고 <code>32</code>를 매핑할 값으로 지정합니다.</p>
 <hr>
 <h2 id="문제-7">문제 7</h2>
 <p>당신의 웹 애플리케이션은 DynamoDB 테이블에서 값을 읽어오고, 속성을 바꾸고, 그 아이템을 다시 테이블에 작성한다. 한 프로세스가 다른 프로세스의 변겨 사항을 덮어쓰지 않도록 해야 한다.</p>
@@ -427,7 +444,7 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 <p>정답 : 4. 두 가지 과제가 있다. 커맨드는 여러 파트너들에게 뿌려져야 하고, 당신의 앱은 파트너로부터 분리되어야 한다 (파트너가 고가용성을 제공하지 않기 때문에). 커맨드를 SNS 메시지로 보내고 publication/subscribe 모델을 이용해 fan-out 을 달성할 수 있다. 큐에 메시지를 직접 쓰는 것은 앱의 대기시간이 길어지고, 활성화된 파트너를 모니터링해야 한다. 파트너가 빠르게 변화하기 때문에 Amazon SWF 워크플로우를 작성하는 것은 어려울 수 있다.</p>
 <p>D – There are two challenges here: the command must be “fanned out” to a variable pool of partners, and your app must be decoupled from the partners because they are not highly available. Sending the command as an SNS message achieves the fan-out via its publication/subscribe model, and using an SQS queue for each partner decouples your app from the partners. Writing the message to each queue directly would cause more latency for your app and would require your app to monitor which partners were active. It would be difficult to write an Amazon SWF workflow for a rapidly changing set of partners.</p>
 <hr>
-<h3 id="amazon-swf">Amazon SWF</h3>
+<h3 id="Amazon-SWF">Amazon SWF</h3>
 <p>Amazon Simple Workflow Service(Amazon SWF)를 사용하면 분산 구성 요소 간에 작업을 조정하는 애플리케이션을 쉽게 구축할 수 있습니다. Amazon SWF에서 작업은 애플리케이션의 구성 요소에서 수행하는 논리적 작업 단위를  나타냅니다. 애플리케이션 간 작업 조정에서는 애플리케이션의 논리적 흐름에 따라 작업 간 종속성, 일정 예약 및 동시성을  관리합니다. Amazon SWF에서는 작업 구현에 대한 모든 권한과 진행률 추적 및 상태 유지와 같은 기본적인 복잡성에 대한 염려 없이 작업을 조정할 수 있는 모든 권한을 제공합니다.</p>
 <hr>
 <h2 id="문제-9">문제 9</h2>
@@ -476,21 +493,21 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 <p>정답 : 2. 보안그룹은 기본적으로 모든 네트워크 트래픽을 막아서, 그룹이 제대로 설정되지 않으면 타임아웃 에러를 발생시킨다. IAM 은 MySQL 보안을 제어하지 않는다. Amazon VPC 의 모든 서브넷은 다른 모든 서브넷으로 라우팅된다. Amazon VPC의 내부 트래픽에는 공용 IP 주소가 필요하지 않다.</p>
 <p>B – Security groups block all network traffic by default, so if a group is not correctly configured, it can lead to a timeout error. MySQL security, not IAM, controls MySQL security. All subnets in an Amazon VPC have routes to all other subnets. Internal traffic within an Amazon VPC does not require public IP addresses</p>
 <hr>
-<h3 id="amazon-vpc">Amazon VPC</h3>
+<h3 id="Amazon-VPC">Amazon VPC</h3>
 <p>Amazon Virtual Private Cloud(Amazon VPC)를 사용하면 정의한 가상 네트워크에서 AWS 리소스를 시작할 수 있습니다. 이 가상 네트워크는 AWS의 확장 가능한 인프라를 사용한다는 이점과 함께 고객의 자체 데이터 센터에서 운영하는 기존 네트워크와 매우 유사합니다.</p>
 <p><em>Virtual Private Cloud</em>(VPC)는 사용자의 AWS 계정 전용 가상 네트워크입니다. VPC는 AWS 클라우드에서 다른 가상 네트워크와 논리적으로 분리되어 있습니다. Amazon EC2 인스턴스와 같은 AWS 리소스를 VPC에서 실행할 수 있습니다. IP 주소 범위와 VPC 범위를 설정하고 서브넷을 추가하고 보안 그룹을 연결한 다음 라우팅 테이블을 구성합니다.</p>
-<p><em>서브넷</em>은 VPC의 IP 주소 범위입니다. 지정된 서브넷으로 AWS 리소스를 시작할 수 있습니다. 인터넷에 연결되어야 하는 리소스에는 퍼블릭 서브넷을 사용하고, 인터넷에 연결되지 않는 리소스에는 프라이빗 서브넷을 사용하십시오. 퍼블릭 서브넷과 프라이빗 서브넷에 대한 자세한 내용은 <a href="https://docs.aws.amazon.com/ko_kr/AmazonVPC/latest/UserGuide/VPC_Subnets.html#vpc-subnet-basics" rel="external nofollow noopener noreferrer" target="_blank">VPC 및 서브넷 기본 사항</a>을 참조하십시오.</p>
-<p>각 서브넷의 AWS리소스를 보호하기 위해 보안 그룹 및 네트워크 액세스 제어 목록(ACL)을 비롯한 여러 보안 계층을 사용할 수 있습니다. 자세한 내용은 <a href="https://docs.aws.amazon.com/ko_kr/AmazonVPC/latest/UserGuide/VPC_Security.html" rel="external nofollow noopener noreferrer" target="_blank">보안</a> 단원을 참조하십시오.</p>
-<h2 id="related-posts">Related Posts</h2>
+<p><em>서브넷</em>은 VPC의 IP 주소 범위입니다. 지정된 서브넷으로 AWS 리소스를 시작할 수 있습니다. 인터넷에 연결되어야 하는 리소스에는 퍼블릭 서브넷을 사용하고, 인터넷에 연결되지 않는 리소스에는 프라이빗 서브넷을 사용하십시오. 퍼블릭 서브넷과 프라이빗 서브넷에 대한 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AmazonVPC/latest/UserGuide/VPC_Subnets.html#vpc-subnet-basics">VPC 및 서브넷 기본 사항</a>을 참조하십시오.</p>
+<p>각 서브넷의 AWS리소스를 보호하기 위해 보안 그룹 및 네트워크 액세스 제어 목록(ACL)을 비롯한 여러 보안 계층을 사용할 수 있습니다. 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AmazonVPC/latest/UserGuide/VPC_Security.html">보안</a> 단원을 참조하십시오.</p>
+<h2 id="Related-Posts">Related Posts</h2>
 <ul>
 <li>
 <a href="/2018/07/04/aws-certified/" title="AWS 자격증 준비하기">AWS 자격증 준비하기</a>
 </li>
 <li>
-<a href="/2018/07/13/aws-security-best-practies/" title="AWS 보안 모범 사례 백서 (번역/요약)">AWS 보안 모범 사례 백서 (번역/요약)</a>
+<a href="/2018/07/13/aws-security-best-practies/" title="AWS 보안 모범 사례 백서 (번역&#x2F;요약)">AWS 보안 모범 사례 백서 (번역&#x2F;요약)</a>
 </li>
 <li>
-<a href="/2018/07/13/aws-well-architected-framework/" title="AWS Well-Architected Framework 백서 (번역/요약)">AWS Well-Architected Framework 백서 (번역/요약)</a></li>
+<a href="/2018/07/13/aws-well-architected-framework/" title="AWS Well-Architected Framework 백서 (번역&#x2F;요약)">AWS Well-Architected Framework 백서 (번역&#x2F;요약)</a></li>
 </ul>
 
         </div>
@@ -511,7 +528,7 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -572,7 +589,7 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -596,14 +613,6 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -612,7 +621,7 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -674,7 +683,7 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -701,18 +710,26 @@ D. Global secondary index with a partition key of PurchaseDate and sort key of C
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

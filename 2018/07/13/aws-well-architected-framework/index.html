@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -15,21 +21,24 @@
         Writer, IT Blog
     </title>
     
-    <meta name="description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
-<meta name="keywords" content="aws,certified,architect,framework">
+    <meta name="description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018&#x2F;06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018&#x2F;07&#x2F;12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Well-Architected Framework 백서 (번역&#x2F;요약)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/13/aws-well-architected-framework/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018&#x2F;06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018&#x2F;07&#x2F;12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-10-25T13:05:58.415Z">
+<meta property="article:published_time" content="2018-07-12T15:56:48.000Z">
+<meta property="article:modified_time" content="2018-10-25T13:05:58.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="aws">
+<meta property="article:tag" content="certified">
+<meta property="article:tag" content="architect">
+<meta property="article:tag" content="framework">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AWS Well-Architected Framework 백서 (번역&#x2F;요약)">
-<meta name="twitter:description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018/07/12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +47,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +90,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +103,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +159,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +189,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-aws-well-architected-framework" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-aws-well-architected-framework" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,17 +205,17 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/07/13/aws-well-architected-framework/" class="article-date">
-    <time datetime="2018-07-12T15:56:48.000Z" itemprop="datePublished">2018-07-13</time>
+    <time datetime="2018-07-12T15:56:48.000Z" itemprop="datePublished">2018/07/13</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architect/">architect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certified/">certified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/framework/">framework</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architect/" rel="tag">architect</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/certified/" rel="tag">certified</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/framework/" rel="tag">framework</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                4 분</span>
+                7 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 포스트는 AWS 자격증 스터디에서 <a href="https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf" rel="external nofollow noopener noreferrer" target="_blank">AWS Well-Architected Framework</a> 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.</p>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 포스트는 AWS 자격증 스터디에서 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf">AWS Well-Architected Framework</a> 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.</p>
 <p>마지막 업데이트 : 2018/07/12</p>
 <hr>
 <h2 id="목차">목차</h2>
@@ -229,14 +245,14 @@ ga('send', 'pageview');
 <ul>
 <li>AWS Well-Architected Framework 는 AWS 상에서 시스템을 구축하면서 내리게 될 결정의 장단점을 이해하도록 도와줄 것이다.</li>
 <li>아키텍처를 지속적으로 평가하고 모범 사례에서 배운 내용을 적용하도록 도와준다.</li>
-<li>더 많은 정보는 <a href="https://aws.amazon.com/ko/architecture/well-architected/" rel="external nofollow noopener noreferrer" target="_blank">AWS Well-Architected homepage</a> 를 참고한다.</li>
+<li>더 많은 정보는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/architecture/well-architected/">AWS Well-Architected homepage</a> 를 참고한다.</li>
 </ul>
 <h2 id="정의">정의</h2>
 <ul>
 <li>AWS Well-Architected Framework 는 5가지 기본 원칙을 기반으로 한다.</li>
 <li>운영 우수성, 보안, 신뢰성, 성능 효율성 그리고 비용 최적화.</li>
 </ul>
-<h3 id="aws-well-architected-framework-의-5가지-원칙">AWS Well-Architected Framework 의 5가지 원칙</h3>
+<h3 id="AWS-Well-Architected-Framework-의-5가지-원칙">AWS Well-Architected Framework 의 5가지 원칙</h3>
 <ol>
 <li>운영 우수성 : 시스템을 실행하고 모니터링하여 비즈니스 가치 및 지속적인 지원을 개선하는 프로세스 및 절차</li>
 <li>보안 : 위험 평가를 통해 비즈니스 가치를 제공하는 동시에 정보, 시스템 및 자산을 보호하는 기능 및 완화 전략</li>
@@ -259,7 +275,7 @@ ga('send', 'pageview');
 <ul>
 <li>전문가 배치</li>
 <li>자동화된 검사 매커니즘</li>
-<li><a href="https://www.aboutamazon.com/our-leadership-principles" rel="external nofollow noopener noreferrer" target="_blank">Amazon leadership principles</a> 참고</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.aboutamazon.com/our-leadership-principles">Amazon leadership principles</a> 참고</li>
 </ul>
 </li>
 <li>모든 팀이 잘 설계된 아키텍처를 적용하고 모범 사례를 따를 수 있도록 커뮤니티를 만들고 액세스 할 수 있도록 한다.(커뮤니티, 교육, 런치 타임 토크 등)</li>
@@ -281,7 +297,7 @@ ga('send', 'pageview');
 <ul>
 <li>비즈니스 가치를 제공하기 위한 시스템을 실행 및 모니터하고 지원 프로세스 및 절차를 지속적으로 개선</li>
 <li>시스템 운영에 대한 내용</li>
-<li><a href="https://d0.awsstatic.com/whitepapers/architecture/AWS-Operational-Excellence-Pillar.pdf" rel="external nofollow noopener noreferrer" target="_blank">Operational Excellence Pillar</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://d0.awsstatic.com/whitepapers/architecture/AWS-Operational-Excellence-Pillar.pdf">Operational Excellence Pillar</a></li>
 </ul>
 <h4 id="디자인-원칙">디자인 원칙</h4>
 <ul>
@@ -323,9 +339,9 @@ ga('send', 'pageview');
 <li>클라우드의 이점을 활용한 설계 (탄력성, 온디맨드 확장성, 쓴만큼만 내는 과금, 자동화 등)</li>
 <li>고객의 행동을 도구들(logs, metric, counters 등)로 측정하고, 인사이트를 발견해 고객 경험을 향상시킨다</li>
 <li>결함을 줄이고 문제 해결을 간소화하며 플로우를 개선하는 방법을 구현해야 한다. 빠른 피드백, 리팩토링 등</li>
-<li>배포의 리스크를 줄인다 : 자동화된 테스트, 작은 사이즈로 조금씩 자주 배포, 테스트, <a href="https://octopus.com/docs/deployment-patterns/canary-deployments" rel="external nofollow noopener noreferrer" target="_blank">canary 배포</a>, one-box 배포, <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html" rel="external nofollow noopener noreferrer" target="_blank">blue-green 배</a>포 등</li>
+<li>배포의 리스크를 줄인다 : 자동화된 테스트, 작은 사이즈로 조금씩 자주 배포, 테스트, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://octopus.com/docs/deployment-patterns/canary-deployments">canary 배포</a>, one-box 배포, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green 배</a>포 등</li>
 </ul>
-<p><a href="https://octopus.com/docs/deployment-patterns/canary-deployments#" rel="external nofollow noopener noreferrer" target="_blank"><img src="https://i.octopus.com/docs/images/3048182/3278255.png" alt="https://octopus.com/docs/deployment-patterns/canary-deployments"></a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://octopus.com/docs/deployment-patterns/canary-deployments#"><img src="https://i.octopus.com/docs/images/3048182/3278255.png" alt="https://octopus.com/docs/deployment-patterns/canary-deployments"></a></p>
 <p><img src="https://martinfowler.com/bliki/images/blueGreenDeployment/blue_green_deployments.png" alt="https://martinfowler.com/bliki/BlueGreenDeployment.html"></p>
 </li>
 <li>
@@ -354,7 +370,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -415,7 +431,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -439,14 +455,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -455,7 +463,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -517,7 +525,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -544,18 +552,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

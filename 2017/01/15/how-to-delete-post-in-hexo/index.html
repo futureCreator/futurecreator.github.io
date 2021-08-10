@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -15,21 +21,24 @@
         Writer, IT Blog
     </title>
     
-    <meta name="description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source/_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
-<meta name="keywords" content="hexo,web,blog,markdown">
+    <meta name="description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source&#x2F;_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo 블로그에서 포스트 삭제하는 방법">
 <meta property="og:url" content="https://futurecreator.github.io/2017/01/15/how-to-delete-post-in-hexo/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source/_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source&#x2F;_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-07-07T05:15:31.907Z">
+<meta property="article:published_time" content="2017-01-15T01:32:24.000Z">
+<meta property="article:modified_time" content="2018-07-07T05:15:31.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="web">
+<meta property="article:tag" content="markdown">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 블로그에서 포스트 삭제하는 방법">
-<meta name="twitter:description" content="이전 포스트인 Hexo 기본 사용법에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다. Step 1. 포스트 파일 및 폴더 삭제하기 source/_post 폴더 밑의 .md 파일과 함께 생성된 폴더">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +47,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +90,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +103,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +159,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +189,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-how-to-delete-post-in-hexo" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-how-to-delete-post-in-hexo" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,28 +205,28 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2017/01/15/how-to-delete-post-in-hexo/" class="article-date">
-    <time datetime="2017-01-15T01:32:24.000Z" itemprop="datePublished">2017-01-15</time>
+    <time datetime="2017-01-15T01:32:24.000Z" itemprop="datePublished">2017/01/15</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/" rel="tag">web</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                3 분</span>
+                8 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
             <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 포스트인 <a href="http://futurecreator.github.io/2016/06/21/hexo-basic-usage/">Hexo 기본 사용법</a>에서는 포스트 삭제하는 방법이 없어서 문의해주시는 분들이 계셨습니다. Hexo 에서는 기본적으로 포스트를 삭제하는 명령어를 제공하고 있지 않습니다. 오늘은 Hexo 블로그에서 포스트를 삭제하는 법을 알아보겠습니다.</p>
-<h2 id="step-1-포스트-파일-및-폴더-삭제하기">Step 1. 포스트 파일 및 폴더 삭제하기</h2>
+<h2 id="Step-1-포스트-파일-및-폴더-삭제하기">Step 1. 포스트 파일 및 폴더 삭제하기</h2>
 <p><code>source/_post</code> 폴더 밑의 <code>.md</code> 파일과 함께 생성된 폴더 파일을 삭제합니다.</p>
-<h2 id="step-2-클린하기">Step 2. 클린하기</h2>
+<h2 id="Step-2-클린하기">Step 2. 클린하기</h2>
 <p><code>hexo clean</code> 명령어를 이용해 database 파일과 public 폴더를 삭제합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></table></figure>
-<h2 id="step-3-생성하기">Step 3. 생성하기</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line">INFO  Deleted public folder.</span><br></pre></td></tr></table></figure>
+<h2 id="Step-3-생성하기">Step 3. 생성하기</h2>
 <p><code>hexo g</code> 명령어를 이용해 삭제된 포스트를 제외시킨 파일을 재생성합니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.71 s</span><br><span class="line">INFO  Generated: content.json</span><br><span class="line">INFO  Generated: tag-sitemap.xml</span><br><span class="line">INFO  Generated: post-sitemap.xml</span><br><span class="line">INFO  Generated: category-sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xsl</span><br><span class="line">INFO  Generated: feed.xml</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">...</span><br><span class="line">INFO  Generated: images/postach/postach_main.png</span><br><span class="line">INFO  257 files generated in 4.61 s</span><br></pre></td></tr></table></figure>
-<h2 id="step-4-배포하기">Step 4. 배포하기</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 1.71 s</span><br><span class="line">INFO  Generated: content.json</span><br><span class="line">INFO  Generated: tag-sitemap.xml</span><br><span class="line">INFO  Generated: post-sitemap.xml</span><br><span class="line">INFO  Generated: category-sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xml</span><br><span class="line">INFO  Generated: sitemap.xsl</span><br><span class="line">INFO  Generated: feed.xml</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">...</span><br><span class="line">INFO  Generated: images/postach/postach_main.png</span><br><span class="line">INFO  257 files generated in 4.61 s</span><br></pre></td></tr></table></figure>
+<h2 id="Step-4-배포하기">Step 4. 배포하기</h2>
 <p>로컬 서버로 테스트해보면 해당 포스트는 삭제됐을 겁니다. 이제 remote 서버에 있는 블로그에 반영하기 위해 <code>hexo d</code> 명령어로 배포하면 삭제가 완료됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">[master f29b77a] Site updated: 2017-01-13 16:36:22</span><br><span class="line"> 135 files changed, 15 insertions(+), 1071 deletions(-)</span><br><span class="line">To https://github.com/futureCreator/futurecreator.github.io.git</span><br><span class="line">   4a9c14b..f29b77a  HEAD -&gt; master</span><br><span class="line">Branch master set up to track remote branch master from https://github.com/futureCreator/futurecreator.github.io.git.</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">[master f29b77a] Site updated: 2017-01-13 16:36:22</span><br><span class="line"> 135 files changed, 15 insertions(+), 1071 deletions(-)</span><br><span class="line">To https://github.com/futureCreator/futurecreator.github.io.git</span><br><span class="line">   4a9c14b..f29b77a  HEAD -&gt; master</span><br><span class="line">Branch master set up to track remote branch master from https://github.com/futureCreator/futurecreator.github.io.git.</span><br><span class="line">INFO  Deploy done: git</span><br></pre></td></tr></table></figure>
 <p>Hexo 블로그에서 포스트 삭제하는 법을 알아봤습니다. 정리해보면 다음과 같습니다.</p>
 <ol>
 <li>해당 포스트 파일과 폴더 삭제</li>
@@ -218,10 +234,10 @@ ga('send', 'pageview');
 <li><code>hexo g</code></li>
 <li><code>hexo d</code></li>
 </ol>
-<p>Hexo 의 커맨드 환경이 익숙하지 않거나 불편함을 느끼시는 분들이라면, Admin 플러그인을 사용해보시는 것도 좋습니다. Admin 플러그인이란 Hexo 블로그 관리를 쉽게 해주는 플러그인으로, GUI 환경을 제공해 한결 편하게 사용하실 수 있습니다. Admin 플러그인에는 <a href="https://github.com/jaredly/hexo-admin" rel="external nofollow noopener noreferrer" target="_blank">hexo-admin</a> 과 <a href="https://github.com/nihgwu/hexo-hey" rel="external nofollow noopener noreferrer" target="_blank">hexo-hey</a> 가 있습니다. 저는 개발자라 그런지 직접 치는 맛이 좋아서 사용해보진 않았습니다만, 조만간 설치 및 사용법을 포스트하겠습니다.</p>
+<p>Hexo 의 커맨드 환경이 익숙하지 않거나 불편함을 느끼시는 분들이라면, Admin 플러그인을 사용해보시는 것도 좋습니다. Admin 플러그인이란 Hexo 블로그 관리를 쉽게 해주는 플러그인으로, GUI 환경을 제공해 한결 편하게 사용하실 수 있습니다. Admin 플러그인에는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/jaredly/hexo-admin">hexo-admin</a> 과 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/nihgwu/hexo-hey">hexo-hey</a> 가 있습니다. 저는 개발자라 그런지 직접 치는 맛이 좋아서 사용해보진 않았습니다만, 조만간 설치 및 사용법을 포스트하겠습니다.</p>
 <p><img src="https://github.com/jaredly/hexo-admin/blob/master/docs/pasted-0.png?raw=true" alt="Hexo Admin Plugin"></p>
 <p><img src="https://github.com/nihgwu/hexo-hey/raw/master/screenshot/1.jpg" alt="Hexo Hey Plugin"></p>
-<h3 id="related-posts">Related Posts</h3>
+<h3 id="Related-Posts">Related Posts</h3>
 <ul>
 <li>
 <a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
@@ -279,7 +295,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -340,7 +356,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -364,14 +380,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -380,7 +388,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -442,7 +450,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -469,18 +477,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

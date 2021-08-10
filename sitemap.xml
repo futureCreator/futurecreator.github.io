@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+
     <sitemap>
         <loc>https://futurecreator.github.io/post-sitemap.xml</loc>
-        <lastmod>2020-03-17T16:08:04.878Z</lastmod>
+        <lastmod>2020-03-17T16:08:04.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://futurecreator.github.io/page-sitemap.xml</loc>
-        <lastmod>2019-03-05T16:01:50.760Z</lastmod>
+        <lastmod>2021-08-10T16:17:30.214Z</lastmod>
     </sitemap>
 
 </sitemapindex>

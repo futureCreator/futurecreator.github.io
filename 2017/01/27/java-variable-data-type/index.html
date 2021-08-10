@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,22 @@
     </title>
     
     <meta name="description" content="이번 포스트에서는,  변수란 무엇인가 변수를 왜 사용해야 하는가 자바(Java)에서 변수를 어떻게 사용하는가 데이터 타입이란 무엇인가  를 알아보겠습니다. 자바 프로그래밍 Java Programming 우리는 컴퓨터의 프로그램을 왜 쓸까요? 컴퓨터에게 무언가 작업을 시키기 위함입니다. 컴퓨터에게 시킬 작업의 목록을 프로그램이라고 합니다. 컴퓨터에게 내리는">
-<meta name="keywords" content="java,variable,datatype">
 <meta property="og:type" content="article">
 <meta property="og:title" content="자바의 변수와 데이터 타입 (Java Variables &amp; Data type)">
 <meta property="og:url" content="https://futurecreator.github.io/2017/01/27/java-variable-data-type/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="이번 포스트에서는,  변수란 무엇인가 변수를 왜 사용해야 하는가 자바(Java)에서 변수를 어떻게 사용하는가 데이터 타입이란 무엇인가  를 알아보겠습니다. 자바 프로그래밍 Java Programming 우리는 컴퓨터의 프로그램을 왜 쓸까요? 컴퓨터에게 무언가 작업을 시키기 위함입니다. 컴퓨터에게 시킬 작업의 목록을 프로그램이라고 합니다. 컴퓨터에게 내리는">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-10-26T13:17:49.076Z">
+<meta property="article:published_time" content="2017-01-26T17:17:17.000Z">
+<meta property="article:modified_time" content="2018-10-26T13:17:49.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="variable">
+<meta property="article:tag" content="datatype">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="자바의 변수와 데이터 타입 (Java Variables &amp; Data type)">
-<meta name="twitter:description" content="이번 포스트에서는,  변수란 무엇인가 변수를 왜 사용해야 하는가 자바(Java)에서 변수를 어떻게 사용하는가 데이터 타입이란 무엇인가  를 알아보겠습니다. 자바 프로그래밍 Java Programming 우리는 컴퓨터의 프로그램을 왜 쓸까요? 컴퓨터에게 무언가 작업을 시키기 위함입니다. 컴퓨터에게 시킬 작업의 목록을 프로그램이라고 합니다. 컴퓨터에게 내리는">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +46,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +89,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +102,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +158,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +188,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-java-variable-data-type" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-java-variable-data-type" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +204,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2017/01/27/java-variable-data-type/" class="article-date">
-    <time datetime="2017-01-26T17:17:17.000Z" itemprop="datePublished">2017-01-27</time>
+    <time datetime="2017-01-26T17:17:17.000Z" itemprop="datePublished">2017/01/27</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/datatype/">datatype</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/variable/">variable</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/datatype/" rel="tag">datatype</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/variable/" rel="tag">variable</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                8 분</span>
+                15 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -207,20 +222,20 @@ ga('send', 'pageview');
 <li>데이터 타입이란 무엇인가</li>
 </ul>
 <p>를 알아보겠습니다.</p>
-<h2 id="자바-프로그래밍-java-programming">자바 프로그래밍 Java Programming</h2>
+<h2 id="자바-프로그래밍-Java-Programming">자바 프로그래밍 Java Programming</h2>
 <p>우리는 컴퓨터의 프로그램을 왜 쓸까요? 컴퓨터에게 무언가 작업을 시키기 위함입니다. 컴퓨터에게 시킬 작업의 목록을 프로그램이라고 합니다. 컴퓨터에게 내리는 지시사항을 모아놓은 것이죠. 즉, 우리는 컴퓨터의 프로그램을 통해 컴퓨터에게 일을 시키게 됩니다.</p>
 <p>컴퓨터에게 1 + 3 + 5 의 계산을 시킨다고 해보죠. 그러면 컴퓨터는 우선 1과 3를 기억해야 할 것이고, 그 둘을 어떻게 할 것인지 + 라는 명령어를 알아야 합니다. 그리고 1과 3을 더한 4라는 값을 기억 또는 저장해야 합니다. 그 4에 5를 더해서 9라는 최종 결과값을 가져다줍니다. 즉, 1 + 3 + 5 라는 계산을 하기 위해서는 데이터를 저장하고 저장된 데이터를 가져다가 연산을 수행해야 합니다.</p>
 <p>즉, 프로그램을 만들기 위해서는 데이터를 저장하고 연산하는 컴퓨터에게 방법을 알려줘야 합니다. 컴퓨터는 0과 1로 이루어진 기계어를 쓰는데 기계어는 사람이 쓰기에는 너무 어렵기 때문에 자바(<em>Java</em>)와 같은 고급언어를 사용해 프로그램을 작성하고, 컴파일러가 해당 언어를 기계어로 번역을 합니다. 자바 언어를 번역하는 컴파일러를 자바 컴파일러(<em>javac.exe</em>)라고 합니다.</p>
 <p>물론, 자바의 경우, 컴파일러가 기계어로 바로 번역하진 않습니다. 운영체제나 하드웨어 마다 사용하는 기계어가 다르기 때문에 자바는 어느 운영체제나 하드웨어에서도 동일하게 동작하도록 자바 가상 머신(<em>Java Virtual Machine; JVM</em>) 상에서 동작을 합니다. 자바 컴파일러는 우리가 작성한 자바 소스 (<em>.java</em>) 를 클래스 파일 (<em>.class</em>)로 변환하고, JVM 이 클래스 파일을 해당 운영체제의 기계어로 변환을 해서 프로그램을 실행합니다.</p>
-<h2 id="변수-variable">변수 Variable</h2>
+<h2 id="변수-Variable">변수 Variable</h2>
 <h3 id="변수와-메모리">변수와 메모리</h3>
 <p>앞에서 본 것처럼, 무언가를 연산하기 위해서는 연산하려는 값을 어딘가에 저장하고 사용해야 합니다. 즉, 프로그램은 컴퓨터의 메모리 공간을 사용하게 되고, 프로그램을 작성하는 프로그래머는 사용하려는 값을 메모리 공간에 저장한다고 컴퓨터에게 알려야 합니다.</p>
 <p>여기서 <strong>데이터의 저장과 참조를 위해 할당된 메모리 공간</strong> 을 변수라고 합니다. 또한 이런 변수는 <strong>변수명</strong> 이라는 이름으로 분류하며, 이런 변수를 컴파일러에게 알려주는 것을 선언 (<em>Declaration</em>) 이라고 합니다.</p>
-<figure class="highlight java"><figcaption><span>UseVariable.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UseVariable</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num1;</span><br><span class="line">    num1 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">int</span> num3 = num1 + num2;</span><br><span class="line">    System.out.println(num1 + <span class="string">"+"</span> + num2 + <span class="string">"="</span> + num3);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>변수를 설명하기 앞서, 중간에 <code>public static void main(String[] args)</code> 라는 문장이 보이시나요? 해당 문장은 프로그램의 시작점을 말하는 메인 메소드입니다. 메소드는 중괄호 (<code>{}</code>)로 묶여있고, 우리가 메인 메소드 안에 작성하는 것들이 프로그램을 실행시켰을 때 컴퓨터가 수행하는 내용인 겁니다. 그 외에 다른 키워드들에 대해서는 앞으로 차츰 설명하도록 하겠습니다.</p>
+<figure class="highlight java"><figcaption><span>UseVariable.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UseVariable</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num1;</span><br><span class="line">    num1 = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> num2 = <span class="number">20</span>;</span><br><span class="line">    <span class="keyword">int</span> num3 = num1 + num2;</span><br><span class="line">    System.out.println(num1 + <span class="string">&quot;+&quot;</span> + num2 + <span class="string">&quot;=&quot;</span> + num3);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>변수를 설명하기 앞서, 중간에 <code>public static void main(String[] args)</code> 라는 문장이 보이시나요? 해당 문장은 프로그램의 시작점을 말하는 메인 메소드입니다. 메소드는 중괄호 (<code>&#123;&#125;</code>)로 묶여있고, 우리가 메인 메소드 안에 작성하는 것들이 프로그램을 실행시켰을 때 컴퓨터가 수행하는 내용인 겁니다. 그 외에 다른 키워드들에 대해서는 앞으로 차츰 설명하도록 하겠습니다.</p>
 <p>다시 변수로 돌아와, 우리가 변수를 선언하면, 해당 데이터를 저장하기 위한 메모리 상에 공간이 할당됩니다. <code>int num1</code> 이라는 부분을 봅시다. int 저장할 데이터가 10진수 정수의 데이터라는 것을 뜻합니다. num1 은 변수를 구분하기 위한 변수의 이름(변수명)입니다. 즉, <code>int num1</code> <strong>num1 이라는 이름으로 10진수 정수를 저장하는 메모리 공간을 할당한다</strong> 는 뜻입니다.</p>
 <p><code>num1 = 10</code> 은 num1 이라는 공간에 10 이라는 값을 저장(대입) 하겠다는 의미입니다. 다음 줄을 보면 <code>int num2 = 20</code> 처럼 선언과 동시에 값을 대입할 수 있는데, 이런 것을 초기화 (<em>Initialize</em>)라고 합니다.</p>
-<h3 id="자료형-data-type">자료형 Data Type</h3>
+<h3 id="자료형-Data-Type">자료형 Data Type</h3>
 <p>저장하는 데이터에 따라서 표현하는 방법을 달리하기 위해서, 그리고 저장공간을 효율적으로 사용하기 위해서 데이터 타입 (<em>Data Type</em>) 이라는 것이 존재합니다. 앞에서 봤던 int 도 그 중 하나죠. 자바에서 기본적으로 제공하는 자료형은 8가지로 기본 자료형 (<em>Primitive data type</em>) 이라고 합니다. 하나의 데이터를 표현하는데 자료형의 종류가 여러 개인 것은 데이터의 표현 범위가 다르기 때문입니다. 즉, 해당 자료형이 사용하는 메모리 공간이 다르다는 것을 말합니다.</p>
 <table>
 <thead>
@@ -340,10 +355,10 @@ ga('send', 'pageview');
 <h3 id="실수-표현방식">실수 표현방식</h3>
 <p>자바를 설명하는데 왜 이런 내용까지 공부해야 할까요? 컴퓨터가, 그리고 자바가 기본적으로 데이터를 저장하는 방법을 알아야 자료형을 이해할 수 있기 때문입니다. 또한 그냥 사용법을 익히는 것보다 ‘왜 이렇지? 왜 이렇게 되지?’ 라는 의문을 가지고 원리를 이해해야 자바를 더 잘 다룰 수 있기 때문입니다.</p>
 <p>지금 이야기하려고 하는 실수 표현방식도 마찬가지입니다. 여기서 말하는 실수란 딱 떨어지는 값이 아닌 소수점을 가진 수를 말하는데, 이 실수는 무한하기 때문입니다. 1과 2 사이에 있는 1.1, 1.2, 1.3, … 이런 값 뿐만 아니라 1.11, 1.111, 1.1111, … 이런 식으로 무한하게 존재합니다. 그렇다면 컴퓨터는 과연 실수를 어떻게 표현할까요?</p>
-<p>실수를 저장하려는 저장공간은 한정되어 있고, 어차피 무한한 값을 정확히 표현할 수 없으니, 최대한 근사한 값으로 표현하게 됩니다. 또한 표현 범위를 넓게 하기 위해서 지수로 표현을 합니다. 컴퓨터에서 실수를 표현하기 위한 부동 소수점 규칙은 <a href="https://ko.wikipedia.org/wiki/IEEE_754" rel="external nofollow noopener noreferrer" target="_blank">IEEE 754 표준</a>에 정의되어 있습니다.</p>
+<p>실수를 저장하려는 저장공간은 한정되어 있고, 어차피 무한한 값을 정확히 표현할 수 없으니, 최대한 근사한 값으로 표현하게 됩니다. 또한 표현 범위를 넓게 하기 위해서 지수로 표현을 합니다. 컴퓨터에서 실수를 표현하기 위한 부동 소수점 규칙은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/IEEE_754">IEEE 754 표준</a>에 정의되어 있습니다.</p>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/General_floating_point_ko.svg/1000px-General_floating_point_ko.svg.png" alt="부동 소수점 표현"></p>
 <p>위처럼, 실제 값을 표현하는 지수 부분과 소수점 자리수를 구분하는 지수 부분이 나뉘어져 있습니다. 오차가 존재할 수 밖에 없죠.</p>
-<h2 id="자료형-data-type-v2">자료형 Data type</h2>
+<h2 id="자료형-Data-type">자료형 Data type</h2>
 <p>앞에서 컴퓨터가, 그리고 자바가 데이터를 어떻게 저장하는지 살펴봤습니다. 따라서 데이터를 저장할 때 사용하는 메모리의 크기가 달라지면 값의 표현 범위가 달라진다는 것을 알 수 있었습니다.</p>
 <h3 id="정수-자료형">정수 자료형</h3>
 <p>정수는 어떤 자료형에 저장하는 것이 적합할까요?</p>
@@ -440,13 +455,13 @@ ga('send', 'pageview');
 </tbody>
 </table>
 <p>char 타입은 유니코드 문자를 저장합니다. 정확히 말하면 이 코드란 것은 실제로는 숫자입니다. 컴퓨터가 표현할 수 있는 것은 0과 1, 즉 숫자죠. 특정한 숫자에 문자를 맵핑시켜서 표현한 것을 코드라고 합니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">'A'</span>;</span><br><span class="line">System.out.println(c); <span class="comment">// A</span></span><br><span class="line">System.out.println((<span class="keyword">int</span>) c); <span class="comment">// 65</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> c = <span class="string">&#x27;A&#x27;</span>;</span><br><span class="line">System.out.println(c); <span class="comment">// A</span></span><br><span class="line">System.out.println((<span class="keyword">int</span>) c); <span class="comment">// 65</span></span><br></pre></td></tr></table></figure>
 <p>유니코드란 전 세계의 모든 문자를 저장할 수 있도록 처리한 방식입니다. 초창기에 사용하던 7 bit 의 ASCII 코드는 로마자 위주 코드였기 때문에 다른 국가의 언어를 처리할 수 없었습니다. 그래서 2 Byte (<em>16 bit</em>) 공간에 문자를 할당한 것이 유니코드입니다.</p>
 <p>이 코드를 가지고 어떻게 표현할 것인가하는 인코딩 방식에는 UTF-8이 있습니다. 2 Byte 로 사용하는 용량이 커지면서 1 Byte 만으로 표현할 수 있는 문자 입장에서는 메모리를 비효율적으로 사용하게 되었습니다. 이에 따라서 문자에 따라 메모리를 가변적으로 사용하는 가변길이 문자 인코딩(<em>UTF-8</em>) 이 생겨났습니다.</p>
 <h3 id="참-거짓-자료형">참 거짓 자료형</h3>
 <p>참/ 거짓 자료형은 <code>true</code> 와 <code>false</code> 두가지 값을 가지고 주로 조건문에서 활용됩니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">boolean</span> isChecked = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (isChecked()) &#123;</span><br><span class="line">  <span class="comment">// do something...  </span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="related-posts">Related Posts</h2>
+<h2 id="Related-Posts">Related Posts</h2>
 <ul>
 <li>
 <a href="/2018/08/12/java-generics/" title="Java 제네릭 Generics DEEP DIVE">Java 제네릭 Generics DEEP DIVE</a>
@@ -458,7 +473,7 @@ ga('send', 'pageview');
 <a href="/2018/06/04/java-observer-pattern/" title="Java 옵저버 패턴 (Observer Pattern)">Java 옵저버 패턴 (Observer Pattern)</a>
 </li>
 <li>
-<a href="/2017/01/27/java-variable-data-type/" title="자바의 변수와 데이터 타입 (Java Variables & Data type)">자바의 변수와 데이터 타입 (Java Variables & Data type)</a>
+<a href="/2017/01/27/java-variable-data-type/" title="자바의 변수와 데이터 타입 (Java Variables &amp; Data type)">자바의 변수와 데이터 타입 (Java Variables &amp; Data type)</a>
 </li>
 <li>
 <a href="/2018/06/02/java-string-concatenation/" title="Java 문자열 연결 방법 비교">Java 문자열 연결 방법 비교</a>
@@ -489,7 +504,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -550,7 +565,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -574,14 +589,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -590,7 +597,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -652,7 +659,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -679,18 +686,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

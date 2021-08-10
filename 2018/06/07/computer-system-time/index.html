@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,22 @@
     </title>
     
     <meta name="description" content="Java 에서 시간을 다루는 클래스인 java.util.Date 클래스를 쓰다가 문득 의문이 들었습니다. 다음은 현재 시간을 가져오는 getTime() 메소드인데요, 왜 1970년 1월 1일 기준일까요? 그리고 왜 milliseconds 기준일까요?  public long getTime() Returns the number of milliseconds si">
-<meta name="keywords" content="time,1970,unix">
 <meta property="og:type" content="article">
 <meta property="og:title" content="컴퓨터 시간의 1970년은 무슨 의미일까?">
 <meta property="og:url" content="https://futurecreator.github.io/2018/06/07/computer-system-time/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="Java 에서 시간을 다루는 클래스인 java.util.Date 클래스를 쓰다가 문득 의문이 들었습니다. 다음은 현재 시간을 가져오는 getTime() 메소드인데요, 왜 1970년 1월 1일 기준일까요? 그리고 왜 milliseconds 기준일까요?  public long getTime() Returns the number of milliseconds si">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-08-14T13:28:53.327Z">
+<meta property="article:published_time" content="2018-06-07T13:24:42.000Z">
+<meta property="article:modified_time" content="2018-08-14T13:28:53.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="time">
+<meta property="article:tag" content="1970">
+<meta property="article:tag" content="unix">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="컴퓨터 시간의 1970년은 무슨 의미일까?">
-<meta name="twitter:description" content="Java 에서 시간을 다루는 클래스인 java.util.Date 클래스를 쓰다가 문득 의문이 들었습니다. 다음은 현재 시간을 가져오는 getTime() 메소드인데요, 왜 1970년 1월 1일 기준일까요? 그리고 왜 milliseconds 기준일까요?  public long getTime() Returns the number of milliseconds si">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +46,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +89,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +102,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +158,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +188,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-computer-system-time" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-computer-system-time" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +204,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/06/07/computer-system-time/" class="article-date">
-    <time datetime="2018-06-07T13:24:42.000Z" itemprop="datePublished">2018-06-07</time>
+    <time datetime="2018-06-07T13:24:42.000Z" itemprop="datePublished">2018/06/07</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/1970/">1970</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/time/">time</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unix/">unix</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/1970/" rel="tag">1970</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/time/" rel="tag">time</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/unix/" rel="tag">unix</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                4 분</span>
+                8 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -208,7 +223,7 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
 <h2 id="태양시-solar-time">태양시 (solar time)</h2>
 <p>인간이 시간이라는 것을 구분하기 시작할 때 가장 쉬운 방법이 무엇이었을까요? 아마도 태양이었을 겁니다. 매일 동쪽에서 떠올라 머리 위를 지나 서쪽으로 지는 태양. 이 태양이 우리 머리 위에 올 때를 정오라고 합니다. 이를 기준으로 다시 정오가 되는 것을 하루 (1일)라고 볼 수 있겠죠.</p>
 <p>태양시는 이렇게 태양을 기준으로 하는 시각계입니다. 북극점과 남극점을 최단 거리로 연결하는 선, 즉 태양이 관측자의 머리 바로 위를 지날 때는 12간지 중 자시🐭(00시)와 오시🐴(12시)에 온다고 해서 자오선(경선, <em>meridian</em>)이라고 하는데, 이를 기준으로 하루를 삼습니다.</p>
-<h2 id="세계시-universal-time-ut">세계시 (Universal Time, UT)</h2>
+<h2 id="세계시-Universal-Time-UT">세계시 (Universal Time, UT)</h2>
 <p>이렇게 지구와 태양을 바탕으로 세계 표준으로 정한 시각이 세계시입니다. 세계시의 종류에는 다음과 같습니다.</p>
 <ul>
 <li>UT0: 별이나 천체의 일주운동을 이용해 태양의 위치를 결정</li>
@@ -217,7 +232,7 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
 <h2 id="더-정밀한-원자-시계">더 정밀한 원자 시계</h2>
 <p>하지만 태양시는 일정하지가 않습니다. 태양의 빛이 지구까지 오는 시간은 8분 12초 ~ 8분 28초라고 합니다. 즉, 우리가 눈으로 보고 생각한 태양시와 실제 태양의 위치에 따른 태양시는 약 1.35초 ~ 1.39초가 날 수밖에 없죠. 게다가 지구가 23.5도 기울어져 있고 공전이 타원궤도이기 때문에 계절에 따라 조금 다르다고 합니다. 태양의 운동이 매일 같지 않았다는 걸 바빌로니아 사람들은 이미 알고 있었다고 하네요. 게다가 지구의 자전 또한 점점 느려집니다.</p>
 <p>앞서 매우 큰 지구와 태양으로 시간을 측정했다면 매우 작은 원자로도 시간을 측정하는 방법도 있습니다. 원자는 들뜸과 바닥 상태를 주기적으로 반복하는데, 이 고유한 진동의 주파수를 이용하면 정밀한 시간을 잴 수 있다는걸 알게 되었습니다. 세슘 원자 시계의 경우 1초 동안 진동하는 횟수는 9,192,631,770번으로 30만 년에 1초의 오차를 보인다고 합니다.</p>
-<h2 id="협정-세계시-coordinated-universal-time-utc">협정 세계시 (Coordinated Universal Time, UTC)</h2>
+<h2 id="협정-세계시-Coordinated-Universal-Time-UTC">협정 세계시 (Coordinated Universal Time, UTC)</h2>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Standard_World_Time_Zones.png/800px-Standard_World_Time_Zones.png" alt="https://en.wikipedia.org/wiki/Coordinated_Universal_Time"></p>
 <p>어쨌든 우리가 사는 세상은 지구와 태양이 있는 세상이니 해가 경선에 있는 시간을 맞추기 위해서는 원자 시계에도 그 오차를 반영해야겠죠? 따라서 1월 1일이나 7월 1일 0시를 기점으로 1초를 더하거나 빼서 세슘 원자시계와 태양시의 차이의 오차를 보정하는데 이 1초를 윤초(<em>leap second</em>)라고 합니다. 이렇게 보정한 시간을 협정 세계시라고 정하고 1972년 1월 1일부터 국제적인 표준시가 되었습니다.</p>
 <p>자, 그렇다면 실마리가 보이는군요. UTC 를 기준으로 하는건 UTC가 세계 표준시이기 때문이고, 1970년을 기준으로 하는건 아마도 1972년부터 UTC가 시행되었기 때문인 듯 합니다.</p>
@@ -238,8 +253,8 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
 </ul>
 <h3 id="벤치마킹">벤치마킹</h3>
 <p>심플한 숫자로 이루어져 있어 간단히 성능을 측정할 때도 좋구요.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">int</span>[] myNumbers = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">1</span> &#125;;</span><br><span class="line">  sort(myNumbers);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">"Duration: "</span> + (System.currentTimeMillis() - start));</span><br></pre></td></tr></table></figure>
-<h3 id="유니크한-id">유니크한 ID</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">  <span class="keyword">int</span>[] myNumbers = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">1</span> &#125;;</span><br><span class="line">  sort(myNumbers);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;Duration: &quot;</span> + (System.currentTimeMillis() - start));</span><br></pre></td></tr></table></figure>
+<h3 id="유니크한-ID">유니크한 ID</h3>
 <p>이 숫자를 이용해서 유니크한 아이디를 만들어낼 수 있습니다. 임시파일을 생성하거나 임시토큰을 만들어낼 수 있습니다.</p>
 <p>이 외에도 여러가지 용도로 사용이 가능합니다.</p>
 <h2 id="이대로-괜찮을까">이대로 괜찮을까?</h2>
@@ -250,10 +265,10 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
 <p>이번 포스팅에서는 시간의 종류와 컴퓨터에서 어떻게 시간을 측정하게 되었는지 살펴봤습니다.</p>
 <h2 id="참고자료">참고자료</h2>
 <ul>
-<li><a href="https://ko.wikipedia.org/wiki/%ED%98%91%EC%A0%95_%EC%84%B8%EA%B3%84%EC%8B%9C" rel="external nofollow noopener noreferrer" target="_blank">https://ko.wikipedia.org/wiki/협정_세계시</a></li>
-<li><a href="https://ko.wikipedia.org/wiki/%EC%9C%A4%EC%B4%88" rel="external nofollow noopener noreferrer" target="_blank">https://ko.wikipedia.org/wiki/윤초</a></li>
-<li><a href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%8B%9C%EA%B0%84" rel="external nofollow noopener noreferrer" target="_blank">https://ko.wikipedia.org/wiki/시스템_시간</a></li>
-<li><a href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%8B%9C%EA%B0%84" rel="external nofollow noopener noreferrer" target="_blank">https://ko.wikipedia.org/wiki/유닉스_시간</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%ED%98%91%EC%A0%95_%EC%84%B8%EA%B3%84%EC%8B%9C">https://ko.wikipedia.org/wiki/협정_세계시</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%9C%A4%EC%B4%88">https://ko.wikipedia.org/wiki/윤초</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%8B%9C%EA%B0%84">https://ko.wikipedia.org/wiki/시스템_시간</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%8B%9C%EA%B0%84">https://ko.wikipedia.org/wiki/유닉스_시간</a></li>
 </ul>
 
         </div>
@@ -274,7 +289,7 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -335,7 +350,7 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -359,14 +374,6 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -375,7 +382,7 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -437,7 +444,7 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -464,18 +471,26 @@ Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

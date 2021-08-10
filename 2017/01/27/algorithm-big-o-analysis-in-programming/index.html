@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,23 @@
     </title>
     
     <meta name="description" content="알고리즘을 풀거나 프로그래밍 면접을 할 때 빅 오 분석법 (Big-O Analysis) 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다. 주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 compareToMax">
-<meta name="keywords" content="algorithm,Big-O,java,programming">
 <meta property="og:type" content="article">
 <meta property="og:title" content="빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기">
 <meta property="og:url" content="https://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="알고리즘을 풀거나 프로그래밍 면접을 할 때 빅 오 분석법 (Big-O Analysis) 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다. 주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 compareToMax">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-08-14T13:34:28.035Z">
+<meta property="article:published_time" content="2017-01-27T11:00:20.000Z">
+<meta property="article:modified_time" content="2018-08-14T13:34:28.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="Big-O">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기">
-<meta name="twitter:description" content="알고리즘을 풀거나 프로그래밍 면접을 할 때 빅 오 분석법 (Big-O Analysis) 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다. 주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 compareToMax">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +47,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +90,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +103,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +159,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +189,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-algorithm-big-o-analysis-in-programming" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-algorithm-big-o-analysis-in-programming" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +205,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2017/01/27/algorithm-big-o-analysis-in-programming/" class="article-date">
-    <time datetime="2017-01-27T11:00:20.000Z" itemprop="datePublished">2017-01-27</time>
+    <time datetime="2017-01-27T11:00:20.000Z" itemprop="datePublished">2017/01/27</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-O/">Big-O</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/">programming</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-O/" rel="tag">Big-O</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                4 분</span>
+                11 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -222,19 +238,19 @@ ga('send', 'pageview');
 </ol>
 <h2 id="알고리즘-종류-성능-순">알고리즘 종류 (성능 순)</h2>
 <p><img src="/images/algorithm/bigo.jpg" alt="알고리즘 성능 별 그래프"></p>
-<h3 id="o-1-상수-실행-시간-constant-running-time">O(1) : 상수 실행 시간 (Constant running time)</h3>
+<h3 id="O-1-상수-실행-시간-Constant-running-time">O(1) : 상수 실행 시간 (Constant running time)</h3>
 <p>입력값과 상관없이 일정한 실행시간을 갖습니다. 가장 바람직한 알고리즘이라고 볼 수 있겠지만 상수 실행 시간 알고리즘이 가능한 경우는 거의 없습니다.</p>
-<h3 id="o-log-n-로그-알고리즘-logarithmic-algorithm">O(log n) : 로그 알고리즘 (Logarithmic algorithm)</h3>
+<h3 id="O-log-n-로그-알고리즘-Logarithmic-algorithm">O(log n) : 로그 알고리즘 (Logarithmic algorithm)</h3>
 <p>실행 시간이 입력 크기의 로그에 비례해서 늘어나는 경우입니다. 그래프를 보시면 아시겠지만 실행시간이 늘어날수록 늘어나는 폭이 줄어들고 있습니다.</p>
-<h3 id="o-n-선형-알고리즘-liniear-algorithm">O(n) : 선형 알고리즘 (Liniear algorithm)</h3>
+<h3 id="O-n-선형-알고리즘-Liniear-algorithm">O(n) : 선형 알고리즘 (Liniear algorithm)</h3>
 <p>실행 시간이 입력 크기에 비례하는 알고리즘입니다.</p>
-<h3 id="o-n-log-n-초선형-알고리즘-superlinear-algorithm">O(n log n) : 초선형 알고리즘 (Superlinear algorithm)</h3>
+<h3 id="O-n-log-n-초선형-알고리즘-Superlinear-algorithm">O(n log n) : 초선형 알고리즘 (Superlinear algorithm)</h3>
 <p>선형 알고리즘 보다는 느리지만 다항식 알고리즘 보다는 빠릅니다.</p>
-<h3 id="o-n-c-다항식-알고리즘-polynomial-algorithm">O(n^c) : 다항식 알고리즘 (Polynomial algorithm)</h3>
+<h3 id="O-n-c-다항식-알고리즘-Polynomial-algorithm">O(n^c) : 다항식 알고리즘 (Polynomial algorithm)</h3>
 <p>입력 크기가 늘어나면 실행 시간이 빠르게 늘어납니다.</p>
-<h3 id="c-n-지수-알고리즘-exponential-algorithm">(c^n) : 지수 알고리즘 (Exponential algorithm)</h3>
+<h3 id="c-n-지수-알고리즘-Exponential-algorithm">(c^n) : 지수 알고리즘 (Exponential algorithm)</h3>
 <p>입력 크기에 따라 실행 시간이 굉장히 빠르게 늘어납니다.</p>
-<h3 id="o-n-팩토리얼-알고리즘-factorial-algorithm">O(n!) : 팩토리얼 알고리즘 (Factorial algorithm)</h3>
+<h3 id="O-n-팩토리얼-알고리즘-Factorial-algorithm">O(n!) : 팩토리얼 알고리즘 (Factorial algorithm)</h3>
 <p>위 그림에는 나오지 않았지만 가장 느린 알고리즘입니다.</p>
 <p>n 이 커지면 실행 시간이 어떻게 변하는지 확인해보겠습니다.</p>
 <table>
@@ -278,7 +294,7 @@ ga('send', 'pageview');
 </tr>
 </tbody>
 </table>
-<h2 id="메모리-용량-분석-memory-footprint">메모리 용량 분석 (Memory footprint)</h2>
+<h2 id="메모리-용량-분석-Memory-footprint">메모리 용량 분석 (Memory footprint)</h2>
 <p>알고리즘의 메모리 용량이 실행 시간 못지않게 중요한 경우도 있습니다. 이런 경우에는 필요한 메모리 용량을 입력 크기 n 의 식으로 표현해서 따져볼 수 있습니다.</p>
 <h2 id="정리">정리</h2>
 <p>빅 오 분석법을 이용하면 알고리즘의 문제를 풀 때 풀고나서 알고리즘의 성능을 간단하게 예측해볼 수 있습니다. 프로그래밍 면접 시 알고리즘 문제를 풀 때도 면접관이 제시한 풀이에 대해 성능을 물어본 경우에도 빅 오 분석법을 이용해 대답할 수 있습니다. 그리고 알고리즘은 초선형 시간 이상의 성능을 갖는 알고리즘을 사용하는 것이 좋습니다.</p>
@@ -301,7 +317,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -362,7 +378,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -386,14 +402,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -402,7 +410,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -464,7 +472,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -491,18 +499,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

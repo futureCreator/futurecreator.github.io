@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -15,21 +21,23 @@
         Writer, IT Blog
     </title>
     
-    <meta name="description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글/네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
-<meta name="keywords" content="hexo,seo,plugins">
+    <meta name="description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글&#x2F;네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
 <meta property="og:type" content="article">
 <meta property="og:title" content="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">
 <meta property="og:url" content="https://futurecreator.github.io/2016/06/23/search-engine-optimization-hexo-plugins/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
-<meta property="og:description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글/네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글&#x2F;네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-08-14T13:35:55.520Z">
+<meta property="article:published_time" content="2016-06-23T07:02:47.000Z">
+<meta property="article:modified_time" content="2018-08-14T13:35:55.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="seo">
+<meta property="article:tag" content="plugins">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">
-<meta name="twitter:description" content="이전 포스트에서 검색과 웹 사이트 최적화에 대해 이야기를 했습니다. 구글 검색 엔진이 어떻게 동작하는지, 내 블로그가 검색이 잘 되게 하기 위해서 구글/네이버 웹 마스터 도구를 이용해서 페이지를 최적화했습니다.    구글(Google) 검색 원리와 검색이 잘 되게 하는 방법   구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +46,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +89,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +102,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +158,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +188,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-search-engine-optimization-hexo-plugins" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-search-engine-optimization-hexo-plugins" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +204,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2016/06/23/search-engine-optimization-hexo-plugins/" class="article-date">
-    <time datetime="2016-06-23T07:02:47.000Z" itemprop="datePublished">2016-06-23</time>
+    <time datetime="2016-06-23T07:02:47.000Z" itemprop="datePublished">2016/06/23</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugins/">plugins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/seo/">seo</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plugins/" rel="tag">plugins</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/seo/" rel="tag">seo</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                5 분</span>
+                15 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -222,14 +237,14 @@ ga('send', 'pageview');
 <li>hexo-generator-feed</li>
 <li>hexo-generator-seo-friendly-sitemap</li>
 </ul>
-<h2 id="hexo-autonofollow"><a href="https://github.com/liuzc/hexo-autonofollow" rel="external nofollow noopener noreferrer" target="_blank">hexo-autonofollow</a></h2>
+<h2 id="hexo-autonofollow"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/liuzc/hexo-autonofollow">hexo-autonofollow</a></h2>
 <p>해당 포스트에서 참고하고 있는 외부 링크에 <code>nofollow</code> 속성을 자동으로 추가해주는 플러그인입니다. 먼저 <code>nofollow</code> 속성이 무엇이고 왜 추가해야하는지 알아보겠습니다.</p>
 <h3 id="nofollow-속성">nofollow 속성</h3>
 <p>검색엔진에서 사용자에게 검색한 결과 페이지를 보여주기 위해 평소에 많은 웹 사이트를 수집해놓습니다. 그러한 작업을 <strong>크롤링</strong> 이라고 하고 크롤링하는 로봇을 <strong>크롤러</strong> 또는 구글의 경우 <strong>구글봇 (<em>Googlebot</em>)</strong> 이라고 합니다. 이 크롤러에게 이 페이지는 수집하지 말라고 알려줄 수 있습니다. 크롤러가 페이지를 수집한다는 것은 검색 결과에 노출될 수 있다는 얘기입니다. 따라서 개인정보나 유료링크 같은 것들은 수집하면 안되겠죠.</p>
 <p>이 때 사용하는 것이 robot.txt 파일입니다. 크롤러는 홈페이지에 있는 robot.txt 파일을 참고해서 크롤링에서 예외처리할 페이지를 확인합니다. 혹은 간단하게 해당 페이지의 <code>&lt;head&gt;</code> 태그 안에 메타 태그로 표시할 수 있습니다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"robots"</span> <span class="attr">content</span>=<span class="string">"nofollow"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;robots&quot;</span> <span class="attr">content</span>=<span class="string">&quot;nofollow&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 <p>그런데 해당 페이지 내에 있는 개별 링크에 대해서는 어떻게 처리할까요? 이런 작업은 robot.txt 로 처리하는 것이 복잡해서 <code>rel</code> 속성에 <code>nofollow</code> 속성값이 생겼습니다. 이 속성을 통해서 해당 링크는 크롤링하지 않도록 할 수 있습니다. 보통 신뢰할 수 없는 콘텐츠나 유료 링크의 경우 다른 사용자의 검색에 노출되지 않아야 하므로 <code>nofollow</code> 속성을 사용하는 것이 좋습니다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"signin.php"</span> <span class="attr">rel</span>=<span class="string">"nofollow"</span>&gt;</span>로그인<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;signin.php&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;nofollow&quot;</span>&gt;</span>로그인<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="기능">기능</h3>
 <ul>
 <li>모든 외부 링크에 <code>rel=&quot;external nofollow&quot;</code> 속성을 자동으로 추가합니다.</li>
@@ -237,9 +252,9 @@ ga('send', 'pageview');
 <li>외부 링크에 <code>target=&quot;_blank&quot;</code> 속성을 넣어서 클릭할 경우 새로운 탭 또는 윈도우에서 열리게 합니다.</li>
 </ul>
 <h3 id="설치">설치</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-autonofollow --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-autonofollow --save</span><br></pre></td></tr></table></figure>
 <h3 id="옵션">옵션</h3>
-<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nofollow:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    exclude:</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">exclude1.com</span></span><br><span class="line"><span class="bullet">    -</span> <span class="string">exclude2.com</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nofollow:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">exclude:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">exclude1.com</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">exclude2.com</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -261,27 +276,27 @@ ga('send', 'pageview');
 <h3 id="결과">결과</h3>
 <p>일단 두 개의 링크를 작성해봅시다.</p>
 <p><a href="http://futurecreator.github.io">내 홈페이지</a><br>
-<a href="http://www.naver.com" rel="external nofollow noopener noreferrer" target="_blank">네이버</a></p>
+<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.naver.com">네이버</a></p>
 <p>브라우저로 접속해서 개발자 도구로 페이지의 소스를 살펴봅니다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://futurecreator.github.io"</span>&gt;</span>내 홈페이지<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.naver.com"</span> <span class="attr">rel</span>=<span class="string">"external nofollow"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span>네이버<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://futurecreator.github.io&quot;</span>&gt;</span>내 홈페이지<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.naver.com&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;external nofollow&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>네이버<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>그냥 링크만 넣어도 외부링크에 <code>nofollw</code> 속성이 추가되는 것을 확인할 수 있습니다. <a href="http://futurecreator.github.io">futurecreator.github.io</a> 는 제 도메인이기 때문에 추가되지 않았습니다.</p>
-<h2 id="hexo-auto-canonical"><a href="https://github.com/HyunSeob/hexo-auto-canonical" rel="external nofollow noopener noreferrer" target="_blank">hexo-auto-canonical</a></h2>
+<h2 id="hexo-auto-canonical"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/HyunSeob/hexo-auto-canonical">hexo-auto-canonical</a></h2>
 <p><img src="my_site_seo_link.png" alt="http://webmastertool.naver.com"></p>
 <p><code>&lt;meta&gt;</code> 태그 중 <code>canonical</code> 속성은 대표 URL (선호 URL) 을 나타냅니다. 동일 콘텐츠를 여러개의 URL로 표현이 가능할 경우 가장 선호되는 대표 URL을 지정하는 것이 바로 대표 URL 입니다. 중복되거나 비슷한 콘텐츠에 대한 링크를 통합해서 같은 주제에 통계를 내기가 쉽고 사용자가 검색을 통해 페이지에 방문하기에 유리합니다. 각 포스트마다 설정해주는 것이 귀찮기 때문에 자동으로 생성해주는 플러그인을 사용해보죠.</p>
 <h3 id="설치-v2">설치</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-auto-canonical</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-auto-canonical</span><br></pre></td></tr></table></figure>
 <h3 id="사용">사용</h3>
 <p>이제 <code>&lt;head&gt;</code> 태그 안에 대표 URL 속성을 집어넣어야겠죠? <code>head.ejs</code> 안에 다음 코드를 넣으면 generate 할 때 코드를 생성해줍니다. 파일 중간 쯤에 <code>&lt;%- meta(page) %&gt;</code> 라고 있는데 그 바로 아래 붙여넣으시면 됩니다.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- autoCanonical(config, page) %&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- autoCanonical(config, page) %&gt;</span><br></pre></td></tr></table></figure>
 <p>개발자 도구를 통해 소스를 살펴보면 <code>&lt;head&gt;</code> 태그에 <code>cononical</code> 속성이 추가된 것을 확인할 수 있습니다.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"canonical"</span> <span class="attr">href</span>=<span class="string">"http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/"</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="hexo-generator-seo-friendly-sitemap"><a href="https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap" rel="external nofollow noopener noreferrer" target="_blank">hexo-generator-seo-friendly-sitemap</a></h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;canonical&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="hexo-generator-seo-friendly-sitemap"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap">hexo-generator-seo-friendly-sitemap</a></h2>
 <p>검색엔진이 우리 사이트의 전체적인 구조를 알 수 있도록 사이트맵 XML 파일을 제출하면 크롤러가 우리 페이지를 더 효율적으로 크롤링할 수 있습니다. 구글에서 sitemap generator 를 검색해보면 여러가지 온라인 툴들이 나오지만 번거롭게 그럴 필요가 없이 플러그인을 통해 자동으로 생성해보겠습니다.</p>
 <h3 id="설치-v3">설치</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-seo-friendly-sitemap --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-seo-friendly-sitemap --save</span><br></pre></td></tr></table></figure>
 <h3 id="사용-v2">사용</h3>
 <p><code>_config.yml</code> 에 다음과 같이 설정을 추가합니다.</p>
-<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sitemap auto generator</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line"><span class="attr">    path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sitemap auto generator</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -299,12 +314,12 @@ ga('send', 'pageview');
 <h3 id="결과-v2">결과</h3>
 <p>path 값을 sitemap.xml 이라고 지정했기 때문에 root 폴더에 sitemap.xml 이 생성됩니다. 제 사이트를 예로 들면 <a href="http://futurecreator.github.io/sitemap.xml">http://futurecreator.github.io/sitemap.xml</a> 경로로 확인할 수 있습니다. 이제 배포하신 후에 Search Console 에서 구글에 사이트맵을 제출하시면 됩니다.</p>
 <a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
-<h2 id="hexo-generator-feed"><a href="https://github.com/hexojs/hexo-generator-feed" rel="external nofollow noopener noreferrer" target="_blank">hexo-generator-feed</a></h2>
+<h2 id="hexo-generator-feed"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a></h2>
 <p>RSS feed 는 사이트내의 최신 콘텐츠를 담고 있는 파일입니다. 등록한 사이트에서 새 글이 올라오면 바로 읽을 수 있는 RSS feed Reader 를 생각해보시면 되겠습니다. 이 또한 검색엔진에 제출할 수 있죠. 플러그인을 이용해서 자동 생성하겠습니다.</p>
 <h3 id="설치-v4">설치</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
 <h3 id="설정">설정</h3>
-<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rss feed auto generator</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">atom</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">feed.xml</span></span><br><span class="line"><span class="attr">  limit:</span> <span class="number">20</span></span><br><span class="line"><span class="attr">  hub:</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rss feed auto generator</span></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">feed.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">  <span class="attr">hub:</span></span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -329,7 +344,7 @@ ga('send', 'pageview');
 </table>
 <h3 id="결과-v3">결과</h3>
 <p>그러면 root 경로에 feed.xml 이 생긴 것을 확인하실 수 있습니다.</p>
-<h3 id="related-posts">Related Posts</h3>
+<h3 id="Related-Posts">Related Posts</h3>
 <ul>
 <li>
 <a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
@@ -375,7 +390,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -436,7 +451,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -460,14 +475,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -476,7 +483,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -538,7 +545,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -565,18 +572,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

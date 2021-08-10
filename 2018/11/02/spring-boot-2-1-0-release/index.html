@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
+
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
+
     
     <title>
         
@@ -16,20 +22,22 @@
     </title>
     
     <meta name="description" content="2018년 10월 30일자로 스프링 부트 2.1이 공개되었습니다. 어떤 점이 달라졌는지 살펴보겠습니다.  써드파티 라이브러리 업그레이드 스프링부트에서 사용하는 써드파티(third-party) 라이브러리들의 버전이 업그레이드 되었습니다. 안정된(stable) 버전 중에서는 최신 버전이죠.  Hibernate 5.3 : ORM Micrometer 1.1 : 애">
-<meta name="keywords" content="release,spring,spring_boot">
 <meta property="og:type" content="article">
 <meta property="og:title" content="스프링 부트 Spring Boot 2.1.0 릴리즈!">
 <meta property="og:url" content="https://futurecreator.github.io/2018/11/02/spring-boot-2-1-0-release/index.html">
 <meta property="og:site_name" content="Writer, IT Blog">
 <meta property="og:description" content="2018년 10월 30일자로 스프링 부트 2.1이 공개되었습니다. 어떤 점이 달라졌는지 살펴보겠습니다.  써드파티 라이브러리 업그레이드 스프링부트에서 사용하는 써드파티(third-party) 라이브러리들의 버전이 업그레이드 되었습니다. 안정된(stable) 버전 중에서는 최신 버전이죠.  Hibernate 5.3 : ORM Micrometer 1.1 : 애">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="og:updated_time" content="2018-11-02T14:55:26.216Z">
+<meta property="article:published_time" content="2018-11-02T14:54:09.000Z">
+<meta property="article:modified_time" content="2018-11-02T14:55:26.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="spring">
+<meta property="article:tag" content="release">
+<meta property="article:tag" content="spring_boot">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="스프링 부트 Spring Boot 2.1.0 릴리즈!">
-<meta name="twitter:description" content="2018년 10월 30일자로 스프링 부트 2.1이 공개되었습니다. 어떤 점이 달라졌는지 살펴보겠습니다.  써드파티 라이브러리 업그레이드 스프링부트에서 사용하는 써드파티(third-party) 라이브러리들의 버전이 업그레이드 되었습니다. 안정된(stable) 버전 중에서는 최신 버전이죠.  Hibernate 5.3 : ORM Micrometer 1.1 : 애">
 <meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@hdhXD">
+<meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
     
@@ -38,15 +46,25 @@
     
     <link rel="icon" href="/images/favicions/favicon6.png">
     
-    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+        
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
     
     
-        <link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+        
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
     
     
         <script type="text/javascript">
@@ -71,7 +89,8 @@ ga('send', 'pageview');
   </script>
 
     <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-</head></html>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Writer, IT Blog" type="application/atom+xml">
+</head>
 <body>
     <div id="wrap">
         <header id="header">
@@ -83,12 +102,6 @@ ga('send', 'pageview');
                         <a href="/" class="logo"></a>
                     </h1>
                     
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">
-                                Eric Han&#39;s IT Blog Powered by Hexo
-                            </p>
-                        </h2>
-                        
                 </div>
                 <div id="header-inner" class="nav-container">
                     <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
@@ -145,7 +158,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -173,7 +188,7 @@ ga('send', 'pageview');
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                            <article id="post-spring-boot-2-1-0-release" class="article article-single article-type-post" itemscope="" itemprop="blogPost">
+                            <article id="post-spring-boot-2-1-0-release" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         <header class="article-header">
@@ -189,13 +204,13 @@ ga('send', 'pageview');
         <div class="article-subtitle">
             🗓
             <a href="/2018/11/02/spring-boot-2-1-0-release/" class="article-date">
-    <time datetime="2018-11-02T14:54:09.000Z" itemprop="datePublished">2018-11-02</time>
+    <time datetime="2018-11-02T14:54:09.000Z" itemprop="datePublished">2018/11/02</time>
 </a>
             <!-- 
-    <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/release/">release</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/">spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-boot/">spring_boot</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/release/" rel="tag">release</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring/" rel="tag">spring</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-boot/" rel="tag">spring_boot</a></li></ul>
  -->
             <span class="reading-time">⏱ 소요시간
-                2 분</span>
+                7 분</span>
         </div>
 
         <div class="article-entry" itemprop="articleBody">
@@ -204,44 +219,44 @@ ga('send', 'pageview');
 <h2 id="써드파티-라이브러리-업그레이드">써드파티 라이브러리 업그레이드</h2>
 <p>스프링부트에서 사용하는 써드파티(<em>third-party</em>) 라이브러리들의 버전이 업그레이드 되었습니다. 안정된(<em>stable</em>) 버전 중에서는 최신 버전이죠.</p>
 <ul>
-<li><a href="http://hibernate.org/" rel="external nofollow noopener noreferrer" target="_blank">Hibernate 5.3</a> : ORM</li>
-<li><a href="https://micrometer.io/" rel="external nofollow noopener noreferrer" target="_blank">Micrometer 1.1</a> : 애플리케이션 모니터링</li>
-<li><a href="https://projectreactor.io/docs" rel="external nofollow noopener noreferrer" target="_blank">Reactor (Californium)</a> : JVM 기반 non-blocking 애플리케이션을 만들기 위한 4세대 리액티브 라이브러리</li>
-<li><a href="https://spring.io/projects/spring-data" rel="external nofollow noopener noreferrer" target="_blank">Spring Data (Lovelace)</a></li>
-<li><a href="https://spring.io/blog/2018/09/21/spring-framework-5-1-goes-ga" rel="external nofollow noopener noreferrer" target="_blank">Spring Framework 5.1</a></li>
-<li><a href="https://tomcat.apache.org/tomcat-9.0-doc/index.html" rel="external nofollow noopener noreferrer" target="_blank">Tomcat 9</a></li>
-<li><a href="https://github.com/undertow-io/undertow" rel="external nofollow noopener noreferrer" target="_blank">Undertow 2</a> : Non-blocking IO 기반 자바 웹 서버</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://hibernate.org/">Hibernate 5.3</a> : ORM</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://micrometer.io/">Micrometer 1.1</a> : 애플리케이션 모니터링</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://projectreactor.io/docs">Reactor (Californium)</a> : JVM 기반 non-blocking 애플리케이션을 만들기 위한 4세대 리액티브 라이브러리</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://spring.io/projects/spring-data">Spring Data (Lovelace)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://spring.io/blog/2018/09/21/spring-framework-5-1-goes-ga">Spring Framework 5.1</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://tomcat.apache.org/tomcat-9.0-doc/index.html">Tomcat 9</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/undertow-io/undertow">Undertow 2</a> : Non-blocking IO 기반 자바 웹 서버</li>
 </ul>
 <h2 id="성능-향상">성능 향상</h2>
 <p>더 빠르고 더 적은 메모리를 사용하게 되었습니다.</p>
 <h2 id="자바-11-지원">자바 11 지원</h2>
 <p>스프링 프레임워크 5.1이 자바 11을 지원하면서 스프링 부트 2.1도 자바 11을 지원하게 되었습니다.</p>
-<h2 id="datasize">DataSize</h2>
+<h2 id="DataSize">DataSize</h2>
 <p><code>10MB</code>, <code>512Byte</code> 같은 데이터 크기를 쉽게 다룰 수 있는 <code>DataSize</code> 클래스를 지원합니다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties</span>(<span class="string">"app.io"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppIoProperties</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="meta">@DataSizeUnit</span>(DataUnit.MEGABYTES)</span><br><span class="line">  <span class="keyword">private</span> DataSize bufferSize = DataSize.ofMegabytes(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> DataSize <span class="title">getBufferSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.bufferSize;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBufferSize</span><span class="params">(DataSize bufferSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.bufferSize = bufferSize;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="actuator-엔드포인트">Actuator 엔드포인트</h2>
-<p><a href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready" rel="external nofollow noopener noreferrer" target="_blank">Spring Boot Actuator</a> 는 애플리케이션 모니터링에 필요한 정보를 제공합니다. 스프링 부트 2.1에서는 두 개의 새로운 정보가 추가되었습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ConfigurationProperties(&quot;app.io&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AppIoProperties</span> </span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="meta">@DataSizeUnit(DataUnit.MEGABYTES)</span></span><br><span class="line">  <span class="keyword">private</span> DataSize bufferSize = DataSize.ofMegabytes(<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> DataSize <span class="title">getBufferSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.bufferSize;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBufferSize</span><span class="params">(DataSize bufferSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.bufferSize = bufferSize;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Actuator-엔드포인트">Actuator 엔드포인트</h2>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#production-ready">Spring Boot Actuator</a> 는 애플리케이션 모니터링에 필요한 정보를 제공합니다. 스프링 부트 2.1에서는 두 개의 새로운 정보가 추가되었습니다.</p>
 <ul>
 <li><code>/actuator/caches</code> : 애플리케이션 캐시 관련 정보.</li>
 <li><code>/actuator/integrationgraph</code> : Spring Integration 컴포넌트를 그래프로 보여줌.</li>
 </ul>
 <h2 id="각종-정보">각종 정보</h2>
-<p>스프링 부트 Actuator 는 Micrometer 를 자동설정 해주고 다양한 모니터링 시스템을 지원합니다. Micrometer 가 1.1로 업그레이드 된 것 뿐만 아니라 <a href="https://www.appoptics.com/" rel="external nofollow noopener noreferrer" target="_blank">AppOptics</a>, <a href="https://cloud.humio.com/" rel="external nofollow noopener noreferrer" target="_blank">Humio</a>, <a href="https://kairosdb.github.io/" rel="external nofollow noopener noreferrer" target="_blank">KariosDB</a> 의 자동설정도 추가되었습니다. 그리도 다음과 같은 정보들도 추가로 관리할 수 있습니다.</p>
+<p>스프링 부트 Actuator 는 Micrometer 를 자동설정 해주고 다양한 모니터링 시스템을 지원합니다. Micrometer 가 1.1로 업그레이드 된 것 뿐만 아니라 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.appoptics.com/">AppOptics</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloud.humio.com/">Humio</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://kairosdb.github.io/">KariosDB</a> 의 자동설정도 추가되었습니다. 그리도 다음과 같은 정보들도 추가로 관리할 수 있습니다.</p>
 <ul>
 <li>Hibernate 정보</li>
 <li>스프링 프레임워크의 <code>WebClient</code></li>
 <li>Kafka 컨슈머 정보</li>
 <li>Log4j2 정보</li>
 <li>Jetty 서버 쓰레드 풀 정보</li>
-<li>서버 사이드 <a href="https://jersey.github.io/" rel="external nofollow noopener noreferrer" target="_blank">Jersey</a> HTTP 요청 정보</li>
+<li>서버 사이드 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://jersey.github.io/">Jersey</a> HTTP 요청 정보</li>
 </ul>
-<p>이 외에도 많은 변화가 있었습니다. 여기엔 500여명의 개발자와 1만9천건 이상의 커밋이 있었습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top-right hint--error hint--large" aria-label="https://github.com/spring-projects/spring-boot/commits/master">[1]</span></a></sup></p>
+<p>이 외에도 많은 변화가 있었습니다. 여기엔 500여명의 개발자와 1만9천건 이상의 커밋이 있었습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.com/spring-projects/spring-boot/commits/master">[1]</span></a></sup></p>
 <h2 id="참고">참고</h2>
 <ul>
-<li><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1-Release-Notes" rel="external nofollow noopener noreferrer" target="_blank">Spring Boot 2.1 Release Notes</a></li>
-<li><a href="https://spring.io/blog/2018/10/30/spring-boot-2-1-0" rel="external nofollow noopener noreferrer" target="_blank">Spring Boot 2.1.0 | Spring blog</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.1-Release-Notes">Spring Boot 2.1 Release Notes</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://spring.io/blog/2018/10/30/spring-boot-2-1-0">Spring Boot 2.1.0 | Spring blog</a></li>
 </ul>
-<h2 id="related-posts">Related Posts</h2>
+<h2 id="Related-Posts">Related Posts</h2>
 <ul>
 <li>
 <a href="/2018/09/29/java-11-released/" title="Java 11 릴리즈!">Java 11 릴리즈!</a>
@@ -269,7 +284,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -330,7 +345,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -354,14 +369,6 @@ ga('send', 'pageview');
             
                 
                 <li>
-                    <a class="social-tooltip" title="twitter" href="https://twitter.com/hdhXD" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-twitter"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
                     <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
                         <i class="icon fa fa-rss"></i>
                     </a>
@@ -370,7 +377,7 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div>
+    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -432,7 +439,7 @@ ga('send', 'pageview');
                     <a href="/" class="logo"></a>
                 </h1>
                 <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2020 Eric Han</p>
+                <p>&copy; 2021 Eric Han</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
         </div>
@@ -459,18 +466,26 @@ ga('send', 'pageview');
 
 
     
-        <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+        
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
     
 
     
-        <script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-        <script src="/vendor/scrollLoading/main.js"></script>
+        
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+        
+<script src="/vendor/scrollLoading/main.js"></script>
+
     
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>
