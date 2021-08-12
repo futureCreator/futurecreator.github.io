@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2021/08/11/covid-19-vaccine-review-d-1/</loc>
+    
+    <lastmod>2021-08-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2016/06/17/google-search-how-to-work/</loc>
     
     <lastmod>2021-08-11</lastmod>
@@ -87,13 +94,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/2016/06/28/google-200-ranking-factors-korean-list/</loc>
-    
-    <lastmod>2021-08-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/2021/08/11/covid-19-vaccine-review-d-1/</loc>
     
     <lastmod>2021-08-11</lastmod>
     
@@ -746,7 +746,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/naver/</loc>
+    <loc>https://futurecreator.github.io/tags/google/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -754,6 +754,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/search/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/analytics/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/adsense/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/naver/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -768,20 +789,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/seo/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/google/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/adsense/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -803,13 +810,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/metatag/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/analytics/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -845,6 +845,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/velocity/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/evernote/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/postach/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/tag/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -887,27 +908,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/windows/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/evernote/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/postach/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/tag/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1369,20 +1369,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/hueman/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/font/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/emoji/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
@@ -1391,6 +1377,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/favicon/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/hueman/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/font/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
