@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2021/08/13/covid-19-vaccine-review-d-day/</loc>
+    
+    <lastmod>2021-08-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/about/index.html</loc>
     
     <lastmod>2021-08-12</lastmod>
@@ -865,13 +872,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/tag/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/mysql/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
@@ -914,6 +914,13 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/tag/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/github/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
@@ -928,20 +935,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/plugins/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/repository/</loc>
-    <lastmod>2021-08-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/basic/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
@@ -950,6 +943,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/usage/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/plugins/</loc>
+    <lastmod>2021-08-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/repository/</loc>
     <lastmod>2021-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
