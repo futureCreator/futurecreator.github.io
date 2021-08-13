@@ -1,5 +1,50 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>개발자를 위한 인프라 기초 총정리 | Eric Han's IT Blog</title><meta name="description" content="개발자를 위한 인프라 기초 총정리 - Eric Han"><meta name="viewport" content="width=device-width, initial-scale=1"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script><meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;display=swap" rel="stylesheet"><link rel="icon" href="/images/favicions/pancake.png"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="Eric Han's IT Blog"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
-</head><body><div class="wrap"><header><h1 class="branding"><a href="/" title="Eric Han's IT Blog"><img class="logo-image" src="/images/favicions/pancake.png" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link" href="/feed.xml" target="_self">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">개발자를 위한 인프라 기초 총정리</h1><div class="post-info">2018/11/09 #<a class="category-link" href="/categories/Cloud/">Cloud</a><span>37 min read</span></div><div class="post-content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다.</p>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>개발자를 위한 인프라 기초 총정리 | Eric Han's IT Blog</title><meta name="description" content="개발자를 위한 인프라 기초 총정리 - Eric Han"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="canonical" href="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/"><meta name="description" content="최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다. IT Infrastructure IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사">
+<meta property="og:type" content="article">
+<meta property="og:title" content="개발자를 위한 인프라 기초 총정리">
+<meta property="og:url" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/index.html">
+<meta property="og:site_name" content="Eric Han&#39;s IT Blog">
+<meta property="og:description" content="최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다. IT Infrastructure IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cloud.google.com/images/locations/regions.png">
+<meta property="og:image" content="https://cloud.google.com/images/solutions/manage-hybrid-cloud/diagrams/analytics-hybrid.svg">
+<meta property="og:image" content="https://kr.nvidia.com/content/tesla/images/cpu-and-gpu.jpg">
+<meta property="og:image" content="https://kr.nvidia.com/docs/IO/123756/how-gpu-acceleration-works.png">
+<meta property="og:image" content="https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/images/con-multi-AZ.png">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Chassis-Plans-Rack.jpg/220px-Chassis-Plans-Rack.jpg">
+<meta property="og:image" content="https://www.stemjar.com/wp-content/uploads/2017/12/OSI-vs-TCP-IP-model-What-is-the-difference-1280x640.jpg">
+<meta property="og:image" content="https://images.samsung.com/is/image/samsung/p5/sec/business/network/products/switch/img_iES4028G_Featured.jpg?$ORIGIN_JPG$">
+<meta property="og:image" content="https://www.home-network-help.com/images/routing-table.jpg">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/linux.JPG">
+<meta property="og:image" content="https://i.stack.imgur.com/N8zbe.png">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/db-engines-ranking.png">
+<meta property="og:image" content="https://d3ansictanv2wj.cloudfront.net/immutable_infrastructure-8346d81e892e98c1308f707a037f4040.gif">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/ci.png">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/waterfall.png">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/cd.png">
+<meta property="og:image" content="https://www.redhat.com/cms/managed-files/server-usage-500x131.png">
+<meta property="og:image" content="https://www.redhat.com/cms/managed-files/server-usage-for-virtualization-500x131.png">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/host-server-virtualization.png">
+<meta property="og:image" content="https://www.docker.com/sites/default/files/styles/content_6_6/public/compare/container-vm-whatcontainer_2.png?itok=0eNn5aap">
+<meta property="og:image" content="https://www.docker.com/sites/default/files/styles/content_6_6/public/compare/docker-containerized-appliction-blue-border_2.png?itok=lsxRQ9HU">
+<meta property="og:image" content="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/docker.png">
+<meta property="og:image" content="https://i2.wp.com/foxutech.com/wp-content/uploads/2017/05/How-to-Build-a-Docker-image-using-Jenkins.png?fit=1344%2C916&amp;ssl=1">
+<meta property="og:image" content="https://d33wubrfki0l68.cloudfront.net/1567471e7c58dc9b7d9c65dcd54e60cbf5870daa/dba14/ko/_common-resources/images/flower.png">
+<meta property="article:published_time" content="2018-11-08T15:36:39.000Z">
+<meta property="article:modified_time" content="2020-02-11T12:54:06.000Z">
+<meta property="article:author" content="Eric Han">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="basics">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="kubernetes">
+<meta property="article:tag" content="cloud">
+<meta property="article:tag" content="infrastructure">
+<meta property="article:tag" content="server">
+<meta property="article:tag" content="network">
+<meta property="article:tag" content="middleware">
+<meta property="article:tag" content="virtualization">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cloud.google.com/images/locations/regions.png"><meta name="twitter:title" content="개발자를 위한 인프라 기초 총정리 | Eric Han's IT Blog"><meta name="twitter:description" content="개발자를 위한 인프라 기초 총정리 - Eric Han"><meta name="twitter:domain" content="Eric Han's IT Blog"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script><meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;display=swap" rel="stylesheet"><link rel="icon" href="/images/favicions/pancake.png"><link rel="stylesheet" href="/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/atom.xml" title="Eric Han's IT Blog"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head><body><div class="wrap"><header><h1 class="branding"><a href="/" title="Eric Han's IT Blog"><img class="logo-image" src="/images/favicions/pancake.png" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link" href="/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link" href="/archives" target="_self">ARCHIVES</a></li><li class="nav-list-item"><a class="nav-list-link" href="/about" target="_self">ABOUT</a></li><li class="nav-list-item"><a class="nav-list-link" href="/feed.xml" target="_self">RSS</a></li></ul></header><div><a class="category-link" href="/categories/Cloud/">Cloud</a> / <a class="category-link" href="/categories/Hexo/">Hexo</a> / <a class="category-link" href="/categories/Programming/">Programming</a> / <a class="category-link" href="/categories/Reviews/">Reviews</a></div><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">개발자를 위한 인프라 기초 총정리</h1><div class="post-info">2018/11/09 #<a class="category-link" href="/categories/Cloud/">Cloud</a><span>37 min</span></div><div class="post-content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 클라우드 관련 부서로 옮겨 클라우드 관련 업무를 맡게 되었습니다. 그동안 개발은 했어도 인프라 지식은 많지 않은 상황에서 업무를 하다보니 어려운 부분이 있어 인프라 기초를 정리해봅니다.</p>
 <h2 id="IT-Infrastructure">IT Infrastructure</h2>
 <p>IT 인프라란 애플리케이션을 가동시키기 위해 필요한 하드웨어나 OS, 미들웨어, 네트워크 등 시스템의 기반을 말합니다. 시스템의 요구사항이라고 하면 먼저 해당 시스템이 어떤 기능을 하는지, 무엇을 할 수 있는지를 생각하게 됩니다. 이를 기능적인 요구사항(<em>functional requirement</em>)이라고 합니다. 이외에 시스템의 성능, 안정성, 확장성, 보안 등과 같은 요구사항을 비기능적인 요구사항(<em>non-functional requirement</em>)라고 합니다. 인프라는 이런 비기능적인 요구사항과 관련이 있습니다.</p>
 <h2 id="개발자가-왜-인프라를-알아야-할까">개발자가 왜 인프라를 알아야 할까?</h2>
