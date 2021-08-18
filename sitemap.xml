@@ -823,27 +823,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/opengraph/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/social/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/metatag/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/spring/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -879,6 +858,34 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/opengraph/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/social/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/metatag/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/tag/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/evernote/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -887,13 +894,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/postach/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/tag/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -942,20 +942,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/github/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/namecard/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/basic/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -964,6 +950,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/usage/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/github/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/namecard/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1740,41 +1740,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/msa/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/microservices/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/architecture/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/api-gateway/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/api/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/versioning/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -1818,6 +1783,41 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/release/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/msa/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/microservices/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/architecture/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/api-gateway/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/api/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
