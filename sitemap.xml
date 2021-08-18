@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://futurecreator.github.io/2021/08/17/covid-19-vaccine-review-d-plus-2-and-d-plus-3/</loc>
+    <loc>https://futurecreator.github.io/2021/08/19/covid-19-vaccine-review-d-plus-6/</loc>
     
     <lastmod>2021-08-18</lastmod>
     
@@ -11,21 +11,28 @@
   <url>
     <loc>https://futurecreator.github.io/2021/08/14/covid-19-vaccine-review-d-plus-1/</loc>
     
-    <lastmod>2021-08-16</lastmod>
+    <lastmod>2021-08-18</lastmod>
     
   </url>
   
   <url>
     <loc>https://futurecreator.github.io/2021/08/13/covid-19-vaccine-review-d-day/</loc>
     
-    <lastmod>2021-08-16</lastmod>
+    <lastmod>2021-08-18</lastmod>
     
   </url>
   
   <url>
     <loc>https://futurecreator.github.io/2021/08/11/covid-19-vaccine-review-d-1/</loc>
     
-    <lastmod>2021-08-16</lastmod>
+    <lastmod>2021-08-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/2021/08/17/covid-19-vaccine-review-d-plus-2-and-d-plus-3/</loc>
+    
+    <lastmod>2021-08-18</lastmod>
     
   </url>
   
@@ -837,20 +844,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/googlebot/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/pagerank/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/spring/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -866,6 +859,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/velocity/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/googlebot/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/pagerank/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1040,6 +1047,20 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/variable/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/datatype/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/javascript/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -1097,20 +1118,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/version/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/variable/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/datatype/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1733,6 +1740,41 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/msa/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/microservices/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/architecture/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/api-gateway/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/api/</loc>
+    <lastmod>2021-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/versioning/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
@@ -1776,41 +1818,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/release/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/msa/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/microservices/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/architecture/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/api-gateway/</loc>
-    <lastmod>2021-08-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/api/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2379,14 +2386,14 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Programming/Column/</loc>
+    <loc>https://futurecreator.github.io/categories/Programming/Web/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Programming/Web/</loc>
+    <loc>https://futurecreator.github.io/categories/Programming/Column/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2400,14 +2407,14 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Programming/JavaScript/</loc>
+    <loc>https://futurecreator.github.io/categories/Programming/Java/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Programming/Java/</loc>
+    <loc>https://futurecreator.github.io/categories/Programming/JavaScript/</loc>
     <lastmod>2021-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
