@@ -114,7 +114,7 @@ ga('send', 'pageview');
                                             </a>
                                         </li>
                                         
-                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/">investment</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/">동적자산배분</a></li></ul></li></ul>
                                     
                                         <li class="main-nav-list-item">
                                             <a class="main-nav-list-link" href="/about">
@@ -191,30 +191,31 @@ ga('send', 'pageview');
                             <article id="post-hexo-change-font-face-no-cdn" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        <header class="article-header">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
         일반 폰트를 웹에 적용하기
         </h1>
     
 
-        </header>
-        
-        <div class="article-subtitle">
-            🗓
-            <a href="/2018/07/07/hexo-change-font-face-no-cdn/" class="article-date">
+            </header>
+            
+                <div class="article-subtitle">
+                    🗓
+                    <a href="/2018/07/07/hexo-change-font-face-no-cdn/" class="article-date">
     <time datetime="2018-07-07T13:19:02.000Z" itemprop="datePublished">2018/07/07</time>
 </a>
-            <!-- 
+                        <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/font/" rel="tag">font</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webfont/" rel="tag">webfont</a></li></ul>
  -->
-            <span class="reading-time">⏱ 소요시간
-                15 분</span>
-        </div>
+                        <span class="reading-time">⏱ 소요시간
+                            15 분
+                        </span>
+                </div>
 
-        <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 <a href="http://futurecreator.github.io/2018/06/12/hexo-change-font-on-hueman-theme/">포스트</a>에서 Hexo 내 폰트를 CDN 을 이용해 변경했습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://fonts.google.com/">구글 폰트</a>에서 제공하는 폰트 url 만 있으면 블로그 <code>&lt;header&gt;</code> 에 바로 포함시켜 쉽게 변경할 수 있습니다. 하지만 내가 사용하고자 하는 폰트가 없다면 어떻게 할까요?</p>
+                <div class="article-entry" itemprop="articleBody">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 <a href="http://futurecreator.github.io/2018/06/12/hexo-change-font-on-hueman-theme/">포스트</a>에서 Hexo 내 폰트를 CDN 을 이용해 변경했습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://fonts.google.com/">구글 폰트</a>에서 제공하는 폰트 url 만 있으면 블로그 <code>&lt;header&gt;</code> 에 바로 포함시켜 쉽게 변경할 수 있습니다. 하지만 내가 사용하고자 하는 폰트가 없다면 어떻게 할까요?</p>
 <p>이번 포스팅에서는 웹에서 사용하는 폰트에 대해 자세히 알아보고 무료 폰트인 '미생체’를 이용해서 CDN 없이 블로그의 폰트를 적용해보겠습니다.</p>
 <h2 id="웹-폰트">웹 폰트</h2>
 <p>우리가 일반적으로 사용하는 폰트는 글자수가 굉장히 많습니다. 한글은 영어나 숫자와는 다르게 자음과 모음을 조합해서 글자를 만들기 때문입니다. 한글로 표현할 수 있는 글자 수는 11,172자나 되며 이 중 자주 사용하는 글자만 추려봐도 2,350자나 됩니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="현대 한글은 낱자를 엮어 11,172(첫소리 19 × 가운뎃소리 21 × (끝소리 27 + 끝소리 없음 1))글자 마디를 쓸 수 있다. 11,172자 중 399자는 무받침 글자이며 10,773자는 받침 글자이다. 사용 빈도는 KS X 1001 완성형 한글 코드에 선별된 2,350글자가 상위 99.9%로 알려져 있다.
@@ -309,21 +310,22 @@ ga('send', 'pageview');
 <p>무료로 제공되는 웹 폰트의 경우에는 크게 상관없지만, 일반적으로 사용하는 폰트들, 그 중에서도 상용 폰트의 경우 저작권에 유의해야 합니다. 상용 폰트를 돈 주고 샀다고 해서 모든 범위에 사용할 수 있는 것이 아니기 때문에 사용 가능 범위를 미리 확인해봐야 합니다.</p>
 <p>처음에는 간단하게 작성하려 했는데 내용이 많아져 글이 길어졌네요. 이번 포스팅에서는 웹 폰트에 대해 자세히 알아보고 폰트를 직접 서버에 올려 적용해봤습니다. 감사합니다.</p>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">현대 한글은 낱자를 엮어 11,172(첫소리 19 × 가운뎃소리 21 × (끝소리 27 + 끝소리 없음 1))글자 마디를 쓸 수 있다. 11,172자 중 399자는 무받침 글자이며 10,773자는 받침 글자이다. 사용 빈도는 KS X 1001 완성형 한글 코드에 선별된 2,350글자가 상위 99.9%로 알려져 있다.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%84%B8%EB%A6%AC%ED%94%84">세리프</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.lifewire.com/web-safe-fonts-3467430">Web Safe Fonts</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://fileinfo.com/filetypes/font">Font Files</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ko">웹 글꼴 최적화</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li></ol></div></div>
-        </div>
+                </div>
 
-        <div id="bmc" align="center">
-            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
-        </div>
+                <!-- <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg"
+                    alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div> -->
 
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-        <footer class="article-footer">
-            
+                    <footer class="article-footer">
+                        
 
 
     <div class="a2a_kit a2a_default_style">
@@ -380,7 +382,7 @@ ga('send', 'pageview');
 </style>
 
 
-        </footer>
+                    </footer>
     </div>
 </article>
 
@@ -453,7 +455,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 

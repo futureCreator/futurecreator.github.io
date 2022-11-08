@@ -116,7 +116,7 @@ ga('send', 'pageview');
                                             </a>
                                         </li>
                                         
-                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/">investment</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/">동적자산배분</a></li></ul></li></ul>
                                     
                                         <li class="main-nav-list-item">
                                             <a class="main-nav-list-link" href="/about">
@@ -193,30 +193,31 @@ ga('send', 'pageview');
                             <article id="post-what-is-microservices-architecture" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
-        <header class="article-header">
-            
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
         마이크로서비스 Microservices (1) 아키텍처 소개
         </h1>
     
 
-        </header>
-        
-        <div class="article-subtitle">
-            🗓
-            <a href="/2018/09/14/what-is-microservices-architecture/" class="article-date">
+            </header>
+            
+                <div class="article-subtitle">
+                    🗓
+                    <a href="/2018/09/14/what-is-microservices-architecture/" class="article-date">
     <time datetime="2018-09-14T13:42:06.000Z" itemprop="datePublished">2018/09/14</time>
 </a>
-            <!-- 
+                        <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/architecture/" rel="tag">architecture</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/introduction/" rel="tag">introduction</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microservices/" rel="tag">microservices</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/monolith/" rel="tag">monolith</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/msa/" rel="tag">msa</a></li></ul>
  -->
-            <span class="reading-time">⏱ 소요시간
-                12 분</span>
-        </div>
+                        <span class="reading-time">⏱ 소요시간
+                            12 분
+                        </span>
+                </div>
 
-        <div class="article-entry" itemprop="articleBody">
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>주변에서 마이크로서비스 아키텍처(<em>Microservices architecture; MSA</em>)에 대한 이야기가 많이 들려옵니다. 마이크로서비스가 모든 것을 해결해줄 것처럼 이야기하는 사람이 있는가하면, 서비스 지향 아키텍처(<em>Service-oriented architecture;SOA</em>)랑 다를 게 없는 마케팅 용어에 불과하다고 폄하하는 사람들도 있습니다.</p>
+                <div class="article-entry" itemprop="articleBody">
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>주변에서 마이크로서비스 아키텍처(<em>Microservices architecture; MSA</em>)에 대한 이야기가 많이 들려옵니다. 마이크로서비스가 모든 것을 해결해줄 것처럼 이야기하는 사람이 있는가하면, 서비스 지향 아키텍처(<em>Service-oriented architecture;SOA</em>)랑 다를 게 없는 마케팅 용어에 불과하다고 폄하하는 사람들도 있습니다.</p>
 <p>마이크로서비스 역시 장단점이 있는 하나의 기술일 뿐입니다. 마이크로서비스를 사용하면 서비스를 잘게 분리함으로써 애자일한 개발 환경과 점점 더 복잡해지는 애플리케이션에서 분명한 이점이 있습니다. 동시에, 서비스를 분리하면서 생기는 단점도 존재합니다.</p>
 <h2 id="모놀리식-아키텍처">모놀리식 아키텍처</h2>
 <p>카카오택시에 대항할 새로운 택시 앱을 만든다고 해봅시다. 필요한 요구사항에서 기능을 뽑아낸 후 다음과 같이 육각형 아키텍처(<em>Hexagonal architecture</em>)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="애플리케이션을 레이어로 나누는 대신 인사이드와 아웃사이드로 나누는 아키텍처 패턴. https://dzone.com/articles/hexagonal-architecture-is-powerful 참고
@@ -327,21 +328,22 @@ ga('send', 'pageview');
 </li>
 </ul>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">애플리케이션을 레이어로 나누는 대신 인사이드와 아웃사이드로 나누는 아키텍처 패턴. https://dzone.com/articles/hexagonal-architecture-is-powerful 참고<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">분산 환경에서 각 서비스(노드)가 클라우드에서 동적으로 할당되어 배포되기 때문에, 각 서비스 찾는 기능이 필요하다. 이를 서비스 디스커버리라고 함.<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
-        </div>
+                </div>
 
-        <div id="bmc" align="center">
-            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator" rel="external nofollow noopener noreferrer"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
-        </div>
+                <!-- <div id="bmc" align="center">
+            <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg"
+                    alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+        </div> -->
 
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-        <footer class="article-footer">
-            
+                    <footer class="article-footer">
+                        
 
 
     <div class="a2a_kit a2a_default_style">
@@ -398,7 +400,7 @@ ga('send', 'pageview');
 </style>
 
 
-        </footer>
+                    </footer>
     </div>
 </article>
 
@@ -471,7 +473,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
