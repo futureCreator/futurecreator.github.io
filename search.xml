@@ -13,7 +13,7 @@
       
       <categories>
           
-          <category> Investment </category>
+          <category> Investing </category>
           
           <category> 퀀트 </category>
           
@@ -568,7 +568,7 @@
       
       <categories>
           
-          <category> Investment </category>
+          <category> Investing </category>
           
           <category> 시스템 트레이딩 </category>
           
@@ -597,7 +597,7 @@
       
       <categories>
           
-          <category> Investment </category>
+          <category> Investing </category>
           
           <category> 동적자산배분 </category>
           
@@ -2469,9 +2469,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
             
             <tag> plugin </tag>
             
@@ -3186,13 +3186,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> web </tag>
             
-            <tag> blog </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
@@ -3519,9 +3519,9 @@
       
         <tags>
             
-            <tag> blog </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> blog </tag>
             
             <tag> evernote </tag>
             
@@ -3800,13 +3800,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> web </tag>
             
-            <tag> blog </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       

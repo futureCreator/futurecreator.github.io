@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2022-11-10T12:32:46.988Z</updated>
+  <updated>2022-11-10T12:45:56.491Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://futurecreator.github.io/2022/11/10/%EB%AC%B4%EB%A3%8C-%ED%80%80%ED%8A%B8-%EC%9E%90%EB%A3%8C-%EC%A0%84%EC%9E%90%EC%B1%85-PDF-%EA%B3%B5%EC%9C%A0/"/>
     <id>https://futurecreator.github.io/2022/11/10/%EB%AC%B4%EB%A3%8C-%ED%80%80%ED%8A%B8-%EC%9E%90%EB%A3%8C-%EC%A0%84%EC%9E%90%EC%B1%85-PDF-%EA%B3%B5%EC%9C%A0/</id>
     <published>2022-11-10T12:27:55.000Z</published>
-    <updated>2022-11-10T12:32:46.988Z</updated>
+    <updated>2022-11-10T12:45:56.491Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>나를 퀀트 투자에 입문하게 해준 <a href="https://www.youtube.com/channel/UCSWPuzlD337Y6VBkyFPwT8g">할투</a> 강환국 님과 <a href="https://stock79.tistory.com/">systrader79</a> 님의 자료를 검색하다가 대박 자료를 하나 찾았습니다.</p><p><img src="manual.png" alt="실전 퀀트 매뉴얼"></p><p>두 분의 유튜브와 블로그에는 투자 자료가 참 방대하다보니, 필요한 내용을 찾아보는데 꽤 어렵습니다. 이걸 정리 및 요약해서 PDF 전자책으로 받을 수 있다고 합니다.</p><p>총 3개입니다. 자세한 내용은 아래 링크를 참고하세요.</p><ul><li><a href="https://cafe.naver.com/invest79/12917">강환국 &amp; systrader79 퀀트 자료 collection vol.1.pdf 전자책 공유합니다 (56개 chapter, 333 페이지)</a></li><li><a href="https://cafe.naver.com/invest79/12999">강환국 &amp; systrader79 퀀트 자료 collection vol.2.pdf 전자책 공유합니다 (108개 chapter, 489 페이지)</a></li><li><a href="https://cafe.naver.com/invest79/14228">강환국 &amp; systrader79 퀀트 자료 collection vol.3.pdf + systrader79 전자책 공유합니다 (100개 chapter, 991 페이지)</a></li></ul>]]></content>
     
@@ -33,9 +33,9 @@
     
     
     
-    <category term="Investment" scheme="https://futurecreator.github.io/categories/Investment/"/>
+    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
     
-    <category term="퀀트" scheme="https://futurecreator.github.io/categories/Investment/%ED%80%80%ED%8A%B8/"/>
+    <category term="퀀트" scheme="https://futurecreator.github.io/categories/Investing/%ED%80%80%ED%8A%B8/"/>
     
     
     <category term="퀀트" scheme="https://futurecreator.github.io/tags/%ED%80%80%ED%8A%B8/"/>
@@ -561,7 +561,7 @@
     <link href="https://futurecreator.github.io/2022/11/10/why-learn-pine-script-v5/"/>
     <id>https://futurecreator.github.io/2022/11/10/why-learn-pine-script-v5/</id>
     <published>2022-11-10T10:54:40.000Z</published>
-    <updated>2022-11-10T11:36:25.945Z</updated>
+    <updated>2022-11-10T12:46:08.644Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근에 파이썬으로 변동성 돌파 전략을 응용한 자동 매매 봇을 만들었습니다. 업비트 API로 웹소켓을 연결하고 실시간 데이터를 받고 정해진 전략에 따라 매매하는 구조입니다. 테스트겸 며칠 돌렸는데 요즘 장이 안좋아서 큰 재미는 보지 못했습니다. 파이썬은 몇번 쓱 보긴 했지만 개발에는 처음 사용해봤는데, 참 쉬우면서도 재미있는 언어였습니다. 덕분에 오랜만에 즐겁게 개발했네요.</p><p>문제는 백테스트(Backtest)였습니다. 백테스트는 과거 가격 데이터를 이용해서 현재 로직을 검증해보는 것을 말합니다. 지금도 변동성 돌파를 기반으로 한 전략들이 잘 먹힐지, 최근의 하락장에서는 어떤 모습을 보일지 직접 테스트해보고 싶은데 생각보다 쉽지 않았습니다. 과거 데이터를 받아다가 돌려봐야하는데, 전략을 계속 수정하고 로직이 복잡해지다보니까 이게 생각보다 어렵더군요. 공수도 많이 들구요.</p><p>그러던 차에 좋은 툴을 발견했습니다. 투자를 해보신 분들이라면 <a href="https://kr.tradingview.com/">트레이딩뷰(TradingView)</a>에 대해서 들어보셨을 겁니다. 실제로 많은 분들이 사용하고 계신 차트 서비스인데요. 예전에 처음 접했을 때는 그냥 차트에 그림 그리고 관점 공유하는 서비스 정도로만 생각했는데, 그게 아니었네요. 차트를 대고 스크립트를 짜서 직접 돌려볼 수 있는 엄청난 기능이 있었습니다.</p><p><img src="tradingview.png" alt="트레이딩뷰 차트와 백테스트 화면"></p><p>이때 사용하는 언어가 파인 스크립트(Pine Script)입니다. RSI, MACD, BB 같이 사용자가 직접 코딩해서 나만의 지표(indicator)를 그려볼 수 있고, 더 나아가 언제 매수하고 매도할지 전략(strategy)을 짜서 수익이 얼마나 나올지 백테스트까지 할 수 있었습니다. 여기에 알림을 발생시켜서 웹훅으로 쏠 수도 있다니, 왜 이걸 이제야 알았는지 아쉬울 정도입니다.</p><p>트레이딩뷰에서 API 문서를 보면서 익히고 변동성 돌파, 동적자산배분 등을 직접 테스트해봤습니다. 여러가지 아이디어들을 바로바로 코드와 기간을 수정하면서 테스트할 수 있다는게 놀라웠습니다. 진입 지점을 캐치해서 알림을 생성하고, 웹훅을 쏴서 텔레그램을 통해 시그널을 보내거나, 별도로 웹훅 서버를 만들어서 자동매매봇을 만들 수도 있습니다. 이 과정을 파이썬으로 전부 짜는 방법과는 일장일단이 있을 것 같네요.</p><p>무엇보다 파인스크립트는 쉽고 심플한 언어입니다. 다만 처음에 시작할 때 차트와 함께 쓴다는 점 때문에 알아야할 것들이 좀 있는데, 찾아보니 한글로 된 자료는 그렇게 많지 않았습니다. 그래서 블로그에 파인 스크립트와 전략 만들기에 대한 내용을 연재해보려고 합니다.</p><p>코딩을 할 줄 알면서 나만의 전략을 만들고 싶은 분들이나, 아이디어는 있는데 코드로 구현하고 싶으신 분들 등 수요는 분명히 있을 것 같습니다. 간단한 도구이기 때문에 코딩 왕초보 분들도 가능하실 것 같고, 오히려 차트에 대한 지식과 아이디어, 투자 경험 등이 파인 스크립트를 활용해서 돈을 벌기에 더 중요할 것 같습니다.</p>]]></content>
     
@@ -573,9 +573,9 @@
     
     
     
-    <category term="Investment" scheme="https://futurecreator.github.io/categories/Investment/"/>
+    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
     
-    <category term="시스템 트레이딩" scheme="https://futurecreator.github.io/categories/Investment/%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%94%A9/"/>
+    <category term="시스템 트레이딩" scheme="https://futurecreator.github.io/categories/Investing/%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%94%A9/"/>
     
     
     <category term="pinescript" scheme="https://futurecreator.github.io/tags/pinescript/"/>
@@ -589,7 +589,7 @@
     <link href="https://futurecreator.github.io/2022/11/09/dynamic-asset-allocation-11-2022/"/>
     <id>https://futurecreator.github.io/2022/11/09/dynamic-asset-allocation-11-2022/</id>
     <published>2022-11-08T19:28:26.000Z</published>
-    <updated>2022-11-10T11:36:31.264Z</updated>
+    <updated>2022-11-10T12:45:51.473Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>현재 할투를 보고 공부해서 미국 시장은 BAA-G4, 변형 듀얼 모멘텀, 채권 동적자산배분 총 3가지 전략을 사용 중이다. BAA 중에서는 가장 공격적이면서도 빠르게 수비로 전환할 수 있는 BAA-G4, 공격력이 뛰어나고 좀 더 느리게 반응하는 듀얼 모멘텀, 그리고 수비적인 채권 동적자산배분까지 균형있게 짜인 혼합 포트폴리오다. 10월에는 세 가지 전략 모두 100% 현금 비중이었기 때문에 손실을 최소화할 수 있었다.</p><p>'변형 듀얼 모멘텀’은 할투의 강환국 님이 만든 전략이다. 최근 주식과 채권이 동반 하락하면서 안전 자산에 현금 대신 채권만 있는 경우 상당한 손실이 발생했다. 이에 듀얼 모멘텀 전략에서 안전 자산 부분을 채권동적자산 배분처럼 변경한 것이 변형 듀얼 모멘텀이다.</p><p>참고로 채권동적자산 배분은 SHY, IEF, TLT, TIP, LQD, HYG, BWX, EMB까지 총 8개의 다양한 채권 ETF 중에서 최근 6개월 수익이 가장 좋은 3개의 채권에 분산하는 것이다. 수익이 마이너스일 경우에는 현금 비중으로 대체한다.</p><p>내가 프로그래밍한 DAA 계산기로 11월 전략을 계산해봤다.</p><h2 id="BAA-G4-BAA-Aggressive">BAA-G4 (BAA-Aggressive)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 BAA-Aggressive</span><br><span class="line">-----------------------</span><br><span class="line">CANARY MOMENTUM SCORE</span><br><span class="line">-----------------------</span><br><span class="line">VOO:    0.540389</span><br><span class="line">VEA:    -0.113707</span><br><span class="line">VWO:    -1.316195</span><br><span class="line">BND:    -0.745369</span><br><span class="line">-----------------------</span><br><span class="line">Defensive SMA(12) SCORE</span><br><span class="line">-----------------------</span><br><span class="line">IEF:    -0.099648</span><br><span class="line">TLT:    -0.219619</span><br><span class="line">LQD:    -0.121938</span><br><span class="line">TIP:    -0.070549</span><br><span class="line">BND:    -0.087875</span><br><span class="line">DBC:    0.016867</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">DBC:    33.3%</span><br><span class="line">BIL:    66.7%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure><p>현금 비중에 100% 였다가 이번에 DBC가 33% 들어왔다. 카나리아 스코어를 보면 장이 여전히 좋지 않은 상황이다. 원자재를 빼고는 주식과 채권 모두 박살.</p><h2 id="변형-듀얼-모멘텀">변형 듀얼 모멘텀</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 Upgraded Dual Momentum</span><br><span class="line">-----------------------</span><br><span class="line">VOO:    -14.607146%</span><br><span class="line">VEA:    -23.498982%</span><br><span class="line">-----------------------</span><br><span class="line">SHY:    -1.804721%</span><br><span class="line">IEF:    -7.374048%</span><br><span class="line">TLT:    -18.656585%</span><br><span class="line">TIP:    -7.319098%</span><br><span class="line">LQD:    -8.661315%</span><br><span class="line">HYG:    -4.115194%</span><br><span class="line">BWX:    -13.370382%</span><br><span class="line">EMB:    -11.121391%</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">BIL:    100.0%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure><p>변형 듀얼 모멘텀은 수비 포지션이며 채권이 모두 박살이기 때문에 100% 현금 보유다.</p><h2 id="채권-동적자산배분">채권 동적자산배분</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 Bond DAA</span><br><span class="line">-----------------------</span><br><span class="line">SHY:    -1.804712%</span><br><span class="line">IEF:    -7.374047%</span><br><span class="line">TLT:    -18.656585%</span><br><span class="line">TIP:    -7.319104%</span><br><span class="line">LQD:    -8.661309%</span><br><span class="line">HYG:    -4.115184%</span><br><span class="line">BWX:    -13.370390%</span><br><span class="line">EMB:    -11.121383%</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">BIL:    100.0%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure><p>변형 듀얼 모멘텀의 안전 자산 부분과 동일. 100% 현금 보유다.</p><p>예전 같았으면 떨어질 때 줍줍한다 하면서 분할 매수 들어가고 떨어진 주식에 열심히 물타고 있었을 것 같다. 하지만 바닥이 어디인지는 아무도 모른다. 이제는 지표를 보고 들어가니까 고민할 필요도 마음 고생할 필요도 없다.</p><p>확실히 상승 추세가 나타나면 그때 들어가도 전혀 늦지 않다. 추세가 바뀌기 전까지 열심히 공부하면서 원화 채굴이나 하자.</p><h2 id="참고">참고</h2><ul><li><a href="https://www.youtube.com/watch?v=VV_tCjJFUeI">할투 변형 듀얼모멘텀 영상</a></li></ul>]]></content>
     
@@ -601,9 +601,9 @@
     
     
     
-    <category term="Investment" scheme="https://futurecreator.github.io/categories/Investment/"/>
+    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
     
-    <category term="동적자산배분" scheme="https://futurecreator.github.io/categories/Investment/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
+    <category term="동적자산배분" scheme="https://futurecreator.github.io/categories/Investing/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
     
     
     <category term="동적자산배분" scheme="https://futurecreator.github.io/tags/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
