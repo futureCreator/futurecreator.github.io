@@ -110,7 +110,7 @@ ga('send', 'pageview');
                                             </a>
                                         </li>
                                         
-                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/">investment</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/">동적자산배분</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/investment/%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%94%A9/">시스템 트레이딩</a></li></ul></li></ul>
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/">Book</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Book/2022/">2022</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Investment/">Investment</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Investment/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/">동적자산배분</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Investment/%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%94%A9/">시스템 트레이딩</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
                                     
                                         <li class="main-nav-list-item">
                                             <a class="main-nav-list-link" href="/about">
@@ -207,6 +207,298 @@ ga('send', 'pageview');
         
         <div class="article-meta">
             <p class="category">
+            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Web/">Web</a>
+            </p>
+            <p class="date"><time datetime="2018-08-01T11:45:09.000Z" itemprop="datePublished">2018/08/01</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/08/01/installation-mysql-5-7-binary-tar-gz/">변경된 MySQL 설치 방법 (5.7 이상)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            요즘 ansible 로 MySQL 프로비저닝 스크립트를 짜고 있습니다. 기존 작성되어 있던 MariaDB 스크립트를 참고해서 작성 중인데 MySQL 에서는 동작하지 않는 부분이 좀 있었습니다. 아무래도 둘이 비슷하다고는 해도 각자 버전 업이 계속 되면서 차이점이 생긴 것 같습니다. 이번 포스팅에서는 Unix/Linux  시스템에 바이너리 파일을 이용해서 설
+        </p>
+    </div>
+</article>
+                                                            
+                                                    
+        
+            
+                                        
+                                            
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
+            </p>
+            <p class="date"><time datetime="2018-07-20T08:04:45.000Z" itemprop="datePublished">2018/07/20</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/20/java-lambda-type-inference-functional-interface/">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            타입 추론 Type Inference
+타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하지 않기 때문에 자바에서의 타입 추론은 제네릭과 람다에 대한 타입 추론을 말합니다.
+12345// 일반 변수에 대해 타입 추론을 지원하는 스칼라는 타입 생략 가능var name = &quot;
+        </p>
+    </div>
+</article>
+                                                            
+                                                </div>
+                                                
+                                                    
+        
+            
+                                        
+                                            
+                                                <div class="article-row">
+                                                    
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
+            </p>
+            <p class="date"><time datetime="2018-07-19T15:39:23.000Z" itemprop="datePublished">2018/07/20</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/20/what-are-the-best-markdown-editor/">최고의 마크다운 에디터는? (macOS/Windows)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            제가 블로그 초창기에 쓴 Atom 을 마크다운 에디터로 사용하기 포스트에 꾸준하게 많은 분들이 들어오셨습니다. 그만큼 쓸만한 마크다운 에디터를 찾으시는 분들이 많은 것 같습니다. 2년이 지난 지금, 제가 사용해 본 에디터들의 장단점을 소개해드리겠습니다.
+마크다운 에디터들이 제공하는 핵심 기능은 비슷하고 자잘한 추가 기능이 많기 때문에 모두 다루지 않고, 장
+        </p>
+    </div>
+</article>
+                                                            
+                                                    
+        
+            
+                                        
+                                            
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
+            </p>
+            <p class="date"><time datetime="2018-07-19T11:36:31.000Z" itemprop="datePublished">2018/07/19</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/19/java-lambda-basics/">Java Lambda (1) 기본</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            이번 포스트부터 Java 8 에서 새로 도입된 람다(Lambda)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다.
+Lambda
+람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대
+        </p>
+    </div>
+</article>
+                                                            
+                                                </div>
+                                                
+                                                    
+        
+            
+                                        
+                                            
+                                                <div class="article-row">
+                                                    
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Cloud/">Cloud</a>
+            </p>
+            <p class="date"><time datetime="2018-07-18T13:45:54.000Z" itemprop="datePublished">2018/07/18</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/18/aws-certified-developer-associate-sample-exam-questions/">AWS 개발자 자격증 샘플 문항 (번역/해설)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            문제 1
+CloudFormation 을 이용해 us-east-1 에서 2티어 웹 애플리케이션을 실행한다. us-west-1 에서 개발 스택을 생성하려고 하면 프로세스가 실패한다. 무엇이 문제일까?
+A. 템플릿에서 참조하는 AMI 가 us-west-1 에서 사용 불가.
+B. 템플릿에서 참조하는 IAM 역할이 us-west-1 에서 유효하지 않음.
+C. 두 개
+        </p>
+    </div>
+</article>
+                                                            
+                                                    
+        
+            
+                                        
+                                            
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+            </p>
+            <p class="date"><time datetime="2018-07-18T13:33:11.000Z" itemprop="datePublished">2018/07/18</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/18/hexo-blog-backup/">Hexo 배포 원리와 백업하기</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.
+
+컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. GitHub 에 올려놨으니 다시 받으면 살릴 수 있을까요?
+
+저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 GitHub 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중
+        </p>
+    </div>
+</article>
+                                                            
+                                                </div>
+                                                
+                                                    
+        
+            
+                                        
+                                            
+                                                <div class="article-row">
+                                                    
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Cloud/">Cloud</a>
+            </p>
+            <p class="date"><time datetime="2018-07-12T15:56:48.000Z" itemprop="datePublished">2018/07/13</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/13/aws-well-architected-framework/">AWS Well-Architected Framework 백서 (번역/요약)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018/06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.
+마지막 업데이트 : 2018/07/12
+
+목차
+
+소개
+
+정의
+아키텍쳐에 관하여
+일반적인 디자인 원칙들
+
+
+잘 설계된 프레임워크의 5가지 요소
+
+운영 우수성
+보안
+신뢰
+        </p>
+    </div>
+</article>
+                                                            
+                                                    
+        
+            
+                                        
+                                            
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Cloud/">Cloud</a>
+            </p>
+            <p class="date"><time datetime="2018-07-12T15:51:43.000Z" itemprop="datePublished">2018/07/13</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/13/aws-security-best-practies/">AWS 보안 모범 사례 백서 (번역/요약)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            이 포스트는 AWS 자격증 스터디에서 AWS Security Best Practies 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.
+마지막 업데이트 : 2018/07/12
+
+AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할
+        </p>
+    </div>
+</article>
+                                                            
+                                                </div>
+                                                
+                                                    
+        
+            
+                                        
+                                            
+                                                <div class="article-row">
+                                                    
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
+            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+            </p>
+            <p class="date"><time datetime="2018-07-12T15:16:54.000Z" itemprop="datePublished">2018/07/13</time></p>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2018/07/13/hexo-https-github-pages/">Hexo HTTPS 적용하기(Github Pages)</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            지난 포스트에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.
+Hexo 블로그는 generate 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 GitHub 
+        </p>
+    </div>
+</article>
+                                                            
+                                                    
+        
+            
+                                        
+                                            
+                                                        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <p class="category">
             <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
             </p>
             <p class="date"><time datetime="2018-07-12T14:59:12.000Z" itemprop="datePublished">2018/07/12</time></p>
@@ -226,278 +518,6 @@ HTTP(Hypertext Transfer Protocol) 은 HTML 을 주고받을 때 서로 지키기
     </div>
 </article>
                                                             
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-07-07T13:19:02.000Z" itemprop="datePublished">2018/07/07</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/07/hexo-change-font-face-no-cdn/">일반 폰트를 웹에 적용하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            이전 포스트에서 Hexo 내 폰트를 CDN 을 이용해 변경했습니다. 구글 폰트에서 제공하는 폰트 url 만 있으면 블로그 &lt;header&gt; 에 바로 포함시켜 쉽게 변경할 수 있습니다. 하지만 내가 사용하고자 하는 폰트가 없다면 어떻게 할까요?
-이번 포스팅에서는 웹에서 사용하는 폰트에 대해 자세히 알아보고 무료 폰트인 '미생체’를 이용해서 CDN 없
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-07-07T09:53:06.000Z" itemprop="datePublished">2018/07/07</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/07/buy-me-a-coffee/">콘텐츠 제작자 후원의 새로운 방법 (BMC)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            종종 외국의 프리웨어 프로그램을 사용하다보면, '마음에 들면 커피 한 잔 사줘’라는 메시지를 종종 보곤 합니다. 아무래도 개발자들이 커피를 달고 사는 직업이다 보니, 후원 메시지를 커피 한 잔 사달라고 표현한 것입니다. 오픈소스 SW 라이선스 종류 중에는 '맘대로 쓰고 맥주 한잔 사줘라’라는 뜻의 Beerware 도 있죠.
-커피 한 잔 사주세요
-이런 문화를
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Cloud/">Cloud</a>
-            </p>
-            <p class="date"><time datetime="2018-07-04T14:25:12.000Z" itemprop="datePublished">2018/07/04</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/04/aws-certified/">AWS 자격증 준비하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            개발자들 사이에서 서버리스 아키텍쳐에 대해 이야기가 많이 나오면서 서버리스 컴퓨팅을 손쉽게 제공하는 AWS에도 관심이 많습니다. 저도 서버리스가 궁금해서 AWS에 가입을 하고 공부를 해봤습니다. 처음에는 새로운 개념도 많고 서비스도 많아서 복잡해보였는데 알면 알수록 재밌습니다. 사용자가 다양한 옵션을 간편하게 설정할 수 있고, 입문자가 쉽게 적응할 수 있도
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-06-29T15:49:48.000Z" itemprop="datePublished">2018/06/30</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/30/easy-diagram-plantuml-hexo-plugin/">쉽고 빠른 UML 그리기 (PlantUML)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다.
-개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 PlantUML 이라는 툴을 찾았습니다. 이번 포스팅에서는
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2018-06-20T13:12:04.000Z" itemprop="datePublished">2018/06/20</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/20/hexo-twitter-plugin/">Hexo 트위터 연동 플러그인</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            저는 SNS를 많이 하지 않습니다. 사진을 잘 찍지 않으니 인스타도 안하고, 할 이야기가 있으면 페북 대신 블로그나 미디엄을 이용합니다. 그나마 하는 것이 트위터입니다. 가끔은 뉴스보다 더 빠르게 소식이 올라오기도 하고, 짧고 재미있는 읽을 거리가 많아서 종종 들어갑니다.
-트위터는 정적인 블로그와 달리 콘텐츠의 전파 및 소비의 속도가 굉장히 빠릅니다. 그래
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2018-06-18T13:47:22.000Z" itemprop="datePublished">2018/06/18</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/18/hexo-symbols-count-reading-time-plugin/">Hexo 글자 수와 리딩 타임 추가하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            블로그 서비스인 Medium 은 글을 읽을 때 소요될 시간을 미리 표시해줍니다. 독자들이 이 글을 읽는데 얼마나 소요될지를 미리 파악함으로써, 글의 질을 예측해볼 수 있고 이 글을 계속 읽을지 말지를 결정하는데 도움이 됩니다.
-
-소소하지만 탐나는 기능이었습니다. Hexo 블로그에는 이런 기능이 없나 살펴봤더니 역시나 있었습니다. 이번 포스팅에서는 글자 수와
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-06-15T18:15:36.000Z" itemprop="datePublished">2018/06/16</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/16/record-terminal-asciinema/">터미널을 보기 쉽게 녹화하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            개발 블로그를 하다보면 터미널 작업을 업로드해야 할 때가 종종 있습니다. 커맨드를 실행하면 많은 작업이 스쳐 지나가지만 보통 블로그에 올리는 것은 실행할 커맨드나 실행된 결과 화면 뿐입니다. 그래서 블로그를 참고해서 작업을 진행할 때는 이게 제대로 동작하는 것인지, 발생한 오류가 그냥 넘어가도 될만한 것인지 확인하기 어려운 경우가 많습니다.
-대신 처음부터 
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2018-06-14T12:31:58.000Z" itemprop="datePublished">2018/06/14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/14/hexo-markdown-plugins/">Hexo 마크다운 플러그인 변경하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            저번 포스트에서 마크다운은 어떤 종류가 있고, 어떻게 비교하고 선택할 수 있는지 확인해봤습니다.
-마크다운의 종류와 선택
-그렇다면 Hexo 에서는 어떤 마크다운을 사용하고 있을까요? Hexo 의 패키지를 살펴보겠습니다.
-12345678910111213141516171819&#123;  &quot;name&quot;: &quot;hexo-site&quot;, 
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-14T12:04:59.000Z" itemprop="datePublished">2018/06/14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/14/variety-of-markdown-and-Implementations/">마크다운의 종류와 선택</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            저는 여러 정보나 생각을 글로 정리하길 좋아합니다. 마크다운(Markdown)은 이러한 목적에 정확하게 부합하는 툴입니다. 애초에 네이버나 티스토리가 아닌 Hexo 로 블로그를 시작한 것도 마크다운을 지원하기 때문이었습니다. 오늘은 마크다운의 종류에 대해서 알아보겠습니다.
-Markdown
-마크다운은 2014년 존 그루버(John Gruber)와 아론 스워츠
-        </p>
-    </div>
-</article>
-                                                            
                                                 </div>
                                                 
                                                     
@@ -509,9 +529,9 @@ Markdown
                                     <nav id="page-nav">
                                         <span class="pages">
                                             Page 6 
-                                                of 11
+                                                of 12
                                         </span>
-                                        <a class="extend prev" rel="prev" href="/archives/page/5/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/page/7/">7</a><a class="page-number" href="/archives/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/11/">11</a><a class="extend next" rel="next" href="/archives/page/7/">&gt;</a>
+                                        <a class="extend prev" rel="prev" href="/archives/page/5/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/page/7/">7</a><a class="page-number" href="/archives/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/12/">12</a><a class="extend next" rel="next" href="/archives/page/7/">&gt;</a>
                                     </nav>
                                     
                         </div>
@@ -550,7 +570,7 @@ Markdown
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
         </div>
     </div>
 
