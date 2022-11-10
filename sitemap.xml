@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2022/11/10/%EB%AC%B4%EB%A3%8C-%ED%80%80%ED%8A%B8-%EC%9E%90%EB%A3%8C-%EC%A0%84%EC%9E%90%EC%B1%85-PDF-%EA%B3%B5%EC%9C%A0/</loc>
+    
+    <lastmod>2022-11-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/about/index.html</loc>
     
     <lastmod>2022-11-10</lastmod>
@@ -2831,6 +2838,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%A0%84%EC%9E%90%EC%B1%85/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -2954,6 +2968,13 @@
   
   <url>
     <loc>https://futurecreator.github.io/categories/Book/2022/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/categories/Investment/%ED%80%80%ED%8A%B8/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
