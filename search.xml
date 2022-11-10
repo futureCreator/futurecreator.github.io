@@ -53,17 +53,17 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
             
-            <tag> 퀀트 </tag>
+            <tag> 서평 </tag>
             
             <tag> 투자 </tag>
             
-            <tag> 파이어족 </tag>
+            <tag> 퀀트 </tag>
             
             <tag> 경제적자유 </tag>
+            
+            <tag> 파이어족 </tag>
             
             <tag> 강환국 </tag>
             
@@ -96,15 +96,15 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
             
-            <tag> 경제적자유 </tag>
+            <tag> 서평 </tag>
             
             <tag> 역행자 </tag>
             
             <tag> 자청 </tag>
+            
+            <tag> 경제적자유 </tag>
             
         </tags>
       
@@ -133,11 +133,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
             
-            <tag> 투자 </tag>
+            <tag> 서평 </tag>
             
             <tag> 가상화폐 </tag>
             
@@ -146,6 +144,8 @@
             <tag> 비트코인 </tag>
             
             <tag> 코인 </tag>
+            
+            <tag> 투자 </tag>
             
             <tag> 전략 </tag>
             
@@ -176,9 +176,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 투자 </tag>
             
@@ -211,15 +211,15 @@
             
             <tag> 책 </tag>
             
+            <tag> 독후감 </tag>
+            
             <tag> 서평 </tag>
             
-            <tag> 독후감 </tag>
+            <tag> 경제적자유 </tag>
             
             <tag> 파이어족 </tag>
             
             <tag> 파이어 </tag>
-            
-            <tag> 경제적자유 </tag>
             
         </tags>
       
@@ -248,9 +248,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 삼국지 </tag>
             
@@ -289,9 +289,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 노력 </tag>
             
@@ -322,9 +322,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 부자 </tag>
             
@@ -361,9 +361,11 @@
             
             <tag> 책 </tag>
             
+            <tag> 독후감 </tag>
+            
             <tag> 서평 </tag>
             
-            <tag> 독후감 </tag>
+            <tag> 투자 </tag>
             
             <tag> 자산배분 </tag>
             
@@ -374,8 +376,6 @@
             <tag> 영구포트폴리오 </tag>
             
             <tag> 퀀트 </tag>
-            
-            <tag> 투자 </tag>
             
         </tags>
       
@@ -404,9 +404,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 돈 </tag>
             
@@ -439,9 +439,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 미루기 </tag>
             
@@ -474,9 +474,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 여사제 </tag>
             
@@ -511,9 +511,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 뇌 </tag>
             
@@ -546,9 +546,9 @@
             
             <tag> 책 </tag>
             
-            <tag> 서평 </tag>
-            
             <tag> 독후감 </tag>
+            
+            <tag> 서평 </tag>
             
             <tag> 백만장자 </tag>
             

@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2022-11-10T12:31:38.117Z</updated>
+  <updated>2022-11-10T12:32:46.988Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://futurecreator.github.io/2022/11/10/%EB%AC%B4%EB%A3%8C-%ED%80%80%ED%8A%B8-%EC%9E%90%EB%A3%8C-%EC%A0%84%EC%9E%90%EC%B1%85-PDF-%EA%B3%B5%EC%9C%A0/"/>
     <id>https://futurecreator.github.io/2022/11/10/%EB%AC%B4%EB%A3%8C-%ED%80%80%ED%8A%B8-%EC%9E%90%EB%A3%8C-%EC%A0%84%EC%9E%90%EC%B1%85-PDF-%EA%B3%B5%EC%9C%A0/</id>
     <published>2022-11-10T12:27:55.000Z</published>
-    <updated>2022-11-10T12:31:38.117Z</updated>
+    <updated>2022-11-10T12:32:46.988Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>나를 퀀트 투자에 입문하게 해준 <a href="https://www.youtube.com/channel/UCSWPuzlD337Y6VBkyFPwT8g">할투</a> 강환국 님과 <a href="https://stock79.tistory.com/">systrader79</a> 님의 자료를 검색하다가 대박 자료를 하나 찾았습니다.</p><p><img src="manual.png" alt="실전 퀀트 매뉴얼"></p><p>두 분의 유튜브와 블로그에는 투자 자료가 참 방대하다보니, 필요한 내용을 찾아보는데 꽤 어렵습니다. 이걸 정리 및 요약해서 PDF 전자책으로 받을 수 있다고 합니다.</p><p>총 3개입니다. 자세한 내용은 아래 링크를 참고하세요.</p><ul><li><a href="https://cafe.naver.com/invest79/12917">강환국 &amp; systrader79 퀀트 자료 collection vol.1.pdf 전자책 공유합니다 (56개 chapter, 333 페이지)</a></li><li><a href="https://cafe.naver.com/invest79/12999">강환국 &amp; systrader79 퀀트 자료 collection vol.2.pdf 전자책 공유합니다 (108개 chapter, 489 페이지)</a></li><li><a href="https://cafe.naver.com/invest79/14228">강환국 &amp; systrader79 퀀트 자료 collection vol.3.pdf + systrader79 전자책 공유합니다 (100개 chapter, 991 페이지)</a></li></ul>]]></content>
     
@@ -68,17 +68,17 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
     
-    <category term="퀀트" scheme="https://futurecreator.github.io/tags/%ED%80%80%ED%8A%B8/"/>
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
     
-    <category term="파이어족" scheme="https://futurecreator.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%96%B4%EC%A1%B1/"/>
+    <category term="퀀트" scheme="https://futurecreator.github.io/tags/%ED%80%80%ED%8A%B8/"/>
     
     <category term="경제적자유" scheme="https://futurecreator.github.io/tags/%EA%B2%BD%EC%A0%9C%EC%A0%81%EC%9E%90%EC%9C%A0/"/>
+    
+    <category term="파이어족" scheme="https://futurecreator.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%96%B4%EC%A1%B1/"/>
     
     <category term="강환국" scheme="https://futurecreator.github.io/tags/%EA%B0%95%ED%99%98%EA%B5%AD/"/>
     
@@ -110,15 +110,15 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
     
-    <category term="경제적자유" scheme="https://futurecreator.github.io/tags/%EA%B2%BD%EC%A0%9C%EC%A0%81%EC%9E%90%EC%9C%A0/"/>
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="역행자" scheme="https://futurecreator.github.io/tags/%EC%97%AD%ED%96%89%EC%9E%90/"/>
     
     <category term="자청" scheme="https://futurecreator.github.io/tags/%EC%9E%90%EC%B2%AD/"/>
+    
+    <category term="경제적자유" scheme="https://futurecreator.github.io/tags/%EA%B2%BD%EC%A0%9C%EC%A0%81%EC%9E%90%EC%9C%A0/"/>
     
   </entry>
   
@@ -146,11 +146,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
     
-    <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="가상화폐" scheme="https://futurecreator.github.io/tags/%EA%B0%80%EC%83%81%ED%99%94%ED%8F%90/"/>
     
@@ -159,6 +157,8 @@
     <category term="비트코인" scheme="https://futurecreator.github.io/tags/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8/"/>
     
     <category term="코인" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EC%9D%B8/"/>
+    
+    <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
     
     <category term="전략" scheme="https://futurecreator.github.io/tags/%EC%A0%84%EB%9E%B5/"/>
     
@@ -188,9 +188,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
     
@@ -222,15 +222,15 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
+    <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
     <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
-    <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    <category term="경제적자유" scheme="https://futurecreator.github.io/tags/%EA%B2%BD%EC%A0%9C%EC%A0%81%EC%9E%90%EC%9C%A0/"/>
     
     <category term="파이어족" scheme="https://futurecreator.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%96%B4%EC%A1%B1/"/>
     
     <category term="파이어" scheme="https://futurecreator.github.io/tags/%ED%8C%8C%EC%9D%B4%EC%96%B4/"/>
-    
-    <category term="경제적자유" scheme="https://futurecreator.github.io/tags/%EA%B2%BD%EC%A0%9C%EC%A0%81%EC%9E%90%EC%9C%A0/"/>
     
   </entry>
   
@@ -258,9 +258,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="삼국지" scheme="https://futurecreator.github.io/tags/%EC%82%BC%EA%B5%AD%EC%A7%80/"/>
     
@@ -298,9 +298,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="노력" scheme="https://futurecreator.github.io/tags/%EB%85%B8%EB%A0%A5/"/>
     
@@ -330,9 +330,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="부자" scheme="https://futurecreator.github.io/tags/%EB%B6%80%EC%9E%90/"/>
     
@@ -368,9 +368,11 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
+    <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
     <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
-    <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
     
     <category term="자산배분" scheme="https://futurecreator.github.io/tags/%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
     
@@ -381,8 +383,6 @@
     <category term="영구포트폴리오" scheme="https://futurecreator.github.io/tags/%EC%98%81%EA%B5%AC%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4/"/>
     
     <category term="퀀트" scheme="https://futurecreator.github.io/tags/%ED%80%80%ED%8A%B8/"/>
-    
-    <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
     
   </entry>
   
@@ -410,9 +410,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="돈" scheme="https://futurecreator.github.io/tags/%EB%8F%88/"/>
     
@@ -444,9 +444,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="미루기" scheme="https://futurecreator.github.io/tags/%EB%AF%B8%EB%A3%A8%EA%B8%B0/"/>
     
@@ -478,9 +478,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="여사제" scheme="https://futurecreator.github.io/tags/%EC%97%AC%EC%82%AC%EC%A0%9C/"/>
     
@@ -514,9 +514,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="뇌" scheme="https://futurecreator.github.io/tags/%EB%87%8C/"/>
     
@@ -548,9 +548,9 @@
     
     <category term="책" scheme="https://futurecreator.github.io/tags/%EC%B1%85/"/>
     
-    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
-    
     <category term="독후감" scheme="https://futurecreator.github.io/tags/%EB%8F%85%ED%9B%84%EA%B0%90/"/>
+    
+    <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="백만장자" scheme="https://futurecreator.github.io/tags/%EB%B0%B1%EB%A7%8C%EC%9E%A5%EC%9E%90/"/>
     
