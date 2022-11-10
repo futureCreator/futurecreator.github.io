@@ -907,6 +907,13 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/adsense/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/search/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
@@ -915,34 +922,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/analytics/</loc>
-    <lastmod>2022-11-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/naver/</loc>
-    <lastmod>2022-11-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/webmaster/</loc>
-    <lastmod>2022-11-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/seo/</loc>
-    <lastmod>2022-11-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/adsense/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -964,6 +943,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/metatag/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/naver/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/webmaster/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/seo/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1698,6 +1698,13 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/pages/</loc>
+    <lastmod>2022-11-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/architect/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
@@ -1706,13 +1713,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/framework/</loc>
-    <lastmod>2022-11-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/pages/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1789,14 +1789,14 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/closure/</loc>
+    <loc>https://futurecreator.github.io/tags/exception/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/exception/</loc>
+    <loc>https://futurecreator.github.io/tags/closure/</loc>
     <lastmod>2022-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
