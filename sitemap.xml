@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2022/11/11/%ED%80%80%ED%8A%B8-%ED%88%AC%EC%9E%90-%EC%9E%85%EB%AC%B8-%EB%82%B4%EA%B0%80-%ED%95%9C%EA%B5%AD-%EC%86%8C%ED%98%95%EC%A3%BC%EB%A5%BC-%EC%82%B0-%EC%9D%B4%EC%9C%A0/</loc>
+    
+    <lastmod>2022-11-11</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2022/11/11/%EB%B6%80%EC%9D%98-%EC%B9%98%ED%8A%B8%ED%82%A4/</loc>
     
     <lastmod>2022-11-11</lastmod>
@@ -2868,6 +2875,34 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/%EC%9E%90%EA%B8%B0%EA%B0%9C%EB%B0%9C/</loc>
+    <lastmod>2022-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%9E%85%EB%AC%B8/</loc>
+    <lastmod>2022-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%ED%95%9C%EA%B5%AD/</loc>
+    <lastmod>2022-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%86%8C%ED%98%95%EC%A3%BC/</loc>
+    <lastmod>2022-11-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%A3%BC%EC%8B%9D/</loc>
     <lastmod>2022-11-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
