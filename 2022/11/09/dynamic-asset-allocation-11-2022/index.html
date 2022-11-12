@@ -16,21 +16,21 @@
     
     <title>
         
-        동적자산배분 투자 비중(2022년 11월) BAA-공격형, 변형듀얼모멘텀, 채권동적자산배분 |
+        동적자산배분 투자 비중(2022년 11월) |
         
         Eric Han&#39;s IT Blog
     </title>
     
     <meta name="description" content="현재 할투를 보고 공부해서 미국 시장은 BAA-G4, 변형 듀얼 모멘텀, 채권 동적자산배분 총 3가지 전략을 사용 중이다. BAA 중에서는 가장 공격적이면서도 빠르게 수비로 전환할 수 있는 BAA-G4, 공격력이 뛰어나고 좀 더 느리게 반응하는 듀얼 모멘텀, 그리고 수비적인 채권 동적자산배분까지 균형있게 짜인 혼합 포트폴리오다. 10월에는 세 가지 전략 모">
 <meta property="og:type" content="article">
-<meta property="og:title" content="동적자산배분 투자 비중(2022년 11월) BAA-공격형, 변형듀얼모멘텀, 채권동적자산배분">
+<meta property="og:title" content="동적자산배분 투자 비중(2022년 11월)">
 <meta property="og:url" content="https://futurecreator.github.io/2022/11/09/dynamic-asset-allocation-11-2022/index.html">
 <meta property="og:site_name" content="Eric Han&#39;s IT Blog">
 <meta property="og:description" content="현재 할투를 보고 공부해서 미국 시장은 BAA-G4, 변형 듀얼 모멘텀, 채권 동적자산배분 총 3가지 전략을 사용 중이다. BAA 중에서는 가장 공격적이면서도 빠르게 수비로 전환할 수 있는 BAA-G4, 공격력이 뛰어나고 좀 더 느리게 반응하는 듀얼 모멘텀, 그리고 수비적인 채권 동적자산배분까지 균형있게 짜인 혼합 포트폴리오다. 10월에는 세 가지 전략 모">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
 <meta property="article:published_time" content="2022-11-08T19:28:26.000Z">
-<meta property="article:modified_time" content="2022-11-11T00:35:51.466Z">
+<meta property="article:modified_time" content="2022-11-12T21:51:52.303Z">
 <meta property="article:author" content="Eric Han">
 <meta property="article:tag" content="동적자산배분">
 <meta property="article:tag" content="BAA">
@@ -196,7 +196,7 @@ ga('send', 'pageview');
                 
     
         <h1 class="article-title" itemprop="name">
-        동적자산배분 투자 비중(2022년 11월) BAA-공격형, 변형듀얼모멘텀, 채권동적자산배분
+        동적자산배분 투자 비중(2022년 11월)
         </h1>
     
 
@@ -220,6 +220,7 @@ ga('send', 'pageview');
 <p>'변형 듀얼 모멘텀’은 할투의 강환국 님이 만든 전략이다. 최근 주식과 채권이 동반 하락하면서 안전 자산에 현금 대신 채권만 있는 경우 상당한 손실이 발생했다. 이에 듀얼 모멘텀 전략에서 안전 자산 부분을 채권동적자산 배분처럼 변경한 것이 변형 듀얼 모멘텀이다.</p>
 <p>참고로 채권동적자산 배분은 SHY, IEF, TLT, TIP, LQD, HYG, BWX, EMB까지 총 8개의 다양한 채권 ETF 중에서 최근 6개월 수익이 가장 좋은 3개의 채권에 분산하는 것이다. 수익이 마이너스일 경우에는 현금 비중으로 대체한다.</p>
 <p>내가 프로그래밍한 DAA 계산기로 11월 전략을 계산해봤다.</p>
+<p><img src="202211.png" alt="2022년 11월 투자비중"></p>
 <h2 id="BAA-G4-BAA-Aggressive">BAA-G4 (BAA-Aggressive)</h2>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 BAA-Aggressive</span><br><span class="line">-----------------------</span><br><span class="line">CANARY MOMENTUM SCORE</span><br><span class="line">-----------------------</span><br><span class="line">VOO:    0.540389</span><br><span class="line">VEA:    -0.113707</span><br><span class="line">VWO:    -1.316195</span><br><span class="line">BND:    -0.745369</span><br><span class="line">-----------------------</span><br><span class="line">Defensive SMA(12) SCORE</span><br><span class="line">-----------------------</span><br><span class="line">IEF:    -0.099648</span><br><span class="line">TLT:    -0.219619</span><br><span class="line">LQD:    -0.121938</span><br><span class="line">TIP:    -0.070549</span><br><span class="line">BND:    -0.087875</span><br><span class="line">DBC:    0.016867</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">DBC:    33.3%</span><br><span class="line">BIL:    66.7%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure>
 <p>현금 비중에 100% 였다가 이번에 DBC가 33% 들어왔다. 카나리아 스코어를 보면 장이 여전히 좋지 않은 상황이다. 원자재를 빼고는 주식과 채권 모두 박살.</p>
