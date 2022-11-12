@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2022/11/13/pinescript-v5-%EC%99%95%EC%B4%88%EB%B3%B4-%EA%B0%95%EC%9D%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80/</loc>
+    
+    <lastmod>2022-11-12</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2022/11/11/%ED%80%80%ED%8A%B8-%ED%88%AC%EC%9E%90-%EC%9E%85%EB%AC%B8-%EB%82%B4%EA%B0%80-%ED%95%9C%EA%B5%AD-%EC%86%8C%ED%98%95%EC%A3%BC%EB%A5%BC-%EC%82%B0-%EC%9D%B4%EC%9C%A0/</loc>
     
     <lastmod>2022-11-11</lastmod>
@@ -2903,6 +2910,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/re-invent/</loc>
+    <lastmod>2022-11-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/</loc>
+    <lastmod>2022-11-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%96%B8%EC%96%B4/</loc>
     <lastmod>2022-11-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
