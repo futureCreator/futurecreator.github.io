@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2022-11-12T20:16:00.439Z</updated>
+  <updated>2022-11-13T01:14:58.005Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -17,13 +17,49 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>동적자산배분의 치명적인 단점</title>
+    <link href="https://futurecreator.github.io/2022/11/13/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%EC%9D%98-%EC%B9%98%EB%AA%85%EC%A0%81%EC%9D%B8-%EB%8B%A8%EC%A0%90/"/>
+    <id>https://futurecreator.github.io/2022/11/13/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84%EC%9D%98-%EC%B9%98%EB%AA%85%EC%A0%81%EC%9D%B8-%EB%8B%A8%EC%A0%90/</id>
+    <published>2022-11-13T00:16:51.000Z</published>
+    <updated>2022-11-13T01:14:58.005Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>요즘 많은 분들이 자산배분에 관심을 가지고 있습니다. 영구 포트폴리오나 올웨더 포트폴리오 같은 정적자산배분으로 시작하시는 분들이 많은데요. 하락장에서는 시장에 더 빠르게 반응하는 동적자산배분이 유리합니다. 동적자산배분의 종류에는 듀얼 모멘텀, BAA, VAA, DAA 등이 있습니다.</p><p><img src="https://images.unsplash.com/photo-1581427579553-50c0f6f55e52?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1770&amp;q=80" alt="Photo by Colin Watts on Unsplash"></p><p>그렇다면 동적자산배분의 단점은 뭐가 있을까요? 많은 분들이 우려하시는 부분이 바로 <strong>잦은 거래로 인한 수수료와 양도소득세</strong>입니다.</p><p>정적자산배분은 상관성이 낮은 자산에 배분을 해놓고 1년에 한번 리밸런싱으로 비율을 맞춰줍니다. 이에 반해 동적자산배분은 한 달에 한 번씩 리밸런싱으로 종목을 바꾸기 때문에 문제가 발생합니다. 동적자산배분은 포트폴리오 전체를 팔고 새로 사야하는 일도 생길 수 있습니다.</p><h2 id="수수료">수수료</h2><p>동적자산배분으로 포트폴리오를 구성하면 해외 상장 ETF를 구입하게 됩니다. 그런데 <strong>해외 ETF는 국내주식에 비해서 수수료가 비쌉니다.</strong></p><p>여기에 환율에 따라 <strong>환손실이 발생할 수 있고</strong>, 매매 시 <strong>환전 수수료</strong>도 들어갑니다. SEC Fee라는 기타거래세도 부과가 되는데 매우 작은 금액이라서 패스하겠습니다.</p><p>다음은 제가 이용하는 토스 증권의 수수료 안내를 고객센터 FAQ에서 가져온 자료입니다.</p><p><img src="toss.png" alt="토스 증권 수수료 안내"></p><h2 id="양도소득세">양도소득세</h2><p>해외 ETF에서 얻는 수익은 배당금과 매매차익으로 나눠볼 수 있는데요, 여기에는 다른 기준으로 세금이 적용됩니다. 배당금에는 15.4% 배당소득세(원천징수)가 들어가는데, 이건 국내 ETF에도 동일하게 적용되므로 상관 없습니다.</p><p>하지만 매매차익에 대한 세금이 조금 다른데요. 다음과 같습니다.</p><ol><li>금융소득 분류과세</li><li>손익통산(손실상계)</li><li>양도소득세 22% (250만원 기본공제)</li></ol><p>하나씩 알아보겠습니다.</p><h3 id="금융소득-분류과세">금융소득 분류과세</h3><p>금융소득에 합산하지 않고 분류과세합니다. 기타 금융 소득이 2천만원을 초과하는 경우, 금융소득 종합과세 신고대상이 됩니다. 하지만 해외 ETF는 여기에서 제외되기 때문에 많이 벌어도 종합과세대상에는 포함이 되지 않습니다. 단, 배당금은 종합과세에 해당이 됩니다,</p><h3 id="손익통산-손실상계">손익통산(손실상계)</h3><p>과세기간(1월 1일~12월 31일) 동안 발생한 손익을 통산해서 과세합니다. 무슨 말이냐면, 매매하면서 얻은 이익과 손실을 합친 후에 과세한다는 뜻입니다.</p><p>만약 올해 테슬라를 익절해서 1천만원을 벌었는데 메타를 손절해서 2천만원을 잃었다면, 합산해서 1천만원 손해가 되므로 세금이 없습니다.</p><h3 id="양도소득세-22-250만원-기본공제">양도소득세 22% (250만원 기본공제)</h3><p>손익을 계산하고나서 22%(양도소득세 20% + 주민세 2%)가 세금이 들어갑니다. 세금이 상당하죠? 1천만원을 벌었다면 220만원을 세금으로 내야하는 겁니다. 단, 250만원까지는 면제가 됩니다.</p><h2 id="정말-단점일까">정말 단점일까?</h2><p>세금을 22%나 떼어간다니 정말 무섭습니다. 게다가 동적자산배분은 한달에 한번씩 리밸런싱을 해야하는데 수수료도 만만치 않습니다.</p><p>하지만 양도소득세나 환전 수수료는 동적자산배분을 하든 안하든 미국 주식을 사기 위해서는 피할 수 없는 부분입니다. 무엇보다 250만원 이상 벌어야 세금을 낼 수 있는데 세금을 내고 싶어도 못내는 사람도 많습니다. <strong>벌면 기분좋게 내면 그만입니다. 원금 까먹는 것보다 훨씬 낫습니다.</strong></p><h2 id="국내-주식과의-자산배분">국내 주식과의 자산배분</h2><p>동적자산배분을 하는 것도 중요합니다만, 더 중요한 건 국내 주식과 같이 배분을 하는 것입니다. 동적자산배분 전략은 주로 미국 주식과 미국 채권의 비중이 높은데요, <strong>한국 주식은 미국 주식과의 상관성이 낮아서 분산 투자의 효과가 있고, 미국 채권과도 상관성이 낮습니다</strong>.</p><p>따라서 국내 주식과 함께 포트폴리오를 구성함으로써 분산 투자의 효과를 누릴 수 있습니다.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;요즘 많은 분들이 자산배분에 관심을 가지고 있습니다. 영구 포트폴리오</summary>
+      
+    
+    
+    
+    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
+    
+    <category term="동적자산배분" scheme="https://futurecreator.github.io/categories/Investing/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
+    
+    
+    <category term="동적자산배분" scheme="https://futurecreator.github.io/tags/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
+    
+    <category term="증권사" scheme="https://futurecreator.github.io/tags/%EC%A6%9D%EA%B6%8C%EC%82%AC/"/>
+    
+    <category term="수수료" scheme="https://futurecreator.github.io/tags/%EC%88%98%EC%88%98%EB%A3%8C/"/>
+    
+    <category term="양도소득세" scheme="https://futurecreator.github.io/tags/%EC%96%91%EB%8F%84%EC%86%8C%EB%93%9D%EC%84%B8/"/>
+    
+    <category term="금융소득종합과세" scheme="https://futurecreator.github.io/tags/%EA%B8%88%EC%9C%B5%EC%86%8C%EB%93%9D%EC%A2%85%ED%95%A9%EA%B3%BC%EC%84%B8/"/>
+    
+    <category term="분산투자" scheme="https://futurecreator.github.io/tags/%EB%B6%84%EC%82%B0%ED%88%AC%EC%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pinescript v5 왕초보 강의 - 프로그래밍이란</title>
     <link href="https://futurecreator.github.io/2022/11/13/pinescript-v5-%EC%99%95%EC%B4%88%EB%B3%B4-%EA%B0%95%EC%9D%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80/"/>
     <id>https://futurecreator.github.io/2022/11/13/pinescript-v5-%EC%99%95%EC%B4%88%EB%B3%B4-%EA%B0%95%EC%9D%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80/</id>
     <published>2022-11-12T20:08:16.000Z</published>
-    <updated>2022-11-12T20:16:00.439Z</updated>
+    <updated>2022-11-13T00:30:34.335Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>파인스크립트 왕초보 강의를 시작하기에 앞서, 프로그래밍이 처음이신 분들을 위해 프로그래밍이라는 것에 대해 간단히 설명드리겠습니다.</p><p>컴퓨터라는 건 일종의 계산기입니다. 계산을 담당하는 장치(CPU)를 중심으로, 계산할 값을 입력받는 입력 장치(키보드, 마우스 등), 계산 결과를 저장하는 기억 장치(RAM, 하드디스크 등), 그리고 계산 결과를 출력할 출력장치(모니터, 프린터 등)로 구성됩니다. 물론 스마트폰도 컴퓨터라고 볼 수 있습니다.</p><p>우리가 컴퓨터로 주식을 하거나 쇼핑을 하거나 영화를 보는 것도 모두 컴퓨터에게는 0과 1의 계산입니다. 컴퓨터가 계산기라는 것은 컴퓨터는 우리가 뭔가를 시켜야 계산을 처리한다는 뜻이기도 합니다. 혼자서 뭘 알고 계산하겠습니까. 이렇게 컴퓨터에게 어떠한 명령을 하라고 설명해놓은 것이 프로그램이고, 그 프로그램을 짜는 행위를 프로그래밍이라고 합니다. 이때 사용하는 언어를 프로그래밍 언어라고 합니다.</p><p><img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1932&amp;q=80" alt="Photo by Emile Perron on Unsplash"></p><p>그래서 프로그래밍 언어를 공부할 때에는 목표가 있어야 좋습니다. 사실 우리가 쓰는 언어도 마찬가지인게, 학교에서 회사에서 시켜서 영어를 배우면 정말 하기 싫잖아요. 그렇지만 외국인 친구를 사귀거나 오랜 기간 여행을 간다거나 하는 목표가 있으면 더 흥미를 가지고 적극적으로 배우게 됩니다.</p><p>저 또한 회사 다니면서 스트레스도 많이 받고 프로그래밍 자체가 싫어지기도 했습니다. 하지만 집에서 파이썬으로 가상화폐 자동 매매 시스템을 개발하면서 다시 좋아졌습니다. 누가 시켜서 하는 것이 아닌, 자신만의 무언가를 만들어가면서 프로그래밍을 처음 접했을 때의 재미를 다시 느낄 수 있었습니다.</p><p>이런 관점에서, 파인 스크립트는 배우기 좋은 언어입니다. 내가 구현한 로직이 차트에 바로 반영이 되어 눈으로 확인할 수 있고, 나의 아이디어를 내가 직접 만든다는 목표와 재미가 있습니다. 나만의 지표를 만들어서 차트를 볼 때 참고하거나, 알림을 걸어서 자동 매매 시스템을 만들 수도 있습니다. 매매 시점을 추가해서 과거 데이터로 백테스트를 돌려볼 수도 있습니다. 아마 많은 분들이 이런 목표를 가지고 파인 스크립트를 배우려고 하실 것입니다.</p><p>어느 분야든 깊이 파고들면 전문적이고 어렵습니다만, 컴퓨터 공학은 진입장벽이 참 낮다고 생각합니다. 누구나 스마트폰, 노트북, PC를 가지고 있고 여러 IT 기술에 밀접해있는데다가, 프로그래밍 교육을 쉽게 찾아볼 수 있습니다. 유튜브에만 보더라도 무료 강의가 정말 많습니다. 무엇보다도 쉽고 재밌습니다.</p><p>일반적인 프로그래밍 언어 입문 책들은 시작이 비슷합니다. 이 언어는 언제 누가 만들었고 어떤 장단점이 있는지 설명한 후에 환경을 구성한 뒤 'hello world’를 출력해봅니다. 그리고 나서 변수와 연산자부터 하나씩 설명합니다. 근데 그런 방식은 좀 지루합니다. 그래서 적당한 예제를 가지고 코드를 한줄 한줄 분석해보고 실행해보면서 설명하려고 합니다. 기본적인 내용은 그걸로 충분히 배울 수 있고 부족한 내용은 매뉴얼과 API 문서를 참고하면 됩니다.</p><p>여기에 차트에 대한 지식과 투자 경험이 있다면 파인 스크립트를 활용해서 자신만의 전략을 수월하게 구현해내실 수 있을 것입니다.</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>파인스크립트 왕초보 강의를 시작하기에 앞서, 프로그래밍이 처음이신 분들을 위해 프로그래밍이라는 것에 대해 간단히 설명드리겠습니다.</p><p>컴퓨터라는 건 일종의 <strong>계산기</strong>입니다. 계산을 담당하는 장치(CPU)를 중심으로, 계산할 값을 입력받는 입력 장치(키보드, 마우스 등), 계산 결과를 저장하는 기억 장치(RAM, 하드디스크 등), 그리고 계산 결과를 출력할 출력장치(모니터, 프린터 등)로 구성됩니다. 물론 스마트폰도 컴퓨터라고 볼 수 있습니다.</p><p>우리가 컴퓨터로 주식을 하거나 쇼핑을 하거나 영화를 보는 것도 모두 컴퓨터에게는 0과 1의 계산입니다. 컴퓨터가 계산기라는 것은 컴퓨터는 <strong>우리가 뭔가를 시켜야 계산을 처리한다</strong>는 뜻이기도 합니다. 혼자서 뭘 알고 계산하겠습니까. 이렇게 컴퓨터에게 <strong>어떠한 명령을 하라고 설명해놓은 것이 프로그램</strong>이고, 그 프로그램을 짜는 행위를 프로그래밍이라고 합니다. 이때 사용하는 언어를 프로그래밍 언어라고 합니다.</p><p><img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1932&amp;q=80" alt="Photo by Emile Perron on Unsplash"></p><p>그래서 <strong>프로그래밍 언어를 공부할 때에는 목표가 있어야 좋습니다</strong>. 사실 우리가 쓰는 언어도 마찬가지인게, 학교에서 회사에서 시켜서 영어를 배우면 정말 하기 싫잖아요. 그렇지만 외국인 친구를 사귀거나 오랜 기간 여행을 간다거나 하는 목표가 있으면 더 흥미를 가지고 적극적으로 배우게 됩니다.</p><p>저 또한 회사 다니면서 스트레스도 많이 받고 프로그래밍 자체가 싫어지기도 했습니다. 하지만 집에서 파이썬으로 가상화폐 자동 매매 시스템을 개발하면서 다시 좋아졌습니다. 누가 시켜서 하는 것이 아닌, 자신만의 무언가를 만들어가면서 프로그래밍을 처음 접했을 때의 재미를 다시 느낄 수 있었습니다.</p><p>이런 관점에서, 파인 스크립트는 배우기 좋은 언어입니다. 내가 구현한 로직이 차트에 바로 반영이 되어 눈으로 확인할 수 있고, <strong>나의 아이디어를 내가 직접 실현한다</strong>는 목표와 재미가 있습니다. 나만의 지표를 만들어서 차트를 볼 때 참고하거나, 알림을 걸어서 자동 매매 시스템을 만들 수도 있습니다. 매매 시점을 추가해서 과거 데이터로 백테스트를 돌려볼 수도 있습니다. 아마 많은 분들이 이런 목표를 가지고 파인 스크립트를 배우려고 하실 것입니다.</p><p>어느 분야든 깊이 파고들면 전문적이고 어렵습니다만, 컴퓨터 공학은 진입장벽이 참 낮다고 생각합니다. 누구나 스마트폰, 노트북, PC를 가지고 있고 여러 IT 기술에 밀접해있는데다가, 프로그래밍 교육을 쉽게 찾아볼 수 있습니다. 유튜브에만 보더라도 무료 강의가 정말 많습니다. <strong>무엇보다도 쉽고 재밌습니다.</strong></p><p>일반적인 프로그래밍 언어 입문 책들은 시작이 비슷합니다. 이 언어는 언제 누가 만들었고 어떤 장단점이 있는지 설명한 후에 환경을 구성한 뒤 'hello world’를 출력해봅니다. 그리고 나서 변수와 연산자부터 하나씩 설명합니다. 근데 그런 방식은 좀 지루합니다. 그래서 <strong>적당한 예제를 가지고 코드를 한줄 한줄 분석해보고 실행해보면서 설명하려고 합니다.</strong> 기본적인 내용은 그걸로 충분히 배울 수 있고 부족한 내용은 매뉴얼과 API 문서를 참고하면 됩니다.</p><p>여기에 <strong>차트에 대한 지식과 투자 경험</strong>이 있다면 파인 스크립트를 활용해서 자신만의 전략을 수월하게 구현해내실 수 있을 것입니다.</p>]]></content>
     
     
       
@@ -683,38 +719,6 @@
     <category term="pinescript" scheme="https://futurecreator.github.io/tags/pinescript/"/>
     
     <category term="tradingview" scheme="https://futurecreator.github.io/tags/tradingview/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>동적자산배분 투자 비중(2022년 11월)</title>
-    <link href="https://futurecreator.github.io/2022/11/09/dynamic-asset-allocation-11-2022/"/>
-    <id>https://futurecreator.github.io/2022/11/09/dynamic-asset-allocation-11-2022/</id>
-    <published>2022-11-08T19:28:26.000Z</published>
-    <updated>2022-11-12T21:51:52.303Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>현재 할투를 보고 공부해서 미국 시장은 BAA-G4, 변형 듀얼 모멘텀, 채권 동적자산배분 총 3가지 전략을 사용 중이다. BAA 중에서는 가장 공격적이면서도 빠르게 수비로 전환할 수 있는 BAA-G4, 공격력이 뛰어나고 좀 더 느리게 반응하는 듀얼 모멘텀, 그리고 수비적인 채권 동적자산배분까지 균형있게 짜인 혼합 포트폴리오다. 10월에는 세 가지 전략 모두 100% 현금 비중이었기 때문에 손실을 최소화할 수 있었다.</p><p>'변형 듀얼 모멘텀’은 할투의 강환국 님이 만든 전략이다. 최근 주식과 채권이 동반 하락하면서 안전 자산에 현금 대신 채권만 있는 경우 상당한 손실이 발생했다. 이에 듀얼 모멘텀 전략에서 안전 자산 부분을 채권동적자산 배분처럼 변경한 것이 변형 듀얼 모멘텀이다.</p><p>참고로 채권동적자산 배분은 SHY, IEF, TLT, TIP, LQD, HYG, BWX, EMB까지 총 8개의 다양한 채권 ETF 중에서 최근 6개월 수익이 가장 좋은 3개의 채권에 분산하는 것이다. 수익이 마이너스일 경우에는 현금 비중으로 대체한다.</p><p>내가 프로그래밍한 DAA 계산기로 11월 전략을 계산해봤다.</p><p><img src="202211.png" alt="2022년 11월 투자비중"></p><h2 id="BAA-G4-BAA-Aggressive">BAA-G4 (BAA-Aggressive)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 BAA-Aggressive</span><br><span class="line">-----------------------</span><br><span class="line">CANARY MOMENTUM SCORE</span><br><span class="line">-----------------------</span><br><span class="line">VOO:    0.540389</span><br><span class="line">VEA:    -0.113707</span><br><span class="line">VWO:    -1.316195</span><br><span class="line">BND:    -0.745369</span><br><span class="line">-----------------------</span><br><span class="line">Defensive SMA(12) SCORE</span><br><span class="line">-----------------------</span><br><span class="line">IEF:    -0.099648</span><br><span class="line">TLT:    -0.219619</span><br><span class="line">LQD:    -0.121938</span><br><span class="line">TIP:    -0.070549</span><br><span class="line">BND:    -0.087875</span><br><span class="line">DBC:    0.016867</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">DBC:    33.3%</span><br><span class="line">BIL:    66.7%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure><p>현금 비중에 100% 였다가 이번에 DBC가 33% 들어왔다. 카나리아 스코어를 보면 장이 여전히 좋지 않은 상황이다. 원자재를 빼고는 주식과 채권 모두 박살.</p><h2 id="변형-듀얼-모멘텀">변형 듀얼 모멘텀</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 Upgraded Dual Momentum</span><br><span class="line">-----------------------</span><br><span class="line">VOO:    -14.607146%</span><br><span class="line">VEA:    -23.498982%</span><br><span class="line">-----------------------</span><br><span class="line">SHY:    -1.804721%</span><br><span class="line">IEF:    -7.374048%</span><br><span class="line">TLT:    -18.656585%</span><br><span class="line">TIP:    -7.319098%</span><br><span class="line">LQD:    -8.661315%</span><br><span class="line">HYG:    -4.115194%</span><br><span class="line">BWX:    -13.370382%</span><br><span class="line">EMB:    -11.121391%</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">BIL:    100.0%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure><p>변형 듀얼 모멘텀은 수비 포지션이며 채권이 모두 박살이기 때문에 100% 현금 보유다.</p><h2 id="채권-동적자산배분">채권 동적자산배분</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-----------------------</span><br><span class="line">2022/11 Bond DAA</span><br><span class="line">-----------------------</span><br><span class="line">SHY:    -1.804712%</span><br><span class="line">IEF:    -7.374047%</span><br><span class="line">TLT:    -18.656585%</span><br><span class="line">TIP:    -7.319104%</span><br><span class="line">LQD:    -8.661309%</span><br><span class="line">HYG:    -4.115184%</span><br><span class="line">BWX:    -13.370390%</span><br><span class="line">EMB:    -11.121383%</span><br><span class="line">-----------------------</span><br><span class="line">Result</span><br><span class="line">-----------------------</span><br><span class="line">BIL:    100.0%</span><br><span class="line">-----------------------</span><br></pre></td></tr></table></figure><p>변형 듀얼 모멘텀의 안전 자산 부분과 동일. 100% 현금 보유다.</p><p>예전 같았으면 떨어질 때 줍줍한다 하면서 분할 매수 들어가고 떨어진 주식에 열심히 물타고 있었을 것 같다. 하지만 바닥이 어디인지는 아무도 모른다. 이제는 지표를 보고 들어가니까 고민할 필요도 마음 고생할 필요도 없다.</p><p>확실히 상승 추세가 나타나면 그때 들어가도 전혀 늦지 않다. 추세가 바뀌기 전까지 열심히 공부하면서 원화 채굴이나 하자.</p><h2 id="참고">참고</h2><ul><li><a href="https://www.youtube.com/watch?v=VV_tCjJFUeI">할투 변형 듀얼모멘텀 영상</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;현재 할투를 보고 공부해서 미국 시장은 BAA-G4, 변형 듀얼 모멘</summary>
-      
-    
-    
-    
-    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
-    
-    <category term="동적자산배분" scheme="https://futurecreator.github.io/categories/Investing/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
-    
-    
-    <category term="동적자산배분" scheme="https://futurecreator.github.io/tags/%EB%8F%99%EC%A0%81%EC%9E%90%EC%82%B0%EB%B0%B0%EB%B6%84/"/>
-    
-    <category term="BAA" scheme="https://futurecreator.github.io/tags/BAA/"/>
-    
-    <category term="듀얼모멘텀" scheme="https://futurecreator.github.io/tags/%EB%93%80%EC%96%BC%EB%AA%A8%EB%A9%98%ED%85%80/"/>
-    
-    <category term="채권" scheme="https://futurecreator.github.io/tags/%EC%B1%84%EA%B6%8C/"/>
     
   </entry>
   
