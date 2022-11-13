@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2022-11-13T01:14:58.005Z</updated>
+  <updated>2022-11-13T01:46:18.853Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>기본 중의 기본 이동평균선 제대로 활용하기</title>
+    <link href="https://futurecreator.github.io/2022/11/13/%EA%B8%B0%EB%B3%B8-%EC%A4%91%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EC%9D%B4%EB%8F%99%ED%8F%89%EA%B7%A0%EC%84%A0-%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/"/>
+    <id>https://futurecreator.github.io/2022/11/13/%EA%B8%B0%EB%B3%B8-%EC%A4%91%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EC%9D%B4%EB%8F%99%ED%8F%89%EA%B7%A0%EC%84%A0-%EC%A0%9C%EB%8C%80%EB%A1%9C-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0/</id>
+    <published>2022-11-13T01:45:30.000Z</published>
+    <updated>2022-11-13T01:46:18.853Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>여러가지 지표가 있지만, 가장 기본적이면서 신뢰할 수 있는 지표는 **이동평균선(Moving Average)**입니다. 이동평균선은 기간별 평균 주가를 계산해서 선으로 이은 간단한 지표입니다.</p><p>주가의 추세를 쉽게 알 수 있지만 과거의 가격으로 만든 후행성 지표라는 점, 그리고 대형주에 비해 테마 또는 중소형주처럼 급등락하는 종목에 대해서는 적용하기 어렵다는 단점이 있습니다.</p><p>보통 <strong>5일선, 10일선, 20일선, 60일선, 120일선, 200일선</strong>으로 나눠서 봅니다.</p><ul><li>단기매매선: 5, 10일선</li><li>심리선(단기추세): 20일선</li><li>수급선(중기추세): 60일선</li><li>경기선(장기추세): 120, 200일선</li></ul><p><img src="https://www.hi-ib.com/img/academy/systemtrade/ac020906_03img09.gif" alt="골든 크로스"><br><img src="https://www.hi-ib.com/img/academy/systemtrade/ac020906_03img10.gif" alt="데드 크로스"></p><p>짧은 기간의 이동평균선은 단기 기간의 추세를, 긴 기간의 이동평균선은 장기 기간의 추세를 보여준다고 볼 수 있습니다. 기본적으로 단기 이평선이 중장기 이평선을 돌파하는 경우 추세가 바뀌는 것으로 보고 매매 시점을 봅니다. 이를 <strong>골든 크로스</strong>라고 하고, 반대의 경우에는 <strong>데드 크로스</strong>라고 합니다.</p><p><img src="https://www.hi-ib.com/img/academy/systemtrade/ac020906_03img03.gif" alt="정배열"><br><img src="https://www.hi-ib.com/img/academy/systemtrade/ac020906_03img07.gif" alt="역배열"></p><p>단기-중기-장기 이평선이 나란히 상승 중(<strong>정배열</strong>)이면 상승 추세가 지속되는 것으로 보고, 반대로 장기-중기-단기 이평선이 나란히 하락 중(<strong>역배열</strong>)이면 하락 추세가 지속되는 것으로 봅니다. 특히 장단기 이평선이 모두 수렴했다가 한쪽으로 크게 가격이 변동하는 경우에는 강한 추세가 생겨나는 것으로 볼 수 있습니다.</p><p><img src="https://www.hi-ib.com/img/academy/systemtrade/ac020906_03img02.gif" alt="매입 신호"><br><img src="https://www.hi-ib.com/img/academy/systemtrade/ac020906_03img06.gif" alt="매도 신호"></p><p>그리고 장기 이평선은 강한 <strong>저항선</strong> 또는 <strong>지지선</strong>이 됩니다. 올라가려고 하면 저항선이 되어서 올라가는 것을 막지만, 뚫리면 지지선이 되어 내려가는 것을 막아줍니다. 주가가 이평선을 반복해서 돌파하려고 하면 결국 뚫린다고 하는데요, 그래서 '주가가 올라갈 자리에서 안올라가면 떨어지고, 떨어질 자리에서 안떨어지면 올라간다’는 말이 있습니다.</p><p><img src="https://www.newiki.net/w/images/thumb/d/d4/Dead_cat_bounce_dow_jones_2020_march.png/450px-Dead_cat_bounce_dow_jones_2020_march.png" alt="데드 캣 바운스 패턴"></p><p>그렇다면 <strong>골든 크로스에서는 무조건 매수하고, 데드 크로스에서는 무조건 매도하면 될까요? 그렇게 쉽지만은 않습니다.</strong> 중장기적으로 상승장에서 데드 크로스가 나온다면 건강한 조정으로 보고 매수에 들어갈 수 있습니다. 반대로 하락장에서 골든 크로스가 나온다면 데드캣(초단기 반등)으로 보고 매도 시점으로 볼 수 있습니다. 따라서 여러 시점에서 다양한 관점으로 확인해보는 것이 좋습니다.</p><p>그런데 저 기간은 어떻게 산정된 것일까요? <strong>주식장이 주 5일이기 때문입니다.</strong> 1주, 2주, 1달, 3달, 6달 이런 식으로 계산된 것입니다. 그런데 코인 시장의 경우에는 쉬는 날이 없잖아요? 그래서 이 선을 그대로 써도 될 지 의문이 듭니다.</p><p><img src="ma.png" alt="코인에 맞춘 이동평균선"></p><p>그래서 제 마음대로 5일 기준이 아니라 7일 기준으로 바꿔봤습니다. 물론 유의미한 차이는 없어보이긴 합니다.</p><p>정리해보겠습니다.</p><ol><li>단기선은 단기 추세, 장기선은 장기 추세를 나타낸다</li><li>골든 크로스는 강세 전환, 데드 크로스는 약세 전환을 나타낸다</li><li>이동평균선이 정배열이면 상승추세</li><li>이동평균선이 수렴 후 펼쳐질 때 장기선 위에서 캔들이 형성될 경우 상승 기대</li><li>이동평균선이 역배열이면 하락추세</li><li>상승 추세 중에서 반복해서 20일 선 아래에서 캔들이 마감된다면 하락 위험</li><li>이동평균선을 자꾸 두드리면 뚫린다</li><li>이동평균선은 저항선이자 지지선이 된다</li><li>반드시 다양한 시점에서 확인하자</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;여러가지 지표가 있지만, 가장 기본적이면서 신뢰할 수 있는 지표는 *</summary>
+      
+    
+    
+    
+    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
+    
+    <category term="시스템 트레이딩" scheme="https://futurecreator.github.io/categories/Investing/%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%94%A9/"/>
+    
+    
+    <category term="비트코인" scheme="https://futurecreator.github.io/tags/%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8/"/>
+    
+    <category term="투자" scheme="https://futurecreator.github.io/tags/%ED%88%AC%EC%9E%90/"/>
+    
+    <category term="주식" scheme="https://futurecreator.github.io/tags/%EC%A3%BC%EC%8B%9D/"/>
+    
+    <category term="지표" scheme="https://futurecreator.github.io/tags/%EC%A7%80%ED%91%9C/"/>
+    
+    <category term="이동평균선" scheme="https://futurecreator.github.io/tags/%EC%9D%B4%EB%8F%99%ED%8F%89%EA%B7%A0%EC%84%A0/"/>
+    
+    <category term="골든크로스" scheme="https://futurecreator.github.io/tags/%EA%B3%A8%EB%93%A0%ED%81%AC%EB%A1%9C%EC%8A%A4/"/>
+    
+    <category term="데드크로스" scheme="https://futurecreator.github.io/tags/%EB%8D%B0%EB%93%9C%ED%81%AC%EB%A1%9C%EC%8A%A4/"/>
+    
+    <category term="데드캣" scheme="https://futurecreator.github.io/tags/%EB%8D%B0%EB%93%9C%EC%BA%A3/"/>
+    
+    <category term="추세" scheme="https://futurecreator.github.io/tags/%EC%B6%94%EC%84%B8/"/>
+    
+  </entry>
   
   <entry>
     <title>동적자산배분의 치명적인 단점</title>
@@ -691,34 +733,6 @@
     <category term="서평" scheme="https://futurecreator.github.io/tags/%EC%84%9C%ED%8F%89/"/>
     
     <category term="백만장자" scheme="https://futurecreator.github.io/tags/%EB%B0%B1%EB%A7%8C%EC%9E%A5%EC%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>당신이 트레이딩 뷰 파인 스크립트를 배워야할 이유 (Pine Script v5)</title>
-    <link href="https://futurecreator.github.io/2022/11/10/why-learn-pine-script-v5/"/>
-    <id>https://futurecreator.github.io/2022/11/10/why-learn-pine-script-v5/</id>
-    <published>2022-11-10T10:54:40.000Z</published>
-    <updated>2022-11-10T12:46:08.644Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근에 파이썬으로 변동성 돌파 전략을 응용한 자동 매매 봇을 만들었습니다. 업비트 API로 웹소켓을 연결하고 실시간 데이터를 받고 정해진 전략에 따라 매매하는 구조입니다. 테스트겸 며칠 돌렸는데 요즘 장이 안좋아서 큰 재미는 보지 못했습니다. 파이썬은 몇번 쓱 보긴 했지만 개발에는 처음 사용해봤는데, 참 쉬우면서도 재미있는 언어였습니다. 덕분에 오랜만에 즐겁게 개발했네요.</p><p>문제는 백테스트(Backtest)였습니다. 백테스트는 과거 가격 데이터를 이용해서 현재 로직을 검증해보는 것을 말합니다. 지금도 변동성 돌파를 기반으로 한 전략들이 잘 먹힐지, 최근의 하락장에서는 어떤 모습을 보일지 직접 테스트해보고 싶은데 생각보다 쉽지 않았습니다. 과거 데이터를 받아다가 돌려봐야하는데, 전략을 계속 수정하고 로직이 복잡해지다보니까 이게 생각보다 어렵더군요. 공수도 많이 들구요.</p><p>그러던 차에 좋은 툴을 발견했습니다. 투자를 해보신 분들이라면 <a href="https://kr.tradingview.com/">트레이딩뷰(TradingView)</a>에 대해서 들어보셨을 겁니다. 실제로 많은 분들이 사용하고 계신 차트 서비스인데요. 예전에 처음 접했을 때는 그냥 차트에 그림 그리고 관점 공유하는 서비스 정도로만 생각했는데, 그게 아니었네요. 차트를 대고 스크립트를 짜서 직접 돌려볼 수 있는 엄청난 기능이 있었습니다.</p><p><img src="tradingview.png" alt="트레이딩뷰 차트와 백테스트 화면"></p><p>이때 사용하는 언어가 파인 스크립트(Pine Script)입니다. RSI, MACD, BB 같이 사용자가 직접 코딩해서 나만의 지표(indicator)를 그려볼 수 있고, 더 나아가 언제 매수하고 매도할지 전략(strategy)을 짜서 수익이 얼마나 나올지 백테스트까지 할 수 있었습니다. 여기에 알림을 발생시켜서 웹훅으로 쏠 수도 있다니, 왜 이걸 이제야 알았는지 아쉬울 정도입니다.</p><p>트레이딩뷰에서 API 문서를 보면서 익히고 변동성 돌파, 동적자산배분 등을 직접 테스트해봤습니다. 여러가지 아이디어들을 바로바로 코드와 기간을 수정하면서 테스트할 수 있다는게 놀라웠습니다. 진입 지점을 캐치해서 알림을 생성하고, 웹훅을 쏴서 텔레그램을 통해 시그널을 보내거나, 별도로 웹훅 서버를 만들어서 자동매매봇을 만들 수도 있습니다. 이 과정을 파이썬으로 전부 짜는 방법과는 일장일단이 있을 것 같네요.</p><p>무엇보다 파인스크립트는 쉽고 심플한 언어입니다. 다만 처음에 시작할 때 차트와 함께 쓴다는 점 때문에 알아야할 것들이 좀 있는데, 찾아보니 한글로 된 자료는 그렇게 많지 않았습니다. 그래서 블로그에 파인 스크립트와 전략 만들기에 대한 내용을 연재해보려고 합니다.</p><p>코딩을 할 줄 알면서 나만의 전략을 만들고 싶은 분들이나, 아이디어는 있는데 코드로 구현하고 싶으신 분들 등 수요는 분명히 있을 것 같습니다. 간단한 도구이기 때문에 코딩 왕초보 분들도 가능하실 것 같고, 오히려 차트에 대한 지식과 아이디어, 투자 경험 등이 파인 스크립트를 활용해서 돈을 벌기에 더 중요할 것 같습니다.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;최근에 파이썬으로 변동성 돌파 전략을 응용한 자동 매매 봇을 만들었습</summary>
-      
-    
-    
-    
-    <category term="Investing" scheme="https://futurecreator.github.io/categories/Investing/"/>
-    
-    <category term="시스템 트레이딩" scheme="https://futurecreator.github.io/categories/Investing/%EC%8B%9C%EC%8A%A4%ED%85%9C-%ED%8A%B8%EB%A0%88%EC%9D%B4%EB%94%A9/"/>
-    
-    
-    <category term="pinescript" scheme="https://futurecreator.github.io/tags/pinescript/"/>
-    
-    <category term="tradingview" scheme="https://futurecreator.github.io/tags/tradingview/"/>
     
   </entry>
   
