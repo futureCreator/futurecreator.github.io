@@ -242,7 +242,7 @@ code {
   padding: 3px 5px;
   font-size: 0.8em;
   border-radius: 2px;
-  font-family: 'IBM Plex Mono', NanumSquareRound, Consolas;
+  font-family: 'IBM Plex Mono', 'Noto Sans KR', Consolas;
   background-color: #f8f8f8;
 }
 .container {
@@ -1756,7 +1756,7 @@ i.icon:before {
   overflow-x: auto;
   padding: 15px 20px;
   font-size: 14px;
-  font-family: 'IBM Plex Mono', NanumSquareRound, Consolas;
+  font-family: 'IBM Plex Mono', 'Noto Sans KR', Consolas;
   line-height: 23.8px;
 }
 .highlight table {
