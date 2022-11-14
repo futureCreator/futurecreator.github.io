@@ -4,24 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
+ -->
     
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-    
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-    
-    <title>
-        
-        변경된 MySQL 설치 방법 (5.7 이상) |
-        
-        Eric Han&#39;s IT Blog
-    </title>
-    
-    <meta name="description" content="요즘 ansible 로 MySQL 프로비저닝 스크립트를 짜고 있습니다. 기존 작성되어 있던 MariaDB 스크립트를 참고해서 작성 중인데 MySQL 에서는 동작하지 않는 부분이 좀 있었습니다. 아무래도 둘이 비슷하다고는 해도 각자 버전 업이 계속 되면서 차이점이 생긴 것 같습니다. 이번 포스팅에서는 Unix&#x2F;Linux  시스템에 바이너리 파일을 이용해서 설">
+            
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff.css">
+
+                
+                    <title>
+                        
+                            변경된 MySQL 설치 방법 (5.7 이상) |
+                                
+                                    Eric Han&#39;s IT Blog
+                    </title>
+                    
+                                <meta name="description" content="요즘 ansible 로 MySQL 프로비저닝 스크립트를 짜고 있습니다. 기존 작성되어 있던 MariaDB 스크립트를 참고해서 작성 중인데 MySQL 에서는 동작하지 않는 부분이 좀 있었습니다. 아무래도 둘이 비슷하다고는 해도 각자 버전 업이 계속 되면서 차이점이 생긴 것 같습니다. 이번 포스팅에서는 Unix&#x2F;Linux  시스템에 바이너리 파일을 이용해서 설">
 <meta property="og:type" content="article">
 <meta property="og:title" content="변경된 MySQL 설치 방법 (5.7 이상)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/index.html">
@@ -39,22 +42,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-    
-    <link rel="canonical" href="https://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/">
-    
-    
-    <link rel="icon" href="/images/favicions/favicon6.png">
-    
-    
+                                    
+                                        <link rel="canonical" href="https://futurecreator.github.io/2018/08/01/installation-mysql-5-7-binary-tar-gz/">
+                                            
+                                                    
+                                                        <link rel="icon" href="/images/favicions/favicon6.png">
+                                                        
+                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-    
+                                                                
 <link rel="stylesheet" href="/css/style.css">
 
-    
+                                                                    
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-    
+                                                                        
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -79,7 +82,7 @@ ga('send', 'pageview');
     
     
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -87,7 +90,7 @@ ga('send', 'pageview');
     });
   </script>
 
-    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

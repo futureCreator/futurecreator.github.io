@@ -4,24 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
+ -->
     
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-    
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-    
-    <title>
-        
-        마이크로서비스 Microservices (6) 배포 전략 |
-        
-        Eric Han&#39;s IT Blog
-    </title>
-    
-    <meta name="description" content="마이크로서비스 배포 전략 모놀리식 애플리케이션은 통째로 배포되기 때문에 애플리케이션 복사본을 여러 개 실행하는 형식으로 배포합니다. 따라서 N개의 서버에 M개의 애플리케이션 인스턴스가 실행됩니다. 마이크로서비스 배포에 비하면 단순하죠. 마이크로서비스 애플리케이션은 수십에서 수백 개의 서비스로 이루어져 있습니다. 각 서비스는 다양한 언어와 프레임워크로 만들어">
+            
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff.css">
+
+                
+                    <title>
+                        
+                            마이크로서비스 Microservices (6) 배포 전략 |
+                                
+                                    Eric Han&#39;s IT Blog
+                    </title>
+                    
+                                <meta name="description" content="마이크로서비스 배포 전략 모놀리식 애플리케이션은 통째로 배포되기 때문에 애플리케이션 복사본을 여러 개 실행하는 형식으로 배포합니다. 따라서 N개의 서버에 M개의 애플리케이션 인스턴스가 실행됩니다. 마이크로서비스 배포에 비하면 단순하죠. 마이크로서비스 애플리케이션은 수십에서 수백 개의 서비스로 이루어져 있습니다. 각 서비스는 다양한 언어와 프레임워크로 만들어">
 <meta property="og:type" content="article">
 <meta property="og:title" content="마이크로서비스 Microservices (6) 배포 전략">
 <meta property="og:url" content="https://futurecreator.github.io/2018/10/19/microservices-deployment-strategy/index.html">
@@ -44,22 +47,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-    
-    <link rel="canonical" href="https://futurecreator.github.io/2018/10/19/microservices-deployment-strategy/">
-    
-    
-    <link rel="icon" href="/images/favicions/favicon6.png">
-    
-    
+                                    
+                                        <link rel="canonical" href="https://futurecreator.github.io/2018/10/19/microservices-deployment-strategy/">
+                                            
+                                                    
+                                                        <link rel="icon" href="/images/favicions/favicon6.png">
+                                                        
+                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-    
+                                                                
 <link rel="stylesheet" href="/css/style.css">
 
-    
+                                                                    
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-    
+                                                                        
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -84,7 +87,7 @@ ga('send', 'pageview');
     
     
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -92,7 +95,7 @@ ga('send', 'pageview');
     });
   </script>
 
-    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

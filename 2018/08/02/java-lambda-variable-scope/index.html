@@ -4,24 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
+ -->
     
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-    
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-    
-    <title>
-        
-        Java Lambda (5) 변수 범위 |
-        
-        Eric Han&#39;s IT Blog
-    </title>
-    
-    <meta name="description" content="변수 범위 람다는 새로운 변수 범위를 생성하지 않습니다. 람다 내에서 변수 사용은 둘러싸고 있는 환경의 변수들을 참조합니다. this 나 super 키워드도 마찬가지입니다. 따라서 복잡해지지 않습니다. 아래 예제에서 i 는 단순히 람다를 둘러싸고 있는 클래스의 필드를 가리키게 됩니다. 12345678910111213141516171819public stat">
+            
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff.css">
+
+                
+                    <title>
+                        
+                            Java Lambda (5) 변수 범위 |
+                                
+                                    Eric Han&#39;s IT Blog
+                    </title>
+                    
+                                <meta name="description" content="변수 범위 람다는 새로운 변수 범위를 생성하지 않습니다. 람다 내에서 변수 사용은 둘러싸고 있는 환경의 변수들을 참조합니다. this 나 super 키워드도 마찬가지입니다. 따라서 복잡해지지 않습니다. 아래 예제에서 i 는 단순히 람다를 둘러싸고 있는 클래스의 필드를 가리키게 됩니다. 12345678910111213141516171819public stat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Lambda (5) 변수 범위">
 <meta property="og:url" content="https://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/index.html">
@@ -40,22 +43,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-    
-    <link rel="canonical" href="https://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/">
-    
-    
-    <link rel="icon" href="/images/favicions/favicon6.png">
-    
-    
+                                    
+                                        <link rel="canonical" href="https://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/">
+                                            
+                                                    
+                                                        <link rel="icon" href="/images/favicions/favicon6.png">
+                                                        
+                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-    
+                                                                
 <link rel="stylesheet" href="/css/style.css">
 
-    
+                                                                    
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-    
+                                                                        
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -80,7 +83,7 @@ ga('send', 'pageview');
     
     
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -88,7 +91,7 @@ ga('send', 'pageview');
     });
   </script>
 
-    <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>
