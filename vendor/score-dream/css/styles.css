@@ -1,10 +1,43 @@
 @font-face {
   font-family: 'SCoreDream';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   src: local('SCoreDream'),
     url('../fonts/SCDream3.woff2') format('woff2'),
     url('../fonts/SCDream3.woff') format('woff'),
     url('../fonts/SCDream3.ttf') format('truetype'),
     url('../fonts/SCDream3.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  font-style: normal;
+  font-weight: 400;
+  src: local('SCoreDream'),
+    url('../fonts/SCDream4.woff2') format('woff2'),
+    url('../fonts/SCDream4.woff') format('woff'),
+    url('../fonts/SCDream4.ttf') format('truetype'),
+    url('../fonts/SCDream4.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  font-style: normal;
+  font-weight: 500;
+  src: local('SCoreDream'),
+    url('../fonts/SCDream5.woff2') format('woff2'),
+    url('../fonts/SCDream5.woff') format('woff'),
+    url('../fonts/SCDream5.ttf') format('truetype'),
+    url('../fonts/SCDream5.eot') format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'SCoreDream';
+  font-style: normal;
+  font-weight: 600;
+  src: local('SCoreDream'),
+    url('../fonts/SCDream6.woff2') format('woff2'),
+    url('../fonts/SCDream6.woff') format('woff'),
+    url('../fonts/SCDream6.ttf') format('truetype'),
+    url('../fonts/SCDream6.eot') format('embedded-opentype');
 }
