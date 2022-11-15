@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            SW 라이브러리 버전 제대로 읽기 |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="외부 라이브러리를 사용하면서 버전이 헷갈리는 경우가 있진 않으셨나요? 다음 중 높은 버전은 무엇일까요?   네, 당연히 1.5.15 가 높습니다. 하지만 얼핏 보면 1.5.7 이 더 높아보일 수 있습니다. 버전 넘버는 마치 소수처럼 보여서 소수점 자리 1과 7을 비교하게 되서 그렇습니다. 이번 포스팅에서는 소프트웨어 버전을 구분하는 방식을 살펴보겠습니다.">
+                        SW 라이브러리 버전 제대로 읽기 |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="외부 라이브러리를 사용하면서 버전이 헷갈리는 경우가 있진 않으셨나요? 다음 중 높은 버전은 무엇일까요?   네, 당연히 1.5.15 가 높습니다. 하지만 얼핏 보면 1.5.7 이 더 높아보일 수 있습니다. 버전 넘버는 마치 소수처럼 보여서 소수점 자리 1과 7을 비교하게 되서 그렇습니다. 이번 포스팅에서는 소프트웨어 버전을 구분하는 방식을 살펴보겠습니다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SW 라이브러리 버전 제대로 읽기">
 <meta property="og:url" content="https://futurecreator.github.io/2018/09/09/software-versioning/index.html">
@@ -45,22 +55,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2018/09/09/software-versioning/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2018/09/09/software-versioning/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -85,7 +95,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -93,7 +103,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

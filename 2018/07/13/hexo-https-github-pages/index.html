@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            Hexo HTTPS 적용하기(Github Pages) |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="지난 포스트에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다. Hexo 블로그는 generate 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 GitHub">
+                        Hexo HTTPS 적용하기(Github Pages) |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="지난 포스트에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다. Hexo 블로그는 generate 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 GitHub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo HTTPS 적용하기(Github Pages)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/13/hexo-https-github-pages/index.html">
@@ -41,22 +51,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2018/07/13/hexo-https-github-pages/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2018/07/13/hexo-https-github-pages/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -81,7 +91,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -89,7 +99,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

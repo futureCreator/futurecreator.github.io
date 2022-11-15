@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            CentOS7 JDK 설치 및 버전 관리 |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다. 설치 파일 다운로드 JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다. 다른 방법으로는 웹 상의 파">
+                        CentOS7 JDK 설치 및 버전 관리 |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다. 설치 파일 다운로드 JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다. 다른 방법으로는 웹 상의 파">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS7 JDK 설치 및 버전 관리">
 <meta property="og:url" content="https://futurecreator.github.io/2018/06/05/jdk-installation-for-linux-centos7/index.html">
@@ -40,22 +50,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2018/06/05/jdk-installation-for-linux-centos7/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2018/06/05/jdk-installation-for-linux-centos7/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -80,7 +90,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -88,7 +98,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

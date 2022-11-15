@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            AWS Well-Architected Framework 백서 (번역/요약) |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018&#x2F;06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018&#x2F;07&#x2F;12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
+                        AWS Well-Architected Framework 백서 (번역/요약) |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="이 포스트는 AWS 자격증 스터디에서 AWS Well-Architected Framework 백서(2018&#x2F;06)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다. 마지막 업데이트 : 2018&#x2F;07&#x2F;12  목차  소개  정의 아키텍쳐에 관하여 일반적인 디자인 원칙들   잘 설계된 프레임워크의 5가지 요소  운영 우수성 보안 신뢰">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AWS Well-Architected Framework 백서 (번역&#x2F;요약)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/07/13/aws-well-architected-framework/index.html">
@@ -41,22 +51,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2018/07/13/aws-well-architected-framework/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2018/07/13/aws-well-architected-framework/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -81,7 +91,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -89,7 +99,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

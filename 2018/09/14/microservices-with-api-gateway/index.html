@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            마이크로서비스 Microservices (2) API 게이트웨이 |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="이전 포스트에서 마이크로서비스 아키텍처의 개념을 살펴봤습니다. 이번 포스트에서는 마이크로서비스의 중요한 요소 중 하나인 API 게이트웨이(API Gateway)를 알아보겠습니다. 서비스 직접 호출하기 먼저 대표적인 쇼핑몰 아마존의 모바일 애플리케이션을 예로 들어보겠습니다.  위 화면은 모바일에서 본 아마존 제품 상세 화면입니다. 간단해보이지만, 실제로 이">
+                        마이크로서비스 Microservices (2) API 게이트웨이 |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="이전 포스트에서 마이크로서비스 아키텍처의 개념을 살펴봤습니다. 이번 포스트에서는 마이크로서비스의 중요한 요소 중 하나인 API 게이트웨이(API Gateway)를 알아보겠습니다. 서비스 직접 호출하기 먼저 대표적인 쇼핑몰 아마존의 모바일 애플리케이션을 예로 들어보겠습니다.  위 화면은 모바일에서 본 아마존 제품 상세 화면입니다. 간단해보이지만, 실제로 이">
 <meta property="og:type" content="article">
 <meta property="og:title" content="마이크로서비스 Microservices (2) API 게이트웨이">
 <meta property="og:url" content="https://futurecreator.github.io/2018/09/14/microservices-with-api-gateway/index.html">
@@ -42,22 +52,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2018/09/14/microservices-with-api-gateway/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2018/09/14/microservices-with-api-gateway/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -82,7 +92,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -90,7 +100,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

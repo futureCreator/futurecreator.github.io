@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기 |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="알고리즘을 풀거나 프로그래밍 면접을 할 때 빅 오 분석법 (Big-O Analysis) 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다. 주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 compareToMax">
+                        빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기 |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="알고리즘을 풀거나 프로그래밍 면접을 할 때 빅 오 분석법 (Big-O Analysis) 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다. 주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 compareToMax">
 <meta property="og:type" content="article">
 <meta property="og:title" content="빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기">
 <meta property="og:url" content="https://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/index.html">
@@ -41,22 +51,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -81,7 +91,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -89,7 +99,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>

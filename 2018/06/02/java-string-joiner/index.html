@@ -4,24 +4,34 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+    <style type="text/css">
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: local('S-CoreDream-3Light'),
+                url(/fonts/SCDream3.woff2) format('woff2'),
+                url(/fonts/SCDream3.woff) format('woff'),
+                url(/fonts/SCDream3.ttf) format('truetype'),
+                url(/fonts/SCDream3.eot) format('embedded-opentype'),
+        }
+    </style>
+    <!-- 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700.css">
-
-        
+ -->
+    
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono.css">
 
-            
+        
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie.css">
 
-                
-                    <title>
-                        
-                            Java StringJoiner (문자열 구분자 붙이기) |
-                                
-                                    Eric Han&#39;s IT Blog
-                    </title>
+            
+                <title>
                     
-                                <meta name="description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
+                        Java StringJoiner (문자열 구분자 붙이기) |
+                            
+                                Eric Han&#39;s IT Blog
+                </title>
+                
+                            <meta name="description" content="StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다. StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java StringJoiner (문자열 구분자 붙이기)">
 <meta property="og:url" content="https://futurecreator.github.io/2018/06/02/java-string-joiner/index.html">
@@ -39,22 +49,22 @@
 <meta name="twitter:creator" content="@HODL_BSC">
 <meta property="fb:admins" content="100001774570174">
 <meta property="fb:app_id" content="1652051021784453">
-                                    
-                                        <link rel="canonical" href="https://futurecreator.github.io/2018/06/02/java-string-joiner/">
-                                            
+                                
+                                    <link rel="canonical" href="https://futurecreator.github.io/2018/06/02/java-string-joiner/">
+                                        
+                                                
+                                                    <link rel="icon" href="/images/favicions/favicon6.png">
                                                     
-                                                        <link rel="icon" href="/images/favicions/favicon6.png">
                                                         
-                                                            
 <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
 
-                                                                
+                                                            
 <link rel="stylesheet" href="/css/style.css">
 
-                                                                    
+                                                                
 <script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
 
-                                                                        
+                                                                    
     
         
 <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
@@ -79,7 +89,7 @@ ga('send', 'pageview');
     
     
 
-                                                                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({
       google_ad_client: "ca-pub-2948714191026958",
@@ -87,7 +97,7 @@ ga('send', 'pageview');
     });
   </script>
 
-                                                                                <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
+                                                                            <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>
