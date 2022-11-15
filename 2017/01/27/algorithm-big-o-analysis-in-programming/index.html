@@ -193,33 +193,33 @@ ga('send', 'pageview');
 </script>
 
                             <article id="post-algorithm-big-o-analysis-in-programming" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
     
         <h1 class="article-title" itemprop="name">
         빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기
         </h1>
     
 
-            </header>
-            
-                <div class="article-subtitle">
-                    🗓
-                    <a href="/2017/01/27/algorithm-big-o-analysis-in-programming/" class="article-date">
+    </header>
+    
+    <div class="article-subtitle">
+      🗓
+      <a href="/2017/01/27/algorithm-big-o-analysis-in-programming/" class="article-date">
     <time datetime="2017-01-27T11:00:20.000Z" itemprop="datePublished">2017/01/27</time>
 </a>
-                        <!-- 
+      <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-O/" rel="tag">Big-O</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/programming/" rel="tag">programming</a></li></ul>
  -->
-                        <span class="reading-time">⏰ 소요시간
-                            11 분
-                        </span>
-                </div>
+      <span class="reading-time">⏰ 소요시간
+        11 분
+      </span>
+    </div>
 
-                <div class="article-entry" itemprop="articleBody">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>알고리즘을 풀거나 프로그래밍 면접을 할 때 <strong>빅 오 분석법 (<em>Big-O Analysis</em>)</strong> 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다.</p>
+    <div class="article-entry" itemprop="articleBody">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>알고리즘을 풀거나 프로그래밍 면접을 할 때 <strong>빅 오 분석법 (<em>Big-O Analysis</em>)</strong> 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다.</p>
 <p>주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 <code>compareToMax</code> 는 최대값을 하나 정해놓고 다른 값들과 최대값을 비교해나가는 알고리즘입니다.</p>
 <figure class="highlight java"><figcaption><span>compareToMax</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">compareToMax</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> n = arr.length;</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 배열에 원소없는 경우 -1 리턴</span></span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 배열 첫번째 값을 최대값으로 설정</span></span><br><span class="line">    max = arr[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 모든 값을 최대값과 비교</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt; max) &#123;</span><br><span class="line">            max = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>두번째 알고리즘 <code>compareToAll</code> 은 최대값 하나와 비교하는 것이 아니라 배열 내 각 원소들과 비교해서 최대값 여부를 판단하는 알고리즘입니다.</p>
@@ -303,28 +303,28 @@ ga('send', 'pageview');
 <h2 id="정리">정리</h2>
 <p>빅 오 분석법을 이용하면 알고리즘의 문제를 풀 때 풀고나서 알고리즘의 성능을 간단하게 예측해볼 수 있습니다. 프로그래밍 면접 시 알고리즘 문제를 풀 때도 면접관이 제시한 풀이에 대해 성능을 물어본 경우에도 빅 오 분석법을 이용해 대답할 수 있습니다. 그리고 알고리즘은 초선형 시간 이상의 성능을 갖는 알고리즘을 사용하는 것이 좋습니다.</p>
 
-                </div>
+    </div>
 
-                <!-- <div id="bmc" align="center">
+    <!-- <div id="bmc" align="center">
                     <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
                         <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
                         <span style="margin-left:5px">Buy me a coffee</span></a>
                 </div> -->
-                <div id="binance" align="center">
-                    <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
-                        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral">
-                    </a>
-                </div>
+    <div id="binance" align="center">
+      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
+        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
+      </a>
+    </div>
 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                    <footer class="article-footer">
-                        
+    <footer class="article-footer">
+      
 
 
     <div class="a2a_kit a2a_default_style">
@@ -381,8 +381,8 @@ ga('send', 'pageview');
 </style>
 
 
-                    </footer>
-    </div>
+    </footer>
+  </div>
 </article>
 
     <section id="comments">

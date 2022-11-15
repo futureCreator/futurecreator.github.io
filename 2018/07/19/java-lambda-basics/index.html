@@ -192,33 +192,33 @@ ga('send', 'pageview');
 </script>
 
                             <article id="post-java-lambda-basics" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
     
         <h1 class="article-title" itemprop="name">
         Java Lambda (1) 기본
         </h1>
     
 
-            </header>
-            
-                <div class="article-subtitle">
-                    🗓
-                    <a href="/2018/07/19/java-lambda-basics/" class="article-date">
+    </header>
+    
+    <div class="article-subtitle">
+      🗓
+      <a href="/2018/07/19/java-lambda-basics/" class="article-date">
     <time datetime="2018-07-19T11:36:31.000Z" itemprop="datePublished">2018/07/19</time>
 </a>
-                        <!-- 
+      <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basics/" rel="tag">basics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li></ul>
  -->
-                        <span class="reading-time">⏰ 소요시간
-                            23 분
-                        </span>
-                </div>
+      <span class="reading-time">⏰ 소요시간
+        23 분
+      </span>
+    </div>
 
-                <div class="article-entry" itemprop="articleBody">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스트부터 Java 8 에서 새로 도입된 람다(<em>Lambda</em>)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다.</p>
+    <div class="article-entry" itemprop="articleBody">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스트부터 Java 8 에서 새로 도입된 람다(<em>Lambda</em>)와 Java 9 의 모듈 프로그래밍까지 쭉 다뤄보려고 합니다. 사실 람다도 몇 번 사용해보면 쉽게 익숙해질 수 있는 기술이지만, 내부적인 동작 원리까지 알아보려고 합니다.</p>
 <h2 id="Lambda">Lambda</h2>
 <p>람다 대수는 1930년대 알론조 처치Alonzo Church가 소개한 함수의 수학적 표기 방식입니다. 람대 대수는 함수를 사용해 수학을 탐구하는 방식이었습니다. 이러한 방식은 리스프에서 람다 함수를 적용한 이후로 프로그래밍 분야에서도 발전해왔습니다.</p>
 <figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 수학에서의 람다 대수 표현식</span><br><span class="line"># x 인자를 받아서 더하는 함수(람다)</span><br><span class="line">λx.x+1</span><br><span class="line"></span><br><span class="line"># Lisp 람다 표현식</span><br><span class="line"># x 인자를 받아서 더하는 함수(람다)</span><br><span class="line">(<span class="name">lambda</span> (<span class="name">arg</span>) (<span class="name">+</span> arg <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
@@ -289,28 +289,28 @@ ga('send', 'pageview');
 <a href="/2018/08/09/java-lambda-and-closure/" title="Java Lambda (7) 람다와 클로저">Java Lambda (7) 람다와 클로저</a></li>
 </ul>
 
-                </div>
+    </div>
 
-                <!-- <div id="bmc" align="center">
+    <!-- <div id="bmc" align="center">
                     <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
                         <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
                         <span style="margin-left:5px">Buy me a coffee</span></a>
                 </div> -->
-                <div id="binance" align="center">
-                    <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
-                        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral">
-                    </a>
-                </div>
+    <div id="binance" align="center">
+      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
+        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
+      </a>
+    </div>
 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                    <footer class="article-footer">
-                        
+    <footer class="article-footer">
+      
 
 
     <div class="a2a_kit a2a_default_style">
@@ -367,8 +367,8 @@ ga('send', 'pageview');
 </style>
 
 
-                    </footer>
-    </div>
+    </footer>
+  </div>
 </article>
 
     <section id="comments">

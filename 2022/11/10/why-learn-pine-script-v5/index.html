@@ -191,33 +191,33 @@ ga('send', 'pageview');
 </script>
 
                             <article id="post-why-learn-pine-script-v5" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
     
         <h1 class="article-title" itemprop="name">
         당신이 트레이딩 뷰 파인 스크립트를 배워야할 이유 (Pine Script v5)
         </h1>
     
 
-            </header>
-            
-                <div class="article-subtitle">
-                    🗓
-                    <a href="/2022/11/10/why-learn-pine-script-v5/" class="article-date">
+    </header>
+    
+    <div class="article-subtitle">
+      🗓
+      <a href="/2022/11/10/why-learn-pine-script-v5/" class="article-date">
     <time datetime="2022-11-10T10:54:40.000Z" itemprop="datePublished">2022/11/10</time>
 </a>
-                        <!-- 
+      <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pinescript/" rel="tag">pinescript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tradingview/" rel="tag">tradingview</a></li></ul>
  -->
-                        <span class="reading-time">⏰ 소요시간
-                            2 분
-                        </span>
-                </div>
+      <span class="reading-time">⏰ 소요시간
+        2 분
+      </span>
+    </div>
 
-                <div class="article-entry" itemprop="articleBody">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근에 파이썬으로 변동성 돌파 전략을 응용한 자동 매매 봇을 만들었습니다. 업비트 API로 웹소켓을 연결하고 실시간 데이터를 받고 정해진 전략에 따라 매매하는 구조입니다. 테스트겸 며칠 돌렸는데 요즘 장이 안좋아서 큰 재미는 보지 못했습니다. 파이썬은 몇번 쓱 보긴 했지만 개발에는 처음 사용해봤는데, 참 쉬우면서도 재미있는 언어였습니다. 덕분에 오랜만에 즐겁게 개발했네요.</p>
+    <div class="article-entry" itemprop="articleBody">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근에 파이썬으로 변동성 돌파 전략을 응용한 자동 매매 봇을 만들었습니다. 업비트 API로 웹소켓을 연결하고 실시간 데이터를 받고 정해진 전략에 따라 매매하는 구조입니다. 테스트겸 며칠 돌렸는데 요즘 장이 안좋아서 큰 재미는 보지 못했습니다. 파이썬은 몇번 쓱 보긴 했지만 개발에는 처음 사용해봤는데, 참 쉬우면서도 재미있는 언어였습니다. 덕분에 오랜만에 즐겁게 개발했네요.</p>
 <p>문제는 백테스트(Backtest)였습니다. 백테스트는 과거 가격 데이터를 이용해서 현재 로직을 검증해보는 것을 말합니다. 지금도 변동성 돌파를 기반으로 한 전략들이 잘 먹힐지, 최근의 하락장에서는 어떤 모습을 보일지 직접 테스트해보고 싶은데 생각보다 쉽지 않았습니다. 과거 데이터를 받아다가 돌려봐야하는데, 전략을 계속 수정하고 로직이 복잡해지다보니까 이게 생각보다 어렵더군요. 공수도 많이 들구요.</p>
 <p>그러던 차에 좋은 툴을 발견했습니다. 투자를 해보신 분들이라면 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://kr.tradingview.com/">트레이딩뷰(TradingView)</a>에 대해서 들어보셨을 겁니다. 실제로 많은 분들이 사용하고 계신 차트 서비스인데요. 예전에 처음 접했을 때는 그냥 차트에 그림 그리고 관점 공유하는 서비스 정도로만 생각했는데, 그게 아니었네요. 차트를 대고 스크립트를 짜서 직접 돌려볼 수 있는 엄청난 기능이 있었습니다.</p>
 <p><img src="tradingview.png" alt="트레이딩뷰 차트와 백테스트 화면"></p>
@@ -226,28 +226,28 @@ ga('send', 'pageview');
 <p>무엇보다 파인스크립트는 쉽고 심플한 언어입니다. 다만 처음에 시작할 때 차트와 함께 쓴다는 점 때문에 알아야할 것들이 좀 있는데, 찾아보니 한글로 된 자료는 그렇게 많지 않았습니다. 그래서 블로그에 파인 스크립트와 전략 만들기에 대한 내용을 연재해보려고 합니다.</p>
 <p>코딩을 할 줄 알면서 나만의 전략을 만들고 싶은 분들이나, 아이디어는 있는데 코드로 구현하고 싶으신 분들 등 수요는 분명히 있을 것 같습니다. 간단한 도구이기 때문에 코딩 왕초보 분들도 가능하실 것 같고, 오히려 차트에 대한 지식과 아이디어, 투자 경험 등이 파인 스크립트를 활용해서 돈을 벌기에 더 중요할 것 같습니다.</p>
 
-                </div>
+    </div>
 
-                <!-- <div id="bmc" align="center">
+    <!-- <div id="bmc" align="center">
                     <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
                         <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
                         <span style="margin-left:5px">Buy me a coffee</span></a>
                 </div> -->
-                <div id="binance" align="center">
-                    <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
-                        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral">
-                    </a>
-                </div>
+    <div id="binance" align="center">
+      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
+        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
+      </a>
+    </div>
 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                    <footer class="article-footer">
-                        
+    <footer class="article-footer">
+      
 
 
     <div class="a2a_kit a2a_default_style">
@@ -304,8 +304,8 @@ ga('send', 'pageview');
 </style>
 
 
-                    </footer>
-    </div>
+    </footer>
+  </div>
 </article>
 
     <section id="comments">

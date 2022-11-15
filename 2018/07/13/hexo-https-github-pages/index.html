@@ -193,33 +193,33 @@ ga('send', 'pageview');
 </script>
 
                             <article id="post-hexo-https-github-pages" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
     
         <h1 class="article-title" itemprop="name">
         Hexo HTTPS 적용하기(Github Pages)
         </h1>
     
 
-            </header>
-            
-                <div class="article-subtitle">
-                    🗓
-                    <a href="/2018/07/13/hexo-https-github-pages/" class="article-date">
+    </header>
+    
+    <div class="article-subtitle">
+      🗓
+      <a href="/2018/07/13/hexo-https-github-pages/" class="article-date">
     <time datetime="2018-07-12T15:16:54.000Z" itemprop="datePublished">2018/07/13</time>
 </a>
-                        <!-- 
+      <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pages/" rel="tag">pages</a></li></ul>
  -->
-                        <span class="reading-time">⏰ 소요시간
-                            6 분
-                        </span>
-                </div>
+      <span class="reading-time">⏰ 소요시간
+        6 분
+      </span>
+    </div>
 
-                <div class="article-entry" itemprop="articleBody">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>지난 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.</p>
+    <div class="article-entry" itemprop="articleBody">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>지난 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.</p>
 <p>Hexo 블로그는 <code>generate</code> 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://pages.github.com/">GitHub Pages</a> 입니다. 저도 처음에 접근하기 쉽고 <code>github.io</code> 도메인이 좋아서 github pages 로 시작했습니다. 다른 포스트에서 차차 다른 호스팅 방식도 다뤄보려고 합니다(<em>Netlify, Gitlab pages</em> 등).</p>
 <h2 id="HTTPS">HTTPS</h2>
 <p>HTTPS에 대해서는 이전 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서 자세히 살펴봤습니다. SSL 인증서와 암호화를 통해 클라이언트와 웹 서버 간 안전하게 통신할 수 있는 기술로 누출되면 위험한 정보를 다룰 때 사용합니다.</p>
@@ -254,28 +254,28 @@ ga('send', 'pageview');
 <a href="/2018/06/11/generate-an-emoji-favicon/" title="이모지로 파비콘 Favicon 만들기">이모지로 파비콘 Favicon 만들기</a><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ko#browser-behavior-with-mixed-content">혼합 콘텐츠란?</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div></li>
 </ul>
 
-                </div>
+    </div>
 
-                <!-- <div id="bmc" align="center">
+    <!-- <div id="bmc" align="center">
                     <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
                         <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
                         <span style="margin-left:5px">Buy me a coffee</span></a>
                 </div> -->
-                <div id="binance" align="center">
-                    <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
-                        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral">
-                    </a>
-                </div>
+    <div id="binance" align="center">
+      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
+        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
+      </a>
+    </div>
 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                    <footer class="article-footer">
-                        
+    <footer class="article-footer">
+      
 
 
     <div class="a2a_kit a2a_default_style">
@@ -332,8 +332,8 @@ ga('send', 'pageview');
 </style>
 
 
-                    </footer>
-    </div>
+    </footer>
+  </div>
 </article>
 
     <section id="comments">

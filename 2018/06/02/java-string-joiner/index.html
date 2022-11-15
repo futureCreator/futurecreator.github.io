@@ -191,33 +191,33 @@ ga('send', 'pageview');
 </script>
 
                             <article id="post-java-string-joiner" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
     
         <h1 class="article-title" itemprop="name">
         Java StringJoiner (문자열 구분자 붙이기)
         </h1>
     
 
-            </header>
-            
-                <div class="article-subtitle">
-                    🗓
-                    <a href="/2018/06/02/java-string-joiner/" class="article-date">
+    </header>
+    
+    <div class="article-subtitle">
+      🗓
+      <a href="/2018/06/02/java-string-joiner/" class="article-date">
     <time datetime="2018-06-01T15:34:23.000Z" itemprop="datePublished">2018/06/02</time>
 </a>
-                        <!-- 
+      <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/delimiter/" rel="tag">delimiter</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stringjoiner/" rel="tag">stringjoiner</a></li></ul>
  -->
-                        <span class="reading-time">⏰ 소요시간
-                            8 분
-                        </span>
-                </div>
+      <span class="reading-time">⏰ 소요시간
+        8 분
+      </span>
+    </div>
 
-                <div class="article-entry" itemprop="articleBody">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html">StringJoiner</a> 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.</p>
+    <div class="article-entry" itemprop="articleBody">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html">StringJoiner</a> 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.</p>
 <p>StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(<em>delimiter</em>) 를 지정해줄 수 있는게 특징입니다.</p>
 <h2 id="간단한-예제">간단한 예제</h2>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String first = <span class="string">&quot;관우&quot;</span>;</span><br><span class="line">String second = <span class="string">&quot;장비&quot;</span>;</span><br><span class="line">String third = <span class="string">&quot;조운&quot;</span>;</span><br><span class="line">String fourth = <span class="string">&quot;황충&quot;</span>;</span><br><span class="line">String fifth = <span class="string">&quot;마초&quot;</span>;</span><br></pre></td></tr></table></figure>
@@ -236,28 +236,28 @@ ga('send', 'pageview');
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; 장군들 = Arrays.asList(first, second, third, fourth, fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = 장군들.stream().collect(Collectors.joining(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;[&quot;</span>, <span class="string">&quot;]&quot;</span>));</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
 <p>이처럼 StringJoiner 는 공백이나 구분자를 반복해서 붙여야하는 경우에 유용하게 사용하실 수 있습니다.</p>
 
-                </div>
+    </div>
 
-                <!-- <div id="bmc" align="center">
+    <!-- <div id="bmc" align="center">
                     <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
                         <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
                         <span style="margin-left:5px">Buy me a coffee</span></a>
                 </div> -->
-                <div id="binance" align="center">
-                    <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
-                        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral">
-                    </a>
-                </div>
+    <div id="binance" align="center">
+      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
+        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
+      </a>
+    </div>
 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                    <footer class="article-footer">
-                        
+    <footer class="article-footer">
+      
 
 
     <div class="a2a_kit a2a_default_style">
@@ -314,8 +314,8 @@ ga('send', 'pageview');
 </style>
 
 
-                    </footer>
-    </div>
+    </footer>
+  </div>
 </article>
 
     <section id="comments">

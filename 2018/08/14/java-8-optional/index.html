@@ -191,33 +191,33 @@ ga('send', 'pageview');
 </script>
 
                             <article id="post-java-8-optional" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
+  <div class="article-inner">
+    
+    <header class="article-header">
+      
     
         <h1 class="article-title" itemprop="name">
         Java 8 옵셔널 Optional
         </h1>
     
 
-            </header>
-            
-                <div class="article-subtitle">
-                    🗓
-                    <a href="/2018/08/14/java-8-optional/" class="article-date">
+    </header>
+    
+    <div class="article-subtitle">
+      🗓
+      <a href="/2018/08/14/java-8-optional/" class="article-date">
     <time datetime="2018-08-13T16:09:46.000Z" itemprop="datePublished">2018/08/14</time>
 </a>
-                        <!-- 
+      <!-- 
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/optional/" rel="tag">optional</a></li></ul>
  -->
-                        <span class="reading-time">⏰ 소요시간
-                            14 분
-                        </span>
-                </div>
+      <span class="reading-time">⏰ 소요시간
+        14 분
+      </span>
+    </div>
 
-                <div class="article-entry" itemprop="articleBody">
-                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발할 때 개발자를 괴롭히는 예외 중 하나는 NullPointerException 입니다. NullPointerException 을 피하고 <code>null</code> 체크하는 로직을 줄이기 위해 빈 값일 때 <code>null</code> 대신 초기값을 사용하길 권장하곤 합니다.</p>
+    <div class="article-entry" itemprop="articleBody">
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발할 때 개발자를 괴롭히는 예외 중 하나는 NullPointerException 입니다. NullPointerException 을 피하고 <code>null</code> 체크하는 로직을 줄이기 위해 빈 값일 때 <code>null</code> 대신 초기값을 사용하길 권장하곤 합니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; names = getNames();</span><br><span class="line">names.sort(); <span class="comment">// names 가 null 이라면 NullPointerException 이 일어난다.</span></span><br></pre></td></tr></table></figure>
 <p>자바 8에서는 <code>Optional&lt;T&gt;</code> 클래스를 이용해서 NullPointerException 을 방지할 수 있습니다. <code>Optional&lt;T&gt;</code> 클래스는 한 마디로 <code>null</code> 이 올 수 있는 값을 감싸는 래퍼 클래스로 참조하더라도 <code>null</code> 이 일어나지 않도록 해주는 클래스입니다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">Optional</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// If non-null, the value; if null, indicates no value is present</span></span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">final</span> T value;</span><br><span class="line">  </span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -275,28 +275,28 @@ ga('send', 'pageview');
 <a href="/2018/06/02/java-string-joiner/" title="Java StringJoiner (문자열 구분자 붙이기)">Java StringJoiner (문자열 구분자 붙이기)</a></li>
 </ul>
 
-                </div>
+    </div>
 
-                <!-- <div id="bmc" align="center">
+    <!-- <div id="bmc" align="center">
                     <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
                         <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
                         <span style="margin-left:5px">Buy me a coffee</span></a>
                 </div> -->
-                <div id="binance" align="center">
-                    <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
-                        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral">
-                    </a>
-                </div>
+    <div id="binance" align="center">
+      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby" rel="external nofollow noopener noreferrer">
+        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
+      </a>
+    </div>
 
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- 광고 -->
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-                    <footer class="article-footer">
-                        
+    <footer class="article-footer">
+      
 
 
     <div class="a2a_kit a2a_default_style">
@@ -353,8 +353,8 @@ ga('send', 'pageview');
 </style>
 
 
-                    </footer>
-    </div>
+    </footer>
+  </div>
 </article>
 
     <section id="comments">
