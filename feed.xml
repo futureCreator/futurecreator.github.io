@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Eric Han&#39;s IT Blog</title>
+  <title>The Greate Petsby</title>
   
-  <subtitle>Eric Han&#39;s IT Blog</subtitle>
+  <subtitle>위대한 페츠비의 투자와 프로그래밍</subtitle>
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://futurecreator.github.io/</id>
   
   <author>
-    <name>Eric Han</name>
+    <name>theGreatePetsby</name>
     
   </author>
   
