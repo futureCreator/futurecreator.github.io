@@ -92,7 +92,7 @@ ga('send', 'pageview');
   </script>
 
   <meta name="naver-site-verification" content="5bca99e367b23b178c4d82aea38327d48a155f92">
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
 <body>
     <div id="wrap">
@@ -421,7 +421,7 @@ ga('send', 'pageview');
 <figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line"><span class="attr">post_asset_folder:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 <p>위와 같이 _config.yml 에서 설정을 변경하면 <code>$ hexo new [layout] &lt;title&gt;</code> 커맨드로 새 글을 생성할 때마다 함께 폴더가 생성됩니다.</p>
 <p>그러면 그 폴더 안에 이미지 등을 넣고 절대 경로가 아닌 상대경로로 바로 접근 가능합니다. 기존에 <code>/images/~~/example.png</code> 라고 접속했다면, 이제는 ‘example.png’ 라고 바로 접근할 수 있게 됩니다.</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](example.png)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](<span class="link">example.png</span>)</span><br></pre></td></tr></table></figure>
 <p>테스트 해보면 잘 되실겁니다. 하지만 문제는 그냥 포스트 상에서는 되지만 카테고리, 태그, 어카이브 등으로 해당 포스트를 접속할 경우 url 이 달라져서 이미지에 접근이 안됩니다. 이럴 때는 마크다운 문법으로 접근하면 안되고 <a href="http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/">태그 플러그인 포스트</a> 에서 살펴봤던 자원 삽입 태그를 이용해야 합니다.</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
 <p>따라서 위의 예제는 이렇게 해야 제대로 나옵니다.</p>
