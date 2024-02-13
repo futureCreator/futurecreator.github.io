@@ -12,31 +12,6 @@
     
     Eric Han&#39;s IT Blog
   </title>
-  <!-- 
-  <meta name="description" content="서버리스(Serverless)하면 대부분 AWS Lambda 를 떠올리곤 합니다. 하지만 서버리스는 단순히 FaaS(Function-as-a-Service)만을 의미하지는 않습니다. 이번 포스트에서는 서버리스 아키텍처에 대한 개념과 키워드를 정리하고, FaaS 의 내부 구조를 살펴봅니다. Serverless 서버리스는 말 그대로 ‘서버(Server)가 없다">
-<meta property="og:type" content="article">
-<meta property="og:title" content="서버리스 Serverless 아키텍처 파헤치기">
-<meta property="og:url" content="https://futurecreator.github.io/2019/03/14/serverless-architecture/index.html">
-<meta property="og:site_name" content="Eric Han&#39;s IT Blog">
-<meta property="og:description" content="서버리스(Serverless)하면 대부분 AWS Lambda 를 떠올리곤 합니다. 하지만 서버리스는 단순히 FaaS(Function-as-a-Service)만을 의미하지는 않습니다. 이번 포스트에서는 서버리스 아키텍처에 대한 개념과 키워드를 정리하고, FaaS 의 내부 구조를 살펴봅니다. Serverless 서버리스는 말 그대로 ‘서버(Server)가 없다">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="article:published_time" content="2019-03-13T15:38:26.000Z">
-<meta property="article:modified_time" content="2019-03-13T15:39:19.000Z">
-<meta property="article:author" content="Eric Han">
-<meta property="article:tag" content="aws">
-<meta property="article:tag" content="lambda">
-<meta property="article:tag" content="cloud">
-<meta property="article:tag" content="gcp">
-<meta property="article:tag" content="serverless">
-<meta property="article:tag" content="faas">
-<meta property="article:tag" content="serviceful_serverless">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@HODL_BSC">
-<meta property="fb:admins" content="100001774570174">
-<meta property="fb:app_id" content="1652051021784453">
-   -->
   <link rel="canonical" href="https://futurecreator.github.io/2019/03/14/serverless-architecture/">
   
   
@@ -79,14 +54,7 @@ ga('send', 'pageview');
 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2948714191026958",
-      enable_page_level_ads: true
-    });
-  </script>
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
   <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
@@ -180,13 +148,6 @@ ga('send', 'pageview');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
                             <article id="post-serverless-architecture" class="article article-single article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -205,9 +166,6 @@ ga('send', 'pageview');
       <a href="/2019/03/14/serverless-architecture/" class="article-date">
     <time datetime="2019-03-13T15:38:26.000Z" itemprop="datePublished">2019/03/14</time>
 </a>
-      <!-- 
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aws/" rel="tag">aws</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cloud/" rel="tag">cloud</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/faas/" rel="tag">faas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gcp/" rel="tag">gcp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serverless/" rel="tag">serverless</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/serviceful-serverless/" rel="tag">serviceful_serverless</a></li></ul>
- -->
       <span class="reading-time">⏰ 소요시간
         21 분
       </span>
@@ -432,24 +390,6 @@ ga('send', 'pageview');
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">http://www.paulkerrision.co.uk/<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">AWS 에서는 런타임을 직접 만들어서 다양한 언어를 사용할 수 있도록 지원합니다.<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
-    <!-- <div id="bmc" align="center">
-                    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
-                        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-                        <span style="margin-left:5px">Buy me a coffee</span></a>
-                </div> -->
-    <!-- <div id="binance" align="center">
-      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby">
-        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
-      </a>
-    </div> -->
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
     <footer class="article-footer">
       
 
@@ -548,7 +488,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -589,13 +528,6 @@ ga('send', 'pageview');
             
         
     </div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skycrapper -->
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 </aside>
 
                 </div>

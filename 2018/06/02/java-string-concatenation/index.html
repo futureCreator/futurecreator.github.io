@@ -12,29 +12,6 @@
     
     Eric Han&#39;s IT Blog
   </title>
-  <!-- 
-  <meta name="description" content="StringBuilder &#x2F; StringBuffer &#x2F; + 연산자 &#x2F; concat 메소드 Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다. String.concat() Spring 클래스에는 문자열을 이어주는 concat 메소드">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java 문자열 연결 방법 비교">
-<meta property="og:url" content="https://futurecreator.github.io/2018/06/02/java-string-concatenation/index.html">
-<meta property="og:site_name" content="Eric Han&#39;s IT Blog">
-<meta property="og:description" content="StringBuilder &#x2F; StringBuffer &#x2F; + 연산자 &#x2F; concat 메소드 Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다. String.concat() Spring 클래스에는 문자열을 이어주는 concat 메소드">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="article:published_time" content="2018-06-01T15:31:04.000Z">
-<meta property="article:modified_time" content="2018-09-08T05:22:50.000Z">
-<meta property="article:author" content="Eric Han">
-<meta property="article:tag" content="string">
-<meta property="article:tag" content="concat">
-<meta property="article:tag" content="stringbuilder">
-<meta property="article:tag" content="stringbuffer">
-<meta property="article:tag" content="plusoperator">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@HODL_BSC">
-<meta property="fb:admins" content="100001774570174">
-<meta property="fb:app_id" content="1652051021784453">
-   -->
   <link rel="canonical" href="https://futurecreator.github.io/2018/06/02/java-string-concatenation/">
   
   
@@ -77,14 +54,7 @@ ga('send', 'pageview');
 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2948714191026958",
-      enable_page_level_ads: true
-    });
-  </script>
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
   <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
@@ -178,13 +148,6 @@ ga('send', 'pageview');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
                             <article id="post-java-string-concatenation" class="article article-single article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -203,9 +166,6 @@ ga('send', 'pageview');
       <a href="/2018/06/02/java-string-concatenation/" class="article-date">
     <time datetime="2018-06-01T15:31:04.000Z" itemprop="datePublished">2018/06/02</time>
 </a>
-      <!-- 
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/concat/" rel="tag">concat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/plusoperator/" rel="tag">plusoperator</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/string/" rel="tag">string</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stringbuffer/" rel="tag">stringbuffer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/stringbuilder/" rel="tag">stringbuilder</a></li></ul>
- -->
       <span class="reading-time">⏰ 소요시간
         6 분
       </span>
@@ -240,24 +200,6 @@ ga('send', 'pageview');
 </ol>
 
     </div>
-
-    <!-- <div id="bmc" align="center">
-                    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
-                        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-                        <span style="margin-left:5px">Buy me a coffee</span></a>
-                </div> -->
-    <!-- <div id="binance" align="center">
-      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby">
-        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
-      </a>
-    </div> -->
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
     <footer class="article-footer">
       
@@ -357,7 +299,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -398,13 +339,6 @@ ga('send', 'pageview');
             
         
     </div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skycrapper -->
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 </aside>
 
                 </div>

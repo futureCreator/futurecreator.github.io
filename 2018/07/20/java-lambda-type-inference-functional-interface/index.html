@@ -12,28 +12,6 @@
     
     Eric Han&#39;s IT Blog
   </title>
-  <!-- 
-  <meta name="description" content="타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하지 않기 때문에 자바에서의 타입 추론은 제네릭과 람다에 대한 타입 추론을 말합니다. 12345&#x2F;&#x2F; 일반 변수에 대해 타입 추론을 지원하는 스칼라는 타입 생략 가능var name &#x3D; &quot;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java Lambda (2) 타입 추론과 함수형 인터페이스">
-<meta property="og:url" content="https://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/index.html">
-<meta property="og:site_name" content="Eric Han&#39;s IT Blog">
-<meta property="og:description" content="타입 추론 Type Inference 타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하지 않기 때문에 자바에서의 타입 추론은 제네릭과 람다에 대한 타입 추론을 말합니다. 12345&#x2F;&#x2F; 일반 변수에 대해 타입 추론을 지원하는 스칼라는 타입 생략 가능var name &#x3D; &quot;">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="article:published_time" content="2018-07-20T08:04:45.000Z">
-<meta property="article:modified_time" content="2018-10-23T12:11:51.000Z">
-<meta property="article:author" content="Eric Han">
-<meta property="article:tag" content="java">
-<meta property="article:tag" content="lambda">
-<meta property="article:tag" content="type_inference">
-<meta property="article:tag" content="functional_interface">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@HODL_BSC">
-<meta property="fb:admins" content="100001774570174">
-<meta property="fb:app_id" content="1652051021784453">
-   -->
   <link rel="canonical" href="https://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/">
   
   
@@ -76,14 +54,7 @@ ga('send', 'pageview');
 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2948714191026958",
-      enable_page_level_ads: true
-    });
-  </script>
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
   <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
@@ -177,13 +148,6 @@ ga('send', 'pageview');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
                             <article id="post-java-lambda-type-inference-functional-interface" class="article article-single article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -202,9 +166,6 @@ ga('send', 'pageview');
       <a href="/2018/07/20/java-lambda-type-inference-functional-interface/" class="article-date">
     <time datetime="2018-07-20T08:04:45.000Z" itemprop="datePublished">2018/07/20</time>
 </a>
-      <!-- 
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functional-interface/" rel="tag">functional_interface</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lambda/" rel="tag">lambda</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/type-inference/" rel="tag">type_inference</a></li></ul>
- -->
       <span class="reading-time">⏰ 소요시간
         21 분
       </span>
@@ -274,24 +235,6 @@ ga('send', 'pageview');
 </ul>
 
     </div>
-
-    <!-- <div id="bmc" align="center">
-                    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
-                        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-                        <span style="margin-left:5px">Buy me a coffee</span></a>
-                </div> -->
-    <!-- <div id="binance" align="center">
-      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby">
-        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
-      </a>
-    </div> -->
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
     <footer class="article-footer">
       
@@ -391,7 +334,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -432,13 +374,6 @@ ga('send', 'pageview');
             
         
     </div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skycrapper -->
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 </aside>
 
                 </div>

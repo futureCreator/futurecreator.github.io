@@ -882,21 +882,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/hexo/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/web/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/blog/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -924,6 +910,20 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/hexo/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/blog/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/theme/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -938,7 +938,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/google/</loc>
+    <loc>https://futurecreator.github.io/tags/naver/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -946,20 +946,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/search/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/analytics/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/naver/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -974,6 +960,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/seo/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/google/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/analytics/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1043,6 +1043,13 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/tag/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/evernote/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1051,13 +1058,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/postach/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/tag/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1225,20 +1225,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/variable/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/datatype/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/javascript/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1296,6 +1282,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/version/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/variable/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/datatype/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1393,6 +1393,20 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/stringjoiner/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/delimiter/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/string/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1422,20 +1436,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/plusoperator/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/stringjoiner/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/delimiter/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -1484,6 +1484,27 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/pomodoro/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/timer/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/ios/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/foo/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1513,27 +1534,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/unix/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/pomodoro/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/timer/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/ios/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2282,6 +2282,27 @@
   </url>
   
   <url>
+    <loc>https://futurecreator.github.io/tags/programming-font/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/consolas/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/monospaced/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/tags/infrastructure/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -2311,34 +2332,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/virtualization/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/programming-font/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/consolas/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/monospaced/</loc>
-    <lastmod>2024-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/re-invent/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2402,6 +2395,13 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/vm/</loc>
+    <lastmod>2024-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/re-invent/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2536,14 +2536,14 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Hexo/</loc>
+    <loc>https://futurecreator.github.io/categories/Reviews/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Reviews/</loc>
+    <loc>https://futurecreator.github.io/categories/Hexo/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2578,14 +2578,14 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Programming/Java/</loc>
+    <loc>https://futurecreator.github.io/categories/Programming/JavaScript/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/Programming/JavaScript/</loc>
+    <loc>https://futurecreator.github.io/categories/Programming/Java/</loc>
     <lastmod>2024-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

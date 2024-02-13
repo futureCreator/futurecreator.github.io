@@ -12,29 +12,6 @@
     
     Eric Han&#39;s IT Blog
   </title>
-  <!-- 
-  <meta name="description" content="분산 데이터 관리의 어려움 보통 모놀리식(monolithic) 애플리케이션에서는 하나의 관계형 DB(Relational database)를 사용합니다. DB 작업은 트랜잭션(transaction)이라는 단위로 수행이 되는데 RDB의 장점은 트랜잭션이 ACID하도록 만들어줍니다.  원자성(Atomicity): 작업이 완전히 성공하든지 또는 완전히 실패하도록">
-<meta property="og:type" content="article">
-<meta property="og:title" content="마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리">
-<meta property="og:url" content="https://futurecreator.github.io/2018/10/19/microservices-and-event-driven-data-management/index.html">
-<meta property="og:site_name" content="Eric Han&#39;s IT Blog">
-<meta property="og:description" content="분산 데이터 관리의 어려움 보통 모놀리식(monolithic) 애플리케이션에서는 하나의 관계형 DB(Relational database)를 사용합니다. DB 작업은 트랜잭션(transaction)이라는 단위로 수행이 되는데 RDB의 장점은 트랜잭션이 ACID하도록 만들어줍니다.  원자성(Atomicity): 작업이 완전히 성공하든지 또는 완전히 실패하도록">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="article:published_time" content="2018-10-19T12:39:55.000Z">
-<meta property="article:modified_time" content="2018-10-23T12:10:32.000Z">
-<meta property="article:author" content="Eric Han">
-<meta property="article:tag" content="microservices">
-<meta property="article:tag" content="event_driven">
-<meta property="article:tag" content="event_sourcing">
-<meta property="article:tag" content="cqrs">
-<meta property="article:tag" content="data_management">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@HODL_BSC">
-<meta property="fb:admins" content="100001774570174">
-<meta property="fb:app_id" content="1652051021784453">
-   -->
   <link rel="canonical" href="https://futurecreator.github.io/2018/10/19/microservices-and-event-driven-data-management/">
   
   
@@ -77,14 +54,7 @@ ga('send', 'pageview');
 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2948714191026958",
-      enable_page_level_ads: true
-    });
-  </script>
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
   <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
@@ -178,13 +148,6 @@ ga('send', 'pageview');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
                             <article id="post-microservices-and-event-driven-data-management" class="article article-single article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -203,9 +166,6 @@ ga('send', 'pageview');
       <a href="/2018/10/19/microservices-and-event-driven-data-management/" class="article-date">
     <time datetime="2018-10-19T12:39:55.000Z" itemprop="datePublished">2018/10/19</time>
 </a>
-      <!-- 
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cqrs/" rel="tag">cqrs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data-management/" rel="tag">data_management</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event-driven/" rel="tag">event_driven</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event-sourcing/" rel="tag">event_sourcing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/microservices/" rel="tag">microservices</a></li></ul>
- -->
       <span class="reading-time">⏰ 소요시간
         12 분
       </span>
@@ -309,24 +269,6 @@ ga('send', 'pageview');
 
     </div>
 
-    <!-- <div id="bmc" align="center">
-                    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
-                        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-                        <span style="margin-left:5px">Buy me a coffee</span></a>
-                </div> -->
-    <!-- <div id="binance" align="center">
-      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby">
-        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
-      </a>
-    </div> -->
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
     <footer class="article-footer">
       
 
@@ -425,7 +367,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -466,13 +407,6 @@ ga('send', 'pageview');
             
         
     </div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skycrapper -->
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 </aside>
 
                 </div>

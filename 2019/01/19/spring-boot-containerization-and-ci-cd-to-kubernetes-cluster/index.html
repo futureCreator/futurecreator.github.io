@@ -12,35 +12,6 @@
     
     Eric Han&#39;s IT Blog
   </title>
-  <!-- 
-  <meta name="description" content="이번 포스트에서는 간단한 스프링 부트(Spring Boot) 애플리케이션을 만들고 컨테이너화(Containerize)하는 방법을 알아봅니다. 그리고 다양한 툴을 이용해 도커 이미지를 지속적으로 빌드하고 배포할 수 있는 CI&#x2F;CD 환경을 구성하고 쿠버네티스(Kubernetes) 클러스터에 배포하는 과정을 살펴봅니다. 살펴볼 내용은 다음과 같습니다.  컨테이너">
-<meta property="og:type" content="article">
-<meta property="og:title" content="스프링 부트 컨테이너와 CI&#x2F;CD 환경 구성하기">
-<meta property="og:url" content="https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/index.html">
-<meta property="og:site_name" content="Eric Han&#39;s IT Blog">
-<meta property="og:description" content="이번 포스트에서는 간단한 스프링 부트(Spring Boot) 애플리케이션을 만들고 컨테이너화(Containerize)하는 방법을 알아봅니다. 그리고 다양한 툴을 이용해 도커 이미지를 지속적으로 빌드하고 배포할 수 있는 CI&#x2F;CD 환경을 구성하고 쿠버네티스(Kubernetes) 클러스터에 배포하는 과정을 살펴봅니다. 살펴볼 내용은 다음과 같습니다.  컨테이너">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta property="article:published_time" content="2019-01-19T08:40:16.000Z">
-<meta property="article:modified_time" content="2019-02-27T15:46:04.000Z">
-<meta property="article:author" content="Eric Han">
-<meta property="article:tag" content="github">
-<meta property="article:tag" content="deploy">
-<meta property="article:tag" content="container">
-<meta property="article:tag" content="docker">
-<meta property="article:tag" content="kubernetes">
-<meta property="article:tag" content="gcp">
-<meta property="article:tag" content="spring-boot">
-<meta property="article:tag" content="gke">
-<meta property="article:tag" content="gitlab">
-<meta property="article:tag" content="ci-cd">
-<meta property="article:tag" content="build">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://futurecreator.github.io/images/keyboard.JPG">
-<meta name="twitter:creator" content="@HODL_BSC">
-<meta property="fb:admins" content="100001774570174">
-<meta property="fb:app_id" content="1652051021784453">
-   -->
   <link rel="canonical" href="https://futurecreator.github.io/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/">
   
   
@@ -83,14 +54,7 @@ ga('send', 'pageview');
 
 
 
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-2948714191026958",
-      enable_page_level_ads: true
-    });
-  </script>
-
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
   <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
 <meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
 </head>
@@ -184,13 +148,6 @@ ga('send', 'pageview');
     </h1>
 </div>
                         <div class="main-body-content">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
                             <article id="post-spring-boot-containerization-and-ci-cd-to-kubernetes-cluster" class="article article-single article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -209,9 +166,6 @@ ga('send', 'pageview');
       <a href="/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/" class="article-date">
     <time datetime="2019-01-19T08:40:16.000Z" itemprop="datePublished">2019/01/19</time>
 </a>
-      <!-- 
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/build/" rel="tag">build</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ci-cd/" rel="tag">ci-cd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/container/" rel="tag">container</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/deploy/" rel="tag">deploy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/docker/" rel="tag">docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gcp/" rel="tag">gcp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitlab/" rel="tag">gitlab</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gke/" rel="tag">gke</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kubernetes/" rel="tag">kubernetes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spring-boot/" rel="tag">spring-boot</a></li></ul>
- -->
       <span class="reading-time">⏰ 소요시간
         1:13
       </span>
@@ -540,24 +494,6 @@ ga('send', 'pageview');
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">롤링 업데이트(Rolling Update)란 기존 서비스를 유지하면서 업데이트하기 위한 방법으로, 여러 개의 인스턴스가 있을 때 하나씩 새로운 버전의 인스턴스로 교체하는 방법입니다.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">빌드 설정이 친숙하지 않은 개발자를 위해 사전에 정의된 CI/CD 설정으로 빌드 작업을 자동화하는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://about.gitlab.com/product/auto-devops/">Auto DevOps</a>라는 기능도 있습니다. <code>Auto Build</code>, <code>Auto Test</code>, <code>Auto Deploy</code> 등 기능을 제공합니다. GitLab 11.3부터 모든 프로젝트에 Auto DevOps가 기본적으로 설정되어 있어 코드를 처음 올리면 파이프라인 작업이 수행됩니다. 물론 완벽히 구성하지 않은 상태여서 첫 번째 파이프라인 작업이 실패한다면 해당 설정은 disabled 됩니다.<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
     </div>
 
-    <!-- <div id="bmc" align="center">
-                    <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/fcreator">
-                        <img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a coffee">
-                        <span style="margin-left:5px">Buy me a coffee</span></a>
-                </div> -->
-    <!-- <div id="binance" align="center">
-      <a class="binance-referral" target="_blank" href="https://www.binance.com/en/futures/ref/thegreatpetsby">
-        <img src="https://i.postimg.cc/Y9vx8NCh/binance.png" alt="binance-referral" style="max-width: 100%; height:auto">
-      </a>
-    </div> -->
-
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 광고 -->
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8311183691" data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
     <footer class="article-footer">
       
 
@@ -656,7 +592,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    <!-- <div class="github-card" data-github="futureCreator" data-width="" data-height="" data-theme="default"></div> -->
     <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
     
         
@@ -697,13 +632,6 @@ ga('send', 'pageview');
             
         
     </div>
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skycrapper -->
-<ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-2948714191026958" data-ad-slot="8126053690"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 </aside>
 
                 </div>
