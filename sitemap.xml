@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2024/02/16/how-to-build-my-gpt-on-gptstore-example-kubepilot/</loc>
+    
+    <lastmod>2024-02-16</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2024/02/13/chatgpt-prompt-engineering/</loc>
     
     <lastmod>2024-02-16</lastmod>
@@ -2565,6 +2574,13 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/jailbraek/</loc>
+    <lastmod>2024-02-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/kubepilot/</loc>
     <lastmod>2024-02-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
