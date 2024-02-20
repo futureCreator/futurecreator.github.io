@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>개발자가 사이드 프로젝트를 해야 하는 가장 큰 이유</title>
+      <link href="/2024/02/21/Why-developers-should-have-side-projects/"/>
+      <url>/2024/02/21/Why-developers-should-have-side-projects/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="https://images.unsplash.com/photo-1604964432806-254d07c11f32?q=80&amp;w=2448&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Black and white ceramic mug on black table photo – Free Keyboard Image on Unsplash"></p><p>개발자가 사이드 프로젝트를 진행해야 하는 이유는 여러가지가 있습니다. 개발자는 계속해서 공부를 해야 하는 직업이기에 지식과 경험을 쌓는 데에도 도움이 되고, 커리어 측면으로 봤을 때 자신의 포트폴리오를 구축하는 것에도 도움이 됩니다. 또한 자신이 만든 서비스나 애플리케이션을 통해 직접적으로 수익을 낼 수도 있습니다.</p><p>여러 이유가 있겠습니다만, 제가 가장 중요하게 생각하는 이유는 '직업 만족도’입니다. 자신이 생각하고 상상한 것을 무엇이든 조각할 수 있는 천재 조각가가 있다고 합시다. 그런데 이 조각가가 만들고 싶은 것이 없거나 만들고 싶어도 아무것도 떠오르지 않는다면 어떨까요? 억지로 하기 싫은 코딩을 하는 개발자처럼 스트레스를 많이 받을 겁니다.</p><p>소프트웨어 개발이 재미있다고 느껴지는 순간은 역시 회사보다는 집에서 개인적으로 사이드 프로젝트를 할 때입니다. 자신이 필요로 하는 것이나 만들어보고 싶은 것을 직접 설계도 하고 개발도 하는 과정에서 많은 것들을 고려하게 되고 찾아보고 공부하게 됩니다.</p><p>특히 요즘엔 AI 덕분에 개발 생산성이 무지막지하게 올랐기 때문에 개발이 편합니다. 사실 너무 편해져서 앞으로 점점 개발자의 일자리를 걱정하는 수준이 되겠죠. 그럴수록 지금 사이드 프로젝트를 해야하지 않나 싶습니다. 단순히 자기에게 주어진 기능을 개발하는 것에서 그치지 않고 자신이 작은 플젝이라도 직접 전체를 진행하면서 얻는 경험이 있기 때문입니다.</p><p>'회사에서도 지겨운 코딩을 집에서도 하다니?'라고 생각하시는 분들도 있을 수 있겠지만, 자신이 만들고 싶은 것이 있다면 이만큼 재미있는 것도 없다고 생각합니다. 앞으로 저 또한 사이드 프로젝트를 진행하면서 얻는 지식이나 경험들을 이 블로그를 통해 공유하려고 합니다. 하지만 역시 뭘 만들지가 가장 큰 고민이네요.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Insight </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> developer </tag>
+            
+            <tag> side </tag>
+            
+            <tag> project </tag>
+            
+            <tag> ai </tag>
+            
+            <tag> job </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>GPT 스토어에서 나만의 GPT를 만들기 (feat. KubePilot)</title>
       <link href="/2024/02/16/how-to-build-my-gpt-on-gptstore-example-kubepilot/"/>
       <url>/2024/02/16/how-to-build-my-gpt-on-gptstore-example-kubepilot/</url>
