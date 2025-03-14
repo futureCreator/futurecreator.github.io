@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>The Smart Revolution in Your Pocket: Why On-Device AI is the Next Big Thing</title>
+      <link href="/2025/03/15/The-Smart-Revolution-in-Your-Pocket-Why-On-Device-AI-is-the-Next-Big-Thing/"/>
+      <url>/2025/03/15/The-Smart-Revolution-in-Your-Pocket-Why-On-Device-AI-is-the-Next-Big-Thing/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="A_line_art_minimalist_illustration_featuring_abstr-1741973224159.png" alt=""></p><p>On-device AI refers to artificial intelligence technology that performs data processing and AI computation directly on devices like smartphones rather than sending data to external cloud servers. This technology is gaining significant attention because it offers several advantages over cloud-based AI:</p><p>Enhanced privacy and security - data stays on your device rather than being sent to external servers No internet connection required - AI functions can work offline Faster response times - processing happens locally without network delays Lower power consumption - designed to be energy efficient Personalized services - can use device-specific data without privacy concerns Small Language Models (SLMs) are now a crucial part of on-device AI implementation. Unlike Large Language Models (LLMs) that require significant computational resources, SLMs have fewer parameters but can still deliver impressive performance for specific tasks. Examples include Microsoft’s Phi-3 Mini (3.8B parameters), Apple’s OpenELM, and Google’s Gemma (2B and 7B parameters).</p><p>The development of on-device AI is being driven by both hardware and software innovations:</p><p>Hardware: AI-optimized processors (NPUs), memory technologies like HBM, PIM Software: Model compression techniques including pruning, quantization, knowledge distillation Major tech companies including Samsung, Apple, Google, Qualcomm, and Microsoft are investing heavily in this technology, with the global on-device AI market expected to grow from $5 billion in 2022 to $70 billion by 2032.</p><p>This technology is particularly important for Korea’s tech industry, as Korean companies are working to develop specialized AI models that better understand Korean language and cultural contexts, which is crucial for global competitiveness in the AI era.</p><p>Small Language Models (SLMs) and the latest trends in on-device AI Advances in Small Language Models (SLMs) Small language models are models with fewer parameters than large language models (LLMs), typically with billions to tens of billions of parameters. Other notable small language models include Meta’s Llama3 8B and Mistral AI’s Mistral 7B.</p><p>While small language models have the advantage of being fast and can run on-device, they are still limited in their support for Korean. For example, only 0.06% of LLaMA2’s training data is in Korean. To solve this problem, efforts are underway to develop a Korean-specific LLM, including the joint launch of the Korean Language Leaderboard by the National Information Agency (NIA) and startup Upstage.</p><p>Applications of on-device AI On-device AI is being utilized in a variety of industries:</p><p>Real-time translation services: Providing real-time translation without an internet connection.</p><p>CCTV video analytics: Analyze video and image data from CCTV in real time to detect natural disasters or accidents without connecting to the cloud.</p><p>Autonomous drones: Perform autonomous flight, cognitive functions, data collection, and more in environments where internet connectivity is not available.</p><p>IPTV, set-top boxes: Provide fast and secure AI services without communication delays.</p><p>Mobility: Technologies are being applied to enable voice assistant and AI PC functions in vehicles.</p><p>Industry status and company trends Major companies are working on on-device AI, including</p><p>Qualcomm: Open sourced its AI Model Efficiency Toolkit (AIMET).</p><p>Apple: enabling on-device AI on its hardware through its Core ML library, and open sourcing its OpenELM and Ferret models.</p><p>Google: Released Gemma, an open-source compact language model for on-device AI, and included G3, an AI-specific tensor on Pixel 8.</p><p>Samsung Electronics: Introduced on-device AI-based real-time interpretation call feature for Galaxy S24 series and applied on-device AI technology to TVs.</p><p>Korean startups: Hyperconnect developed a mobile-based video chat service with on-device AI technology, and Nokta launched an AI model optimization and lightweighting platform.</p><p>Rise of DeepSeek AI in China Recently, DeepSeek, an AI model developed in China, has been gaining traction. The app, which topped the Apple App Store download rankings, achieves similar performance to OpenAI’s models at a fraction of the cost.</p><p>DeepSeek’s R1 model has about 670 billion parameters and was developed on a budget of about $6 million (4.8 billion won), compared to the billions of dollars invested by U.S. AI companies. This is due to the relatively low use of high-performance chips, which significantly reduced development costs.</p><p>In response to these Chinese on-device AI chatbots, the South Korean government has taken steps to restrict new app downloads.</p><p>South Korea’s on-device AI policy The Ministry of Science and ICT is conducting a demonstration project for a leading model of an intelligent home based on on-device AI using domestically produced AI semiconductors. Through this project, the ministry plans to develop intelligent home services specialized for single-person households, such as an emotional conversation service that attempts to communicate with residents by identifying their facial expressions with a care doll, conversational healthcare services such as medication suggestions and food recommendations, and emergency response services.</p><p>In addition, the Korean government is speeding up the preparation of policies to preempt the ‘on-device AI’ market.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> device </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TRAPPIST-1: The Reasons Why James Webb Telescope Observation Results Have Not Been Published</title>
       <link href="/2025/03/15/TRAPPIST-1-The-Reasons-Why-James-Webb-Telescope-Observation-Results-Have-Not-Been-Published/"/>
       <url>/2025/03/15/TRAPPIST-1-The-Reasons-Why-James-Webb-Telescope-Observation-Results-Have-Not-Been-Published/</url>

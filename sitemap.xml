@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2025/03/15/The-Smart-Revolution-in-Your-Pocket-Why-On-Device-AI-is-the-Next-Big-Thing/</loc>
+    
+    <lastmod>2025-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2025/03/15/TRAPPIST-1-The-Reasons-Why-James-Webb-Telescope-Observation-Results-Have-Not-Been-Published/</loc>
     
     <lastmod>2025-03-14</lastmod>
@@ -2692,6 +2701,13 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/telescope/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/device/</loc>
     <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
