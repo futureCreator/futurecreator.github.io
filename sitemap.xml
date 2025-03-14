@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2025/03/15/Why-The-Matrix-movie-could-never-become-reality/</loc>
+    
+    <lastmod>2025-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2025/03/15/The-Smart-Revolution-in-Your-Pocket-Why-On-Device-AI-is-the-Next-Big-Thing/</loc>
     
     <lastmod>2025-03-14</lastmod>
@@ -2708,6 +2717,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/device/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/movie/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/matrix/</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/reality/</loc>
     <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
