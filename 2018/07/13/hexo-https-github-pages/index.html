@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Hexo HTTPS 적용하기(Github Pages) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/13/hexo-https-github-pages/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-https-github-pages" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo HTTPS 적용하기(Github Pages)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/13/hexo-https-github-pages/" class="article-date">
+    <time datetime="2018-07-12T15:16:54.000Z" itemprop="datePublished">2018/07/13</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              6 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>지난 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.</p>
+<p>Hexo 블로그는 <code>generate</code> 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://pages.github.com/">GitHub Pages</a> 입니다. 저도 처음에 접근하기 쉽고 <code>github.io</code> 도메인이 좋아서 github pages 로 시작했습니다. 다른 포스트에서 차차 다른 호스팅 방식도 다뤄보려고 합니다(<em>Netlify, Gitlab pages</em> 등).</p>
+<h2 id="HTTPS">HTTPS</h2>
+<p>HTTPS에 대해서는 이전 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서 자세히 살펴봤습니다. SSL 인증서와 암호화를 통해 클라이언트와 웹 서버 간 안전하게 통신할 수 있는 기술로 누출되면 위험한 정보를 다룰 때 사용합니다.</p>
+<p>물론 Hexo 블로그에서는 대부분 중요한 개인정보, 비밀번호, 신용카드 번호 등을 전송할 필요는 없습니다. 하지만 HTTPS로 연결하면 사용자들에게 신뢰를 줄 수 있고 보안을 강화해놓으면 나쁠 건 없겠죠.</p>
+<h2 id="적용하기">적용하기</h2>
+<p>먼저 Hexo 블로그 소스가 저장된 GitHub 페이지를 들어갑니다. 그 후에 상단의 탭에서 Settings 탭을 눌러 설정 메뉴로 들어갑니다.</p>
+<p><img src="https://help.github.com/assets/images/help/repository/repo-actions-settings.png" alt="Repository settings button"></p>
+<p>아래 쪽으로 내려오면 <code>Enforce HTTPS</code> 체크박스가 있습니다. 체크하면 바로 HTTP 적용된 것을 확인할 수 있습니다.</p>
+<p><img src="https://help.github.com/assets/images/help/pages/enforce-https-checkbox.png" alt="Enforce HTTPS checkbox"></p>
+<h2 id="혼합-콘텐츠-Mixed-content">혼합 콘텐츠 Mixed-content</h2>
+<p>Hexo 블로그에 적용해본 결과 딱히 문제가 발생하지 않았습니다. 하지만 HTTPS 적용 시 혼합 콘텐츠로 문제가 나타날 수 있습니다.</p>
+<p>혼합 콘텐츠는 HTTPS 컨텐츠 내에 HTTP 로 요청하는 하위 리소스가 있는 경우를 말합니다. HTTPS 로 안전한 페이지를 요청하지만, 그 페이지가 내부적으로 가지고 있는 리소스를 다시 로드할 때 HTTP 요청이므로 중간자 공격(<em>man-in-the-middle attack</em>)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식
+">[1]</span></a></sup>에 취약하게 됩니다.</p>
+<p>HTTP로 이미지, 비디오, 오디오 콘텐츠 등의 리소스를 요청하는 경우 이걸 가로채서 의도하지 않은 콘텐츠로 바꿔치기 할 수 있습니다. 예를 들어 버튼의 이미지를 바꾼다거나, 사진을 부적절한 콘텐츠로 바꾼다거나, 제품의 이미지를 다른 제품으로 대체할 수도 있습니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[혼합 콘텐츠란?](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ko#browser-behavior-with-mixed-content)">[2]</span></a></sup> 이런 위험이 있는 경우 최신 브라우저에서는 경고로 표시합니다.</p>
+<p><img src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/passive-mixed-content-warnings.png?hl=ko" alt="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content"></p>
+<p>문제는 이런 리소스가 브라우저가 다운로드해서 실행할 수 있는 js, stylesheet, iframe 등의 리소스인 경우입니다. 공격자가 이런 리소스를 가로채는 경우 페이지 또는 웹 사이트 전체를 제어하거나 중요 정보를 훔치는 등 페이지에 대한 모든 것을 변경할 수 있습니다. 대부분의 최신 브라우저는 이런 위험한 요청을 차단합니다.</p>
+<p><img src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/active-mixed-content-errors.png?hl=ko" alt="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content"></p>
+<p>Hexo 의 경우 리소스를 전부 가지고 있기 때문에 외부에 따로 HTTP 요청을 하는 작업은 없는 것으로 보입니다. 만약 에러가 난다면 다음과 같이 Github 고객센터 페이지에서 안내하는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">가이드</a>를 따라 수정하시면 되겠습니다.</p>
+<p><img src="https-mixed-content.png" alt="https://help.github.com/articles/securing-your-github-pages-site-with-https/"></p>
+<h2 id="Custom-domain">Custom domain</h2>
+<p>만약 커스텀 도메인을 사용하는데 HTTPS 적용 시 에러가 난다면, 이 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://help.github.com/articles/troubleshooting-custom-domains/#https-errors">가이드</a>를 참고하세요.</p>
+<p>이번 포스트에서는 Github pages 를 이용해서 Hexo 블로그를 배포할 경우 HTTPS 를 적용하는 방법에 대해 알아봤습니다.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/06/12/hexo-change-font-on-hueman-theme/" title="Hexo 폰트 변경하기 (Hueman 테마)">Hexo 폰트 변경하기 (Hueman 테마)</a>
+</li>
+<li>
+<a href="/2018/06/14/hexo-markdown-plugins/" title="Hexo 마크다운 플러그인 변경하기">Hexo 마크다운 플러그인 변경하기</a>
+</li>
+<li>
+<a href="/2018/06/11/generate-an-emoji-favicon/" title="이모지로 파비콘 Favicon 만들기">이모지로 파비콘 Favicon 만들기</a><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ko#browser-behavior-with-mixed-content">혼합 콘텐츠란?</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/13/aws-security-best-practies/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            AWS 보안 모범 사례 백서 (번역/요약)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/12/https-and-ssl-tls/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">HTTPS 와 SSL(TLS)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/13/hexo-https-github-pages/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

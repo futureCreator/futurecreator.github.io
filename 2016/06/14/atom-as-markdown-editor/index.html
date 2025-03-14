@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Atom 을 마크다운(Markdown) 에디터로 사용하기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Reviews/">Reviews</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-atom-as-markdown-editor" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Atom 을 마크다운(Markdown) 에디터로 사용하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/14/atom-as-markdown-editor/" class="article-date">
+    <time datetime="2016-06-14T10:36:59.000Z" itemprop="datePublished">2016/06/14</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              11 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>요즘에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> 문서를 작성할 일이 많아졌습니다. 그리고 마크다운 특유의 깔끔하고 정리된 레이아웃이 좋아서 자꾸 손이 가네요. 저는 Macbook과 Windows PC 모두 쓰고 있는데요, Mac이야 마크다운을 지원하는 좋은 <s>유료</s> 에디터들이 워낙 많지만 Windows에서는 딱히 마음에 드는 에디터가 없어서 고민이었습니다. 에디터로는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://notepad-plus-plus.org/">Notepad++</a>과 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.sublimetext.com/">Sublime Text</a>를 쓰고 있었는데 실시간으로 마크다운 변환해서 볼 수 있는 Previewer를 지원하지 않고 Sublime Text 같은 경우는 한글 입력 시 한박자 늦게 입력되는 현상이 있죠. <s>이 현상을 해결하는 플러그인도 설치해봤지만 그래도 부자연스럽습니다.</s></p>
+<p>그래서 갈아탄 에디터가 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://atom.io/">Atom</a>입니다. Sublime Text 느낌이 많이 나네요. Sublime Text처럼 각종 플러그인을 설치할 수 있고 단축키를 몰라도 키보드로만 여러 명령을 내릴 수 있는 Command Palette도 지원하는 등 유사한 면이 많았습니다. 무엇보다도 한글 입력도 잘되고 마크다운 Previewer를 기본적으로 제공해서 마음에 들더군요. Atom을 설치하고 마크다운을 작성하기 편하게 설정을 해보죠.</p>
+<h2 id="설치하기">설치하기</h2>
+<p>설치는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://atom.io/">Atom</a> 다운로드 페이지에서 받아서 설치하면 끝!</p>
+<h2 id="설정하기">설정하기</h2>
+<p>단축키 <code>ctrl + ,</code> 를 눌러 설정으로 들어갑니다. Settings 탭의 <code>Soft wrap</code>과 <code>Scroll Past End</code> 를 바꿔줍니다.</p>
+<ul>
+<li>Soft wrap: 자동줄바꿈 기능</li>
+<li>Scroll Past End: 에디터가 마지막 줄이 되어도 스크롤을 더 내릴 수 있어 텍스트 입력을 편하게 해준다.</li>
+</ul>
+<h2 id="플러그인-설치하기">플러그인 설치하기</h2>
+<p>아톰은 기본적으로 마크다운을 지원하는 플러그인이 설치되어 있습니다. 하지만 플러그인을 따로 설치하면 더 다양하고 편리한 기능을 사용할 수 있습니다. 설정의 Install 탭에서 검색한 후 설치하시면 됩니다.</p>
+<h3 id="Markdown-preview-enhanced"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atom.io/packages/markdown-preview-enhanced">Markdown-preview-enhanced</a></h3>
+<p>마크다운 관련 다양한 기능을 제공하는 Previewer입니다. 물론 아톰에서 기본적으로 제공하는 마크다운 문법과 프리뷰를 쓰셔도 좋습니다만, 다음과 같은 기능들을 보면 충분히 설치할 만합니다.</p>
+<p><img src="https://i.github-camo.com/109abbf6d2a2e37120d68293ddaa3f51f9bb5aa8/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f313930383836332f31353338333031342f31346164313964302d316463322d313165362d393338352d6163643930663533613833312e676966" alt="Markdown-preview-enhanced"></p>
+<ul>
+<li>Previewer 자동 스크롤 (2-way Scroll)<br>
+각종 수학식 입력<br>
+PDF와 HTML로 export<br>
+마크다운 Previewer 커스터마이징 (css)<br>
+이미지를 쉽게 넣을 수 있는 Image Helper<br>
+[TOC] 생성<br>
+주석 입력<br>
+기타 다양한 기능들</li>
+</ul>
+<p>상당히 많은 기능을 제공합니다. 웬만한 패키지에서 제공하는 기능을 모두 포함하고 있어서 이거 하나로도 충분합니다. <code>command + shift + p</code> 로 Command Palette를 열어 markdown preview enhanced 입력하면 실행 가능한 명령어들이 나옵니다. 특히 <strong>Image Helper</strong> 와 <strong>TOC</strong> 입력하는 게 유용하더군요. 마크다운은 이미지 넣기가 불편한데 Image Helper 기능은 파일을 바로 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://imgur.com/">imgur</a>에 올려서 url을 생성해줍니다. TOC는 자동으로 목차를 만들어주는 기능입니다. 또한 쉽게 테이블을 넣는 기능도 자주 사용합니다.</p>
+<h3 id="Markdown-format"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atom.io/packages/markdown-format">Markdown-format</a></h3>
+<p><img src="https://i.github-camo.com/9b13e0b1b52087d328a56b46dd5c7e5db33a0674/68747470733a2f2f6769746875622e636f6d2f73687572636f6f4c2f61746f6d2d6d61726b646f776e2d666f726d61742f626c6f622f6d61737465722f44656d6f2e6769663f7261773d74727565" alt="Markdown-format"></p>
+<p>Markdown-format 은 마크다운 문서를 저장하면 자동으로 포맷에 맞춰주는 플러그인입니다. 마크다운 문서를 항상 정리시켜줍니다. 요놈이 엄격해서 가끔 짜증날 때도 있는데 없으면 허전합니다 ㅋㅋ</p>
+<h3 id="Markdown-folder"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://atom.io/packages/markdown-folder">Markdown-folder</a></h3>
+<p><img src="https://i.github-camo.com/b69a04132ebe3263872ff23d05448955e4df134c/68747470733a2f2f6769746875622e636f6d2f7473686f72742f6d61726b646f776e2d666f6c6465722f7261772f6d61737465722f6d61726b646f776e2d666f6c6465722d6d647061642e676966" alt="markdown-folder"></p>
+<p>이 플러그인은 마크다운의 헤더를 접을 수 있게 해주는 플러그인입니다. 마크다운 문서 길이가 길어져서 복잡해질 때 헤더를 기준으로 하위 내용을 잠시 접어둘 수 있어서 정말 유용한 기능입니다. 아래의 코드를 keymap.cson 파일을 열어 맨 밑에 붙여넣으시면 tab 키로 간단하게 접었더 폈다 하실 수 있습니다. 다른 단축키들도 입맛대로 변경해서 사용하시면 되겠습니다.</p>
+<figure class="highlight cson"><figcaption><span>keymap.cson</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;atom-text-editor[data-grammar=&quot;source gfm&quot;]:not([mini])&#x27;</span>:</span><br><span class="line">  <span class="string">&#x27;tab&#x27;</span>:        <span class="string">&#x27;markdown-folder:dwim-toggle&#x27;</span></span><br><span class="line">  <span class="string">&#x27;alt-c&#x27;</span>:      <span class="string">&#x27;markdown-folder:cycle&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-c&#x27;</span>: <span class="string">&#x27;markdown-folder:cycleall&#x27;</span></span><br><span class="line">  <span class="string">&#x27;alt-x&#x27;</span>:      <span class="string">&#x27;markdown-folder:togglefenced&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-x&#x27;</span>: <span class="string">&#x27;markdown-folder:toggleallfenced&#x27;</span></span><br><span class="line">  <span class="string">&#x27;alt-t&#x27;</span>:      <span class="string">&#x27;markdown-folder:toggle&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-1&#x27;</span>: <span class="string">&#x27;markdown-folder:foldall-h1&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-2&#x27;</span>: <span class="string">&#x27;markdown-folder:foldall-h2&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-3&#x27;</span>: <span class="string">&#x27;markdown-folder:foldall-h3&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-4&#x27;</span>: <span class="string">&#x27;markdown-folder:foldall-h4&#x27;</span></span><br><span class="line">  <span class="string">&#x27;ctrl-alt-5&#x27;</span>: <span class="string">&#x27;markdown-folder:foldall-h5&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>다만 작동하는 곳이 #, ##, ### 이런 식으로, # 으로 선언된 헤더만 해당하기 때문에 위에 Markdown-format 과는 맞지 않는 부분도 있습니다. 자동으로 formatting 해줄 때 <code>#</code> -&gt; <code>===</code>, <code>##</code> -&gt; <code>---</code> 이런 식으로 자동변환하기 때문이죠. 둘 중 마음에 드는 걸 쓰시면 좋을 것 같습니다.</p>
+<p>또한 헤더를 접은 상태에서는 프리뷰 싱크가 제대로 맞질 않습니다. 프리뷰는 제대로 보이지만 커서 위치 싱크가 맞지 않습니다. 이럴 때는 그냥 Command Palette 에서 프리뷰 화면의 Scroll Sync 를 잠시 끄고 쓰셔도 됩니다.</p>
+<h2 id="폰트와-테마-변경하기">폰트와 테마 변경하기</h2>
+<h3 id="KoPub돋움체">KoPub돋움체</h3>
+<p>이제 폰트를 변경해봅시다. 폰트는 <strong>KoPub돋움체</strong> 를 강추합니다. 한국출판인회의의 전자출판진흥사업의 일환으로 무료로 제공하는 폰트인데 정말 깔끔합니다. 다른 무료 폰트들과 비교해놓은 걸 봤는데 이게 제일 마음에 들더군요. 마크다운의 깔끔한 레이아웃과 어울리는 가독성 높은 폰트입니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kopus.org/biz/electronic/font.aspx">홈페이지</a>에서 다운로드 받아서 설치하시면 됩니다.</p>
+<p>Settings 탭의 <code>Font Family</code>에 <code>KoPubDotum</code>을 입력하면 바로 적용됩니다. (Mac의 경우 <code>KoPubDotum_Pro</code>) 물론 Mac의 경우 기본 폰트인 <strong>Apple SD 산돌고딕 Neo</strong> 가 우수하니 굳이 바꾸시지 않아도 됩니다.</p>
+<h3 id="Seti-ui">Seti-ui</h3>
+<p><img src="https://i.github-camo.com/3e01446ebe799f5ecabfe85b0bd9f78208e65631/68747470733a2f2f6769746875622e636f6d2f6a65737365776565642f736574692d75692f7261772f6d61737465722f73637265656e73686f742e706e67" alt="Seti-ui"></p>
+<p>이번에는 테마를 변경해봅시다. Themes 탭에서 테마를 변경할 수 있습니다. UI Theme는 아톰 프로그램 전체의 스타일이고 Syntax Theme는 글을 편집하는 에디터의 스타일입니다.</p>
+<p>마음에 드는 것을 선택하시거나 다른 사용자들이 만들어놓은 테마를 적용할 수 있습니다. 제가 추천하는 첫번째 테마는 <strong>Seti-ui</strong> 입니다. 어두운 색에 각 파일마다 속성을 표현하는 아이콘이 있어서 깔끔하군요. 설정의 Install 탭에서 <code>Seti-ui</code>로 테마를 검색하고 Install을 눌러 설치합니다.</p>
+<p>설정에 Theme 탭에서 UI Theme를 <strong>Seti</strong> 로 변경합니다. 그럼 바로 적용되는 걸 볼 수 있습니다.</p>
+<h3 id="Genesis-ui">Genesis-ui</h3>
+<p><img src="https://i.github-camo.com/64b921f1acee298b3f91d0d95394dc0c4dc7ccdf/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f6a6d63616c617761792f61746f6d2d67656e657369732d75692f6d61737465722f67656e657369732d75692d73616d706c652e6a7067" alt="Genesis-ui"></p>
+<p>제가 추천하는 두번째 테마는 Genesis-ui 입니다. 어두운 색감에 현재 파일과 탭만 밝게 표시되서 보기가 좋습니다. 또한 탭 크기도 작아서 화면도 넓게 쓸 수 있습니다. Seti-ui 처럼 알록달록하지 않고 모던한 느낌이라 좋습니다.</p>
+<h3 id="Syntax-Theme">Syntax Theme</h3>
+<p>Syntax 테마는 에디터 부분의 글 색깔, 화면 색깔 등을 변경하는 테마입니다. UI 테마 외에 Syntax 테마도 여러가지가 있으니 직접 보시고 원하시는 걸 선택하시면 됩니다. 개인적으로는 Solarized-light-ui 를 좋아합니다. 누런 화면이 눈이 피로해지는 걸 막아줍니다. 한 번 익숙해지면 눈이 한결 편합니다.</p>
+<h2 id="마크다운-작성하기">마크다운 작성하기</h2>
+<p>이제 마크다운 문서를 작성하면 되겠습니다. 실제로 이 글은 아톰을 이용해서 작성헀습니다.</p>
+<p><img src="/images/atom/atom_markdown.jpg" alt="마크다운 작성"></p>
+<p>제가 요즘에 사용하는 방식입니다. 프리뷰를 휴대폰에서 보는 것처럼 작게 해놓는 식으로 사용 중입니다.</p>
+<p>웬만한 유료보다 괜찮은 마크다운 에디터입니다. 어차피 Hexo로 하려면 마크다운 뿐만 아니라 HTML, JavaScript, YAML 등 여러가지 파일을 다뤄야 하니까 아톰이 제격이긴 합니다. Mac 의 유료 마크다운 에디터인 Ulysses 와 ByWord 도 잠시 써봤지만 결국 Atom 으로 돌아왔습니다.</p>
+<p>추가) 좀 더 많은 마크다운 에디터들의 리뷰를 살펴보시려면 다음 <a href="https://futurecreator.github.io/2018/07/20/what-are-the-best-markdown-editor/">포스트</a>를 참고해주세요.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/20/what-are-the-best-markdown-editor/" title="최고의 마크다운 에디터는? (macOS&#x2F;Windows)">최고의 마크다운 에디터는? (macOS&#x2F;Windows)</a>
+</li>
+<li>
+<a href="/2018/06/14/variety-of-markdown-and-Implementations/" title="마크다운의 종류와 선택">마크다운의 종류와 선택</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/15/hexo-google-site-search-console-analytics/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/14/hexo-apply-hueman-theme/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo 추천 테마, Hueman 적용하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

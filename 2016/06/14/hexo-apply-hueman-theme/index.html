@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Hexo 추천 테마, Hueman 적용하기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2016/06/14/hexo-apply-hueman-theme/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-apply-hueman-theme" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 추천 테마, Hueman 적용하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/14/hexo-apply-hueman-theme/" class="article-date">
+    <time datetime="2016-06-14T10:25:48.000Z" itemprop="datePublished">2016/06/14</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              21 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hexo를 시작한 후 여러가지 테마를 적용해봤지만 이만한 테마가 없더군요. <a href="/images/hexo/hexo_example.jpg"><strong>Hueman</strong></a> 이라는 테마로 깔끔하고 기능도 굉장히 다양합니다. 위젯이나 애드센스 이런 건 나중에 다루도록 하고 일단 테마에서 제공하는 기능들부터 살펴보겠습니다.</p>
+<h2 id="설치하기">설치하기</h2>
+<p>블로그 루트 폴더에서 명령어로 테마를 받습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/ppoffice/hexo-theme-hueman.git themes/hueman</span><br></pre></td></tr></table></figure>
+<p>그리고 블로그의 <code>_config.yml</code>을 수정합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: hueman</span><br></pre></td></tr></table></figure>
+<p>블로그의 <code>_config.yml</code> 말고 테마 폴더 안에 있는 <code>_config.yml.example</code>의 이름을  <code>_config.yml</code>로 수정합니다.</p>
+<p>테마에서 제공하는 검색 기능 (<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ppoffice/hexo-theme-hueman/wiki/Search#insight-search">Insight earch</a>)를 이용하기 위해서는 <code>hexo-generator-json-content</code>를 설치해야 합니다. <strong>npm</strong> 을 이용해서 설치합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -S hexo-generator-json-content</span><br></pre></td></tr></table></figure>
+<h2 id="커스터마이징">커스터마이징</h2>
+<p>아까 이름을 변경했던 <code>_config.yml</code> 파일을 수정해서 각종 설정을 변경할 수 있습니다.</p>
+<h3 id="메뉴">메뉴</h3>
+<p><img src="https://camo.githubusercontent.com/c89c5becd6e5d7cad15a7380815fcb2d6a779eb8/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31332f353639373334303065346439342e706e67" alt="메뉴"></p>
+<p>필요한 것은 추가/ 수정할 수 있습니다. 하지만 포스팅할 때 front-matter에 카테고리를 추가하면 여기에 등록하지 않아도 자동으로 추가됩니다. front-matter는 포스트 첫머리에 있는 제목, 생성일자 등이 들어가는 부분을 말합니다.</p>
+<figure class="highlight yaml"><figcaption><span>Example</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">    <span class="attr">Home:</span> <span class="string">/hexo-theme-hueman/</span></span><br><span class="line">    <span class="attr">About:</span> <span class="string">/hexo-theme-hueman/about/index.html</span> <span class="comment"># 상대경로</span></span><br><span class="line">	<span class="attr">GitHub:</span> <span class="string">https://github.com</span> <span class="comment"># 절대 경로</span></span><br></pre></td></tr></table></figure>
+<h4 id="About-me"><a target="_blank" rel="external nofollow noopener noreferrer" href="http://About.me">About.me</a></h4>
+<p>기본적으로 About 메뉴가 있는데 <code>/about/index.html</code> 이 없기 때문에 About 을 눌러 접속 시 404 에러가 나게 됩니다. About 페이지는 보통 블로그 주인에 대한 자기소개 페이지죠. 저는 굳이 따로 페이지를 만들지 않고 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://about.me">About.me</a> 라는 사이트를 이용해서 만들었습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="http://About.me">About.me</a> 는 온라인 상의 자기 프로필, 자기소개 페이지입니다. 가입해서 프로필 이미지와 관심사, 디자인 등을 설정하면 자동으로 프로필 페이지를 만들어줍니다. 생성된 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://about.me/donghohan">프로필 URL</a> 을 여기에 입력하면 됩니다.</p>
+<h3 id="로고">로고</h3>
+<p>url을 해당 경로로 바꿔주면 됩니다. public 밑에 있는 img 폴더는 <code>root폴더명/img</code>라는 이름으로 접근 가능하고, 웹 상 이미지의 url도 가능합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">logo:</span></span><br><span class="line">    <span class="attr">width:</span> <span class="number">165</span></span><br><span class="line">    <span class="attr">height:</span> <span class="number">60</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">images/logo-header.png</span></span><br></pre></td></tr></table></figure>
+<h3 id="테마-색깔">테마 색깔</h3>
+<p><img src="https://camo.githubusercontent.com/a4a5f524e9989a60a4a027df88eb438ce0c7c3df/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639376131383733313933312e706e67" alt="테마 색깔"></p>
+<p>테마 색깔이라고 해봐야 작은 부분이지만… 변경 가능합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme_color:</span> <span class="string">&#x27;#d35&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="하이라이트">하이라이트</h3>
+<p><img src="https://camo.githubusercontent.com/29244be9b08db085cc83244e9add325eaf5d0945/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373362663136383064312e706e67" alt="하이라이트"></p>
+<p>하이라이트는 코드 블락에서 문법에 따라 내용의 색을 바꿔 보여주는 것을 말합니다 (Code Highlight). 그냥 기본적인 것으로 쓰셔도 좋고, 변경을 원하시면 <code>hueman/source/css/_highlight</code> 폴더에 있는 것들 중 골라서 사용하셔도 됩니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span> <span class="string">androidstudio</span></span><br></pre></td></tr></table></figure>
+<h3 id="사이드바">사이드바</h3>
+<p>사이드바의 위치를 조정할 수 있습니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sidebar:</span> <span class="string">left</span> <span class="comment"># options: left, right</span></span><br></pre></td></tr></table></figure>
+<h3 id="썸네일">썸네일</h3>
+<p>포스트의 썸네일을 표시를 끄고 켤 수 있습니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">thumbnail:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>이 썸네일은 포스트 앞에 자동으로 삽입되는 front-matter 부분에 경로를 추가하면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: Hello World</span><br><span class="line">date: 2013/7/13 20:46:25</span><br><span class="line">thumbnail: https://example.com/image.jpg</span><br></pre></td></tr></table></figure>
+<h3 id="파비콘-Favicon">파비콘 (Favicon)</h3>
+<p>파비콘은 URL앞에 붙는 작은 아이콘을 말합니다. ico는 잘 안되는 것 같고 png 파일로 했더니 잘 됩니다. 파비콘 파일의 경로를 지정해줍니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">favicon:</span> <span class="string">favicon.png</span></span><br></pre></td></tr></table></figure>
+<h4 id="파비콘이-안-바뀌는-경우">파비콘이 안 바뀌는 경우</h4>
+<p>파비콘을 제대로 설정해도 변경이 안되는 것처럼 보일 수 있습니다. 그럴 때는 다른 브라우저를 이용해서 확인해보시거나 크롬 브라우저의 파비콘 파일을 삭제한 후에 확인할 수 있습니다. 이럴 경우 다른 파비콘도 모두 삭제됩니다. 운영체제별 파비콘 파일 위치는 다음과 같습니다. 해당 폴더 안에 보시면 파비콘 파일이 있습니다.</p>
+<h5 id="Windows-7-or-Vista">Windows 7 or Vista</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\%USERNAME%\AppData\Local\Google\Chrome\User Data\Default</span><br></pre></td></tr></table></figure>
+<h5 id="Mac-OS-X">Mac OS X</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/Library/Application Support/Google/Chrome/Default</span><br></pre></td></tr></table></figure>
+<h5 id="Linux">Linux</h5>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.config/google-chrome/Default</span><br></pre></td></tr></table></figure>
+<h3 id="소셜-링크">소셜 링크</h3>
+<p><img src="https://camo.githubusercontent.com/a0d6d26c42120a7c175bdd61b2219b332b6941c0/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373430396336353834392e706e67" alt="소셜 링크"></p>
+<p>내가 사용하는 여러가지 SNS 주소를 표시할 수 있습니다. 아이콘은 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://fontawesome.io/icons/#brand">FontAwesome</a>에서 골라서 이름을 적고 링크될 url을 적으면 됩니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social_links:</span></span><br><span class="line">    <span class="attr">github:</span> <span class="string">https://github.com/ppoffice/hexo-theme-hueman</span></span><br><span class="line">    <span class="attr">youtube:</span> <span class="string">https://youtube.com</span></span><br></pre></td></tr></table></figure>
+<h2 id="위젯">위젯</h2>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">widgets:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">recent_posts</span> <span class="comment"># 최근 포스트</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">category</span> <span class="comment"># 카테고리</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">archive</span> <span class="comment"># 어카이브</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tag</span> <span class="comment"># 태그</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tagcloud</span> <span class="comment"># 태그클라우드. 사용된 태그들을 빈도수에 따라 구름처럼 표시</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">links</span> <span class="comment"># 링크</span></span><br></pre></td></tr></table></figure>
+<p>사이드바에 추가되는 여러가지 위젯을 제공합니다. 사용하지 않는 것은 지워주면 되고 사용하려면 추가하면 됩니다. 이름만 보면 무슨 기능인지 아실 겁니다.</p>
+<h3 id="링크">링크</h3>
+<p>그 중에 링크는 <code>_config.yml</code> 하단에서 다음과 같이 추가 가능합니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Miscellaneous</span></span><br><span class="line"><span class="attr">miscellaneous:</span></span><br><span class="line">    <span class="attr">links:</span></span><br><span class="line">        <span class="attr">Hexo:</span> <span class="string">http://hexo.io</span></span><br><span class="line">        <span class="attr">Naver blog:</span> <span class="string">http://blog.naver.com/future_creator</span></span><br></pre></td></tr></table></figure>
+<h2 id="검색">검색</h2>
+<p><img src="https://camo.githubusercontent.com/f0d2c58b725d3362eedac685805b5fc450b81fd1/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30342f30382f353730376335346533353665642e706e67" alt="Insight Search"></p>
+<p>블로그의 내의 검색 기능입니다. 몇가지 종류가 있는데 기본적으로 제공하는 Insight Search를 사용하시면 됩니다. 전에 살펴본 것처럼 기본적으로 <code>hexo-generator-json-content</code>를 설치해야 합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Search</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">    <span class="attr">insight:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">swiftype:</span></span><br><span class="line">    <span class="attr">baidu:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="댓글">댓글</h2>
+<p><img src="https://camo.githubusercontent.com/3aa534804da281e1fe8107dbfb72be8f777a0dc0/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373936626137656430642e706e67" alt="Disqus"></p>
+<p>댓글은 기본적으로 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com/">Disqus</a>를 제공합니다. 몇가지 더 제공하는데 중국 서비스라서 일단 Disqus를 사용하겠습니다. 디스커스에 먼저 가입하고 다음과 같이 아이디를 확인하고 <code>_config.yml</code>에 입력합니다.</p>
+<p><img src="https://camo.githubusercontent.com/3a99a70fa114a4159178352121d9f033c8647f1c/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373937623030646533312e706e67" alt="Site Identify"></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Comment</span></span><br><span class="line"><span class="attr">comment:</span></span><br><span class="line">    <span class="attr">disqus:</span> <span class="string">futurecreator</span> <span class="comment"># disqus shortname 을 찾아 입력합니다.</span></span><br><span class="line">    <span class="attr">duoshuo:</span></span><br><span class="line">    <span class="attr">youyan:</span></span><br></pre></td></tr></table></figure>
+<h2 id="공유">공유</h2>
+<p>해당 포스트를 공유하기 위한 기능도 제공합니다. 몇가지 옵션이 있습니다. 이미지를 보시고 원하시는 스타일을 사용하시면 됩니다.</p>
+<ul>
+<li>default</li>
+<li>addtoany</li>
+<li>jiathis (중국)</li>
+<li>bdshare (중국)</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="attr">share:</span> <span class="string">addtoany</span> <span class="comment"># options: jiathis, bdshare, addtoany, default</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://camo.githubusercontent.com/b419c0a2761aeb61cc4c91ee73754267224c1931/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373863326464623166312e706e67" alt="default"></p>
+<p><img src="https://camo.githubusercontent.com/7334695fc3e50d43d78e74b28ec5e84f1d0eaa28/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373863383930386463302e706e67" alt="addtoany"></p>
+<h2 id="플러그인">플러그인</h2>
+<p>이외에도 Open Graph, ScrollLoading, Fancybox 등의 플러그인을 제공합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">google_analytics:</span> <span class="string">UA-66666666-6</span></span><br></pre></td></tr></table></figure>
+<h3 id="ScrollLoading">ScrollLoading</h3>
+<p>한번에 모든 페이지를 로딩하는 게 아니고 스크롤에 따라서 로딩하는 플러그인입니다.</p>
+<h3 id="Fancybox">Fancybox</h3>
+<p>맥 스타일로 이미지를 보여주는 플러그인이라고 하네요.</p>
+<h2 id="블로그-검색-관련-기능">블로그 검색 관련 기능</h2>
+<p>Open Graph와 Google Analytics와 연동 등을 제공합니다. 이 부분은 얘기가 또 길어지니까 다음번 포스트 때 자세히 다뤄보죠.</p>
+<h3 id="Open-Graph">Open Graph</h3>
+<p>페이스북의 앱 아이디나 admin 번호, 트위터와 구글플러스 아이디를 입력할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">open_graph:</span><br><span class="line">    fb_app_id:</span><br><span class="line">    fb_admins:</span><br><span class="line">    twitter_id:</span><br><span class="line">    google_plus:</span><br></pre></td></tr></table></figure>
+<h3 id="Google-Analytics">Google Analytics</h3>
+<p>Google Analytics 아이디를 적으면 됩니다.</p>
+<p><img src="https://camo.githubusercontent.com/8ebb1095d950ff352476829fab5b487a3ab02fbf/68747470733a2f2f6f6f6f2e306f302e6f6f6f2f323031362f30312f31342f353639373836613738653136302e706e67" alt="tracking id"></p>
+<p>이런 기능들을 그냥 옵션으로 바로 적용할 수 있으니 정말 편합니다. 쓸수록 마음에 드는 테마입니다. 다음번에는 Hexo에 있는 플러그인들 중 쓸만한 걸 살펴보겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
+</li>
+<li>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
+</li>
+<li>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
+</li>
+<li>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
+</li>
+<li>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
+</li>
+<li>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/14/atom-as-markdown-editor/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Atom 을 마크다운(Markdown) 에디터로 사용하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/14/get-started-with-hexo/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">워드프레스보다 쉬운 Hexo 블로그 시작하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/14/hexo-apply-hueman-theme/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

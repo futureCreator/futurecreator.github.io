@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    AWS 자격증 준비하기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/04/aws-certified/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Cloud/">Cloud</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-aws-certified" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        AWS 자격증 준비하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/04/aws-certified/" class="article-date">
+    <time datetime="2018-07-04T14:25:12.000Z" itemprop="datePublished">2018/07/04</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              12 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발자들 사이에서 서버리스 아키텍쳐에 대해 이야기가 많이 나오면서 서버리스 컴퓨팅을 손쉽게 제공하는 AWS에도 관심이 많습니다. 저도 서버리스가 궁금해서 AWS에 가입을 하고 공부를 해봤습니다. 처음에는 새로운 개념도 많고 서비스도 많아서 복잡해보였는데 알면 알수록 재밌습니다. 사용자가 다양한 옵션을 간편하게 설정할 수 있고, 입문자가 쉽게 적응할 수 있도록 문서가 잘 정리되어 있습니다.</p>
+<p>감을 익히기 위해서 서비스를 조합해 서버리스를 이용한 사이트 몇 개를 만들어봤습니다. (블로그 오른편 사이드바 링크 목록에 있습니다) S3에서 정적 콘텐츠를 제공하고, Lambda에서 로직을 처리, DynamoDB에서는 데이터를 처리합니다. 비즈니스 로직 외에 관리해야 할 수많은 것(서버 및 <em>DB</em> 확장, 성능, 백업, 이중화 등등)들을 자동으로 관리해줍니다. 아이디어만 있으면 너무나 쉽고 빠르게 개발 할 수 있습니다. 이러한 놀라운 생산성은 대규모 서비스일수록 더 강력해질 것 같네요.</p>
+<p>그 이후로 조금 더 공부하기 위해서 AWS 자격증을 공부하기로 결정했습니다. 이번 포스팅에서는 자격증을 준비하기 위해서 어떤 자격증을 공부할지, 어떻게 공부해야 하는지 찾아본 자료들을 정리했습니다. 단, 저도 이제 준비를 하는 입장이라 공식 홈페이지의 정보를 제외한 정보의 유용성을 정확히 판단하기는 힘듭니다. 나중에 합격해서 좀 더 정확한 정보 + 후기를 올리고 싶네요 👏🏻</p>
+<h2 id="자격증-선택">자격증 선택</h2>
+<p><img src="https://d1.awsstatic.com/training-and-certification/cert-roadmap/AWS_Certification_Roadmap_April_2018.d51f56ef22f8d98ad54423c132a976eab2b94abf.png" alt="https://aws.amazon.com/ko/certification/"></p>
+<p>처음 선택할 수 있는 자격증은 다음 세 가지입니다. 어소시에이트 과정을 합격한 경우 다음 프로페셔널 과정에 도전할 수 있습니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/certification/certified-solutions-architect-associate/">AWS 공인 솔루션스 아키텍트 – 어소시에이트</a> : 전체적인 구조 및 설계</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/certification/certified-developer-associate/">AWS 공인 개발자 – 어소시에이트</a> : 프로그래밍 및 코딩</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/certification/certified-sysops-admin-associate/">AWS 공인 시스템 운영 관리자 - 어소시에이트</a> : 최적화된 배포 및 운영</li>
+</ul>
+<h3 id="업데이트">업데이트</h3>
+<p>아키텍트, 개발자 과정은 최근 '새로운 버전’의 시험이 릴리스되었습니다. 새로운 서비스와 모범 사례, 아키텍트 등이 추가되었습니다. 제한 기간 동안 선택해서 응시할 수 있는데 저는 새로운 시험을 응시할 계획입니다.</p>
+<ul>
+<li>아키텍트 : 2018/02 릴리스 -&gt; 2018/08/12 까지 선택 응시 가능</li>
+<li>개발자 : 2018/06 릴리스 -&gt; 2018/11/19 까지 선택 응시 가능</li>
+<li>시스템 운영 관리자 : 2018/09/24 릴리즈 예정</li>
+</ul>
+<p>예전 버전에는 한글 시험도 있었지만, 새로운 버전은 영어와 일본어만 지원하고 있습니다.</p>
+<h3 id="아키텍트-자격증">아키텍트 자격증</h3>
+<p>고객의 요구 사항을 기반으로 아키텍처 설계 원칙을 사용해 솔루션을 정의하고, 모범 사례를 기반으로 프로젝트 구현 지침을 제공할 수 있는지 증명하는 자격입니다.</p>
+<ul>
+<li>AWS 클라우드 아키텍처 원칙에 대한 이해</li>
+<li>주어진 기술 요구 사항에 부합하는 AWS 서비스를 선택</li>
+<li>비용 효율적이고, 내결함성, 가용성, 확장성을 갖춘 시스템을 설계</li>
+<li>안전하고 안정적인 애플리케이션을 구축하는 권장 모범 사례에 대한 이해</li>
+<li>AWS 글로벌 인프라, 네트워크 기술 이해</li>
+<li>AWS 보안 기능 및 도구에 대한 이해</li>
+</ul>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf">클라우드를 위한 아키텍처 설계: AWS 모범 사례</a> 와 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/architecture/well-architected/">AWS Well-Architected</a> 를 참고해서 공부합니다.</p>
+<h3 id="개발자">개발자</h3>
+<p>핵심적인 AWS 서비스와 아키텍처 모범 사례를 이해하고 클라우드 기반 애플리케이션을 능숙하게 개발, 배포 및 디버깅할 수 있는지 증명하는 자격증입니다.</p>
+<ul>
+<li>핵심 AWS 서비스와 아키텍처 모범 사례에 대한 이해</li>
+<li>AWS를 사용하여 클라우드 기반 애플리케이션을 개발, 배포, 디버깅하는 능력</li>
+<li>AWS 서비스 API, AWS CLI 및 SDK를 사용할 수 있는 능력</li>
+<li>AWS 보안 모범 사례를 적용해 코딩할 수 있는 능력</li>
+<li>AWS에서 모듈을 작성, 유지 관리, 디버깅할 수 있는 능력</li>
+<li>서버리스 애플리케이션을 능숙하게 코딩할 수 있는 능력</li>
+<li>CI/CD 파이프라인을 사용하여 AWS에 애플리케이션을 배포할 수 있는 능력</li>
+</ul>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf">AWS 보안 모범 사례 백서</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf">AWS Well-Architected Framework</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://d1.awsstatic.com/whitepapers/serverless-architectures-with-aws-lambda.pdf">AWS Lambda를 사용한 서버리스 아키텍처 백서</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf">AWS에서 컨테이너식 마이크로 서비스를 실행 백서</a> 등을 참고해서 공부합니다.</p>
+<h3 id="시스템-운영-관리자">시스템 운영 관리자</h3>
+<p>AWS 플랫폼에서의 구축된 시스템을 배포, 관리, 운영에 대한 기술 전문성을 증명하는 자격증입니다.</p>
+<ul>
+<li>AWS에서 가용성이 높고 확장 가능하며 내결함성을 갖춘 시스템을 배포, 관리 및 운영</li>
+<li>기존 온프레미스 애플리케이션을 AWS로 마이그레이션</li>
+<li>적절한 AWS 운영 모범 사례 사용 식별</li>
+</ul>
+<p>2018년 9월 24일에 업데이트된 버전을 릴리스할 예정이라고 합니다.</p>
+<h3 id="당신의-선택은">당신의 선택은?</h3>
+<p>먼저, 아키텍트 자격증은 AWS 자격증 중 가장 자료도 많고 인기도 많은 자격증이었습니다. 시스템 인프라를 다루는 사람에게는 각종 서비스와 용어들이 익숙해서 유리한 자격증인데, 저는 개발을 위주로 하다보니, 인프라나 네트워크 쪽은 생소해서 조금 걱정되었습니다. 시스템 운영 관리자 또한 마찬가지였습니다.</p>
+<p>개발자는 서비스를 사용해서 애플리케이션을 구축하는 쪽에 관련된 자격증이라 좀 더 익숙하고 유용할 것 같았습니다. 하지만 아키텍트 자격증보다 난이도가 좀 높아보였습니다.</p>
+<p>이 세 자격증은 서로 연관된 부분도 많고 겹치는 부분도 있어서 연속해서 취득하는 분도 많은 것 같습니다. 세 자격증을 모두 취득한다면 어떤 것을 먼저해도 상관없을 것 같습니다. 저는 일단 개발자 -&gt; 아키텍트 -&gt; 시스템 운영 관리자 순으로 도전하기로 결정했습니다.</p>
+<h2 id="시험-관련">시험 관련</h2>
+<h3 id="개요">개요</h3>
+<ul>
+<li>문제 유형
+<ul>
+<li>4지선다형</li>
+<li>다중 응답형 (보기 5개 중 2개가 정답)</li>
+</ul>
+</li>
+<li>65문항 / 130분</li>
+<li>시험 전체 난이도에 따라 100~1,000점 사이의 점수로 계산되고 720점 이상 합격</li>
+<li>과락은 없음</li>
+<li>영어, 일본어 (한글 시험 없음)</li>
+<li>연습시험 20 USD</li>
+<li>시험 150 USD</li>
+</ul>
+<h3 id="4지선다-샘플-문제">4지선다 샘플 문제</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A company is storing an access key (access key ID and secret access key) in a text file on a custom AMI. The company uses the access key to access DynamoDB tables from instances created from the AMI. The security team has mandated a more secure solution.</span><br><span class="line"></span><br><span class="line">Which solution will meet the security team’s mandate?</span><br><span class="line"></span><br><span class="line">A. Put the access key in an S3 bucket, and retrieve the access key on boot from the instance.</span><br><span class="line">B. Pass the access key to the instances through instance user data.</span><br><span class="line">C. Obtain the access key from a key server launched in a private subnet.</span><br><span class="line">D. Create an IAM role with permissions to access the table, and launch all instances with the new role</span><br></pre></td></tr></table></figure>
+<h3 id="다중-응답형-샘플-문제">다중 응답형 샘플 문제</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A company is developing a highly available web application using stateless web servers. Which services are suitable for storing session state data? (Select TWO.)</span><br><span class="line"></span><br><span class="line">A. CloudWatch</span><br><span class="line">B. DynamoDB</span><br><span class="line">C. Elastic Load Balancing</span><br><span class="line">D. ElastiCache</span><br><span class="line">E. Storage Gateway</span><br></pre></td></tr></table></figure>
+<h2 id="공부-방식">공부 방식</h2>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/certification/certification-prep/?nc1=h_ls">공식 홈페이지</a>에서 추천하는 준비 방식은 다음과 같습니다. 여러 후기에서 시험 안내서나 샘플 문항 등 모두 꼼꼼히 살펴봐야 한다고 합니다. 세부사항은 자격증 별 안내 페이지에서 확인할 수 있습니다.</p>
+<ol>
+<li>시험 안내서</li>
+<li>샘플 문항 검토</li>
+<li>AWS 백서 / 모범사례 / FAQ 학습 (자격증마다 다름)</li>
+<li>연습 시험 응시</li>
+</ol>
+<h2 id="후기">후기</h2>
+<ul>
+<li>국내 자격증처럼 이론상으로만 공부하고 응시할 수준은 아니다. 실제로 많이 사용해본 사람에게 유리하다. 직접 사용해봐야 한다.</li>
+<li>특히 자격증마다 명시된 백서와 모범사례를 꼼꼼히 읽어봐야 한다.</li>
+<li>AWS 내의 여러 가지 서비스를 조합하고 옵션을 활성화해서 원하는 결과를 얻을 수 있을지, 복합적인 문제가 많다.</li>
+<li>udemy 의 영어 강좌가 도움이 된다고 함.
+<ul>
+<li>20만원인데 11,000원에 타임어택 할인 중인데 상시할인으로 보임</li>
+<li>이론 및 실습 강의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.udemy.com/aws-certified-solutions-architect-associate/learn/v4/overview">https://www.udemy.com/aws-certified-solutions-architect-associate/learn/v4/overview</a></li>
+<li>예상 시험 코스 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.udemy.com/aws-certified-solutions-architect-associate-practice-tests/">https://www.udemy.com/aws-certified-solutions-architect-associate-practice-tests/</a></li>
+<li>최신 버전 내용 있는지 확인 필요함.</li>
+</ul>
+</li>
+<li>공식 교재가 있으나 비추
+<ul>
+<li>비싸고 두껍고 영어고 최신 정보 업데이트가 안되어있고 특정 서비스에 국한된 내용이 많음</li>
+<li>살거면 ebook 으로 살 것</li>
+</ul>
+</li>
+<li>덤프(유료)
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.passleader.com/amazon.html">https://www.passleader.com/amazon.html</a></li>
+<li>문제를 외우지 말고 정답을 명확하게 이해할 것.</li>
+</ul>
+</li>
+<li>QwikLabs 에서 실습하기
+<ul>
+<li>실제 AWS와 동일한 환경에서 AWS의 다양한 서비스와 기능을 실습할 수 있는 환경을 온라인 상에서 제공</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://edu.supertrack.co.kr/community/news.php?ptype=view&amp;idx=5170&amp;page=1&amp;code=news">http://edu.supertrack.co.kr/community/news.php?ptype=view&amp;idx=5170&amp;page=1&amp;code=news</a></li>
+</ul>
+</li>
+<li>시험 장에서 신분 확인 시 신분증 2개 필요함 (주민등록증, 운전면허증, 신용카드 등)
+<ul>
+<li>신용카드도 신분증으로 사용할 수 있다고 함. 혹시 몰라서 다 가져갈 예정.</li>
+</ul>
+</li>
+<li>외국인을 위한 시험 시간 30분 추가 요청 -&gt; 업데이트 되면서 바뀐 것 같은데 시험 응시 후 확인 필요함.
+<ul>
+<li>AWS 교육 및 자격증 포털 로그인</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.aws.training/Certification">https://www.aws.training/Certification</a> 에서 AWS 자격증 계정으로 들어가면</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.certmetrics.com/amazon/">https://www.certmetrics.com/amazon/</a> 로 사이트 바뀜</li>
+<li>Upcoming Exams</li>
+<li>오른쪽 네 가지 선택 중 ‘Request Exam Accommodations’ 선택</li>
+<li>Accommodations Type 드랍다운 박스에서 ‘ESL +30Minutes’ 선택</li>
+<li>Create 클릭</li>
+</ul>
+</li>
+<li>추가로 AWS 공식 인증 학원 과정, 온라인 과정, 파트너 과정 등이 있음.</li>
+</ul>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://soulsearcher.github.io/blog/2018/04/10/preparing_for_certification/">AWS Certified Solutions Architect - Associate 2018 후기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://brunch.co.kr/@topasvga/233">(정보)31.AWS 아키자격증따는법-‘18년6월 업데이트’</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://svrlove.blogspot.com/2017/07/aws-sa.html">AWS SA 자격증 시험 합격 후기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://linux.systemv.pe.kr/aws-certified-solutions-architect-associate-exam-%EC%8B%9C%ED%97%98-%ED%9B%84%EA%B8%B0/">AWS CERTIFIED SOLUTIONS ARCHITECT – ASSOCIATE EXAM 시험 후기</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide">비공식 AWS 공인 솔루션스 아키텍트 - 어소시에이트 수험 가이드</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gist.github.com/serithemage/df61aaf396046eff7244b6eaa8d58d4a">비공식 AWS 공인 개발자 - 어소시에이트 수험 가이드</a></li>
+</ul>
+<p>이번 포스팅에서는 AWS 자격증을 살펴봤습니다. 자격증 준비하시는 분들에게 도움이 되었으면 하고, 자격증 취득하게 되면 후기도 올리겠습니다.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/11/09/it-infrastructure-basics/" title="개발자를 위한 인프라 기초 총정리">개발자를 위한 인프라 기초 총정리</a>
+</li>
+<li>
+<a href="/2018/11/16/docker-container-basics/" title="도커 Docker 기초 확실히 다지기">도커 Docker 기초 확실히 다지기</a>
+</li>
+<li>
+<a href="/2018/10/25/google-cloud-summit-seoul-2018/" title="구글 클라우드 서밋 서울 2018 후기">구글 클라우드 서밋 서울 2018 후기</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/07/buy-me-a-coffee/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            콘텐츠 제작자 후원의 새로운 방법 (BMC)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/30/easy-diagram-plantuml-hexo-plugin/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">쉽고 빠른 UML 그리기 (PlantUML)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/04/aws-certified/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

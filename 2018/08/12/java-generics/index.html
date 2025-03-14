@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Java 제네릭 Generics DEEP DIVE |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/08/12/java-generics/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-java-generics" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Java 제네릭 Generics DEEP DIVE
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/08/12/java-generics/" class="article-date">
+    <time datetime="2018-08-12T14:15:12.000Z" itemprop="datePublished">2018/08/12</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              1:01
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>JDK API 를 살펴보면 다음과 같은 코드를 흔히 볼 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span> &lt;V&gt; Function&lt;V, R&gt; <span class="title function_">compose</span><span class="params">(Function&lt;? <span class="built_in">super</span> V, ? extends T&gt; before)</span></span><br></pre></td></tr></table></figure>
+<p>위 코드는 자바 8에 추가된 함수형 인터페이스  <code>Function</code> 의 <code>compose</code> 라는 디폴트 메소드의 시그니쳐입니다. 위 코드가 이해하기 어려운 분들이라면 이번 포스트를 통해서 제네릭에 대한 개념을 함께 정리하시면 좋겠습니다.</p>
+<h2 id="살펴볼-내용">살펴볼 내용</h2>
+<ul>
+<li>제네릭</li>
+<li>제네릭 클래스</li>
+<li>타입 인자와 제한</li>
+<li>제네릭 메소드</li>
+<li>타입 추론</li>
+<li>타입 이레이져 Type Erasure</li>
+<li>와일드카드 Wildcard 와 타입 제한</li>
+<li><code>&lt;? extends T&gt;</code></li>
+<li>제네릭 인터페이스</li>
+</ul>
+<h2 id="시작하기">시작하기</h2>
+<p>쉬운 내용부터 시작합니다. 다음은 간단한 사과와 오렌지 클래스입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Apple</span> &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;I am an apple.&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Orange</span> &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;I am an orange.&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그리고 각각 사과와 오렌지를 담을 수 있는 박스가 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">AppleBox</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> Apple apple;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> Apple <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> apple;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(Apple apple)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.apple = apple;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">OrangeBox</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> Orange orange;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> Orange <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> orange;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(Orange orange)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.orange = orange;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>간단한 코드죠? 그럼 다음과 같이 상자에 담거나 꺼낼 수 있을 겁니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">AppleBox</span> <span class="variable">aBox</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AppleBox</span>();</span><br><span class="line"><span class="type">OrangeBox</span> <span class="variable">oBox</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">OrangeBox</span>();</span><br><span class="line"></span><br><span class="line">aBox.set(<span class="keyword">new</span> <span class="title class_">Apple</span>());</span><br><span class="line">oBox.set(<span class="keyword">new</span> <span class="title class_">Orange</span>());</span><br><span class="line"></span><br><span class="line"><span class="type">Apple</span> <span class="variable">apple</span> <span class="operator">=</span> aBox.get();   <span class="comment">// I&#x27;m an apple.</span></span><br><span class="line"><span class="type">Orange</span> <span class="variable">orange</span> <span class="operator">=</span> oBox.get(); <span class="comment">// I&#x27;m an orange.</span></span><br></pre></td></tr></table></figure>
+<p>그런데 이 박스는 역할이 비슷하기 때문에 통합하기로 합니다. 사과 담는 상자나 오렌지 담는 상자를 따로 둘 필요는 없겠죠.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> Object fruit;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> Object <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> fruit;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(Object fruit)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.fruit = fruit;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>사과와 오렌지 모두를 받기 위해서 <code>Object</code> 를 사용했습니다. 동일하게 사용하는 코드를 작성해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Box</span> <span class="variable">aBox</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Box</span>();</span><br><span class="line"><span class="type">Box</span> <span class="variable">oBox</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Box</span>();</span><br><span class="line"></span><br><span class="line">aBox.set(<span class="keyword">new</span> <span class="title class_">Orange</span>()); <span class="comment">// ?</span></span><br><span class="line">oBox.set(<span class="keyword">new</span> <span class="title class_">Apple</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">// java.lang.ClassCastException: Orange cannot be cast to Apple</span></span><br><span class="line"><span class="type">Apple</span> <span class="variable">apple</span> <span class="operator">=</span> (Apple) aBox.get(); </span><br><span class="line"><span class="type">Orange</span> <span class="variable">orange</span> <span class="operator">=</span> (Orange) oBox.get();</span><br></pre></td></tr></table></figure>
+<p>여기서 나타날 수 있는 문제는 두 가지가 있습니다. 하나는 <code>Object</code> 타입이기 때문에 사과 상자와 오렌지 상자 구분없이 담기고, 꺼낼 때 형 변환이 필요하다는 점입니다.</p>
+<ol>
+<li>다른 게 들어갈 수 있고, 명백한 오류지만 컴파일러가 알아내질 못한다.</li>
+<li>형 변환(<em>casting</em>) 이 필요함.</li>
+</ol>
+<p>이런 상황은 프로그래머가 의도하지 않은 실수라고 볼 수 있는데, 컴파일 단계에서 잡아내지 못했습니다. 런타임에 발생하는 에러는 치명적이기 때문에 컴파일 단계에서 미리 잡을 수 있어야 좋겠죠.</p>
+<h2 id="제네릭-Generics">제네릭 Generics</h2>
+<p>제네릭(<em>Generics</em>)은 클래스 또는 메소드 내부에서 사용할 타입을 외부에서 인자로 받는 것입니다. 이 인자는 인스턴스를 생성하는 시점이나 메소드를 호출하는 시점에 정할 수 있습니다. 위의 상황을 개선하기 위해서 제네릭을 적용해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span>&lt;T&gt; &#123;</span><br><span class="line">  <span class="keyword">private</span> T fruit;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> T <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> fruit;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(T fruit)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.fruit = fruit;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>기존의 박스와 비교해보면, <code>Object</code> 가 <code>T</code> 라는 문자로 대체되었고, 클래스 이름 옆에 <code>&lt;T&gt;</code> 가 붙었습니다. 이 의미는 해당 클래스에서 사용하는 타입을 <code>T</code> 라고 정의하고 해당 타입은 인스턴스 생성 시 받아서 정해진다는 의미입니다. 그러면 사용하는 코드는 다음처럼 수정할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 인스턴스 생성 시 타입을 정함</span></span><br><span class="line">Box&lt;Apple&gt; aBox = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">Box&lt;Orange&gt; oBox = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">aBox.set(<span class="keyword">new</span> <span class="title class_">Orange</span>()); <span class="comment">// Orange cannot be cast to Apple</span></span><br><span class="line">oBox.set(<span class="keyword">new</span> <span class="title class_">Apple</span>());</span><br><span class="line"></span><br><span class="line"><span class="type">Apple</span> <span class="variable">apple</span> <span class="operator">=</span> aBox.get();</span><br><span class="line"><span class="type">Orange</span> <span class="variable">orange</span> <span class="operator">=</span> oBox.get();</span><br></pre></td></tr></table></figure>
+<p>제네릭을 통해서 앞서 살펴 본 문제점을 모두 해결할 수 있게 됩니다.</p>
+<ol>
+<li>컴파일러 단계에서 타입 에러를 잡아낼 수 있음.</li>
+<li>형 변환이 필요없음.</li>
+</ol>
+<h2 id="제네릭-여러-개-사용하기">제네릭 여러 개 사용하기</h2>
+<p>제네릭은 여러 개 사용할 수 있습니다. 인자를 두 개 받는 것이죠. 다음은 두 가지 타입을 받는 박스입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">DBox</span>&lt;L, R&gt; &#123;</span><br><span class="line">  <span class="keyword">private</span> L left;</span><br><span class="line">  <span class="keyword">private</span> R right;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(L left, R right)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.left = left;</span><br><span class="line">    <span class="built_in">this</span>.right = right;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> left + <span class="string">&quot; &amp; &quot;</span> + right;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그러면 다음과 같이 두 개의 타입을 넣을 수 있습니다. 물론 필요하다면 세 개, 그 이상도 가능합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DBox&lt;String, Integer&gt; box = <span class="keyword">new</span> <span class="title class_">DBox</span>&lt;&gt;();</span><br><span class="line">box.set(<span class="string">&quot;Apple&quot;</span>, <span class="number">25</span>);</span><br><span class="line">System.out.println(box); <span class="comment">// Apple &amp; 25</span></span><br></pre></td></tr></table></figure>
+<p>그렇다면 제네릭 타입을 사용하는 클래스를 제네릭 타입으로 사용할 수 있을까요? 예를 들면 박스 안에 박스를 넣는 셈입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Box&lt;Apple&gt; box1 = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">box1.set(<span class="keyword">new</span> <span class="title class_">Apple</span>());</span><br><span class="line"></span><br><span class="line">Box&lt;Box&lt;Apple&gt;&gt; box2 = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">box2.set(box1);</span><br><span class="line"></span><br><span class="line">Box&lt;Box&lt;Box&lt;Apple&gt;&gt;&gt; box3 = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">box3.set(box2);</span><br><span class="line"></span><br><span class="line">System.out.println(box3.get().get().get()); <span class="comment">// I&#x27;m an apple.</span></span><br></pre></td></tr></table></figure>
+<p><code>Box&lt;Apple&gt;</code> 은 사과를 담는 상자가 되어 하나의 타입으로 다른 상자 안에 들어가게 됩니다. 상자 안에 상자를 담는다고 생각하면 쉽습니다.</p>
+<p>추가적으로 살펴보자면, 기본 타입들은 <code>Integer</code> 처럼 래퍼 클래스(<em>Wrapper class</em>)를 사용해야 합니다. 그리고 생성 시 뒤에서도 똑같이 타입을 명시하게 되는데, 이는 보통 생략을 하고 <code>&lt;&gt;</code> 이렇게 표시합니다. 이런 기호는 다이아몬드(<em>Diamond</em>) 기호라고 부릅니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Type argument cannot be of primitive type</span></span><br><span class="line">Box&lt;<span class="type">long</span>&gt; box = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;<span class="type">long</span>&gt;();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Explicit type argument Long can be replaced with &lt;&gt;</span></span><br><span class="line">Box&lt;Long&gt; box = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;Long&gt;();</span><br><span class="line"></span><br><span class="line">Box&lt;Long&gt; box = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;(); <span class="comment">// OK!</span></span><br></pre></td></tr></table></figure>
+<h2 id="자주-사용하는-타입인자">자주 사용하는 타입인자</h2>
+<p>제네릭 클래스를 만들 때 <code>T</code> 라는 키워드를 사용했습니다. <code>T</code> 는 Type 을 의미하는데요, 이처럼 자주 사용하는 타입 인자들이 있습니다. 물론 필요에 따라 원하는대로 만들어도 무방하지만, 다른 사람이 알아보기 쉽게 만드는 것이 좋습니다.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">타입 인자</th>
+<th style="text-align:center">주로 사용되는 의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>E</code></td>
+<td style="text-align:center">Element</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>K</code></td>
+<td style="text-align:center">Key</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center">Number</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>T</code></td>
+<td style="text-align:center">Type</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>V</code></td>
+<td style="text-align:center">Value</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>R</code></td>
+<td style="text-align:center">Result</td>
+</tr>
+</tbody>
+</table>
+<h2 id="타입-인자-제한하기">타입 인자 제한하기</h2>
+<p>이처럼 제네릭을 이용하면 내부에서 사용할 타입을 외부에서 받아올 수 있습니다. 그런데 이렇게 들어올 수 있는 타입을 좀 더 명확하게 제한할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; &#123;</span><br><span class="line">  <span class="keyword">private</span> T object;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> T <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> object;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(T object)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.object = object;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>Box&lt;T extends Number&gt;</code> 는 타입 인자 <code>T</code> 가 <code>Number</code> 클래스를 상속하는 하위 클래스라고 범위를 제한하고 있습니다. 따라서 다음과 같이 <code>Integer</code> 와 <code>Double</code> 은 가능하지만 <code>String</code> 은 불가능합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Box&lt;Integer&gt; iBox = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">iBox.set(<span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">Box&lt;Double&gt; dBox = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">dBox.set(<span class="number">25.0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Type parameter &#x27;java.lang.String&#x27; is not within its bound</span></span><br><span class="line"><span class="comment">// should extend &#x27;java.lang.Number&#x27;</span></span><br><span class="line">Box&lt;String&gt; sBox = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br></pre></td></tr></table></figure>
+<p>이렇게 범위를 제한하게 되면, 특정 메소드를 호출하는 것을 보장할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">toIntValue</span><span class="params">()</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> object.intValue();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>ìntValue</code> 메소드가 <code>Number</code> 클래스가 가지고 있는 메소드이기 때문에, 위 메소드는 <code>object</code> 가 <code>Number</code> 클래스라고 보장이 되어야만 가능합니다. 따라서 <code>Box&lt;T&gt;</code> 에서는 어떤 타입이 들어올 지 몰라서 불가능하지만 <code>Box&lt;T extends Number&gt;</code> 에서는 타입이 한정되어 있기 때문에 가능합니다.</p>
+<h2 id="인터페이스로-타입-인자-제한">인터페이스로 타입 인자 제한</h2>
+<p>이런 타입 제한은 인터페이스와 함께 사용하기도 합니다. 타입 인자를 제한할 때는 인터페이스도 상속과 마찬가지로 <code>extends</code> 키워드를 이용해서 처리합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Eatable</span> &#123;</span><br><span class="line">  String <span class="title function_">eat</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Eatable</span>&gt; &#123;</span><br><span class="line">  <span class="keyword">private</span> T object;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(T object)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.object = object;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> T <span class="title function_">get</span><span class="params">()</span> &#123;</span><br><span class="line">    System.out.println(object.eat()); <span class="comment">// 호출 가능</span></span><br><span class="line">    <span class="keyword">return</span> object;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>타입이 <code>Eatable</code> 인터페이스를 구현하고 있다는 것을 보장하고 있기 때문에 <code>eat</code> 메소드를 호출할 수 있게 됩니다.</p>
+<p>자바에서는 인터페이스 여러 개를 동시에 <code>implements</code> 할 수 있듯이, 타입 인자도 인터페이스를 이용하면 여러 개를 사용해 제한할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span>&lt;T <span class="keyword">extends</span> <span class="title class_">Number</span> &amp; Eatable&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="제네릭-메소드">제네릭 메소드</h2>
+<p>메소드에서도 마찬가지로 제네릭을 사용할 수 있습니다. 메소드에서 제네릭을 사용한다는 것은, 메소드의 매개변수 타입이나 리턴 타입을 호출 시에 지정할 수 있다는 뜻이 됩니다. 기본적으로 사용법은 클래스에 적용할 때와 같습니다. 다만 제네릭 메소드는 메소드 시그니처에 매개변수 타입을 추가로 명시해줘야 합니다. 메소드 시그니처에서는 해당 <code>T</code> 를 어떤 의미인지 알 수가 없기 때문입니다. 명시해주는 위치는 메소드 리턴 타입 앞입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Box&lt;T&gt; <span class="title function_">makeBox</span><span class="params">(T o)</span> &#123; ... &#125; <span class="comment">// Cannot resolve symbol &#x27;T&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> &lt;T&gt; Box&lt;T&gt; <span class="title function_">makeBox</span><span class="params">(T o)</span> &#123;</span><br><span class="line">  Box&lt;T&gt; box = <span class="keyword">new</span> <span class="title class_">Box</span>&lt;&gt;();</span><br><span class="line">  box.set(o);</span><br><span class="line">  <span class="keyword">return</span> box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>결론적으로 위와 같은 메소드는 특정 타입의 인자를 받아서 해당 타입을 담는 박스 클래스를 리턴하는 메소드입니다. 메소드는 다음과 같이 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Box&lt;String&gt; sBox = boxFactory.makeBox(<span class="string">&quot;Sweet&quot;</span>); <span class="comment">// instance method</span></span><br><span class="line">Box&lt;String&gt; sBox =BoxFactory.makeBox(<span class="string">&quot;Sweet&quot;</span>); <span class="comment">// static method</span></span><br></pre></td></tr></table></figure>
+<p>물론 제네릭 메소드에서도 타입을 제한할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; Box&lt;T&gt; <span class="title function_">makeBox</span><span class="params">(T o)</span> &#123; ... &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; T <span class="title function_">openBox</span><span class="params">(Box&lt;T&gt; box)</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="타입-추론">타입 추론</h2>
+<p>사실 여기엔 생략된 부분이 있습니다. 메소드 시그니처에 있듯이 메소드에게 해당 타입을 전달해줘야 합니다. 하지만 컴파일러는 매개변수의 타입을 보고 해당 타입을 유추할 수 있기 때문에 생략해서 사용할 수 있습니다. 컴파일러는 메소드의 시그니처 정보를 가지고 있기 때문에 아래 코드에서 “Sweet” 이라는 문자열을 보고 타입인자  <code>T</code> 가 <code>String</code> 이라고 판단하게 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Box&lt;String&gt; sBox = boxFactory.&lt;String&gt;makeBox(<span class="string">&quot;Sweet&quot;</span>);</span><br><span class="line">Box&lt;String&gt; sBox = boxFactory.makeBox(<span class="string">&quot;Sweet&quot;</span>); <span class="comment">// 생략한 모습</span></span><br></pre></td></tr></table></figure>
+<p>그렇다면 다음과 같이 매개변수가 없는 경우는 어떻게 유추를 할까요?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Box&lt;Integer&gt; iBox = boxFactory.makeEmptyBox();</span><br></pre></td></tr></table></figure>
+<p>이 때는 왼편의 선언된 변수의 타입을 보고 유추합니다. 이렇게 컴파일러의 타입 유추에 사용된 타입을 타겟 타입(Target type) 이라고 합니다. 이는 자바 7에서부터 지원되는 기능입니다.</p>
+<h2 id="타입-이레이져-Type-Erasure">타입 이레이져 Type Erasure</h2>
+<p>컴파일러 얘기가 나왔으니 이 제네릭의 매커니즘에 대해 좀 더 알아보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;E&gt; <span class="type">boolean</span> <span class="title function_">containsElement</span><span class="params">(E[] elements, E element)</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (E e : elements) &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.equals(element)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>위 메소드는 제네릭을 이용해서 배열 중 특정 요소가 있는지 확인하는 제네릭 메소드입니다. 컴파일러는 제네릭을 이용해서 타입을 확인하고 에러가 없는지 체크하게 됩니다. 그런데 실제 런타임에서는 이 코드는 다음과 같이 변환되어 실행됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">containsElement</span><span class="params">(Object[] elements, Object element)</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (Object e : elements) &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.equals(element)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>자세히 보시면, 제네릭 타입이 모두 사라지고 <code>Object</code> 타입으로 변환되었습니다. 컴파일러가 컴파일 단계에서 확인을 했기 때문에 런타임 에러가 나는 것을 방지해줍니다.</p>
+<p>그렇다면 범위를 제한한 제네릭은 어떨까요? 이럴 경우에는 타입 에러가 나지 않기 위해서는 <code>Object</code> 가 아닌 특정 타입으로 바뀌어야 합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;E <span class="keyword">extends</span> <span class="title class_">Number</span>&gt; <span class="type">boolean</span> <span class="title function_">containsElement</span><span class="params">(E[] elements, E element)</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (E e : elements) &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.equals(element)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>따라서 타입 이레이져가 타입을 모두 지워버리면 다음과 같이 변경됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">containsElement</span><span class="params">(Number[] elements, Number element)</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (Number e : elements) &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.equals(element)) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>결론적으로 제네릭은 타입을 외부에서 받아서 사용하고 제한함으로써 타입 에러를 컴파일러 단계에서 방지하기 위함이라고 볼 수 있습니다.</p>
+<h2 id="와일드카드-Wildcard">와일드카드 Wildcard</h2>
+<p>와일드카드는 <code>?</code> 키워드로 표시되는 것으로 제네릭과 비슷하지만 좀 더 간결하고 확장된 문법을 제공합니다.</p>
+<p>앞에서 계속해서 <code>Box</code> 클래스를 이용했는데요, 이번에는 이 박스 클래스를 오픈하는 <code>Unboxer </code> 클래스를 만들어보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Unboxer</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; T <span class="title function_">openBox</span><span class="params">(Box&lt;T&gt; box)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> box.get();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">peekBox</span><span class="params">(Box&lt;T&gt; box)</span> &#123;</span><br><span class="line">    System.out.println(box);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>상자를 오픈해서 내용을 리턴하는 <code>openBox</code> 메소드와 상자의 내용물을 출력만 하는 <code>peekBox</code> 메소드가 있습니다. 이 중 <code>peekBox</code> 메소드를 보시면, 이 타입의 인자로는 <code>Box&lt;Apple&gt;</code> 이 올 수도 있고, <code>Box&lt;Orange&gt;</code> 가 올 수도 있습니다. 이 때 와일드카드를 이용해서 <code>Box&lt;?&gt;</code> 라고 표시할 수 있습니다. 해당 타입으로는 여러 가지가 올 수 있다는 뜻입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">peekBox</span><span class="params">(Box&lt;?&gt; box)</span> &#123;</span><br><span class="line">  System.out.println(box);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>제네릭과 비슷해보이지만 좀 다르죠? 와일드카드는 상한제한과 하한제한을 이용해서 타입을 제한할 수 있는데 주로 타입을 제한해서 사용하는걸 많이 볼 수 있습니다.</p>
+<h3 id="상한-제한-Upper-Bounded">상한 제한 Upper-Bounded</h3>
+<p>상한 제한이라는 것은 와일드카드의 범위를 특정 객체의 하위 객체로 제한하는 것입니다. 다음과 같은 코드에서 박스 클래스 안에 들어갈 수 있는 클래스는 <code>Integr</code>, <code>Double</code> 과 같이 <code>Number</code> 클래스를 상속하는 하위 클래스들입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">peekBox</span><span class="params">(Box&lt;? extends Number&gt; box)</span> &#123;</span><br><span class="line">  System.out.println(box);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>상한 제한이 그저 클래스의 범위를 제한하는 것 이상의 기능이 있습니다. 다음은 인형을 담는 박스 클래스가 있을 때 상자에서 인형을 꺼내는 메소드입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">outBox</span><span class="params">(Box&lt;Toy&gt; box)</span> &#123;</span><br><span class="line">  <span class="type">Toy</span> <span class="variable">toy</span> <span class="operator">=</span> box.get();</span><br><span class="line">  System.out.println(toy);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>재미있는 점은 토이 클래스를 상속받는 하위 클래스들도 담을 수 있도록 다음처럼 상한 제한을 넣었을 때, 상자 안에 넣는 메소드는 호출할 수가 없게 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">outBox</span><span class="params">(Box&lt;? extends Toy&gt; box)</span> &#123;</span><br><span class="line">  <span class="type">Toy</span> <span class="variable">toy</span> <span class="operator">=</span> box.get();</span><br><span class="line">  box.set(<span class="keyword">new</span> <span class="title class_">Toy</span>()); <span class="comment">// compile error!</span></span><br><span class="line">  System.out.println(toy);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>어떻게 이런 일이 발생할까요? 왜냐하면 상위 참조변수는 하위 클래스를 참조할 수 있지만, 반대로 하위 참조변수는 상위 클래스를 참조할 수 없기 때문입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Robot</span> <span class="keyword">extends</span> <span class="title class_">Toy</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="type">Toy</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Robot</span>(); <span class="comment">// 가능</span></span><br><span class="line"><span class="type">Robot</span> <span class="variable">r</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Toy</span>(); <span class="comment">// 불가!</span></span><br></pre></td></tr></table></figure>
+<p>그렇게 때문에 인형 박스에 로봇은 넣을 수 있지만, 로봇 박스에는 인형을 넣을 순 없게 됩니다. 다음과 같이 상한 제한을 하는 경우에 인형의 하위 클래스인 로봇 박스가 올 수 있기 때문에 박스에 넣는 기능은 컴파일러가 미리 방지하는 것입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">outBox</span><span class="params">(Box&lt;? extends Toy&gt; box)</span> &#123;</span><br><span class="line">  <span class="type">Toy</span> <span class="variable">toy</span> <span class="operator">=</span> box.get();</span><br><span class="line">  <span class="comment">// Box&lt;Robot&gt; 에는 Toy 를 담을 수가 없다.</span></span><br><span class="line">  box.set(<span class="keyword">new</span> <span class="title class_">Toy</span>()); <span class="comment">// compile error!</span></span><br><span class="line">  System.out.println(toy);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="하한-제한-Lower-Bounded">하한 제한 Lower-Bounded</h3>
+<p>하한 제한은 상한 제한과 반대로 동작합니다. 다음과 같은 클래스는 <code>Integer</code> 를 포함해 상위 클래스만 올 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">peekBox</span><span class="params">(Box&lt;? <span class="built_in">super</span> Integer&gt; box)</span> &#123;</span><br><span class="line">  System.out.println(box);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>아까처럼 인형 클래스 예제를 살펴봅니다. 다음은 인형 박스에 로봇을 담는 메소드입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">inBox</span><span class="params">(Box&lt;? <span class="built_in">super</span> Robot&gt; box, Robot robot)</span> &#123;</span><br><span class="line">  box.set(robot);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>다음과 같이 상한 제한을 걸게 되면 박스 안에는 로봇 클래스와 토이 클래스가 올 수 있게 됩니다. 그렇다면 상자 안에는 토이가 들어있을 수 있기 때문에 하위 클래스인 로봇 참조변수로는 참조할 수 없게 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">inBox</span><span class="params">(Box&lt;? <span class="built_in">super</span> Robot&gt; box, Robot robot)</span> &#123;</span><br><span class="line">  box.set(robot);</span><br><span class="line">  <span class="type">Robot</span> <span class="variable">myRobot</span> <span class="operator">=</span> box.get(); <span class="comment">// compile error!</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>상한 제한과 하한 제한은 단순히 클래스의 제한할 수 있는 기능과 더불어, 예상치 못한 에러를 컴파일 단계에서 찾아낼 수 있는 역할을 합니다.</p>
+<p>이러한 와일드 카드와 타입 제한은 자바 API 에서도 쉽게 찾아볼 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Collections.copy 메소드</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">copy</span><span class="params">(List&lt;? <span class="built_in">super</span> T&gt; dest, List&lt;? extends T&gt; src)</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="제네릭-메소드와-와일드카드">제네릭 메소드와 와일드카드</h3>
+<p>앞서 살펴본 와일드카드의 타입 제한에서 해당 타입을 제네릭으로 외부에서 받아올 수 있습니다. 코드를 보면 가끔 <code>&lt;? extends T&gt;</code> 라는 코드를 볼 수 있는데 이게 바로 그런 케이스입니다.</p>
+<p>다음 코드에서는 메소드 오버로딩이 성립하지 않습니다. 왜냐하면 타입 이레이져가 동작하면서 두 코드는 동일한 코드가 되기 때문입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// both methods have same erasure</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">outBox</span><span class="params">(Box&lt;? extends Toy&gt; box)</span> &#123; ... &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">outBox</span><span class="params">(Box&lt;? extends Robot&gt; box)</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p>이럴 땐 해당 타입을 제네릭으로 받아와 활용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">outBox</span><span class="params">(Box&lt;? extends T&gt; box)</span> &#123; ... &#125;</span><br></pre></td></tr></table></figure>
+<p>위 코드는 메소드 호출 시 타입을 받는데, 그 타입은 해당 타입과 그 타입의 하위 클래스만 올 수 있으며, 참조변수 <code>box</code> 가 참조하는 인스턴스를 대상으로 꺼내는 작업만 허용한다는 의미가 됩니다.</p>
+<h2 id="제네릭-인터페이스">제네릭 인터페이스</h2>
+<p>인터페이스도 제네릭을 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Getable</span>&lt;T&gt; &#123;</span><br><span class="line">  T <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>해당 인터페이스는 다음과 같이 구현할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">Getable</span>&lt;T&gt; &#123; </span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> T <span class="title function_">get</span><span class="params">()</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>제네릭 인터페이스를 구현할 때 <code>T</code> 를 결정한 상태로 구현할 수도 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Box</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">Getable</span>&lt;String&gt; &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> String <span class="title function_">get</span><span class="params">()</span> &#123; ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/search/SearchCommonMain.jsp">도서 &lt;열혈 Java 프로그래밍&gt;</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/tutorial/java/generics/erasure.html">Type Erasure | Oracle Java Tutorials</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/tutorial/java/generics/bridgeMethods.html">Effects of Type Erasure and Bridge Methods | Oracle Java Tutorials</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.baeldung.com/java-type-erasure">Type Erasure in Java Explained | Baeldung</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="#">Post not found: java-8-lambda-deep-dive</a>
+</li>
+<li>
+<a href="/2018/06/04/java-observer-pattern/" title="Java 옵저버 패턴 (Observer Pattern)">Java 옵저버 패턴 (Observer Pattern)</a>
+</li>
+<li>
+<a href="/2017/01/27/java-variable-data-type/" title="자바의 변수와 데이터 타입 (Java Variables &amp; Data type)">자바의 변수와 데이터 타입 (Java Variables &amp; Data type)</a>
+</li>
+<li>
+<a href="/2018/06/02/java-string-concatenation/" title="Java 문자열 연결 방법 비교">Java 문자열 연결 방법 비교</a>
+</li>
+<li>
+<a href="/2018/06/02/java-string-joiner/" title="Java StringJoiner (문자열 구분자 붙이기)">Java StringJoiner (문자열 구분자 붙이기)</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/14/java-8-optional/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java 8 옵셔널 Optional
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/08/09/java-lambda-and-closure/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java Lambda (7) 람다와 클로저</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/08/12/java-generics/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

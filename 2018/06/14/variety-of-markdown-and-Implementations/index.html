@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    마크다운의 종류와 선택 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/06/14/variety-of-markdown-and-implementations/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Column/">Column</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-variety-of-markdown-and-Implementations" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        마크다운의 종류와 선택
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/14/variety-of-markdown-and-Implementations/" class="article-date">
+    <time datetime="2018-06-14T12:04:59.000Z" itemprop="datePublished">2018/06/14</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              9 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>저는 여러 정보나 생각을 글로 정리하길 좋아합니다. 마크다운(<em>Markdown</em>)은 이러한 목적에 정확하게 부합하는 툴입니다. 애초에 네이버나 티스토리가 아닌 Hexo 로 블로그를 시작한 것도 마크다운을 지원하기 때문이었습니다. 오늘은 마크다운의 종류에 대해서 알아보겠습니다.</p>
+<h2 id="Markdown">Markdown</h2>
+<p>마크다운은 2014년 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://daringfireball.net/projects/markdown/">존 그루버(John Gruber)</a>와 아론 스워츠(<em>Aaron Swartz</em>)가 함께 만든 마크업 언어(<em>Markup language</em>)입니다. 마크업 언어는 문서나 데이터가 화면에 어떻게 보이는지, 혹은 데이터의 구조가 어떻게 되는지를 부가적으로 설명해주는 언어입니다. HTML(<em>Hyper-Text Markup Language</em>)을 생각하면 쉽습니다. HTML이 해당 문서의 내용 외에 내용의 구조 및 디자인에 대한 정보를 가지고 있는 걸 생각하면 마크업 언어의 개념이 와닿으실 것 같습니다.</p>
+<p><img src="atom_md.png" alt="http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/"></p>
+<p>마크업 언어라는 말이 어렵더라도 상관없습니다. 마크다운은 정말 쉽습니다. 처음 만들어진 목적 자체가 '플레인 텍스트를 읽기 쉽고 쓰기 쉽게 하자’입니다. 간단한 문법(<em>Syntax</em>)을 지키면 일반 텍스트를 보기 좋게 다양한 포맷으로 변환해줍니다. 개발할 때는 README 파일을 만들 때 주로 사용하고, 각종 블로그를 포함해 글을 쓰는 곳이면 어디서나 많이 사용되고 있습니다. 저는 복잡한 내용을 체계적으로 정리할 때 마크다운을 사용하고 정리한 내용을 바로 블로그에 올리기도 합니다.</p>
+<h2 id="Implementations">Implementations</h2>
+<p>존 그루버가 마크다운 텍스트를 HTML 로 변환하는 펄 스크립트(<code>Markdown.pl</code>)를 작성한 이후 많은 사람들이 다양한 언어로 마크다운 파서(<em>Parser</em>)를 구현했습니다. 그 과정에서 각 파서들은 기본적인 기능에 테이블, 각주, 정의 리스트 등 추가적인 기능을 덧붙이기도 했고, 공식 명세에 잘 나타나있지 않은 <strong>모호한 부분</strong>에 대해서는 각자 스타일로 구현하면서 파편화되었습니다.</p>
+<p>여기서 기존 명세의 '모호한 부분’이란 뭘까요? 사실 마크다운은 굉장히 심플하기 때문에 별 문제 없어보이지만 막상 그것을 구현하고 할 때에는 자잘한 이슈에 부딪힙니다.</p>
+<p>몇 가지 예를 들어 보겠습니다.</p>
+<ul>
+<li>숫자 리스트 마커 1. 뒤에 2. 가 바로 오지 않는 경우, 다시 1. 로 시작해야할까, 아니면 2. 로 유지해야할까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. one</span><br><span class="line"></span><br><span class="line">2. two</span><br><span class="line">3. three</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.  one</span><br><span class="line">    - a</span><br><span class="line"></span><br><span class="line">    - b</span><br><span class="line">2.  two</span><br></pre></td></tr></table></figure>
+<ul>
+<li>숫자 리스트 마커의 정렬은 왼쪽으로? 오른쪽으로?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 8. item 1</span><br><span class="line"> 9. item 2</span><br><span class="line">10. item 3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>숫자 리스트와 bullets 리스트가 붙어 있을 경우 하나의 리스트로 봐야할까, 두 개의 리스트로 봐야할까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. fee</span><br><span class="line">2. fie</span><br><span class="line">-  foe</span><br><span class="line">-  fum</span><br></pre></td></tr></table></figure>
+<ul>
+<li>서브 리스트의 인텐드는 어디까지 들어갈 수 있을까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- one</span><br><span class="line">	- two</span><br><span class="line">		- three</span><br><span class="line">			- ...</span><br></pre></td></tr></table></figure>
+<ul>
+<li>marker 와 strong 구문 중 어떤 것을 우선시할까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*foo *bar* baz*</span><br></pre></td></tr></table></figure>
+<p>이 외에도 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.github.com/gfm/#why-is-a-spec-needed-">다양한 이슈</a>에 대해서 오리지널 명세에 나타나 있지 않거나 구현체마다 다르게 구현한 경우가 많습니다. 이에 따라 마크다운 표준화 작업이 진행되었습니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://tools.ietf.org/html/rfc7763">RFC 7763</a> The text/markdown Media Type</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://tools.ietf.org/html/rfc7764">RFC 7764</a> Guidance on Markdown: Design Philosophies, Stability Strategies, and Select Registrations</li>
+</ul>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/markdown/markdown.github.com/wiki/Implementations">마크다운 구현 파서 리스트</a>를 보시면 마크다운 파서는 참 많고, 각자 기능도 조금씩 다르다는 걸 알 수 있습니다. 이외에도 개인적으로 입맛에 맞게 직접 만들거나 기존의 파서 라이브러리를 수정해서 사용하시는 분들도 있구요. 그래서 많은 마크다운 파서 중에서 RFC 에 나타나있는 몇 가지 마크다운에 대해서 간단히 알아보겠습니다.</p>
+<ul>
+<li>CommonMark</li>
+<li>GitHub Flavored Markdown</li>
+<li>MultiMarkdown</li>
+<li>Pandoc</li>
+</ul>
+<h3 id="CommonMark">CommonMark</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://commonmark.org/">CommonMark</a>는 제각각으로 구현된 마크다운의 표준 문법을 정의하는 프로젝트입니다. CommonMark 에서 정의한 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://spec.commonmark.org/">스펙</a>에 따라 이를 기반으로 많은 마크다운 프로젝트가 생겨났습니다.</p>
+<blockquote>
+<p>We propose a standard, unambiguous syntax specification for Markdown, along with a suite of comprehensive tests to validate Markdown implementations against this specification. We believe this is necessary, even essential, for the future of Markdown.</p>
+</blockquote>
+<p>CommonMark 를 구현한 파서 리스트는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/commonmark/CommonMark/wiki/List-of-CommonMark-Implementations">링크</a>를 참고하세요.</p>
+<h3 id="GFM-GitHub-Flavored-Markdown">GFM (GitHub Flavored Markdown)</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://guides.github.com/features/mastering-markdown/">GFM</a> 은 GitHub 에서 기존 마크다운에 여러 기능을 추가하여 커스터마이징한 버전입니다. 깃헙 내에서 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://README.md">README.md</a> 파일 같은 <code>.md</code>, <code>.markdown</code> 확장자를 가진 파일과 comments 를 달 때도 사용 가능해서 많은 개발자들이 사용하는 버전입니다.</p>
+<p>GFM 은 Fenced Codeblocks, Syntax Highlighting, Tables, URL AutoLinking, To-dos, Strikethrough 등의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.github.com/gfm/">추가 기능</a>을 지원합니다.</p>
+<h3 id="MultiMarkdown">MultiMarkdown</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a> 마크다운을 확장한 첫 프로젝트로, 기존 마크다운에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://rawgit.com/fletcher/human-markdown-reference/master/index.html">여러 기능</a>을 추가한 버전입니다.</p>
+<h3 id="Pandoc">Pandoc</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://pandoc.org/index.html">Pandoc</a> 은 마크다운 텍스트를 다양한 포맷의 파일로 변환하는 기능을 강화한 마크다운입니다.</p>
+<h2 id="어떻게-선택해야할까">어떻게 선택해야할까?</h2>
+<p>대부분 본인이 사용하는 서비스에서 지원하는 마크다운을 사용하게 되겠지만, 본인에게 선택권이 있는 경우에는 마크다운 구현체가 워낙 많다보니 고민이 되실 수 있습니다. 무엇을 기준으로 선택할 수 있을까요?</p>
+<p>마크다운을 파싱한 결과를 한번에 볼 수 있는 사이트가 있습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://babelmark.github.io/">babelmark3</a>라는 사이트인데요, 내가 필요로 하는 기능을 입력해보면 어떤 파서에서 그것을 구현하고 있는지 확인할 수도 있고, 같은 코드라도 어떤 식으로 표현하고 있는지 한번에 확인할 수 있는 굉장히 유용한 사이트입니다.</p>
+<p>그럼 예를 한번 들어보겠습니다. 제 Hexo 블로그는 글을 작성하는 시점 기준으로 GFM 을 지원하는 렌더러를 사용하고 있습니다. 하지만 저는 출처를 남기거나 간단하게 보충 설명을 달 수 있는 ‘각주’ 기능이 필요한데 스펙을 보니 지원을 안하는 것 같습니다. 한번 확인해보겠습니다.</p>
+<p><img src="footnote-test.png" alt></p>
+<p>결과를 확인해보시면 총 34개의 파서 중에 21개의 파서가 해당 문법을 지원하지 않고 있네요. 이 중에는 각주 기능을 지원하지 않거나, 지원하더라도 해당 문법이 아니라 다른 문법으로 지원하고 있을겁니다. 현재 사용하는 GFM 도 목록 중에 있습니다.</p>
+<p><img src="footnote-not-working.png" alt></p>
+<p>다른 파서는 어떨까요? multimarkdown 을 보시면 각주 기능을 제대로 지원하는 것을 보실 수 있습니다.</p>
+<p><img src="footnote-multimarkdown.png" alt="multimarkdown"></p>
+<p>재미있는 것은, 같은 기능을 지원하더라도 구현하는 방법이 같지는 않다는 것입니다. 다음은 pandoc 에서 변환한 결과인데 multimarkdown 과 조금씩 다른 걸 확인할 수 있습니다.</p>
+<p><img src="footnote-pandoc.png" alt="pandoc"></p>
+<p>이번 포스팅에서는 마크다운이 무엇인지부터 마크다운의 종류, 그리고 구현체의 선택까지 알아봤습니다. 참고하셔서 마크다운 재밌게 사용하시면 좋겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li><a href="http://futurecreator.github.io/2018/06/14/hexo-markdown-plugins/">Hexo 마크다운 플러그인 변경하기</a></li>
+<li><a href="http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/">Atom 을 마크다운(Markdown) 에디터로 사용하기</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/14/hexo-markdown-plugins/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo 마크다운 플러그인 변경하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/12/program-for-eye-health-eyeleo-flux-stretchly/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">소중한 내 눈을 위한 프로그램</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/14/variety-of-markdown-and-Implementations/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

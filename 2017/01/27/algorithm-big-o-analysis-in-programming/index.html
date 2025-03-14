@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Algorithm/">Algorithm</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-algorithm-big-o-analysis-in-programming" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2017/01/27/algorithm-big-o-analysis-in-programming/" class="article-date">
+    <time datetime="2017-01-27T11:00:20.000Z" itemprop="datePublished">2017/01/27</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              12 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>알고리즘을 풀거나 프로그래밍 면접을 할 때 <strong>빅 오 분석법 (<em>Big-O Analysis</em>)</strong> 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다.</p>
+<p>주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 <code>compareToMax</code> 는 최대값을 하나 정해놓고 다른 값들과 최대값을 비교해나가는 알고리즘입니다.</p>
+<figure class="highlight java"><figcaption><span>compareToMax</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">compareToMax</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line">    <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 배열에 원소없는 경우 -1 리턴</span></span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 배열 첫번째 값을 최대값으로 설정</span></span><br><span class="line">    max = arr[<span class="number">0</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 모든 값을 최대값과 비교</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (arr[i] &gt; max) &#123;</span><br><span class="line">            max = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>두번째 알고리즘 <code>compareToAll</code> 은 최대값 하나와 비교하는 것이 아니라 배열 내 각 원소들과 비교해서 최대값 여부를 판단하는 알고리즘입니다.</p>
+<figure class="highlight java"><figcaption><span>compareToAll</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="type">int</span> <span class="title function_">compareToAll</span><span class="params">(<span class="type">int</span>[] arr)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> arr.length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (n &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i, j;</span><br><span class="line"></span><br><span class="line">    <span class="type">boolean</span> isMax;</span><br><span class="line">    <span class="keyword">for</span> (i = n - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">        isMax = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (arr[j] &gt; arr[i]) &#123;</span><br><span class="line">                isMax = <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (isMax) &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>두 알고리즘 모두 정상적으로 최대값을 찾아주는 알고리즘입니다. 이 두가지 알고리즘을 가지고 성능을 비교해보겠습니다.</p>
+<h2 id="빅-오-분석법의-원리">빅 오 분석법의 원리</h2>
+<p>빅 오 분석법에서는 입력 값의 크기(개수)를 n개라고 가정합니다. 이 알고리즘에서는 배열에 있는 원소의 개수가 n이 될 것입니다. 이 입력에 대해 어떤 작업을 몇 번 수행하는지 n 에 관련된 식으로 표현해봅니다.</p>
+<p>말이 어렵지만 실제로는 그리 어렵지 않습니다. 첫번째 <code>compareToMax</code> 를 생각해봅시다. 임의의 값을 최대값으로 먼저 설정해놓고 배열을 <code>for</code> 문으로 돌면서 최대값 여부를 체크하고 있습니다. <code>for</code> 문을 배열의 크기인 n 번 수행하므로 이런 상황을 O(n) 이라고 표현하고, 선형 시간 내에 수행된다고 합니다. 입력 크기 n 이 증가하는 경우 알고리즘 수행 시간도 선형적으로 비례해 증가하게 됩니다.</p>
+<p>여기서 n 에 관한 식을 만들 때 <code>for</code> 문으로 최대값을 확인하는 부분 외에 변수를 초기화하는 부분까지 생각해볼 수 있습니다. 하지만 최고차항의 n 만 고려합니다. 왜냐하면 O(n + 2) 나 O(n) 모두 n 이 매우 커질 경우에는 차이를 무시할 수준이 되기 때문입니다. O(n^2) 과 O(n^2 + n) 도 마찬가지입니다. 즉, 최고차항을 제외한 다른 항은 모두 무시하면 됩니다.</p>
+<p>예제에서는 <code>compareToMax</code> 는 n 번 수행되기 때문에 O(n) 이고, <code>compareToAll</code> 은 n 번 작업이 n 번 반복되므로 O(n^2) 이 됩니다. 배열이 커지게 되면 어떻게 될까요? 배열이 커진다는 뜻은 입력값 n 이 커진다는 의미이므로, 5만 건의 데이터가 있으면 <code>compareToMax</code> 은 5만번 수행되지만 <code>compareToAll</code> 은 5만 * 5만 번 수행되므로 입력값이 커질수록 알고리즘 시간이 굉장히 커진다는 것을 알 수 있습니다.</p>
+<h2 id="최선-평균-최악-케이스">최선, 평균, 최악 케이스</h2>
+<p>앞서 살펴본 것은 최악의 케이스인 경우입니다. 실행시간이 최대인 케이스에 대해 계산해 본 경우입니다. 만약, <code>compareToAll</code> 알고리즘에서 최대값이 배열의 맨 앞에 있는 경우라면 어떨까요? 그런 경우라면 각 항목에 대해 한번씩만 비교하기 때문에 이 최선의 케이스에서는 O(n) 이 됩니다. 만약 최대값이 배열 가운데에 있는 경우에는 n * (n / 2) 번 수행하기 때문에 O(n^2/2) 이지만 여기서 상수 인자들은 고려하지 않기 때문에 그냥 O(n^2) 으로 봅니다.</p>
+<p><code>compareToMax</code> 의 경우 최대값이 어디에 있던 항상 O(n) 의 실행시간을 갖습니다. 이처럼 어떤 케이스에 초점을 맞추고 생각할 것인지도 고려할 사항입니다.</p>
+<h2 id="빅-오-분석법을-적용하는-방법">빅 오 분석법을 적용하는 방법</h2>
+<p>일반적으로 빅 오 분석법을 적용하는 방법은 다음과 같습니다.</p>
+<ol>
+<li>어떤 값을 n 으로 놓을 것인지 정한다.</li>
+<li>수행해야 할 연산의 횟수를 n 의 식으로 표현한다.</li>
+<li>차수가 제일 높은 항 (최고차항)만 남기고, 모든 상수 인수도 없앤다.</li>
+</ol>
+<h2 id="알고리즘-종류-성능-순">알고리즘 종류 (성능 순)</h2>
+<p><img src="/images/algorithm/bigo.jpg" alt="알고리즘 성능 별 그래프"></p>
+<h3 id="O-1-상수-실행-시간-Constant-running-time">O(1) : 상수 실행 시간 (Constant running time)</h3>
+<p>입력값과 상관없이 일정한 실행시간을 갖습니다. 가장 바람직한 알고리즘이라고 볼 수 있겠지만 상수 실행 시간 알고리즘이 가능한 경우는 거의 없습니다.</p>
+<h3 id="O-log-n-로그-알고리즘-Logarithmic-algorithm">O(log n) : 로그 알고리즘 (Logarithmic algorithm)</h3>
+<p>실행 시간이 입력 크기의 로그에 비례해서 늘어나는 경우입니다. 그래프를 보시면 아시겠지만 실행시간이 늘어날수록 늘어나는 폭이 줄어들고 있습니다.</p>
+<h3 id="O-n-선형-알고리즘-Liniear-algorithm">O(n) : 선형 알고리즘 (Liniear algorithm)</h3>
+<p>실행 시간이 입력 크기에 비례하는 알고리즘입니다.</p>
+<h3 id="O-n-log-n-초선형-알고리즘-Superlinear-algorithm">O(n log n) : 초선형 알고리즘 (Superlinear algorithm)</h3>
+<p>선형 알고리즘 보다는 느리지만 다항식 알고리즘 보다는 빠릅니다.</p>
+<h3 id="O-n-c-다항식-알고리즘-Polynomial-algorithm">O(n^c) : 다항식 알고리즘 (Polynomial algorithm)</h3>
+<p>입력 크기가 늘어나면 실행 시간이 빠르게 늘어납니다.</p>
+<h3 id="c-n-지수-알고리즘-Exponential-algorithm">(c^n) : 지수 알고리즘 (Exponential algorithm)</h3>
+<p>입력 크기에 따라 실행 시간이 굉장히 빠르게 늘어납니다.</p>
+<h3 id="O-n-팩토리얼-알고리즘-Factorial-algorithm">O(n!) : 팩토리얼 알고리즘 (Factorial algorithm)</h3>
+<p>위 그림에는 나오지 않았지만 가장 느린 알고리즘입니다.</p>
+<p>n 이 커지면 실행 시간이 어떻게 변하는지 확인해보겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>10</th>
+<th>20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>log n</td>
+<td>1</td>
+<td>1.30</td>
+</tr>
+<tr>
+<td>n</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr>
+<td>n log n</td>
+<td>10</td>
+<td>26.02</td>
+</tr>
+<tr>
+<td>n^2</td>
+<td>100</td>
+<td>400</td>
+</tr>
+<tr>
+<td>2^n</td>
+<td>1,024</td>
+<td>1,048,576</td>
+</tr>
+<tr>
+<td>n!</td>
+<td>3,628,800</td>
+<td>2.43 * 10^18</td>
+</tr>
+</tbody>
+</table>
+<h2 id="메모리-용량-분석-Memory-footprint">메모리 용량 분석 (Memory footprint)</h2>
+<p>알고리즘의 메모리 용량이 실행 시간 못지않게 중요한 경우도 있습니다. 이런 경우에는 필요한 메모리 용량을 입력 크기 n 의 식으로 표현해서 따져볼 수 있습니다.</p>
+<h2 id="정리">정리</h2>
+<p>빅 오 분석법을 이용하면 알고리즘의 문제를 풀 때 풀고나서 알고리즘의 성능을 간단하게 예측해볼 수 있습니다. 프로그래밍 면접 시 알고리즘 문제를 풀 때도 면접관이 제시한 풀이에 대해 성능을 물어본 경우에도 빅 오 분석법을 이용해 대답할 수 있습니다. 그리고 알고리즘은 초선형 시간 이상의 성능을 갖는 알고리즘을 사용하는 것이 좋습니다.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/05/28/nodejs-npm-update-latest-or-stable-version/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Node.js 버전 관리하기 (설치 &amp; 업데이트)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2017/01/27/java-variable-data-type/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">자바의 변수와 데이터 타입 (Java Variables &amp; Data type)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2017/01/27/algorithm-big-o-analysis-in-programming/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

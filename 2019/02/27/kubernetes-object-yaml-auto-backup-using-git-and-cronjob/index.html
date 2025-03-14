@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Git과 CronJob을 활용한 쿠버네티스 오브젝트 YAML 자동 백업 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Cloud/">Cloud</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-kubernetes-object-yaml-auto-backup-using-git-and-cronjob" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Git과 CronJob을 활용한 쿠버네티스 오브젝트 YAML 자동 백업
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/" class="article-date">
+    <time datetime="2019-02-26T15:10:14.000Z" itemprop="datePublished">2019/02/27</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              41 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>쿠버네티스(Kubernetes)에서 시시각각으로 변하는 오브젝트의 상태를 저장하고 관리하려면 어떻게 해야 할까요? 가장 먼저 생각할 수 있는 방법은 YAML 파일로 export 해서 저장하는 것입니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># e.g. kube-system Namespace 의 모든 Pod 을 YAML 형태로 출력하기</span></span><br><span class="line">kubectl get po -n kube-system -o yaml</span><br></pre></td></tr></table></figure>
+<p>Pod 뿐만 아니라 Deployment, Service, ConfigMap 등 모든 Namespace 의 다양한 오브젝트를 YAML 형태로 출력할 수 있습니다. YAML 은 복잡하지 않고 데이터를 체계적으로 보여주기 때문에 읽기 쉬운 장점이 있습니다. 이를 주기적으로 수행하도록 쉘 스크립트를 짜서 관리할 수도 있을텐데요. YAML 파일을 만들기는 쉽지만 관리가 어렵고, 문제가 생겼을 시에 활용하기 어려운 단점이 있습니다.</p>
+<p>이번 포스트에서는 이런 문제를 해결할 수 있는 오픈 소스를 소개하려고 합니다.</p>
+<h2 id="Kube-backup">Kube-backup</h2>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/kuberhost/kube-backup">Kube-backup</a> 은 Git과 CronJob 을 이용해 쿠버네티스 오브젝트를 YAML 파일로 백업하는 오픈소스입니다.</p>
+<p>이 오픈소스의 핵심은 다음과 같습니다.</p>
+<ul>
+<li>설정한 쿠버네티스 오브젝트를 YAML 파일로 백업</li>
+<li>지정한 Git의 브랜치로 Push</li>
+<li>CronJob 형태로 주기적 수행</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/26019/48974539-12be7600-f097-11e8-91d7-b19c4c8d3e23.png" alt="https://github.com/kuberhost/kube-backup"></p>
+<p>설정을 이용해 백업할 오브젝트의 선별이 쉽고, Namespace 와 오브젝트 별로 체계적인 분류가 가능합니다.</p>
+<p><img src="https://user-images.githubusercontent.com/26019/48974571-b9a31200-f097-11e8-8f0a-52afc67e4112.png" alt="https://github.com/kuberhost/kube-backup"></p>
+<p>또한 Git 을 이용해서 변경 이력을 관리하기가 쉽고 문제가 생기는 부분을 쉽게 파악할 수 있습니다. 또한 변경이 있는 부분만 Push 하기 때문에 관리가 용이하고, 시스템 버전에 따라서 저장소 또는 브랜치를 분리해서 관리할 수 있습니다.</p>
+<p>물론 위 그림은 간단한 클러스터의 경우이고, 대규모 운영 클러스터의 경우에는 백업할 내용이 많아 적절한 설정이 필요합니다.</p>
+<h2 id="클러스터-준비하기">클러스터 준비하기</h2>
+<p>먼저 설치할 클러스터가 필요합니다. 이번 포스트에서는 쿠버네티스 클러스터가 있다는 전제 하에 진행됩니다. 쿠버네티스 클러스터가 필요하다면 다음 포스트를 참고하세요.</p>
+<a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/" title="개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a>
+<h2 id="사전-준비하기">사전 준비하기</h2>
+<p>그럼 실제 클러스터에 배포해보겠습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/kuberhost/kube-backup">GitHub 리파지토리</a>에 있는 배포용 YAML 을 이용하면 쉽게 배포가 가능합니다. 그 전에 앞서 몇 가지 설정이 필요합니다.</p>
+<p><img src="create-github-repository.png" alt="GitHub 리파지토리 생성하기"></p>
+<p>먼저 백업 YAML 파일을 저장할 라피지토리가 필요하겠죠? GitHub이나 GitLab 등 원하는 리파지토리를 생성합니다. 백업용이니까 Private 리파지토리가 좋겠습니다. 이번 포스트에는 GitHub 기준으로 진행합니다.</p>
+<p>그리고 기본 설정인 <code>master</code> 브랜치가 필요하므로 <code>README.md</code> 파일로 초기화해서 <code>master</code> 브랜치를 만들어줍니다.</p>
+<p>이렇게 프로그램 상에서 자동으로 Git 에 접속하는 경우에는 <code>https</code> 대신 <code>ssh</code> 방식을 사용합니다. <code>https</code> 방식은 보안을 위해 계정 정보를 직접 입력해야 하기 때문에 Key 를 이용해 인증을 할 수 있는 <code>ssh</code>방식을 사용합니다.</p>
+<p>이를 위해서 먼저 포트가 열려 있어야 합니다. 운영 환경의 경우에는 방화벽이 있을 수 있으므로 사전에 <code>22</code> 포트를 오픈합니다.</p>
+<p>그리고 GitHub 에 접속할 SSH Key 를 생성합니다. GitHub 에서는 다른 리파지토리 또는 유저가 사용하는 Key 를 사용할 수 없기 때문에 새로 Key 를 생성합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -f ./new-key</span><br></pre></td></tr></table></figure>
+<p>그러면 Private Key 와 Public Key 한 쌍이 생성됩니다.</p>
+<p><img src="deploy-keys.png" alt="Public Key 등록하기"></p>
+<p>이제 GitHub 의 <strong>Settings &gt; Deploy Keys</strong> 에 생성한 Public Key 를 등록합니다.</p>
+<p><img src="deploy-yaml-files.png" alt="배포용 YAML 파일"></p>
+<p>배포용 YAML 파일을 내려받습니다. 또는 포스트에 내용을 복사해서 사용합니다.</p>
+<h2 id="설치하기">설치하기</h2>
+<p>배포용 YAML 파일명 앞에 붙어있는 숫자 순서대로 설치를 진행하면 됩니다.</p>
+<h3 id="Namespace">Namespace</h3>
+<p><code>0_namespace.yaml</code> 파일로 Namespace <code>kube-backup</code> 을 생성합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Namespace</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-backup</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f 0_namespace.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="RBAC">RBAC</h3>
+<p>그리고 <code>1_service_account.yaml</code> 파일로 ServiceAccount 를 생성하고 Role 을 설정합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ServiceAccount</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-backup-user</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-backup</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ClusterRole</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-backup-view-all</span></span><br><span class="line"><span class="attr">rules:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">apiGroups:</span> [<span class="string">&quot;*&quot;</span>]</span><br><span class="line">  <span class="attr">resources:</span> [<span class="string">&quot;*&quot;</span>]</span><br><span class="line">  <span class="attr">verbs:</span> [<span class="string">&quot;get&quot;</span>, <span class="string">&quot;list&quot;</span>, <span class="string">&quot;watch&quot;</span>]</span><br><span class="line"><span class="bullet">-</span> <span class="attr">nonResourceURLs:</span> [<span class="string">&quot;*&quot;</span>]</span><br><span class="line">  <span class="attr">verbs:</span> [<span class="string">&quot;get&quot;</span>, <span class="string">&quot;list&quot;</span>, <span class="string">&quot;watch&quot;</span>]</span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ClusterRoleBinding</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/v1beta1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-backup-user</span></span><br><span class="line"><span class="attr">subjects:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">kind:</span> <span class="string">ServiceAccount</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">kube-backup-user</span></span><br><span class="line">    <span class="attr">namespace:</span> <span class="string">kube-backup</span></span><br><span class="line"><span class="attr">roleRef:</span></span><br><span class="line">  <span class="attr">kind:</span> <span class="string">ClusterRole</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-backup-view-all</span></span><br><span class="line">  <span class="attr">apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">RoleBinding</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">psp:unprivileged</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-backup</span></span><br><span class="line"><span class="attr">roleRef:</span></span><br><span class="line">  <span class="attr">apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span></span><br><span class="line">  <span class="attr">kind:</span> <span class="string">ClusterRole</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">podsecuritypolicy:unprivileged</span></span><br><span class="line"><span class="attr">subjects:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">kind:</span> <span class="string">Group</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">system:serviceaccounts:kube-backup</span></span><br><span class="line">    <span class="attr">apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f 1_service_account.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="ConfigMap">ConfigMap</h3>
+<p>다음으로 <code>2_config_map.yaml</code>에 위에서 만든 SSH key 를 추가합니다. 해당 ConfigMap 은 Volume 으로 마운트되어 컨테이너에서 Git Clone 및 Push 할 때 사용됩니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ConfigMap</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-backup-ssh-config</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-backup</span></span><br><span class="line"><span class="attr">data:</span></span><br><span class="line">  <span class="attr">id_rsa:</span> <span class="string">|</span></span><br><span class="line"><span class="string">    -----BEGIN RSA PRIVATE KEY-----</span></span><br><span class="line"><span class="string">    # private key 내용 추가</span></span><br><span class="line"><span class="string">    -----END RSA PRIVATE KEY-----</span></span><br><span class="line"><span class="string"></span>  <span class="attr">id_rsa.pub:</span> <span class="string">|</span></span><br><span class="line">    <span class="comment"># public key 내용 추가</span></span><br></pre></td></tr></table></figure>
+<p><code>2_config_map.yaml</code> 파일을 이용해 ConfigMap 을 생성합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f 2_config_map.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="CronJob">CronJob</h3>
+<p>이제 <code>3_cronjob.yaml</code>를 수정해 백업을 수행할 CronJob 을 만들어봅시다.</p>
+<p>먼저 해당 CronJob 의 스케쥴을 원하는 만큼 cron 형태로 수정합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">&quot;0 */1 * * *&quot;</span> <span class="comment"># e.g. 매 정시 수행</span></span><br></pre></td></tr></table></figure>
+<p>여기서 주의할 점은 특정 시각을 cron으로 설정하는 경우는 UTC 기준으로 설정해야 합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># e.g. 매일 오전 1시에 백업 수행</span></span><br><span class="line"><span class="comment"># 01:00 KST -&gt; 16:00 UTC</span></span><br><span class="line"><span class="attr">schedule:</span> <span class="string">&quot;0 16 * * *&quot;</span></span><br></pre></td></tr></table></figure>
+<p>다음으로 <code>GIT_REPO</code>에 백업할 저장소 위치를 SSH 형식으로 추가합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">GIT_REPO_URL</span></span><br><span class="line">    <span class="attr">value:</span> <span class="string">git@github.com:futureCreator/kube-backup-test.git</span></span><br></pre></td></tr></table></figure>
+<p>Custom Resource 는 따로 이름을 추가해줘야 합니다. 다음 명령어로 Custom Resources 를 조회합니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="jq 설치 안내 https://zetawiki.com/wiki/리눅스_jq_다운로드_설치">[1]</span></a></sup></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">kubectl get crd -o json | jq -r <span class="string">&#x27;.items | (.[] | [.spec.names.singular, .spec.group, .spec.scope]) | @tsv&#x27;</span></span><br><span class="line"><span class="comment"># 출력 예시</span></span><br><span class="line">adapter            config.istio.io         Namespaced</span><br><span class="line">alertmanager       monitoring.coreos.com   Namespaced</span><br><span class="line">apikey             config.istio.io         Namespaced</span><br><span class="line">attributemanifest  config.istio.io         Namespaced</span><br><span class="line">clusterbus         channels.knative.dev    Cluster</span><br></pre></td></tr></table></figure>
+<p>출력 결과를 보면 세 번째 열의 항목이 <code>Namespaced</code> 와 <code>Cluster</code> 로 나뉘는데 이에 맞춰서 <code>EXTRA_RESOURCES</code> 와 <code>EXTRA_GLOBAL_RESOURCES</code> 로 나눠서 추가합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">EXTRA_GLOBAL_RESOURCES</span> <span class="comment"># spec.scope 이 Cluster인 항목</span></span><br><span class="line">    <span class="attr">value:</span> <span class="string">clusterbus</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">EXTRA_RESOURCES</span> <span class="comment"># spec.scope이 Namespaced인 항목</span></span><br><span class="line">    <span class="attr">value:</span> <span class="string">adapter,</span> <span class="string">alertmanager,</span> <span class="string">apikey,</span> <span class="string">attributemanifest</span></span><br></pre></td></tr></table></figure>
+<p>Commit 에 사용할 타임존을 설정합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span> </span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">TZ</span></span><br><span class="line">    <span class="attr">value:</span> <span class="string">:Asia/Seoul</span></span><br></pre></td></tr></table></figure>
+<p>여기까지 작성한 CronJob의 예시입니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">batch/v1beta1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">CronJob</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-system-backup</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-backup</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">&quot;0 */1 * * *&quot;</span></span><br><span class="line">  <span class="attr">concurrencyPolicy:</span> <span class="string">Forbid</span></span><br><span class="line">  <span class="attr">successfulJobsHistoryLimit:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">failedJobsHistoryLimit:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">jobTemplate:</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">template:</span></span><br><span class="line">        <span class="attr">spec:</span></span><br><span class="line">          <span class="attr">restartPolicy:</span> <span class="string">OnFailure</span></span><br><span class="line">          <span class="attr">serviceAccount:</span> <span class="string">kube-backup-user</span></span><br><span class="line">          <span class="attr">containers:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">backup</span></span><br><span class="line">              <span class="attr">image:</span> <span class="string">kuberhost/kube-backup</span></span><br><span class="line">              <span class="attr">imagePullPolicy:</span> <span class="string">Always</span></span><br><span class="line">              <span class="attr">env:</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">BACKUP_VERBOSE</span></span><br><span class="line">                  <span class="attr">value:</span> <span class="string">&quot;1&quot;</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">GIT_REPO_URL</span></span><br><span class="line">                  <span class="attr">value:</span> <span class="string">git@github.com:futureCreator/kube-backup-test.git</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">EXTRA_GLOBAL_RESOURCES</span></span><br><span class="line">                  <span class="attr">value:</span> <span class="string">clusterbus</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">EXTRA_RESOURCES</span></span><br><span class="line">                  <span class="attr">value:</span> <span class="string">adapter,</span> <span class="string">alertmanager,</span> <span class="string">apikey,</span> <span class="string">attributemanifest</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">TZ</span></span><br><span class="line">                  <span class="attr">value:</span> <span class="string">:Asia/Seoul</span></span><br><span class="line">              <span class="attr">volumeMounts:</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ssh-config</span></span><br><span class="line">                  <span class="attr">mountPath:</span> <span class="string">/root/.ssh/id_rsa</span></span><br><span class="line">                  <span class="attr">subPath:</span> <span class="string">id_rsa</span></span><br><span class="line">                <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ssh-config</span></span><br><span class="line">                  <span class="attr">mountPath:</span> <span class="string">/root/.ssh/id_rsa.pub</span></span><br><span class="line">                  <span class="attr">subPath:</span> <span class="string">id_rsa.pub</span></span><br><span class="line">          <span class="attr">volumes:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ssh-config</span></span><br><span class="line">              <span class="attr">configMap:</span></span><br><span class="line">                <span class="attr">name:</span> <span class="string">kube-backup-ssh-config</span></span><br><span class="line">                <span class="attr">defaultMode:</span> <span class="number">256</span></span><br></pre></td></tr></table></figure>
+<p>테스트 시에는 Pod 으로 생성하면 편리합니다.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Pod</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">kube-system-backup</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-backup</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">restartPolicy:</span> <span class="string">OnFailure</span></span><br><span class="line">  <span class="attr">serviceAccount:</span> <span class="string">kube-backup-user</span></span><br><span class="line">  <span class="attr">containers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">backup</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">kuberhost/kube-backup</span></span><br><span class="line">    <span class="attr">imagePullPolicy:</span> <span class="string">Always</span></span><br><span class="line">    <span class="attr">env:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">BACKUP_VERBOSE</span></span><br><span class="line">      <span class="attr">value:</span> <span class="string">&quot;1&quot;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">GIT_REPO_URL</span></span><br><span class="line">      <span class="attr">value:</span> <span class="string">git@github.com:futureCreator/kube-backup-test.git</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">EXTRA_GLOBAL_RESOURCES</span></span><br><span class="line">      <span class="attr">value:</span> <span class="string">clusterbus</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">EXTRA_RESOURCES</span></span><br><span class="line">      <span class="attr">value:</span> <span class="string">adapter,</span> <span class="string">alertmanager,</span> <span class="string">apikey,</span> <span class="string">attributemanifest</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">TZ</span></span><br><span class="line">      <span class="attr">value:</span> <span class="string">:Asia/Seoul</span></span><br><span class="line">    <span class="attr">volumeMounts:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ssh-config</span></span><br><span class="line">      <span class="attr">mountPath:</span> <span class="string">/root/.ssh/id_rsa</span></span><br><span class="line">      <span class="attr">subPath:</span> <span class="string">id_rsa</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ssh-config</span></span><br><span class="line">      <span class="attr">mountPath:</span> <span class="string">/root/.ssh/id_rsa.pub</span></span><br><span class="line">      <span class="attr">subPath:</span> <span class="string">id_rsa.pub</span></span><br><span class="line">  <span class="attr">volumes:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">ssh-config</span></span><br><span class="line">    <span class="attr">configMap:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">kube-backup-ssh-config</span></span><br><span class="line">      <span class="attr">defaultMode:</span> <span class="number">256</span></span><br></pre></td></tr></table></figure>
+<p><code>3_cronjob.yaml</code> 파일로 CronJob 을 생성합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f 3_cronjob.yaml</span><br></pre></td></tr></table></figure>
+<h2 id="확인하기">확인하기</h2>
+<p>설정한 시간마다 Job 과 Pod 이 생성되고 작업이 수행되는 것을 확인할 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">kubectl get all -n kube-backup</span><br><span class="line">NAME                                      READY     STATUS      RESTARTS   AGE</span><br><span class="line">pod/kube-system-backup-1547712000-zcdr9   0/1       Completed   0          1h</span><br><span class="line">pod/kube-system-backup-1547715600-x6988   0/1       Completed   0          1m</span><br><span class="line"></span><br><span class="line">NAME                                      DESIRED   SUCCESSFUL   AGE</span><br><span class="line">job.batch/kube-system-backup-1547712000   1         1            1h</span><br><span class="line">job.batch/kube-system-backup-1547715600   1         1            1m</span><br><span class="line"></span><br><span class="line">NAME                               SCHEDULE      SUSPEND   ACTIVE    LAST SCHEDULE   AGE</span><br><span class="line">cronjob.batch/kube-system-backup   0 */1 * * *   False     0         1m              7d</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>GitHub에서 Commit 내역을 확인할 수 있습니다.</p>
+<p><img src="github-repository.png" alt="GitHub Repository"></p>
+<p><img src="commit-history.png" alt="Commit 내역"></p>
+<p>Commit 상세 내역에서 변경 사항을 확인할 수 있습니다.</p>
+<p><img src="commit-diff.png" alt="Commit 상세 내역"></p>
+<h2 id="추가-설정하기">추가 설정하기</h2>
+<p>필요한 경우 환경변수(<code>env</code>)에 설정을 추가할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SKIP_NAMESPACES</td>
+<td>특정 네임스페이스 제외</td>
+</tr>
+<tr>
+<td>SKIP_GLOBAL_RESOURCES</td>
+<td>특정 글로벌 리소스 제외</td>
+</tr>
+<tr>
+<td>SKIP_RESOURCES</td>
+<td>특정 리소스 제외</td>
+</tr>
+<tr>
+<td>SKIP_OBJECTS</td>
+<td>특정 오브젝트 제외</td>
+</tr>
+<tr>
+<td>ONLY_NAMESPACES</td>
+<td>특정 네임스페이스의 항목만 관리(whitelist)</td>
+</tr>
+<tr>
+<td>GIT_USER</td>
+<td>기본은 <code>kube-backup</code></td>
+</tr>
+<tr>
+<td>GIT_EMAIL</td>
+<td>기본은 <code>kube-backup@$(HOSTNAME)</code></td>
+</tr>
+<tr>
+<td>GIT_BRANCH</td>
+<td>기본은 <code>master</code> 브랜치</td>
+</tr>
+</tbody>
+</table>
+<p>이 외에도 Grafana 의 Dashboard 및 설정을 백업하기 위한 옵션도 있습니다. 백업 내용은 <code>_grafana_</code> 폴더에 저장됩니다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GRAFANA_URL</td>
+<td>Grafana 의 URL</td>
+</tr>
+<tr>
+<td>GRAFANA_TOKEN</td>
+<td>Grafana API Key</td>
+</tr>
+</tbody>
+</table>
+<p>API Key 는 Grafana 의 <strong>Configuration &gt; API Keys</strong> 에서 Admin 권한으로 생성하면 됩니다.</p>
+<h2 id="참고">참고</h2>
+<p>세부 내용은 다음 링크를 참고하세요.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/kuberhost/kube-backup">kuberhost/kube-backup | GitHub</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/r/kuberhost/kube-backup">kuberhost/kube-backup | Docker Hub</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/" title="개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a>
+</li>
+<li>
+<a href="/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/" title="스프링 부트 컨테이너와 CI&#x2F;CD 환경 구성하기">스프링 부트 컨테이너와 CI&#x2F;CD 환경 구성하기</a>
+</li>
+<li>
+<a href="/2018/11/16/docker-container-basics/" title="도커 Docker 기초 확실히 다지기">도커 Docker 기초 확실히 다지기</a>
+</li>
+<li>
+<a href="/2018/11/09/it-infrastructure-basics/" title="개발자를 위한 인프라 기초 총정리">개발자를 위한 인프라 기초 총정리</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">jq 설치 안내 https://zetawiki.com/wiki/리눅스_jq_다운로드_설치<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

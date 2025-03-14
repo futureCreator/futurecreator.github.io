@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Java Lambda (4) 기본으로 제공되는 함수형 인터페이스 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/08/02/java-jdk-functional-interfaces-api/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-java-jdk-functional-interfaces-api" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Java Lambda (4) 기본으로 제공되는 함수형 인터페이스
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/08/02/java-jdk-functional-interfaces-api/" class="article-date">
+    <time datetime="2018-08-02T14:14:29.000Z" itemprop="datePublished">2018/08/02</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              57 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 <a href="https://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/">포스트</a>에서 함수형 인터페이스에 대해서 살펴봤습니다. 이번 포스트에서는 자바에서 기본적으로 제공하는 함수형 인터페이스를 살펴보겠습니다. 기본 API 에서 함수형 인터페이스는 <code>java.util.function</code> 패키지에 정의되어 있습니다.</p>
+<ul>
+<li>Functions</li>
+<li>Suppliers</li>
+<li>Consumers</li>
+<li>Predicates</li>
+<li>Operators</li>
+<li>Legacy Functional Interfaces</li>
+</ul>
+<h2 id="함수형-인터페이스-Functional-Interface">함수형 인터페이스 Functional Interface</h2>
+<p>이전 포스트에서 함수형 인터페이스에 대해 살펴봤습니다. 함수형 인터페이스는 컴파일러가 람다의 타입을 추론할 수 있도록 정보를 제공하는 역할을 합니다. 이 함수형 인터페이스는 단 하나의 추상 메소드(<em>Single Abstract Method, SAM</em>)만을 가질 수 있습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="디폴트 메소드와 스태틱 메소드는 추상 메소드가 아니기 때문에 여러 개 있어도 상관없습니다.
+">[1]</span></a></sup></p>
+<p>함수형 인터페이스에는 <code>@FunctionalInterface</code> 라는 어노테이션을 붙일 수 있습니다. <code>@FunctionalInterface</code> 는 개발자들에게 해당 인터페이스가 함수형 인터페이스라는 것을 알려주고 컴파일러가 SAM 여부를 체크할 수 있도록 합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Calculation</span> &#123;</span><br><span class="line">  Integer <span class="title function_">apply</span><span class="params">(Integer x, Integer y)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">Calculation</span> <span class="variable">addition</span> <span class="operator">=</span> (x, y) -&gt; x + y;</span><br><span class="line"><span class="type">Calculation</span> <span class="variable">subtraction</span> <span class="operator">=</span> (x, y) -&gt; x - y;</span><br></pre></td></tr></table></figure>
+<h2 id="Functions">Functions</h2>
+<h3 id="기본-형태">기본 형태</h3>
+<p>가장 기본적인 형태로 특정 오브젝트를 받아서 특정 오브젝트를 리턴하는 메소드 시그니쳐입니다. <code>&lt;T&gt;</code> 는 매개변수의 타입이고, <code>&lt;R&gt; </code>은 리턴 타입입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Function</span>&lt;T, R&gt; &#123;</span><br><span class="line">  </span><br><span class="line">  R <span class="title function_">apply</span><span class="params">(T t)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> &lt;V&gt; Function&lt;V, R&gt; <span class="title function_">compose</span><span class="params">(Function&lt;? <span class="built_in">super</span> V, ? extends T&gt; before)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(before);</span><br><span class="line">    <span class="keyword">return</span> (V v) -&gt; apply(before.apply(v));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> &lt;V&gt; Function&lt;T, V&gt; <span class="title function_">andThen</span><span class="params">(Function&lt;? <span class="built_in">super</span> R, ? extends V&gt; after)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(after);</span><br><span class="line">    <span class="keyword">return</span> (T t) -&gt; after.apply(apply(t));</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> &lt;T&gt; Function&lt;T, T&gt; <span class="title function_">identity</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> t -&gt; t;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>간단한 예제를 살펴보겠습니다. <code>value2</code> 를 계산하는 과정에서 스태틱 메소드가 아님에도 <code>String::length</code> 를 사용했는데 이는 참조할 인스턴스가 없기 때문입니다. 자세한 내용은 <a href="https://futurecreator.github.io/2018/08/02/java-lambda-method-references/">Java 8 Lambda (3) 메소드 참조</a> 를 참고하세요.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// computeIfAbsent 메소드 시그니쳐</span></span><br><span class="line"><span class="comment">// 맵 내에 해당 키가 존재하지 않을 경우 값을 계산해서 저장하고 리턴</span></span><br><span class="line"><span class="keyword">default</span> V <span class="title function_">computeIfAbsent</span><span class="params">(K key, Function&lt;? <span class="built_in">super</span> K, ? extends V&gt; mappingFunction)</span> &#123;...&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 시그니처에 맞는 람다가 들어갈 수 있음</span></span><br><span class="line">Map&lt;String, Integer&gt; nameMap = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="type">Integer</span> <span class="variable">value</span> <span class="operator">=</span> nameMap.computeIfAbsent(<span class="string">&quot;John&quot;</span>, s -&gt; s.length());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 여기서 length 는 스태틱 메소드가 아니라 인스턴스 메소드</span></span><br><span class="line"><span class="type">Integer</span> <span class="variable">value2</span> <span class="operator">=</span> nameMap.computeIfAbsent(<span class="string">&quot;Tom&quot;</span>, String::length);</span><br></pre></td></tr></table></figure>
+<p><code>Function</code> 에는 <code>compose</code> 라는 디폴트 메소드가 있어 메소드를 순서대로 실행시킬 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// before 메소드 실행 후 결과를 받아서 현재 메소드 실행</span></span><br><span class="line"><span class="comment">// 제네릭 타입은 처음 input 과 마지막 output 의 타입</span></span><br><span class="line"><span class="keyword">default</span> &lt;V&gt; Function&lt;V, R&gt; <span class="title function_">compose</span><span class="params">(Function&lt;? <span class="built_in">super</span> V, ? extends T&gt; before)</span> &#123;</span><br><span class="line">  Objects.requireNonNull(before);</span><br><span class="line">  <span class="keyword">return</span> (V v) -&gt; apply(before.apply(v));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>다음과 같이 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Function&lt;Integer, String&gt; intToString = Objects::toString;</span><br><span class="line">Function&lt;String, String&gt; quote = s -&gt; <span class="string">&quot;&#x27;&quot;</span> + s + <span class="string">&quot;&#x27;&quot;</span>;</span><br><span class="line"></span><br><span class="line">Function&lt;Integer, String&gt; quoteIntToString = quote.compose(intToString);</span><br><span class="line">System.out.println(quoteIntToString.apply(<span class="number">5</span>)); <span class="comment">// &#x27;5&#x27;</span></span><br></pre></td></tr></table></figure>
+<p><code>andThen</code> 은 <code>compose</code> 와 반대 역할을 합니다. 현재 메소드를 실행 후 매개변수로 받은 람다를 실행합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span> &lt;V&gt; Function&lt;T, V&gt; <span class="title function_">andThen</span><span class="params">(Function&lt;? <span class="built_in">super</span> R, ? extends V&gt; after)</span> &#123;</span><br><span class="line">  Objects.requireNonNull(after);</span><br><span class="line">  <span class="keyword">return</span> (T t) -&gt; after.apply(apply(t));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>다음은 간단한 예제입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Function&lt;String, String&gt; upperCase = v -&gt; v.toUpperCase();</span><br><span class="line"></span><br><span class="line"><span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> upperCase.andThen(s -&gt; s + <span class="string">&quot;abc&quot;</span>).apply(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">System.out.println(result); <span class="comment">// Aabc</span></span><br></pre></td></tr></table></figure>
+<p>마지막으로 자신의 값을 그대로 리턴하는 스태틱 메소드 <code>identity</code> 가 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;T&gt; Function&lt;T, T&gt; <span class="title function_">identity</span><span class="params">()</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> t -&gt; t;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>간단한 예제입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">abc</span> <span class="operator">=</span> Function.identity().apply(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">System.out.println(abc); <span class="comment">// abc</span></span><br></pre></td></tr></table></figure>
+<h3 id="기본형-타입-관련">기본형 타입 관련</h3>
+<p><code>double</code>, <code>int</code>, <code>long</code> 기본 타입에 대해서는 따로 함수형 인터페이스를 제공합니다. 이를 이용하면 제네릭 타입을 하나 줄일 수 있습니다.</p>
+<h4 id="IntFunction-LongFunction-DoubleFunction">IntFunction, LongFunction, DoubleFunction</h4>
+<p>매개변수 타입은 함수별로 지정되어 있고, 리턴 타입만 제네릭으로 받는 형태입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">IntFunction</span>&lt;R&gt; &#123;</span><br><span class="line">  R <span class="title function_">apply</span><span class="params">(<span class="type">int</span> value)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">IntFunction&lt;Double&gt; intToDouble = n -&gt; n * <span class="number">1.0</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="ToIntFunction-ToLongFunction-ToDoubleFunction">ToIntFunction, ToLongFunction, ToDoubleFunction</h4>
+<p>반대로 리턴 타입은 함수별로 지정되어 있고, 매개변수 타입을 제네릭으로 받는 형태입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">ToIntFunction</span>&lt;T&gt; &#123;</span><br><span class="line">  <span class="type">int</span> <span class="title function_">applyAsInt</span><span class="params">(T value)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ToIntFunction&lt;String&gt; strToInt = Integer::parseInt;</span><br></pre></td></tr></table></figure>
+<p>간단한 예제를 만들어보면 다음과 같이 될 겁니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">calculateStrSum</span><span class="params">(List&lt;String&gt; strList, ToIntFunction&lt;String&gt; function)</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (String str : strList) &#123;</span><br><span class="line">    sum += function.applyAsInt(str);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> calculateStrSum(Arrays.asList(<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>), Integer::parseInt);</span><br><span class="line">System.out.println(result); <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+<p>물론 <code>duble</code>, <code>int</code>, <code>long</code>  외의 타입에 대해서도 만들어 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">ShortToByteFunction</span> &#123;</span><br><span class="line">  <span class="type">byte</span> <span class="title function_">applyAsByte</span><span class="params">(<span class="type">short</span> s)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="매개변수가-두-개인-경우">매개변수가 두 개인 경우</h3>
+<p>위에서 살펴 본 람다는 하나의 매개변수를 갖거나 매개변수가 없는 경우입니다. 두 개의 매개변수를 받는 람다는 <code>Bi</code> 키워드가 들어간 람다를 사용합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BiFunction</span>&lt;T, U, R&gt; &#123;</span><br><span class="line"></span><br><span class="line">  R <span class="title function_">apply</span><span class="params">(T t, U u)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> &lt;V&gt; BiFunction&lt;T, U, V&gt; <span class="title function_">andThen</span><span class="params">(Function&lt;? <span class="built_in">super</span> R, ? extends V&gt; after)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(after);</span><br><span class="line">    <span class="keyword">return</span> (T t, U u) -&gt; after.apply(apply(t, u));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>BiFunction : 두 개의 매개변수를 가지고 리턴 타입은 <code>void</code></li>
+<li>ToIntBiFunction : 두 개의 매개변수를 가지고 리턴 타입은  <code>int</code></li>
+<li>ToLongBiFunction : 두 개의 매개변수를 가지고 리턴 타입은  <code>long</code></li>
+<li>ToDoubleBiFunction : 두 개의 매개변수를 가지고 리턴 타입은  <code>double</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 맵 내에 요소들에 대해 조건에 따라 값을 바꾸는 메소드</span></span><br><span class="line"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">replaceAll</span><span class="params">(BiFunction&lt;? <span class="built_in">super</span> K, ? <span class="built_in">super</span> V, ? extends V&gt; function)</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">Map&lt;String, Integer&gt; salaries = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">salaries.put(<span class="string">&quot;John&quot;</span>, <span class="number">400</span>);</span><br><span class="line">salaries.put(<span class="string">&quot;Freddy&quot;</span>, <span class="number">300</span>);</span><br><span class="line">salaries.put(<span class="string">&quot;Samuel&quot;</span>, <span class="number">500</span>);</span><br><span class="line"></span><br><span class="line">salaries.replaceAll((name, oldValue) -&gt; name.equals(<span class="string">&quot;Freddy&quot;</span>) ? oldValue : oldValue + <span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="Suppliers"><strong>Suppliers</strong></h2>
+<p>매개변수를 받지 않고 특정 타입의 결과를 리턴하는 함수형 인터페이스입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Supplier</span>&lt;T&gt; &#123;</span><br><span class="line">  T <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이를 활용하면 값을 그냥 전하는 것이 아니라, 중간에 로직을 추가해서 전달할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">double</span> <span class="title function_">squre</span><span class="params">(<span class="type">double</span> d)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> Math.pow(d, <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">double</span> <span class="variable">squre</span> <span class="operator">=</span> squre(<span class="number">3</span>); <span class="comment">// 9.0</span></span><br></pre></td></tr></table></figure>
+<p>위 예제는 단순히 제곱을 하는 메소드입니다. Supplier 를 이용해서 단순히 값을 가져오기 전에 실행될 로직을 추가할 수 있습니다. 예제에서는 Guava<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Guava : Google Core Libraries for Java](https://github.com/google/guava)">[2]</span></a></sup> 를 이용해서 1,000ms 딜레이를 줬습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">double</span> <span class="title function_">squareLazy</span><span class="params">(Supplier&lt;Double&gt; lazyValue)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> Math.pow(lazyValue.get(), <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Supplier&lt;Double&gt; lazyValue = () -&gt; &#123;</span><br><span class="line">  <span class="comment">// Guava 를 이용해 1000ms 딜레이를 줌</span></span><br><span class="line">  Uninterruptibles.sleepUninterruptibly(<span class="number">1000</span>, TimeUnit.MILLISECONDS);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">3d</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">Double</span> <span class="variable">squre</span> <span class="operator">=</span> squareLazy(lazyValue); <span class="comment">// 9.0</span></span><br></pre></td></tr></table></figure>
+<p>위에서 살펴본 바와 비슷하게 Supplier 도 기본형 리턴 타입에 따라 제네릭 없이 사용할 수 있습니다.</p>
+<ul>
+<li>BooleanSupplier</li>
+<li>DoubleSupplier</li>
+<li>LongSupplier</li>
+<li>IntSupplier</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">double</span> <span class="title function_">squareLazy</span><span class="params">(DoubleSupplier lazyValue)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> Math.pow(lazyValue.getAsDouble(), <span class="number">2</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">DoubleSupplier</span> <span class="variable">lazyValue</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">  Uninterruptibles.sleepUninterruptibly(<span class="number">1000</span>, TimeUnit.MILLISECONDS);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">3d</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="Consumers"><strong>Consumers</strong></h2>
+<p>Supplier 와는 반대로 Consumer 는 매개변수를 받고 리턴하지는 않습니다. Supplier 가 매개 변수 없이 특정 타입을 리턴하는 '공급자’이고 Consumer 가 리턴 타입 없이 매개변수를 받아 처리하는 '소비자’로 해석할 수 있으니 쉽게 구분하실 수 있을 것 같습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Consumer</span>&lt;T&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">accept</span><span class="params">(T t)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> Consumer&lt;T&gt; <span class="title function_">andThen</span><span class="params">(Consumer&lt;? <span class="built_in">super</span> T&gt; after)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(after);</span><br><span class="line">    <span class="keyword">return</span> (T t) -&gt; &#123; accept(t); after.accept(t); &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>forEach</code> 메소드를 이용한 간단한 예제를 살펴보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">forEach</span><span class="params">(Consumer&lt;? <span class="built_in">super</span> T&gt; action)</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; names = Arrays.asList(<span class="string">&quot;John&quot;</span>, <span class="string">&quot;Freddy&quot;</span>, <span class="string">&quot;Samuel&quot;</span>);</span><br><span class="line">names.forEach(name -&gt; System.out.println(<span class="string">&quot;Hello, &quot;</span> + name));</span><br></pre></td></tr></table></figure>
+<p>매개변수에 따라 구분해서 사용할 수 있습니다.</p>
+<ul>
+<li>IntConsumer</li>
+<li>LongConsumer</li>
+<li>DoubleConsumer</li>
+</ul>
+<p>또한 매개변수가 두 개인 <code>Bi</code> 버전도 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">forEach</span><span class="params">(BiConsumer&lt;? <span class="built_in">super</span> K, ? <span class="built_in">super</span> V&gt; action)</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">Map&lt;String, Integer&gt; ages = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">ages.put(<span class="string">&quot;John&quot;</span>, <span class="number">25</span>);</span><br><span class="line">ages.put(<span class="string">&quot;Freddy&quot;</span>, <span class="number">24</span>);</span><br><span class="line">ages.put(<span class="string">&quot;Samuel&quot;</span>, <span class="number">30</span>);</span><br><span class="line"></span><br><span class="line">ages.forEach((name, age) -&gt; System.out.println(name + <span class="string">&quot; is &quot;</span> + age + <span class="string">&quot; years old.&quot;</span>));</span><br></pre></td></tr></table></figure>
+<p><code>BiConsumer</code> 도 타입에 따라 구분해서 사용할 수 있습니다.</p>
+<ul>
+<li>ObjDoubleConsumer</li>
+<li>ObjIntConsumer</li>
+<li>ObjLongConsumer</li>
+</ul>
+<h2 id="Predicates"><strong>Predicates</strong></h2>
+<p>특정 타입의 매개변수를 받아 <code>boolean</code> 값을 리턴하는 함수형 인터페이스입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Predicate</span>&lt;T&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="type">boolean</span> <span class="title function_">test</span><span class="params">(T t)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">and</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; other)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(other);</span><br><span class="line">    <span class="keyword">return</span> (t) -&gt; test(t) &amp;&amp; other.test(t);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">negate</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (t) -&gt; !test(t);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">default</span> Predicate&lt;T&gt; <span class="title function_">or</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; other)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(other);</span><br><span class="line">    <span class="keyword">return</span> (t) -&gt; test(t) || other.test(t);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">static</span> &lt;T&gt; Predicate&lt;T&gt; <span class="title function_">isEqual</span><span class="params">(Object targetRef)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="literal">null</span> == targetRef)</span><br><span class="line">      ? Objects::isNull</span><br><span class="line">        : object -&gt; targetRef.equals(object);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Stream API 의 <code>filter</code> 메소드와 함께 사용하는 예제입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Stream 클래스의 filter 메소드</span></span><br><span class="line">Stream&lt;T&gt; <span class="title function_">filter</span><span class="params">(Predicate&lt;? <span class="built_in">super</span> T&gt; predicate)</span>;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; names = Arrays.asList(<span class="string">&quot;Angela&quot;</span>, <span class="string">&quot;Aaron&quot;</span>, <span class="string">&quot;Bob&quot;</span>, <span class="string">&quot;Claire&quot;</span>, <span class="string">&quot;David&quot;</span>);</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; namesWithA = names.stream()</span><br><span class="line">  .filter(name -&gt; name.startsWith(<span class="string">&quot;A&quot;</span>))</span><br><span class="line">  .collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line">System.out.println(namesWithA); <span class="comment">// [Angela, Aaron]</span></span><br></pre></td></tr></table></figure>
+<p>다른 메소드도 하나씩 살펴볼까요? <code>and</code>, <code>or</code> 메소드는 다른 Predicate 람다와 함께 조합해서 사용이 가능합니다. <code>negate</code> 메소드는 조건을 반전시키고, 마지막으로 스태틱 메소드인 <code>isEqual</code> 을 이용해 매개변수와 동일한지 판단하는 람다를 생성할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// [Angela]</span></span><br><span class="line">names.stream().filter(startWithA.and(endWitha)).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line"><span class="comment">// [Angela, Aaron, Bob]</span></span><br><span class="line">names.stream().filter(startWithA.or(startWithB)).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line"><span class="comment">// [Bob, Claire, David]</span></span><br><span class="line">names.stream().filter(startWithA.negate()).collect(Collectors.toList());</span><br><span class="line"></span><br><span class="line"><span class="comment">// [Claire]</span></span><br><span class="line">names.stream().filter(Predicate.isEqual(<span class="string">&quot;Claire&quot;</span>)).collect(Collectors.toList());</span><br></pre></td></tr></table></figure>
+<p>다른 함수형 인터페이스와 마찬가지로 매개변수 타입에 따라서 구분해서 사용할 수 있습니다.</p>
+<ul>
+<li>IntPredicate</li>
+<li>DoublePredicate</li>
+<li>LongPredicate</li>
+</ul>
+<h2 id="Operators"><strong>Operators</strong></h2>
+<p>Operator 는 하나의 매개변수를 받고 동일한 타입을 리턴하는 함수형 인터페이스입니다. Function 인터페이스를 상속하고 있습니다. 여기에는 매개변수의 개수에 따라서 두 가지가 있습니다.</p>
+<ul>
+<li>UnaryOperator : 매개변수 하나</li>
+<li>BinaryOperator : 매개변수 둘</li>
+</ul>
+<h3 id="UnaryOperator">UnaryOperator</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UnaryOperator</span>&lt;T&gt; <span class="keyword">extends</span> <span class="title class_">Function</span>&lt;T, T&gt; &#123;</span><br><span class="line">  <span class="keyword">static</span> &lt;T&gt; UnaryOperator&lt;T&gt; <span class="title function_">identity</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> t -&gt; t;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>예제에서 <code>replaceAll</code> 은 해당 요소를 바꿔치기하는 것으로 동일한 리턴 타입이 필요합니다. <code>replaceAll</code> 메소드는 리턴 타입이 <code>void</code> 지만 람다를 이용해서 각 요소를 바꿔치기 할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span> <span class="keyword">void</span> <span class="title function_">replaceAll</span><span class="params">(UnaryOperator&lt;E&gt; operator)</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; names = Arrays.asList(<span class="string">&quot;bob&quot;</span>, <span class="string">&quot;josh&quot;</span>, <span class="string">&quot;megan&quot;</span>);</span><br><span class="line">names.replaceAll(String::toUpperCase); <span class="comment">// name -&gt; name.toUpperCase()</span></span><br><span class="line"></span><br><span class="line">System.out.println(names); <span class="comment">// [BOB, JOSH, MEGAN]</span></span><br></pre></td></tr></table></figure>
+<p>매개변수 타입에 따라 구분해서 사용할 수 있습니다.</p>
+<ul>
+<li>DoubleUnaryOperator</li>
+<li>IntUnaryOperator</li>
+<li>LongUnaryOperator</li>
+</ul>
+<h3 id="BinaryOperator">BinaryOperator</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">BinaryOperator</span>&lt;T&gt; <span class="keyword">extends</span> <span class="title class_">BiFunction</span>&lt;T,T,T&gt; &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; BinaryOperator&lt;T&gt; <span class="title function_">minBy</span><span class="params">(Comparator&lt;? <span class="built_in">super</span> T&gt; comparator)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(comparator);</span><br><span class="line">    <span class="keyword">return</span> (a, b) -&gt; comparator.compare(a, b) &lt;= <span class="number">0</span> ? a : b;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; BinaryOperator&lt;T&gt; <span class="title function_">maxBy</span><span class="params">(Comparator&lt;? <span class="built_in">super</span> T&gt; comparator)</span> &#123;</span><br><span class="line">    Objects.requireNonNull(comparator);</span><br><span class="line">    <span class="keyword">return</span> (a, b) -&gt; comparator.compare(a, b) &gt;= <span class="number">0</span> ? a : b;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>다음 예제는 <code>reduce</code> 메소드를 이용해서 값들의 합을 구하는 예제입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 초기값을 가지고 모든 요소를 하나의 값으로 만드는 로직을 수행</span></span><br><span class="line">T <span class="title function_">reduce</span><span class="params">(T identity, BinaryOperator&lt;T&gt; accumulator)</span>;</span><br><span class="line"></span><br><span class="line">List&lt;Integer&gt; values = Arrays.asList(<span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">12</span>);</span><br><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> values.stream()</span><br><span class="line">  .reduce(<span class="number">0</span>, (i1, i2) -&gt; i1 + i2);</span><br></pre></td></tr></table></figure>
+<p>여기에서 넘겨지는 람다는 수학에서의 결합법칙(<em>associative</em>) 을 만족해야 합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 결합법칙은 연산 순서가 바뀌어도 동일한 결과가 나오는 것을 의미</span></span><br><span class="line"><span class="comment">// 예를 들면 (a x b) x c = a x (b x c) </span></span><br><span class="line">op.apply(a, op.apply(b, c)) == op.apply(op.apply(a, b), c)</span><br></pre></td></tr></table></figure>
+<p>다른 인터페이스와 마찬가지로 매개변수 타입에 따라 여러 버전이 있습니다.</p>
+<ul>
+<li>DoubleBinaryOperator</li>
+<li>IntBinaryOperator</li>
+<li>LongBinaryOperator</li>
+</ul>
+<h2 id="기존-API-속-함수형-인터페이스"><strong>기존 API 속 함수형 인터페이스</strong></h2>
+<p>기존의 <code>Runnable</code> 과 <code>Callable</code> 인터페이스도 함수형 인터페이스로 변경되었습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>따라서 다음과 같이 람다를 사용해서 심플하게 코드를 작성할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Thread</span> <span class="variable">t</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; System.out.println(<span class="string">&quot;Hello from another Thread&quot;</span>));</span><br><span class="line">t.start();</span><br></pre></td></tr></table></figure>
+<h2 id="요약">요약</h2>
+<p>이번 포스트에서 살펴 본 함수형 인터페이스들을 정리해보겠습니다. 세부 타입에 따라서 인터페이스가 많지만 제네릭을 이용해서 간단하게 사용하시면 되겠습니다.</p>
+<ul>
+<li><code>Function&lt;T, R&gt;</code> : 매개변수 하나를 받아서 특정 타입의 값을 리턴
+<ul>
+<li>기본형 타입 매개변수를 받아 특정 타입의 값을 리턴
+<ul>
+<li><code>IntFunction&lt;R&gt;</code></li>
+<li><code>LongFunction&lt;R&gt;</code></li>
+<li><code>DoubleFunction&lt;R&gt;</code></li>
+</ul>
+</li>
+<li>특정 타입 값을 받아 기본형 타입을 리턴
+<ul>
+<li><code>ToIntFunction&lt;T&gt;</code></li>
+<li><code>ToLongFunction&lt;T&gt;</code></li>
+<li><code>ToDoubleFunction&lt;T&gt;</code></li>
+</ul>
+</li>
+<li><code>BiFunction&lt;T, U, R&gt;</code> : 매개변수가 두 개이고 특정 타입의 값을 리턴
+<ul>
+<li>매개변수가 두 개이고 기본형 타입을 리턴</li>
+<li><code>ToIntBiFunction&lt;T, U&gt;</code></li>
+<li><code>ToLongBiFunction&lt;T, U&gt;</code></li>
+<li><code>ToDoubleBiFunction&lt;T, U&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Supplier&lt;T&gt;</code> : 매개변수 없이 특정 타입의 값을 리턴
+<ul>
+<li>매개변수 없이 기본형 리턴 타입
+<ul>
+<li><code>BooleanSupplier</code></li>
+<li><code>DoubleSupplier</code></li>
+<li><code>LongSupplier</code></li>
+<li><code>IntSupplier</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Cousumer&lt;T&gt;</code> : 매개변수를 받기만 하고 리턴하지는 않음
+<ul>
+<li>매개변수 기본 타입
+<ul>
+<li><code>IntConsumer&lt;T&gt;</code></li>
+<li><code>LongConsumer&lt;T&gt;</code></li>
+<li><code>DoubleConsumer&lt;T&gt;</code></li>
+</ul>
+</li>
+<li><code>BiConsumer&lt;T, U&gt;</code> : 매개변수가 두 개인 경우</li>
+<li>매개변수 중 하나의 타입이 기본 타입인 경우
+<ul>
+<li><code>ObjDoubleConsumer&lt;T&gt;</code></li>
+<li><code>ObjIntConsumer&lt;T&gt;</code></li>
+<li><code>ObjLongConsumer&lt;T&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>Predicate&lt;T&gt;</code> : 매개변수를 받아 <code>boolean</code> 값을 리턴
+<ul>
+<li>매개변수 기본 타입
+<ul>
+<li><code>intPredicate</code></li>
+<li><code>DoublePredicate</code></li>
+<li><code>LongPredicate</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>UnaryOperator&lt;T&gt;</code> : 하나의 매개변수를 받아 동일한 타입의 값을 리턴</li>
+<li><code>BinaryOperator&lt;T&gt;</code> : 동일한 타입의 매개변수를 두 개 받아 동일한 타입의 값을 리턴
+<ul>
+<li>기본형 타입
+<ul>
+<li><code>DoubleBinaryOperator</code></li>
+<li><code>IntBinaryOperator</code></li>
+<li><code>LongBinaryOperator</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>기존 API 속 함수형 인터페이스
+<ul>
+<li><code>Runnable</code></li>
+<li><code>Callable</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html">Java 8 API java.util.function (Oracle docs)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.baeldung.com/java-8-functional-interfaces">Functional Interfaces in Java 8</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/19/java-lambda-basics/" title="Java Lambda (1) 기본">Java Lambda (1) 기본</a>
+</li>
+<li>
+<a href="/2018/07/20/java-lambda-type-inference-functional-interface/" title="Java Lambda (2) 타입 추론과 함수형 인터페이스">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-and-closure/" title="Java Lambda (7) 람다와 클로저">Java Lambda (7) 람다와 클로저</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">디폴트 메소드와 스태틱 메소드는 추상 메소드가 아니기 때문에 여러 개 있어도 상관없습니다.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/google/guava">Guava : Google Core Libraries for Java</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/02/java-lambda-variable-scope/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java Lambda (5) 변수 범위
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/08/02/java-lambda-method-references/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java Lambda (3) 메소드 참조</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/08/02/java-jdk-functional-interfaces-api/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    클린코드가 시작되는 곳 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/06/11/about-clean-code/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Column/">Column</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-about-clean-code" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        클린코드가 시작되는 곳
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/11/about-clean-code/" class="article-date">
+    <time datetime="2018-06-11T13:02:09.000Z" itemprop="datePublished">2018/06/11</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              3 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다.</p>
+<h2 id="기술적-부채">기술적 부채</h2>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Technical_debt">Technical Debt</a>라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 '빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다. 이 빚은 당장은 편하지만 이자가 점점 붙어서 나중에 감당하기 어려운 수준까지 늘어날 수 있습니다. 바로 소프트웨어의 품질에 관련된 빚입니다.</p>
+<p>이 빚은 개발 프로세스의 압박, 테스트 코드와 문서의 부재, 오너쉽과 협업의 부재 등 개발 과정에서 전반적으로 나타날 수 있는 문제들입니다. 현실에서도 적당한 부채는 도움이 되듯이, 프로젝트 상 자원의 한계 때문에 어느 정도의 빚은 가지고 가게 됩니다. 하지만 과도한 빚으로 인해 SW의 품질이 낮아지고 이는 개발 당시에는 큰 문제가 없어보이지만 향후 운영 과정에서 눈덩이처럼 불어나 닥쳐오는 빚이 됩니다.</p>
+<p>이 모든 것이 코딩에서만 비롯되는 문제는 아니지만, 클린코드와 리팩토링은 코드에 관련된 내용입니다. 사실 클린코드는 이미 수년전부터 너무나 많이 회자되었고, 대부분 많이 들어보셨을 내용입니다. 하지만 그럼에도 불구하고 지금까지 클린코드와 코드 품질에 대해 이야기가 나오는 것은 SW 개발의 특성 상 코드의 품질을 정의하거나 측정하고 관리하는 것이 쉽지 않기 때문일겁니다.</p>
+<h2 id="클린하지-않을-이유">클린하지 않을 이유</h2>
+<p>클린 코드는 다음과 같이 간단하게 정의해볼 수 있습니다.</p>
+<ul>
+<li>사용자의 요구사항을 잘 반영한 코드</li>
+<li>쉽게 변경이 가능해서 유지보수가 쉬운 코드</li>
+<li>읽기 좋아서 담당자가 바뀌더라도 쉽게 볼 수 있는 코드</li>
+</ul>
+<p>클린코드에 대해서 이야기할 때, 현업에서 들리는 가장 많은 이야기는 이겁니다.</p>
+<p><em>“누가 좋은 줄 모르나요? 할 여력이 없어서 그렇지…”</em></p>
+<p>맞습니다. 개발이든, 운영이든 시간과 자원의 압박에서 자유로울 수 없고, 그리고 같은 코드를 짜도 시간을 더 들여서 클린하게 짠다고 해서 위에서는 관심도 없고 주변에서 알아주는 사람도 없습니다. SI 같은 경우는 ‘내가 운영할 것도 아닌데, 뭐’ 라는 마인드로 대충 짜는 경우도 있었습니다. 그래서 코드 리뷰를 점차 도입하고, 장인정신(SW Craftsmanship)을 강조하며, 코드에 대한 오너십을 강화하기 위해 코드실명제를 도입한다는 이야기도 들립니다.</p>
+<p>코드 품질에 관련한 툴을 사용하기도 합니다. PMD 나 Fortify 등 코드 품질 관련 도구를 자동화된 빌드 과정에 넣어 개발자들에게 이메일이 수시로 날아가기도 합니다. 이 모든 것들이 개발자에겐 스트레스로 다가옵니다. ‘바빠 죽겠는데 뭘 또 고치란 말이야?’.</p>
+<h2 id="개발자의-마인드-그리고-스킬">개발자의 마인드, 그리고 스킬</h2>
+<p><img src="https://images.unsplash.com/photo-1511306162219-1c5a469ab86c?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=d37b68a5a2ad7387cb4f4d85936bc771&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="https://unsplash.com/photos/2MuZ23gkFKo"></p>
+<p>그렇다면 코드의 품질을 높이기 위해서 가장 중요한 것은 무엇일까요? 저는 실제 코드를 짜는 개발자들의 의식 변화와 스킬 훈련이 가장 중요하다고 생각합니다.</p>
+<p>물론 개발자들이 코드를 클린하게 짤 수 없는 이유는 충분합니다. 하지만 개발자 스스로의 변화가 우선시되어야 하는 이유는, 여건이 안되더라도 개발자가 능력이 있다면 주어진 여건 하에서 코드 품질을 올릴 것이고 이는 결국 수정을 해야 하는 개발자 자신에게 득이 되는 일입니다. 반대로 개발자가 코드 품질에 대한 이해와 스킬이 부족하다면 여건이 갖춰지더라도 코드 품질은 오를리가 만무합니다. 따라서 개발자들이 변화의 중심에 서야 합니다.</p>
+<p>위에서부터 클린코딩을 강요하면 웃지 못할 해프팅이 벌어지기도 합니다. 어떤 개발팀에서는 테스트 커버리지를 100% 채우기 위해 의미없는 VO 클래스를 테스트하기도 하고, assert 문을 넣지 않고 통과시켜 버리기도 한다고 합니다. 정말 그 자체로 의미 없는 일입니다.</p>
+<p>클린 코드를 중요하게 생각하는 개발자가 늘어나면 위에서부터의 변화가 아니라 아래서부터의 변화가 생겨나고 문화를 만들어질 것입니다. 쉽지는 않겠지만 이것이 옳은 변화라고 생각합니다. 이를 뒷받침하기 위해 위에서도 강요가 아니라 코드 품질을 높이는 활동을 중요하게 인식하고 장려해야겠죠.</p>
+<p>교육 후 개발자들의 마인드는 처음과 조금 바뀌었습니다. ‘꼭 해야할까?’ 에서 ‘해보니 좋네’, ‘해볼만 하다’ 라는 마인드로 바뀐 개발자들이 많았습니다. 정말 긍정적인 변화입니다. 하지만 실제 현업에 적용하려면 계속해서 연습하는 숙달의 과정이 필요합니다. 이를 뒷받침할 수 있는 여러 교육 과정과 지원, 그리고 개발자 스스로의 노력이 필요하겠죠. 저 또한 마찬가지입니다.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/11/generate-an-emoji-favicon/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            이모지로 파비콘 Favicon 만들기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/10/medium-writing-paradigm-shift/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Medium, 글쓰기의 새로운 패러다임</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/11/about-clean-code/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Vert.x Blocking Code 처리하기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/05/29/vertx-running-blocking-code/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Vert-x/">Vert.x</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-vertx-running-blocking-code" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Vert.x Blocking Code 처리하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/05/29/vertx-running-blocking-code/" class="article-date">
+    <time datetime="2018-05-29T13:01:00.000Z" itemprop="datePublished">2018/05/29</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              13 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이번 포스팅에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://vertx.io">Vert.x</a> 에서 Blocking 코드를 어떻게 처리하는지 확인해보겠습니다.</p>
+<h2 id="Thread-Blocking-Warning">Thread Blocking Warning</h2>
+<p>Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수 있지만 각각 event loop 가 독립적인 single thread 로 작동합니다. 즉, 특정 작업으로 인해 event loop thread 가 block 되면 (해당 <em>event loop</em> 에 할당된 작업들) 전체가 뻗어버리는 것과 같습니다. 따라서 event loop 가 block 되는 것을 막아야 하며, <code>BlockedThreadChecker</code> 가 해당 작업에 어느 정도 시간이 소요되면 다음과 같이 경고를 띄워주고 error 를 발생시킵니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">May 29, 2018 5:56:16 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 2149 ms, time limit is 2000</span><br><span class="line">May 29, 2018 5:56:17 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 3150 ms, time limit is 2000</span><br><span class="line">May 29, 2018 5:56:18 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 4151 ms, time limit is 2000</span><br><span class="line">May 29, 2018 5:56:19 AM io.vertx.core.impl.BlockedThreadChecker</span><br><span class="line">WARNING: Thread Thread[vert.x-eventloop-thread-1,5,main] has been blocked for 5151 ms, time limit is 2000</span><br><span class="line">io.vertx.core.VertxException: Thread blocked</span><br><span class="line">        at java.lang.Object.wait(Native Method)</span><br><span class="line">        at java.lang.Object.wait(Object.java:502)</span><br><span class="line">		...</span><br></pre></td></tr></table></figure>
+<h3 id="blocking-되는-경우">blocking 되는 경우</h3>
+<ul>
+<li>Thread.sleep()</li>
+<li>Thread lock</li>
+<li>시간이 오래 걸리는 DB 작업</li>
+<li>시간이 오래 걸리는 복잡한 연산</li>
+<li>오래 걸리는 반복문</li>
+<li>Blocking 코드로 짜여진 API 를 호출하는 경우</li>
+</ul>
+<h3 id="경고-잠재우기">경고 잠재우기</h3>
+<p>blocking 이 크게 문제되지 않는 경우인데 이러한 경고가 거슬린다면 다음 두 가지 방법으로 제한 시간을 늘릴 수 있습니다.</p>
+<h4 id="시스템-프로퍼티로-옵션-주기">시스템 프로퍼티로 옵션 주기</h4>
+<p>CLI 로 Vert.x 를 실행할 경우 다음과 같이 원하는 시간만큼 옵션을 줍니다. (<em>milliseconds</em>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-Dvertx.options.blockedThreadCheckInterval=200000000</span><br></pre></td></tr></table></figure>
+<h4 id="VertxOptions-으로-옵션-주기">VertxOptions 으로 옵션 주기</h4>
+<p>Vert.x 생성 시에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://vertx.io/docs/apidocs/io/vertx/core/VertxOptions.html">VertxOptions</a> 객체를 이용해 옵션을 전달할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">VertxOptions</span> <span class="variable">vxOptions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">VertxOptions</span>().setblockedThreadCheckInterval(<span class="number">200000000</span>);</span><br><span class="line"><span class="type">Vertx</span> <span class="variable">vertx</span> <span class="operator">=</span> Vertx.vertx(vxOptions);</span><br></pre></td></tr></table></figure>
+<h2 id="Blocking-code-처리하기">Blocking code 처리하기</h2>
+<p>하지만 event loop 가 blocking 되는 근본적인 문제를 해결한 건 아닙니다.</p>
+<p>Vert.x 에서 blocking 코드를 처리하는 방법에는 세 가지 방법이 있습니다.</p>
+<ol>
+<li>Vert.x 에서 재작성한 API를 사용 (<em>blocking -&gt; non-blocking</em>)</li>
+<li>executeBlocking 메소드로 처리 (각 작업들의 순서를 지킬 지, 병렬로 처리할지 설정 가능)</li>
+<li>Worker verticle 사용 (<em>Worker thread pool</em>)</li>
+</ol>
+<h3 id="executeBlocking-메소드">executeBlocking 메소드</h3>
+<p>버텍스 에서는 blocking 작업들을 non-blocking 처럼 처리하기 위해서 내부적으로 worker pool 을 가지고 있습니다. event loop 에서 blocking 코드를 실행하면 내부적으로 thread를 이용해서 처리하고 callback 을 실행해 event loop 입장에서는 마치 non-blocking 처럼 처리할 수 있습니다. 이 때 사용하는 메소드가 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://vertx.io/docs/apidocs/io/vertx/core/Vertx.html#executeBlocking-io.vertx.core.Handler-boolean-io.vertx.core.Handler-">executeBlocking</a> 메소드입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Safely execute some blocking code.</span></span><br><span class="line"><span class="comment">// Executes the blocking code in the handler blockingCodeHandler using a thread from the worker pool.</span></span><br><span class="line">&lt;T&gt; <span class="keyword">void</span> <span class="title function_">executeBlocking</span><span class="params">(Handler&lt;Future&lt;T&gt;&gt; blockingCodeHandler,</span></span><br><span class="line"><span class="params">                         <span class="type">boolean</span> ordered,</span></span><br><span class="line"><span class="params">                         Handler&lt;AsyncResult&lt;T&gt;&gt; resultHandler)</span></span><br></pre></td></tr></table></figure>
+<p>파라미터 중 boolean 값인 ordered 를 이용해서 executeBlocking 메소드가 여러 번 호출되었을 때 순서를 지켜서 호출할 것인지 병렬적으로 실행할 것인지 정해줄 수 있습니다. (기본값 <em>true</em>)</p>
+<p>기본적인 사용법은 다음과 같습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vertx.executeBlocking(future -&gt; &#123;</span><br><span class="line">  <span class="comment">// Call some blocking API that takes a significant amount of time to return</span></span><br><span class="line">  <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> someAPI.blockingMethod(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">  future.complete(result);</span><br><span class="line">&#125;, res -&gt; &#123;</span><br><span class="line">  System.out.println(<span class="string">&quot;The result is: &quot;</span> + res.result());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="WorkerExecutor">WorkerExecutor</h3>
+<p>위 코드처럼 executeBlocking 메소드를 vertx 인스턴스를 통해서 바로 호출할 수도 있지만 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://vertx.io/docs/apidocs/io/vertx/rxjava/core/WorkerExecutor.html">WorkerExecutor</a> 인스턴스를 이용해서 다양하게 활용도 가능합니다.</p>
+<p>WorkerExecutor 를 생성할 때 worker pool 이름을 지정해줄 수 있는데, 이름이 같으면 같은 wroker pool 을 공유하고, 이름이 다르면 다른 worker pool 을 사용합니다. 이를 이용해서 목적에 맞는 worker pool 을 만들어 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">WorkerExecutor</span> <span class="variable">executor</span> <span class="operator">=</span> vertx.createSharedWorkerExecutor(<span class="string">&quot;my-worker-pool&quot;</span>);</span><br><span class="line">executor.executeBlocking(future -&gt; &#123;</span><br><span class="line">  <span class="comment">// Call some blocking API that takes a significant amount of time to return</span></span><br><span class="line">  <span class="type">String</span> <span class="variable">result</span> <span class="operator">=</span> someAPI.blockingMethod(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">  future.complete(result);</span><br><span class="line">&#125;, res -&gt; &#123;</span><br><span class="line">  System.out.println(<span class="string">&quot;The result is: &quot;</span> + res.result());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>추가 파라미터로 poolSize 와 maxExecuteTime 도 설정할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">poolSize</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">long</span> <span class="variable">maxExecuteTime</span> <span class="operator">=</span> <span class="number">120000</span>; <span class="comment">// 2분</span></span><br><span class="line"></span><br><span class="line"><span class="type">WorkerExecutor</span> <span class="variable">executor</span> <span class="operator">=</span> vertx.createSharedWorkerExecutor(<span class="string">&quot;my-worker-pool&quot;</span>, poolSize, maxExecuteTime);</span><br></pre></td></tr></table></figure>
+<h3 id="Worker-pool-과-executor-종료">Worker pool 과 executor 종료</h3>
+<p>Verticle 내에서 생성된 executor 는 verticle 이 종료(<em>undeployed</em>) 되면 자동으로 닫히거나, 사용이 끝난 executor 를 수동으로 닫을 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">executor.close();</span><br></pre></td></tr></table></figure>
+<p>모든 executor 가 닫히면, 해당 worker pool 은 삭제됩니다.</p>
+<h2 id="Worker-Verticle">Worker Verticle</h2>
+<p>Worker verticle 은 일반적인 verticle 처럼 event loop 에서 실행되는 것이 아니라 worker pool 의 thread 들을 이용해서 처리되는 verticle 입니다. 위에서 살펴본 executeBlocking 메서드는 해당 작업만 thread pool 을 이용해서 작업했다면, worker verticle 은 verticle 자체를 thread pool 을 이용해서 처리한다고 보시면 될 것 같습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">DeploymentOptions</span> <span class="variable">options</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DeploymentOptions</span>().setWorker(<span class="literal">true</span>);</span><br><span class="line">vertx.deployVerticle(<span class="string">&quot;com.future.creator.MyOrderProcessorVerticle&quot;</span>, options);</span><br></pre></td></tr></table></figure>
+<p>Vert.x 의 장점이 thread에 안전한 것이죠. Worker verticle 도 마찬가지입니다. Worker verticle 인스턴스는 여러 개의 thread에서 동시에 실행되는 것은 아닙니다. 하지만 하나의 thread에서만 동작하는 event loop와는 다르게 다른 시간에 다른 thread에서 실행될 수는 있습니다.</p>
+<p>Vert.x 에서는 이러한 방법으로 blocking 코드를 안전하게 처리할 수 있습니다.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            macOS 기본 터미널 개선하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/05/28/vertx-deploy-multiple-verticles/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Vert.x verticle 여러 개 배포하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/05/29/vertx-running-blocking-code/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Java Lambda (5) 변수 범위 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-java-lambda-variable-scope" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Java Lambda (5) 변수 범위
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/08/02/java-lambda-variable-scope/" class="article-date">
+    <time datetime="2018-08-02T14:33:28.000Z" itemprop="datePublished">2018/08/02</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              22 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="변수-범위">변수 범위</h2>
+<p>람다는 새로운 변수 범위를 생성하지 않습니다. 람다 내에서 변수 사용은 둘러싸고 있는 환경의 변수들을 참조합니다. <code>this</code> 나 <code>super</code> 키워드도 마찬가지입니다. 따라서 복잡해지지 않습니다.</p>
+<p>아래 예제에서 <code>i</code> 는 단순히 람다를 둘러싸고 있는 클래스의 필드를 가리키게 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Example</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line">    </span><br><span class="line">  <span class="keyword">public</span> Integer <span class="title function_">example</span><span class="params">()</span> &#123;</span><br><span class="line">    Supplier&lt;Integer&gt; function = () -&gt; i * <span class="number">2</span>; <span class="comment">// this.i * 2; 도 동일</span></span><br><span class="line">    <span class="keyword">return</span> function.get();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">public</span> Integer <span class="title function_">anotherExample</span><span class="params">(<span class="type">int</span> i)</span> &#123;</span><br><span class="line">    Supplier&lt;Integer&gt; function = () -&gt; i * <span class="number">2</span>; <span class="comment">// this.i 와 다름</span></span><br><span class="line">    <span class="keyword">return</span> function.get();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">public</span> Integer <span class="title function_">yetAnotherExample</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">15</span>;</span><br><span class="line">    Supplier&lt;Integer&gt; function = () -&gt; i * <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">return</span> function.get();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>결과를 출력해봅시다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String... args)</span> &#123;</span><br><span class="line">  <span class="type">Example</span> <span class="variable">scoping</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Example</span>();</span><br><span class="line">  System.out.println(<span class="string">&quot;class scope = &quot;</span> + scoping.example()); <span class="comment">// 10</span></span><br><span class="line">  System.out.println(<span class="string">&quot;method param scope = &quot;</span> + scoping.anotherExample(<span class="number">10</span>)); <span class="comment">// 20</span></span><br><span class="line">  System.out.println(<span class="string">&quot;method scope = &quot;</span> + scoping.yetAnotherExample()); <span class="comment">// 30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="유사-파이널-Effectively-final">유사 파이널 Effectively final</h2>
+<p>자바 7에서 익명 클래스의 인스턴스로 넘겨지는 모든 변수들은 <code>final</code> 이어야만 합니다. 익명 클래스의 인스턴스가 필요로 하는 변수 정보나 컨텍스트를 복사해서 넘겨주기 때문입니다. 이런 상황에서 변수가 변경되면 의도하지 않은 결과가 나올 수 있으므로 변경되지 않도록 <code>final</code> 로 선언되어야만 하고, 그렇지 않을 경우 컴파일 에러가 납니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Java 7</span></span><br><span class="line"><span class="comment">// 필터 메소드는 List&lt;Person&gt; 를 돌면서 조건을 테스트한다.</span></span><br><span class="line"><span class="keyword">private</span> List&lt;Person&gt; <span class="title function_">filter</span><span class="params">(List&lt;Person&gt; people, Predicate&lt;Person&gt; predicate)</span> &#123;</span><br><span class="line">  ArrayList&lt;Person&gt; matches = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">  <span class="keyword">for</span> (Person person : people) &#123;</span><br><span class="line">    <span class="keyword">if</span> (predicate.test(person))</span><br><span class="line">      matches.add(person);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> matches;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 은퇴나이를 기준으로 은퇴한 사람 리스트를 구한다.</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">findRetirees</span><span class="params">(List&lt;Person&gt; people)</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">retirementAge</span> <span class="operator">=</span> <span class="number">55</span>; <span class="comment">// final 필요</span></span><br><span class="line">  List&lt;Person&gt; retirees = filter(people, <span class="keyword">new</span> <span class="title class_">Predicate</span>&lt;Person&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">test</span><span class="params">(Person person)</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> person.getAge() &gt;= retirementAge; <span class="comment">// compile error</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> age;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>위 예제에서는 익명 인스턴스에서 외부의  <code>retirementAge</code> 를 참조할 때 컴파일 에러가 발생합니다. 이는 <code>retirementAge</code> 가 <code>final</code> 이 아니기 때문에 나는 에러로 <code>final</code> 을 붙여주면 해결됩니다.</p>
+<p>여기서 익명 클래스에 컨텍스트를 넘겨주는 것이 클로저입니다. 컴파일러는 이 필요한 정보를 복사해서 넘겨주는데 이를 Variable capture 라고 합니다.</p>
+<p>자바 8에서는 유사 파이널 (<em>effectively final</em>) 이라는 개념을 도입해 해당 변수가 변경되지 않다고 컴파일러가 판단하면 해당 변수를 <code>final</code> 로 해석하게 됩니다. 따라서 자바 8 컴파일러로 변경한 후에는 <code>final</code> 키워드가 없어도 문제 없이 컴파일됩니다.</p>
+<p>물론 여기서 변수를 초기화한 후 나중에 수정하는 경우라면 해당 변수를 유사 파이널로 볼 수 없습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">retirementAge</span> <span class="operator">=</span> <span class="number">55</span>;</span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line">retirementAge = <span class="number">65</span>; <span class="comment">// 유사 파이널 아님!</span></span><br></pre></td></tr></table></figure>
+<p>이러한 유사 파이널은 람다에서도 그대로 적용됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Person&gt; retirees = filter(people, person -&gt; person.getAge() &gt;= retirementAge);</span><br></pre></td></tr></table></figure>
+<h2 id="파이널-우회">파이널 우회</h2>
+<p>이렇게 강요되는 <code>final</code> 이 회피되는 경우가 있습니다. 만약 사람들의 전체 나이 합을 구한다고 합시다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">sumAllAges</span><span class="params">(List&lt;Person&gt; people)</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (Person person : people) &#123;</span><br><span class="line">    sum += person.getAge();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>여기에서 반복 동작을 추상화해서 외부로 빼서, 나이 합을 구하는 로직을 람다로 받을 수 있게 변경할 수 있을 겁니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> Integer <span class="title function_">forEach</span><span class="params">(List&lt;Person&gt; people, Function&lt;Integer, Integer&gt; function)</span> &#123;</span><br><span class="line">  <span class="type">Integer</span> <span class="variable">result</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">  <span class="keyword">for</span> (Person person : people) &#123;</span><br><span class="line">    result = function.apply(person.getAge());</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이렇게 만든 함수는 다음과 같이 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">badExample</span><span class="params">(List&lt;Person&gt; people)</span> &#123;</span><br><span class="line">  Function&lt;Integer, Integer&gt; sum = <span class="keyword">new</span> <span class="title class_">Function</span>&lt;Integer, Integer&gt;() &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">Integer</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>; <span class="comment">// 합이 저장됨</span></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Integer <span class="title function_">apply</span><span class="params">(Integer amount)</span> &#123;</span><br><span class="line">      sum += amount;</span><br><span class="line">      <span class="keyword">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  forEach(people, sum); <span class="comment">// 결과는 정상적으로 출력될 것</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>문제는 이 합하는 연산 때문에 생깁니다. 합을 하기 위해서는 값을 지속적으로 저장할 곳이 필요합니다. 이 예제에서 <code>sum</code> 변수는 함수가 호출될 때마다 계속해서 재사용되고 변경됩니다. 동일한 인스턴스의 필드를 참조하고 있기 떄문입니다. 따라서 동작은 제대로 하지만 이는 람다로 변경할 수 없습니다. 람다 내부에는 누적해서 저장할 공간이 없기 때문입니다.</p>
+<p>람다를 사용하면 외부에 있는 변수에 저장해야겠죠.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="comment">// Variable used in lambda expression should be final or effectively final</span></span><br><span class="line">forEach(people, x -&gt; sum += x); </span><br></pre></td></tr></table></figure>
+<p>그렇다면 위와 같은 에러를 만날 수 있습니다. 이 때 <code>sum</code> 은 람다 내부에서 변경되고 있기 때문에 유사 파이널이 아닙니다. 하지만 그렇다고 이 변수를 <code>final</code> 로 변경한다면 람다식 내부에서 변경(합)을 못하게 될 겁니다. 그렇다면 어떻게 해야 할까요?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">forEach(people, x -&gt; sum += x); <span class="comment">// Cannot assign a value to final variable &#x27;sum&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>이 문제를 해결할 방법은 바로 일반 자료형 타입 대신 객체나 배열을 사용하는 겁니다. 이는 참조변수이기 때문에 <code>final</code> 로 선언 시 참조는 변경되지 않고 해당 값은 변경할 수 있게 됩니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span>[] sum = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">forEach(people, x -&gt; sum[<span class="number">0</span>] += x); <span class="comment">// ok</span></span><br></pre></td></tr></table></figure>
+<p>하지만 배열 <code>sum</code> 에 대해서 다른 곳에서 변경할 수 있는 side effect 가 존재합니다. 유사 파이널 설명을 위해서 코드를 살펴봤지만, 이런 작업은 stream API 를 이용해서 하는 것이 더 효과적입니다. 다음과 같은 코드가 될 겁니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> people.stream()</span><br><span class="line">  .map(person -&gt; person.getAge())</span><br><span class="line">  .reduce(<span class="number">0</span>, Integer::sum);</span><br></pre></td></tr></table></figure>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378&amp;OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&amp;a=A100532541&amp;l=9999&amp;l_cd1=0&amp;u_id=jjtlu78nwo016iuh02yqe&amp;l_cd2=0&amp;tu=http%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf">도서 &lt;자바 람다 배우기&gt;</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/19/java-lambda-basics/" title="Java Lambda (1) 기본">Java Lambda (1) 기본</a>
+</li>
+<li>
+<a href="/2018/07/20/java-lambda-type-inference-functional-interface/" title="Java Lambda (2) 타입 추론과 함수형 인터페이스">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-and-closure/" title="Java Lambda (7) 람다와 클로저">Java Lambda (7) 람다와 클로저</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/07/highest-salaries-worldwide-programming-languages-2018/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            연봉 높은 프로그래밍 언어 순위 2018
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/08/02/java-jdk-functional-interfaces-api/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/08/02/java-lambda-variable-scope/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

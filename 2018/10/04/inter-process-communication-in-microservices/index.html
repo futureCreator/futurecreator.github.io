@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    마이크로서비스 Microservices (3) 프로세스 간 통신 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/10/04/inter-process-communication-in-microservices/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/MSA/">MSA</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-inter-process-communication-in-microservices" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        마이크로서비스 Microservices (3) 프로세스 간 통신
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/10/04/inter-process-communication-in-microservices/" class="article-date">
+    <time datetime="2018-10-04T14:55:09.000Z" itemprop="datePublished">2018/10/04</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              12 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="프로세스-간-통신">프로세스 간 통신</h2>
+<p>모놀리식(<em>monolithic</em>) 애플리케이션에서는 단순하게 다른 메소드나 함수를 호출하면 됩니다. 하지만 마이크로서비스(<em>Microservices</em>)에서는 서비스 단위로 나뉘어져 있는 분산 시스템이기 때문에 서비스 간 통신이 필요합니다. 이러한 통신을 프로세스 간 통신(<em>inter-process communication</em>)이라고 합니다. 다음 그림에서 왼쪽이 모놀리스, 오른쪽이 마이크로서비스입니다.</p>
+<p><img src="https://cdn-1.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-monolith-vs-microservices-1024x518.png" alt="https://www.nginx.com/blog/building-microservices-inter-process-communication/"></p>
+<h2 id="통신-방식">통신 방식</h2>
+<p>통신 방식은 먼저 호출하는 쪽과 호출당하는 쪽의 수로 구분해볼 수 있습니다. 하나의 요청이 하나의 서비스를 실행하면 일대일(<em>One-to-One</em>), 하나의 요청이 여러 서비스를 실행하면 일대다(<em>One-to-Many</em>)라고 볼 수 있습니다.</p>
+<p>그리고 동기(<em>Synchronous</em>)와 비동기 방식(<em>Asynchronous</em>)으로 구분할 수 있습니다. 동기 방식은 요청을 보내고 응답이 올 때까지 기다리는 방식으로 이후 동작은 멈춘 상태(<em>block</em>)가 됩니다. 그리고 응답을 받은 후에 처리합니다. 반대로 비동기 방식은 요청을 보내고 응답이 올 때까지 기다리지 않고 다음을 실행합니다. 그리고 응답을 처리하는 코드를 같이 보내서 작업이 끝나면 실행하게 됩니다. 이러한 함수를 콜백 함수(<em>callback function</em>)라고 합니다.</p>
+<p>이 두 가지 구분 방식을 조합하면 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">일대일</th>
+<th style="text-align:center">일대다</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>동기</td>
+<td style="text-align:center">1) 요청/응답(<em>Request/response</em>)</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td>비동기</td>
+<td style="text-align:center">2) 알림(<em>Notification</em>)</td>
+<td style="text-align:center">4) 퍼블리시/구독<br>(<em>Publish/subscribe</em>)</td>
+</tr>
+<tr>
+<td></td>
+<td style="text-align:center">3) 요청/비동기 응답<br>(Request/async response)</td>
+<td style="text-align:center">5) 퍼블리시/비동기 구독<br>(<em>Publish/async responses</em>)</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>요청/응답 : 요청을 보내고 응답이 올 때까지 기다립니다.</li>
+<li>알림 : 요청을 보내기만 합니다. 모바일의 푸시 알림을 생각하시면 됩니다.</li>
+<li>요청/비동기 응답 : 요청을 보내면 비동기로 응답이 옵니다.</li>
+<li>퍼블리시/구독 : 등록된 서비스들에 요청을 보냅니다. 요청을 받은 서비스들은 각자 로직을 처리합니다. 잡지를 구독하는 것과 같다고해서 퍼블리시/구독 방식이라고 합니다.</li>
+<li>퍼블리시/비동기 응답 : 위와 같지만 비동기 형태로 응답을 보낸다는 점이 다릅니다.</li>
+</ol>
+<p>여러가지 방식을 살펴봤는데요, 애플리케이션에 따라서 하나의 방식만으로도 충분하기도 하고, 여러 방식을 함께 사용하기도 합니다. 이전 포스트에서 살펴본 택시 호출 서비스를 예로 들어보겠습니다.</p>
+<p><img src="https://cdn-1.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-taxi-service-1024x609.png" alt="https://www.nginx.com/blog/building-microservices-inter-process-communication/"></p>
+<ol>
+<li>승객이 스마트폰으로 픽업을 요청합니다. 이 요청은 트립 관리 서비스를 호출합니다(알림)</li>
+<li>트립 관리 서비스는 승객 관리 서비스에서 승객 정보를 확인합니다(요청/응답)</li>
+<li>트립 관리 서비스는 해당 트립을 디스패와처와 가까운 택시기사에게 보냅니다(요청/응답)</li>
+</ol>
+<h2 id="API-정의와-수정">API 정의와 수정</h2>
+<p>API 는 서비스와 클라이언트 간 일종의 계약입니다. 그래서 API 를 제대로 정의하는 것이 중요합니다. 그래서 API 먼저 설계하고 클라이언트 개발자들과 리뷰를 통해서 확정 짓고 개발을 진행하는 것이 좋습니다. 나중에 API를 수정하는 것보다 합리적인 방법이죠.</p>
+<p>처음에 API 를 잘 정의하는 것만큼 API 를 수정하는 것도 중요한 일입니다. 특히 마이크로서비스 기반의 애플리케이션에서는 해당 API 를 사용하는 서비스들이 많기 때문에 수정의 영향이 상당히 큽니다. 요청, 응답에 속성이 추가되는 정도의 마이너한 수정은 API 내에서 호환성을 지원할 수 있습니다.</p>
+<p>하지만 메이저한 수정이 필요할 때도 있습니다. 이럴 땐 API를 사용하는 클라이언트가 당장 업그레이드할 수 없으니 수정할 시간을 줘야합니다. 그래서 옛날 버전과 새로운 버전을 한동안 같이 지원해야 하고 HTTP 같은 경우에는 URL 에 버전을 포함시키는 것이 일반적입니다.</p>
+<h2 id="IPC-기술">IPC 기술</h2>
+<p>IPC 기술들은 다음과 같이 구분할 수 있습니다.</p>
+<ul>
+<li>동기 요청/응답 기반 : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://thrift.apache.org/">Apache Thrift</a></li>
+<li>비동기 메시지 기반 : <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol">AMQP</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://stomp.github.io/">STOMP</a></li>
+</ul>
+<p>여기서 사용하는 메시지 포맷도 여러가지가 있죠.</p>
+<ul>
+<li>텍스트 기반(사람이 쉽게 읽을 수 있음): JSON, XML</li>
+<li>바이너리 포맷(성능 상 좋음): <a target="_blank" rel="external nofollow noopener noreferrer" href="https://avro.apache.org/">Apache Avro</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/protocol-buffers/docs/overview">Protocol Buffers</a></li>
+</ul>
+<p>자세한 내용을 살펴보겠습니다.</p>
+<h3 id="동기-요청-응답">동기 요청/응답</h3>
+<p>클라이언트에서 서비스로 요청을 보내면 해당 서비스가 요청을 처리해서 결과로 응답을 보내는 방식입니다. 요청을 보낸 클라이언트의 쓰레드는 응답이 올 때까지 기다리며 블락(<em>block</em>)됩니다. 물론 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html">Future</a> 나 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://reactivex.io/">ReactiveX</a> 를 이용해서 이벤트 기반으로 코드를 짜면 비동기로 처리할 수 있습니다.</p>
+<h4 id="REST">REST</h4>
+<p>상당히 많은 API 가 HTTP 기반의 RESTful API 로 작성되어 있습니다. REST 는 웹 상에 리소스를 지정하는 방식으로 HTTP 동사와 URL 을 조합해서 사용합니다. URL 로는 특정 리소스(<em>Customer</em>나 <em>Product</em> 같은 비즈니스 개체)를 지정하고 HTTP 동사로 동작을 지정합니다.</p>
+<ul>
+<li>GET : 조회(<em>Read</em>)</li>
+<li>POST : 생성(<em>Create</em>)</li>
+<li>PUT: 업데이트(<em>Update</em>)</li>
+<li>DELETE: 삭제(<em>Delete</em>)</li>
+</ul>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cdn.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-rest.png?_ga=2.54457194.335686935.1538621026-931831265.1536563442"><img src="https://cdn.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-rest-1024x397.png" alt="https://www.nginx.com/blog/building-microservices-inter-process-communication/"></a></p>
+<p>택시 호출 애플리케이션 예제로 돌아가볼까요? 승객이 택시를 부를 때 REST API 를 호출합니다. POST 방식으로 URL은 /trips 인데요 트립 관리 서비스에 새로운 트립 정보가 생성된다는걸 알 수 있습니다. 트립 관리 서비스에서는 승객에 대한 정보를 조회하기 위해서 승객 관리 서비스가 제공하는 API에 GET 방식으로 /passensgers/passengerId 의 요청을 보냅니다. 그럼 해당 승객 ID 로 승객 정보를 조회할 수 있습니다. 응답은 처리 결과를 나타내는 응답 코드를 가지고 있는데 각각 200, 201 코드를 반환하게 됩니다.</p>
+<p>REST 는 직관적이고 기존 HTTP 웹 인프라를 그대로 사용할 수 있어 사용하기 쉽습니다. 하지만 API 가 HTTP 기반이라고 해서 모두 RESTful 한 것은 아닙니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Richardson Maturity Model | MARTINFOWLER.COM](https://martinfowler.com/articles/richardsonMaturityModel.html)">[1]</span></a></sup> 명확한 표준이 없다보니 잘못 설계된 API 도 많고 무엇보다 복잡한 비즈니스 로직을 표현하기가 어렵습니다. 위에서 사용한 HTTP 동사들은 기본적인 CRUD 기능을 나타내고 있죠. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://raml.org/">RAML</a> 이나 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://swagger.io/">Swagger</a> 같은 API 설계 도구를 사용해 쉽고 제대로 된 Restful API를 설계할 수 있습니다.</p>
+<h4 id="Apache-Thrift">Apache Thrift</h4>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://thrift.apache.org/">Apache Trhift</a> 는 REST의 대안 중 하나입니다. Thrift 를 이용해 API를 정의하면 C++, Java, Python, PHP, Ruby, Node.js 등 여러 언어의 코드를 생성해줍니다. REST의 대안 답게 요청/응답 뿐만 아니라 단방향 전송도 지원하고 JSON, 바이너리 등 다양한 메시지 포맷을 지원합니다.</p>
+<h3 id="비동기-메시지-기반-통신">비동기 메시지 기반 통신</h3>
+<p>이번엔 비동기 방식을 살펴보겠습니다. 비동기 방식은 메시지를 보내놓고 응답을 기다리지 않습니다. 이 메시지는 헤더(<em>header</em>)와 바디(<em>body</em>)로 구성되어 있고 채널(<em>channel</em>)을 통해 전송됩니다. 메시지는 한 곳에만 보낼 수도 있고(일대일), 옵저버 패턴같은 퍼블리시-구독 모델을 따라 여러 곳에 메시지를 보낼 수도 있습니다(일대다). 그 메시지를 받겠다고 구독해놓은 서비스에게 모두 메시지가 전송되는 거죠.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cdn.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-pub-sub-channels.png?_ga=2.57596008.335686935.1538621026-931831265.1536563442"><img src="https://cdn.wp.nginx.com/wp-content/uploads/2015/07/Richardson-microservices-part3-pub-sub-channels-1024x639.png" alt="https://www.nginx.com/blog/building-microservices-inter-process-communication/"></a></p>
+<p>택시 호출 예제로 돌아가봅시다. 동기 방식과는 완전히 다른 모습이죠. 트립이 생성되었다는 메시지를 NEW TRIPS 채널에 전송하면 해당 채널을 구독하고 있는 디스패처가 받아 택시 기사를 배정합니다. 그리고 나서 배정 결과를 DISPATCHING 채널에 전송하면 해당 채널을 구독하고 있는 트립, 승객, 택시기사 관리 서비스에서 한번에 메시지를 받게 됩니다.</p>
+<p>이런 메시징 방식은 클라이언트와 서비스 사이의 의존도를 줄여줍니다. 동기 방식은 클라이언트와 서비스가 서로를 알아야 하고 직접 통신하는 구조이지만 메시징 방식은 그 사이에 메시징 시스템이 들어가서 간접적으로 통신하기 때문이죠. 일대일 뿐만 아니라 일대다 통신을 지원하는 것도 장점입니다. 그리고 메시징 시스템은 전송되는 메시지가 많을 때 버퍼를 활용해 속도를 조절할 수도 있습니다. 물론 메시징 시스템이 추가로 들어가는만큼 운영하고 관리해야 할 것이 늘어나게 됩니다.</p>
+<p>메시지를 전송하는 표준 프로토콜은 AMQP 와 STOMP가 있습니다. 그리고 오픈소스 메시징 시스템에는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.rabbitmq.com/">RabbitMQ</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="http://kafka.apache.org/">Apache Kafka</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="http://activemq.apache.org/">Apache ActiveMQ</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/bitly/nsq">NSQ</a> 등이 있습니다.</p>
+<h3 id="메시지-포맷">메시지 포맷</h3>
+<p>통신 방식을 골랐다면 메시지를 어떤 포맷으로 보낼지 골라야 합니다.</p>
+<p>먼저 사람이 읽기 쉽고 이해할 수 있는 XML 과 JSON 이 있습니다. XML 은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.w3.org/XML/Schema">XML 스키마</a>로 구조를 정의할 수가 있어서 데이터를 쉽게 검증할 수 있지만 메시지 사이즈가 너무 커집니다. JSON 은 XML 보다 가볍지만 데이터를 검증하기가 쉽지 않았습니다. 그래서 JSON 에서도 XML 처럼 데이터를 검증할 수 있도록 만든 것이 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://json-schema.org/">JSON 스키마</a> 입니다.</p>
+<p>이런 텍스트 기반 메시지는 텍스트를 파싱하는데 오버헤드가 생깁니다. 따라서 성능을 위해 바이너리 값으로 전송하는 방법도 있습니다. 많이 쓰이는 것으로는 binary Thrift 나 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.google.com/protocol-buffers/docs/overview">Protocol Buffers</a>, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://avro.apache.org/">Apache Avro</a>. 등이 있습니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nginx.com/blog/building-microservices-inter-process-communication/">Building Microservices: Inter-Process Communication in a Microservices Architecture | NGINX</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/09/14/what-is-microservices-architecture/" title="마이크로서비스 Microservices (1) 아키텍처 소개">마이크로서비스 Microservices (1) 아키텍처 소개</a>
+</li>
+<li>
+<a href="/2018/09/14/microservices-with-api-gateway/" title="마이크로서비스 Microservices (2) API 게이트웨이">마이크로서비스 Microservices (2) API 게이트웨이</a>
+</li>
+<li>
+<a href="/2018/10/04/inter-process-communication-in-microservices/" title="마이크로서비스 Microservices (3) 프로세스 간 통신">마이크로서비스 Microservices (3) 프로세스 간 통신</a>
+</li>
+<li>
+<a href="/2018/10/18/service-discovery-in-microservices/" title="마이크로서비스 Microservices (4) 서비스 디스커버리">마이크로서비스 Microservices (4) 서비스 디스커버리</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-and-event-driven-data-management/" title="마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리">마이크로서비스 Microservices (5) 이벤트 주도 데이터 관리</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-deployment-strategy/" title="마이크로서비스 Microservices (6) 배포 전략">마이크로서비스 Microservices (6) 배포 전략</a>
+</li>
+<li>
+<a href="/2018/10/19/microservices-refactoring-for-monolith/" title="마이크로서비스 Microservices (7) 모놀리스 리팩토링">마이크로서비스 Microservices (7) 모놀리스 리팩토링</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://martinfowler.com/articles/richardsonMaturityModel.html">Richardson Maturity Model | MARTINFOWLER.COM</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/10/05/why-functional-programming/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/09/29/java-11-released/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java 11 릴리즈!</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/10/04/inter-process-communication-in-microservices/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

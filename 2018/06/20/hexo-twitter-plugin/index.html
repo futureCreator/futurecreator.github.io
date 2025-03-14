@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Hexo 트위터 연동 플러그인 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/06/20/hexo-twitter-plugin/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-twitter-plugin" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 트위터 연동 플러그인
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/20/hexo-twitter-plugin/" class="article-date">
+    <time datetime="2018-06-20T13:12:04.000Z" itemprop="datePublished">2018/06/20</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              12 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>저는 SNS를 많이 하지 않습니다. 사진을 잘 찍지 않으니 인스타도 안하고, 할 이야기가 있으면 페북 대신 <a href="http://futurecreator.github.io/">블로그</a>나 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://medium.com/@fcreator">미디엄</a>을 이용합니다. 그나마 하는 것이 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://twitter.com/fcreator_twt">트위터</a>입니다. 가끔은 뉴스보다 더 빠르게 소식이 올라오기도 하고, 짧고 재미있는 읽을 거리가 많아서 종종 들어갑니다.</p>
+<p>트위터는 정적인 블로그와 달리 콘텐츠의 전파 및 소비의 속도가 굉장히 빠릅니다. 그래서 블로그를 홍보할 때는 트위터가 굉장히 유용한데요, 이번 포스트에서는 단순한 포스트 공유 버튼을 넘어서 트위터와 연동해서 사용할 수 있는 Hexo 플러그인 두 가지를 살펴보겠습니다.</p>
+<h2 id="트윗-인용하기">트윗 인용하기</h2>
+<p>블로그를 하다보면 트윗을 인용해서 사용하고 싶을 때가 있습니다. 그럴 때 딱히 방법이 없으면 귀찮게 캡쳐해서 첨부해야겠죠. 대신 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/tea3/hexo-tag-twitter">hexo-tag-twitter</a> 플러그인을 이용해서 간단하게 첨부해보도록 하겠습니다.</p>
+<h3 id="설치하기">설치하기</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i -S hexo-tag-twitter</span></span><br></pre></td></tr></table></figure>
+<h3 id="사용하기">사용하기</h3>
+<div class="twitter-wrapper"><blockquote class="twitter-tweet"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://twitter.com/hdhXD/status/1024286456473247745"></a></blockquote></div><script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>가장 사용하기 쉬운 방법입니다. 그냥 트윗 url 을 복사해서 넣으면 됩니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 첫번째 방법: 가장 간단한 방법</span></span><br><span class="line"><span class="comment"># &#123;% twitter tweet-url %&#125;</span></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">twitter</span> <span class="string">https://twitter.com/hdhXD/status/1024286456473247745</span> <span class="string">%</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>해당 url 을 살펴보시면 사용자 아이디와 트윗 아이디 두 가지로 이루어져있습니다. 이걸 이용해서 좀 더 깔끔하게 작성할 수 있습니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 두번째 방법: 깔끔해서 보기 좋은 방법</span></span><br><span class="line"><span class="comment"># &#123;% twitter tweet-id user-id %&#125;</span></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">twitter</span> <span class="number">1024286456473247745</span> <span class="string">hdhXD</span> <span class="string">%</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>만약 저 트윗이 본인의 트윗이거나, 지속적으로 인용하는 사용자라면 아예 설정에서 기본값으로 고정해놓을 수도 있습니다.</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">tagTwitter:</span></span><br><span class="line">  <span class="attr">id:</span> <span class="string">hdhXD</span></span><br></pre></td></tr></table></figure>
+<p>그렇다면 다음과 같이 트윗 아이디만 가지고도 사용 가능합니다. 당연하게도 트윗 아이디를 지정해놓은 후에도 첫번째, 두번째 방법으로 다른 유저의 트윗도 첨부 가능합니다. 만약 로컬 서버에서 테스트할 때 적용이 안된다면 서버를 올렸다 내려보시면 됩니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 세번째 방법: user-id 기본값을 설정해놓은 방법</span></span><br><span class="line"><span class="comment"># &#123;% twitter tweet-id %&#125;</span></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">twitter</span> <span class="number">1024286456473247745</span> <span class="string">%</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>하지만 그냥 url 그대로 붙여넣는 첫번째 방법이 제일 쉽고 간단한 방법이네요.</p>
+<h2 id="인용구를-쉽게-트윗하기">인용구를 쉽게 트윗하기</h2>
+<p>Hexo의 대부분 테마에는 트위터에 쉽게 공유할 수 있는 share 버튼이 달려있습니다. 그런데 포스트 url이 아닌 포스트 내에 있는 명언이나 인용구를 트위터에 공유하고 싶다면 어떨까요? Medium이라면 바로 원하는 부분에 블록을 씌우고 트윗 버튼을 눌렀겠지만, 아쉽게도 Hexo에는 그런 기능이 없네요. 그렇다면 손수 복사해서 트윗을 써야할 겁니다.</p>
+<p>명언이나 인용구를 트윗하기 쉽게 만들어주는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/iamchathu/hexo-tag-tweetable-quote">hexo-tag-tweetable-quote</a> 플러그인이 있습니다. 물론 독자가 원하는 부분을 자유자재로 트윗할 수 있는 것은 아니지만, 보통 마크다운에서 <code>&gt;</code> 로 처리하는 인용구를 트윗하기 쉽게 만들어줄 수 있습니다.</p>
+<h3 id="설치-및-설정하기">설치 및 설정하기</h3>
+<p>다른 여타 플러그인과 마찬가지로 <code>npm</code> 을 이용해서 설치하고 <code>_config.yml</code> 파일에 설정 내용을 넣어줍니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i -S hexo-tag-tweetable-quote</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">tweetableQuote:</span></span><br><span class="line">  <span class="attr">quote_font_color :</span> <span class="comment">#258fb8 # 글자 색</span></span><br><span class="line">  <span class="attr">quote_font_size  :</span> <span class="number">1.</span><span class="string">2em</span> <span class="comment"># 글자 크기</span></span><br><span class="line">  <span class="attr">link_font_color  :</span> <span class="comment">#6e7b8d # 링크 색</span></span><br><span class="line">  <span class="attr">link_font_size   :</span> <span class="number">0.</span><span class="string">9em</span> <span class="comment"># 링크 크기</span></span><br><span class="line">  <span class="attr">via_twitter_account :</span> <span class="string">fcreator_twt</span> <span class="comment"># 트윗 계정</span></span><br><span class="line">  <span class="attr">related_twitter_accounts :</span> <span class="string">hdhXD,twitter</span> <span class="comment"># 연관된 트윗 계정으로 트윗 다음에 나옴</span></span><br></pre></td></tr></table></figure>
+<h3 id="사용법">사용법</h3>
+<div style="padding: 15px 30px; margin: 15px 0; border: 1px solid #ddd; border-radius: 4px;">
+
+<p style="margin: 0; paddig:0; margin-bottom: 10px; word-wrap: break-word;">
+
+
+<a style="color: ; font-size: 1.2em; text-decoration: none;" href="https://twitter.com/intent/tweet?text=%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EC%8B%9C%EA%B0%84%EC%9D%80%20%EA%B2%B0%EC%BD%94%20%EB%8B%A4%EC%8B%9C%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8B%A4.%20-%20%EB%B2%A4%EC%9E%90%EB%AF%BC%20%ED%94%84%EB%9E%AD%ED%81%B4%EB%A6%B0&amp;via=AlpacaEatsCake&amp;related=AlpacaEatsCake%2Ctwitter&amp;hashtags=quote%2Cbook&amp;url=https%3A%2F%2Ffuturecreator.github.io%2F2018%2F06%2F20%2Fhexo-twitter-plugin%2F" target="_blank" rel="external nofollow noopener noreferrer">“잃어버린 시간은 결코 다시 찾을 수 없다.” - by 벤자민 프랭클린</a>
+
+
+</p>
+<p style="margin: 8px; color: ; font-size: 0.9em; text-align:right; text-transform: uppercase;">
+<a style="padding-right: 25px; color: #999; font-weight: bold; background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABgklEQVR42o1TTUvDQBDdo/pjRPwd3tJUD6KCooLgbxDPHkRUKiKePBi3ftWq4KHUgsUeevFQtaJSWy/mizS2TVszZkKTZhOb+mAOO9l5szPvhRAfonFllDuSdzgqFTkqNjF4QXrmqRzjBWWE9MLYeWUoQuU96yKEBZJHDkuDgWKrU6ZfsRMRQUwzJP06LyRVmEuo/nzMndlJbuR0mDpTmIunT3VAmCZApmTAbv4bos533AnO5FzOlg0oa21YSWv2eTahgAksDh5qnn2I2wS37STW73Vodyo+q23IVZrgx+RJ94UclR+JLVMncfnSgDCItR9WESoaDMGMNX/hq9WTIFlsBAk6JnGTqXfjz2K9acL8hU8JQS4Q22Ge5HhchptXdpR6y4TVWy3oByptEpQCDyjNWrZqq+DAsDZ692HA8rXay5XDthe8UiLRomWcpSsVJo7DHCludZ1o2RLt+V8r81RKTe+/DTD/A5J4XxLWOVDsBe4EHYYmQZkwcNu4MHdmD34BxGOuTZWj1nMAAAAASUVORK5CYII=) no-repeat right top" href="https://twitter.com/intent/tweet?text=%EC%9E%83%EC%96%B4%EB%B2%84%EB%A6%B0%20%EC%8B%9C%EA%B0%84%EC%9D%80%20%EA%B2%B0%EC%BD%94%20%EB%8B%A4%EC%8B%9C%20%EC%B0%BE%EC%9D%84%20%EC%88%98%20%EC%97%86%EB%8B%A4.%20-%20%EB%B2%A4%EC%9E%90%EB%AF%BC%20%ED%94%84%EB%9E%AD%ED%81%B4%EB%A6%B0&amp;via=AlpacaEatsCake&amp;related=AlpacaEatsCake%2Ctwitter&amp;hashtags=quote%2Cbook&amp;url=https%3A%2F%2Ffuturecreator.github.io%2F2018%2F06%2F20%2Fhexo-twitter-plugin%2F" target="_blank" c rel="external nofollow noopener noreferrer">Click To Tweet</a>
+</p>
+</div>
+
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &#123;% tweetableQuote &#x27;명언/인용구&#x27; &#x27;작가/출처&#x27; [&#x27;해시태그&#x27;] %&#125;</span></span><br><span class="line">&#123;<span class="string">%</span> <span class="string">tweetableQuote</span> <span class="string">&#x27;잃어버린 시간은 결코 다시 찾을 수 없다.&#x27;</span> <span class="string">&#x27;벤자민 프랭클린&#x27;</span> <span class="string">&#x27;quote,book&#x27;</span> <span class="string">%</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>사용법도 간단합니다. 여기서 해시태그는 옵션으로 콤마(,)를 이용해서 여러 개 넣어줄 수 있습니다. 간단하게 인용구를 트윗할 수 있도록 만들었습니다. 저는 기본값에서 설정을 조금 바꿔서 글자 크기를 줄여봤습니다.</p>
+<p>아쉬운 점이 있다면 글자 색과 링크 색은 바꿔도 적용되지가 않네요. 이 부분은 직접 css 를 건드려야 할 것 같습니다. 다양한 커스터마이징 기능이 없는 것도 조금 아쉽습니다.</p>
+<p>이번 포스팅에서는 트위터와 연동해서 사용할 수 있는 플러그인을 알아봤습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/tea3/hexo-tag-twitter">hexo-tag-twitter</a>는 블로거가 트윗을 쉽게 인용할 수 있는 플러그인이었고, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/iamchathu/hexo-tag-tweetable-quote">hexo-tag-tweetable-quote</a>는 독자들이 명언이나 인용구를 트윗하기 쉽게 만들어주는 플러그인이었습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2018/06/18/hexo-symbols-count-reading-time-plugin/" title="Hexo 글자 수와 리딩 타임 추가하기">Hexo 글자 수와 리딩 타임 추가하기</a>
+</li>
+<li>
+<a href="/2018/06/14/hexo-markdown-plugins/" title="Hexo 마크다운 플러그인 변경하기">Hexo 마크다운 플러그인 변경하기</a>
+</li>
+<li>
+<a href="/2018/06/12/hexo-change-font-on-hueman-theme/" title="Hexo 폰트 변경하기 (Hueman 테마)">Hexo 폰트 변경하기 (Hueman 테마)</a>
+</li>
+<li>
+<a href="/2018/06/11/generate-an-emoji-favicon/" title="이모지로 파비콘 Favicon 만들기">이모지로 파비콘 Favicon 만들기</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+<li>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/30/easy-diagram-plantuml-hexo-plugin/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            쉽고 빠른 UML 그리기 (PlantUML)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/18/hexo-symbols-count-reading-time-plugin/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo 글자 수와 리딩 타임 추가하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/20/hexo-twitter-plugin/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

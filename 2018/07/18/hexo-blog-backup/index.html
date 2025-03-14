@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Hexo 배포 원리와 백업하기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/18/hexo-blog-backup/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-blog-backup" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 배포 원리와 백업하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/18/hexo-blog-backup/" class="article-date">
+    <time datetime="2018-07-18T13:33:11.000Z" itemprop="datePublished">2018/07/18</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              13 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hexo 블로그는 잘 쓰고 계신가요? 예전에 한 분께서 이런 질문을 올려주셨습니다.</p>
+<blockquote>
+<p>컴퓨터를 포맷했는데 hexo 블로그를 따로 백업해놓지 않았습니다. GitHub 에 올려놨으니 다시 받으면 살릴 수 있을까요?</p>
+</blockquote>
+<p>저 또한 작성해주신 분과 마찬가지로 따로 백업해놓지 않았고, 막연하게 GitHub 리파지토리에서 다시 받으면 될 거라고 생각했습니다. 그런데 나중에야 알게 되었습니다. 리파지토리에 올라가는 건 public 폴더라는 것을 말이죠.</p>
+<h2 id="Hexo-Deployment">Hexo Deployment</h2>
+<p>제가 2016년 처음 Hexo 블로그를 시작하면서 작성한 <a href="https://futurecreator.github.io/2016/06/14/get-started-with-hexo/">포스트</a>를 보면 GitHub에 새로운 리파지토리를 만들고, <code>hexo generate</code>를 이용해서 빌드를 한 후에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://pages.github.com/">Github Pages</a> 를 이용해서 호스팅하는 과정이 나옵니다. <code>_config.yml</code> 항목에 git repository 주소를 지정하면서 이 소스가 올라가는 거라고 생각했지만 그건 착각이었습니다.</p>
+<p>과정을 한 번 살펴보겠습니다. <code>hexo generate</code> 라는 명령어로 빌드를 하면, Hexo 의 각종 템플릿과 우리가 작성한 <code>.md</code> 파일을 가지고 웹 사이트(<em>html, css, javascript</em> 등)를 만들어줍니다. 이런 프레임워크를 정적 사이트 생성기(<em>Static Site Generator</em>)라고 하는데 Hexo 외에도 많은 서비스들이 있습니다. 그리고 이렇게 나온 결과물은 <code>public</code> 폴더에 떨어지고, <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a> 플러그인을 이용해서 리파지토리에 public 폴더의 내용을 배포합니다. 그러면 github pages 를 통해 <code>github.io</code> 도메인으로 웹 사이트를 볼 수 있게 됩니다.</p>
+<p>문제는 내가 작성한 마크다운 파일, 수정한 템플릿과 설정 파일 그리고 테마는 따로 저장되는 곳이 없다는 겁니다. 이번 포스팅에서는 현재 사용하고 있는 블로그를 백업하는 방법에 대해 알아보겠습니다.</p>
+<h2 id="Repository-선택하기">Repository 선택하기</h2>
+<p><strong>여기서 말하는 리파지토리(저장소)는 github pages 를 이용해 배포하는 리파지토리가 아닌 코드 자체를 백업하기 위한 저장소입니다.</strong></p>
+<p>가장 먼저 사용할 수 있는 것은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/">Github</a> 입니다. 대부분 github 를 이용해서 배포하고 계실거구요. 배포 폴더야 퍼블릭이라도 상관없습니다만, 각종 템플릿과 마크다운 파일은 공개하기 꺼려지실 수도 있습니다. GitHub 에서는 프라이빗 리파지토리는 유료입니다. 무료로 프라이빗 리파지토리를 사용하고 싶다면 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://about.gitlab.com/">Gitlab</a> 이 있습니다. 오픈 소스라면 많은 개발자들이 있는 GitHub 가 유리하겠지만, 오픈 소스가 아닌 이상 gitlab이 좋은 선택이 될 수 있습니다.</p>
+<ul>
+<li>Github : 공개 저장소 무료, 비공개 저장소 유료 / 사용자 많고 오픈소스 프로젝트에 유리</li>
+<li>Gitlab : 공개 저장소 무료, 비공개 저장소 유료 / 비공개 프로젝트에 유리 / CI,CD 지원</li>
+</ul>
+<p>gitlab 또한 사용법은 github 와 다르지 않으니, 이 포스트에서 실습은 github 으로 진행되었습니다.</p>
+<p>수정: GitHub에서 프라이빗 리자피토리를 무료로 전환했습니다(2019/01/07)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.blog/2019-01-07-new-year-new-github/">[1]</span></a></sup> 이제 GitHub에서도 프라이빗 리파지토리를 얼마든지 사용 가능합니다.</p>
+<h2 id="새-저장소-생성하기">새 저장소 생성하기</h2>
+<p>새 저장소는 총 2개가 필요합니다. 왜냐하면 테마 또한 따로 백업해야 하기 때문입니다. 저는 테마 이름인 ‘<em>hueman</em>’ 과 블로그 자료를 저장할 ‘<em>blog</em>’ 라는 이름으로 만들었습니다.</p>
+<p><img src="github.png" alt="https://github.com/new"></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://README.md">README.md</a> 파일을 만들지 않고 다른 설정은 건드릴 필요 없이 완료합니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://futureCreator@github.com/futureCreator/blog.git">https://futureCreator@github.com/futureCreator/blog.git</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/futureCreator/hueman.git">https://github.com/futureCreator/hueman.git</a></li>
+</ul>
+<h2 id="테마-백업하기">테마 백업하기</h2>
+<p>이미 git 으로 관리되고 있는 테마 폴더부터 백업하겠습니다.</p>
+<p>보통 테마를 설치할 때 다음과 같은 명령어를 사용합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-hueman.git themes/hueman</span><br></pre></td></tr></table></figure>
+<p>이러한 명령어는 <code>themes</code> 내에 특정 테마 폴더로 저장소의 내용을 클론하는데, 문제는 이후에 이걸 백업하기가 애매합니다. 그래서 원격 저장소의 주소를 변경해준 후에 변경된 모든 사항을 올리도록 하겠습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 원격 저장소 확인</span></span><br><span class="line">$ git remote -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># 원격 저장소 변경 (자신의 저장소 URL로 변경)</span></span><br><span class="line">$ git remote set-url origin https://github.com/futureCreator/hueman</span><br><span class="line"></span><br><span class="line"><span class="comment"># 변경 사항 올리기</span></span><br><span class="line">$ git commit -a -m <span class="string">&#x27;theme backup&#x27;</span></span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-백업하기">Hexo 백업하기</h2>
+<p>이제 본격적으로 hexo 블로그를 백업해보겠습니다. hexo 폴더는 따로 git 으로 관리되고 있지 않기 때문에 초기화부터 시작합니다.</p>
+<h3 id="git-초기화하기">git 초기화하기</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># .gitignore 파일 만들기</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;/public&quot;</span> &gt;&gt; .gitignore</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;/node_modules&quot;</span> &gt;&gt; .gitignore</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;.deploy_git/&quot;</span> &gt;&gt; .gitignore</span><br><span class="line"></span><br><span class="line"><span class="comment"># macOS 사용자의 경우 추가로</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;.DS_Store&quot;</span> &gt;&gt; .gitignore</span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&quot;*/.DS_Store&quot;</span> &gt;&gt; .gitignore</span><br><span class="line"></span><br><span class="line"><span class="comment"># git 초기화</span></span><br><span class="line">$ git init</span><br><span class="line"></span><br><span class="line"><span class="comment"># 현재 내용을 모두 커밋</span></span><br><span class="line">$ git commit -a</span><br></pre></td></tr></table></figure>
+<h3 id="서브모듈-Submodule-추가하기">서브모듈 Submodule 추가하기</h3>
+<p>원격 저장소로 푸시하기 전에 테마 폴더에 대해 생각해 볼 필요가 있습니다. 이미 테마 폴더는 따로 git 으로 관리되고 있습니다. git 안에 git 이 있는 경우에 submodule 로 관리하는 것이 좋습니다. 특히 나중에 원격 서버에서 빌드가 필요한 경우에는 서브모듈 추가가 필수입니다.</p>
+<p>먼저 테마 폴더가 제대로 백업이 된 것을 확인하고 <code>themes</code> 내의 테마 폴더를 삭제합니다. 그리고 테마 폴더 내에서 <code>git submodule</code> 을 이용해서 서브모듈로 추가합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 미리 올려둔 테마 리파지토리를 테마 폴더에 서브모듈로 추가한다</span></span><br><span class="line">$ git submodule add https://github.com/futureCreator/hueman </span><br><span class="line">Cloning into <span class="string">&#x27;~/myBlog/themes/hueman&#x27;</span>...</span><br><span class="line">remote: Counting objects: 1068, <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (474/474), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 1068 (delta 575), reused 1068 (delta 575), pack-reused 0</span><br><span class="line">Receiving objects: 100% (1068/1068), 1.01 MiB | 1.07 MiB/s, <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (575/575), <span class="keyword">done</span>.</span><br><span class="line"></span><br><span class="line"><span class="comment"># 변경된 후의 상태 확인</span></span><br><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git reset HEAD &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line"></span><br><span class="line">	new file:   .gitmodules</span><br><span class="line">	new file:   themes/hueman</span><br><span class="line"></span><br><span class="line">$ git submodule status</span><br><span class="line"> df3336701acb28dc6e993fa622be50031d1e9a87 themes/hueman (heads/master)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 변경된 내용을 모두 커밋</span></span><br><span class="line">$ git commit -a</span><br></pre></td></tr></table></figure>
+<p>새로운 테마를 설치하실 때도 <code>git clone</code> 보다는 <code>git submodule</code> 을 이용해서 설치하시는 것이 좋습니다.</p>
+<h3 id="배포-Deployment-하기">배포 Deployment 하기</h3>
+<p>이제 코드를 원격 저장소로 배포하면 됩니다. github 계정을 물으면 입력하면 됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 이제 브랜치를 원격 리파지토리에 올린다.</span></span><br><span class="line">$ git remote add origin https://github.com/futureCreator/blog.git</span><br><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>사이트에서 코드가 잘 올라와 있는 것을 확인하면 이제 블로그 폴더가 날라가도 안심입니다. 😆</p>
+<h2 id="Hosting">Hosting</h2>
+<p>오늘 해본 작업은 단순한 백업이기도 하지만, 원격 저장소에 있는 소스를 가지고 다양한 방법으로 호스팅할 수 있게 된 것입니다. 기존 방식대로 Github Pages 에서 <code>github.io</code> 도메인을 사용하실 수도 있고, Git으로 이력관리 하면서 CI/CD 툴을 이용해 배포할 수도 있습니다. 커스텀 도메인을 사용하신다면 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.io">github.io</a> 보다 좋은 옵션이 많습니다. 다음 포스트부터는 다른 방법들을 차례대로 살펴보겠습니다.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
+</li>
+<li>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
+</li>
+<li>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
+</li>
+<li>
+<a href="/2018/07/13/hexo-https-github-pages/" title="Hexo HTTPS 적용하기(Github Pages)">Hexo HTTPS 적용하기(Github Pages)</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://github.blog/2019-01-07-new-year-new-github/<a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/18/aws-certified-developer-associate-sample-exam-questions/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            AWS 개발자 자격증 샘플 문항 (번역/해설)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/13/aws-well-architected-framework/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">AWS Well-Architected Framework 백서 (번역/요약)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/18/hexo-blog-backup/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

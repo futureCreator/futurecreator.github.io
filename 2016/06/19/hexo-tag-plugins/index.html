@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Hexo 태그 플러그인 (Tag plugins) 살펴보기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2016/06/19/hexo-tag-plugins/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-tag-plugins" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 태그 플러그인 (Tag plugins) 살펴보기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/19/hexo-tag-plugins/" class="article-date">
+    <time datetime="2016-06-19T13:12:43.000Z" itemprop="datePublished">2016/06/19</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              22 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hexo 는 마크다운 외에 포스트를 작성하기 위한 자체적인 문법을 지원합니다. 그것을 <strong>태그 플러그인</strong> 이라고 합니다. 처음에는 마크다운이면 충분하지 않을까 싶어서 사용하지 않았었는데 유용한 기능들이 꽤 있더군요. 익숙해지시면 편하게 사용할 수 있는 태그 플러그인을 살펴보겠습니다.</p>
+<h2 id="인용-구문-Block-Quote">인용 구문 (Block Quote)</h2>
+<p>일반 마크다운 인용과는 다르게 작성자, 제목 등 여러가지 정보를 추가할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote [author[, source]] [link] [source_link_title] %&#125;</span><br><span class="line">content</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="일반-인용-내용만">일반 인용 (내용만)</h3>
+<p>마크다운 문법의 <code>&gt;</code> 에 해당하는 형식입니다. 아무것도 쓰지 않을 때는 그냥 <code>&gt;</code> 를 쓰면 되겠습니다. 이 태그를 기반으로 작성자, 링크, 소스 타이틀 등 옵션을 추가할 수 있습니다.</p>
+<h4 id="Example">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote %&#125;</span><br><span class="line">마크다운 문법의 `&gt;` 에 해당하는 형식입니다. 아무것도 쓰지 않을 때는 그냥 `&gt;` 를 쓰면 되겠습니다. 이 태그를 기반으로 작성자, 링크, 소스 타이틀 등 옵션을 추가할 수 있습니다.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result">Result</h4>
+<blockquote><p>마크다운 문법의 <code>&gt;</code> 에 해당하는 형식입니다. 아무것도 쓰지 않을 때는 그냥 <code>&gt;</code> 를 쓰면 되겠습니다. 이 태그를 기반으로 작성자, 링크, 소스 타이틀 등 옵션을 추가할 수 있습니다.</p>
+</blockquote>
+<h3 id="책-인용-저자-출처-제목">책 인용 (저자 + 출처 제목)</h3>
+<p>저자와 인용한 출처 두 가지만 적은 예시입니다. 책을 인용하는 경우가 이에 해당하겠습니다. 저자와 출처 사이에 구분할 수 있게 콤마 (,)를 넣어줘야 합니다.</p>
+<h4 id="Example-v2">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote Amelie Nothomb, le voyage d&#x27;hiver %&#125;</span><br><span class="line">사랑에는 실패가 없다.</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v2">Result</h4>
+<blockquote><p>사랑에는 실패가 없다.</p>
+<footer><strong>Amelie Nothomb</strong><cite>le voyage d'hiver</cite></footer></blockquote>
+<h3 id="트위터-인용-저자-출처-링크">트위터 인용 (저자 + 출처 링크)</h3>
+<p>저자와 출처의 링크 두 가지를 넣은 경우입니다. 출처에 링크가 걸려서 표시됩니다. 트위터에서 인용한 예시입니다. 트위터 내용은 @npmdaily 가 올린 npm package 중 하나로 Hexo 의 Keycap 추가하는 플러그인입니다.</p>
+<h4 id="Example-v3">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote @npmdaily https://twitter.com/npmdaily/status/743858563299311616 %&#125;</span><br><span class="line">hexo-tag-kbd - Displays the keycaps in your hexo post/page. http://npmdaily.com/pkg/hexo-tag-kbd …  #npm #javascript #nodejs</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v3">Result</h4>
+<blockquote><p>hexo-tag-kbd - Displays the keycaps in your hexo post/page. <a target="_blank" rel="external nofollow noopener noreferrer" href="http://npmdaily.com/pkg/hexo-tag-kbd">http://npmdaily.com/pkg/hexo-tag-kbd</a> …  #npm #javascript #nodejs</p>
+<footer><strong>@npmdaily</strong><cite><a target="_blank" rel="external nofollow noopener noreferrer" href="https://twitter.com/npmdaily/status/743858563299311616">twitter.com/npmdaily/status/743858563299311616</a></cite></footer></blockquote>
+<h3 id="웹-페이지-인용-저자-출처-링크-출처-제목">웹 페이지 인용 (저자 + 출처 링크 + 출처 제목)</h3>
+<p>저자와 출처 링크, 출처 제목까지 명시한 경우에는 링크가 출처 제목으로 표시됩니다. 웹 페이지를 인용할 경우 이런식으로 되겠습니다.</p>
+<h4 id="Example-v4">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote Eric Han http://futurecreator.github.io/2016/06/14/get-started-with-hexo/ 워드프레스보다 쉬운 Hexo 블로그 시작하기%&#125;</span><br><span class="line">Hexo는 github pages를 이용한 블로그입니다. Github Pages 는 github 유저와 프로젝트의 정적인(static) 홈페이지를 자동으로 만들어주고 github.io 도메인으로 호스팅해주는 서비스입니다. 즉, 서버의 내용을 github 에 push만 하면 실시간 적용됩니다. 아주 간단하죠?</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v4">Result</h4>
+<blockquote><p>Hexo는 github pages를 이용한 블로그입니다. Github Pages 는 github 유저와 프로젝트의 정적인(static) 홈페이지를 자동으로 만들어주고 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://github.io">github.io</a> 도메인으로 호스팅해주는 서비스입니다. 즉, 서버의 내용을 github 에 push만 하면 실시간 적용됩니다. 아주 간단하죠?</p>
+<footer><strong>Eric Han</strong><cite><a href="http://futurecreator.github.io/2016/06/14/get-started-with-hexo/">워드프레스보다 쉬운 Hexo 블로그 시작하기</a></cite></footer></blockquote>
+<h2 id="코드-삽입">코드 삽입</h2>
+<p>아무래도 IT 블로그를 하다보면 소스코드를 많이 추가하게 됩니다. Hexo 에서는 여러가지 기능을 제공합니다. 소스의 제목, 언어, url, 링크 제목을 옵션으로 표시할 수 있습니다. 그리고 Hexo 는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://highlightjs.org/">highlight.js</a> 를 사용해서 소스코드를 표시하기 때문에 <code>highlight.js</code> 를 이용하면 다양한 커스터마이징도 가능합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock [title] [lang:language] [url] [link text] %&#125;</span><br><span class="line">code snippet</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="일반-코드">일반 코드</h3>
+<p>가장 기본적인 포맷이고 여기에 옵션이 추가됩니다.</p>
+<h4 id="Example-v5">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock %&#125;</span><br><span class="line">alert(&#x27;Hello World!&#x27;);</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v5">Result</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(&#x27;Hello World!&#x27;);</span><br></pre></td></tr></table></figure>
+<h3 id="언어-명시하기">언어 명시하기</h3>
+<p>언어를 명시하는 경우입니다. 예시는 Objective-C 입니다. highlight.js 에서 지원하는 언어만 가능합니다. 지원가능한 언어는 155가지나 된다고 하네요. 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://highlightjs.org/">highlightjs.org</a> 에서 확인하세요.</p>
+<h4 id="Example-v6">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:objc %&#125;</span><br><span class="line">[rectangle setX: 10 y: 10 width: 20 height: 20];</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v6">Result</h4>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</span><br></pre></td></tr></table></figure>
+<h3 id="캡션-추가하기">캡션 추가하기</h3>
+<p>예시처럼 파일명을 명시할 수 있겠네요.</p>
+<h4 id="Example-v7">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock Array.map %&#125;</span><br><span class="line">array.map(callback[, thisArg])</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v7">Result</h4>
+<figure class="highlight plaintext"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.map(callback[, thisArg])</span><br></pre></td></tr></table></figure>
+<h3 id="캡션과-URL-추가하기">캡션과 URL 추가하기</h3>
+<h4 id="Example-v8">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock _.compact http://underscorejs.org/#compact Underscore.js %&#125;</span><br><span class="line">_.compact([0, 1, false, 2, &#x27;&#x27;, 3]);</span><br><span class="line">=&gt; [1, 2, 3]</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v8">Result</h4>
+<figure class="highlight plaintext"><figcaption><span>_.compact</span><a target="_blank" rel="external nofollow noopener noreferrer" href="http://underscorejs.org/#compact">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_.compact([0, 1, false, 2, &#x27;&#x27;, 3]);</span><br><span class="line">=&gt; [1, 2, 3]</span><br></pre></td></tr></table></figure>
+<h3 id="마크다운-형식의-코드-블락">마크다운 형식의 코드 블락</h3>
+<p>마크다운 형식의 코드 블락 했을 때도 제목이나 링크 지정할 수 있었군요. 이렇게 쓰는게 제일 낫겠습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">``` [language] [title] [url] [link text] code snippet ```</span><br></pre></td></tr></table></figure>
+<h4 id="Example-v9">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```java test.java</span><br><span class="line">String s = &quot;abc&quot;;</span><br><span class="line">System.out.println(s);</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v9">Result</h4>
+<figure class="highlight java"><figcaption><span>test.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">System.out.println(s);</span><br></pre></td></tr></table></figure>
+<h3 id="jsFiddle">jsFiddle</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://jsfiddle.net/">jsFiddle</a> 은 온라인 상에서 HTML, CSS, javaScript 를 작성하고 테스트할 수 있는 서비스입니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% jsfiddle shorttag [tabs] [skin] [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>shorttag</strong>: jsFiddle 에서 코드를 저장하면 대시보드에서 확인할 수 있는 코드 이름입니다. 그걸 입력하시면 알아서 불러옵니다.</li>
+<li><strong>skin</strong>: theme 가 아니고 skin 입니다. 보시면 js, html, css, result 이렇게 네 가지 탭이 있는데 표시하고 싶은 것만 순서대로 나열하면 됩니다.</li>
+</ul>
+<h4 id="Example-v10">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% jsfiddle pgtkkLsc html,result %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v10">Result</h4>
+<iframe scrolling="no" width="100%" height="300" src="https://jsfiddle.net/pgtkkLsc/embedded/html,result/light" frameborder="0" loading="lazy" allowfullscreen></iframe>
+<h3 id="Gist">Gist</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gist.github.com/">Gist</a> 는 Github 에서 제공하는 서비스 중 하나로, 간단한 코드를 작성해서 공유할 수 있는 서비스입니다. 파일 이름, 코드, 코드 설명만 작성하면 바로 파일이 만들어지고 공유할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% gist gist_id [filename] %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>gist_id</strong>: Gist 에서 코드를 생성한 후에 공유를 누르면 나오는 url 의 아이디 부분을 복사해서 넣으면 됩니다.</li>
+</ul>
+<h4 id="Example-v11">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% gist 9a4aded78853db541ca2510d8d41e17f %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v11">Result</h4>
+<script src="//gist.github.com/9a4aded78853db541ca2510d8d41e17f.js"></script>
+<h3 id="iframe">iframe</h3>
+<p>아이프레임 (<em>iframe</em>) <code>&lt;iframe&gt;</code> 은 내부 프레임(inline frame) 으로 HTML 문서 내에서 다른 HTML 을 표시하는 태그입니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% iframe url [width] [height] %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="내장-코드-삽입">내장 코드 삽입</h3>
+<p><code>source/downloads/code</code> 폴더 상에 있는 코드를 포스트에 삽입할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% include_code [title] [lang:language] path/to/file %&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="유튜브-YouTube">유튜브 (YouTube)</h3>
+<p>유튜브 비디오를 비디오 아이디만 있으면 바로 삽입 가능합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube video_id %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>video_id</strong>: 유튜브에서 비디오 공유를 눌러서 나오는 url 의 뒷 부분이 해당 비디오의 고유한 아이디입니다.</li>
+</ul>
+<h4 id="Example-v12">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% youtube c7rCyll5AeY %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v12">Result</h4>
+<div class="video-container"><iframe src="https://www.youtube.com/embed/c7rCyll5AeY" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="Vimeo">Vimeo</h3>
+<p>비메오 (Vimeo) 도 유튜브와 동일하게 삽입 가능합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% vimeo video_id %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>video_id</strong>: 비메오에서 비디오 공유를 눌러서 나오는 url 의 뒷 부분이 해당 비디오의 고유한 아이디입니다.</li>
+</ul>
+<h4 id="Example-v13">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% vimeo 167976188 %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v13">Result</h4>
+<div class="video-container"><iframe src="https://player.vimeo.com/video/167976188" frameborder="0" loading="lazy" allowfullscreen></iframe></div>
+<h3 id="포스트-삽입">포스트 삽입</h3>
+<p>해당 블로그 내에 있는 포스트를 첨부할 수 있습니다. 굉장히 유용한 기능이네요! 따로 주소 복사해서 링크 만들지 않아도 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_path slug %&#125;</span><br><span class="line">&#123;% post_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>slug</strong>: slug 는 포스트의 제목을 말합니다. Hexo 에서는 파일 제목이 url 이 되므로 포스트 파일 만들 때 사용한 파일명을 입력하면 됩니다.</li>
+<li><strong>post_path</strong>: 포스트 제목을 입력하면 해당 포스트의 경로가 표시됩니다.</li>
+<li><strong>post_link</strong>: 포스트 제목을 입력하면 해당 포스트의 링크가 생성됩니다.</li>
+</ul>
+<h4 id="Example-v14">Example</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% post_link get-started-with-hexo %&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Result-v14">Result</h4>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
+<h3 id="자원-Asset-삽입">자원 (Asset) 삽입</h3>
+<p>자원을 삽입하는 방법입니다. 이건 자원 폴더 (Asset folder) 와 관련이 있습니다. 해당 내용은 다음 포스트에서 다루도록 하겠습니다.</p>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
+<p>나중에 필요할 때 찾아쓰시면 좋을 것 같네요. 다음 포스팅에서는 테마를 제작하고 커스터마이징할 때 필요한 변수와 Helper 를 알아보겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2016/06/14/get-started-with-hexo/" title="워드프레스보다 쉬운 Hexo 블로그 시작하기">워드프레스보다 쉬운 Hexo 블로그 시작하기</a>
+</li>
+<li>
+<a href="/2016/06/14/hexo-apply-hueman-theme/" title="Hexo 추천 테마, Hueman 적용하기">Hexo 추천 테마, Hueman 적용하기</a>
+</li>
+<li>
+<a href="/2016/06/21/hexo-basic-usage/" title="Hexo 기본 사용법">Hexo 기본 사용법</a>
+</li>
+<li>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a>
+</li>
+<li>
+<a href="/2016/06/21/add-github-card-to-hexo/" title="Hexo 네임카드 추가하기 (Github Card)">Hexo 네임카드 추가하기 (Github Card)</a>
+</li>
+<li>
+<a href="/2016/06/22/add-github-repository-timeline-badge-to-hexo/" title="Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/20/mysql-mariadb-isntall-settings-mac-windows/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Mac 과 Windows 에 MySQL (MariaDB) 설치하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/19/evernote-blog-postach-io/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Postach.io, 에버노트 (Evernote)로 만드는 쉬운 블로그</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/19/hexo-tag-plugins/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

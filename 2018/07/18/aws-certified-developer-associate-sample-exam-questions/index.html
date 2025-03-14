@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    AWS 개발자 자격증 샘플 문항 (번역/해설) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/18/aws-certified-developer-associate-sample-exam-questions/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Cloud/">Cloud</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-aws-certified-developer-associate-sample-exam-questions" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        AWS 개발자 자격증 샘플 문항 (번역/해설)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/18/aws-certified-developer-associate-sample-exam-questions/" class="article-date">
+    <time datetime="2018-07-18T13:45:54.000Z" itemprop="datePublished">2018/07/18</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              29 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="문제-1">문제 1</h2>
+<p>CloudFormation 을 이용해 us-east-1 에서 2티어 웹 애플리케이션을 실행한다. us-west-1 에서 개발 스택을 생성하려고 하면 프로세스가 실패한다. 무엇이 문제일까?</p>
+<p>A. 템플릿에서 참조하는 AMI 가 us-west-1 에서 사용 불가.<br>
+B. 템플릿에서 참조하는 IAM 역할이 us-west-1 에서 유효하지 않음.<br>
+C. 두 개의 ELB 클래식 로드밸런서는 같은 이름 태그를 가질 수 없다.<br>
+D. 클라우드포메이션 템플릿은 하나의 리젼에서만 실행 가능하다.</p>
+<ol>
+<li>Your CloudFormation template launches a two-tier web application in us-east-1. When you attempt to create a development stack in us-west-1, the process fails.</li>
+</ol>
+<p>What could be the problem?</p>
+<p>A. The AMIs referenced in the template are not available in us-west-1.<br>
+B. The IAM roles referenced in the template are not valid in us-west-1.<br>
+C. Two ELB Classic Load Balancers cannot have the same Name tag.<br>
+D. CloudFormation templates can be launched only in a single region.</p>
+<hr>
+<p>정답 : A. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/AMIs.html">AMI</a> 는 리젼 안에 저장되고 다른 리젼에서는 접근할 수 없다. AMI 를 다른 리젼에서 사용하기 위해서는, 해당 리젼으로 복사해야 한다. IAM 롤은 계정 전체에서 유효하다.</p>
+<p>A – AMIs are stored in a region and cannot be accessed in other regions. To use the AMI in another region, you must copy it to that region. IAM roles are valid across the entire account.</p>
+<hr>
+<h3 id="인스턴스-및-AMI">인스턴스 및 AMI</h3>
+<p>*Amazon 머신 이미지(AMI)*은 필요한 소프트웨어가 이미 구성되어 있는 템플릿입니다(예: 운영 체제, 애플리케이션 서버, 애플리케이션). AMI에서 <em>인스턴스</em>를 바로 시작하실 수 있는데, 이 인스턴스는 AMI의 사본으로, 클라우드에서 실행되는 가상 서버입니다. 다음 그림과 같이, 한 AMI로 여러 인스턴스를 실행할 수 있습니다.</p>
+<p><img src="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/images/architecture_ami_instance.png" alt=" AMI에서 여러 개의 인스턴스 시작 "></p>
+<p>중지하거나 종료할 때까지 또는 실패하기 전까지 인스턴스는 계속 실행됩니다. 인스턴스가 실패하면 AMI에서 새로 실행할 수 있습니다.</p>
+<h3 id="인스턴스">인스턴스</h3>
+<p>동일한 AMI에서 다른 유형의 인스턴스를 실행할 수 있습니다. <em>인스턴스 유형</em>에 따라 인스턴스에 사용되는 호스트 컴퓨터의 하드웨어가 결정됩니다. 각 인스턴스 유형은 서로 다른 컴퓨팅 및 메모리 기능을 제공합니다. 인스턴스에서 실행하려는 애플리케이션 또는 소프트웨어에 필요한 메모리 양과 컴퓨팅 파워를 기준으로 인스턴스 유형을 선택하십시오. Amazon EC2 인스턴스 유형별 하드웨어 사양에 대한 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ec2/instance-types/">Amazon EC2 인스턴스 유형</a> 단원을 참조하십시오.</p>
+<p>일단 인스턴스가 시작되면, 인스턴스는 다른 컴퓨터와 다를 것이 없고, 어느 컴퓨터와 동일한 방식으로 다루시면 됩니다. 인스턴스의 완벽한 통제가 가능하며, 루트 권한이 필요한 명령어는 <strong>sudo</strong>를 사용해 실행할 수 있습니다.</p>
+<h3 id="AMI">AMI</h3>
+<p>Amazon Web Services(AWS)에서는 자주 사용되는 소프트웨어 구성을 포함하는 다양한 Amazon 머신 이미지(AMI)가 공개 게시하고 있습니다. 그 뿐 아니라 AWS 개발자 커뮤니티 회원들이 올린 자체 구성 AMI도 게시되어 있습니다. 또한 얼마든지 사용자 정의된 AMI을 생성할 수 있어서, 고객님께서 필요하신 기능을 모두 갖춘 새로운 인스턴스를 쉽고 빠르게 시작할 수 있습니다. 예를 들어 고객님의 애플리케이션이 웹사이트나 웹 서비스인 경우, 웹 서버와 관련 고정 콘텐츠, 그리고 동적 페이지에 사용할 코드가 포함된 AMI를 정의해 만드실 수 있습니다. 그래서, 이 AMI에서 인스턴스가 시작이 되면, 고객님의 웹 서버가 자동으로 시작되고 애플리케이션은 바로 Request를 처리할 수 있습니다.</p>
+<h3 id="리전-간-AMI-복사">리전 간 AMI 복사</h3>
+<p>지리적으로 다른 리전 간에 AMI를 복사하면 다음과 같은 이점이 제공됩니다.</p>
+<ul>
+<li>일관적인 글로벌 배포: 한 리전에서 다른 리전으로 AMI를 복사하면 동일한 AMI를 기반으로 하는 일관적인 인스턴스를 여러 리전에서 시작할 수 있습니다.</li>
+<li>확장성: 사용자의 지역에 관계없이 요구 사항에 대응하는 글로벌 애플리케이션을 보다 손쉽게 설계하고 구축할 수 있습니다.</li>
+<li>성능: 애플리케이션을 분산하여 성능을 높이고 애플리케이션의 핵심 구성 요소를 사용자에게 보다 가까이 둘 수 있습니다. 또한 인스턴스 유형이나 여타 AWS 서비스와 같은 리전별 기능을 활용할 수 있습니다.</li>
+<li>고가용성: 여러 AWS 리전을 포괄하는 애플리케이션을 설계하고 배포하여 가용성을 높일 수 있습니다.</li>
+</ul>
+<p><img src="https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/images/ami_copy.png" alt=" 서로 다른 리전에 복사된 AMI "></p>
+<hr>
+<h2 id="문제-2">문제 2</h2>
+<p>당신의 애플리케이션은 SQS 큐에서 명령을 읽고 파트너가 호스팅하는 웹 서비스로 보낸다. 파트너의 엔드포인트가 다운되면, 당신의 애플리케이션이 명령을 큐로 계속해서 리턴한다. 이렇게 반복해서 시도하면 리소스가 모두 사용되고, 전송되지 않은 명령어는 손실되면 안 된다.</p>
+<p>어떻게 하면 리소스를 낭비하지 않으면서 파트너의 중단된 웹 서비스를 수용할 수 있을까?</p>
+<p>A. 딜레이 큐를 생성하고 DelaySeconds 를 30초로 설정한다.<br>
+B. VisibilityTimeout 을 30초로 설정해서 명령어를 다시 큐에 입력한다.<br>
+C. 전달되지 않은 메시지 큐(dead letter queue)를 생성하고 Maximum Receives 를 3으로 설정한다.<br>
+D. DelaySeconds 를 30초로 설정하고 다시 큐에 입력한다.</p>
+<ol start="2">
+<li>Your application reads commands from an SQS queue and sends them to web services hosted by your partners. When a partner’s endpoint goes down, your application continually returns their commands to the queue. The repeated attempts to deliver these commands use up resources. Commands that can’t be delivered must not be lost.</li>
+</ol>
+<p>How can you accommodate the partners’ broken web services without wasting your resources?</p>
+<p>A. Create a delay queue and set DelaySeconds to 30 seconds.<br>
+B. Requeue the message with a VisibilityTimeout of 30 seconds.<br>
+C. Create a dead letter queue and set the Maximum Receives to 3.<br>
+D. Requeue the message with a DelaySeconds of 30 seconds.</p>
+<hr>
+<p>정답 : C. 큐를 설정해놓으면, 큐에서 가져간 메시지를 최대 횟수만큼 재시도한 후 자동으로 데드 레터 큐로 보내지게 된다. 그것을 찾을 때까지 저장된다.</p>
+<p>C – After a message is taken from the queue and returned for the maximum number of retries, it is automatically sent to a dead letter queue, if one has been configured. It stays there until you retrieve it for forensic purposes.</p>
+<hr>
+<h3 id="Amazon-Simple-Queue-Service">Amazon Simple Queue Service</h3>
+<p>Amazon Simple Queue Service(Amazon SQS)는 마이크로 서비스, 분산 시스템 및 서버리스 애플리케이션을 쉽게 분리하고 확장할 수 있게 해주는 완전관리형 메시지 대기열 서비스입니다. Amazon SQS를 사용하면 분산된 애플리케이션 구성 요소 간 데이터 이동이 가능하며, 이러한 구성 요소의 결합을 해제할 수 있습니다.</p>
+<h3 id="Amazon-SQS-배달-못한-편지-대기열">Amazon SQS 배달 못한 편지 대기열</h3>
+<p>Amazon SQS는 다른 대기열(<em>소스 대기열</em>)이 처리(소비)하지 못한 메시지를 보낼 수 있는 <em>배달 못한 편지 대기열</em>을 지원합니다. 배달 못한 편지 대기열은 문제가 있는 메시지를 구분하여 처리가 실패한 이유를 확인할 수 있으므로 애플리케이션 또는 메시징 시스템을 디버깅하는 데 유용합니다.</p>
+<p>생성자 또는 소비자 애플리케이션 내부의 오류 상태 또는 애플리케이션 코드에 문제를 발생시키는 예기치 않은 상태 변경 등의 다양한 문제로 인해 메시지를 처리할 수 없는 경우가 있습니다.</p>
+<p><em>리드라이브 정책</em>은 <em>소스 대기열</em>, <em>배달 못한 편지 대기열</em>, 그리고 소스 대기열의 소비자가 메시지 처리에 실패한 횟수가 정해진 숫자에 도달하면 Amazon SQS가 소스 대기열에서 배달 못한 편지 대기열로 메시지를 옮기도록 하는 조건 등을 지정합니다. 예를 들어, 소스 대기열의 리드라이브 정책에 <code>maxReceiveCount</code>가 5로 설정되어 있을 때 소스 대기열의 소비자가 메시지 하나를 5번 받았는데 한 번도 삭제하지 못하는 경우, Amazon SQS는 이 메시지를 배달 못한 대기열로 옮깁니다.</p>
+<p>배달 못한 편지 대기열의 주된 용도는 메시지 전송 실패를 처리하는 것입니다. 제대로 처리하지 못한 메시지를 구분하여 배달 못한 편지 대기열에 격리한 다음, 처리에 실패한 이유를 확인할 수 있습니다. 배달 못한 편지 대기열을 설정하면 다음과 같이 할 수 있습니다.</p>
+<ul>
+<li>배달 못한 편지 대기열로 메시지가 배달되면 경보가 울리도록 구성합니다.</li>
+<li>메시지가 배달 못한 편지 대기열로 배달되게 만든 예외적인 상황의 로그를 검사합니다.</li>
+<li>배달 못한 편지 대기열로 배달된 메시지의 내용을 분석하여 소프트웨어 문제 또는 생산자나 소비자의 하드웨어 문제를 진단합니다.</li>
+<li>소비자에게 메시지를 처리하기에 충분한 시간을 주었는지 확인합니다.</li>
+</ul>
+<hr>
+<h2 id="문제-3">문제 3</h2>
+<p>당신의 애플리케이션은 SQS 큐에 써야 한다. 회사 보안 정책에 따라 AWS 자격 증명은 항상 암호화되고 일주일에 한 번 이상 순환되어야 한다.</p>
+<p>당신의 애플리케이션이 큐에 write 할 수 있는 자격증명을 어떻게 안전하게 제공할 수 있는가?</p>
+<p>A. 애플리케이션이 런타임에 Amazon S3 에서 액세스키를 가져오도록 한다.<br>
+B. IAM 역할로 애플리케이션의 Amazon EC2 인스턴스를 실행한다.<br>
+C. 애플리케이션 소스 코드 내에서 액세스키를 암호화한다.<br>
+D. 인스턴스를 Active Directory 도메인에 등록하고 AD 인증을 사용한다.</p>
+<ol start="3">
+<li>Your application must write to an SQS queue. Your corporate security policies require that AWS credentials are always encrypted and are rotated at least once a week.</li>
+</ol>
+<p>How can you securely provide credentials that allow your application to write to the queue?</p>
+<p>A. Have the application fetch an access key from an Amazon S3 bucket at run time.<br>
+B. Launch the application’s Amazon EC2 instance with an IAM role.<br>
+C. Encrypt an access key in the application source code.<br>
+D. Enroll the instance in an Active Directory domain and use AD authentication.</p>
+<hr>
+<p>정답 : B. IAM 롤은 임시 보안 토큰에 기반하고 있어서 자동적으로 순환된다. 키를 소스 코드 내에서 다루는 것은 불가능하고 아주 나쁜 아이디어다. S3 버켓에 대한 자격 증명이 없으면 S3 버킷에서 자격 증명을 검색할 수 없다. Active Directory 인증은 AWS 리소스에 접근할 권한을 얻을 수 없다.</p>
+<p>B – IAM roles are based on temporary security tokens, so they are rotated automatically. Keys in the source code cannot be rotated (and are a very bad idea). It’s impossible to retrieve credentials from an S3 bucket if you don’t already have credentials for that bucket. Active Directory authorization will not grant access to AWS resources.</p>
+<hr>
+<h3 id="IAM">IAM</h3>
+<p>IAM(AWS Identity and Access Management)은 AWS 리소스에 대한 액세스를 안전하게 제어할 수 있는 웹 서비스입니다. IAM을 사용하여 리소스를 사용하도록 인증(로그인) 및 권한 부여(권한 있음)된 대상을 제어합니다.</p>
+<hr>
+<h2 id="문제-4">문제 4</h2>
+<p>다음 중 일시적으로 일관성 없는 결과를 리턴할 수 있는 작업은 무엇인가?</p>
+<p>A. Amazon S3 에서 객체를 처음 생성 후 가져오는 작업.<br>
+B. Amazon RDS DB에 데이터를 isnert 후 row 를 select.<br>
+C. Amazon RDS DB에서 데이터를 delete 한 후 row 를 select.<br>
+D. Amazon S3 에서 객체를 삭제 후 가져오는 작업.</p>
+<ol start="4">
+<li>Which operation could return temporarily inconsistent results?</li>
+</ol>
+<p>A. Getting an object from Amazon S3 after it was initially created<br>
+B. Selecting a row from an Amazon RDS database after it was inserted<br>
+C. Selecting a row from an Amazon RDS database after it was deleted<br>
+D. Getting an object from Amazon S3 after it was deleted</p>
+<hr>
+<p>정답 : D. S3 has eventual consistency for overwrite PUTS and DELETES.</p>
+<hr>
+<h3 id="Amazon-S3">Amazon S3</h3>
+<p>Amazon Simple Storage Service는 인터넷용 스토리지 서비스입니다. 개발자가 보다 쉽게 웹 규모 컴퓨팅 작업을 할 수 있도록 설계되었습니다.</p>
+<p>Amazon S3에서 제공하는 단순한 웹 서비스 인터페이스를 사용하여 웹에서 언제 어디서나 원하는 양의 데이터를 저장하고 검색할 수 있습니다. 또한 개발자는 Amazon이 자체 웹 사이트의 글로벌 네트워크 운영에 사용하는 것과 같은 높은 확장성과 신뢰성을 갖춘 빠르고 경제적인 데이터 스토리지 인프라에 액세스할 수 있습니다.</p>
+<hr>
+<h2 id="문제-5">문제 5</h2>
+<p>다음 속성을 갖는 DynamoDB 테이블을 만들고 있다.</p>
+<ul>
+<li>PurchaseOrderNumber (partition key)</li>
+<li>CustomerID</li>
+<li>PurchaseDate</li>
+<li>TotalPurchaseValue</li>
+</ul>
+<p>애플리케이션 중 하나가 날짜 범위에 걸쳐 특정 고객의 총 구매 가격을 계산하기 위해 테이블을 사용하려고 한다.</p>
+<p>테이블에 추가되어야 하는 보조 인덱스는 무엇인가?</p>
+<p>A. CustomerID 의 파티션 키와 PurchaseDate 의 정렬키를 갖는 로컬 보조 인덱스; TotalPurchaseValue 를 프로젝트한다.<br>
+B. PurchaseDate 의 파티션 키와 CustomerID 의 정렬키를 갖는 로컬 보조 인덱스; TotalPurchaseValue 를 프로젝트한다.<br>
+C. CustomerID 의 파티션 키와 PurchaseDate 의 정렬키를 갖는 글로벌 보조 인덱스; TotalPurchaseValue 를 프로젝트한다.<br>
+D. PurchaseDate 의 파티션 키와 CustomerID 의 정렬키를 갖는 글로벌 보조 인덱스; TotalPurchaseValue 를 프로젝트한다.</p>
+<ol start="5">
+<li>You are creating a DynamoDB table with the following attributes:</li>
+</ol>
+<ul>
+<li>PurchaseOrderNumber (partition key)</li>
+<li>CustomerID</li>
+<li>PurchaseDate</li>
+<li>TotalPurchaseValue</li>
+</ul>
+<p>One of your applications must retrieve items from the table to calculate the total value of purchases for a particular customer over a date range.</p>
+<p>What secondary index do you need to add to the table?</p>
+<p>A. Local secondary index with a partition key of CustomerID and sort key of PurchaseDate; project the TotalPurchaseValue attribute<br>
+B. Local secondary index with a partition key of PurchaseDate and sort key of CustomerID; project the TotalPurchaseValue attribute<br>
+C. Global secondary index with a partition key of CustomerID and sort key of PurchaseDate; project the TotalPurchaseValue attribute<br>
+D. Global secondary index with a partition key of PurchaseDate and sort key of CustomerID; project the TotalPurchaseValue attribute</p>
+<hr>
+<p>정답 : C. 특정 CustomerID 로 쿼리를 날려야하기 때문에 글로벌 보조 인덱스는 다른 파티션 키가 필요하다. 원하는 날짜 범위로 찾기 위해서 정렬키로는 PurchaseDate 가 필요하다. 원하는 항목인 TotalPurchaseValue 를 프로젝트하는 것은 모두 동일하다.</p>
+<p>C – The query is for a particular CustomerID, so a Global Secondary Index is needed for a different partition key. To retrieve only the desired date range, the PurchaseDate must be the sort key. Projecting the TotalPurchaseValue into the index provides all the data needed to satisfy the use case.</p>
+<hr>
+<h3 id="Amazon-DynamoDB">Amazon DynamoDB</h3>
+<p>Amazon DynamoDB는 완전관리형 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/nosql/">NoSQL 데이터베이스</a> 서비스로서 원활한 확장성과 함께 빠르고 예측 가능한 성능을 제공합니다. Amazon DynamoDB를 사용하여 데이터 규모에  관계없이 데이터를 저장 및 검색하고, 어떤 수준의 요청 트래픽이라도 처리할 수 있는 데이터베이스 테이블을 생성할 수 있습니다.  Amazon DynamoDB는 테이블의 데이터와 트래픽을 충분한 수의 서버로 자동 분산하여 고객이 지정한 요청 용량과 저장된  데이터 규모를 처리하면서도 일관되고 빠른 성능을 발휘합니다.</p>
+<ul>
+<li>기본키 : 파티션 키</li>
+<li>복합 기본 키 : 파티션 키 + 정렬 키</li>
+</ul>
+<h3 id="인덱스-작업">인덱스 작업</h3>
+<p>Amazon DynamoDB는 지정된 기본 키 값을 사용하여 테이블의 항목에 신속하게 액세스할 수 있습니다. 그러나 많은 애플리케이션에서는 주요 키가 아닌 속성을 가진 데이터에 효율적으로 액세스할 수 있다는 장점을 활용하기 위해 하나 이상의 보조(또는 대체) 키를 사용하기도 합니다. 이를 위해 테이블에서 하나 이상의 보조 인덱스를 생성하고 이 인덱스에 대해 <code>Query</code> 또는 <code>Scan</code> 요청을 발급할 수 있습니다.</p>
+<p><em>보조 인덱스</em>는 대체 키와 함께 테이블의 속성 하위 집합을 포함하여 <code>Query</code> 작업을 지원하는 데이터 구조입니다. 테이블에서 <code>Query</code>를 사용하는 것과 거의 같은 방식으로 <code>Query</code>를 사용하여 인덱스에서 데이터를 가져올 수 있습니다. 한 테이블에 여러 보조 인덱스es를 포함할 수 있어 서로 다른 여러 쿼리 패턴에 애플리케이션 액세스가 제공됩니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/GSI.html">Global secondary index</a> - 파티션 키 및 정렬 키가 기본 테이블의 파티션 및 정렬 키와 다를 수 있는 인덱스. 모든 파티션에서 인덱스의 쿼리가 기본 테이블의 모든 데이터에 적용될 수 있으므로 글로벌 보조 인덱스는 &quot;글로벌&quot;하게 간주됩니다.</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/amazondynamodb/latest/developerguide/LSI.html">로컬 보조 인덱스</a> - 기본 테이블과 파티션 키는 동일하지만 정렬 키는 다른 인덱스. local secondary index는 local secondary index의 모든 파티션이 동일한 파티션 키 값을 가진 기본 테이블 파티션으로 한정된다는 의미에서 &quot;로컬&quot;입니다.</li>
+</ul>
+<hr>
+<h2 id="문제-6">문제 6</h2>
+<p>당신의 CloudFormation 템플릿은 다음 Mappings section 을 따른다.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&quot;Mappings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;RegionMap&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;us-east-1&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;32&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;ami-6411e20d&quot;</span><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;us-west-1&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;32&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;ami-c9c7978c&quot;</span><span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>스택이 us-east-1 에서 실행될 때, “ami-6411e20d” 값이 발생하는 JSON 스니펫은 무엇인가?</p>
+<ol>
+<li>{ “Fn::FindInMap” : [ “Mappings”, { “RegionMap” : [“us-east-1”, “us-west-1”] }, “32”]}</li>
+<li>{ “Fn::FindInMap” : [ “Mappings”, { “Ref” : “AWS::Region” }, “32”]}</li>
+<li>{ “Fn::FindInMap” : [ “RegionMap”, { “Ref” : “AWS::Region” }, “32”]}</li>
+<li>{ “Fn::FindInMap” : [ “RegionMap”, { “RegionMap” : “AWS::Region” }, “32”]}</li>
+</ol>
+<ol start="6">
+<li>Your CloudFormation template has the following Mappings section:</li>
+</ol>
+<p>Which JSON snippet will result in the value “ami-6411e20d” when a stack is launched in us-east-1?</p>
+<hr>
+<p>정답 : C – Learn how to create and reference mappings <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/mappings-section-structure.html">here</a>.</p>
+<hr>
+<h3 id="Mapping">Mapping</h3>
+<p><code>Mappings</code> 섹션(선택 사항)은 키를 해당하는 명명된 값 세트와 맞춥니다. 예를 들어 리전에 따라 값을 설정하려면 리전 이름을 키로 사용하고 각각의 특정 리전에 대해 지정할 값을 포함하는 매핑을 생성할 수 있습니다. <code>Fn::FindInMap</code> 내장 함수를 사용하여 맵에서 값을 불러올 수 있습니다.</p>
+<p><code>Mappings</code> 섹션은 키 이름 <code>Mappings</code>로 이루어집니다. 매핑의 키는 문자열이어야 합니다. 값은 <code>String</code>이나 <code>List</code> 유형이 될 수 있습니다.  다음 예제는 <code>Mapping01</code>(논리적 이름)이라는 매핑 하나가 있는 <code>Mappings</code> 섹션을 보여줍니다.</p>
+<h3 id="매핑에서-값-반환">매핑에서 값 반환</h3>
+<p><code>Fn::FindInMap</code> 함수를 사용하여 지정한 키에 따라 명명된 값을 반환할 수 있습니다. 다음 예제 템플릿에는 <code>FindInMap</code> 함수를 통해 <code>ImageId</code> 속성이 할당된 Amazon EC2 리소스가 포함되어 있습니다. <code>FindInMap</code> 함수는 키를 스택이 생성되는 리전(<a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html">AWS::Region 가상 파라미터</a> 사용)으로 지정하고 <code>32</code>를 매핑할 값으로 지정합니다.</p>
+<hr>
+<h2 id="문제-7">문제 7</h2>
+<p>당신의 웹 애플리케이션은 DynamoDB 테이블에서 값을 읽어오고, 속성을 바꾸고, 그 아이템을 다시 테이블에 작성한다. 한 프로세스가 다른 프로세스의 변겨 사항을 덮어쓰지 않도록 해야 한다.</p>
+<p>어떻게 동시성을 보장할 수 있을까?</p>
+<ol>
+<li>조건부 쓰기를 이용해 optimistic concurrency (낙관적 동시성) 을 구현.</li>
+<li>조건부 읽기를 이용해 pessimistic concurrency (비관적 동시성) 을 구현.</li>
+<li>읽을 때 아이템을 locking 해서 optimistic concurrency (낙관적 동시성) 을 구현.</li>
+<li>읽을 때 아이템을 locking 해서 essimistic concurrency (비관적 동시성) 을 구현</li>
+</ol>
+<ol start="7">
+<li>Your web application reads an item from your DynamoDB table, changes an attribute, and then writes the item back to the table. You need to ensure that one process doesn’t overwrite a simultaneous change from another process.</li>
+</ol>
+<p>How can you ensure concurrency?</p>
+<ol>
+<li>Implement optimistic concurrency by using a conditional write.</li>
+<li>Implement pessimistic concurrency by using a conditional write.</li>
+<li>Implement optimistic concurrency by locking the item upon read.</li>
+<li>Implement pessimistic concurrency by locking the item upon read.</li>
+</ol>
+<hr>
+<p>정답 : 1. Optimistic concurrency 은 값이 변경되는 것을 방지하기 위해 저장 시 값을 확인한다. Pessimistic concurrency 는 아이템이나 row 를 locking 해서 값이 변경되는 것을 방지한다. DynamoDB 는 아이템 locking 을 지원하지 않으며 조건부 쓰기가 optimistic concurrency 을 구현하기에 이상적이다.</p>
+<p>A – Optimistic concurrency depends on checking a value upon save to ensure that it has not changed. Pessimistic concurrency prevents a value from changing by locking the item or row in the database. DynamoDB does not support item locking, and conditional writes are perfect for implementing optimistic concurrency.</p>
+<hr>
+<h2 id="문제-8">문제 8</h2>
+<p>당신의 애플리케이션은 모든 파트너에게 제공되어야 하는 이벤트를 트리거한다. 정확한 파트너 리스트는 지속적으로 변경된다: 일부 파트너는 고가용성 엔드 포인트를 실행하고, 다른 파트너의 엔드 포인트는 매일 밤 몇 시간만 온라인 상태가 된다. 당신의 애플리케이션은 미션 크리티컬하므로 파트너와의 커뮤니케이션이 지연되어선 안 된다. 어떤 파트너에게 발생한 이벤트 전달 지연은 다른 파트너에 대한 전달을 지연시킬 수 없어야 한다.</p>
+<p>이를 코딩하는 적절한 방법은 무엇인가?</p>
+<ol>
+<li>Amazon SWF 태스크로 이벤트 전달을 구현한다. Amazon SWF 워크플로우 실행으로 시작한다.</li>
+<li>이벤트를 Amazon SNS 메시지로 보낸다. 파트너에게 HTTP 를 생성하도록 지시한다. Amazon SNS 토픽으로 파터너의 HTTP 엔드포인트를 구독한다.</li>
+<li>파트너마다 SQS 큐를 생성한다. 큐를 돌면서 이벤트를 작성한다. 파트너들은 큐를 통해서 메시지를 받는다.</li>
+<li>이벤트를 Amazon SNS 메시지로 보낸다. 파트너마다 Amazon SNS 토픽을 구독하는 SQS 큐를 만든다. 파트너는 큐를 이용해서 메시지를 받는다.</li>
+</ol>
+<ol start="8">
+<li>Your application triggers events that must be delivered to all your partners. The exact partner list is constantly changing: some partners run a highly available endpoint, and other partners’ endpoints are online only a few hours each night. Your application is mission-critical, and communication with your partners must not introduce delay in its operation. A delay in delivering the event to one partner cannot delay delivery to other partners.</li>
+</ol>
+<p>What is an appropriate way to code this?</p>
+<ol>
+<li>Implement an Amazon SWF task to deliver the message to each partner. Initiate an Amazon SWF workflow execution.</li>
+<li>Send the event as an Amazon SNS message. Instruct your partners to create an HTTP. Subscribe their HTTP endpoint to the Amazon SNS topic.</li>
+<li>Create one SQS queue per partner. Iterate through the queues and write the event to each one. Partners retrieve messages from their queue.</li>
+<li>Send the event as an Amazon SNS message. Create one SQS queue per partner that subscribes to the Amazon SNS topic. Partners retrieve messages from their queue.</li>
+</ol>
+<hr>
+<p>정답 : 4. 두 가지 과제가 있다. 커맨드는 여러 파트너들에게 뿌려져야 하고, 당신의 앱은 파트너로부터 분리되어야 한다 (파트너가 고가용성을 제공하지 않기 때문에). 커맨드를 SNS 메시지로 보내고 publication/subscribe 모델을 이용해 fan-out 을 달성할 수 있다. 큐에 메시지를 직접 쓰는 것은 앱의 대기시간이 길어지고, 활성화된 파트너를 모니터링해야 한다. 파트너가 빠르게 변화하기 때문에 Amazon SWF 워크플로우를 작성하는 것은 어려울 수 있다.</p>
+<p>D – There are two challenges here: the command must be “fanned out” to a variable pool of partners, and your app must be decoupled from the partners because they are not highly available. Sending the command as an SNS message achieves the fan-out via its publication/subscribe model, and using an SQS queue for each partner decouples your app from the partners. Writing the message to each queue directly would cause more latency for your app and would require your app to monitor which partners were active. It would be difficult to write an Amazon SWF workflow for a rapidly changing set of partners.</p>
+<hr>
+<h3 id="Amazon-SWF">Amazon SWF</h3>
+<p>Amazon Simple Workflow Service(Amazon SWF)를 사용하면 분산 구성 요소 간에 작업을 조정하는 애플리케이션을 쉽게 구축할 수 있습니다. Amazon SWF에서 작업은 애플리케이션의 구성 요소에서 수행하는 논리적 작업 단위를  나타냅니다. 애플리케이션 간 작업 조정에서는 애플리케이션의 논리적 흐름에 따라 작업 간 종속성, 일정 예약 및 동시성을  관리합니다. Amazon SWF에서는 작업 구현에 대한 모든 권한과 진행률 추적 및 상태 유지와 같은 기본적인 복잡성에 대한 염려 없이 작업을 조정할 수 있는 모든 권한을 제공합니다.</p>
+<hr>
+<h2 id="문제-9">문제 9</h2>
+<p>한 리젼의 클라우포메이션 스택 수가 제한에 도달했다.</p>
+<p>제한(limit)을 늘리는 방법은 무엇인가?</p>
+<ol>
+<li>AWS Command Line Interface 를 이용한다.</li>
+<li><a href="mailto:limits@amazon.com" rel="external nofollow noopener noreferrer" target="_blank">limits@amazon.com</a> 에 &quot;CoudFormation&quot;을 주제로 해서 메일을 보낸다.</li>
+<li>AWS Management Console 안의 고객 센터(Support Center)를 이용한다.</li>
+<li>모든 서비스의 제한은 고정되어 있어 증가시킬 수 없다.</li>
+</ol>
+<ol start="9">
+<li>You have reached your account limit for the number of CloudFormation stacks in a region.</li>
+</ol>
+<p>How do you increase your limit?</p>
+<ol>
+<li>Use the AWS Command Line Interface.</li>
+<li>Send an email to <a href="mailto:limits@amazon.com" rel="external nofollow noopener noreferrer" target="_blank">limits@amazon.com</a> with the subject “CloudFormation.”</li>
+<li>Use the Support Center in the AWS Management Console.</li>
+<li>All service limits are fixed and cannot be increased.</li>
+</ol>
+<hr>
+<p>정답 : 3. 고객센터에 연락해야 한다.</p>
+<p>C – The Support Center in the AWS Management Console allows customers to request limit increases by creating a case.</p>
+<hr>
+<h2 id="문제-10">문제 10</h2>
+<p>당신은 하나의 Amazon VPC 에 3-티어 웹 애플리케이션(웹, 앱, 데이터)를 가지고 있다. 웹과 앱 티어는 각각 2개의 가용성 영역에 걸쳐 있으며 별도의 서브넷에 있고 ELB 클래식 로드 밸런서 뒤에 있다. 데이터 티어는 데이터베이스 서브넷에 있는 Multi-AZ Amazon RDS MySQL 데이터베이스 인스턴스다. 앱 티어 인스턴스에서 데이터베이스 티어를 호출하면 시간 초과 오류(timeout error)가 발생한다.</p>
+<p>무엇이 원인일까?</p>
+<ol>
+<li>앱 계층 인스턴스와 연결된 IAM 역할에는 MySQL 데이터베이스에 대한 권한이 없어서.</li>
+<li>Amazon RDS 인스턴스의 Security Group 이 포트 3306 에서 애플리케이션 인스턴스의 트래픽을 허용하지 않아서.</li>
+<li>Amazon RDS 데이터베이스 인스턴스에 공용(public) IP 주소가 없어서.</li>
+<li>Amazon VPC 에서 앱 계층과 데이터베이스 계층 사이에 정의된 경로가 없어서.</li>
+</ol>
+<ol start="10">
+<li>You have a three-tier web application (web, app, and data) in a single Amazon VPC. The web and app tiers each span two Availability Zones, are in separate subnets, and sit behind ELB Classic Load Balancers. The data tier is a Multi-AZ Amazon RDS MySQL database instance in database subnets. When you call the database tier from your app tier instances, you receive a timeout error.</li>
+</ol>
+<p>What could be causing this?</p>
+<ol>
+<li>The IAM role associated with the app tier instances does not have rights to the MySQL database.</li>
+<li>The security group for the Amazon RDS instance does not allow traffic on port 3306 from the app instances.</li>
+<li>The Amazon RDS database instance does not have a public IP address.</li>
+<li>There is no route defined between the app tier and the database tier in the Amazon VPC.</li>
+</ol>
+<hr>
+<p>정답 : 2. 보안그룹은 기본적으로 모든 네트워크 트래픽을 막아서, 그룹이 제대로 설정되지 않으면 타임아웃 에러를 발생시킨다. IAM 은 MySQL 보안을 제어하지 않는다. Amazon VPC 의 모든 서브넷은 다른 모든 서브넷으로 라우팅된다. Amazon VPC의 내부 트래픽에는 공용 IP 주소가 필요하지 않다.</p>
+<p>B – Security groups block all network traffic by default, so if a group is not correctly configured, it can lead to a timeout error. MySQL security, not IAM, controls MySQL security. All subnets in an Amazon VPC have routes to all other subnets. Internal traffic within an Amazon VPC does not require public IP addresses</p>
+<hr>
+<h3 id="Amazon-VPC">Amazon VPC</h3>
+<p>Amazon Virtual Private Cloud(Amazon VPC)를 사용하면 정의한 가상 네트워크에서 AWS 리소스를 시작할 수 있습니다. 이 가상 네트워크는 AWS의 확장 가능한 인프라를 사용한다는 이점과 함께 고객의 자체 데이터 센터에서 운영하는 기존 네트워크와 매우 유사합니다.</p>
+<p><em>Virtual Private Cloud</em>(VPC)는 사용자의 AWS 계정 전용 가상 네트워크입니다. VPC는 AWS 클라우드에서 다른 가상 네트워크와 논리적으로 분리되어 있습니다. Amazon EC2 인스턴스와 같은 AWS 리소스를 VPC에서 실행할 수 있습니다. IP 주소 범위와 VPC 범위를 설정하고 서브넷을 추가하고 보안 그룹을 연결한 다음 라우팅 테이블을 구성합니다.</p>
+<p><em>서브넷</em>은 VPC의 IP 주소 범위입니다. 지정된 서브넷으로 AWS 리소스를 시작할 수 있습니다. 인터넷에 연결되어야 하는 리소스에는 퍼블릭 서브넷을 사용하고, 인터넷에 연결되지 않는 리소스에는 프라이빗 서브넷을 사용하십시오. 퍼블릭 서브넷과 프라이빗 서브넷에 대한 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AmazonVPC/latest/UserGuide/VPC_Subnets.html#vpc-subnet-basics">VPC 및 서브넷 기본 사항</a>을 참조하십시오.</p>
+<p>각 서브넷의 AWS리소스를 보호하기 위해 보안 그룹 및 네트워크 액세스 제어 목록(ACL)을 비롯한 여러 보안 계층을 사용할 수 있습니다. 자세한 내용은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.aws.amazon.com/ko_kr/AmazonVPC/latest/UserGuide/VPC_Security.html">보안</a> 단원을 참조하십시오.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/04/aws-certified/" title="AWS 자격증 준비하기">AWS 자격증 준비하기</a>
+</li>
+<li>
+<a href="/2018/07/13/aws-security-best-practies/" title="AWS 보안 모범 사례 백서 (번역&#x2F;요약)">AWS 보안 모범 사례 백서 (번역&#x2F;요약)</a>
+</li>
+<li>
+<a href="/2018/07/13/aws-well-architected-framework/" title="AWS Well-Architected Framework 백서 (번역&#x2F;요약)">AWS Well-Architected Framework 백서 (번역&#x2F;요약)</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/19/java-lambda-basics/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java Lambda (1) 기본
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/18/hexo-blog-backup/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo 배포 원리와 백업하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/18/aws-certified-developer-associate-sample-exam-questions/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

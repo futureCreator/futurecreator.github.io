@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/10/07/functional-programming-filter-map-fold-reduce/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-functional-programming-filter-map-fold-reduce" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/10/07/functional-programming-filter-map-fold-reduce/" class="article-date">
+    <time datetime="2018-10-06T16:08:28.000Z" itemprop="datePublished">2018/10/07</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              36 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="함수형-접근">함수형 접근</h2>
+<p>함수형 프로그래밍 언어의 문법을 배우는 것은 쉽습니다. 하지만 함수형으로 생각하는 방법을 익히는 것은 쉽지 않습니다. Java 에서 Scala 나 Clojure 로 바꾸는 것보다 문제에 접근하는 방식을 바꾸는 것이 더 중요합니다.</p>
+<p>함수형 프로그래밍은 좀 더 추상화된 레벨에서 코딩할 수 있도록 합니다. 이게 어떤 의미인지 간단한 예제로 살펴보겠습니다. 우리가 구현할 로직은 다음과 같습니다.</p>
+<p>이름을 담은 String List 를 받아서</p>
+<ul>
+<li>이름이 한 글자가 넘는 이름들 중에</li>
+<li>각 이름을 첫 글자만 대문자로 변형하고</li>
+<li>쉼표(,)로 구분한 하나의 문자열로 변환한다.</li>
+</ul>
+<p>그래서 만약 입력 값이 “tony”, “a”, “steve”, “captain” 라면 반환값은 “Tony,Steve,Captain”이라는 문자열이 됩니다.</p>
+<h3 id="일반적인-처리">일반적인 처리</h3>
+<p>먼저 자바로 로직을 구현해봅시다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TheCompanyProcess</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> String <span class="title function_">cleanNames</span><span class="params">(List&lt;String&gt; names)</span> &#123;</span><br><span class="line">    <span class="type">StringBuilder</span> <span class="variable">result</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">    <span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">      <span class="keyword">if</span> (name.length() &gt; <span class="number">1</span>)</span><br><span class="line">        result.append(capitalizeString(name)).append(<span class="string">&quot; ,&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result.substring(<span class="number">0</span>, result.length() - <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> String <span class="title function_">capitalizeString</span><span class="params">(String s)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> s.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + s.substring(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>어려운 로직은 아니죠. 코드를 자세히 살펴보면 작성한 로직을 다음 세 개의 그룹으로 묶어서(추상화) 생각해 볼 수 있습니다.</p>
+<ul>
+<li>한 글자 이름을 걸러내고(<em>filter</em>)</li>
+<li>이름 첫 글자를 대문자로 변형하고(<em>transform</em>)</li>
+<li>쉼표로 구분한 하나의 문자열로 변환한다(<em>convert</em>)</li>
+</ul>
+<h3 id="함수형-처리">함수형 처리</h3>
+<p>함수형 프로그래밍에서는 이러한 필터, 변경, 변환하는 작업을 쉽게 할 수 있도록 해줍니다. 해당 작업을 루프 안에서 직접 기술하는 것이 아니라 추상화된 메소드(filter, transform, convert)를 이용해 작업할 수 있고, 세부 사항에 대한 내용은 함수를 인자로 넘겨줘서 처리할 수 있습니다. 의사코드를 한번 볼까요?</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listOfNames</span><br><span class="line">  -&gt; filter(x.length &gt; 1)</span><br><span class="line">  -&gt; transform(x.capitalize)</span><br><span class="line">  -&gt; convert(x + &quot;,&quot; + y)</span><br></pre></td></tr></table></figure>
+<p>위에서 작성했던 일반적인 코드와 다른 점이 보이시나요? 우리가 풀어야 할 문제에 대해 더 추상적인 레벨에서 접근할 수 있고, 세부적으로 처리해야 하는 작업의 내용은 함수 인자(람다)를 이용해 전달합니다.</p>
+<p>이 개념을 스칼라로 구현해보겠습니다.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> employees = <span class="type">List</span>(<span class="string">&quot;tony&quot;</span>, <span class="string">&quot;a&quot;</span>, <span class="string">&quot;steve&quot;</span>, <span class="string">&quot;captain&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;thor&quot;</span>, <span class="string">&quot;hulk&quot;</span>, <span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> result = employees</span><br><span class="line">  .filter(_.length &gt; <span class="number">1</span>)</span><br><span class="line">  .map(_.capitalize)</span><br><span class="line">  .reduce(_ + <span class="string">&quot;,&quot;</span> + _)</span><br></pre></td></tr></table></figure>
+<p>의사코드와 거의 똑같습니다. 아주 간결하고 쉽게 읽히죠. 물론 함수의 이름은 <code>map</code> 이나 <code>reduce</code> 로 바뀌었지만 역할은 같습니다. 그리고 인자로 넘어가는 함수 모두 사용하는 변수의 이름은 크게 상관이 없기 때문에 스칼라에서는 이름을 생략하고 언더바(<code>_</code>)를 사용합니다.</p>
+<p>이번엔 자바 8을 이용해 구현해보겠습니다. 자바는 스트림을 이용해서 처리할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> String <span class="title function_">cleanNamesWithJava8</span><span class="params">(List&lt;String&gt; names)</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> (names == <span class="literal">null</span>) <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> names.stream()</span><br><span class="line">    .filter(name -&gt; name.length() &gt; <span class="number">1</span>)</span><br><span class="line">    .map(<span class="built_in">this</span>::capitalize)</span><br><span class="line">    .collect(Collectors.joining(<span class="string">&quot;,&quot;</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> String <span class="title function_">capitalize</span><span class="params">(String s)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> s.substring(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + s.substring(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이번엔 Groovy 로 작성해볼까요? <code>findAll</code> 을 이용해서 해당 조건을 만족하는 요소를 걸러내고 <code>map</code>의 그루비 버전인 <code>collect</code> 를 이용해서 맵핑하고 <code>join</code> 을 이용해 하나의 문자열로 변환합니다. 스칼라처럼 인자를 간단하게 치환하는데 그루비에서는 <code>it</code> 라는 키워드를 사용합니다.</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TheCompanyProcess</span> &#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> String cleanNames(listOfNames) &#123;</span><br><span class="line">    listOfNames</span><br><span class="line">    .findAll &#123; it.length() &gt; <span class="number">1</span> &#125;</span><br><span class="line">    .collect &#123; it.capitalize() &#125;</span><br><span class="line">    .join <span class="string">&#x27;,&#x27;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>마지막으로 클로저를 살펴보겠습니다. 클로저가 익숙하지 않으면 코드를 읽기 어려울 수 있습니다. 😅 하지만 자세한 문법을 몰라도 어떤 식으로 이루어졌는지는 살펴볼 수 있습니다. 클로저는 안에서 밖으로 실행됩니다. 그래서 제일 안쪽인 매개변수 <code>list-of-emps</code>  부터 시작해서 <code>(filter )</code>, <code>(map )</code>, <code>(reduce )</code> 순으로 실행됩니다.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name"><span class="built_in">ns</span></span> trans.core</span><br><span class="line">  (<span class="symbol">:require</span> [clojure.string <span class="symbol">:as</span> s]))</span><br><span class="line"></span><br><span class="line">(<span class="keyword">defn</span> <span class="title">process</span> [list-of-emps]</span><br><span class="line">  (<span class="name"><span class="built_in">reduce</span></span> str (<span class="name">interpose</span> <span class="string">&quot;,&quot;</span></span><br><span class="line">    (<span class="name"><span class="built_in">map</span></span> s/capitalize (<span class="name"><span class="built_in">filter</span></span> #(<span class="name"><span class="built_in">&lt;</span></span> <span class="number">1</span> (<span class="name"><span class="built_in">count</span></span> %)) list-of-emps)))))</span><br></pre></td></tr></table></figure>
+<p>참고로 클로저에서는 이렇게 함수가 중첩되면 알아보기 어려워지기 때문에 thread-last(<code>-&gt;&gt;</code>)라는 매크로를 이용해서 가독성을 높일 수 있습니다. 이렇게 되면 왼쪽에서 오른쪽으로 실행되는 순서가 바뀝니다.</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">(<span class="keyword">defn</span> <span class="title">process2</span> [list-of-emps]</span><br><span class="line">  (<span class="name"><span class="built_in">-&gt;&gt;</span></span> list-of-emps</span><br><span class="line">       (<span class="name"><span class="built_in">filter</span></span> #(<span class="name"><span class="built_in">&lt;</span></span> <span class="number">1</span> (<span class="name"><span class="built_in">count</span></span> %)))</span><br><span class="line">       (<span class="name"><span class="built_in">map</span></span> s/capitalize)</span><br><span class="line">       (<span class="name">interpose</span> <span class="string">&quot;,&quot;</span>)</span><br><span class="line">       (<span class="name"><span class="built_in">reduce</span></span> str)))</span><br></pre></td></tr></table></figure>
+<p>지금까지 일반적으로 작성한 코드와 함수형으로 작성한 의사코드, 그리고 의사코드를 구현한 코드를 살펴봤습니다. 자바, 스칼라, 그루비, 클로저 모두 함수 이름이나 문법은 조금씩 달랐지만 함수형 프로그래밍의 주요 개념을  포함하고 있습니다.</p>
+<p>함수형으로 작성하면 더 추상적인 레벨에서 코드를 작성할 수 있습니다. 이렇게 추상적으로 작업을 하면 코드가 간결할 뿐만 아니라 런타임에서 최적화를 해줘서 성능을 높여주고 엔진 레벨에서 처리해야 하는 코드에 신경쓰지 않게 도와줍니다. 예를 들어 쓰레드를 이용해 병렬 처리를 해야 할 경우엔 <code>par</code> 를 붙여서 병렬 스트림을 만들기만 하면 됩니다.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parallelResut = names</span><br><span class="line">  .par</span><br><span class="line">  .fileter(_.length() &gt; <span class="number">1</span>)</span><br><span class="line">  .map(_.capitalize)</span><br><span class="line">  .reduce(_ + <span class="string">&quot;,&quot;</span> + _)</span><br></pre></td></tr></table></figure>
+<h2 id="함수형-작업">함수형 작업</h2>
+<p>앞에서 사용했던 함수형 작업은 다음과 같습니다.</p>
+<ul>
+<li>필터 filter</li>
+<li>맵 map</li>
+<li>폴드/리듀스 fold/reduce</li>
+</ul>
+<h3 id="필터-filter">필터 filter</h3>
+<p><img src="filter.png" alt></p>
+<p>필터는 큰 컬렉션에서 조건에 맞는 작은 컬렉션을 만들어내는 연산입니다. 데이터를 필터링해서 걸러내는 거라고 볼 수 있습니다.</p>
+<h3 id="맵-map">맵 map</h3>
+<p><img src="map.png" alt></p>
+<p>맵은 해당 값에 함수를 적용해 새로운 컬렉션을 만드는 연산입니다. 값을 매핑하는 거라고 볼 수 있습니다.</p>
+<h3 id="폴드-리듀스-fold-reduce">폴드/리듀스 fold/reduce</h3>
+<p><img src="fold.png" alt></p>
+<p>폴드 또는 리듀스는 언어들 사이에서도 이름이 다양하고 조금씩 의미도 다릅니다. 이 작업은 연산(<em>operation</em>)과 누산기(<em>accumulator</em>)를 가지고 컬렉션에 있는 값을 처리해 더 작은 컬렉션이나 단일 값을 만드는 작업입니다. 그림은 목록에 있는 값을 모두 더하는 작업입니다. 여기 누산기에 초기 값이 있는 경우도 있습니다.</p>
+<h2 id="예제-자연수-분류하기">예제) 자연수 분류하기</h2>
+<p>다른 예제를 살펴봅니다. 고대 그리스의 수학자 Nicomachus 는 자연수를 과잉수, 완전수, 부족수로 나누는 분류법을 고안했다고 합니다. 여기서 완전수는 자신을 뺀 약수의 합과 같습니다. 예를 들면 6의 약수는 1, 2, 3, 6으로 1 + 2 + 3 = 6이므로 완전수입니다. 28도 1 + 2 + 4 + 7 + 14 = 28이므로 완전수입니다. 여기서 자신을 뺀 약수의 합을 진약수의 합(<em>aliquot sum</em>)이라고 합니다.</p>
+<ul>
+<li>완전수 : 진약수의 합 = 수</li>
+<li>초과수 : 진약수의 합 &gt; 수</li>
+<li>부족수 : 진약수의 합 &lt; 수</li>
+</ul>
+<h3 id="일반적인-코드">일반적인 코드</h3>
+<p>위 내용을 자바로 작성해봅시다. 클래스에 필드로 해당 숫자를 저장하고 메소드를 이용해서 완전수 여부를 계산합니다. <code>Map</code>으로 캐시도 구현해놨고 기능을 여러 메소드로 분리해놨는데 이제 함수형으로 차근차근 바꿔나갈겁니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ImpNumberClassifierSimple</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="type">int</span> _number;</span><br><span class="line">  <span class="keyword">private</span> Map&lt;Integer, Integer&gt; _cache;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">ImpNumberClassifierSimple</span><span class="params">(<span class="type">int</span> targetNumber)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>._number = targetNumber;</span><br><span class="line">    _cache = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> Set&lt;Integer&gt; <span class="title function_">getFactors</span><span class="params">()</span> &#123;</span><br><span class="line">    Set&lt;Integer&gt; factors = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    factors.add(<span class="number">1</span>);</span><br><span class="line">    factors.add(_number);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt; _number; i++)</span><br><span class="line">      <span class="keyword">if</span> (isFactor(i))</span><br><span class="line">        factors.add(i);</span><br><span class="line">    <span class="keyword">return</span> factors;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isFactor</span><span class="params">(<span class="type">int</span> potential)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> _number % potential == <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> 진약수(자신을 제외한 약수)의 합</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">aliquotSum</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (_cache.get(_number) == <span class="literal">null</span>) &#123;</span><br><span class="line">      <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="type">int</span> i : getFactors())</span><br><span class="line">        sum += i;</span><br><span class="line">      _cache.put(_number, sum - _number);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _cache.get(_number);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> 완전수 여부</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isPerfect</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum() == _number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> 초과수 여부</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isAbundant</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum() &gt; _number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> 부족수 여부</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isDeficient</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum() &lt; _number;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="조금-수정한-코드">조금 수정한 코드</h3>
+<p>위 코드를 함수형으로 조금 변환해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">NumberClassifier</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isFactor</span><span class="params">(<span class="keyword">final</span> <span class="type">int</span> candidate, <span class="keyword">final</span> <span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> number % candidate == <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> Set&lt;Integer&gt; <span class="title function_">factors</span><span class="params">(<span class="keyword">final</span> <span class="type">int</span> number)</span> &#123;</span><br><span class="line">    Set&lt;Integer&gt; factors = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">    factors.add(<span class="number">1</span>);</span><br><span class="line">    factors.add(number);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>; i &lt; number; i++)</span><br><span class="line">      <span class="keyword">if</span> (isFactor(i, number))</span><br><span class="line">        factors.add(i);</span><br><span class="line">    <span class="keyword">return</span> factors;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">aliquotSum</span><span class="params">(<span class="keyword">final</span> Collection&lt;Integer&gt; factors)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> n : factors) &#123;</span><br><span class="line">      sum += n;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum - Collections.max(factors);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isPerfect</span><span class="params">(<span class="keyword">final</span> <span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum(factors(number)) == number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isAbundant</span><span class="params">(<span class="keyword">final</span> <span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum(factors(number)) &gt; number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isDeficient</span><span class="params">(<span class="keyword">final</span> <span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum(factors(number)) &lt; number;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>달라진 부분이 보이시나요? 먼저 클래스 내에 상태를 저장하지 않기 위해서 필드를 없애고 각 메소드에서 <code>number</code> 인자를 받도록 변경했습니다. 따라서 모든 메소드는 필드를 사용하지 않는 static 메소드로 바꿀 수 있고 함수 수준에서 재사용이 쉬워졌습니다.</p>
+<p>하지만 내부에 상태를 저장하지 않기 때문에 캐시가 없기 때문에 성능이 떨어질 수 있습니다. 다음 포스트에서 메모제이션을 통해 상태성을 보존하는 방법을 살펴봅니다.</p>
+<h3 id="함수형-코드">함수형 코드</h3>
+<p>이제 람다를 이용해 함수형 코드로 바꿔봅시다. 훨씬 간결해졌죠?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">NumberClassifierLambda</span> &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> IntStream <span class="title function_">factorsOf</span><span class="params">(<span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> range(<span class="number">1</span>, number + <span class="number">1</span>)</span><br><span class="line">            .filter(potential -&gt; number % potential == <span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">aliquotSum</span><span class="params">(<span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> factorsOf(number).sum() - number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isPerfect</span><span class="params">(<span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum(number) == number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isAbundant</span><span class="params">(<span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum(number) &gt; number;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isDeficient</span><span class="params">(<span class="type">int</span> number)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> aliquotSum(number) &lt; number;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>factorsOf</code>메소드는 스트림을 생성하고 약수만 필터링합니다. 스트림은 종료 작업을 하기 전까지는 계속해서 작업을 할 수 있죠. 여기서는 <code>sum()</code>은 스트림을 종료하고 값을 생성해줍니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9788968482960&amp;orderClick=LAG&amp;Kc=">도서 &lt;함수형 사고&gt;</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/10/05/why-functional-programming/" title="함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가">함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가</a>
+</li>
+<li>
+<a href="/2018/10/07/functional-programming-filter-map-fold-reduce/" title="함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)">함수형 프로그래밍 기초 (2) 필터, 맵, 폴드(리듀스)</a>
+</li>
+<li>함수형 프로그래밍 기초 (3) 클로저와 커링</li>
+<li>함수형 프로그래밍 기초 (4) 메모제이션과 Lazy</li>
+<li>함수형 프로그래밍 기초 (5) 코드 재사용</li>
+<li>함수형 프로그래밍 기초 (6) 함수형 디자인 패턴</li>
+<li>함수형 프로그래밍 기초 (7) 실전 예제</li>
+<li>함수형 프로그래밍 기초 (8) 폴리글랏과 폴리패러다임</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/10/18/service-discovery-in-microservices/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            마이크로서비스 Microservices (4) 서비스 디스커버리
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/10/05/why-functional-programming/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">함수형 프로그래밍 기초 (1) 왜 함수형 프로그래밍인가</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/10/07/functional-programming-filter-map-fold-reduce/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

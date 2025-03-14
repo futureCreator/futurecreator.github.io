@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Java Lambda (2) 타입 추론과 함수형 인터페이스 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-java-lambda-type-inference-functional-interface" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Java Lambda (2) 타입 추론과 함수형 인터페이스
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/20/java-lambda-type-inference-functional-interface/" class="article-date">
+    <time datetime="2018-07-20T08:04:45.000Z" itemprop="datePublished">2018/07/20</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              21 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="타입-추론-Type-Inference">타입 추론 Type Inference</h2>
+<p>타입 추론이란 타입이 정해지지 않은 변수의 타입을 컴파일러가 유추하는 기능입니다. 자바에서는 일반 변수에 대해 차입 추론을 지원하지 않기 때문에 자바에서의 타입 추론은 제네릭과 람다에 대한 타입 추론을 말합니다.</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 일반 변수에 대해 타입 추론을 지원하는 스칼라는 타입 생략 가능</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&quot;Henry&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 자바에서는 타입 생략 불가</span></span><br><span class="line"><span class="type">String</span> name = <span class="string">&quot;Henry&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>제네릭에 대해서는 자바 7에서 다이아몬드 연산자(&lt;&gt;)를 이용해서 타입을 넘겨주지만 자바가 추측하기엔 한계가 있습니다. 자바의 컴파일러는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/tutorial/java/generics/erasure.html">Type Erasure</a> 를 사용하는데, 이는 컴파일할 때 타입 정보를 제거합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 이런 소스는</span></span><br><span class="line">List&lt;String&gt; names</span><br><span class="line"></span><br><span class="line"><span class="comment">// 이렇게 변환됨</span></span><br><span class="line">List&lt;Object&gt; names</span><br></pre></td></tr></table></figure>
+<p>실행 시간에는 모든 것들이 Object 의 인스턴스로 넘어가고 이면에서 적절한 타입으로 캐스팅이 됩니다. 이러한 특성 때문에 런타임에 타입을 체크하는 것이 어렵습니다. 자바는 여전히 제네릭 타입을 추론해야 하지만, 삭제가 되어 필요한 정보를 얻을 수 없습니다. 자바 8에서는 람다를 지원하기 위해 타입 추론이 개선되었는데 조금 더 살펴보겠습니다.</p>
+<h3 id="메소드-호출-시-인자의-타입-추론">메소드 호출 시 인자의 타입 추론</h3>
+<p>자바8 이전에 제네릭 타입의 인자를 넘겨주는 경우 타입 추론이 안되는 경우가 있었습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Collections.emptyList() 의 메소드 시그니쳐</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> &lt;T&gt; List&lt;T&gt; <span class="title function_">emptyList</span><span class="params">()</span> &#123; ... &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 이런 메소드가 있다고 하자</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">processNames</span><span class="params">(List&lt;String&gt; names)</span> &#123;</span><br><span class="line">  <span class="keyword">for</span> (String name : names) &#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Hello &quot;</span> + name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 컴파일러는 제네릭 타입이 String 이라고 유추할 수 있음</span></span><br><span class="line">List&lt;String&gt; names = Collections.emptyList();</span><br><span class="line"></span><br><span class="line">processNames(Collections.emptyList()); <span class="comment">// error in Java 7</span></span><br><span class="line">processNames(Collections.emptyList()); <span class="comment">// OK in Java 7</span></span><br></pre></td></tr></table></figure>
+<p><code>Collections.emptyList()</code> 는 제네릭 타입을 알 수 없기 때문에 <code>List&lt;Object&gt;</code> 타입으로 결과를 리턴하게 됩니다. 따라서 <code>processNames()</code> 의 인자는 타입이 맞지 않아 컴파일 에러가 납니다. 하지만 자바8에서 이것이 개선되어 타입 증거 없이도 인자의 타입을 유추할 수 있게 되었습니다.</p>
+<h3 id="연쇄-메소드-호출-시-인자의-타입-추론">연쇄 메소드 호출 시 인자의 타입 추론</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">List</span>&lt;E&gt; &#123;</span><br><span class="line">  <span class="keyword">static</span> &lt;T&gt; List&lt;T&gt; <span class="title function_">emptyList</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">List</span>&lt;T&gt;();</span><br><span class="line">  &#125;</span><br><span class="line">    </span><br><span class="line">  List&lt;E&gt; <span class="title function_">add</span><span class="params">(E e)</span> &#123;</span><br><span class="line">    <span class="comment">// 요소 추가</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">List&lt;String&gt; list = List.emptyList(); <span class="comment">// OK</span></span><br><span class="line">List&lt;String&gt; list = List.emptyList().add(<span class="string">&quot;:(&quot;</span>); <span class="comment">// error</span></span><br><span class="line">List&lt;String&gt; list = List.&lt;String&gt;emptyList().add(<span class="string">&quot;:(&quot;</span>); <span class="comment">// OK</span></span><br></pre></td></tr></table></figure>
+<p><code>emptyList()</code> 메소드를 호출하면서 타입이 제거되기 때문에 연쇄적으로 호출되는 부분에서 인자를 알아챌 수가 없습니다. 자바 8에서 수정될 예정이었으나 취소되어 여전히 컴파일러에게 명시적으로 타입을 알려줘야 합니다.</p>
+<h2 id="함수형-인터페이스">함수형 인터페이스</h2>
+<p>자바는 람다를 지원하기 위해서 타입 추론을 강화해야 했습니다. 그래서 '함수형 인터페이스’가 나왔습니다. 함수형 인터페이스는 하나의 추상 메소드(<em>Single abstract method</em>, 단일 추상 메소드)로 이루어진 인터페이스인데, 여기서 함수의 시그니쳐가 정의되어 있기 때문에 컴파일러가 이 정보를 참고해서 람다에서 생략된 정보들을 추론할 수 있게 됩니다.</p>
+<h3 id="FunctionalInterface">@FunctionalInterface</h3>
+<p>함수형 인터페이스는 단 하나의 메소드를 가질 수 있습니다. 컴파일러가 미리 체크할 수 있도록 <code>@FunctionalInterface</code> 어노테이션으로 표시해줄 수 있습니다. 기존 JDK 의 Runnable 이나 Callabe 같은 인터페이스들이 이 어노테이션으로 개선되었습니다. 또한 다른 사용자에게 인터페이스의 의도를 설명해줄 수도 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 컴파일 OK</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">FunctionalInterfaceExample</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 추상 메소드가 없으므로 컴파일 에러</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">FunctionalInterfaceExample</span> &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 추상 메소드가 두 개 이상이면 컴파일 에러</span></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">FunctionalInterfaceExample</span> &#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">apply</span><span class="params">()</span>;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">illigal</span><span class="params">()</span>; <span class="comment">// error</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="상속">상속</h3>
+<p>만약 함수형 인터페이스를 상속하는 경우에도 이러한 특성을 그대로 이어받습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">A</span> &#123;</span><br><span class="line">  <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">apply</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 함수형 인터페이스로 동작</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_">A</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 명시적으로 오버라이드 표시 가능</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_">A</span> &#123;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">apply</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 하나의 추상메소드 외에 메소드 추가 불가</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">B</span> <span class="keyword">extends</span> <span class="title class_">A</span> &#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">illegal</span><span class="params">()</span>; <span class="comment">// error</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 함수형 인터페이스에서 정의한대로 람다는 인자가 없고 리턴값이 없는 함수로 사용할 수 있다.</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String... args)</span> &#123;</span><br><span class="line">  <span class="type">A</span> <span class="variable">a</span> <span class="operator">=</span> () -&gt; System.out.println(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">  <span class="type">B</span> <span class="variable">b</span> <span class="operator">=</span> () -&gt; System.out.println(<span class="string">&quot;B&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="람다의-타입-추론">람다의 타입 추론</h3>
+<p>람다는 인자의 타입을 추론할 수 있습니다. 위에서 살펴본 것처럼 함수형 인터페이스가 타입에 대한 정보를 컴파일러에게 제공한 덕분입니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Calculation</span> &#123;</span><br><span class="line">  Integer <span class="title function_">apply</span><span class="params">(Integer x, Integer y)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span> Integer <span class="title function_">calculate</span><span class="params">(Calculation operation, Integer x, Integer y)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> operation.apply(x, y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 람다 생성</span></span><br><span class="line"><span class="type">Calculation</span> <span class="variable">addition</span> <span class="operator">=</span> (x, y) -&gt; x + y;</span><br><span class="line"><span class="type">Calculation</span> <span class="variable">subtraction</span> <span class="operator">=</span> (x, y) -&gt; x - y;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 사용</span></span><br><span class="line">calculate(addition, <span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">calculate(substraction, <span class="number">5</span>, calculate(addition, <span class="number">3</span>, <span class="number">2</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="예외">예외</h3>
+<p><code>@FunctionalInterface</code> 에는 하나의 메소드만 작성할 수 있다고 했는데, 여기에는 예외가 있습니다.</p>
+<ul>
+<li><code>Object</code> 클래스의 메소드를 오버라이드하는 경우</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">디폴트 메소드</a></li>
+<li>스태틱 메소드</li>
+</ul>
+<p>예를 들어 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html">Comparator</a> 의 경우 <code>@FunctionalInterface</code> 인데 메소드가 많이 있습니다. 살펴보면 디폴트 메소드, 스태틱 메소드, Object 오버라이드한 메소드가 있고 추상 메소드의 경우는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#compare-T-T-">compare 메소드</a> 하나 뿐입니다</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.naver.com/2feelus/220655685560">자바 타입 추론에 대한 논의 (Type Inference for Java)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;barcode=9791161750378&amp;OV_REFFER=http://click.linkprice.com/click.php?m=kbbook&amp;a=A100532541&amp;l=9999&amp;l_cd1=0&amp;u_id=jjtlu78nwo016iuh02yqe&amp;l_cd2=0&amp;tu=http%3A%2F%2Fwww.kyobobook.co.kr%2Fproduct%2FdetailViewKor.laf">도서 &lt;자바 람다 배우기&gt;</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://medium.com/asuraiv/java-type-erasure%EC%9D%98-%ED%95%A8%EC%A0%95-ba9205e120a3">[JAVA] Type Erasure의 함정</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/07/19/java-lambda-basics/" title="Java Lambda (1) 기본">Java Lambda (1) 기본</a>
+</li>
+<li>
+<a href="/2018/07/20/java-lambda-type-inference-functional-interface/" title="Java Lambda (2) 타입 추론과 함수형 인터페이스">Java Lambda (2) 타입 추론과 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-method-references/" title="Java Lambda (3) 메소드 참조">Java Lambda (3) 메소드 참조</a>
+</li>
+<li>
+<a href="/2018/08/02/java-jdk-functional-interfaces-api/" title="Java Lambda (4) 기본으로 제공되는 함수형 인터페이스">Java Lambda (4) 기본으로 제공되는 함수형 인터페이스</a>
+</li>
+<li>
+<a href="/2018/08/02/java-lambda-variable-scope/" title="Java Lambda (5) 변수 범위">Java Lambda (5) 변수 범위</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-handling-exception/" title="Java Lambda (6) 예외 처리">Java Lambda (6) 예외 처리</a>
+</li>
+<li>
+<a href="/2018/08/09/java-lambda-and-closure/" title="Java Lambda (7) 람다와 클로저">Java Lambda (7) 람다와 클로저</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/01/installation-mysql-5-7-binary-tar-gz/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            변경된 MySQL 설치 방법 (5.7 이상)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/20/what-are-the-best-markdown-editor/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">최고의 마크다운 에디터는? (macOS/Windows)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/20/java-lambda-type-inference-functional-interface/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

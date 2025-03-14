@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Spark 아파치 스파크 (1) 소개 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/08/14/apache-spark-basic/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Spark/">Spark</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-apache-spark-basic" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Spark 아파치 스파크 (1) 소개
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/08/14/apache-spark-basic/" class="article-date">
+    <time datetime="2018-08-14T13:07:06.000Z" itemprop="datePublished">2018/08/14</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              9 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://spark.apache.org/">아파치 스파크(Apache Spark)</a> 스터디를 위해 정리한 자료입니다.</p>
+<h2 id="하둡-Hadoop">하둡 Hadoop</h2>
+<p>빅 데이터 처리나 데이터 분석 쪽에는 지식이 없어 하둡부터 간단하게 알아봤습니다.</p>
+<p><img src="http://toppertips.com/wp-content/uploads/2018/03/Hadoop-1.0-to-3.0-History-768x396.png" alt="http://toppertips.com/hadoop-3-0-architecture/"></p>
+<h3 id="동작-원리">동작 원리</h3>
+<p>하둡 프레임워크는 파일 시스템인 HDFS(<em>Hadoop Distributed File System</em>)과 데이터를 처리하는 맵리듀스(<em>MapReduce</em>) 엔진을 합친 것으로 대규모 클러스터 상의 데이터 처리를 다음과 같은 방식으로 단순화합니다.</p>
+<ol>
+<li>잡을 잘게 분할하고 클러스터의 모든 노드로 매핑(<em>map</em>)</li>
+<li>각 노드는 잡을 처리한 중간결과를 생성하고</li>
+<li>분할된 중간 결과를 집계(<em>reduce</em>)해서 최종 결과를 낸다.</li>
+</ol>
+<p>이를 통해서 데이터를 여러 노드로 분산(<em>distribution</em>)하고 전체 연산을 잘게 나누어 동시에 처리하는 병렬 처리(<em>parallelization</em>)가 가능하고,  부분적으로 장애가 발생할 경우 전체 시스템은 동작할 수 있는 장애 내성(<em>fault tolerance</em>)을 갖는 시스템을 만들 수 있습니다.</p>
+<p>맵리듀스의 핵심은 최소한의 API(<code>map</code>과 <code>reduce</code>) 만 노출해 대규모 분산 시스템을 다루는 복잡한 작업을 감추고, 병렬 처리를 프로그래밍적 방법으로 지원하는 점입니다. 또한 다루는 데이터가 크기 때문에 데이터를 가져와서 처리하는 것이 아니라, 데이터가 저장된 곳으로 프로그램을 전송합니다. 이 점이 바로 기존 데이터 웨어하우스 및 관계형 데이터베이스와 맵리듀스의 가장 큰 차이점입니다.</p>
+<h3 id="한계">한계</h3>
+<ul>
+<li>맵리듀스 잡의 결과를 다른 잡에서 사용하려면 이 결과를 HDFS 에 저장해야 하기 때문에, 이전 잡의 결과가 다음 잡의 입력이 되는 반복 알고리즘에는 본질적으로 맞지 않습니다.</li>
+<li>나눴다가 다시 합치는 하둡의 2단계 패러다임을 적용하기 경우가 있습니다.</li>
+<li>하둡은 low-level 프레임워크이다 보니 데이터를 조작하는 high-level 프레임워크나 도구가 많아 환경이 복잡해졌습니다.</li>
+</ul>
+<h2 id="스파크-Spark">스파크 Spark</h2>
+<p><img src="http://backtobazics.com/wp-content/themes/twentyfourteen/images/spark/spark-architecture-and-ecosystem.png" alt="http://backtobazics.com/big-data/spark/understanding-apache-spark-architecture/"></p>
+<h3 id="기능">기능</h3>
+<p>빅데이터 애플리케이션에 필요한 대부분의 기능을 지원합니다.</p>
+<ul>
+<li>맵리듀스와 유사한 일괄 처리 기능</li>
+<li>실시간 데이터 처리 기능 (<em>Spark Streaming</em>)</li>
+<li>SQL과 유사한 정형 데이터 처리 기능 (<em>Spark SQL</em>)</li>
+<li>그래프 알고리즘 (<em>Spark GraphX</em>)</li>
+<li>머신 러닝 알고리즘 (<em>Spark MLlib</em>)</li>
+</ul>
+<h3 id="장점">장점</h3>
+<p>스파크는 메모리 효율을 높여서 하둡의 맵리듀스보다 10~100배 빠르게 설계되었습니다. 맵리듀스처럼 잡에 필요한 데이터를 디스크에 매번 가져오는 대신, 데이터를 메모리에 캐시로 저장하는 인-메모리 실행 모델로 비약적인 성능을 향상시켰습니다. 이러한 성능 향상은 특히 머신 러닝, 그래프 알고리즘 등 반복 알고리즘과 기타 데이터를 재사용하는 모든 유형의 작업에 많은 영향을 줍니다.</p>
+<p>사용자가 클러스터를 다루고 있다는 사실을 인지할 필요가 없도록 설계된 컬렉션 기반의 API 제공합니다. 또한 맵리듀스는 기본적으로 메인, 매퍼, 리듀스 클래스 세 가지를 만들어야 하지만 스파크는 동일한 문제를 간단한 코드로 짤 수 있습니다.</p>
+<p>로컬 프로그램을 작성하는 것과 유사한 방식으로 분산 프로그램을 작성할 수 있습니다. 그리고 여러 노드에 분산된 데이터를 참조하고 복잡한 병렬 프로그래밍으로 자동 변환됩니다.</p>
+<p>스칼라, 자바, 파이썬, R 을 지원합니다. 특히 스칼라를 사용하면 융통성, 유연성, 데이터 분석에 적합한 함수형 프로그래밍 개념을 사용할 수 있습니다.</p>
+<p>대화형 콘솔인 스파크 shell(<em>Read-Eval-Print Loop, REPL</em>)을 이용해 간단한 실험을 하거나 테스트를 할 수 있습니다. 프로그램 문제를 테스트하기 위해 컴파일과 배포를 반복하지 않아도 되며, 전체 데이터를 처리하는 작업도 REPL에서 처리할 수 있습니다.</p>
+<p>스파크는 다양한 유형의 클러스터 매니저를 사용할 수 있다. 스파크 standalone 클러스터, 하둡 YARN(<em>Yet Another Resource Negotiator</em>) 클러스터, 아파치 메소스(<em>Mesos</em>) 클러스터 등을 사용할 수 있습니다.</p>
+<p>일괄 처리 작업이나 데이터 마이닝 같은 온라인 분석 처리 (<em>Online Analytical Processing, OLAP</em>)에 유용합니다.</p>
+<h3 id="단점">단점</h3>
+<p>데이터 셋이 적어서 단일 노드로 충분한 애플리케이션에서 스파크는 분산 아키텍처로 인해 오히려 성능이 떨어집니다. 또한 대량의 트랜잭션을 빠르게 처리해야 하는 애플리케이션은 스파크가 온라인 트랜잭션 처리를 염두에 두고 설계되지 않았기 때문에 유용하지 않습니다.</p>
+<h2 id="컴포넌트">컴포넌트</h2>
+<h3 id="Spark-Core">Spark Core</h3>
+<ul>
+<li>스파크 잡과 다른 스파크 컴포넌트에 필요한 기본 기능을 제공합니다.</li>
+<li>특히 분산 데이터 컬렉션(데이터셋)을 추상화한 객체인 RDD(<em>Resilent Distributed Dataset</em>)로 다양한 연산 및 변환 메소드를 제공합니다. RDD 는 노드에 장애가 발생해도 데이터셋을 재구성할 수 있는 복원성을 가지고 있습니다.</li>
+<li>스파크 코어는 HDFS, GlusterFS, 아마존 S3 등 다양한 파일 시스템에 접근할 수 있습니다.</li>
+<li>공유 변수(<em>broadcast variable</em>)와 누적 변수(<em>accumulator</em>)를 사용해 컴퓨팅 노드 간 정보 공유합니다.</li>
+<li>스파크 코어에는 네트워킹, 보안, 스케쥴링 및 데이터 셔플링(<em>shuffling</em>) 등 기본 기능을 제공합니다.</li>
+</ul>
+<h3 id="Spark-SQL">Spark SQL</h3>
+<ul>
+<li>스파크와 하이브 SQL 이 지원하는 SQL 을 사용해 대규모 분산 정형 데이터를 다룰 수 있습니다.</li>
+<li>JSON 파일, Parquet 파일, RDB 테이블, 하이브 테이블 등 다양한 정형 데이터를 읽고 쓸 수 있습니다.</li>
+<li>DataFraem 과 Dataset 에 적용된 연산을 일정 시점에 RDD 연산으로 변환해 일반 스파크 잡으로 실행 합니다.</li>
+</ul>
+<h3 id="Spark-Streaming">Spark Streaming</h3>
+<ul>
+<li>실시간 스트리밍 데이터를 처리하는 프레임워크입니다.</li>
+<li>HDFS, 아파치 카프카(<em>Kafka</em>), 아파치 플럼(<em>Flume</em>), 트위터, ZeroMQ 와 더불어 커스텀 리소스도 사용할 수 있습니다.</li>
+<li>이산 스트림(<em>Discretized Stream, DStream</em>) 방식으로 스트리밍 데이터를 표현하는데, 가장 마지막 타임 윈도 안에 유입된 데이터를 RDD 로 구성해 주기적으로 생성합니다.</li>
+<li>다른 스파크 컴포넌트와 함께 사용할 수 있어 실시간 데이터 처리를 머신 러닝 작업, SQL 작업, 그래프 연산 등을 통합할 수 있습니다.</li>
+</ul>
+<h3 id="Spark-MLlib">Spark MLlib</h3>
+<ul>
+<li>머신 러닝 알고리즘 라이브러리입니다.</li>
+<li>RDD 또는 DataFrame 의 데이터셋을 변환하는 머신 러닝 모델을 구현할 수 있습니다.</li>
+</ul>
+<h3 id="Spark-GraphX">Spark GraphX</h3>
+<ul>
+<li>그래프는 정점과 두 정점을 잇는 간선으로 구성된 데이터 구조입니다.</li>
+<li>그래프 RDD(EdgeRDD 및 VertexRDD) 형태의 그래프 구조를 만들 수 있는 기능을 제공합니다.</li>
+</ul>
+<h2 id="Spark-Ecosystem">Spark Ecosystem</h2>
+<p>기존 하둡의 생태계(<em>ecosystem</em>)는 다음과 같습니다.</p>
+<p><img src="http://www.bogotobogo.com/Hadoop/images/Ecosystem/Hadoop_Ecosystem3.png" alt="http://www.bogotobogo.com/Hadoop/BigData_hadoop_Ecosystem.php"></p>
+<h3 id="데이터-변환-및-조작하는-함수를-제공하는-분석-도구">데이터 변환 및 조작하는 함수를 제공하는 분석 도구</h3>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://mahout.apache.org/">Apache Mahout</a> : 스케일러블한 머신 러닝 프레임워크</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://giraph.apache.org/">Apache Giraph</a> : 빅데이터 그래프 프로세싱</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://pig.apache.org/">Apache Pig</a> : 대용량 데이터 분석 플랫폼</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hive.apache.org/">Apache Hive</a> : 데이터 웨어하우스</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://drill.apache.org/">Apache Drill</a> : 대규모 데이터의 SQL 분석 제공</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://impala.apache.org/">Apache Impala</a> : SQL 병렬 처리 엔진</li>
+</ul>
+<h3 id="클러스터-관리-도구">클러스터 관리 도구</h3>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ambari.apache.org/">Apache Ambari</a> : 클러스터 관리 도구 (프로비저닝, 관리, 모니터링 등)</li>
+</ul>
+<h3 id="하둡과-다른-시스템-간-데이터-전송하는-인터페이스-도구">하둡과 다른 시스템 간 데이터 전송하는 인터페이스 도구</h3>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://sqoop.apache.org/">Apache Sqoop</a> : 하둡과 다른 데이터 저장소 간 대용량 데이터 전송</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://flume.apache.org/">Apache Flume</a> : 대용량 로그 데이터를 수집</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://chukwa.apache.org/">Apache Chukwa</a> : 대용량 로그 데이터 수집 및 분석
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://groups.google.com/a/cloudera.org/forum/#!topic/flume-user/BMtsyGedcPo">Flume comparison to Chukwa</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://storm.apache.org/">Apache Storm</a> : 실시간 데이터 처리</li>
+</ul>
+<h3 id="기본적인-데이터-스토리지-동기화-스케줄링-등을-제공하는-인프라도구">기본적인 데이터 스토리지, 동기화, 스케줄링 등을 제공하는 인프라도구</h3>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://oozie.apache.org/">Apache Oozie</a> : 워크플로우 스케쥴러</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hbase.apache.org/">Apache HBase</a> : 비관계형(<em>non-relational</em>) 분산(<em>distributed</em>) 데이터베이스</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://zookeeper.apache.org/">Apache Zookeeper</a> : 분산된 시스템을 관리하는 코디네이션 서비스(<em>coordination service</em>)</li>
+</ul>
+<h3 id="스파크로-대체할-수-있는-기능">스파크로 대체할 수 있는 기능</h3>
+<ul>
+<li>그래프 프로세싱 Giraph -&gt; Spark GraphX</li>
+<li>머신러닝 Mahout -&gt; Spark MLlib</li>
+<li>실시간 데이터 처리 Storm -&gt; Spark Streaming (2.2.1 이하는 완벽 대체 불가)</li>
+<li>데이터 분석 Pig, 데이터 전송 Sqoop -&gt; Spark Core 와 Spark SQL 로 대체</li>
+<li>SQL 관련 Impala, Drill -&gt; Spark SQL 을 포괄하는 기능으로 함께 사용할 수 있음</li>
+<li>인프라 관련 도구는 대체할 수 없음</li>
+</ul>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&amp;mallGb=KOR&amp;barcode=9791160504798&amp;orderClick=LEA&amp;Kc=">도서 &lt;스파크를 다루는 기술 Spark in Action&gt;</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/08/26/java-8-streams/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Java 스트림 Stream (1) 총정리
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/08/14/java-8-optional/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java 8 옵셔널 Optional</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/08/14/apache-spark-basic/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

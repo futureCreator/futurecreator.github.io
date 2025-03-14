@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2016/06/16/opengraph-social-meta-tag/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-opengraph-social-meta-tag" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/16/opengraph-social-meta-tag/" class="article-date">
+    <time datetime="2016-06-16T00:48:32.000Z" itemprop="datePublished">2016/06/16</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              36 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="오픈-그래프-Open-Graph-태그">오픈 그래프 (Open Graph) 태그</h2>
+<p>이번 포스팅에서는 오픈 그래프 태그에 대해 알아보겠습니다.</p>
+<p><img src="/images/facebook/facebook_example.png" alt="https://developers.facebook.com/tools/debug/sharing"></p>
+<p>우리가 보통 페이스북이나 카카오톡에서 웹 사이트 URL을 공유할 때를 생각해봅시다. 그러면 해당 URL의 제목, 이미지, 내용 등이 미리보기 형식으로 잘 보이는 페이지가 있는 반면, 어떤 사이트는 이미지가 없거나 이상한 이미지가 잡히고 내용도 제대로 보이지 않는 미리보기가 표시됩니다. 두 차이는 바로 오픈 그래프 태그에 있습니다.</p>
+<p>한 마디로 표현하자면 <strong>웹 사이트의 URL 링크 공유 시 미리보기를 만들 때 사용하는 태그입</strong>니다. 페이스북에서 정의한 메타 태그라고 합니다. 현재는 페이스북 뿐만 아니라 트위터, 카카오톡 등 다양한 곳에서 사용되고 있습니다.</p>
+<p>잘 만든 블로그를 공유할 때 미리보기가 이상하다면 클릭하지 않을 확률이 높겠죠? 최적화된 품질로 표시될 수 있도록 메타 태그를 손봐야합니다.</p>
+<h2 id="확인하기">확인하기</h2>
+<p>먼저 현재 페이지는 어떻게 되어있는지 살펴보겠습니다.</p>
+<h3 id="브라우저의-개발자-도구">브라우저의 개발자 도구</h3>
+<p>크롬 브라우저에서 마우스 오른쪽 클릭해서 <strong>검사</strong>를 눌러서 맨 위쪽의 <code>&lt;head&gt;</code> 태그를 살펴봅시다. 다음은 제 포스트 소스 중 일부입니다. 이름, 태그, 키워드, 설명 등 해당 페이지에 대한 내용들이 담겨 있습니다. 웹 페이지를 수집하는 검색 엔진 크롤러가 이런 메타태그를 참조해서 페이지를 분석하게 됩니다. 이런 메타 태그 중에 property 가 og인 태그들이 있습니다. 또 twitter나 facebook 으로 되어있는 것들도 있네요. 바로 우리가 찾던 오픈 그래프 태그입니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;keywords&quot;</span> <span class="attr">content</span>=<span class="string">&quot;web,blog,google,search,analytics&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다.</span></span></span><br><span class="line"><span class="string"><span class="tag">검색 최적화구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;article&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:title&quot;</span> <span class="attr">content</span>=<span class="string">&quot;구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:url&quot;</span> <span class="attr">content</span>=<span class="string">&quot;http://futurecreator.github.io/2016/06/15/hexo-google-site-serach-console-analytics/index.html&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:site_name&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Writer, IT Blog&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다.</span></span></span><br><span class="line"><span class="string"><span class="tag">검색 최적화구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:image&quot;</span> <span class="attr">content</span>=<span class="string">&quot;http://futurecreator.github.io/images/google_search/analytics.png&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:updated_time&quot;</span> <span class="attr">content</span>=<span class="string">&quot;2016-06-15T10:28:42.000Z&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:card&quot;</span> <span class="attr">content</span>=<span class="string">&quot;summary&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:title&quot;</span> <span class="attr">content</span>=<span class="string">&quot;구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다.</span></span></span><br><span class="line"><span class="string"><span class="tag">검색 최적화구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:image&quot;</span> <span class="attr">content</span>=<span class="string">&quot;http://futurecreator.github.io/images/google_search/analytics.png&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:creator&quot;</span> <span class="attr">content</span>=<span class="string">&quot;@future_go&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;fb:admins&quot;</span> <span class="attr">content</span>=<span class="string">&quot;100001774570174&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;canonical&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://futurecreator.github.io/2016/06/15/hexo-google-site-serach-console-analytics/&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/images/favicon.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="페이스북-URL-디버거">페이스북 URL 디버거</h3>
+<p>페이스북 크롤러가 우리 페이지를 어떻게 볼 지, 다른 사람들에게 공유할 때 어떻게 보일지 미리보는 사이트가 있습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developers.facebook.com/tools/debug/sharing/">페이스북 URL 디버거</a> 를 사용하면 개발자 도구로 소스를 열어보는 것보다 오픈 그래프 태그를 쉽게 분석할 수 있습니다.</p>
+<p><img src="/images/facebook/opengraph_debug.png" alt="https://developers.facebook.com/tools/debug/sharing/"></p>
+<p>URL을 입력하고 디버깅을 시작하면 해당 페이지의 미리보기도 나오고, 메타 태그만 뽑아서 보여줍니다. 수정해야할 부분이 있다면 경고를 통해 알려주니 참고해서 수정하시면 됩니다.</p>
+<h3 id="기본적인-오픈-그래프-태그">기본적인 오픈 그래프 태그</h3>
+<p>수정하기 전에 기본적인 오픈 그래프 태그만 간략하게 살펴보겠습니다.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>og:url</td>
+<td>페이지의 표준 URL (데스크탑 URL)</td>
+</tr>
+<tr>
+<td>og:title</td>
+<td>콘텐츠 제목</td>
+</tr>
+<tr>
+<td>og:description</td>
+<td>콘텐츠 설명. 미리보기에서 제목 아래에 표시</td>
+</tr>
+<tr>
+<td>og:site_name</td>
+<td>웹 사이트의 이름 (주소 아님)</td>
+</tr>
+<tr>
+<td>og:image</td>
+<td>콘텐츠를 공유 시 표시되는 이미지의 URL</td>
+</tr>
+<tr>
+<td>fb:app_id</td>
+<td>페이스북 인사이트를 사용하기 위한 앱 아이디</td>
+</tr>
+<tr>
+<td>fb:admins</td>
+<td>웹 사이트용 도메인 인사이트를 사용하기 위한 아이디</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Hexo-에서-오픈-그래프-태그-추가하기">Hexo 에서 오픈 그래프 태그 추가하기</h2>
+<p>다행히 Hexo 와 Hueman 테마에서 웬만한 오픈 그래프 태그는 자동으로 만들어줍니다. 소스를 까보시면 헤더 쪽에 다음과 같은 함수로 오픈 그래프 태그를 생성하고 있습니다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="title function_">open_graph</span>([options]) %&gt;</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>title</td>
+<td>페이지 제목 (og:title)</td>
+<td>page.title</td>
+</tr>
+<tr>
+<td>type</td>
+<td>페이지 타입 (og:type)</td>
+<td>blog</td>
+</tr>
+<tr>
+<td>url</td>
+<td>페이지 URL (og:url)</td>
+<td>url</td>
+</tr>
+<tr>
+<td>image</td>
+<td>페이지 커버 이미지 (og:image)</td>
+<td>첫번째 이미지</td>
+</tr>
+<tr>
+<td>site_name</td>
+<td>사이트 이름 (og:site_name)</td>
+<td>config.title</td>
+</tr>
+<tr>
+<td>description</td>
+<td>페이지 설명 (og:desription)</td>
+<td>내용의 200자</td>
+</tr>
+<tr>
+<td>twitter_card</td>
+<td>트위터 카드 타입 (twitter:card)</td>
+<td>summary</td>
+</tr>
+<tr>
+<td>twitter_id</td>
+<td>트위터 아이디 (twitter:creator)</td>
+<td></td>
+</tr>
+<tr>
+<td>twitter_site</td>
+<td>트위터 사이트 (twitter:site)</td>
+<td></td>
+</tr>
+<tr>
+<td>google_plus</td>
+<td>Google+ 프로필 링크</td>
+<td></td>
+</tr>
+<tr>
+<td>fb_admins</td>
+<td>Facebook admin ID</td>
+<td></td>
+</tr>
+<tr>
+<td>fb_app_id</td>
+<td>Facebook App ID</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Hueman 테마에서는 <code>_config.yml</code> 에서 오픈 그래프 태그 관련 옵션을 줄 수 있습니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Miscellaneous</span></span><br><span class="line"><span class="attr">miscellaneous:</span></span><br><span class="line">    <span class="attr">open_graph:</span> <span class="comment"># see http://ogp.me</span></span><br><span class="line">        <span class="attr">fb_app_id:</span></span><br><span class="line">        <span class="attr">fb_admins:</span></span><br><span class="line">        <span class="attr">twitter_id:</span></span><br><span class="line">        <span class="attr">google_plus:</span></span><br></pre></td></tr></table></figure>
+<h3 id="트위터-구글-플러스">트위터, 구글 플러스</h3>
+<p>트위터와 구글 플러스 아이디를 넣으면 관련 태그를 자동으로 생성해서 넣어줍니다. 제 트위터 아이디인 <code>@future_go</code> 를 입력하면 다음과 같은 태그가 생성됩니다. <code>@</code> 는 제외하고 입력합니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:card&quot;</span> <span class="attr">content</span>=<span class="string">&quot;summary&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:title&quot;</span> <span class="attr">content</span>=<span class="string">&quot;구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;이번 포스팅에서는 구글에서 우리 Hexo 블로그가 잘 검색되도록 해보겠습니다. 일단 사이트부터 등록을 하고 검색엔진 최적화를 위한 다양한 기술을 살펴보겠습니다.</span></span></span><br><span class="line"><span class="string"><span class="tag">검색 최적화구글이나 네이버는 수많은 웹사이트를 수집해서 검색 시 결과를 보여줍니다. 이렇게 수집하는 작업을 크롤링이라고 합니다. 아무리 열심히 쓰고 내용이 좋다 하더라도 검색이 안되서 조회수가 없&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:image&quot;</span> <span class="attr">content</span>=<span class="string">&quot;http://futurecreator.github.io/images/google_search/analytics.png&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:creator&quot;</span> <span class="attr">content</span>=<span class="string">&quot;@future_go&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>저는 구글 플러스를 사용하지 않아서 입력하지 않았지만, 구글 플러스도 마찬가지로 아이디를 입력하면 관련된 메타 태그를 생성해줍니다.</p>
+<h3 id="페이스북-도메인-인사이트-Facebook-Domain-Insight">페이스북 도메인 인사이트 (Facebook Domain Insight)</h3>
+<p>이제 페이스북 관련 태그를 넣어봅시다. 페이스북 AppId 와 admins 라는 항목이 있는데 이걸 넣지 않아도 공유할 때는 문제가 없습니다. 이건 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.facebook.com/insights">페이스북 인사이트</a> 라는 서비스를 위한 항목입니다. 구글 애널리틱스 (Google Analytics) 처럼 페이스북 상에서 공유되는 내 웹사이트의 통계를 내주는 서비스입니다.</p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.facebook.com/insights">페이스북 인사이트</a> 에 접속하시면 앱과 페이지, 도메인 세 가지 종류가 있습니다. 우리는 외부 사이트이므로 도메인 인사이트에 <strong>도메인 추가</strong> 로 우리의 사이트를 등록합니다.</p>
+<p><img src="/images/facebook/add_domain_insight.png" alt="https://www.facebook.com/insights"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;fb:admins&quot;</span> <span class="attr">content</span>=<span class="string">&quot;12345678&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>사이트 추가를 누르면 위와 화면 처럼 메타 태그에 입력하라고 <code>fb:admins</code> 고유번호가 표시됩니다. 사이트를 입력하고 고유 번호는 복사해서 <code>_config.yml</code> 에 붙여넣습니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">miscellaneous:</span></span><br><span class="line">    <span class="attr">open_graph:</span> <span class="comment"># see http://ogp.me</span></span><br><span class="line">        <span class="attr">fb_app_id:</span> <span class="comment"># 앱인 경우</span></span><br><span class="line">        <span class="attr">fb_admins:</span> <span class="number">12345678</span> <span class="comment"># 도메인인 경우</span></span><br></pre></td></tr></table></figure>
+<p>대시보드에서 등록한 URL을 누르면 페이스북 인사이트라는 통계 서비스를 사용할 수 있습니다. 저는 페이스북을 거의 하지 않지만, 언젠가 페이스북에서 제 사이트가 돌아다니는 걸 봤으면 좋겠네요 ㅎㅎ</p>
+<h2 id="홈페이지의-메인-사진이-없다">홈페이지의 메인 사진이 없다?</h2>
+<p>그런데 공유를 하려고 보니, 포스트의 경우 해당 포스트의 이미지가 미리보기에 잘 표시가 되는데 홈페이지의 경우 해당하는 이미지가 없어서 미리보기에 아무것도 표시되질 않더군요. 수정하려고 홈페이지에 이미지를 여기저기 넣어봤지만 먹질 않았습니다. 결국 코드를 까볼 수 밖에 없었죠.</p>
+<p>메타 태그를 만드는 부분을 찾아봅시다. Hueman 테마에서는 <code>head.ejs</code> 에서 <code>open_graph()</code> 함수를 이용해서 오픈 그래프 태그를 만들고 있었습니다. 'head.ejs<code>는 저번 포스트에서 대표 URL 메타 태그를 자동으로 추가할 때 잠깐 봤었죠. 오픈 그래프 함수를 보시면 thumbail 이라는 함수를 통해</code><a href="og:image" rel="external nofollow noopener noreferrer" target="_blank">og:image</a>` 태그를 만들고 있습니다.</p>
+<figure class="highlight js"><figcaption><span>head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- <span class="title function_">open_graph</span>(&#123;</span><br><span class="line">          <span class="attr">image</span>:          <span class="title function_">thumbnail</span>(page),</span><br><span class="line">          <span class="attr">fb_app_id</span>:      theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">fb_app_id</span>,</span><br><span class="line">          <span class="attr">fb_admins</span>:      theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">fb_admins</span>,</span><br><span class="line">          <span class="attr">twitter_id</span>:     theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">twitter_id</span>,</span><br><span class="line">          <span class="attr">google_plus</span>:    theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">google_plus</span>,</span><br><span class="line">      &#125;) %&gt;</span><br></pre></td></tr></table></figure>
+<p><code>thumbnail</code> 은 Hueman 테마에서 사용하는 자체적인 함수군요. 여기서 보면 post 변수가 넘어오는데 여기서 thumbnail 이 없으면 이미지 태그를 검색해서 thumbnail 을 만들어줍니다. 이미지도 없으면 빈 스트링을 리턴하는데, 우리의 홈페이지가 이 경우에 해당하겠네요.</p>
+<figure class="highlight javascript"><figcaption><span>thumbnail.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* Thumbnail Helper</span></span><br><span class="line"><span class="comment">* <span class="doctag">@description</span> Get the thumbnail url from a post</span></span><br><span class="line"><span class="comment">* <span class="doctag">@example</span></span></span><br><span class="line"><span class="comment">*     &lt;%- thumbnail(post) %&gt;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">helper</span>.<span class="title function_">register</span>(<span class="string">&#x27;thumbnail&#x27;</span>, <span class="keyword">function</span> (<span class="params">post</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> url = post.<span class="property">thumbnail</span> || <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="keyword">if</span> (!url) &#123;</span><br><span class="line">        <span class="keyword">var</span> imgPattern = <span class="regexp">/\&lt;img\s.*?\s?src\s*=\s*[&#x27;|&quot;]?([^\s&#x27;&quot;]+).*?\&gt;/ig</span>;</span><br><span class="line">        <span class="keyword">var</span> result = imgPattern.<span class="title function_">exec</span>(post.<span class="property">content</span>);</span><br><span class="line">        <span class="keyword">if</span> (result &amp;&amp; result.<span class="property">length</span> &gt; <span class="number">1</span>) &#123;</span><br><span class="line">            url = result[<span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(url.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> pattern = <span class="regexp">/^[\\&#123;0,1&#125;\/&#123;0,1&#125;]([^\/^\\]+)/</span>,</span><br><span class="line">                pattern_ = <span class="regexp">/([^\/^\\]+)/</span>;</span><br><span class="line">            <span class="keyword">if</span> ((ret = pattern.<span class="title function_">exec</span>(url)) != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(ret[<span class="number">0</span>].<span class="property">length</span> == url.<span class="property">length</span>) &#123;</span><br><span class="line">                    url = post.<span class="property">path</span> + ret[<span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((ret = pattern_.<span class="title function_">exec</span>(url)) != <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(ret[<span class="number">0</span>].<span class="property">length</span> == url.<span class="property">length</span>) &#123;</span><br><span class="line">                    url = post.<span class="property">path</span> + ret[<span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> url;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>그래서 <code>thumbnail.ejs</code> 에서 thumbnail url 이 없으면 카메라 모양의 이미지로 표시하게 됩니다.</p>
+<figure class="highlight js"><figcaption><span>thumbnail.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">&quot;&lt;%- url_for(post.link ? post.link : post.path) %&gt;&quot;</span> <span class="keyword">class</span>=<span class="string">&quot;thumbnail&quot;</span>&gt;</span><br><span class="line">    &lt;% <span class="keyword">var</span> thumbnailUrl = <span class="title function_">thumbnail</span>(post) %&gt;</span><br><span class="line">    &lt;% <span class="keyword">if</span> (thumbnailUrl) &#123; %&gt;</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;background-image:url(&lt;%- thumbnailUrl %&gt;)&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&lt;%= post.title %&gt;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;thumbnail-image&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">    &lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">        <span class="language-xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;thumbnail-image thumbnail-none&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">    &lt;% <span class="keyword">if</span> (<span class="title function_">typeof</span>(counter) !== <span class="string">&#x27;undefined&#x27;</span> &amp;&amp; counter) &#123; %&gt;</span><br><span class="line">        &lt;%- <span class="title function_">partial</span>(<span class="string">&#x27;comment/counter&#x27;</span>) %&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>이 문제를 해결하기 위한 방법은 여러가지가 있을 수 있겠지만, <code>thumbnail.js</code> 를 변경하기 보다는 그냥 <code>head.ejs</code>를 수정하는게 낫겠네요. 홈페이지인 경우에 <code>thumbnail()</code> 함수를 타지 않고 특정 이미지를 넣도록 수정하겠습니다.</p>
+<figure class="highlight js"><figcaption><span>head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (<span class="title function_">is_home</span>()) &#123; %&gt;</span><br><span class="line">      &lt;%- <span class="title function_">open_graph</span>(&#123;</span><br><span class="line">            <span class="attr">image</span>:          <span class="string">&#x27;/images/keyboard.JPG&#x27;</span>,</span><br><span class="line">            <span class="attr">fb_app_id</span>:      theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">fb_app_id</span>,</span><br><span class="line">            <span class="attr">fb_admins</span>:      theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">fb_admins</span>,</span><br><span class="line">            <span class="attr">twitter_id</span>:     theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">twitter_id</span>,</span><br><span class="line">            <span class="attr">google_plus</span>:    theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">google_plus</span>,</span><br><span class="line">        &#125;) %&gt;</span><br><span class="line">    &lt;% &#125; <span class="keyword">else</span> &#123; %&gt;</span><br><span class="line">    &lt;%- <span class="title function_">open_graph</span>(&#123;</span><br><span class="line">          <span class="attr">image</span>:          <span class="title function_">thumbnail</span>(page),</span><br><span class="line">          <span class="attr">fb_app_id</span>:      theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">fb_app_id</span>,</span><br><span class="line">          <span class="attr">fb_admins</span>:      theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">fb_admins</span>,</span><br><span class="line">          <span class="attr">twitter_id</span>:     theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">twitter_id</span>,</span><br><span class="line">          <span class="attr">google_plus</span>:    theme.<span class="property">miscellaneous</span>.<span class="property">open_graph</span>.<span class="property">google_plus</span>,</span><br><span class="line">      &#125;) %&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+<p><code>/images/keyboard.JPG</code> 라고 표시된 경로에 본인이 원하는 URL을 입력하시면 되겠습니다.</p>
+<p>그럼 다시 배포를 하고 확인해봅시다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>이제 홈페이지도 이미지가 제대로 나옵니다.</p>
+<p><img src="/images/facebook/facebook_debug_writer.jpg" alt="https://developers.facebook.com/tools/debug/sharing"></p>
+<p>오픈 그래프 태그와 Hexo 에 적용하는 법을 알아봤습니다. 다음 포스팅에서는 Hexo 의 고급 설정과 플러그인, 커스터마이징 등을 살펴보겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+<li>
+<a href="/2016/06/28/google-200-ranking-factors-korean-list/" title="구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)">구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)</a>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/16/add-google-adsense-to-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo 블로그에 구글 애드센스(Adsense) 추가하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/15/hexo-naver-search-webmaster/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/16/opengraph-social-meta-tag/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

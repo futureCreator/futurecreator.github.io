@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    도커 Docker 기초 확실히 다지기 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/11/16/docker-container-basics/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Cloud/">Cloud</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-docker-container-basics" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        도커 Docker 기초 확실히 다지기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/11/16/docker-container-basics/" class="article-date">
+    <time datetime="2018-11-15T17:33:48.000Z" itemprop="datePublished">2018/11/16</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              56 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 <a href="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/">개발자를 위한 인프라 기초 총정리</a> 포스트에서 컨테이너와 도커에 대해 간단히 살펴봤습니다. 이해하기 어려운 개념은 아니지만 막상 뭔가를 하려면 막막할 수 있는데요, 이번 포스트에서는 도커의 컴포넌트와 내부 기술을 알아보고 가상 환경을 구축해서 도커를 설치하고 실행해보려고 합니다.</p>
+<h2 id="도커-Docker">도커 Docker</h2>
+<p>애플리케이션은 하드웨어, OS, 미들웨어 등 인프라 환경에 민감하게 반응할 때가 많습니다. 개발 환경과 테스트 환경에서는 동작을 잘 하다가 제품 환경에서는 동작하지 않는 경우도 있습니다. 이럴 경우 고객사의 인프라, 보안 환경, 각종 OS 나 미들웨어의 버전 등 원인이 다양할 수 있어 찾기가 쉽지 않습니다.</p>
+<p><img src="https://cdn-images-1.medium.com/max/1600/1*easlVE_DOqRDUDkVINRI9g.png" alt="https://medium.freecodecamp.org/docker-quick-start-video-tutorials-1dfc575522a0"></p>
+<p>도커는 애플리케이션 뿐만 아니라 실행에 필요한 시스템 환경을 모아서 컨테이너(<em>Container</em>)로 관리합니다. 이렇게 만든 것을 도커 이미지(<em>Docker Image</em>)라고 하는데 이 이미지로 만든 컨테이너는 도커가 설치된 곳이라면 어디든 똑같이 동작합니다. 그곳이 Windows 든, macOS 든, Linux 든 상관이 없고 온프레미스(<em>On-premise</em>) 든 클라우드든 상관 없습니다.</p>
+<p><img src="https://programmaticponderings.files.wordpress.com/2015/06/introdockercompose.png" alt="https://programmaticponderings.files.wordpress.com/2015/06/introdockercompose.png"></p>
+<p>이를 이용하면 개발자가 커밋을 할 때마다 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://jenkins.io">Jenkins</a> 와 같은 지속적인 통합(<em>Continuous Integration, CI</em>) 툴에서 해당 소스를 도커 이미지로 빌드하고 이미지 리파지토리에서 이미지를 버전 별로 관리할 수 있습니다. 해당 이미지를 어느 환경이든 배포만 하면 독립적으로 동작하기 때문에 지속적인 딜리버리(<em>Continuous Delivery, CD</em>)가 가능합니다.</p>
+<p>도커는 특히 분산 환경을 쉽게 구축할 수 있는 클라우드 서비스와 잘 맞습니다. 그래서 주요 클라우드 프로바이더들은 모두 컨테이너 실행 환경을 쉽게 관리할 수 있는 서비스를 제공합니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/ecs/">Amazon Elastic Container Service</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://azure.microsoft.com/ko-kr/services/container-instances/">Microsoft Azure Container Instances</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloud.google.com/kubernetes-engine/">Google Cloud Platform Kubernetes Engine</a></li>
+</ul>
+<p>또한 각 서비스를 독립적인 배포 단위로 구성하는 마이크로서비스 아키텍처(<em>Microservices Architecture, MSA</em>)와도 잘 맞습니다. 각 서비스를 컨테이너로 배포하는 것이죠.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[마이크로서비스 배포 전략](https://futurecreator.github.io/2018/10/19/microservices-deployment-strategy/)
+">[1]</span></a></sup></p>
+<h2 id="도커의-기능">도커의 기능</h2>
+<p>도커는 컨테이너의 리소스, 파일 시스템, 네트워크를 기존 시스템과 격리시키고 도커 이미지를 관리하고 공유하는 기능을 제공합니다. 도커의 대표적인 기능 세 가지(<em>Build, Ship, Run</em>)를 살펴보겠습니다.</p>
+<h3 id="Build-이미지-만들기">Build - 이미지 만들기</h3>
+<p><img src="https://d1.awsstatic.com/product-marketing/containers/Containers_whats_in_a_container.945c530bfe6e19ea90510967fe8c56be746626b8.png" alt="https://aws.amazon.com/ko/containers/"></p>
+<p>도커는 애플리케이션과 실행에 필요한 라이브러리, 미들웨어, OS, 네트워크 설정 등 필요한 모든 파일을 모아서 도커 이미지로 만듭니다. 도커 이미지는 명령어를 이용해 수동으로 만들 수도 있지만 자동으로 빌드와 배포를 하는 CI/CD 환경에서는 도커 설정 파일(<em>Dockerfile</em>)을 이용해 자동으로 만들 수도 있습니다.</p>
+<p>보통 이미지에는 하나의 애플리케이션만 넣고 여러 컨테이너를 조합해서 서비스를 구축하는 방법을 사용합니다. 또한 이미지를 여러 개 같이 사용할 수 있습니다. 예를 들면 CentOS 리눅스 이미지와 Nginx 웹 서버 이미지를 겹쳐서 새로운 이미지를 만들 수 있습니다.</p>
+<h3 id="Ship-이미지-공유">Ship - 이미지 공유</h3>
+<p><img src="https://docs.docker.com/engine/images/architecture.svg" alt="https://docs.docker.com/engine/docker-overview/#docker-architecture"></p>
+<p>도커 이미지를 업로드해서 공유하는 저장소를 도커 레지스트리(<em>Docker Registry</em>)라고 합니다. 대표적으로는 도커의 공식 레지스트리인 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/">Docker Hub</a> 가 있습니다. 도커 허브에서는 업체에서 제공하는 공식 이미지를 받을 수 있습니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Explore Official Repositories | Docker Hub](https://hub.docker.com/explore/)">[2]</span></a></sup> Ubuntu 나 CentOS 같은 OS 이미지, MySQL, Redis, MongoDB, Nginx 와 같은 미들웨어, OpenJDK, Golang, NodeJS 와 같은 플랫폼 이미지도 제공합니다.</p>
+<p>이런 베이스 이미지를 활용하면 환경을 빠르고 안전하게, 그리고 자동으로 구축할 수 있습니다. 내가 만든 애플리케이션 또한 이미지로 만들어서 업로드하고 공유할 수 있습니다. Github 와 같은 형상관리툴과 연동해서 Dockerfile 을 관리하고 도커 이미지를 자동으로 빌드해서 도커 허브로 배포도 가능합니다.</p>
+<p><img src="https://d1.awsstatic.com/diagrams/product-page-diagrams/Product-Page-Diagram_Amazon-ECR.bf2e7a03447ed3aba97a70e5f4aead46a5e04547.png" alt="https://aws.amazon.com/ko/ecr/"></p>
+<p>퍼블릭 클라우드에서는 비공개 레지스트리와 CI/CD 를 쉽게 구성할 수 있는 아키텍처를 제공합니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/ecr/">Amazon Elastic Container Registry</a> 나 Google Cloude Platform 의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloud.google.com/container-registry/">Container Registry</a> 가 있습니다. 사실 이런 도커 이미지는 보안에 취약합니다. 해당 시스템에 보안 취약점이나 악성 코드가 심어져 있다면 어떨까요? GCP 컨테이너 레지스트리는 보안을 강화하기 위해 컨테이너 이미지가 등록되면 취약점을 스캔하고 정책에 위배되는 이미지는 배포를 막고 잠금 처리하고 있습니다.</p>
+<h3 id="Run-컨테이너-동작">Run - 컨테이너 동작</h3>
+<p>도커는 도커 이미지를 가지고 컨테이너를 생성해서 동작시킵니다. 하나의 이미지를 가지고 여러 개의 컨테이너를 만들어낼 수도 있습니다. 도커는 컨테이너를 생성하고 관리하기 위한 여러 명령을 제공합니다.</p>
+<p>실제 업무에서는 보통 한 대의 호스트에 모든 컨테이너를 동작시키는 것이 아니라 여러 호스트로 된 분산 환경인 경우가 많습니다. 이런 분산 환경에서 여러 노드의 컨테이너를 관리하기 위해 쿠버네티스(<em>Kubernetes, k8s</em>)와 같은 컨테이너 오케스트레이션 툴(<em>Container Orchestration Tool</em>)을 주로 사용합니다. 오케스트레이션이란 컨테이너 배포, 장애 복구, 로드 밸런싱 등 여러 기능을 자동으로 처리해주는 것을 말합니다.</p>
+<h2 id="도커를-구성하는-컴포넌트">도커를 구성하는 컴포넌트</h2>
+<p>도커를 구성하고 있는 컴포넌트는 다음과 같습니다.</p>
+<p><img src="docker-component.png" alt="http://kimstar.kr/7695/"></p>
+<ul>
+<li>Docker Engine : 도커 이미지를 생성하고 컨테이너를 실행하는 핵심 기능.</li>
+<li>Docker Registry : 도커 이미지 공개 및 공유. 도커 허브도 도커 레지스트리를 사용.</li>
+<li>Docker Compose : 여러 컨테이너를 관리하기 위한 툴.</li>
+<li>Docker Machine : 로컬의 VirtualBox 나 퍼블릭 클라우드에 도커 실행 환경을 구축하는 툴.</li>
+<li>Docker Swarm : 여러 도커 호스트를 마스터(<em>Master</em>)와 노드(<em>Node</em>) 구조로 클러스터화하는 툴. 쿠버네티스와 비슷한 기능.</li>
+</ul>
+<h2 id="도커를-이루는-기술">도커를 이루는 기술</h2>
+<p>도커는 리눅스 커널 기술을 기반으로 컨테이너를 구성합니다. 도커를 이루는 기술을 간단하게 살펴보겠습니다.</p>
+<h3 id="namespace">namespace</h3>
+<p>먼저 컨테이너라는 가상의 독립된 환경을 만들기 위해 리눅스 커널의 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Linux_namespaces">namespace</a> 라는 기능을 사용합니다. 쉽게 얘기하면 리눅스 오브젝트에 이름표를 붙여 같은 이름표가 붙여진 것들만 묶어 관리합니다. 아래 내용에서 격리(<em>isolated</em>)라는 의미는 다른 네임스페이스에서는 접근이 불가능하다는 걸 의미합니다.</p>
+<table>
+<thead>
+<tr>
+<th>네임스페이스</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PID namespace</td>
+<td>각 프로세스에 할당된 고유한 ID 인 PID 를 기준으로 다른 프로세스를 격리. <br>네임스페이스가 다르면 액세스 불가.</td>
+</tr>
+<tr>
+<td>Network namespace</td>
+<td>네트워크 리소스(IP 주소, 포트 번호, 라우팅 테이블 등)를 네임스페이스마다 독립적으로 가져감. <br>예를 들어 같은 포트라도 네임스페이스가 다르면 사용 가능.</td>
+</tr>
+<tr>
+<td>UID namespace</td>
+<td>사용자 ID(UID)와 그룹 ID(GID)를 네임스페이스 별로 구분. <br>따라서 컨테이너에서는 루트 권한을 가지고 있더라도 호스트의 관리 권한을 가질 수 없도록 격리 가능.</td>
+</tr>
+<tr>
+<td>MOUNT namespace</td>
+<td>리눅스에서 디바이스를 인식하기 위해 마운트가 필요.<br>파일 시스템 등 마운트된 디바이스를 네임스페이스별로 격리.</td>
+</tr>
+<tr>
+<td>UTS namespace</td>
+<td>호스트명이나 도메인명을 네임스페이스별로 독자적으로 설정 가능.</td>
+</tr>
+<tr>
+<td>IPC namespace</td>
+<td>프로세스 간 통신(<em>inter process communication</em>)에 필요한<br> <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Shared_memory">공유 메모리</a>(<em>Shared Memory</em>), <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Semaphore_(programming)">세마포어</a>(<em>Semaphore</em>), <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Message_queue#Implementation_in_UNIX">메시지 큐</a>(<em>Message Queue</em>) 등을 독자적으로 사용.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cgroups">cgroups</h3>
+<p>리눅스에서 프로그램은 프로세스로 실행되고, 프로세스는 하나 이상의 쓰레드로 이루어져 있습니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/Cgroups">cgroups</a>(<em>Control Groups</em>) 는 프로세스와 쓰레드를 그룹화해서 관리하는 기술입니다. 호스트 OS의 자원을 그룹별로 할당하거나 제한을 둘 수 있습니다. 즉 컨테이너에서 사용하는 리소스를 제한함으로써 하나의 컨테이너가 자원을 모두 사용해 다른 컨테이너가 영향을 받지 않도록 할 수 있습니다. 또한 그룹에 계층 구조를 적용할 수 있어 체계적으로 리소스를 관리할 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cpu</td>
+<td>CPU 사용량 제한.</td>
+</tr>
+<tr>
+<td>cpuacct</td>
+<td>CPU 사용량 통계 정보 제공</td>
+</tr>
+<tr>
+<td>cpuset</td>
+<td>CPU 나 메모리 배치 제어.</td>
+</tr>
+<tr>
+<td>memory</td>
+<td>메모리나 스왑(<em>Swap</em>) 사용량 제한.</td>
+</tr>
+<tr>
+<td>devices</td>
+<td>디바이스에 대한 액세스 제어.</td>
+</tr>
+<tr>
+<td>freezer</td>
+<td>그룹 내 프로세스 정지 및 재개.</td>
+</tr>
+<tr>
+<td>net_cls</td>
+<td>네트워크 제어.</td>
+</tr>
+<tr>
+<td>blkio</td>
+<td>블록 디바이스 입출력량 제어.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="네트워크-구성">네트워크 구성</h3>
+<p>컨테이너의 네트워크 구성을 살펴보겠습니다. 먼저 NIC(<em>Network Interface Controller</em>)는 네트워크 신호를 주고받을 때 쓰는 하드웨어로 랜 카드를 생각하시면 됩니다. 리눅스는 이 네트워크 장치를 <code>/dev/eth0</code>, <code>/dev/eth1</code> 이런 식으로 인식합니다. eth0 은 기본 네트워크 장치라고 볼 수 있습니다.</p>
+<p><img src="https://www.kaitoy.xyz/images/docker_network.jpg" alt="https://www.kaitoy.xyz/2015/07/25/how-to-capture-packets-on-a-local-network-with-pcap4j-container/"></p>
+<p>도커 컨테이너가 실행되면 컨테이너에 172.17.0.0/16 이란 프라이빗 IP 주소가 eth0 으로 자동 할당됩니다. 이를 docker0 이라고 합니다. 이 docker0 은 각 컨테이너 네트워크를 연결해주는 네트워크 브리지(<em>network bridge</em>) 역할을 하는데요, 각 컨테이너의 eth0 에 docker0 이 만든 가상 NIC 인 veth 를 할당합니다. 또한 외부에서 요청을 컨테이너로 라우팅합니다.</p>
+<p><img src="nat-napt.png" alt="http://snowdeer.github.io/common-sense/2018/02/02/understanding-about-nat/"></p>
+<p>컨테이너가 외부 네트워크와 통신할 때는 NAPT(<em>Network Address Port Translation</em>)라는 기술을 사용합니다. 퍼블릭 IP 주소와 프라이빗 IP 주소를 일대일로 변환하는 NAT(<em>Network Address Translation</em>)와 달리 NAPT 는 포트 정보까지 활용하기 때문에 하나의 퍼블릭 IP 주소로 여러 대의 머신을 동시에 연결할 수 있습니다.</p>
+<h3 id="컨테이너-데이터-관리">컨테이너 데이터 관리</h3>
+<p><img src="https://docs.docker.com/storage/images/types-of-mounts.png" alt="https://docs.docker.com/storage/#choose-the-right-type-of-mount"></p>
+<p>도커는 컨테이너에서 사용하는 데이터를 호스트 내에 저장하기 위해 세 가지 방법을 제공합니다.</p>
+<ul>
+<li>Volumes : 호스트의 파일 시스템 내에 특정 영역(리눅스의 경우 <code>/var/lib/docker/volumes/</code>)을 도커가 관리하면서 사용. 도커가 아닌 다른 프로세스에서는 해당 영역 접근이 불가능. 가장 추천하는 방식.</li>
+<li>Bind mounts : 호스트의 파일시스템 자체를 사용. 중요한 시스템 파일이나 디렉토리도 접근 가능. 호스트와 컨테이너가 설정 파일을 공유하거나 호스트에서 개발하고 컨테이너로 배포하는 방식으로 사용.</li>
+<li><code>tmpfs</code> mounts : 호스트의 파일시스템 대신 메모리에 저장하는 방식. 파일 시스템에 저장하고 싶지 않을 경우 사용.</li>
+</ul>
+<p><img src="https://docs.docker.com/storage/storagedriver/images/container-layers.jpg" alt="https://docs.docker.com/storage/storagedriver/"></p>
+<p>도커 이미지는 Dockerfile 로 만들어진 여러 레이어로 이루어져 있고 각 레이어는 읽기만 가능(<em>Read-only</em>)합니다. 이미지를 가지고 새로운 컨테이너를 생성하면 읽고 쓸 수 있는(<em>Readable and Writable</em>) 레이어가 추가되는데 이를 컨테이너 레이어(<em>Container Layer</em>)라고 합니다. 컨테이너를 가지고 작업을 수행할 때 생기는 변경 사항을 모두 컨테이너 레이어에 저장하고 읽을 때는 도커 이미지에 변경된 사항을 조합해서 데이터를 읽습니다. 컨테이너가 삭제되면 컨테이너 레이어도 사라지고 기존 이미지는 변경되지 않고 유지됩니다.</p>
+<p><img src="https://docs.docker.com/storage/storagedriver/images/sharing-layers.jpg" alt="https://docs.docker.com/storage/storagedriver/#container-and-layers"></p>
+<p>따라서 하나의 이미지에서 여러 컨테이너를 만들어서 사용할 수 있습니다. 만약 컨테이너가 서로 데이터를 공유해야 한다면 도커 볼륨에 저장하고 컨테이너에 마운트하면 됩니다.</p>
+<p>도커는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Copy-on-write#In_virtual_memory_management">Copy-on-Write</a>(<em>CoW or COW</em>) 방식으로 파일을 관리합니다. Copy-on-Wirte 는 효율적으로 파일을 공유하고 복사하는 방법입니다. 파일 또는 디렉토리를 읽기만 할 땐 기존 파일을 참조하도록 하고, 수정해야 하는 경우에만 파일을 컨테이너 레이어로 복사해서 수정하는 방법입니다. 따라서 꼭 필요한 경우에만 복사가 되므로 데이터 중복이 없고 효율적으로 사용할 수 있습니다.</p>
+<p>도커는 이런 방식으로 레이어와 파일을 관리하기 위해 스토리지 드라이버(<em>Storage Driver</em>)를 사용합니다. 다양한 종류의 스토리지 드라이버를 지원하는데 작동하는 방법이 조금씩 다릅니다. 리눅스 배포판 커널에 따라 다른 드라이버를 사용하게 됩니다. 각 스토리지 드라이버에 대한 자세한 설명은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.docker.com/storage/storagedriver/select-storage-driver/">공식 문서</a>를 참고하세요.</p>
+<table>
+<thead>
+<tr>
+<th>리눅스 배포판</th>
+<th>스토리지 드라이버</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ubuntu</td>
+<td><code>aufs</code>, <code>devicemapper</code>, <code>overlay2</code> (Ubuntu 14.04.4 or later, 16.04 or later), <br><code>overlay</code>, <code>zfs</code>, <code>vfs</code></td>
+</tr>
+<tr>
+<td>Debian</td>
+<td><code>aufs</code>, <code>devicemapper</code>, <code>overlay2</code> (Debian Stretch), <code>overlay</code>, <code>vfs</code></td>
+</tr>
+<tr>
+<td>CentOS</td>
+<td><code>devicemapper</code>, <code>vfs</code></td>
+</tr>
+<tr>
+<td>Fedora</td>
+<td><code>devicemapper</code>, <code>overlay2</code> (Fedora 26 or later, experimental),<br> <code>overlay</code> (experimental), <code>vfs</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="가상-환경-준비">가상 환경 준비</h2>
+<p>이제 도커를 설치할 차례입니다. 그 전에 먼저 가상 머신(<em>Virtual Machine, VM</em>)을 준비하겠습니다. 도커는 리눅스 외에도 로컬 환경의 Windows 나 macOS 에서 사용할 수 있도록 클라이언트를 제공하고 있습니다. 이 방법이 가장 간단한 방법이라서 많은 책이나 튜토리얼에서 로컬에 클라이언트를 설치해서 진행합니다. 하지만 앞으로 도커를 사용할 때 대부분 리눅스가 설치된 VM 상에서 사용할 것임을 생각해본다면 VM에서 해보는 것이 낫습니다. 뭔가 잘못 돼도 VM 만 지우고 다시 생성하면 되니까 실습하기도 편하구요.</p>
+<p>리눅스가 설치된 VM 을 사용하는 방법은 세 가지 정도가 있을 겁니다.</p>
+<ul>
+<li>VirtualBox 로 VM 생성 후 리눅스 설치</li>
+<li>Vagrant 를 이용해 리눅스가 설치된 Box 이미지로 VM 생성</li>
+<li>퍼블릭 클라우드(<em>AWS, GCP</em>)로 리눅스 VM 인스턴스 생성</li>
+</ul>
+<h3 id="VirtualBox">VirtualBox</h3>
+<p><img src="https://futurecreator.github.io/2018/11/09/it-infrastructure-basics/host-server-virtualization.png" alt="http://www.govmlab.com/news-section-3/"></p>
+<p>첫 번째 방법은 호스트 가상화입니다. 호스트 OS 위에 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.virtualbox.org/">VIrtualBox</a> 같은 가상화 SW를 설치하고 이를 이용해 가상 환경을 구축하는 방식입니다. VirtualBox 설치 후 클릭 몇 번이면 로컬 VM 이 만들어지기 때문에 쉬운 방법으로 개발 환경 구축에 많이 사용합니다. 다만 물리 환경의 호스트 OS 와 가상 환경의 게스트 OS 모두 존재하기 때문에 용량이 크고 느린 단점이 있습니다.</p>
+<p>이 방법으로는 VM 을 만들더라도 OS 나 미들웨어를 직접 설치해야 하는 번거로움이 있습니다. 따라서 이 방법은 패스하고 두 번째 방법으로 넘어가겠습니다.</p>
+<h3 id="Vagrant">Vagrant</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.vagrantup.com/">Vagrant</a> 는 VM 을 손쉽게 만들고 설정할 수 있는 방법입니다.</p>
+<p><img src="vagrant-boxes.png" alt="https://app.vagrantup.com/boxes/search"></p>
+<p>도커에서 공식 이미지를 지원하는 것처럼 Vagrant 도 여러 VM 이미지를 제공하고 있습니다. 우리는 VM 을 만들고 리눅스를 손수 설치하는 대신 원하는 이미지를 받아서 바로 VM 을 사용할 수 있습니다.</p>
+<p>각종 VM 설정을 Vagrantfile 이라는 설정 파일에 작성하는데요. 이 Vagrantfile 만 있으면 똑같은 VM 환경을 바로 만들어낼 수 있습니다. 따라서 여러 개발자가 똑같은 환경을 구축해서 사용할 수 있게 됩니다. 새로운 개발자가 오면 가이드에 따라 이것저것 설치하고 구성하는 대신에 그냥 Vagrant 를 사용해서 이미 환경 구성이 된 이미지를 받으면 됩니다. 환경 구성 시간을 줄일 수 있어 교육용으로도 적합합니다.</p>
+<p>그럼 실제로 만들어 봅시다!</p>
+<p>먼저 VM 이미지를 실행시킬 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.virtualbox.org/">VirtualBox</a> 를 설치합니다. 다양한 툴을 지원합니다만 기본적인 VirtualBox 로 하겠습니다.</p>
+<p>원하는 경로에 폴더를 만들고 해당 폴더에서 초기화합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant init</span><br><span class="line">A `Vagrantfile` has been placed <span class="keyword">in</span> this directory. You are now</span><br><span class="line">ready to `vagrant up` your first virtual environment! Please <span class="built_in">read</span></span><br><span class="line">the comments <span class="keyword">in</span> the Vagrantfile as well as documentation on</span><br><span class="line">`vagrantup.com` <span class="keyword">for</span> more information on using Vagrant.</span><br></pre></td></tr></table></figure>
+<p>생성된 Vagrantfile을 수정합니다. 이 포스트에서는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://app.vagrantup.com/centos/boxes/7">CentOS 7</a> 로 설치해보려고 합니다. CentOS 7의 버전을 지정해주지 않으면 그냥 최신 버전으로 설치합니다. 내부에서 접속할 수 있는 고정 IP 를 할당하고 나중에 웹 서버를 이용하기 위해 포트를 포워딩해줍니다.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Vagrant</span>.configure(<span class="string">&quot;2&quot;</span>) <span class="keyword">do</span> |<span class="params">config</span>|</span><br><span class="line">  config.vm.box = <span class="string">&quot;centos/7&quot;</span></span><br><span class="line">  config.vm.network <span class="string">&quot;private_network&quot;</span>, <span class="symbol">ip:</span> <span class="string">&quot;192.168.33.10&quot;</span></span><br><span class="line">  config.vm.network <span class="string">&quot;forwarded_port&quot;</span>, <span class="symbol">guest:</span> <span class="number">80</span>, <span class="symbol">host:</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+<p><code>vagrant up</code> 을 입력하면 박스를 다운로드하고 실행합니다. 이미 다운로드한 박스가 있으면 기존 박스를 사용하게 됩니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant up</span><br><span class="line">Bringing machine <span class="string">&#x27;default&#x27;</span> up with <span class="string">&#x27;virtualbox&#x27;</span> provider...</span><br><span class="line">==&gt; default: Importing base box <span class="string">&#x27;centos/7&#x27;</span>...</span><br><span class="line">==&gt; default: Matching MAC address <span class="keyword">for</span> NAT networking...</span><br><span class="line">==&gt; default: Checking <span class="keyword">if</span> box <span class="string">&#x27;centos/7&#x27;</span> is up to <span class="built_in">date</span>...</span><br><span class="line">==&gt; default: Setting the name of the VM: docker_default_1542286628092_61501</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p><code>vagrant ssh</code> 로 VM 에 SSH 접속합니다. 기본적으로 vagrant 계정을 사용하며 <code>sudo -i</code> 로 root 계정에 접속할 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vagrant ssh</span><br><span class="line">[vagrant@localhost ~]$ <span class="built_in">pwd</span></span><br><span class="line">/home/vagrant</span><br><span class="line">[vagrant@localhost ~]$ <span class="built_in">sudo</span> -i</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+<p>설치 과정을 <a href="https://futurecreator.github.io/2018/06/16/record-terminal-asciinema/">asciinema</a> 영상으로 확인하실 수 있습니다. asciinema 는 터미널 녹화 서비스로 영상 내 텍스트를 복사할 수 있습니다.</p>
+<script type="text/javascript" src="https://asciinema.org/a/211919.js" id="asciicast-211919" async></script>
+<p>Windows 에서 PuTTY 와 같은 클라이언트로 접속하고 싶으실 경우엔 해당 vagrant 폴더 안에 <code>.vagrant/machines/default/virtualbox</code> 경로 안에 있는 private_key 파일을 가져다 PuTTYgen 로 <code>.ppk</code> 파일을 생성하신 후에 접속 시 사용하시면 됩니다.</p>
+<p>(추가) Vagrant 는 사용하다보면 <code>vagrant up</code> 이 잘 안되는 경우가 있습니다. <code>vagrant status</code> 를 해보면 제대로 실행이 됐는지 확인해볼 수 있습니다. 제 경우는 macOS 는 큰 문제가 없었고 Windows 7 에서 간간히 발생했는데, 이런 경우엔 <code>vagrant halt</code> 와 <code>vagrant up</code> 을 반복하면 신기하게도 잘 올라갑니다. Vagrant 버전을 업그레이드하는 것도 하나의 방법입니다. 또는 그냥 VirtualBox 에서 VM 을 실행 후 접속하는 것이 가장 잘 됩니다.</p>
+<h3 id="클라우드-VM-인스턴스">클라우드 VM 인스턴스</h3>
+<p>세 번째 방법은 클라우드 서비스를 사용하는 겁니다. 사실 학습 환경은 vagrant 로도 충분하지만 Vagrant 를 이용하는 것이 복잡하거나 로컬 리소스를 사용하길 원하지 않을 수도 있습니다. 또는 간단한 프로젝트를 만들어서 서비스하려면 클라우드를 이용하는 것이 좋겠죠. 그래서 AWS(<em>Amazon Web Service</em>)와 GCP(<em>Google Cloud Platform</em>)를 이용해 VM 인스턴스를 생성 후 도커를 설치해보려고 합니다. 일단 Vagrant 기반으로 진행하고 클라우드 기반은 뒤에서 다시 다루겠습니다.</p>
+<h2 id="도커-설치와-실행">도커 설치와 실행</h2>
+<p>환경도 다 준비되었으니 도커를 설치해보겠습니다.</p>
+<h3 id="도커-에디션과-릴리즈">도커 에디션과 릴리즈</h3>
+<p>도커는 무료로 이용할 수 있는 커뮤니티 에디션과 상용인 엔터프라이즈 에디션이 있습니다. 상용 에디션은 고객 지원 및 보안과 플러그인 등 추가 기능을 제공합니다.</p>
+<ul>
+<li>Docker Community Edition(Docker CE)</li>
+<li>Docker Enterprise Edition(Docker EE)</li>
+</ul>
+<p><img src="https://i0.wp.com/blog.docker.com/wp-content/uploads/lifecycle.png?resize=1024%2C376&amp;ssl=1" alt="https://blog.docker.com/2017/03/docker-enterprise-edition/"></p>
+<p>도커의 버전은 연도 두 자리와 월 두 자리로 구분합니다. 예를 들어 <code>v17.09</code> 는 17년 09월에 나온 버전입니다. CE 는 매달 새로운 기능을 먼저 사용해볼 수 있는 Edge 버전과 분기별로 릴리즈되는 Stable 버전이 있습니다. EE 는 CE 의 Stable 과 같이 릴리즈됩니다.</p>
+<p>우리는 CE 버전으로 진행합니다.</p>
+<h3 id="도커-설치">도커 설치</h3>
+<p>필요한 패키지를 설치합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> yum install -y yum-utils \</span><br><span class="line">  device-mapper-persistent-data \</span><br><span class="line">  lvm2</span><br></pre></td></tr></table></figure>
+<p>도커 리파지토리를 설정합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> yum-config-manager \</span><br><span class="line">  --add-repo \</span><br><span class="line">  https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+<p>Edge 버전과 Test 버전은 <code>docker.repo</code> 에 포함되어 있으나 기본적으로 disabled 되어 있습니다. 필요한 경우 enable 해서 사용할 수 있습니다. 여기선 그냥 패스합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> yum-config-manager --<span class="built_in">enable</span> docker-ce-edge</span><br><span class="line">$ <span class="built_in">sudo</span> yum-config-manager --<span class="built_in">enable</span> docker-ce-test</span><br></pre></td></tr></table></figure>
+<p>Docker CE 를 설치합니다. 기본적으로 최신 버전(<em>latest</em>)이 설치됩니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> yum install docker-ce</span><br></pre></td></tr></table></figure>
+<p>특정 도커 버전이 필요한 경우는 버전까지 입력합니다. 쿠버네티스 버전에 따라 권장하는 도커 버전이 있어서 이럴 땐 특정 버전을 설치해야 하는 경우가 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ yum list docker-ce --showduplicates | <span class="built_in">sort</span> -r <span class="comment"># 가능한 버전 확인</span></span><br><span class="line"><span class="comment"># $ sudo yum install docker-ce-&lt;VERSION STRING&gt;</span></span><br><span class="line">$ <span class="built_in">sudo</span> yum install docker-ce-18.06.1.ce-3.el7.x86_64</span><br></pre></td></tr></table></figure>
+<p>도커를 시작합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> systemctl start docker</span><br></pre></td></tr></table></figure>
+<p>(옵션) 도커 데몬은 root 가 소유한 유닉스 소켓을 사용하므로 일반 사용자는 sudo 가 필요합니다. 학습 과정이므로 root 사용자로 사용해도 상관은 없지만 일반 유저로 진행하고 싶다면 다음 과정을 진행합니다.</p>
+<p><code>docker</code> 그룹을 만듭니다. 아마 이미 만들어져 있을 겁니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> groupadd docker</span><br></pre></td></tr></table></figure>
+<p>사용자를 <code>docker</code> 그룹에 추가합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> usermod -aG docker <span class="variable">$USER</span></span><br></pre></td></tr></table></figure>
+<p>로그아웃 후 다시 로그인합니다. 만약 그래도 권한이 없다고 나온다면 다음 명령어로 권한을 부여합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">chown</span> <span class="string">&quot;<span class="variable">$USER</span>&quot;</span>:<span class="string">&quot;<span class="variable">$USER</span>&quot;</span> /home/<span class="string">&quot;<span class="variable">$USER</span>&quot;</span>/.docker -R</span><br><span class="line">$ <span class="built_in">sudo</span> <span class="built_in">chmod</span> g+rwx <span class="string">&quot;<span class="variable">$HOME</span>/.docker&quot;</span> -R</span><br></pre></td></tr></table></figure>
+<p>(옵션) 시스템 부팅 시 도커를 시작하도록 설정할 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">sudo</span> systemctl <span class="built_in">enable</span> docker <span class="comment"># 설정 ON</span></span><br><span class="line">$ <span class="built_in">sudo</span> systemctl <span class="built_in">disable</span> docker <span class="comment"># 설정 OFF</span></span><br></pre></td></tr></table></figure>
+<h3 id="도커-상태-확인">도커 상태 확인</h3>
+<p>다음은 도커의 상태를 확인할 수 있는 몇 가지 명령어입니다.</p>
+<p>도커 버전 확인 : <code>docker version</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">Client:</span><br><span class="line"> Version:           18.09.0</span><br><span class="line"> API version:       1.39</span><br><span class="line"> Go version:        go1.10.4</span><br><span class="line"> Git commit:        4d60db4</span><br><span class="line"> Built:             Wed Nov  7 00:48:22 2018</span><br><span class="line"> OS/Arch:           linux/amd64</span><br><span class="line"> Experimental:      <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">Server: Docker Engine - Community</span><br><span class="line"> Engine:</span><br><span class="line">  Version:          18.09.0</span><br><span class="line">  API version:      1.39 (minimum version 1.12)</span><br><span class="line">  Go version:       go1.10.4</span><br><span class="line">  Git commit:       4d60db4</span><br><span class="line">  Built:            Wed Nov  7 00:19:08 2018</span><br><span class="line">  OS/Arch:          linux/amd64</span><br><span class="line">  Experimental:     <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>도커 실행 환경 확인 : <code>docker system info</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker system info</span><br><span class="line">Containers: 0</span><br><span class="line"> Running: 0</span><br><span class="line"> Paused: 0</span><br><span class="line"> Stopped: 0</span><br><span class="line">Images: 0</span><br><span class="line">Server Version: 18.09.0</span><br><span class="line">Storage Driver: overlay2</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>도커 디스크 상태 확인 : <code>docker system df</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker system <span class="built_in">df</span></span><br><span class="line">TYPE                TOTAL               ACTIVE              SIZE                RECLAIMABLE</span><br><span class="line">Images              0                   0                   0B                  0B</span><br><span class="line">Containers          0                   0                   0B                  0B</span><br><span class="line">Local Volumes       0                   0                   0B                  0B</span><br><span class="line">Build Cache         0                   0                   0B                  0B</span><br></pre></td></tr></table></figure>
+<p>여기까지 설치 및 확인 과정을 영상으로도 확인해보세요.</p>
+<script type="text/javascript" src="https://asciinema.org/a/211941.js" id="asciicast-211941" async></script>
+<h2 id="Hello-World">Hello, World!</h2>
+<p>도커를 새로 설치했으니 ‘Hello, World’ 한번 찍어보고 가야겠죠?</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run hello-world</span><br></pre></td></tr></table></figure>
+<p><code>docker run</code> 명령어는 컨테이너를 새로 만들고 실행까지 하는 명령어입니다. 먼저 기존에 다운 받은 <code>hello-world</code> 라는 이미지가 있는지 확인하고 없으면 새로 다운로드합니다. 그리고 컨테이너가 실행되면 다음과 같이 메시지가 출력됩니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the <span class="string">&quot;hello-world&quot;</span> image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image <span class="built_in">which</span> runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, <span class="built_in">which</span> sent it</span><br><span class="line">    to your terminal.</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>여기까지 과정을 영상으로 확인해보세요.</p>
+<script type="text/javascript" src="https://asciinema.org/a/211943.js" id="asciicast-211943" async></script>
+<h2 id="Nginx-설치-및-실행">Nginx 설치 및 실행</h2>
+<p>이번엔 웹 서버를 설치하고 접속해보겠습니다. 대표적인 웹 서버 중 하나인 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.nginx.com/">Nginx</a> 를 설치합니다. 도커에서 제공하는 공식 이미지를 사용하면 아주 쉽게 설치할 수 있습니다.</p>
+<p>Nginx 이미지를 다운로드합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull nginx</span><br></pre></td></tr></table></figure>
+<p>다운로드한 이미지는 <code>docker images</code> 로 확인할 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">nginx               latest              62f816a209e6        8 days ago          109MB</span><br><span class="line">hello-world         latest              4ab4c602aa5e        2 months ago        1.84kB</span><br></pre></td></tr></table></figure>
+<p>Nginx 컨테이너를 실행합니다. 하나의 Nginx 서버를 띄운 거라고 볼 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name webserver -d -p 80:80 nginx</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>--name</code> : 컨테이너의 이름을 지정.</li>
+<li><code>-d</code> 옵션 : 컨테이너를 백그라운드에서 실행하고 컨테이너 ID 를 출력.</li>
+<li><code>-p</code> 옵션 : 컨테이너의 특정 포트를 호스트로 오픈. <code>-p &lt;host-port&gt;:&lt;container-port&gt;</code> 형식으로 사용 가능.<br>
+만약 <code>-p &lt;container-port&gt;</code> 형식으로 쓰면 호스트의 포트는 임의로 할당.</li>
+</ul>
+<p><code>docker run</code> 실행 시 다운로드된 이미지가 없으면 이미지를 받아서 컨테이너를 생성하므로 <code>docker pull</code> 명령어는 생략할 수 있습니다.</p>
+<p>컨테이너 목록에서 확인 : <code>docker ps</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                NAMES</span><br><span class="line">a13f196d04ac        nginx               <span class="string">&quot;nginx -g &#x27;daemon of…&quot;</span>   4 seconds ago       Up 2 seconds        0.0.0.0:80-&gt;80/tcp   webserver</span><br></pre></td></tr></table></figure>
+<p>컨테이너 상태 확인 : <code>docker container stats</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker stats webserver</span><br><span class="line">CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS</span><br><span class="line">a13f196d04ac        webserver           0.00%               1.359MiB / 487.7MiB   0.28%               648B / 0B           4.86MB / 0B         2</span><br></pre></td></tr></table></figure>
+<p>컨테이너 기동과 종료가 필요한 경우는 <code>docker start</code> 와 <code>docker stop</code> 을 사용합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker start webserver</span><br><span class="line">$ docker stop webserver</span><br></pre></td></tr></table></figure>
+<p>여기까지 과정을 영상으로 확인해보세요.</p>
+<script type="text/javascript" src="https://asciinema.org/a/211944.js" id="asciicast-211944" async></script>
+<p>웹 브라우저에서 접속해보겠습니다. 가상머신의 고정 IP를 192.168.33.10 으로 설정했으므로 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.33.10:80">http://192.168.33.10:80</a> 으로 접속합니다. 그러면 다음과 같이 잘 접속되는 걸 볼 수 있습니다.</p>
+<p><img src="welcome-nginx.png" alt="Nginx 초기 화면"></p>
+<h2 id="Dockerfile-로-컨테이너-이미지-만들기">Dockerfile 로 컨테이너 이미지 만들기</h2>
+<p>도커 이미지는 Dockerfile 이라는 설정 파일을 이용해 자동으로 빌드할 수 있습니다. 앞에서 실습한 Nginx 를 이용해서 스태틱 사이트를 만들고 이를 컨테이너 이미지로 만들어보겠습니다.</p>
+<p>도커 이미지는 베이스 이미지(<em>base image</em>)를 기반으로 그 위에 변경 사항을 레이어 형태로 쌓습니다. 그래서 Dockerfile 은 <code>FROM</code> 명령어를 이용해 어떤 베이스 이미지와 버전을 사용할지 선택합니다.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx:latest</span><br></pre></td></tr></table></figure>
+<p>초기 화면을 지정할 index.html 파일을 만들어줍니다. 그냥 간단하게 헤더만 넣었습니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello, Docker!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>index.html</code> 파일을 컨테이너로 복사하기 위해 <code>COPY</code> 명령어를 추가합니다.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span><span class="language-bash"> index.html /usr/share/nginx/html/index.html</span></span><br></pre></td></tr></table></figure>
+<p>80 포트로 접속할 수 있도록 하기 위해 <code>EXPOSE</code> 명령어를 추가합니다.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">EXPOSE</span> <span class="number">80</span></span><br></pre></td></tr></table></figure>
+<p><code>EXPOSE 80 443</code> 또는 <code>EXPOSE 3000-4000</code> 처럼 여러 포트를 지정할 수도 있습니다.</p>
+<p><code>CMD</code> 명령어로 실제로 실행할 명령어를 지정할 수 있습니다. Nginx 가 데몬화(<em>daemonize</em>)되어 백그라운드(<em>background</em>)에서 동작하면 컨테이너 기동 시 그냥 종료되기 때문에 포그라운드(<em>foreground</em>)에서 동작할 수 있도록 명령어를 줍니다.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;nginx&quot;</span>, <span class="string">&quot;-g&quot;</span>, <span class="string">&quot;daemon off;&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<p><code>CMD</code> 명령어와 비슷한 기능으로는 <code>RUN</code> 명령어가 있습니다.</p>
+<ul>
+<li><code>RUN</code> : 해당 명령어를 이미지가 빌드할 때 실행. e.g. <code>RUN npm install</code></li>
+<li><code>CMD</code> : 해당 명령어를 컨테이너를 기동될 때 실행. e.g. <code>CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]</code><br>
+주로 도커 이미지로 빌드된 애플리케이션을 실행할 때 사용되거나 <code>RUN</code> 명령어로 오버라이딩(<em>overriding</em>)할 수 있어 디폴트 명령어를 지정할 때 쓰이기도 함.</li>
+</ul>
+<p>작성한 Dockerfile 은 다음과 같습니다.</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx:latest</span><br><span class="line"><span class="keyword">COPY</span><span class="language-bash"> index.html /usr/share/nginx/html/index.html</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">80</span></span><br><span class="line"><span class="keyword">CMD</span><span class="language-bash"> [<span class="string">&quot;nginx&quot;</span>, <span class="string">&quot;-g&quot;</span>, <span class="string">&quot;daemon off;&quot;</span>]</span></span><br></pre></td></tr></table></figure>
+<p>현재 폴더 상황은 다음과 같습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./</span><br><span class="line">|- Dockerfile</span><br><span class="line">|- index.html</span><br></pre></td></tr></table></figure>
+<p><code>docker build</code> 명령어를 이용해 이미지를 빌드합니다. 태그를 이용해 이미지의 이름과 버전을 줄 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t my-nginx-image:latest .</span><br></pre></td></tr></table></figure>
+<p><code>docker images</code> 로 빌드된 이미지를 확인할 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line">docker images</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span><br><span class="line">my-nginx-image      latest              ba3effefd2bc        3 seconds ago       54.3MB</span><br><span class="line">nginx               latest              62f816a209e6        8 days ago          109MB</span><br><span class="line">hello-world         latest              4ab4c602aa5e        2 months ago        1.84kB</span><br></pre></td></tr></table></figure>
+<p>도커 이미지를 가지고 컨테이너를 실행합니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop webserver <span class="comment"># 위에서 실습한 서버 종료</span></span><br><span class="line">$ docker run -d -p 80:80 my-nginx-image:latest</span><br></pre></td></tr></table></figure>
+<p><code>docker ps</code> 로 상태도 확인해봅니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                         NAMES</span><br><span class="line">14735a3f9e39        my-nginx-image:latest   <span class="string">&quot;nginx -g &#x27;daemon of…&quot;</span>   2 seconds ago       Up 2 seconds        0.0.0.0:80-&gt;80/tcp, 443/tcp   gifted_kilby</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://192.168.33.10">http://192.168.33.10</a> 으로 접속 확인도 해봅니다.</p>
+<p><img src="hello-docker.png" alt="방금 만든 스태틱 사이트"></p>
+<p>여기까지 과정을 영상으로 확인해보세요.</p>
+<script type="text/javascript" src="https://asciinema.org/a/211945.js" id="asciicast-211945" async></script>
+<p>여기선 간단한 명령어 위주로 살펴봤지만 Dockerfile 을 이용해 다양한 작업을 할 수 있습니다.</p>
+<h2 id="도커와-클라우드">도커와 클라우드</h2>
+<p>이번엔 위에서 말씀드린대로 클라우드 환경에서 VM 인스턴스를 생성하고 도커를 설치해보겠습니다. 먼저 AWS, 그 다음 GCP 를 살펴봅니다.</p>
+<h3 id="AWS-EC2">AWS EC2</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/ec2/">AWS EC2</a>(<em>Amazon Elastic Compute Cloud</em>)는 AWS에서 제공하는 컴퓨팅 파워입니다. AWS 아이디를 새로 만들면 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://aws.amazon.com/ko/free/">프리 티어</a>(무료)로 사용해보실 수 있습니다. 제공되는 서비스에 따라 1년간 무료인 서비스와 상시 무료인 서비스가 나뉘어져 있으니 세부 사항은 홈페이지를 참고하시면 됩니다. EC2 는 1년 동안 t2.micro 인스턴스가 매달 750시간 무료입니다. 성능을 더 높이거나 시간을 넘어가는 경우에는 비용을 지불해야 합니다.</p>
+<p><img src="select-ami.png" alt="AMI 이미지 선택하기"></p>
+<p>EC2 는 AMI(<em>Amazon Machine Image</em>)라는 이미지를 기반으로 VM 을 생성합니다. 다양한 서버 종류와 버전이 있는데요, 저는 프리티어 지원 AMI 중 ‘Red Hat Enterprise Linux 7.5’를 선택했습니다.</p>
+<p><img src="select-ami.png" alt="인스턴스 유형 선택하기"></p>
+<p>용도와 성능에 따라서 인스턴스 유형을 선택할 수 있습니다. 프리 티어 사용 가능 버전인 t2.micro 를 선택합니다. 다른 세부 설정도 가능하지만 ‘검토 및 시작’을 합니다.</p>
+<p><img src="key-pair.png" alt="키 페어 생성"></p>
+<p>인스턴스가 실행되는 동안 해당 인스턴스에 접속할 수 있는 키 페어 파일이 선택합니다. 키 페어를 새로 생성하면 퍼블릭 키(<em>public key</em>)는 AWS 서버에 저장되고 프라이빗 키(<em>private key</em>) 파일은 사용자의 PC 에 저장합니다. 이 프라이빗 키 파일(<em>pem</em> 파일)을 이용해 인스턴스에 SSH 로 접속합니다. 기존에 사용하던 키 페어가 있으면 그대로 사용 가능합니다.</p>
+<p><img src="connect-instance.png" alt="인스턴스 연결"></p>
+<p>친절하게도 가이드에 나오는 명령어를 그대로 사용하면 SSH 연결이 가능합니다. 설치 과정은 로컬 VM에서 사용한 것과 동일합니다.</p>
+<h3 id="GCP-Compute-Engine">GCP Compute Engine</h3>
+<p>Compute Engine 은 GCP 에서 제공하는 컴퓨팅 파워입니다. GCP 는 원하는 제품을 사용해 볼 수 있도록 $300의 크레딧을 제공하고 특정 조건에 따라 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloud.google.com/free/">무료 서비스</a>를 제공합니다.</p>
+<p><img src="gcp-create-vm.png" alt="새 VM 인스턴스"></p>
+<p>프로젝트를 만들고 VM 인스턴스를 새로 생성합니다. 저는 캡쳐와 같이 설정했습니다. GCP 의 경우 VM 생성 시 간단하게 컨테이너 이미지를 배포할 수 있는 기능을 제공합니다. 컨테이너 이미지란에는 마켓플레이스의 컨테이너 이미지에서 Nginx 의 주소( <code>marketplace.gcr.io/google/nginx1:latest</code>)를 가져와서 적어줍니다.</p>
+<p>부팅 디스크는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://cloud.google.com/container-optimized-os/">Container-Optimized OS</a> 를 선택할 수 있습니다. 이 컨테이너 최적화 OS는 도커 컨테이너 런타임과 모든 쿠버네티스 구성 요소가 설치되어 있으므로 필요한 컨테이너를 바로 배포할 수 있습니다. 그렇다면 이 OS 는 뭘 기반으로 하고 있을까요? 컨테이너 최적화 OS 는 오픈 소스인 Chromium OS 를 기반으로 하고 있습니다.</p>
+<p><img src="gcp-vm-ssh.png" alt="인스턴스 SSH 접속"></p>
+<p>인스턴스 생성 완료 후 인스턴스 세부 정보에서 SSH 연결을 누르면 새로운 창이 뜨고 바로 접속이 됩니다. 도커는 이미 설치되어 있습니다. 연결도 그렇고 세세한 설정도 그렇고 AWS 보다 간편하네요.</p>
+<p><code>docker images</code> 를 입력하면 설정해서 내려 받은 Nginx 이미지를 확인할 수 있습니다.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line">REPOSITORY                                            TAG                 IMAGE ID            CREATED             S</span><br><span class="line">IZE</span><br><span class="line">marketplace.gcr.io/google/nginx1                      latest              1c9b94f006da        10 days ago         2</span><br><span class="line">17MB</span><br><span class="line">gcr.io/gce-containers/konlet                          v.0.9-latest        da64965a2b28        5 weeks ago         7</span><br><span class="line">3.4MB</span><br><span class="line">gcr.io/stackdriver-agents/stackdriver-logging-agent   0.2-1.5.33-1-1      fcfafd404600        4 months ago        5</span><br><span class="line">48MB</span><br></pre></td></tr></table></figure>
+<h2 id="도커-컨테이너-라이프-사이클">도커 컨테이너 라이프 사이클</h2>
+<p><img src="container-lifecycle.png" alt="http://docker-saigon.github.io/post/Docker-Internals/"></p>
+<p>마지막으로 도커 컨테이너의 라이프 사이클을 살펴보겠습니다. 컨테이너는 도커 명령어에 따라 상태가 변화합니다. 위 그림을 클릭하면 확대해서 볼 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>상태</th>
+<th>명령</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>생성</td>
+<td><code>docker create</code></td>
+<td>생성만 되고 시작은 아님.</td>
+</tr>
+<tr>
+<td>생성 및 시작</td>
+<td><code>docker run</code></td>
+<td>생성하고 시작.</td>
+</tr>
+<tr>
+<td>시작</td>
+<td><code>docker start</code></td>
+<td>재시작은 <code>docker container restart</code>.</td>
+</tr>
+<tr>
+<td>정지</td>
+<td><code>docker stop</code></td>
+<td>실행 중인 컨테이너를 정지.</td>
+</tr>
+<tr>
+<td>삭제</td>
+<td><code>docker rm</code></td>
+<td>컨테이너를 삭제.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;barcode=9788956747903">완벽한 IT 인프라 구축을 위한 Docker</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="http://docker-saigon.github.io/post/Docker-Internals/">Docker Internals</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.docker.com/2016/12/understanding-docker-networking-drivers-use-cases/">Understanding docker networking drivers and their use cases | Docker blog</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.docker.com/storage/">Manage data in Docker | Docker docs</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/11/09/it-infrastructure-basics/" title="개발자를 위한 인프라 기초 총정리">개발자를 위한 인프라 기초 총정리</a>
+</li>
+<li>
+<a href="/2018/10/25/google-cloud-summit-seoul-2018/" title="구글 클라우드 서밋 서울 2018 후기">구글 클라우드 서밋 서울 2018 후기</a>
+</li>
+<li>
+<a href="/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/" title="스프링 부트 컨테이너와 CI&#x2F;CD 환경 구성하기">스프링 부트 컨테이너와 CI&#x2F;CD 환경 구성하기</a>
+</li>
+<li>
+<a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/" title="개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://futurecreator.github.io/2018/10/19/microservices-deployment-strategy/">마이크로서비스 배포 전략</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://hub.docker.com/explore/">Explore Official Repositories | Docker Hub</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/12/15/aws-reinvent-2018-summary/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            AWS re:Invent 2018 한 방에 정리하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/11/12/my-best-programming-font-top-3/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">최고의 프로그래밍 폰트는?</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/11/16/docker-container-basics/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

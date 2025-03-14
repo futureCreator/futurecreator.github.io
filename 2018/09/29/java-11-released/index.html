@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Java 11 릴리즈! |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/09/29/java-11-released/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-java-11-released" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Java 11 릴리즈!
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/09/29/java-11-released/" class="article-date">
+    <time datetime="2018-09-29T14:06:48.000Z" itemprop="datePublished">2018/09/29</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              5 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>자바 11이 릴리즈됐습니다. 자바 10이 출시된지 6개월만입니다. 오라클은 6개월마다 새 버전을 출시한다고 했고, 특정 버전만 장기간 지원(Long-term support; LTS)한다고 밝혔는데요. 자바 11은 첫 번째 LTS 버전입니다.</p>
+<div class="twitter-wrapper"><blockquote class="twitter-tweet"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://twitter.com/java/status/928185028714160128"></a></blockquote></div><script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>오라클이 이런 버전 정책을 가져가는 이유는 두 가지입니다.</p>
+<ul>
+<li>자바 생태계가 빠르게 발전할 수 있도록 6개월마다 새로운 버전을 릴리즈합니다.</li>
+<li>중간 중간 LTS 버전을 둠으로써 다음 버전으로 마이그레이션할 충분할 시간을 줍니다.</li>
+</ul>
+<p>그럼 자바 11에서 달라진 점을 살펴보겠습니다.</p>
+<h2 id="새로운-기능">새로운 기능</h2>
+<h3 id="Nest-기반-접근-제어">Nest 기반 접근 제어</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://openjdk.java.net/jeps/181">Nest-based access controls</a>. Nest 는 접근 제어 컨텍스트로 논리적으로는 같은 클래스를 분리된 클래스로 컴파일할 수 있게 해줍니다. 그러면 다른 클래스의 private 멤버에 getter/setter 없이 바로 접근 가능합니다. 여러 클래스를 하나의 클래스처럼 묶어줄 수 있는 기술로 보입니다.</p>
+<h3 id="새로운-가비지-컬렉터">새로운 가비지 컬렉터</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://openjdk.java.net/jeps/333">ZGC: A Scalable Low-Latency Garbage Collector (Experimental)</a>. 성능을 향상시킨 새로운 가비지 컬렉터(Carbage Collector)입니다. 메모리를 자동으로 정리해주는 가비지 컬렉터는 자바의 장점 중 하나이지만, 가비지 컬렉터가 동작할 때 JVM이 애플리케이션을 멈추기 때문에 자바의 단점이기도 합니다. ZGC는 이 시간을 10ms 미만으로 줄이고 15% 이하의 성능 페널티를 목표로 합니다.</p>
+<h3 id="Flight-Recorder">Flight Recorder</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bugs.openjdk.java.net/browse/JDK-8203664">Flight Recorder</a>. 자바 애플리케이션과 HotSpot JVM의 문제 해결을 위한 오버헤드가 낮은 데이터 수집 프레임워크입니다. 이전에는 유료 기능이었지만 오픈소스로 공개되었습니다.</p>
+<h3 id="새로운-표준-HTTP-라이브러리">새로운 표준 HTTP 라이브러리</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://openjdk.java.net/jeps/321">HTTP Clinet(Standard)</a>. <code>java.net.http</code> 패키지의 새로운 모듈로 flow 기반의 HTTP/1.1과 HTTP/2를 지원합니다. 자바 9과 자바 10에서 사용되었던 <code>jdk.incubator.http</code> 패키지가 표준화되어 <code>java.net.http</code> 패키지로 추가되었습니다.</p>
+<h3 id="TLS-1-3">TLS 1.3</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://openjdk.java.net/jeps/332">Transport Layer Security (TLS) 1.3</a>. <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">TLS</a>는 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">이전 포스트</a>에서 살펴봤던 것처럼 SSL(Secure Socket Layer)의 표준 이름이죠. TLS의 새로운 버전을 구현했습니다.</p>
+<h3 id="람다에서의-var-변수">람다에서의 var 변수</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://openjdk.java.net/jeps/323">Local-Variable Syntax for Lambda Parameters</a>. 자바 10에서 도입된 var 타입 추론을 업데이트했습니다.</p>
+<h2 id="사라진-기능">사라진 기능</h2>
+<p>사라진 기능도 간단하게 살펴보겠습니다.</p>
+<ul>
+<li><strong>Java EE and CORBA Modules</strong> : 앞으로 EE 나 CORBA 모듈이 필요한 경우 명시적으로 의존을 추가해야 합니다.</li>
+<li><strong>Web Start</strong> : 특별한 대안 없이 삭제되었습니다.</li>
+<li><strong>Applets</strong> : 한동안 대부분 deprecated 되었다가 완전히 삭제되었습니다.</li>
+<li><strong>JavaFX</strong> : FX 라이브러리가 OpenJFX 프로젝트로 옮겨가면서 코어에서 삭제되었습니다.</li>
+</ul>
+<p>자바 11이 릴리즈되었다는 소식에 달라진 점을 간단히 살펴봤습니다. 자바 10을 아직 정리하지 않아서 차차 다른 포스트에서 다뤄볼 예정입니다. 자바 11은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">오라클 다운로드 페이지</a>에서 다운로드하실 수 있습니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://jdk.java.net/11/release-notes">JDK 11 Release Notes | jdk.java.net</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.infoq.com/news/2018/09/java11-released">Java 11 Released | InfoQ</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://byline.network/2018/09/3-22/">오라클 자바 SE 유료화(?)에 대한 오해 셋 | BylineNetwork</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/08/26/java-8-streams/" title="Java 스트림 Stream (1) 총정리">Java 스트림 Stream (1) 총정리</a>
+</li>
+<li>
+<a href="/2018/08/26/java-8-streams-advanced/" title="Java 스트림 Stream (2) 고급">Java 스트림 Stream (2) 고급</a>
+</li>
+<li>
+<a href="#">Post not found: java-8-lambda-deep-dive</a>
+</li>
+<li>
+<a href="/2018/08/12/java-generics/" title="Java 제네릭 Generics DEEP DIVE">Java 제네릭 Generics DEEP DIVE</a>
+</li>
+<li>
+<a href="/2018/08/14/java-8-optional/" title="Java 8 옵셔널 Optional">Java 8 옵셔널 Optional</a>
+</li>
+<li>
+<a href="/2018/06/04/java-observer-pattern/" title="Java 옵저버 패턴 (Observer Pattern)">Java 옵저버 패턴 (Observer Pattern)</a>
+</li>
+<li>
+<a href="/2017/01/27/java-variable-data-type/" title="자바의 변수와 데이터 타입 (Java Variables &amp; Data type)">자바의 변수와 데이터 타입 (Java Variables &amp; Data type)</a>
+</li>
+<li>
+<a href="/2018/06/02/java-string-concatenation/" title="Java 문자열 연결 방법 비교">Java 문자열 연결 방법 비교</a>
+</li>
+<li>
+<a href="/2018/06/02/java-string-joiner/" title="Java StringJoiner (문자열 구분자 붙이기)">Java StringJoiner (문자열 구분자 붙이기)</a> </li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/10/04/inter-process-communication-in-microservices/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            마이크로서비스 Microservices (3) 프로세스 간 통신
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/09/14/microservices-with-api-gateway/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">마이크로서비스 Microservices (2) API 게이트웨이</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/09/29/java-11-released/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

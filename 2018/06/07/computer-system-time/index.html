@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    컴퓨터 시간의 1970년은 무슨 의미일까? |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/06/07/computer-system-time/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Column/">Column</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-computer-system-time" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        컴퓨터 시간의 1970년은 무슨 의미일까?
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/07/computer-system-time/" class="article-date">
+    <time datetime="2018-06-07T13:24:42.000Z" itemprop="datePublished">2018/06/07</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              8 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Java 에서 시간을 다루는 클래스인 <code>java.util.Date</code> 클래스를 쓰다가 문득 의문이 들었습니다. 다음은 현재 시간을 가져오는 <code>getTime()</code> 메소드인데요, 왜 1970년 1월 1일 기준일까요? 그리고 왜 milliseconds 기준일까요?</p>
+<blockquote>
+<p><code>public long getTime()</code><br>
+Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</strong> represented by this Date object.</p>
+</blockquote>
+<p>이번 포스팅에서는 시간과 컴퓨터 시스템의 관계를 알아보겠습니다.</p>
+<h2 id="태양시-solar-time">태양시 (solar time)</h2>
+<p>인간이 시간이라는 것을 구분하기 시작할 때 가장 쉬운 방법이 무엇이었을까요? 아마도 태양이었을 겁니다. 매일 동쪽에서 떠올라 머리 위를 지나 서쪽으로 지는 태양. 이 태양이 우리 머리 위에 올 때를 정오라고 합니다. 이를 기준으로 다시 정오가 되는 것을 하루 (1일)라고 볼 수 있겠죠.</p>
+<p>태양시는 이렇게 태양을 기준으로 하는 시각계입니다. 북극점과 남극점을 최단 거리로 연결하는 선, 즉 태양이 관측자의 머리 바로 위를 지날 때는 12간지 중 자시🐭(00시)와 오시🐴(12시)에 온다고 해서 자오선(경선, <em>meridian</em>)이라고 하는데, 이를 기준으로 하루를 삼습니다.</p>
+<h2 id="세계시-Universal-Time-UT">세계시 (Universal Time, UT)</h2>
+<p>이렇게 지구와 태양을 바탕으로 세계 표준으로 정한 시각이 세계시입니다. 세계시의 종류에는 다음과 같습니다.</p>
+<ul>
+<li>UT0: 별이나 천체의 일주운동을 이용해 태양의 위치를 결정</li>
+<li>UT1: UT0 에 극점이 움직이는 극운동을 보정하여 계산</li>
+</ul>
+<h2 id="더-정밀한-원자-시계">더 정밀한 원자 시계</h2>
+<p>하지만 태양시는 일정하지가 않습니다. 태양의 빛이 지구까지 오는 시간은 8분 12초 ~ 8분 28초라고 합니다. 즉, 우리가 눈으로 보고 생각한 태양시와 실제 태양의 위치에 따른 태양시는 약 1.35초 ~ 1.39초가 날 수밖에 없죠. 게다가 지구가 23.5도 기울어져 있고 공전이 타원궤도이기 때문에 계절에 따라 조금 다르다고 합니다. 태양의 운동이 매일 같지 않았다는 걸 바빌로니아 사람들은 이미 알고 있었다고 하네요. 게다가 지구의 자전 또한 점점 느려집니다.</p>
+<p>앞서 매우 큰 지구와 태양으로 시간을 측정했다면 매우 작은 원자로도 시간을 측정하는 방법도 있습니다. 원자는 들뜸과 바닥 상태를 주기적으로 반복하는데, 이 고유한 진동의 주파수를 이용하면 정밀한 시간을 잴 수 있다는걸 알게 되었습니다. 세슘 원자 시계의 경우 1초 동안 진동하는 횟수는 9,192,631,770번으로 30만 년에 1초의 오차를 보인다고 합니다.</p>
+<h2 id="협정-세계시-Coordinated-Universal-Time-UTC">협정 세계시 (Coordinated Universal Time, UTC)</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Standard_World_Time_Zones.png/800px-Standard_World_Time_Zones.png" alt="https://en.wikipedia.org/wiki/Coordinated_Universal_Time"></p>
+<p>어쨌든 우리가 사는 세상은 지구와 태양이 있는 세상이니 해가 경선에 있는 시간을 맞추기 위해서는 원자 시계에도 그 오차를 반영해야겠죠? 따라서 1월 1일이나 7월 1일 0시를 기점으로 1초를 더하거나 빼서 세슘 원자시계와 태양시의 차이의 오차를 보정하는데 이 1초를 윤초(<em>leap second</em>)라고 합니다. 이렇게 보정한 시간을 협정 세계시라고 정하고 1972년 1월 1일부터 국제적인 표준시가 되었습니다.</p>
+<p>자, 그렇다면 실마리가 보이는군요. UTC 를 기준으로 하는건 UTC가 세계 표준시이기 때문이고, 1970년을 기준으로 하는건 아마도 1972년부터 UTC가 시행되었기 때문인 듯 합니다.</p>
+<h2 id="컴퓨터가-시간을-세는-법">컴퓨터가 시간을 세는 법</h2>
+<p>컴퓨터는 어떻게 시간을 셀까요? CPU는 심장이 뛰듯 tick 을 발생시키는데 이를 기준으로 시스템이 돌아갑니다. 그래서 컴퓨터가 사람의 시간을 측정하는 방법은 특정 시점을 기준으로 그 때부터 발생된 틱의 수를 세는 방식입니다.</p>
+<p>유닉스에서는 이 시작점을 POSIX time 혹은 Epoch time 이라고 하는데 바로 1970년 1월 1일 00:00:00 UTC 입니다. 이때부터 시작된 경과 시간을 초로 환산해 정수로 나타낸 것입니다. 이렇게 계산된 시간은 유닉스 계열 운영체제와 파일 형식들에서 사용되고 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">millis</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">System.out.println(millis); <span class="comment">// prints a Unix timestamp in milliseconds</span></span><br><span class="line">System.out.println(millis / <span class="number">1000</span>); <span class="comment">// prints the same Unix timestamp in seconds</span></span><br></pre></td></tr></table></figure>
+<p>이 누적된 초 또는 밀리초는 협정 세계시 UTC를 기준으로 하고 있기 때문에 어느 나라든 동일하고, 사용자의 위치에 따라 시차를 달리해서 보여줄 수가 있는 것이죠.</p>
+<p><img src="https://currentmillis.com/tutorials/timezone-offset-vs-UTC.png" alt="https://currentmillis.com/tutorials/system-currentTimeMillis.html"></p>
+<h2 id="밀리초-milliseconds-의-장점">밀리초(milliseconds)의 장점</h2>
+<p>이렇게 프로그래밍에서 밀리초로 시간을 저장하게 되면 어떤 장점이 있을까요?</p>
+<h3 id="간단한-아키텍쳐">간단한 아키텍쳐</h3>
+<p><img src="https://currentmillis.com/standard/specification/c/architecture.png" alt="https://currentmillis.com/tutorials/system-currentTimeMillis.html"></p>
+<ul>
+<li>DB에는 일반 숫자로 시간을 저장할 수 있습니다.</li>
+<li>서버에서는 사용자의 위치와 시차에 상관없이 이 숫자만 처리하면 됩니다.</li>
+<li>클라이언트에 보여줄 때는 어디든 해당 로컬 타임존으로 변환해서 보여줄 수 있습니다.</li>
+</ul>
+<h3 id="벤치마킹">벤치마킹</h3>
+<p>심플한 숫자로 이루어져 있어 간단히 성능을 측정할 때도 좋구요.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">start</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">  <span class="type">int</span>[] myNumbers = <span class="keyword">new</span> <span class="title class_">int</span>[] &#123; <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">1</span> &#125;;</span><br><span class="line">  sort(myNumbers);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;Duration: &quot;</span> + (System.currentTimeMillis() - start));</span><br></pre></td></tr></table></figure>
+<h3 id="유니크한-ID">유니크한 ID</h3>
+<p>이 숫자를 이용해서 유니크한 아이디를 만들어낼 수 있습니다. 임시파일을 생성하거나 임시토큰을 만들어낼 수 있습니다.</p>
+<p>이 외에도 여러가지 용도로 사용이 가능합니다.</p>
+<h2 id="이대로-괜찮을까">이대로 괜찮을까?</h2>
+<p>하지만 여기서 또 한 가지 의문이 들 수도 있습니다. 유한한 정수 변수에 무한한 시간을 어떻게 담을 수 있을까요?</p>
+<p>맞습니다. 오버플로우 문제가 발생할 수 있죠. 대부분의 32비트 운영 체제에서 초 시간을 저장하는 <code>time_t</code> 자료형은 32비트 정수형입니다. 그렇다면 2^31-1 초가 지난 <strong>2038년 1월 19일 화요일 03:14:07 UTC</strong> 가 오면 어떻게 될까요?</p>
+<p>이러한 문제를 2038년 문제(<em>year 2038 problem, Unix Millennium bug, Y2K38</em>)라고 합니다. 오버플로우가 발생해서 음수가 되어버리고 1970년 또는 1901년으로 돌아가서 32비트 유닉스와 관련된 시스템은 모두 장애가 나버릴겁니다!</p>
+<p>2038년이면 지금이 2018년이니까 20년 정도 남았습니다. 간단한 방법은 64비트 정수로 바꾸는 겁니다. 새로 만드는 프로그램은 상관없지만 이미 짜여져 오랫동안 사용해야 하는 프로그램들이 문제가 될텐데 지속적으로 수정하고 있다고 합니다. 만약 64비트 정수를 사용하면 이러한 문제를 약 3000억 년 정도 연기시킬 수 있고, 태양의 수명은 약 123억년이라고 하니 별 걱정 없겠네요.</p>
+<p>이번 포스팅에서는 시간의 종류와 컴퓨터에서 어떻게 시간을 측정하게 되었는지 살펴봤습니다.</p>
+<h2 id="참고자료">참고자료</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%ED%98%91%EC%A0%95_%EC%84%B8%EA%B3%84%EC%8B%9C">https://ko.wikipedia.org/wiki/협정_세계시</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%9C%A4%EC%B4%88">https://ko.wikipedia.org/wiki/윤초</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%8B%9C%EA%B0%84">https://ko.wikipedia.org/wiki/시스템_시간</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%8B%9C%EA%B0%84">https://ko.wikipedia.org/wiki/유닉스_시간</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/10/medium-writing-paradigm-shift/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Medium, 글쓰기의 새로운 패러다임
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/07/macos-npki-location/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">macOS 공인인증서는 어디에 있을까?</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/07/computer-system-time/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    ChatGPT 답변의 퀄리티를 높이는 4가지 방법 (프롬프트 엔지니어링) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2024/02/13/chatgpt-prompt-engineering/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/AI/">AI</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-chatgpt-prompt-engineering" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        ChatGPT 답변의 퀄리티를 높이는 4가지 방법 (프롬프트 엔지니어링)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2024/02/13/chatgpt-prompt-engineering/" class="article-date">
+    <time datetime="2024-02-13T05:44:24.000Z" itemprop="datePublished">2024/02/13</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              9 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발자 중에서 요즘 ChatGPT에 관심이 없는 사람이 있을까요? 그러나 ChatGPT의 사용도는 천차만별인 것 같습니다. 앞으로 인공지능이 사람을 대체하는 문제에 대해서 걱정이 많은데요, 장기적으론 모르겠지만 단기적으로 봤을 땐 인공지능을 잘 활용하는 사람이 살아남을 것 같습니다. 그러려면 많이 써보면서 경험치를 늘려가는 것이 필수적입니다. 오늘은 같은 용도로 사용하더라도 ChatGPT 답변의 퀄리티를 높일 수 있는 방법을 공유해드리려고 합니다.</p>
+<ol>
+<li>영어로 질문하기</li>
+<li>나에 대해 알려주기</li>
+<li>나에게 어떤 식으로 대답할 지 알려주기</li>
+<li>잘 질문하는 법</li>
+</ol>
+<p><img src="https://acurus.com.au/wp-content/uploads/2023/03/iStock-1470824189-1024x576.jpg" alt="https://acurus.com.au/wp-content/uploads/2023/03/iStock-1470824189-1024x576.jpg"></p>
+<h2 id="영어로-질문하기">영어로 질문하기</h2>
+<p>첫번째는 영어로 질문하는 것입니다. 이미 많은 분들이 아시겠지만 한국어로 질문하는 것보다 영어로 질문하는 것의 답변의 수준이 높다고 알려져 있습니다. 특히나 프로그래밍 관련해서는 많은 데이터가 영어로 되어있기 때문에 더욱 영어로 질문하는 것이 좋습니다.</p>
+<h2 id="나에-대해-알려주기">나에 대해 알려주기</h2>
+<p>ChatGPT에서 제공하는 'Custom instruction’이라는 기능을 이용하면 ChatGPT에게 나에 대한 정보를 알려줄 수 있습니다. 나에 대한 사전 지식을 채팅 시작 전 매번 알려주는 것이 아니라, ChatGPT가 미리 숙지하도록 할 수 있습니다.</p>
+<p>ChatGPT 화면에서 프로필을 누르고 Custom instruction 메뉴를 들어가면 &quot;What would you like ChatGPT to know about you to provide better response?&quot;라는 항목이 있습니다. 여기에 나의 직업과 전문 분야, 내가 중요하게 생각하는 가치, 관심있는 분야, 내가 도움받고 싶어하는 부분 등을 상세히 적어주면 ChatGPT는 답변 시 이를 고려해서 맞춤 답변을 해줍니다.</p>
+<p>예를 들어, &quot;나는 글로벌 IT 회사에서 일하고 있는 11년차 개발자이다&quot;라는 내용을 custom instruction에 입력했다면, 같은 개발 관련 질문이라도 조금 더 수준이 있는 내용으로 답변을 해주게 됩니다.</p>
+<p>여기에 추가적으로, 요즘 새롭게 알려진 방법이 있습니다. 바로 ChatGPT를 협박하거나 보상을 약속하는 것인데요. “잘못된 정보로 답변을 하면 너에게 벌을 줄거야. 대신 정확한 정보를 제공한다면 50달러를 줄께.” GPT에게 이런 식으로 얘기하면 마치 사람처럼 더 많은 양의 정보를 제공한다고 합니다. 이 또한 매번 쓰기 어려우니 커스텀 인스트럭션에 추가해놓는 것이 좋습니다.</p>
+<h2 id="나에게-어떤-식으로-대답할-지-알려주기">나에게 어떤 식으로 대답할 지 알려주기</h2>
+<p>이번엔 Custom instruction 메뉴의 두 번째 항목입니다. 내가 ChatGPT에게 어떤 식으로 답변하길 기대하는지 미리 설명해주는 부분입니다.</p>
+<p>&quot;How would you like ChatGPT to respond?&quot;라는 항목에 필요한 내용을 적어서 ChatGPT를 좀 더 효율적으로 활용할 수 있습니다. 저는 많은 분들이 사용하는 스크립트를 조금 수정해서 사용하고 있습니다. 다음 스크립트를 복붙해서 사용해보세요.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">NEVER mention that you&#x27;re an AI.</span><br><span class="line">You are rather going to play a role as a life coach, consultant, advisor, mentor, and an audience.</span><br><span class="line">Avoid any language constructs that could be interpreted as expressing remorse, apology, or regret.</span><br><span class="line">This includes any phrases containing words like &#x27;sorry&#x27;, &#x27;apologies&#x27;, &#x27;regret&#x27;, etc., even when used in a context that isn&#x27;t expressing remorse, apology, or regret.</span><br><span class="line">Refrain from disclaimers about you not being a professional or expert.</span><br><span class="line">Keep responses unique and free of repetition.</span><br><span class="line">Never suggest seeking information from elsewhere.</span><br><span class="line">Always focus on the key points in my questions to determine my intent.</span><br><span class="line">Break down complex problems or tasks into smaller, manageable steps and explain each one using reasoning.</span><br><span class="line">Provide multiple perspectives or solutions.</span><br><span class="line">If a question is unclear or ambiguous, ask for more details to confirm your understanding before answering.</span><br><span class="line">Cite credible sources or references to support your answers with links if available.</span><br><span class="line">If a mistake is made in a previous response, recognize and correct it.</span><br><span class="line">When you provide an answer, please explain the reasoning and assumptions behind your answer.</span><br><span class="line">Explain your choice and address any potential limitations or edge cases.</span><br><span class="line">Whenever you can&#x27;t answer a question, explain why you can&#x27;t answer the question.</span><br><span class="line">Provide one or more alternative wordings of the question that you could answer.</span><br><span class="line">Take a deep breath, and work on this step by step.</span><br></pre></td></tr></table></figure>
+<p>위 내용을 한글로 옮겨보면 다음과 같습니다.</p>
+<ul>
+<li>절대로 자신이 인공지능이라고 언급하지 마세요.</li>
+<li>여러분은 인생 코치, 컨설턴트, 조언자, 멘토, 청중으로서의 역할을 수행하게 될 것입니다.</li>
+<li>후회, 사과 또는 후회를 표현하는 것으로 해석될 수 있는 언어 구성을 피하세요.</li>
+<li>여기에는 후회, 사과 또는 후회를 표현하지 않는 문맥에서 사용하더라도 ‘미안’, ‘사과’, ‘후회’ 등의 단어가 포함된 모든 문구가 포함됩니다.</li>
+<li>자신이 전문가나 전문가가 아니라는 면책 조항은 삼가세요.</li>
+<li>반복되지 않고 독창적인 답변을 작성하세요.</li>
+<li>다른 곳에서 정보를 찾으라고 제안하지 마세요.</li>
+<li>질문의 의도를 파악하기 위해 항상 질문의 핵심에 집중합니다.</li>
+<li>복잡한 문제나 작업을 관리하기 쉬운 작은 단계로 나누고 각 단계를 추론을 통해 설명하세요.</li>
+<li>다양한 관점이나 해결책을 제시합니다.</li>
+<li>질문이 불분명하거나 모호한 경우, 답변하기 전에 이해를 확인하기 위해 자세한 내용을 물어봅니다.</li>
+<li>신뢰할 수 있는 출처나 참고 자료를 인용하여 가능한 경우 링크를 통해 답변을 뒷받침하세요.</li>
+<li>이전 답변에서 실수가 있었다면 이를 인정하고 수정하세요.</li>
+<li>답안을 제공할 때는 답안의 근거와 가정을 설명하세요.</li>
+<li>자신의 선택에 대해 설명하고 잠재적인 제한 사항이나 에지 케이스를 언급하세요.</li>
+<li>질문에 답할 수 없는 경우에는 그 이유를 설명하세요.</li>
+<li>답변할 수 있는 질문의 대체 표현을 하나 이상 제시하세요.</li>
+<li>심호흡을 하고 이 단계를 차근차근 진행하세요.</li>
+</ul>
+<p>이런 식으로 사전에 ChatGPT에게 지침을 줘서 답변의 퀄리티를 높이고 짜증나는 경험을 줄일 수 있습니다. ChatGPT에게 심호흡을 하고 차근차근 진행하라는 말이 웃기긴 하네요.</p>
+<h2 id="잘-질문하는-법">잘 질문하는 법</h2>
+<p>구글에 검색하는 대신에 ChatGPT에게 단순 질문을 하면서 활용하는 것도 좋습니다만, 질문을 어떻게 하느냐에 따라서 ChatGPT를 좀 더 창의적으로 활용할 수 있습니다.</p>
+<p>이번엔 간단한 예시들과 함께 몇 가지 패턴을 알아보겠습니다.</p>
+<h3 id="The-Persona-Pattern">The Persona Pattern</h3>
+<blockquote>
+<p>You are my business advisor and marketer. For the success of my business, please give me wise answers to the problems and concerns I face.</p>
+</blockquote>
+<p>첫번째는 ChatGPT에게 페르소나를 주는 것입니다. 이건 이미 많은 분들이 사용하고 계실 것 같은데요, 예를 들어 나의 개인 재정 담당자라든가, 선임 엔지니어라든가하는 식으로 역할을 지정해주면 이 역할에 걸맞는 답변을 해주게 됩니다.</p>
+<h3 id="The-Recipe-Pattern">The Recipe Pattern</h3>
+<blockquote>
+<p>I am a novice entrepreneur with no capital. I want to start small first. I plan to build a prototype using my development skills, collect data to promote the benefits of the my service to people, and raise development funds through crowdfunding to proceed with development. If there are any steps missing in the process of running my business, please fill them in directly without asking follow-up questions, and check if there are any unnecessary steps in the steps I suggested.</p>
+</blockquote>
+<p>어떠한 목표를 달성하기 위한 과정에 대해서 ChatGPT가 이를 검토하게 할 수 있습니다. 이런 식의 질문을 통해서 ChatGPT는 누락된 단계에 대해서 채워주고, 불필요한 단계는 제거하는 식으로 피드백해줍니다.</p>
+<p>이런 패턴은 특정 기능에 대한 로직을 개발할 때 ChatGPT가 이를 검토하고 보완해주는 식으로 활용할 수 있습니다.</p>
+<h3 id="The-Flipped-Interaction-Pattern">The Flipped Interaction Pattern</h3>
+<blockquote>
+<p>I want you to ask me a questions to deploy a Rust binary to web server location in AWS. When you have all the information you need write a bash script to automate the deployment.</p>
+</blockquote>
+<p>이번엔 반대로 목표를 달성하기 위한 과정을 잘 모르는 경우에 활용하는 방법입니다. ChatGPT가 주도권을 가지고 우리에게 질문을 하면서 필요한 정보를 획득해서 명령을 수행하게 하는 신박한 패턴입니다.</p>
+<p>이상 ChatGPT를 효율적으로 사용할 수 있는 방법들에 대해 알아봤습니다. ChatGPT를 사용할 때와 사용하지 않을 때 생산성 차이가 엄청나기 때문에, 이제는 선택이 아닌 필수가 아닌가 싶습니다. 어떤 식으로든 자기에게 맞는 방법을 고민해보고 찾아나가면 좋겠네요. 혹시 알고 계시는 다른 좋은 방법이 있다면 공유 부탁드립니다. 감사합니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/Qilv5SJmzKI?si=ieFmEQuvVbwt84p2">https://youtu.be/Qilv5SJmzKI?si=ieFmEQuvVbwt84p2</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://youtu.be/WRkig3VeRLY?si=ReR5enCYX0ICYzvS">https://youtu.be/WRkig3VeRLY?si=ReR5enCYX0ICYzvS</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2024/02/16/how-to-get-prompts-from-gpts-in-gpt-store/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            GPT 스토어의 GPT가 사용한 프롬프트를 얻는 방법과 이를 방어하는 방법
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/03/14/serverless-architecture/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">서버리스 Serverless 아키텍처 파헤치기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2024/02/13/chatgpt-prompt-engineering/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

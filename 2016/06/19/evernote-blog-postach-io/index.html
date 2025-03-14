@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    Postach.io, 에버노트 (Evernote)로 만드는 쉬운 블로그 |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2016/06/19/evernote-blog-postach-io/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Reviews/">Reviews</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-evernote-blog-postach-io" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Postach.io, 에버노트 (Evernote)로 만드는 쉬운 블로그
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/19/evernote-blog-postach-io/" class="article-date">
+    <time datetime="2016-06-19T08:19:55.000Z" itemprop="datePublished">2016/06/19</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              17 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="에버노트-Evernote">에버노트 (Evernote)</h2>
+<p><img src="/images/postach/evernote.jpg" alt="Evernote"></p>
+<p>수없이 많은 메모 앱들 중에 최고는 <strong>에버노트 (<em>Evernote</em>)</strong> 가 아닐까 합니다. '모든 장치들끼리 연동되는 노트’라는 컨셉으로 오랫동안 발전을 거듭해왔죠. 저 또한 2010년부터 지금까지 사용한 지 6년 정도 되었습니다. 그 시간만큼 쌓아온 자료들이 많아서 버릴 수가 없네요. 게다가 쓰면 쓸수록 의존도 높아져서 사용량도 많아졌습니다.</p>
+<p>서비스 등급으로는 무료 등급 외에 에버노트 프리미엄 (월 5.99$, 연 49.99$)이 있습니다. 하지만 가격이 부담스럽기도 하고 무료 계정으로도 충분해서 필요성을 못느꼈는데, 에버노트 플러스 (월 $2.99, 연 24.99$) 라는 서비스 등급이 생겨났죠. 이미지를 많이 첨부할 경우에는 무료 계정으로는 조금 벅차서 현재는 플러스 등급을 사용하고 있습니다.</p>
+<h2 id="Postach-io"><a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a></h2>
+<p><img src="/images/postach/postach.png" alt="Postach.io / The Evernote Powered Blogging Platform"></p>
+<p>그런데 에버노트로 블로그를 만들 수 있는 서비스가 있다고 해서 찾아봤습니다. 바로 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://postach.io/">Postach.io</a> 라는 서비스입니다. 가입하면 <code>postach.io</code> 라는 도메인으로 호스팅되는 내 사이트가 만들어지고, 에버노트에 노트를 만들기만 하면 포스팅이 됩니다. 에버노트에 노트를 만들기만 하면 블로깅이 된다니! 생각만해도 엄청 편할 것 같군요. 당장 사용해보기로 했습니다.</p>
+<h2 id="회원-가입하기">회원 가입하기</h2>
+<h3 id="사이트-만들기-Create-site">사이트 만들기 (Create site)</h3>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://postach.io/">Postach.io</a> 에 접속해 회원 가입부터 합니다. 성, 이름, 이메일과 비밀번호 입력하면 끝!</p>
+<h3 id="노트북-연결하기-Connect-Notebook">노트북 연결하기 (Connect Notebook)</h3>
+<p>바로 에버노트와 연동할 수 있는 창이 뜹니다. 에버노트에 로그인하고 인증을 수락하면 <strong><a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a></strong> 라는 노트북이 자동으로 생성됩니다. 구글이나 페북은 연동하고 나서 안쓰면 까먹고 관리가 안되는 편인데, 에버노트는 연동 시 기간을 설정할 수가 있습니다. 내가 사용하지 않아도 해당 기간이 지나면 자동으로 연동이 해지되겠네요.</p>
+<h3 id="포스팅-테스트하기-Test-Post">포스팅 테스트하기 (Test Post)</h3>
+<p><img src="/images/postach/postach_test_post.png" alt="Test Post"></p>
+<p>그 다음은 포스트를 하나 생성해서 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a> 와 에버노트가 잘 연결되었는지 확인하는 단계입니다. 새로 생성된 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a> 노트북에 노트를 하나 만들고 <code>published</code> 라는 태그를 입력합니다. <a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a> 노트북에 있는 노트 중 <code>published</code> 라는 태그가 있는 것만 배포됩니다. 올리고 싶으면 태그를 붙이고, 내리고 싶으면 태그를 떼고. 간편하죠? 동기화 해야 반영되니, 태그까지 입력한 후 동기화하는 것도 잊지 마세요.</p>
+<p>그러면 테스트 성공 화면이 나오면서 가입 절차가 마무리됩니다.</p>
+<h2 id="사이트-확인해보기">사이트 확인해보기</h2>
+<p>이제 생성한 블로그 목록이 나옵니다. View 를 누르면 해당 사이트로 이동합니다. 기본 도메인은 <code>username.postach.io</code> 이고 <code>username</code> 부분은 변경이 가능합니다. 또는 커스텀 도메인으로도 등록할 수도 있습니다. 간단한 설정과 더불어 트위터, 페이스북, 구글플러스, 링크드인의 소셜링크 연결이 가능합니다.</p>
+<p><img src="/images/postach/postach_main.png" alt="Main"></p>
+<p>기본 화면입니다. 프로필 사진과 백그라운드 이미지는 변경 가능합니다. 백그라운드 이미지가 엄청 큰 게 인상적인데 반해 유저 프로필 사진은 엄청 작네요.</p>
+<p><img src="/images/postach/postach_post.png" alt="Post"></p>
+<p>포스트를 눌렀을 때 화면입니다.</p>
+<p><img src="/images/postach/postach_mobile.png" alt="Mobile"></p>
+<p>모바일을 눌렀을 때 화면입니다.</p>
+<h2 id="장점">장점</h2>
+<p>먼저 장점부터 알아보겠습니다.</p>
+<h3 id="쉽다">쉽다</h3>
+<p>정말 쉽습니다. 에버노트에서 작성하고 <code>published</code> 태그만 붙이면 끝! 에버노트를 많이 사용하시는 분들이라면 정말 간편하게 블로그를 사용할 수 있습니다.</p>
+<h3 id="플러그인">플러그인</h3>
+<p>가장 핵심적이고 기본적인 플러그인 2개를 지원합니다.</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://analytics.google.com/">구글 애넡리틱스</a>: 다양한 기준으로 방문자 통계를 상세히 볼 수 있습니다.</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://disqus.com">디스커스</a>: SNS 계정 (페이스북, 트위터 등)으로 포스트에 댓글을 달 수 있습니다.</li>
+</ul>
+<p>구글 애널리틱스는 홈페이지에서 사이트를 등록하고 나오는 UA Code 를 입력하면 되고, 디스커스는 Disqus Shortname 만 넣으면 바로 홈페이지에 적용됩니다.</p>
+<h3 id="마크다운-지원">마크다운 지원</h3>
+<p>블로깅하면 빼놓을 수 없는 <strong>마크다운 (Markdown)</strong> 문법도 지원합니다. 마크다운을 적용하려면 <code>markdown</code> 이라는 태그만 달면 됩니다.</p>
+<h3 id="검색-엔진-최적화-SEO-Search-Engine-Optimization">검색 엔진 최적화 (SEO; Search Engine Optimization)</h3>
+<p>홈페이지 설명에 검색 엔진 최적화가 되어있다고 하네요. 정말 그런지 확인해봐야곘네요.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span></span><br><span class="line">      Test | Eric&#x27;s Site</span><br><span class="line">    <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;mobile-web-app-capable&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-capable&quot;</span> <span class="attr">content</span>=<span class="string">&quot;yes&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="attr">content</span>=<span class="string">&quot;black&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Eric Han&quot;</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;This is a test.&quot;</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- OpenGraph tags --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:site_name&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Eric&#x27;s Site&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;article:published_time&quot;</span> <span class="attr">content</span>=<span class="string">&quot;2016-06-19 04:32:46&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;article:author&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Eric Han&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;article&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:title&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Test&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:url&quot;</span> <span class="attr">content</span>=<span class="string">&quot;http://erichan.postach.io/permalink/6156ed141a&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">property</span>=<span class="string">&quot;og:description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;This is a test.&quot;</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- Twitter Cards --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:card&quot;</span> <span class="attr">content</span>=<span class="string">&quot;summary&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:site&quot;</span> <span class="attr">content</span>=<span class="string">&quot;@https://twitter.com/future_go&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:title&quot;</span> <span class="attr">content</span>=<span class="string">&quot;Test&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:description&quot;</span> <span class="attr">content</span>=<span class="string">&quot;This is a test....&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:creator&quot;</span> <span class="attr">content</span>=<span class="string">&quot;@https://twitter.com/future_go&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;twitter:domain&quot;</span> <span class="attr">content</span>=<span class="string">&quot;http://erichan.postach.io&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;canonical&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://erichan.postach.io/permalink/6156ed141a&quot;</span>&gt;</span></span><br><span class="line">	<span class="comment">&lt;!-- RSS feed --&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;alternate&quot;</span> <span class="attr">type</span>=<span class="string">&quot;application/rss+xml&quot;</span> <span class="attr">title</span>=<span class="string">&quot;RSS&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://erichan.postach.io/feed.xml&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>테스트로 만든 포스트의 <code>&lt;head&gt;</code> 태그 일부입니다. 오픈그래프 (Open Graph) 와 각종 메타 태그가 잘 정리되어있습니다. RSS feed 까지 잘 만들어져 있습니다. 깔끔하네요! 트위터 아이디도 연동시켜놨더니 알아서 트위터 관련 태그도 추가되어 있군요.</p>
+<h2 id="단점">단점</h2>
+<p>가장 큰 단점은 여러가지 기능을 유료로 제공한다는 점입니다. 물론 좋은 기능을 사용할 때 합당한 비용을 지불하는 것은 단점이라고 할 수 없습니다. 저 또한 맥북과 아이폰을 사용하면서 많은 유료앱을 사용하고 있습니다. 하지만 누군가에게는 그만한 비용을 지불하면서까지 그 기능을 사용할 의사 혹은 필요가 없다면 단점이 될 수 있습니다.</p>
+<h3 id="추가-사이트-개설은-유료">추가 사이트 개설은 유료</h3>
+<p>무료 계정은 단 하나의 사이트만 개설이 가능합니다. 블로그 하나 개설하려는 목적이라면 크게 상관이 없을 수도 있겠네요.</p>
+<h3 id="커스텀-테마는-유료-기본-월-5-연간-50">커스텀 테마는 유료 (기본 월 5$, 연간 50$)</h3>
+<p>테마를 바꾸거나 테마를 만들고 뜯어고치려면 돈을 내야 합니다. 기본 테마가 딱 하나인데 썩 마음에 들지 않아서 바꾸고 싶은데 말이죠. 기본 테마를 2~3개 줘도 좋았을 것 같네요. 테마 미리보기도 안되는 점은 너무하다는 생각이 듭니다 ㅋㅋ 유료 서비스는 구독 서비스 형식으로, 기본 한달에 5$ 이고 기간을 많이 할수록 가격은 내려갑니다.</p>
+<h3 id="Evernote-Web-Clipper">Evernote Web Clipper</h3>
+<p>에버노트 웹 클리퍼로 클립한 노트는 법적인 이슈와 스타일링 이슈로 게시되지 않는다고 합니다.</p>
+<h3 id="체크리스트-사용-불가">체크리스트 사용 불가</h3>
+<p>에버노트에 있는 체크리스트는 내부 이슈로 아직 적용이 안된다고 합니다. 테스트해보니 그냥 텍스트로만 나옵니다.</p>
+<h2 id="부가적인-툴">부가적인 툴</h2>
+<p>같이 사용하면 좋을 것 같은 툴이 있어 소개해드리려고 합니다.</p>
+<h3 id="Marxico-할인가-연간-15-99">Marxico (할인가 연간 15.99$)</h3>
+<p><img src="/images/postach/marxico.png" alt="Marxico"></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://marxi.co/">Marxico</a> 는 에버노트를 위한 온라인 마크다운 에디터입니다. 웹 사이트에서 접속할 수도 있고 크롬 웹스토어에서 설치도 가능합니다. 깔끔하고 성능도 괜찮습니다. 지원하는 마크다운 문법도 많습니다. 프리뷰 화면이 옆에 나와서 바로 확인 가능합니다. 작성한 마크다운 문서는 바로 에버노트와 동기화됩니다.</p>
+<p>처음에 보고 정말 마음에 들었는데 한가지 아쉬운 점이 있었습니다. 에버노트로는 Marxico 에서 작성한 노트를 수정할 수가 없는 점입니다. 외부 앱에서 작성한 노트라서 수정이 불가능하다고 나옵니다. 블로그 작성은 Marxico 만 쓰겠다 하면 크게 문제가 안될 수도 있겠네요.</p>
+<p>설치해놓고 오랜만에 봤더니 트라이얼 기간이었네요. 역시 좋은 건 돈을 내야 합니다. 연간 $15.99 로 월 1500원 정도네요. 트라이얼 기간이 끝나서 Marxico 로 작성한 문서가 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a> 에서 제대로 나오는지는 확인 못해봤습니다. 조만간 확인해보고 수정하겠습니다.</p>
+<h3 id="ByWord-Mac-13-19-iOS-6-59">ByWord (Mac 13.19$, iOS 6.59$)</h3>
+<p><img src="/images/postach/byword.png" alt="ByWord"></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://bywordapp.com/">ByWord</a> 는 수려하고 깔끔한 마크다운 에디터입니다. 저도 현재 사용하고 있는 툴인데 만족스럽게 사용하고 있습니다. ByWord 의 기능 중에 Evernote 로 Export 하는 기능이 있습니다. ByWord 에서 작성하면 에버노트에 올라가면서 Postach 블로그에 게시할 수 있죠.</p>
+<p>하지만 이 기능은 추가로 결제해야 하는 기능입니다. iCloud 에 저장이 가능하기 때문에 굳이 에버노트에 저장할 필요가 없었는데 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://Postach.io">Postach.io</a> 를 사용한다면 필요한 기능일 수 있겠네요.</p>
+<h2 id="개인적인-총평">개인적인 총평</h2>
+<p>2013년 4월에 출시되어 3년이 지났는데 아직 부족한 느낌이 좀 들기도 하네요. 일단 무료 계정으로 사용할 수 있는 활용 범위가 좀 늘어서 사람들이 더 많이 사용하면 유료 사용자도 늘지 않을까 싶습니다. 에버노트도 무료로 충분히 사용할 수 있으나 애정과 필요에 의해서 유료 서비스를 사용하듯이 말이죠. 무료 플랫폼이 많아서 다른 선택지들이 많은 상황이니까요.</p>
+<p>그럼에도 불구하고 에버노트라는 점은 매력적입니다. 전체적으로 깔끔하고 쉬운 사용법은 너무나 마음에 듭니다. 만약 사용한다면 마크다운이 꼭 필요하니까 Marxico 랑 함께 사용하고 싶네요.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/19/hexo-tag-plugins/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo 태그 플러그인 (Tag plugins) 살펴보기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/18/spring-boot-get-started/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">스프링 부트 (Spring Boot) 로 시작하는 프레임워크 (Framework)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/19/evernote-blog-postach-io/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

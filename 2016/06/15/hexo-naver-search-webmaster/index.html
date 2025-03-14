@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2016/06/15/hexo-naver-search-webmaster/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-naver-search-webmaster" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/15/hexo-naver-search-webmaster/" class="article-date">
+    <time datetime="2016-06-15T07:15:36.000Z" itemprop="datePublished">2016/06/15</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              9 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="/images/naver_webmaster/naver_webmaster.jpg" alt="http://webmastertool.naver.com/"></p>
+<p>지난 <a href="http://futurecreator.github.io/2016/06/15/hexo-google-site-serach-console-analytics/">포스트</a> 구글에 사이트 등록을 하고 최적화를 해봤는데요, 이번 포스트에서는 네이버에 등록을 해보겠습니다. 지난 포스트에서 잘 따라오셨다면 많은 부분이 되어 있으니 간단하게 진행하실 수 있을 겁니다.</p>
+<h2 id="네이버에-사이트-등록하기">네이버에 사이트 등록하기</h2>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://webmastertool.naver.com/">네이버 웹마스터 도구</a> 에 접속합니다. 네이버로 로그인하시면 사이트, 앱, 채널 중에 선택해서 등록할 수 있습니다. 채널은 네이버 블로그나 카페를 등록할 수 있습니다. 맛집 블로그인 제 네이버 블로그도 여기에 등록을 해놨습니다.</p>
+<p><img src="/images/naver_webmaster/naver_add_site.png" alt="네이버 사이트 등록"></p>
+<p>우리는 사이트를 선택해서 진행합니다. 사이트는 최대 10개까지 등록할 수 있군요. 사이트를 입력하면 지난번처럼 본인 소유인지 확인하는 절차가 있습니다. 구글 때는 애널리틱스 아이디로 등록할 수 있었지만 이번에는 <code>HTML</code> 을 업로드하는 방식으로 진행해야곘네요.</p>
+<p><code>http://www.naver.com/naveradebe1df5638d61f041e0992dcd3b57e.html</code> 이런 식으로 자동 생성된 파일이 있네요. 눌러서 저장한 후에 사이트(블로그) 루트 폴더에 업로드하면, 네이버에서 그 파일이 있는지 확인해서 본인을 인증하는 절차입니다. Hexo 에서 루트 폴더는 <code>public</code> 폴더입니다. <code>public</code> 폴더에 다운받은 html 파일을 넣고 배포합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>배포 후에 사이트로 돌아와 <strong>확인</strong>을 누르면 본인 인증이 완료됩니다.</p>
+<p><img src="/images/naver_webmaster/webmaster_new.png" alt="웹 마스터 현황"></p>
+<p>사이트 목록에서 등록한 사이트를 선택합니다. 그러면 여러가지 메뉴가 있네요. 구글에 비해 간단하긴 하지만 그래도 메뉴가 깔끔합니다. <strong>현황</strong> 을 보기 전에 <strong>요청</strong> 메뉴에서 RSS 와 사이트맵을 제출하겠습니다.</p>
+<h2 id="RSS-제출하기">RSS 제출하기</h2>
+<p>구글에서 등록해보셨다면 어렵지 않게 진행하실 수 있습니다. RSS feed 는 해당 사이트의 최신 페이지에 대한 정보를 가지고 있습니다.  RSS 리더를 생각해보시면 되겠네요. 지난번 포스트에서 RSS를 자동 생성하는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/hexojs/hexo-generator-feed">플러그인</a>을 사용했습니다. 간단하게 다시 설명해보죠.</p>
+<h3 id="1-설치">1. 설치</h3>
+<p>블로그 폴더에서 설치합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+<h3 id="2-설정">2. 설정</h3>
+<p><code>_config.yml</code> 아래에 다음 내용을 추가합니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span> <span class="comment"># atom 또는 rss2 중에 하나를 선택합니다.</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">feed.xml</span> <span class="comment"># 해당 경로에 xml 파일을 생성합니다.</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="literal">false</span> <span class="comment"># 포스트 몇개까지 추가할 것인지 설정합니다. 숫자를 입력할 수 있고 0 또는 false 를 입력하면 모든 포스트를 추가합니다.</span></span><br><span class="line">  <span class="attr">hub:</span></span><br></pre></td></tr></table></figure>
+<p>이제 generate 할 때마다 루트 폴더에 <code>feed.xml</code> 이라고 생성됩니다. 네이버로 돌아와 RSS 경로를 입력하면 됩니다.</p>
+<h2 id="사이트맵-제출하기">사이트맵 제출하기</h2>
+<p>사이트맵도 거의 동일합니다. 지난번 포스트에서 RSS 처럼 사이트맵을 자동 생성하는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap">플러그인</a>을 통해 미리 만들어놨죠. 간단하게 다시 설명하겠습니다.</p>
+<h3 id="1-설치-v2">1. 설치</h3>
+<p>Hexo 가 설치된 폴더에서 진행합니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-seo-friendly-sitemap --save</span><br></pre></td></tr></table></figure>
+<h3 id="2-설정-v2">2. 설정</h3>
+<p>설치 후에 해당 사이트의 <code>_config.yml</code> 을 수정합니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sitemap auto generator</span></span><br><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">sitemap.xml</span> <span class="comment"># 사이트맵이 자동 생성될 경로</span></span><br></pre></td></tr></table></figure>
+<p>이제 generate 할 때마다 루트 폴더에 sitemap.xml 파일이 생성됩니다. 네이버에 해당 sitemap.xml 경로를 입력하면 됩니다.</p>
+<p>RSS feed 와 사이트맵을 추가했으니 이제 네이버 크롤러가 참고하게 됩니다.</p>
+<h2 id="검색엔진-최적화">검색엔진 최적화</h2>
+<p><strong>현황</strong>의 <strong>사이트 최적화</strong> 메뉴에서 현재 웹 페이지의 최적화 현황을 확인하실 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>항목</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>사이트 제목</td>
+<td>HTML 문서의 <code>&lt;head&gt;</code> 태그 내에 있는 <code>&lt;title&gt;</code> 태그</td>
+</tr>
+<tr>
+<td>사이트 설명</td>
+<td>HTML 문서의 <code>&lt;head&gt;</code> 태그 내에 있는 <code>description</code> 메타 정보</td>
+</tr>
+<tr>
+<td>Open Graph 제목</td>
+<td>HTML 문서의 <code>&lt;head&gt;</code> 태그내에 있는 <code>og:title</code> 메타 정보</td>
+</tr>
+<tr>
+<td>Open Graph 설명</td>
+<td>HTML 문서의 <code>&lt;head&gt;</code> 태그 내에 있는 <code>og:description</code> 메타 정보</td>
+</tr>
+<tr>
+<td>robots.txt</td>
+<td>검색엔진이 크롤링할 때 제외할 내용을 적는 파일입니다.</td>
+</tr>
+<tr>
+<td>사이트 맵</td>
+<td>해당 사이트의 내용을 포함하는 파일입니다.</td>
+</tr>
+<tr>
+<td>RSS</td>
+<td>해당 사이트의 최근 내용을 포함하는 파일입니다.</td>
+</tr>
+<tr>
+<td>모바일 사용성</td>
+<td>반응형 웹 디자인으로 구현된 사이트인지 판별합니다.</td>
+</tr>
+</tbody>
+</table>
+<p>여기서 모바일 사용성은 반응형 웹 디자인으로 구현되었는지 확인하는 것으로 브라우저의 크기에 따라 다르게 나타나는 것을 의미합니다. PC, 태블릿, 스마트폰 등 여러 디바이스에서 각 크기에 맞춰 보이게 해줍니다. 다음 태그를 넣으면 동작합니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>나머지는 거의 Hexo 와 테마에서 지원해줍니다. 그런데 아마 Open Graph 쪽이 안 되어있을 겁니다. 사이트를 카카오톡이나 페이스북 등에서 공유하면 페이지 미리보기 이미지와 제목, 내용 등이 간략히 요약되서 보여지는데 이 때 사용되는 것이 오픈 그래프 태그입니다. 이 부분은 다음 포스트에서 다루도록 하겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/15/hexo-naver-search-webmaster/" title="네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)">네이버 사이트 등록(웹마스터 도구)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/16/add-google-adsense-to-hexo/" title="Hexo 블로그에 구글 애드센스(Adsense) 추가하기">Hexo 블로그에 구글 애드센스(Adsense) 추가하기</a>
+</li>
+<li>
+<a href="/2016/06/16/opengraph-social-meta-tag/" title="오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)">오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+<li>
+<a href="/2016/06/28/google-200-ranking-factors-korean-list/" title="구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)">구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)</a>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/16/opengraph-social-meta-tag/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            오픈 그래프 (Open Graph) 태그와 페이스북 도메인 인사이트 (Domain Insight)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/15/hexo-google-site-search-console-analytics/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/15/hexo-naver-search-webmaster/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

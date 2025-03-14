@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    쉽고 빠른 UML 그리기 (PlantUML) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Reviews/">Reviews</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-easy-diagram-plantuml-hexo-plugin" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        쉽고 빠른 UML 그리기 (PlantUML)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/30/easy-diagram-plantuml-hexo-plugin/" class="article-date">
+    <time datetime="2018-06-29T15:49:48.000Z" itemprop="datePublished">2018/06/30</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              19 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다.</p>
+<p>개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://plantuml.com/">PlantUML</a> 이라는 툴을 찾았습니다. 이번 포스팅에서는 코드를 짜듯이 UML을 간편하게 그릴 수 있는 PlantUML 과 Hexo 적용할 수 있는 플러그인 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/oohcoder/hexo-tag-plantuml">hex-tag-plantuml</a> 을 알아보겠습니다.</p>
+<h2 id="PlantUML">PlantUML</h2>
+<p><img src="sample.png" alt="http://plantuml.com/"></p>
+<p>이 툴을 이용하면 어떻게 보여질지 신경쓰는 대신 표현해야 할 로직에 집중할 수 있습니다. 해당 로직을 문법에 따라 표현해주면 PlantUML이 알아서 그려줍니다. 선을 하나 하나 그리고 위치를 조정하고 글꼴을 수정하는 등의 추가적인 작업이 없으니 쉽고 빠릅니다. 물론 세부적인 명령으로 디자인도 수정이 가능합니다. 물론 코드를 generate 하는 등 복잡한 설계의 기능까진 할 수 없지만, 블로그에서 UML을 그리기에는 최적의 툴입니다.</p>
+<p>지원하는 UML 다이어그램은 다음과 같습니다.</p>
+<ul>
+<li>시퀀스 다이어그램 (<em>Sequence diagram</em>)</li>
+<li>유즈케이스 다이어그램 (<em>Usecase diagram</em>)</li>
+<li>클래스 다이어그램 (<em>Class diagram</em>)</li>
+<li>액티비티 다이어그램 (<em>Activity diagram</em>)</li>
+<li>컴포넌트 다이어그램 (<em>Component diagram</em>)</li>
+<li>상태 다이어그램 (<em>State diagram</em>)</li>
+<li>객체 다이어그램 (<em>Object diagram</em>)</li>
+<li>배포 다이어그램 (<em>Deployment diagram</em>)</li>
+<li>타이밍 다이어그램 (<em>Timing diagram</em>)</li>
+</ul>
+<p>UML 이외의 다이어그램도 지원한다고 합니다.</p>
+<ul>
+<li>Salt (그래픽 인터페이스 디자인)</li>
+<li>Archimate Diagram</li>
+<li>Ditaa (PlantUML 과 비슷하게 텍스트로 다이어그램을 그리는 오픈소스)</li>
+<li>Mathematic with AsciiMath or JLaTeXMath notation (수학적 표현을 텍스트로 쉽게 하기)</li>
+<li>Gantt diagram (프로젝트 일정 관리) (<em>beta</em>)</li>
+</ul>
+<p>종류도 많고 생소한 것도 많아서 하나씩 페이지에 들어가서 살펴보니 유용한게 많네요. <a href="ttp://plantuml.com/" rel="external nofollow noopener noreferrer" target="_blank">PlantUML</a> 메인 페이지에 있는 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000">online generator</a> 를 이용하면 설치 없이 그려볼 수 있습니다. 여기서 모두 소개하기엔 기능이 너무 많아서 가장 친숙한 클래스 다이어그램을 그려보겠습니다.</p>
+<h2 id="클래스-다이어그램">클래스 다이어그램</h2>
+<p>객체 지향 프로그래밍에서는 관련된 데이터와 그 데이터를 사용해서 기능을 제공하는 메소드를 묶어서 하나의 객체(클래스)로 만듭니다. 이 클래스들이 서로 상호작용을 하면서 프로그램이 이루어집니다. 따라서 객체지향 설계는 '어떻게 클래스를 정의하고 어떤 관계로 놓을 것이냐’가 핵심이 됩니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Observer_w_update.svg/500px-Observer_w_update.svg.png" alt="https://en.wikipedia.org/wiki/Observer_pattern"></p>
+<p>이전 포스트 중에 옵저버 패턴을 자바로 구현해 본 <a href="http://futurecreator.github.io/2018/06/04/java-observer-pattern/">포스트</a>가 있습니다. 위키피디아에서 찾은 옵저버 패턴의 클래스 다이어그램을 인용했었는데요, 이 다이어그램을 PlantUML을 이용해서 직접 그려봤습니다. 처음 사용하는데도 문법이 쉬워서 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://plantuml.com/class-diagram">가이드</a> 보고 금방 그릴 수 있었습니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/TL112i8m4BplA_RO8j47M0Gz2mg-86ct6j6i9Dk2rFxTK4ohegSiCyFCPCJAXN1d0lcMFEwr27a7O5ryQrs-SHtCiDCcYDUbzDYohR2vLLeeovVG0vGN7G8U6dEcKg9SuTO6APB12lbrXUYagoeRhJcFYAShj_G53YcEnTRtH8Gidz8Ik1xg_UkKL9lVgZ6oU2WrMVx1Dv2-gBmzdaJnI074geI6HVYANASne32hcdsnCDC8637hFg00wPfFzSWD0z0J">
+<h2 id="차근-차근-그려보기">차근 차근 그려보기</h2>
+<p>그럼 차근차근 그려보면서 대략적인 문법을 살펴보겠습니다.</p>
+<p>먼저 class 와 interface를 그립니다. Java 와 비슷해서 익숙한 문법입니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/oymhIIrAIqnELV1FAaujAaijKgZcUjJGpLcMdvcYK5gGabYIgg5fpLNBnPMSarXSh11ScfILcbm2LUMJMLnY0zDffv0FPHM39HDJKZJWfkPhWiMAKdFpor8nXC6svUMNPAPLmgIADJIvQW40">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span> &#123;</span><br><span class="line">  List&lt;Observer&gt; observers</span><br><span class="line">  <span class="title function_">add</span><span class="params">(Observer o)</span></span><br><span class="line">  remove(Observer o)</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">notifyObservers</span><span class="params">()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>필드와 메소드에 접근제어지시자를 붙여줄 수 있습니다. 그리고 인터페이스에 있는 update 메소드는 추상 메소드로 표시하겠습니다.</p>
+<ul>
+<li>private : -</li>
+<li>protected : #</li>
+<li>package : ~</li>
+<li>public : +</li>
+</ul>
+<img src="http://www.plantuml.com/plantuml/svg/NOr12W8n34NtEKMMBU8954yWkF04QPk1YauaoHHawDqjuhXmztd_ytwTdNMYp7X9njfOSOKThfJCbR9tR58BBiz2pY4Ue0FaEvdXTKatpZxcUpnNy-CcEA5yamqJbH9-Qec3A3-ayH_ylCpYTNfjXOK8_Gq0">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line">  + &#123;<span class="keyword">abstract</span>&#125; <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span> &#123;</span><br><span class="line">  - List&lt;Observer&gt; observers</span><br><span class="line">  + add(Observer o)</span><br><span class="line">  + remove(Observer o)</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">notifyObservers</span><span class="params">()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Observer 인터페이스를 implements 할 ObserverA, ObserverB 클래스도 추가로 그려줍니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/ROxD2i8m3CVlVOeSMyGdK0Gz2nvyWhJDeAABD5bXZBsxPTWTfhVmo_yhzKgvmq1myqAvK8R9x612Bvenw0o5KuJX7L79keEPJNYY2Dm7_w2WLRs7Qn8zDly9-7j93S8OxPhChf9CBowqWKj9pvgwiJt4khMiiVCoxcVHHdNvg_e0">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverA</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverB</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이제 클래스 간의 관계를 그려보겠습니다. 관계만 맞으면 화살표 방향은 양쪽 중 어느쪽으로 해도 상관없습니다. 특정 방향은 화살표 중간에 명시해줄 수 있습니다.</p>
+<ul>
+<li>Extension  <code>&lt;|--</code></li>
+<li>Aggregation  <code>o--</code></li>
+<li>Composition  <code>*--</code></li>
+</ul>
+<img src="http://www.plantuml.com/plantuml/svg/TOzD2i8m48NtESKiKoGdi0XsBRZm1FcPQaGRoKm3KdjtGp4HnEw6RzwyzyOFZB7N5k5e26F229FOmAGDSTIMPqZ1EnWVJZFAPYjcOM-Q24wZkQBbh5PmyCHjkTz1-4oKZRHpiZg79fE8zv3m1ouXGs3VFyk2P5F32jilvLOQ5L7tNrG3svTINySLtedoe8h-V64LwkeD">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Observer &lt;|-- ObserverA</span><br><span class="line">Observer &lt;|-- ObserverB</span><br><span class="line">Subject -right-o Observer</span><br></pre></td></tr></table></figure>
+<p>Extension 은 상속으로 기존 클래스를 확장하는 개념입니다. 상위 클래스의 요소를 가지고 새로운 내용을 추가하거나 기존 내용을 새롭게 정의하여 하나의 클래스를 만든 관계입니다.</p>
+<p>Aggregation 과 Composition 은 쉽게 말해 다른 클래스를 '사용’하는 경우입니다. 다른 객체를 사용하기 위해 선언하고 참조하는 등 의존 관계가 형성되고, 두 클래스는 수정의 영향을 같이 받게 됩니다. 단, composition 은 한 클래스가 다른 클래스의 일부인 관계이고, aggregation 은 그렇지 않습니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/Iyv9B2vM24WjAixFKwZcqbNmoImkiN5EBB9JI4uiAkQgvKe6gm2AWALTyz8pyr8LKi4KN1Og2bAGcLUYa5oPavcNabhad5S2L08rN3SdDQr4Dnza4XV8D0XV2weN0000">
+<p>예를 들면, Person 과 Car 는 aggregation 관계로, Car 와 Engine 은 composition 관계로 설정했습니다. Person 객체는 Car 객체를 가지고 있어 Car 객체가 없으면 동작할 수가 없습니다. 다만 차와 사람은 생명주기를 같이하진 않습니다. 반대로 Car 객체는 Engine 객체를 가지고 있지만 composition 관계로 설정했기 때문에 차가 생길 때 엔진 객체도 생성되고 차가 소멸될 때 엔진 인스턴스도 소멸됩니다. 즉, Car 객체가 Engine 객체의 생명주기를 책임집니다.</p>
+<p>notifyObservers 메소드에 대해 간략하게 메모를 추가하겠습니다. 메모 또한 상대 위치를 지정해줄 수 있습니다. 마지막으로 타이틀을 달아줍니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/TP312i8m38RlVOeSDwJw08w1EmiUV89sIxNY5ccpWSozksNO3iNTmfS_V_x4TepEg1hXf3sw0HsCOWEZqfwTgdc2WMm3_QDHZ5c-5vEexyfxEFVwXZK7jOIZzLp4-HBeK_bWf9ecIywK1-AmfG5_uBoa8xRc6Hi-ozEoo0vpk9L4KLJz5wM5nKlAnN65Lo8UA9szN5bIQecG4q4JCxL09dv25Beqv8gTNZu0WTdk2taHg-sI3hlvUdm3">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title Observer Pattern</span><br><span class="line"></span><br><span class="line">note bottom of Subject</span><br><span class="line">  &lt;b&gt;for&lt;/b&gt; observer &lt;b&gt;in&lt;/b&gt; observers</span><br><span class="line">  observer.update();</span><br><span class="line">end note</span><br></pre></td></tr></table></figure>
+<p>완성된 버전과 전체 소스는 다음과 같습니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/TL112i8m4BplA_RO8j47M0Gz2mg-86ct6j6i9Dk2rFxTK4ohegSiCyFCPCJAXN1d0lcMFEwr27a7O5ryQrs-SHtCiDCcYDUbzDYohR2vLLeeovVG0vGN7G8U6dEcKg9SuTO6APB12lbrXUYagoeRhJcFYAShj_G53YcEnTRtH8Gidz8Ik1xg_UkKL9lVgZ6oU2WrMVx1Dv2-gBmzdaJnI074geI6HVYANASne32hcdsnCDC8637hFg00wPfFzSWD0z0J">
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">title Observer Pattern</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line">  + &#123;<span class="keyword">abstract</span>&#125; <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span> &#123;</span><br><span class="line">  - List&lt;Observer&gt; observers</span><br><span class="line">  + add(Observer o)</span><br><span class="line">  + remove(Observer o)</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">notifyObservers</span><span class="params">()</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverA</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverB</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Observer &lt;|-- ObserverA</span><br><span class="line">Observer &lt;|-- ObserverB</span><br><span class="line">Subject -right-o Observer</span><br><span class="line"></span><br><span class="line">note bottom of Subject</span><br><span class="line">  &lt;b&gt;<span class="keyword">for</span>&lt;/b&gt; observer &lt;b&gt;in&lt;/b&gt; observers</span><br><span class="line">  observer.update();</span><br><span class="line">end note</span><br></pre></td></tr></table></figure>
+<p>이외에 클래스 다이어그램에 관한 더 자세한 문법은 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://plantuml.com/class-diagram">링크</a> 를 참고하시면 좋겠습니다.</p>
+<h2 id="Hexo-에-적용하기">Hexo 에 적용하기</h2>
+<p>PlantUML 은 JVM 상에서 동작하고 <code>java -jar</code> 명령어를 이용해 문법에 따라 작성된 text 파일을 다이어그램으로 그린 png 로 바꿔줍니다. 하지만 PlantUML을 지원하는 Hexo 플러그인 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/oohcoder/hexo-tag-plantuml">hex-tag-plantuml</a> 을 설치하면 따로 PlantUML 을 설치할 필요가 없습니다.</p>
+<h3 id="설치하기">설치하기</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-tag-plantuml --save</span></span><br></pre></td></tr></table></figure>
+<h3 id="사용하기">사용하기</h3>
+<p>다음과 같은 태그를 이용해 사용하실 수 있습니다.</p>
+<img src="http://www.plantuml.com/plantuml/svg/UzJGhG04Jlb9kdQEEPd9gGfM2XcfEJdv0000">
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% plantuml %&#125;</span><br><span class="line">    Bob-&gt;Alice : hello</span><br><span class="line">&#123;% endplantuml %&#125;</span><br></pre></td></tr></table></figure>
+<p>이번 포스팅에서는 각종 다이어그램을 텍스트로 간단하게 그릴 수 있는 PlantUML을 알아봤습니다. 이제 간단하게 보여줄 UML이 필요할 때 쉽게 그릴 수 있습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2018/06/20/hexo-twitter-plugin/" title="Hexo 트위터 연동 플러그인">Hexo 트위터 연동 플러그인</a>
+</li>
+<li>
+<a href="/2018/06/18/hexo-symbols-count-reading-time-plugin/" title="Hexo 글자 수와 리딩 타임 추가하기">Hexo 글자 수와 리딩 타임 추가하기</a>
+</li>
+<li>
+<a href="/2018/06/14/hexo-markdown-plugins/" title="Hexo 마크다운 플러그인 변경하기">Hexo 마크다운 플러그인 변경하기</a>
+</li>
+<li>
+<a href="/2018/06/12/hexo-change-font-on-hueman-theme/" title="Hexo 폰트 변경하기 (Hueman 테마)">Hexo 폰트 변경하기 (Hueman 테마)</a>
+</li>
+<li>
+<a href="/2018/06/11/generate-an-emoji-favicon/" title="이모지로 파비콘 Favicon 만들기">이모지로 파비콘 Favicon 만들기</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+<li>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/04/aws-certified/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            AWS 자격증 준비하기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/20/hexo-twitter-plugin/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo 트위터 연동 플러그인</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/30/easy-diagram-plantuml-hexo-plugin/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

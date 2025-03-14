@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-github-fork-and-pull-request-process-for-open-source-contribution" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/" class="article-date">
+    <time datetime="2019-03-04T16:46:15.000Z" itemprop="datePublished">2019/03/05</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              9 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>GitHub 에서 오픈 소스를 사용하다보면 발견한 버그를 직접 수정하거나, 새로운 기능을 추가하고 싶을 때가 있습니다. 하지만 어디서부터 어떻게 시작해야할 지 막막하기도 합니다. 이번 포스트에서는 오픈 소스에 컨트리뷰션(기여)하는 절차를 간단히 알아보겠습니다.</p>
+<h2 id="1-New-Issue">1. New Issue</h2>
+<p>먼저, 사용하다가 발견한 버그나 기능에 대한 의견을 이슈(Issue)로 만들어 제기합니다. 내가 바로 처리할 수 있는 것이라도 먼저 이슈를 제기해서 다른 사람들의 의견과 동의를 구하는 것이 좋습니다. 누군가는 해당 이슈에 대해 다르게 생각할 수도 있고, 내 아이디어를 발전시켜 줄 수도 있기 때문입니다.</p>
+<p><img src="new-issue.png" alt="이슈 제기"></p>
+<p><img src="same-issue.png" alt="비슷한 이슈를 발견했다는 코멘트"></p>
+<p><img src="fix-issue.png" alt="이슈를 고치겠다는 컨트리뷰터"></p>
+<p><img src="reopen-issue.png" alt="PR 반영 후에도 비슷한 이슈를 발견했다는 코멘트"></p>
+<p>이렇게 올라간 이슈는 해당 주제에 대해 토론과 대화가 이뤄집니다. 이슈에는 새롭게 번호가 붙는데 <code>#</code> 을 이용해서 특정 이슈를 검색하거나 언급할 수 있습니다(e.g. 111번 이슈라면 <code>#111</code>). 그리고 이슈를 올리기 전에, 기존에 올라간 이슈 중에 비슷한 이슈가 있는지 미리 검색해보는 것이 좋습니다.</p>
+<p>수정 또는 새로운 기능에 대한 동의가 이뤄지면 누군가가 개발을 해야하는데요, 이번엔 직접 개발해볼까요?</p>
+<h2 id="2-Fork-Clone-하기">2. Fork &amp; Clone 하기</h2>
+<p>먼저 기여하고 싶은 저장소에서 <strong>Fork</strong> 버튼을 눌러 포크를 진행합니다.</p>
+<p><img src="fork-button.png" alt="기여하고 싶은 저장소"></p>
+<p>그러면 내 계정으로 저장소가 복사됩니다.</p>
+<p><img src="forked-repository.png" alt="포크된 저장소"></p>
+<p>이렇게 포크된 저장소를 클론(Clone)해서 내려받습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/futureCreator/kube-backup.git</span><br></pre></td></tr></table></figure>
+<h2 id="3-Remote-Repository-추가하기">3. Remote Repository 추가하기</h2>
+<p>현재 원격 저장소(<code>origin</code>)은 포크된 우리의 저장소입니다. 이와 별개로 원래 저장소에서는 따로 개발이 진행될 것이기 때문에 최신 버전과 싱크를 맞추는 작업이 필요합니다. 그래서 원래 저장소도 원격 저장소(<code>upstream</code>)로 추가합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add upstream https://github.com/kuberhost/kube-backup.git</span><br></pre></td></tr></table></figure>
+<p>추가된 저장소는 다음과 같이 확인할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">origin	https://github.com/futureCreator/kube-backup.git (fetch)</span><br><span class="line">origin	https://github.com/futureCreator/kube-backup.git (push)</span><br><span class="line">upstream	https://github.com/kuberhost/kube-backup.git (fetch)</span><br><span class="line">upstream	https://github.com/kuberhost/kube-backup.git (push)</span><br></pre></td></tr></table></figure>
+<h2 id="4-Branch-생성하고-작업하기">4. Branch 생성하고 작업하기</h2>
+<p>이제 로컬에서 마음껏 작업하면 됩니다. 간단한 작업이라면 그냥 <code>master</code> 브랜치에서 작업해도 됩니다. 하지만 복잡한 작업은 새로운 브랜치(e.g. <code>newfeature</code>)를 생성해서 작업하는 것이 좋겠죠.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git branch newfeature   </span><br><span class="line">git checkout newfeature</span><br></pre></td></tr></table></figure>
+<p>작업할 때 커밋 메시지를 고민하는 경우가 많은데, 로컬에서 개발할 때는 커밋 메시지를 크게 고민하지 않아도 됩니다. 푸시(Push)하지 않는 한 해당 메시지는 올라가지 않으니까요. 푸시 하기 전에 커밋 내역을 정리할 수 있으므로 로컬에서는 마음껏 커밋해도 괜찮습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit add .</span><br><span class="line">git commit -m ‘Update ...’</span><br></pre></td></tr></table></figure>
+<h2 id="5-작업-정리하기">5. 작업 정리하기</h2>
+<p>작업이 완료된 후 푸시하기 전에 원래 저장소에 수정된 작업이 있으면 포크된 저장소와 싱크를 맞춰야 합니다. <code>upstream</code> 브랜치와 <code>master</code> 를 머지(Merge)합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git fetch upstream</span><br><span class="line">git checkout master</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
+<p>이제 <code>rebase -i</code> 명령어를 이용해 커밋 내역을 정리하고 <code>newfeature</code> 와 <code>master</code> 브랜치를 합칩니다. <code>-i</code> 옵션은 인터랙티브 옵션으로 커밋 이력을 보여주고, 사용자가 특정 커밋을 선택하거나 합칠 수 있는 명령어입니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout newfeature</span><br><span class="line">git rebase -i master</span><br></pre></td></tr></table></figure>
+<h2 id="6-Push-하기">6. Push 하기</h2>
+<p>이제 모든 수정 사항이 반영된 <code>master</code> 브랜치를 포크된 원격 저장소(<code>origin</code>)으로 푸시합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<h2 id="7-Pull-Request-만들기">7. Pull Request 만들기</h2>
+<p>GitHub 웹 페이지에서 포크한 저장소를 찾아가면 내가 푸시한 브랜치 기반으로 <strong>Create Pull Request</strong> 버튼이 생긴 걸 볼 수 있습니다. 또는 <strong>Compare</strong> 버튼을 눌러 브랜치를 비교하고, 원하는 브랜치로 Pull Request 를 생성할 수 있습니다. 인터페이스가 직관적이어서 쉽게 비교할 수 있습니다.</p>
+<p><img src="comparing-changes.png" alt="Pull Request 만들기"></p>
+<p>Pull Request 생성 시 본문에 수정한 내용을 간단히 적을 수 있는데요, 특정 문법으로 해당 이슈를 바로 닫을(Close) 수 있습니다.</p>
+<ul>
+<li>close</li>
+<li>closes</li>
+<li>closed</li>
+<li>fix</li>
+<li>fixes</li>
+<li>fixed</li>
+<li>resolve</li>
+<li>resolves</li>
+<li>resolved</li>
+</ul>
+<p>e.g. 111번 이슈에 대한 PR: <code>close #111</code>, <code>fixes #111</code>, etc.</p>
+<p>그럼 Pull Request 가 승인될 때 해당 이슈가 자동으로 닫힙니다.</p>
+<h2 id="8-Merged">8. Merged!</h2>
+<p><img src="merged.png" alt="Pull Request 승인"></p>
+<p>생성된 Pull Request 가 검토 과정을 거쳐 승인이 나면 수정한 소스는 원본 소스로 머지됩니다.</p>
+<p><img src="closed-issue.png" alt="해결된 이슈"></p>
+<p>해당 이슈는 자동으로 닫혔습니다.</p>
+<p>물론 승인이 나지 않을 수도 있습니다. 방향이 다르거나 혹은 더 수정이 필요한 것일 수도 있습니다.</p>
+<h2 id="정리">정리</h2>
+<p>이번 포스트에서는 오픈 소스 기여 절차에 대해 알아봤습니다. 컨트리뷰션이라고 하면 거창해보이지만 꼭 대단한 기여만 있는 것은 아닙니다. 작은 버그를 발견하고 이슈를 제기하는 것도 일종의 기여이고, 해당 오픈 소스가 발전할 수 있도록 의견을 제시하는 것도 일종의 기여니까요. 직접 소스를 커밋해서 이슈를 해결하려면 그 전에 커뮤니티의 의견을 듣고 동의를 구하는 과정이 중요한 것 같습니다. 그렇게 여러 사람이 힘을 모아서 소프트웨어를 발전시켜 나가는 것이 진정한 오픈 소스의 힘이 아닐까 합니다.</p>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://gist.github.com/Chaser324/ce0505fbed06b947d962">GitHub Forking</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://help.github.com/articles/closing-issues-using-keywords/">Closing issues using keywords</a></li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2018/06/07/computer-system-time/" title="컴퓨터 시간의 1970년은 무슨 의미일까?">컴퓨터 시간의 1970년은 무슨 의미일까?</a>
+</li>
+<li>
+<a href="/2018/06/05/metasyntactic-variables-foo-bar/" title="foo, bar 의 어원을 찾아서">foo, bar 의 어원을 찾아서</a>
+</li>
+<li>
+<a href="/2018/06/11/about-clean-code/" title="클린코드가 시작되는 곳">클린코드가 시작되는 곳</a>
+</li>
+<li>
+<a href="/2018/09/09/software-versioning/" title="SW 라이브러리 버전 제대로 읽기">SW 라이브러리 버전 제대로 읽기</a>
+</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2019/03/14/serverless-architecture/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            서버리스 Serverless 아키텍처 파헤치기
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Git과 CronJob을 활용한 쿠버네티스 오브젝트 YAML 자동 백업</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

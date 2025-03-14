@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    HTTPS 와 SSL(TLS) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Column/">Column</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-https-and-ssl-tls" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        HTTPS 와 SSL(TLS)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/12/https-and-ssl-tls/" class="article-date">
+    <time datetime="2018-07-12T14:59:12.000Z" itemprop="datePublished">2018/07/12</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              10 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hexo 블로그에 HTTPS 적용하는 포스트를 작성하려다가 보니 먼저 HTTPS를 정리하는게 좋을 것 같습니다. 이번 포스트에서는 HTTPS의 원리에 대해 알아보겠습니다.</p>
+<h2 id="HTTPS">HTTPS</h2>
+<p><strong>HTTP(<em>Hypertext Transfer Protocol</em>)</strong> 은 HTML 을 주고받을 때 서로 지키기로 정한 규칙입니다. 그리고 <strong>HTTPS(<em>HTTP Secure</em>)</strong> 는 HTTP 의 보안을 강화한 것으로, 암호화된 연결로 웹 서버와 통신하는 방식입니다. HTTP 는 서버와 클라이언트가 주고 받는 메시지가 노출되어 가로채거나 위조될 위험이 있습니다. 따라서 비밀번호, 계좌번호 등 중요한 정보를 전송할 때는 HTTPS 를 이용하게 됩니다.</p>
+<p>HTTPS 를 사용하게 되면 브라우저마다 조금씩 다르지만 초록색과 자물쇠 표시를 이용해서 안전하게 연결된 사이트라는 걸 알려줍니다. 이는 스니핑, 피싱, 데이터변조 등으로부터 안전하다는 것을 의미하고, 방문자나 서비스 사용자에게 신뢰감을 줄 수 있습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[SSL 인증서란](https://www.ucert.co.kr/ssl/ssl.html)
+">[1]</span></a></sup></p>
+<p><img src="https_chrome.png" alt="Chrome"></p>
+<p><img src="https_safari.png" alt="Safari"></p>
+<p><img src="https_firefox.png" alt="Firefox"></p>
+<p>HTTPS는 <strong>SSL(Secure Socket Layer)</strong> 라는 기술을 이용합니다. 이는 IETF(국제 인터넷 표준화 기구)에서 표준화하면서 이름이 바뀌어 TLS(<em>Transport Layer Security</em>)라고도 부릅니다. 개인키(<em>Private Key</em>)와 공개키(<em>Public Key</em>)를 복합적으로 사용하고, 인증기관(<em>Certificate Authority, CA</em>)이라는 제3자를 이용해 보안을 강화하고 전송되는 데이터를 암호화합니다. SSL 에서 사용하는 개념들을 간단하게 살펴보겠습니다.</p>
+<h2 id="암호화-Encryption">암호화 Encryption</h2>
+<p>중요한 정보가 있습니다. 이 정보를 허락된 사람들만 볼 수 있도록 하기 위해, 알고리즘을 이용해 정보를 암호문으로 바꿀 수 있습니다. 이를 암호화(<em>Encryption</em>)이라고 하고 암호화된 정보는 복호화(<em>Decryption</em>) 과정을 통해 해독할 수 있습니다. 이런 암호화/복호화 과정에서 비밀번호와 비슷한 기능을 하는 것을 키(<em>Key</em>)라고 합니다.</p>
+<p>웹 사이트를 통해서 민감한 정보를 주고받을 때 필요합니다. 주로 다음과 같은 정보를 다룰 때 사용됩니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[SSL 인증서에 대해 알아야 할 모든 것](https://www.verisign.com/ko_KR/website-presence/website-optimization/ssl-certificates/index.xhtml)
+">[2]</span></a></sup></p>
+<ul>
+<li>로그인 및 암호</li>
+<li>금융 정보 (은행계좌, 신용카드 번호, 보안카드 번호 등)</li>
+<li>독점적인 정보</li>
+<li>법률 문서 및 계약서</li>
+<li>고객 목록</li>
+<li>의료 기록</li>
+</ul>
+<h2 id="대칭키-The-Symmetric-Key">대칭키 The Symmetric Key</h2>
+<p><img src="https://docs.aws.amazon.com/ko_kr/kms/latest/developerguide/images/Symmetric_Key_Encryption_sm.png" alt="암호화"></p>
+<p><img src="https://docs.aws.amazon.com/ko_kr/kms/latest/developerguide/images/Symmetric_Key_Decryption_sm.png" alt="복호화"></p>
+<p>암호화 방식에서 가장 쉽게 생각해볼 수 있는 방법은 암호화할 때 사용한 키를 복호화할 때도 그대로 사용하는 것입니다. 즉 정보 A 를 암호화한 후에 정보를 전달하고, 암호화에 사용한 키도 전달하는 겁니다. 이런 방식을 ‘대칭키’ 방식이라고 합니다. 간단한 방법이지만 이 키를 전달하는 것 자체도 위험한 과정입니다. 키가 유출되기 쉽기 때문에 안전한 방법이 아닙니다.</p>
+<h2 id="비밀키와-공개키-Private-Key-Public-Key">비밀키와 공개키 Private Key &amp; Public Key</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Public-key-crypto-1.svg/250px-Public-key-crypto-1.svg.png" alt="https://en.wikipedia.org/wiki/Public-key_cryptography"></p>
+<p>대칭키처럼 동일한 키를 사용하는 대신, 다른 두 개의 키를 사용하는 것을 '비대칭키(<em>Asymmetric Key</em>)'라고 합니다. 하나의 키로 암호화를 시키면 다른 하나의 키로 풀 수 있도록 합니다. 비밀키/공개키(<em>Private Key/Public Key</em>) 방식은 이런 키 쌍(<em>Key pair</em>)를 관리하는 방식입니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_key_encryption.svg/250px-Public_key_encryption.svg.png" alt="https://en.wikipedia.org/wiki/Public-key_cryptography"></p>
+<p>비밀키는 안전하게 보관된 키고, 공개키는 다른 사람들이 볼 수 있도록 공개된 키입니다. 공개키를 이용해서 암호화하면, 비밀키를 가진 사람만이 이 정보를 복호화할 수 있게 됩니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Private_key_signing.png/250px-Private_key_signing.png" alt="https://en.wikipedia.org/wiki/Public-key_cryptography"></p>
+<p>그렇다면 반대로 비밀키로 정보를 암호화한다면 어떨까요? 물론 공개키를 가진 사람이 풀 수 있습니다. 하지만 공개키는 말 그대로 공개되었기 때문에 마음 먹으면 누구나 풀 수 있게 됩니다.</p>
+<p>이런 방식은 쓸데없어 보이지만 유용하게 사용될 수 있습니다. A 라는 사람이 비밀키/공개키 쌍을 생성한 후에 공개키를 B 라는 사람에게 보냅니다. 그럼 A 라는 사람이 본인만이 가지고 있는 비밀키로 암호화된 정보를 보냈을 때, B 가 공개키로 풀 수 있겠죠. 즉, B 가 공개키로 풀 수 있다면 A 가 짝이 맞는 비밀키를 가지고 있다는 것을 증명하게 됩니다. 이렇게 암호화를 이용해 신원을 증명할 수 있는 방식을 '전자서명(<em>digital signature</em>)'이라고 합니다.<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Digital signature](https://en.wikipedia.org/wiki/Digital_signature)
+">[3]</span></a></sup></p>
+<h2 id="SSL-인증서-DIgital-Certificate">SSL 인증서 DIgital Certificate</h2>
+<p>인증서를 통한 보안 방식에는 다음과 같은 세 가지 역할자가 등장합니다.</p>
+<ul>
+<li>클라이언트 : 사용자</li>
+<li>서버 : 서비스 제공자</li>
+<li>CA : Certificate Authorities 인증 기관</li>
+</ul>
+<h3 id="신원-확인">신원 확인</h3>
+<p>SSL 방식에서 핵심 역할을 하는 것이 SSL 인증서(혹은 디지털 인증서) 입니다. 이러한 인증서는 사용자(클라이언트)가 접속한 서버가 애초에 의도한 서버가 맞는 것인지를 보장해줍니다. 인터넷뱅킹 사이트에 접속했다면 이게 정말 그 인터넷뱅킹이 맞는지, 가짜사이트는 아닌지 확인해줍니다. 즉, 웹 사이트의 신원을 확인해주는 역할을 합니다.</p>
+<p>이러한 인증서는 신뢰성을 공인받은 기업에서 구입할 수 있습니다. 이런 기업을 CA(<em>Certificate Authorities</em>)라고 합니다. CA는 인증서 신청을 받아서 검증하고 인증서를 발급해줍니다. 돈을 내고 안전한 사이트라고 보장하는 인증서를 사는 것이죠. CA는 안전한 사이트라는 것을 확인하고 공인된 인증서를 자신의 비밀키로 암호화해서 줍니다. 이제 인증을 받은 회사는 사용자가 서버에 접속할 때 인증서를 보냅니다.</p>
+<p>인증서는 클라이언트가 서버에 접속할 때 다운로드 됩니다. 그리고 브라우저에는 신뢰할 수 있는 CA 목록과 CA의 공개키를 가지고 있습니다. 브라우저가 해당 서버의 인증서를 받아서 CA의 공개키로 복호화 할 것이고, 만약 풀린다면 CA의 인증을 제대로 받은 안전한 사이트임을 확인할 수 있습니다. 위에서 살펴 본 전자서명 방식을 생각하시면 됩니다.</p>
+<p><img src="https://4.bp.blogspot.com/-6PB1NmSrPb0/VhwmosBiZdI/AAAAAAAAAIg/w_Y3XwZS_wk/s640/dubious-as-neutral.png" alt="https://security.googleblog.com/2015/10/simplifying-page-security-icon-in-chrome.html"></p>
+<p>따라서 제대로 된 인증서를 가진 사이트에 접속하면 HTTPS와 함께 초록색 혹은 자물쇠로 연결을 표시하지만, CA가 아닌 곳에서 인증을 받았다면 HTTPS 연결이라도 브라우저에서 경고 메시지를 보여줍니다.</p>
+<h3 id="동작-방식">동작 방식</h3>
+<p>먼저 서버가 신뢰할 수 있는 사이트라는 것을 확인한 클라이언트는 서버와의 핸드쉐이크 단계에서 주고 받은 랜덤 데이터를 이용해 키를 하나 만듭니다. 이 키를 이용해서 대칭키 방식으로 암호화된 정보를 주고받으려고 합니다. 문제는 이 대칭키를 그냥 보내면 위험하다는 거죠.</p>
+<p>인증서 안에는 해당 신청한 서비스의 정보와 서버의 공개키가 들어있습니다.<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[HTTPS와 SSL 인증서](https://opentutorials.org/course/228/4894)">[4]</span></a></sup> 대칭키를 서버에 안전하게 전송할 방법은 바로 이 서버의 공개키를 이용한 방법입니다. 생성한 대칭키를 서버의 공개키로 암호화한 후 서버에 보내면, 비밀키를 가진 서버만 대칭키를 복호화할 수 있습니다. 이렇게 대칭키를 교환했다면 준비는 끝났습니다. 대칭키의 경우 간단하지만 대칭키 자체를 주고받는 것이 문제였는데 해결되었네요.</p>
+<p>대칭키를 이용해서 정보를 교환하고, 사용된 대칭키는 SSL 접속이 끝나면 폐기됩니다.</p>
+<h2 id="정리">정리</h2>
+<p>이번 포스팅에서는 HTTPS 에 대해서 살펴봤습니다. 마지막으로 큰 줄기만 정리해보겠습니다.</p>
+<ul>
+<li>중요한 정보는 암호화가 필요해서 SSL이 적용된 HTTPS 를 사용해야 한다.</li>
+<li>CA는 서버를 인증하고 인증서를 발급한다.</li>
+<li>서버는 인증서에 서비스의 정보와 서버의 공개키를 저장해 제공한다.</li>
+<li>클라이언트는 인증서를 통해 서버가 신뢰할 수 있는지 확인할 수 있고,</li>
+<li>인증서에 있는 공개키를 이용해 서버와 대칭키를 교환할 수 있다.</li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>
+<a href="/2016/06/15/hexo-google-site-search-console-analytics/" title="구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)">구글(Goolge) 사이트 등록(Search Console)과 검색엔진 최적화(SEO)</a>
+</li>
+<li>
+<a href="/2016/06/17/google-search-how-to-work/" title="구글(Google) 검색 원리와 검색이 잘 되게 하는 방법">구글(Google) 검색 원리와 검색이 잘 되게 하는 방법</a>
+</li>
+<li>
+<a href="/2016/06/28/google-200-ranking-factors-korean-list/" title="구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)">구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)</a>
+</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.ucert.co.kr/ssl/ssl.html">SSL 인증서란</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.verisign.com/ko_KR/website-presence/website-optimization/ssl-certificates/index.xhtml">SSL 인증서에 대해 알아야 할 모든 것</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/Digital_signature">Digital signature</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="external nofollow noopener noreferrer" href="https://opentutorials.org/course/228/4894">HTTPS와 SSL 인증서</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li></ol></div></div>
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/13/hexo-https-github-pages/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo HTTPS 적용하기(Github Pages)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/07/hexo-change-font-face-no-cdn/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">일반 폰트를 웹에 적용하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

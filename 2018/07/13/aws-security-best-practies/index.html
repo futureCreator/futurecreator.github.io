@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    AWS 보안 모범 사례 백서 (번역/요약) |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2018/07/13/aws-security-best-practies/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Cloud/">Cloud</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-aws-security-best-practies" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        AWS 보안 모범 사례 백서 (번역/요약)
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/07/13/aws-security-best-practies/" class="article-date">
+    <time datetime="2018-07-12T15:51:43.000Z" itemprop="datePublished">2018/07/13</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              6 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 포스트는 AWS 자격증 스터디에서 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf">AWS Security Best Practies</a> 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.</p>
+<p>마지막 업데이트 : 2018/07/12</p>
+<hr>
+<p>AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할 수 있다</p>
+<h2 id="AWS-Shared-Responsibility-Model">AWS Shared Responsibility Model</h2>
+<ul>
+<li>AWS는 클라우드 보안 인프라와 서비스를 제공하고, 고객은 OS, 플랫폼, 데이터의 보안에 대한 책임이 있다.</li>
+<li>AWS는 세 가지 타입의 공유 권한 모델을 제공해준다
+<ul>
+<li>Infrastructure services</li>
+<li>Container services</li>
+<li>Abstracted services</li>
+</ul>
+</li>
+</ul>
+<h3 id="Understanding-the-AWS-Secure-Global-InfraStructure">Understanding the AWS Secure Global InfraStructure</h3>
+<h4 id="Identity-and-Access-Manamgement-IAM-서비스">Identity and Access Manamgement (IAM) 서비스</h4>
+<ul>
+<li>유저와 보안자격(Password, Access keys, Permission policies)등을 중앙 집중적으로 관리해주는 서비스</li>
+<li>하나의 AWS account 내 각각의 이름과 비밀번호, 엑세스 키를 가진 유저를 여러명 만들수 있다</li>
+<li>각각의 유저는 계정 URL을 통해 계정 콘솔로 로그인 할 수 있다</li>
+<li>각각의 유저에게 AWS 계정내 리소스에 프로그래밍적으로 접근할 수있도록 Access key를 만들어 줄 수 있다</li>
+<li>각 유저의 활동에 대한 비용은 AWS 계정으로 청구된다.</li>
+<li>관리자도 계정 자격보다는 유저를 만들어서 접근하는 것을 추천한다</li>
+</ul>
+<h4 id="Regions-Availability-Zones-and-Endpoints">Regions, Availability Zones, and Endpoints</h4>
+<ul>
+<li>Region
+<ul>
+<li>물리적 데이터 저장소 위치</li>
+<li>Network latency 및 Regulatory compliance(규정준수, 나라 or 지역별 법 준수를 말하는 듯)를 고려해서 Region을 선택할 수 있음</li>
+<li>특정 Region을 정했다면 해당 지역 외부로는 데이터 복제가 일어나지 않음. 사용자의 책임임</li>
+</ul>
+</li>
+<li>Availability Zone
+<ul>
+<li>Region내에서 Fault isolation을 위해 디자인된 논리적 지역구분</li>
+<li>다수의 ISP(인터넷공급업자)와 다른 전원공급망을 사용</li>
+<li>같은 리전내에 다른 가용공간 끼리의 통신은 LAN으로 연결되어있기 때문에 매우 빠름</li>
+<li>장애에 대처하기 위해 시스템을 다수의 가용영역에 위치 시키는 것을 추천한다</li>
+</ul>
+</li>
+<li>Service Endpoint
+<ul>
+<li>Backplane 접근을 제공하는 서비스 앤드포인트</li>
+<li>AWS Mangment Consonle을 이용한 Web 접근</li>
+<li>API나 CLI를 통한 Programming 접근</li>
+</ul>
+</li>
+</ul>
+<h3 id="Sharing-Security-Responsibility-for-AWS-Services">Sharing Security Responsibility for AWS Services</h3>
+<p><img src="srm.png" alt="Shared Responsibility Model for Infrastructure Services"></p>
+<ul>
+<li>AWS는 3가지 카테고리로 구분하여 서비스를 제공한다</li>
+<li>각 서비스는 사용자의 접근 및 사용 방법에 따라 약간씩 다른 보안 오너십 모델이 제공된다</li>
+<li><strong>Infrastruture services</strong>
+<ul>
+<li>컴퓨터 서비스, 아마존 EC2, 아마존 EBS(Elastic Block Store), Auto Scaling, Amazon VPC(Virtual Private Cloud)</li>
+</ul>
+</li>
+<li><strong>Container Services</strong>
+<ul>
+<li>일반적으로 EC2나 인프라 인스턴스 위에서 동작하는 서비스들을 일컬음</li>
+<li>몇몇 플랫폼 이나 OS 레벨의 서비스는 Container 관리서비스를 이용(방화벽, 플랫폼 레벨의 자격증명 등)</li>
+<li>아마존 RDS(Relational Database Services), 아마존 EMR(Elastic Map Reduce), AWS Elastic Beanstalk</li>
+</ul>
+</li>
+<li><strong>Abstracted Services</strong>
+<ul>
+<li>플랫폼이나 관리 레이어를 추상화한 서비스(플랫봄 상위수준, 플랫폼 독립적이라는 뜻인듯)</li>
+<li>High-level 저장소, DB, messageing 서비스</li>
+<li>사용자는 클라우드 어플리케션을 빌드 및 실행 가능 하며 AWS API를 통해서 액세스 가능</li>
+<li>AWS는 서비스 구성요소 및 서비스가 상주하는 OS를 관리</li>
+<li>사용자는 기본 인프라를 공유하고, 서비스는 멀티 테넨트 플랫폼을 제공</li>
+<li>아마존 S3(Simple Storage Service), 아마존 Glacier, 아마존 DynamoDB, 아마존 SQS(Simple Queuing Service), 아마존 SES(Simple Email Service)</li>
+</ul>
+</li>
+</ul>
+<h4 id="Shared-Responsibility-Model-for-Infrastrucutr-Services">Shared Responsibility Model for Infrastrucutr Services</h4>
+<ul>
+<li>인프라서비스는 항상 실행된 특정 리전에서 작동한다</li>
+<li>하지만 다수의 가용영역의 구성요소를 잘 활용하면 각각 서비스의 가용성을 초과하는 높은 가용성 수준을 충족시킬 수 있다</li>
+<li>보다 엄격한 비즈니스 또는 규정 준수사항이 없다면 AWS 보안 글로벌 인프라외에 보안 레이어를 추가할 필요는 없다</li>
+<li>특정 규정준수 요구사항이 있다면, AWS가 제공해주는 기술을 사용해 사용자 OS, 플랫폼과 AWS 사이에 추가적인 장치(데이터 암호화, 데이터 무결성 인증, 소프트웨어 및 데이터 서명 등등) 넣을 수도 있다</li>
+<li>사용자가 표준 AMI를 통해 EC2인스턴스를 실행시켰을 경우, SSH나 RDP를 통해 인스턴스에 접근하려면 OS레벨의 인증을 받아야한다</li>
+<li>EC2 인스턴스에 접근하기 위해 아마존 EC2 Key pair(업계표준인 RSA Key pair의 일종)를 사용할 수있다</li>
+<li>EC2 Key pair는 AWS 계정이나 IAM 유저 자격과 상관없다
+<ul>
+<li>AWS계정이나 IAM 유저 자격은 다른 AWS서비스들에 대한 접근을 관리</li>
+<li>EC2 Key pair는 오직 특정 인스턴스에 대한 접근을 관리</li>
+</ul>
+</li>
+<li>OpenSSL을 통해서 EC2 key pair를 만들 경우
+<ul>
+<li>Public key를 AWS에 등록, Private key를 저장해서 사용</li>
+</ul>
+</li>
+<li>AWS를 통해 EC2 key pair를 만들 경우
+<ul>
+<li>Public key와 Private Key가 처음 인스턴스 생성때 만들어서 보여짐</li>
+<li>Private key는 다운로드 및 저장해서 사용(AWS는 Private key를 저장하지 않음)</li>
+<li>Private key 분실 시 새 pair를 만들어야함</li>
+</ul>
+</li>
+<li>cloud-init 서비스를 이용해 아마존 EC2 Linux 인스턴스를 만든 경우
+<ul>
+<li>Public key 위치 : ~/.ssh/authorized_keys</li>
+<li>사용자는 SSH client를 통해 연결 할 수 있음</li>
+</ul>
+</li>
+<li>ec2config 서비스를 이용해 아마존 EC2 Window 인스턴스를 만든 경우
+<ul>
+<li>관리자 비밀번호를 랜덤으로 생성, Public key를 이용해 암호화</li>
+<li>사용자는 AWS 콘솔이나 CLI를 이용해 관리자 (암호화된) 비밀번호를 획득할 수 있음</li>
+<li>사용자가 Private key로 접근하면 Private key로 비밀번호를 복호화해 인증 진행</li>
+</ul>
+</li>
+<li>더 높은 수준의 보안이 요구된다면, LDAP 혹은 Active Directory authentication을 구현하고, 아마존 EC2 key pair 인증은 비활성화 시킬 수 있다</li>
+</ul>
+<h4 id="Shared-Responsibility-Model-for-Container-Services">Shared Responsibility Model for Container Services</h4>
+<ul>
+<li>아마존 RDS나 EMR같은 Container services에서 AWS는 기본인프라와 기반서비스, OS와 플랫폼을 관리한다(그 외는 사용자 책임이라는 뜻으로 보임, c.f. 인프라서비스에서 OS와 플랫폼은 사용자 책임)</li>
+<li>예를 들어 아마존 RDS for Oracle은 오라클 DB 플랫폼 서비스도 포함한 Container의 모든 layer를 관리한다(데이터 백업과 복구 도구 등을 제공해줌). 그러나 Business continuity 와 Disaster recovery (BC/ DR) 정책은 사용자 몫이다</li>
+<li>AWS Container Services에서 해당서비스에 접근하기 위한 데이터와 방화벽 규칙은 사용자의 몫이다. 서비스 인스턴스에 대한 Security groups은 AWS가 제공</li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/07/13/aws-well-architected-framework/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            AWS Well-Architected Framework 백서 (번역/요약)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/07/13/hexo-https-github-pages/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo HTTPS 적용하기(Github Pages)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/07/13/aws-security-best-practies/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
