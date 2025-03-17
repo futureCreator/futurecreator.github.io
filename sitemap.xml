@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/about/index.html</loc>
+    
+    <lastmod>2025-03-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2025/03/15/Why-The-Matrix-movie-could-never-become-reality/</loc>
     
     <lastmod>2025-03-17</lastmod>
@@ -77,15 +86,6 @@
     <loc>https://futurecreator.github.io/2025/03/18/Time-Entropy-and-Quantum-Reality-Exploring-the-Multidimensional-Nature-of-Time/</loc>
     
     <lastmod>2025-03-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/about/index.html</loc>
-    
-    <lastmod>2025-03-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
