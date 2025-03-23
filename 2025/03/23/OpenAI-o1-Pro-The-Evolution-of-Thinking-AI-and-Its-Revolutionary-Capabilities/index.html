@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+  <title>
+    
+    OpenAI o1-Pro: The Evolution of &#39;Thinking AI&#39; and Its Revolutionary Capabilities |
+    
+    Eric Han&#39;s IT Blog
+  </title>
+  <link rel="canonical" href="https://futurecreator.github.io/2025/03/23/openai-o1-pro-the-evolution-of-thinking-ai-and-its-revolutionary-capabilities/">
+  
+  
+  <link rel="icon" href="/images/favicions/favicon6.png">
+  
+  
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+  
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+  
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+  <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/AI/">AI</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Science/">Science</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/AI/">AI</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-OpenAI-o1-Pro-The-Evolution-of-Thinking-AI-and-Its-Revolutionary-Capabilities" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        OpenAI o1-Pro: The Evolution of &#39;Thinking AI&#39; and Its Revolutionary Capabilities
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2025/03/23/OpenAI-o1-Pro-The-Evolution-of-Thinking-AI-and-Its-Revolutionary-Capabilities/" class="article-date">
+    <time datetime="2025-03-23T02:02:51.000Z" itemprop="datePublished">2025/03/23</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              15 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="openai-o1-pro.jpg" alt></p>
+<h1>OpenAI o1-Pro Model Synthesis</h1>
+<h2 id="Introduction-to-the-o1-Pro-model">Introduction to the o1-Pro model</h2>
+<p>o1-Pro is the highest-performing AI inference model released by OpenAI on December 5, 2024. It represents a new paradigm of “thinking AI,” and is the first AI model to actually “think” as it answers, providing more accurate and detailed answers.</p>
+<p>While the o1 model series has evolved into a multi-modal form, the o1 mini, o1 preview, and o1 pro models released in September 2024 are optimized for solving complex problems through thinking with enhanced reasoning capabilities.</p>
+<h2 id="Key-features-and-capabilities-of-o1-Pro">Key features and capabilities of o1-Pro</h2>
+<h3 id="The-birth-of-thinking-AI">The birth of thinking AI</h3>
+<p>o1 is the first “thinking” AI model developed by OpenAI. Unlike previous models, o1 actually goes through a thought process before responding. This feature has led to the following revolutionary improvements:</p>
+<ul>
+<li><strong>Response time</strong>: Instant response to simple questions and deeper analysis for complex issues through intelligent contextual processing.</li>
+<li><strong>Error rate</strong>: 34% fewer errors, delivering more accurate and reliable answers</li>
+<li><strong>Processing speed</strong>: 50% faster processing to get things done efficiently</li>
+</ul>
+<h3 id="Advanced-multimodal-capabilities">Advanced multimodal capabilities</h3>
+<p>O1 has true multimodal capabilities to understand and process text and images simultaneously:</p>
+<ul>
+<li><strong>Image analysis</strong>: interpret diagrams, process visual data</li>
+<li><strong>Integrated reasoning</strong>: text-image association analysis, contextual understanding</li>
+<li><strong>Benchmark performance</strong>: Achieves state-of-the-art (SOTA) in MM-MUU, Math Vista, and more</li>
+</ul>
+<h3 id="Specialty-specific-performance-enhancements">Specialty-specific performance enhancements</h3>
+<p>The O1 Pro mode delivers exceptional performance, especially in specialized areas such as mathematical thinking and programming:</p>
+<table>
+<thead>
+<tr>
+<th>Discipline</th>
+<th>O1 PREVIEW</th>
+<th>O1</th>
+<th>O1 PRO MODE</th>
+<th>Key Improvements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math Competition</td>
+<td>50%</td>
+<td>78%</td>
+<td>86%</td>
+<td>Ability to make complex mathematical reasoning</td>
+</tr>
+<tr>
+<td>Programming</td>
+<td>62%</td>
+<td>89%</td>
+<td>90%</td>
+<td>Code optimization and bug reduction</td>
+</tr>
+<tr>
+<td>Scientific reasoning</td>
+<td>74%</td>
+<td>76%</td>
+<td>79%</td>
+<td>Ability to utilize specialized knowledge</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Increased-reliability">Increased reliability</h3>
+<p>Of particular note is the ability to give the correct answer four times in a row (4/4 reliability):</p>
+<table>
+<thead>
+<tr>
+<th>Assessment Area</th>
+<th>General Reliability</th>
+<th>4/4 Reliability</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math Problems</td>
+<td>86%</td>
+<td>80%</td>
+<td>Consistent problem solving ability</td>
+</tr>
+<tr>
+<td>Programming</td>
+<td>90%</td>
+<td>75%</td>
+<td>Produce reliable code</td>
+</tr>
+<tr>
+<td>Science</td>
+<td>79%</td>
+<td>74%</td>
+<td>Maintain a high degree of accuracy</td>
+</tr>
+</tbody>
+</table>
+<p>This proves that O1 PRO MODE is more stable and reliable, especially in solving complex problems.</p>
+<h2 id="o1-vs-GPT-4o-pricing-comparison">o1 vs GPT-4o pricing comparison</h2>
+<p>Comparing OpenAI’s model pricing structure, the o1 model is significantly more expensive than the GPT-4o:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Input Price (1 million tokens)</th>
+<th>Output Price (1 million tokens)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o1-preview</td>
+<td>$15.00</td>
+<td>$60.00</td>
+</tr>
+<tr>
+<td>GPT-4o</td>
+<td>$5.00</td>
+<td>$15.00</td>
+</tr>
+<tr>
+<td>o1-pro</td>
+<td>$150.00</td>
+<td>$600.00</td>
+</tr>
+</tbody>
+</table>
+<p>The o1-pro is priced at $150 per input token and $600 per output token, making it 10x the price of the o1-preview and 30x the price of the GPT-4o for input and 10x the price of the o1-preview and 40x the price of the GPT-4o for output.</p>
+<p>It is also worth noting the price comparison between the o1-mini and GPT-4o mini:</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Input Price (1 million tokens)</th>
+<th>Output Price (1 million tokens)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o1-mini</td>
+<td>$3.00</td>
+<td>$12.00</td>
+</tr>
+<tr>
+<td>GPT-4o mini</td>
+<td>$0.150</td>
+<td>$0.600</td>
+</tr>
+</tbody>
+</table>
+<p>The o1-mini is 20x more expensive than the GPT-4o mini for both input and output, but it is much cheaper than their respective main models.</p>
+<h2 id="ChatGPT-Pro-subscription-model-and-o1-Pro-accessibility">ChatGPT Pro subscription model and o1-Pro accessibility</h2>
+<p>OpenAI has launched a new “ChatGPT Pro” tier that costs $200 per month with access to the o1-Pro. This tier provides unlimited use of all OpenAI models, including the o1 full version and the o1-Pro.</p>
+<p>The ChatGPT Pro plan includes the following key elements:</p>
+<ul>
+<li><strong>Unlimited access to the O1 model and O1-mini, GPT-4o, and Advanced Voice</strong>: While the O1 model and some of its features are available in the Plus plan ($20/month), the Pro plan allows you to utilize them virtually unlimitedly and without restrictions.</li>
+<li><strong>O1-Pro mode (O1-Pro mode)</strong>: Pro plan users have access to a specialized variant of the O1 model, “O1-Pro mode”. This mode commits more computational resources, allowing for deeper thinking and more reliable answers to particularly challenging questions.</li>
+<li><strong>High-performance, high-computation features coming soon</strong>: OpenAI says it will add computationally intensive productivity tools to the ChatGPT Pro plan in the future.</li>
+</ul>
+<h2 id="Real-world-experience-and-performance-evaluation">Real-world experience and performance evaluation</h2>
+<p>Looking at the actual usage experience of the o1-Pro mode, it is characterized by spending more time thinking about complex problems. For example, for the space data center design problem, o1 thought for 11 seconds, while o1-Pro mode thought for 1 minute and 12 seconds before providing an answer.</p>
+<p>In the marketing strategy question, the o1-Pro mode also showed a more organized approach, first identifying customer characteristics. o1-Pro mode also provided a more comprehensive answer, even suggesting how to measure performance.</p>
+<h2 id="Real-world-use-cases-for-o1-Pro">Real-world use cases for o1-Pro</h2>
+<p>ChatGPT Pro’s use in medical research has been particularly noteworthy. Here’s how leading researchers are using it:</p>
+<ul>
+<li><strong>Discovering genes for rare diseases</strong>: Dr. Catherine Brownstein of Boston Children’s Hospital uses it to analyze complex genetic data.</li>
+<li><strong>Biomedical data analysis</strong>: Dr. Justin Reese, Berkeley Lab, to extract new knowledge about disease</li>
+<li><strong>Aging and dementia research</strong>: Used by Dr. Rhoda Au of Boston University to analyze large-scale healthcare data</li>
+<li><strong>Immunotherapy research</strong>: Dr. Derya Unutmaz, Jackson Laboratory, on analyzing cancer immunotherapy data</li>
+</ul>
+<h2 id="Model-selection-guide">Model selection guide</h2>
+<p>It’s important to consider the features, strengths, and weaknesses of each model to choose the right one:</p>
+<h3 id="O1-preview">O1-preview:</h3>
+<ul>
+<li>The most advanced inference model, suitable for complex tasks.</li>
+<li>Ideal for tasks that require extensive general knowledge</li>
+<li>Most expensive, so cost-effectiveness should be considered</li>
+</ul>
+<h3 id="GPT-4o">GPT-4o:</h3>
+<ul>
+<li>Versatile, high-performance model</li>
+<li>Includes vision capabilities</li>
+<li>Less expensive than the o1-preview, but offers higher performance</li>
+</ul>
+<h3 id="o1-mini">o1-mini:</h3>
+<ul>
+<li>Affordable version of o1-preview</li>
+<li>Optimized for use cases in coding, math, and science</li>
+<li>Performance and price balance between o1-preview and GPT-4o</li>
+</ul>
+<h3 id="GPT-4o-mini">GPT-4o mini:</h3>
+<ul>
+<li>Smarter and cheaper than GPT-3.5 Turbo, but with vision capabilities</li>
+<li>Most cost-effective small model</li>
+</ul>
+<h3 id="o1-pro">o1-pro:</h3>
+<ul>
+<li>Highest level of reasoning power</li>
+<li>Optimized for solving the most complex math, coding, and science problems</li>
+<li>Only suitable for specialized applications due to its very high price</li>
+</ul>
+<h2 id="Differences-between-GPT-Series-and-o1-Series">Differences between GPT Series and o1 Series</h2>
+<p>It’s also important to understand the key differences between the GPT Series and o1 Series models:</p>
+<p><strong>GPT Series (e.g. GPT-4o)</strong>: Multi-modal AI can process text, images, and audio simultaneously, and is excellent for real-time subtitle generation and image-based description automation. It is fast and supports a wide range of input and output formats.</p>
+<p><strong>O1 Series</strong>: Inference-driven models with the ability to think more deeply about complex problems. They are relatively slow but highly accurate for critical tasks, and are often used for coding, data analysis, and complex problem solving.</p>
+<h2 id="Future-developments">Future developments</h2>
+<p>The anticipated future directions of development for o1-Pro include the following:</p>
+<p><strong>Extended computing tasks</strong>:</p>
+<ul>
+<li>Processing larger amounts of data</li>
+<li>Support for longer analytical tasks</li>
+<li>Perform complex simulations</li>
+</ul>
+<p><strong>Enhanced API capabilities</strong>:</p>
+<ul>
+<li>Improve image understanding</li>
+<li>Developer messaging system</li>
+<li>Support for structured output</li>
+</ul>
+<p>OpenAI will continue to announce new features over the course of the 12-day livestream event, which are expected to include API capabilities for developers, search GPT capabilities, and more.</p>
+<h2 id="Benchmark-analysis-and-detailed-performance-metrics">Benchmark analysis and detailed performance metrics</h2>
+<p>o1-Pro has shown excellent performance in a variety of benchmarks. Here are some key benchmark test results:</p>
+<ul>
+<li><strong>Massive Multitask Language Understanding (MMLU)</strong>: 92.3% accuracy</li>
+<li><strong>Massive Multitask Multimodal Understanding (MMMU)</strong>: 78.2% accuracy</li>
+<li><strong>HumanEval (coding problem solving)</strong>: 92.4% accuracy</li>
+<li><strong>MATH (math problem solving)</strong>: 94.8% accuracy</li>
+<li><strong>GPQA (PhD-level science questions)</strong>: 77.3% accuracy</li>
+</ul>
+<p>This is also an excellent performance compared to GPT-4.5, especially on MMMU, where it outperforms GPT-4.5 (74.4%), and on GPQA, where it outperforms GPT-4.5 (71.4%).</p>
+<h2 id="Technical-Features-and-Specifications">Technical Features and Specifications</h2>
+<p>The key technical features of the o1-Pro model are as follows:</p>
+<ul>
+<li><strong>Input context window</strong>: 200K tokens (wider than GPT-4.5’s 128K)</li>
+<li><strong>Maximum output tokens</strong>: 100K tokens (much larger than GPT-4.5’s 16.4K)</li>
+<li><strong>Knowledge data baseline</strong>: October 2023</li>
+</ul>
+<h2 id="Performance-in-the-Korean-Market">Performance in the Korean Market</h2>
+<p>In Korea, the o1 model is performing significantly better than the original GPT model on SAT, CPA exam questions, PSAT, etc. Especially when questions are attached with images, the problem-solving ability is significantly improved.</p>
+<h2 id="Expert-criticism-and-controversy">Expert criticism and controversy</h2>
+<p>Despite its excellent performance, o1-Pro is controversial due to its high price. The pricing policy of $150 per million input tokens and $600 per million output tokens is a barrier to access for the average user.</p>
+<p>Some experts have expressed concern that this pricing policy may reinforce the “haves and have-nots,” which raises the ethical issue that access to high-performance AI technology may be limited to companies and individuals with deep pockets.</p>
+<h2 id="Model-interface-and-usability">Model interface and usability</h2>
+<p>Because the o1-Pro mode takes longer to generate answers, the user interface shows the progress of the answer via a progress bar. It also allows users to switch to other tasks while waiting for an answer, and sends an in-app notification when the answer is complete.</p>
+<h2 id="Future-expansion-plans">Future expansion plans</h2>
+<p>OpenAI is planning to add support for web browsing, file uploads, and more to o1’s API, which will be implemented in the coming months. These extensions are expected to further broaden o1-Pro’s reach and increase its practicality.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="linkedin-square" href="https://kr.linkedin.com/in/dongho-han-97465327" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-linkedin-square"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2025/03/23/The-Double-Edged-Sword-Understanding-Risks-and-Benefits-of-Synthetic-Data-in-AI-Development/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">The Double-Edged Sword: Understanding Risks and Benefits of Synthetic Data in AI Development</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/03/">March 2025</a><span class="archive-list-count">22</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2025 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2025/03/23/OpenAI-o1-Pro-The-Evolution-of-Thinking-AI-and-Its-Revolutionary-Capabilities/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
