@@ -4,6 +4,63 @@
   
     
     <entry>
+      <title>Boston Dynamics and NVIDIA: Pioneering the Future of Physical AI in Humanoid Robotics</title>
+      <link href="/2025/03/24/Boston-Dynamics-and-NVIDIA-Pioneering-the-Future-of-Physical-AI-in-Humanoid-Robotics/"/>
+      <url>/2025/03/24/Boston-Dynamics-and-NVIDIA-Pioneering-the-Future-of-Physical-AI-in-Humanoid-Robotics/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p><img src="00hyD9MWHGoybjbQsJUNQbR-2.jpg" alt=""></p><h1>Boston Dynamics and NVIDIA Collaborate to Power Physical AI</h1><p>Boston Dynamics is strengthening its collaboration with NVIDIA to bring next-generation AI capabilities to humanoid robots. The collaboration is seen as a strategic move to become a leader in physical AI in robotics.</p><h2 id="Leveraging-NVIDIA’s-robotics-platform">Leveraging NVIDIA’s robotics platform</h2><p>Boston Dynamics is utilizing NVIDIA’s “GR00T” (NVIDIA Isaac GR00T) foundation model as its robot brain and the NVIDIA Jetson Thor computer platform for its Atlas robot. Jetson Thor provides the AI computing power needed to implement neural network processing, computer vision, and highly efficient control systems into the robot.</p><p>Boston Dynamics is also leveraging NVIDIA’s simulation environment, Isaac Lab, to accelerate robot learning and technology transfer to real-world environments. Specifically, Boston Dynamics is using Isaac Lab and NVIDIA Jetson AGX Orin to streamline the process of deploying policies learned in simulation directly to real-world robots.</p><h2 id="Latest-technology-developments-and-achievements">Latest technology developments and achievements</h2><p>Boston Dynamics recently unveiled new robotics that accelerate, roll, and dumble like humans, enabled by NVIDIA’s robot learning technology, which represents a major step forward in achieving human-like dynamic movement.</p><p>Boston Dynamics also recently released a video demonstrating the behaviors that its humanoid robot, Atlas, has learned through AI reinforcement learning. In particular, the recently released video shows Atlas running, rolling, and getting up in human-like dynamic movements.</p><h2 id="Strategies-for-advancing-physical-AI">Strategies for advancing physical AI</h2><p>“NVIDIA and Boston Dynamics have a long history of working closely together to push the boundaries of what’s possible in robotics,” said Aaron Saunders, CTO of Boston Dynamics, adding that it’s exciting to see the fruits of this collaboration accelerate the industry as a whole.</p><p>Boston Dynamics is focused on developing machine learning-based locomotion solutions for automated cognitive environments and complex physical interactions. The company emphasizes both simulation-based learning as well as learning in real-world environments.</p><h2 id="Future-outlook-and-commercialization-plans">Future outlook and commercialization plans</h2><p>Boston Dynamics will begin testing its Atlas humanoid robot at Hyundai’s facility this year. The company hopes to soon see real-world examples of moving parts of complex size, shape, and weight in other industries.</p><p>“Humanoids can be particularly effective when deployed in conjunction with in-depth models of a facility and vast amounts of data about how it operates,” explained a Boston Dynamics spokesperson. “With the growing interest in AI, we expect research and development of humanoid robots to advance further.”</p><p>The move aligns with Nvidia’s strategy to advance “physical AI,” which is expected to play an important role in helping robots evolve beyond simple tools into intelligent systems that interact with the physical world.</p><h2 id="Joining-NVIDIA’s-Humanoid-Developer-Program">Joining NVIDIA’s Humanoid Developer Program</h2><p>Boston Dynamics has been selected as an early participant in Nvidia’s Humanoid Robot Developer Program, which gives developers early access to Nvidia’s latest products and the latest releases of the Isaac Sim, Isaac Lab, Jetson Thor, and Project GR00T humanoid foundation models. In addition to Boston Dynamics, the program includes other well-known robotics companies such as 1X Technologies, Field AI, Figure AI, and Fourier.</p><h2 id="NVIDIA’s-tools-to-support-the-robotics-ecosystem">NVIDIA’s tools to support the robotics ecosystem</h2><p>NVIDIA provides a variety of tools to support humanoid robotics development, most notably NVIDIA OSMO, a cloud-native managed service that enables developers to orchestrate and scale complex robotics development workflows across computing resources distributed on-premises or in the cloud. OSMO dramatically simplifies robot training and simulation workflows, reducing deployment and development cycles from months to less than a week.</p><p>NVIDIA also offers two new AI microservices for robot simulation, MimicGen NIM and Robocasa NIM. MimicGen NIM generates synthetic motion data based on remotely manipulated data, while Robocasa NIM creates a robotic task and simulation-ready environment on OpenUSD.</p><h2 id="Revolutionizing-the-way-data-is-generated-and-learned">Revolutionizing the way data is generated and learned</h2><p>One of the biggest challenges in robot development is collecting large amounts of training data. To address this issue, NVIDIA developed a remote manipulation data capture workflow that allows developers to capture a small number of remote manipulation demonstrations using devices like the Apple Vision Pro, then simulate the recordings in Isaac Sim and use MimicGen NIM to generate large amounts of synthetic data.</p><p>In fact, NVIDIA generated 780,000 humanoid robot motion data points in just 11 hours using 150 GPUs, representing a 50x productivity increase over traditional methods. This synthetic data generation technique greatly reduces the burden on companies like Boston Dynamics to collect all of their data in the real world.</p><h2 id="Industrial-Implications-of-Physical-AI">Industrial Implications of Physical AI</h2><p>NVIDIA is driving industrial innovation with three core compute infrastructures for physical AI development: DGX, Omnibus-Cosmos, and AGX. This infrastructure aims to provide an optimized end-to-end solution from AI training to simulation to real-world deployment.</p><p>“AI is evolving from a tool for analyzing data to a technology that works in the real world,” said Lev Levaredian, Vice President of Omnibus at Nvidia. “We will lead the physical AI market with digital twins, synthetic data, autonomous driving, and robotics technologies.” This means that robotics companies like Boston Dynamics can leverage Nvidia’s technology to compete in the physical AI market.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> machine learning </tag>
+            
+            <tag> synthetic data </tag>
+            
+            <tag> physical AI </tag>
+            
+            <tag> Boston Dynamics </tag>
+            
+            <tag> NVIDIA </tag>
+            
+            <tag> humanoid robots </tag>
+            
+            <tag> Atlas robot </tag>
+            
+            <tag> GR00T </tag>
+            
+            <tag> Isaac Lab </tag>
+            
+            <tag> Jetson Thor </tag>
+            
+            <tag> reinforcement learning </tag>
+            
+            <tag> simulation </tag>
+            
+            <tag> MimicGen NIM </tag>
+            
+            <tag> Robocasa NIM </tag>
+            
+            <tag> OSMO </tag>
+            
+            <tag> robotics development </tag>
+            
+            <tag> digital twins </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>The Paradox of AI in Scientific Discovery: Enhancing Individual Creativity While Diminishing Collective Innovation</title>
       <link href="/2025/03/23/The-Paradox-of-AI-in-Scientific-Discovery-Enhancing-Individual-Creativity-While-Diminishing-Collective-Innovation/"/>
       <url>/2025/03/23/The-Paradox-of-AI-in-Scientific-Discovery-Enhancing-Individual-Creativity-While-Diminishing-Collective-Innovation/</url>
