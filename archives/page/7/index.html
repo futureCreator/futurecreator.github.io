@@ -1,601 +1,77 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Archives - Eric Han&#039;s IT Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Eric Han&#039;s IT Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eric Han&#039;s IT Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Eric Han&amp;#39;s IT Blog"><meta property="og:type" content="blog"><meta property="og:title" content="Eric Han&#039;s IT Blog"><meta property="og:url" content="https://futurecreator.github.io/"><meta property="og:site_name" content="Eric Han&#039;s IT Blog"><meta property="og:description" content="Eric Han&amp;#39;s IT Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://futurecreator.github.io/img/og_image.png"><meta property="article:author" content="Eric Han"><meta property="article:tag" content="it, dev, review"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://futurecreator.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://futurecreator.github.io"},"headline":"Eric Han's IT Blog","image":["https://futurecreator.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Eric Han"},"publisher":{"@type":"Organization","name":"Eric Han's IT Blog","logo":{"@type":"ImageObject","url":"https://futurecreator.github.io/img/logo.svg"}},"description":"Eric Han&#39;s IT Blog"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
-  
-    <title>
-      
-        Archive |
-          
-            Eric Han&#39;s IT Blog
-    </title>
-    <link rel="canonical" href="https://futurecreator.github.io/archives/page/7/">
-      
-          
-            <link rel="icon" href="/images/favicions/favicon6.png">
-            
-              
-<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
 
-                
-<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
 
-                  
-<link rel="stylesheet" href="/css/style.css">
-
-                    
-<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
-
-                      
-
-
-<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
-
-
-
-
-<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
-
-
-
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-79199094-2', 'auto');
-ga('send', 'pageview');
-
-</script>
-
-
-
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
-                        <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
-<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
-</head>
-<body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
-                    </h1>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                        <li class="main-nav-list-item">
-                                            <a class="main-nav-list-link" href="/">
-                                                Home
-                                            </a>
-                                        </li>
-                                        
-                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
-                                    
-                                        <li class="main-nav-list-item">
-                                            <a class="main-nav-list-link" href="/about">
-                                                About
-                                            </a>
-                                        </li>
-                                        
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
-
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><h3 class="tag is-primary">2018</h3><div class="timeline"><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-06-05T12:40:08.000Z">2018/06/05</time></p><p class="title"><a href="/2018/06/05/pomodoro-technique-bear-focus-timer/">집중력을 유지하는 뽀모도로 테크닉</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Column/">Column</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-06-05T12:22:22.000Z">2018/06/05</time></p><p class="title"><a href="/2018/06/05/jdk-installation-for-linux-centos7/">CentOS7 JDK 설치 및 버전 관리</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Java/">Java</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-06-04T12:40:27.000Z">2018/06/04</time></p><p class="title"><a href="/2018/06/04/java-observer-pattern/">Java 옵저버 패턴 (Observer Pattern)</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Java/">Java</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-06-01T15:34:23.000Z">2018/06/02</time></p><p class="title"><a href="/2018/06/02/java-string-joiner/">Java StringJoiner (문자열 구분자 붙이기)</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Java/">Java</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-06-01T15:31:04.000Z">2018/06/02</time></p><p class="title"><a href="/2018/06/02/java-string-concatenation/">Java 문자열 연결 방법 비교</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Java/">Java</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-05-30T14:27:27.000Z">2018/05/30</time></p><p class="title"><a href="/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/">macOS 기본 터미널 개선하기</a></p><p class="categories"><a href="/categories/Reviews/">Reviews</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-05-29T13:01:00.000Z">2018/05/29</time></p><p class="title"><a href="/2018/05/29/vertx-running-blocking-code/">Vert.x Blocking Code 처리하기</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Vert-x/">Vert.x</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-05-28T11:43:58.000Z">2018/05/28</time></p><p class="title"><a href="/2018/05/28/vertx-deploy-multiple-verticles/">Vert.x verticle 여러 개 배포하기</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Vert-x/">Vert.x</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2018-05-27T16:35:48.000Z">2018/05/28</time></p><p class="title"><a href="/2018/05/28/nodejs-npm-update-latest-or-stable-version/">Node.js 버전 관리하기 (설치 &amp; 업데이트)</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/JavaScript/">JavaScript</a></p></div></article></div></div></div><div class="card"><div class="card-content"><h3 class="tag is-primary">2017</h3><div class="timeline"><article class="media"><figure class="media-left"><a class="image" href="/2017/01/27/algorithm-big-o-analysis-in-programming/"><img src="/images/thumbnail/bigo.jpg" alt="빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기"></a></figure><div class="media-content"><p class="date"><time dateTime="2017-01-27T11:00:20.000Z">2017/01/27</time></p><p class="title"><a href="/2017/01/27/algorithm-big-o-analysis-in-programming/">빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기</a></p><p class="categories"><a href="/categories/Programming/">Programming</a> / <a href="/categories/Programming/Algorithm/">Algorithm</a></p></div></article></div></div></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/archives/page/6/">Previous</a></div><div class="pagination-next"><a href="/archives/page/8/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/archives/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/archives/page/6/">6</a></li><li><a class="pagination-link is-current" href="/archives/page/7/">7</a></li><li><a class="pagination-link" href="/archives/page/8/">8</a></li><li><a class="pagination-link" href="/archives/page/9/">9</a></li><li><a class="pagination-link" href="/archives/page/10/">10</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">94</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">233</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Cloud/"><span class="level-start"><span class="level-item">Cloud</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">51</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Apple/"><span class="level-start"><span class="level-item">Apple</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Column/"><span class="level-start"><span class="level-item">Column</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/MSA/"><span class="level-start"><span class="level-item">MSA</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Spark/"><span class="level-start"><span class="level-item">Spark</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Vert-x/"><span class="level-start"><span class="level-item">Vert.x</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Reviews/"><span class="level-start"><span class="level-item">Reviews</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-03-13T15:38:26.000Z">2019/03/14</time></p><p class="title"><a href="/2019/03/14/serverless-architecture/">서버리스 Serverless 아키텍처 파헤치기</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-03-04T16:46:15.000Z">2019/03/05</time></p><p class="title"><a href="/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/">오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request</a></p><p class="categories"><a href="/categories/Programming/">Programming</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-02-26T15:10:14.000Z">2019/02/27</time></p><p class="title"><a href="/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/">Git과 CronJob을 활용한 쿠버네티스 오브젝트 YAML 자동 백업</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-02-24T16:43:07.000Z">2019/02/25</time></p><p class="title"><a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-01-19T08:40:16.000Z">2019/01/19</time></p><p class="title"><a href="/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/">스프링 부트 컨테이너와 CI/CD 환경 구성하기</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">March 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/02/"><span class="level-start"><span class="level-item">February 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">January 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">December 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/11/"><span class="level-start"><span class="level-item">November 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/10/"><span class="level-start"><span class="level-item">October 2018</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">September 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/07/"><span class="level-start"><span class="level-item">July 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/06/"><span class="level-start"><span class="level-item">June 2018</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">January 2017</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/07/"><span class="level-start"><span class="level-item">July 2016</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/06/"><span class="level-start"><span class="level-item">June 2016</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/DS-Store/"><span class="tag">.DS_Store</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1970/"><span class="tag">1970</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/2018/"><span class="tag">2018</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Big-O/"><span class="tag">Big-O</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/adsense/"><span class="tag">adsense</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/advanced/"><span class="tag">advanced</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/analytics/"><span class="tag">analytics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/apache/"><span class="tag">apache</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api/"><span class="tag">api</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api-gateway/"><span class="tag">api_gateway</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/architect/"><span class="tag">architect</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/architecture/"><span class="tag">architecture</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/asciinema/"><span class="tag">asciinema</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/atom/"><span class="tag">atom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/aws/"><span class="tag">aws</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backup/"><span class="tag">backup</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bar/"><span class="tag">bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basic/"><span class="tag">basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basics/"><span class="tag">basics</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/best/"><span class="tag">best</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blocking/"><span class="tag">blocking</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bmc/"><span class="tag">bmc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/brunch/"><span class="tag">brunch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/build/"><span class="tag">build</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/buymeacoffee/"><span class="tag">buymeacoffee</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos/"><span class="tag">centos</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos7/"><span class="tag">centos7</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/certified/"><span class="tag">certified</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ci-cd/"><span class="tag">ci-cd</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/clean/"><span class="tag">clean</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/clone/"><span class="tag">clone</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/closure/"><span class="tag">closure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cloud/"><span class="tag">cloud</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cluster/"><span class="tag">cluster</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/code/"><span class="tag">code</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/collect/"><span class="tag">collect</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/community/"><span class="tag">community</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/concat/"><span class="tag">concat</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/consolas/"><span class="tag">consolas</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/container/"><span class="tag">container</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cqrs/"><span class="tag">cqrs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/data-management/"><span class="tag">data_management</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/datatype/"><span class="tag">datatype</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deep-dive/"><span class="tag">deep_dive</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/delimiter/"><span class="tag">delimiter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deploy/"><span class="tag">deploy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deployment/"><span class="tag">deployment</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/design/"><span class="tag">design</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/developer/"><span class="tag">developer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/editor/"><span class="tag">editor</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/emoji/"><span class="tag">emoji</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/error/"><span class="tag">error</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/event-driven/"><span class="tag">event_driven</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/event-sourcing/"><span class="tag">event_sourcing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/evernote/"><span class="tag">evernote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/exam/"><span class="tag">exam</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/exception/"><span class="tag">exception</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/eye/"><span class="tag">eye</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/faas/"><span class="tag">faas</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/favicon/"><span class="tag">favicon</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/filter/"><span class="tag">filter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fold/"><span class="tag">fold</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/font/"><span class="tag">font</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/foo/"><span class="tag">foo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fork/"><span class="tag">fork</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/framework/"><span class="tag">framework</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/functional-interface/"><span class="tag">functional_interface</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/functional-programming/"><span class="tag">functional_programming</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gce/"><span class="tag">gce</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gcp/"><span class="tag">gcp</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/generics/"><span class="tag">generics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gitlab/"><span class="tag">gitlab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gke/"><span class="tag">gke</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google/"><span class="tag">google</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-cloud-platform/"><span class="tag">google_cloud_platform</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-cloud-summit/"><span class="tag">google_cloud_summit</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googlebot/"><span class="tag">googlebot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hadoop/"><span class="tag">hadoop</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/health/"><span class="tag">health</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/highest-salaries/"><span class="tag">highest_salaries</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hosting/"><span class="tag">hosting</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/https/"><span class="tag">https</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hueman/"><span class="tag">hueman</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/infrastructure/"><span class="tag">infrastructure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/install/"><span class="tag">install</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/installation/"><span class="tag">installation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/inter-process-communication/"><span class="tag">inter_process_communication</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/introduction/"><span class="tag">introduction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios/"><span class="tag">ios</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ipc/"><span class="tag">ipc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/issue/"><span class="tag">issue</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iterm2/"><span class="tag">iterm2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java-11/"><span class="tag">java_11</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/javascript/"><span class="tag">javascript</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jdk/"><span class="tag">jdk</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kube-backup/"><span class="tag">kube_backup</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kubernetes/"><span class="tag">kubernetes</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lambda/"><span class="tag">lambda</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/latest/"><span class="tag">latest</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lazy-invocation/"><span class="tag">lazy_invocation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lts/"><span class="tag">lts</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mac/"><span class="tag">mac</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macos/"><span class="tag">macos</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/major/"><span class="tag">major</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/map/"><span class="tag">map</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mariadb/"><span class="tag">mariadb</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/medium/"><span class="tag">medium</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/metatag/"><span class="tag">metatag</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method-references/"><span class="tag">method_references</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/microservices/"><span class="tag">microservices</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/middleware/"><span class="tag">middleware</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/minor/"><span class="tag">minor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/monolith/"><span class="tag">monolith</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/monospaced/"><span class="tag">monospaced</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/msa/"><span class="tag">msa</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiple/"><span class="tag">multiple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql/"><span class="tag">mysql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/n/"><span class="tag">n</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namecard/"><span class="tag">namecard</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/netflix/"><span class="tag">netflix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nodejs/"><span class="tag">nodejs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nonblocking/"><span class="tag">nonblocking</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/npki/"><span class="tag">npki</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/npm/"><span class="tag">npm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/null-safe/"><span class="tag">null_safe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/object/"><span class="tag">object</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/observer/"><span class="tag">observer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ohmyzsh/"><span class="tag">ohmyzsh</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/open-source/"><span class="tag">open_source</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/opengraph/"><span class="tag">opengraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optional/"><span class="tag">optional</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/osx/"><span class="tag">osx</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pagerank/"><span class="tag">pagerank</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pages/"><span class="tag">pages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/parallel/"><span class="tag">parallel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/patch/"><span class="tag">patch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pattern/"><span class="tag">pattern</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plugin/"><span class="tag">plugin</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plugins/"><span class="tag">plugins</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plusoperator/"><span class="tag">plusoperator</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pomodoro/"><span class="tag">pomodoro</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/postach/"><span class="tag">postach</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/practies/"><span class="tag">practies</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/program/"><span class="tag">program</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming/"><span class="tag">programming</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming-font/"><span class="tag">programming_font</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming-languages/"><span class="tag">programming_languages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pull-request/"><span class="tag">pull_request</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/re-invent/"><span class="tag">re-invent</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/readingtime/"><span class="tag">readingtime</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/record/"><span class="tag">record</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/reduce/"><span class="tag">reduce</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/refactoring/"><span class="tag">refactoring</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/release/"><span class="tag">release</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sample/"><span class="tag">sample</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/scala/"><span class="tag">scala</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/search/"><span class="tag">search</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/security/"><span class="tag">security</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/semver/"><span class="tag">semver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/seo/"><span class="tag">seo</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/seoul/"><span class="tag">seoul</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/server/"><span class="tag">server</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/serverless/"><span class="tag">serverless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/service-discovery/"><span class="tag">service_discovery</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/serviceful-serverless/"><span class="tag">serviceful_serverless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/settings/"><span class="tag">settings</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/simplified/"><span class="tag">simplified</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/snapshot/"><span class="tag">snapshot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/social/"><span class="tag">social</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spark/"><span class="tag">spark</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring/"><span class="tag">spring</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring-boot/"><span class="tag">spring-boot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring-boot/"><span class="tag">spring_boot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/springboot/"><span class="tag">springboot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ssl/"><span class="tag">ssl</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stable/"><span class="tag">stable</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/start/"><span class="tag">start</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/strategy/"><span class="tag">strategy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/streams/"><span class="tag">streams</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/string/"><span class="tag">string</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringbuffer/"><span class="tag">stringbuffer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringbuilder/"><span class="tag">stringbuilder</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringjoiner/"><span class="tag">stringjoiner</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/support/"><span class="tag">support</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift/"><span class="tag">swift</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tag/"><span class="tag">tag</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/terminal/"><span class="tag">terminal</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/theme/"><span class="tag">theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/thread/"><span class="tag">thread</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/time/"><span class="tag">time</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tls/"><span class="tag">tls</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/twitter/"><span class="tag">twitter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/type-inference/"><span class="tag">type_inference</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uml/"><span class="tag">uml</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unix/"><span class="tag">unix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/update/"><span class="tag">update</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/upgrade/"><span class="tag">upgrade</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/usage/"><span class="tag">usage</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable/"><span class="tag">variable</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable-scope/"><span class="tag">variable_scope</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/velocity/"><span class="tag">velocity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/version/"><span class="tag">version</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/versioning/"><span class="tag">versioning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/verticle/"><span class="tag">verticle</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vertx/"><span class="tag">vertx</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/virtual-machine/"><span class="tag">virtual_machine</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/virtualization/"><span class="tag">virtualization</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vm/"><span class="tag">vm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webfont/"><span class="tag">webfont</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webmaster/"><span class="tag">webmaster</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/why/"><span class="tag">why</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/windows/"><span class="tag">windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/wordcount/"><span class="tag">wordcount</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/worker/"><span class="tag">worker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/writing/"><span class="tag">writing</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yaml/"><span class="tag">yaml</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/zsh/"><span class="tag">zsh</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Eric Han</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
         },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-</div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
-    
-    <i class="icon fa fa-archive"></i>Archive
-    </h1>
-</div>
-                        <div class="main-body-content">
-                            
-    
-        
-            
-                
-                        
-                            <section class="archives-wrap">
-                                <div class="archive-year-wrap">
-                                    <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>
-                                        2018
-                                    </a>
-                                </div>
-                                <div class="archives">
-                                    
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-05T12:40:08.000Z" itemprop="datePublished">2018/06/05</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/05/pomodoro-technique-bear-focus-timer/">집중력을 유지하는 뽀모도로 테크닉</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            제가 최대 관심사 중 하나는 바로 집중력입니다. 주어진 시간은 한정적이고 나의 체력과 주의 또한 한정적이기 때문에, 이를 '어떻게 효율적으로 사용할 것인가’를 중요하게 생각합니다. 어영부영 하루를 보내고 잠자리에 누워서 오늘 하루 뭘 한지도 모른 채 후회 속에서 잠이 들기엔 하루가 너무 아까우니까요.
-잦은 휴식을 이용한 체력/집중력 유지
-누구나 집중력을 높
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-05T12:22:22.000Z" itemprop="datePublished">2018/06/05</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/05/jdk-installation-for-linux-centos7/">CentOS7 JDK 설치 및 버전 관리</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다.
-설치 파일 다운로드
-JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다.
-다른 방법으로는 웹 상의 파
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-04T12:40:27.000Z" itemprop="datePublished">2018/06/04</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/04/java-observer-pattern/">Java 옵저버 패턴 (Observer Pattern)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            하나 혹은 여러 클래스가 어떤 클래스의 상태 변화에 따라 동작해야하는 경우를 생각해봅시다.
-예를 하나 들어보겠습니다. 제가 요즘 재밌게 보고 있는 페이지 중 ‘책 끝을 접다’ 라는 페이지가 있습니다. 책 소개해주는 페이지인데 흥미진진하게 소개를 해줘서 책을 사고 싶게 만드는 걸로 유명합니다. 저는 이 페이지에 신규 컨텐츠가 등록되었는지 종종 들어가서 확인해
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-01T15:34:23.000Z" itemprop="datePublished">2018/06/02</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/02/java-string-joiner/">Java StringJoiner (문자열 구분자 붙이기)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.
-StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-01T15:31:04.000Z" itemprop="datePublished">2018/06/02</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/02/java-string-concatenation/">Java 문자열 연결 방법 비교</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            StringBuilder / StringBuffer / + 연산자 / concat 메소드
-Java 에서 문자열을 연결해 붙일 때 비슷한 역할을 하는 StringBuffer, StringBuilder, + 연산자, concat 메소드가 어떤 점이 다른지 비교해보겠습니다.
-String.concat()
-Spring 클래스에는 문자열을 이어주는 concat 메소드
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-05-30T14:27:27.000Z" itemprop="datePublished">2018/05/30</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/05/30/mac-os-better-terminal-iterm2-zsh-oh-my-zsh/">macOS 기본 터미널 개선하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            macOS 는 유닉스 기반의 OS 로 개발을 하다보면 터미널을 많이 사용하기 마련인데 기본으로 제공되는 터미널은 너무 빈약합니다. PuTTY 같은 다른 터미널 클라이언트를 사용했던 분들이라면 더더욱 그럴거구요. 기본적인 색깔 구분도 안되서 사용이 쉽지 않았습니다.
-iTerm2 + zsh + oh my zsh
-터미널 관련 라이브러리들을 찾다보니 zsh 라는 
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Vert-x/">Vert.x</a>
-            </p>
-            <p class="date"><time datetime="2018-05-29T13:01:00.000Z" itemprop="datePublished">2018/05/29</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/05/29/vertx-running-blocking-code/">Vert.x Blocking Code 처리하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            이번 포스팅에서는 Vert.x 에서 Blocking 코드를 어떻게 처리하는지 확인해보겠습니다.
-Thread Blocking Warning
-Vert.x 는 single thread 모델로 하나의 thread(event loop)에서 모든 API 가 Non-blocking 으로 처리됩니다. 물론 Node.js 와 달리 event loop 를 여러 개 띄울 수 
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Vert-x/">Vert.x</a>
-            </p>
-            <p class="date"><time datetime="2018-05-28T11:43:58.000Z" itemprop="datePublished">2018/05/28</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/05/28/vertx-deploy-multiple-verticles/">Vert.x verticle 여러 개 배포하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            회사에서 Vertx. 라는 프레임워크를 다루게 되었습니다. 처음 접할 때 이해하는게 쉽지 않았는데, 알면 알수록 상당히 유용한 프레임워크입니다. Vert.x 에 대해서는 조만간 개념 정리해서 따로 올리도록 하겠습니다.
-
-오늘 포스팅에서는 Verticle 을 여러 개 배포하는 법을 살펴보겠습니다.
-Vert.x 프로젝트를 shadowJar 를 이용해 jar 파
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/JavaScript/">JavaScript</a>
-            </p>
-            <p class="date"><time datetime="2018-05-27T16:35:48.000Z" itemprop="datePublished">2018/05/28</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/05/28/nodejs-npm-update-latest-or-stable-version/">Node.js 버전 관리하기 (설치 &amp; 업데이트)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            오랜만에 Hexo 프레임워크를 보니까 실행이 되질 않더군요. npm update, npm install, npm rebuild 다 실행해보고, npm outdated 로 최신 버전이 아닌 모듈들을 삭제 후 재설치까지 다 해봤는데 안되더군요. 원인은 Node.js 의 버전이 버전이 맞지 않는 것이었습니다.
-이번 포스팅에서는 Node.js 의 버전을 최신 버전
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                
-                    </div>
-                    </div></section>
-                    
-                        
-                            <section class="archives-wrap">
-                                <div class="archive-year-wrap">
-                                    <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>
-                                        2017
-                                    </a>
-                                </div>
-                                <div class="archives">
-                                    
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Algorithm/">Algorithm</a>
-            </p>
-            <p class="date"><time datetime="2017-01-27T11:00:20.000Z" itemprop="datePublished">2017/01/27</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2017/01/27/algorithm-big-o-analysis-in-programming/">빅 오 분석법(Big-O Analysis)으로 알고리즘 성능시간 분석하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            알고리즘을 풀거나 프로그래밍 면접을 할 때 빅 오 분석법 (Big-O Analysis) 은 유용합니다. 빅 오 분석법은 입력 값의 개수에 따라서 알고리즘의 성능을 분석하는 방법입니다. 이 방법을 통해서 간단하게 알고리즘의 성능을 따져볼 수 있습니다.
-주어진 배열 내에서 최대값을 찾는 두 알고리즘을 예로 들어보겠습니다. 첫번째 알고리즘 compareToMax
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-                                                        
-                                </div>
-                            </div></section>
-                            
-                                
-                                    <nav id="page-nav">
-                                        <span class="pages">
-                                            Page 7 
-                                                of 10
-                                        </span>
-                                        <a class="extend prev" rel="prev" href="/archives/page/6/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/page/8/">8</a><a class="page-number" href="/archives/page/9/">9</a><a class="page-number" href="/archives/page/10/">10</a><a class="extend next" rel="next" href="/archives/page/8/">&gt;</a>
-                                    </nav>
-                                    
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>follow:</p>
-        <ul class="social-links">
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
-                        <i class="icon fa fa-rss"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-    
-    <div class="widgets-container">
-        
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2026 Eric Han</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-        
-    
-    <script>
-    var disqus_shortname = 'futurecreator';
-    
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-
-
-
-
-
-<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-
-
-<script src="/vendor/scrollLoading/main.js"></script>
-
-
-
-
-<!-- Custom Scripts -->
-
-<script src="/js/main.js"></script>
-
-
-    </div>
-</body>
-</html>
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

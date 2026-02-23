@@ -1,581 +1,790 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Eric Han&#039;s IT Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Eric Han&#039;s IT Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eric Han&#039;s IT Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Eric Han&amp;#39;s IT Blog"><meta property="og:type" content="blog"><meta property="og:title" content="Eric Han&#039;s IT Blog"><meta property="og:url" content="https://futurecreator.github.io/"><meta property="og:site_name" content="Eric Han&#039;s IT Blog"><meta property="og:description" content="Eric Han&amp;#39;s IT Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://futurecreator.github.io/img/og_image.png"><meta property="article:author" content="Eric Han"><meta property="article:tag" content="it, dev, review"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://futurecreator.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://futurecreator.github.io"},"headline":"Eric Han's IT Blog","image":["https://futurecreator.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Eric Han"},"publisher":{"@type":"Organization","name":"Eric Han's IT Blog","logo":{"@type":"ImageObject","url":"https://futurecreator.github.io/img/logo.svg"}},"description":"Eric Han&#39;s IT Blog"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
-  
-    <title>
-      
-            Eric Han&#39;s IT Blog
-    </title>
-    <link rel="canonical" href="https://futurecreator.github.io/page/5/">
-      
-          
-            <link rel="icon" href="/images/favicions/favicon6.png">
-            
-              
-<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
 
-                
-<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
 
-                  
-<link rel="stylesheet" href="/css/style.css">
-
-                    
-<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
-
-                      
-
-
-<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
-
-
-
-
-<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
-
-
-
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-79199094-2', 'auto');
-ga('send', 'pageview');
-
-</script>
-
-
-
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
-                        <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
-<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
-</head>
-<body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
-                    </h1>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                        <li class="main-nav-list-item">
-                                            <a class="main-nav-list-link" href="/">
-                                                Home
-                                            </a>
-                                        </li>
-                                        
-                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
-                                    
-                                        <li class="main-nav-list-item">
-                                            <a class="main-nav-list-link" href="/about">
-                                                About
-                                            </a>
-                                        </li>
-                                        
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
-
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-07-12T15:51:43.000Z" title="7/13/2018, 12:51:43 AM">2018/07/13</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.864Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Cloud/">Cloud</a></span><span class="level-item">12 minutes read (About 1782 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/07/13/aws-security-best-practies/">AWS 보안 모범 사례 백서 (번역/요약)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 포스트는 AWS 자격증 스터디에서 <a target="_blank" rel="noopener" href="https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf">AWS Security Best Practies</a> 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.</p>
+<p>마지막 업데이트 : 2018/07/12</p>
+<hr>
+<p>AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할 수 있다</p>
+<h2 id="AWS-Shared-Responsibility-Model">AWS Shared Responsibility Model</h2>
+<ul>
+<li>AWS는 클라우드 보안 인프라와 서비스를 제공하고, 고객은 OS, 플랫폼, 데이터의 보안에 대한 책임이 있다.</li>
+<li>AWS는 세 가지 타입의 공유 권한 모델을 제공해준다
+<ul>
+<li>Infrastructure services</li>
+<li>Container services</li>
+<li>Abstracted services</li>
+</ul>
+</li>
+</ul>
+<h3 id="Understanding-the-AWS-Secure-Global-InfraStructure">Understanding the AWS Secure Global InfraStructure</h3>
+<h4 id="Identity-and-Access-Manamgement-IAM-서비스">Identity and Access Manamgement (IAM) 서비스</h4>
+<ul>
+<li>유저와 보안자격(Password, Access keys, Permission policies)등을 중앙 집중적으로 관리해주는 서비스</li>
+<li>하나의 AWS account 내 각각의 이름과 비밀번호, 엑세스 키를 가진 유저를 여러명 만들수 있다</li>
+<li>각각의 유저는 계정 URL을 통해 계정 콘솔로 로그인 할 수 있다</li>
+<li>각각의 유저에게 AWS 계정내 리소스에 프로그래밍적으로 접근할 수있도록 Access key를 만들어 줄 수 있다</li>
+<li>각 유저의 활동에 대한 비용은 AWS 계정으로 청구된다.</li>
+<li>관리자도 계정 자격보다는 유저를 만들어서 접근하는 것을 추천한다</li>
+</ul>
+<h4 id="Regions-Availability-Zones-and-Endpoints">Regions, Availability Zones, and Endpoints</h4>
+<ul>
+<li>Region
+<ul>
+<li>물리적 데이터 저장소 위치</li>
+<li>Network latency 및 Regulatory compliance(규정준수, 나라 or 지역별 법 준수를 말하는 듯)를 고려해서 Region을 선택할 수 있음</li>
+<li>특정 Region을 정했다면 해당 지역 외부로는 데이터 복제가 일어나지 않음. 사용자의 책임임</li>
+</ul>
+</li>
+<li>Availability Zone
+<ul>
+<li>Region내에서 Fault isolation을 위해 디자인된 논리적 지역구분</li>
+<li>다수의 ISP(인터넷공급업자)와 다른 전원공급망을 사용</li>
+<li>같은 리전내에 다른 가용공간 끼리의 통신은 LAN으로 연결되어있기 때문에 매우 빠름</li>
+<li>장애에 대처하기 위해 시스템을 다수의 가용영역에 위치 시키는 것을 추천한다</li>
+</ul>
+</li>
+<li>Service Endpoint
+<ul>
+<li>Backplane 접근을 제공하는 서비스 앤드포인트</li>
+<li>AWS Mangment Consonle을 이용한 Web 접근</li>
+<li>API나 CLI를 통한 Programming 접근</li>
+</ul>
+</li>
+</ul>
+<h3 id="Sharing-Security-Responsibility-for-AWS-Services">Sharing Security Responsibility for AWS Services</h3>
+<p><img src="srm.png" alt="Shared Responsibility Model for Infrastructure Services"></p>
+<ul>
+<li>AWS는 3가지 카테고리로 구분하여 서비스를 제공한다</li>
+<li>각 서비스는 사용자의 접근 및 사용 방법에 따라 약간씩 다른 보안 오너십 모델이 제공된다</li>
+<li><strong>Infrastruture services</strong>
+<ul>
+<li>컴퓨터 서비스, 아마존 EC2, 아마존 EBS(Elastic Block Store), Auto Scaling, Amazon VPC(Virtual Private Cloud)</li>
+</ul>
+</li>
+<li><strong>Container Services</strong>
+<ul>
+<li>일반적으로 EC2나 인프라 인스턴스 위에서 동작하는 서비스들을 일컬음</li>
+<li>몇몇 플랫폼 이나 OS 레벨의 서비스는 Container 관리서비스를 이용(방화벽, 플랫폼 레벨의 자격증명 등)</li>
+<li>아마존 RDS(Relational Database Services), 아마존 EMR(Elastic Map Reduce), AWS Elastic Beanstalk</li>
+</ul>
+</li>
+<li><strong>Abstracted Services</strong>
+<ul>
+<li>플랫폼이나 관리 레이어를 추상화한 서비스(플랫봄 상위수준, 플랫폼 독립적이라는 뜻인듯)</li>
+<li>High-level 저장소, DB, messageing 서비스</li>
+<li>사용자는 클라우드 어플리케션을 빌드 및 실행 가능 하며 AWS API를 통해서 액세스 가능</li>
+<li>AWS는 서비스 구성요소 및 서비스가 상주하는 OS를 관리</li>
+<li>사용자는 기본 인프라를 공유하고, 서비스는 멀티 테넨트 플랫폼을 제공</li>
+<li>아마존 S3(Simple Storage Service), 아마존 Glacier, 아마존 DynamoDB, 아마존 SQS(Simple Queuing Service), 아마존 SES(Simple Email Service)</li>
+</ul>
+</li>
+</ul>
+<h4 id="Shared-Responsibility-Model-for-Infrastrucutr-Services">Shared Responsibility Model for Infrastrucutr Services</h4>
+<ul>
+<li>인프라서비스는 항상 실행된 특정 리전에서 작동한다</li>
+<li>하지만 다수의 가용영역의 구성요소를 잘 활용하면 각각 서비스의 가용성을 초과하는 높은 가용성 수준을 충족시킬 수 있다</li>
+<li>보다 엄격한 비즈니스 또는 규정 준수사항이 없다면 AWS 보안 글로벌 인프라외에 보안 레이어를 추가할 필요는 없다</li>
+<li>특정 규정준수 요구사항이 있다면, AWS가 제공해주는 기술을 사용해 사용자 OS, 플랫폼과 AWS 사이에 추가적인 장치(데이터 암호화, 데이터 무결성 인증, 소프트웨어 및 데이터 서명 등등) 넣을 수도 있다</li>
+<li>사용자가 표준 AMI를 통해 EC2인스턴스를 실행시켰을 경우, SSH나 RDP를 통해 인스턴스에 접근하려면 OS레벨의 인증을 받아야한다</li>
+<li>EC2 인스턴스에 접근하기 위해 아마존 EC2 Key pair(업계표준인 RSA Key pair의 일종)를 사용할 수있다</li>
+<li>EC2 Key pair는 AWS 계정이나 IAM 유저 자격과 상관없다
+<ul>
+<li>AWS계정이나 IAM 유저 자격은 다른 AWS서비스들에 대한 접근을 관리</li>
+<li>EC2 Key pair는 오직 특정 인스턴스에 대한 접근을 관리</li>
+</ul>
+</li>
+<li>OpenSSL을 통해서 EC2 key pair를 만들 경우
+<ul>
+<li>Public key를 AWS에 등록, Private key를 저장해서 사용</li>
+</ul>
+</li>
+<li>AWS를 통해 EC2 key pair를 만들 경우
+<ul>
+<li>Public key와 Private Key가 처음 인스턴스 생성때 만들어서 보여짐</li>
+<li>Private key는 다운로드 및 저장해서 사용(AWS는 Private key를 저장하지 않음)</li>
+<li>Private key 분실 시 새 pair를 만들어야함</li>
+</ul>
+</li>
+<li>cloud-init 서비스를 이용해 아마존 EC2 Linux 인스턴스를 만든 경우
+<ul>
+<li>Public key 위치 : ~/.ssh/authorized_keys</li>
+<li>사용자는 SSH client를 통해 연결 할 수 있음</li>
+</ul>
+</li>
+<li>ec2config 서비스를 이용해 아마존 EC2 Window 인스턴스를 만든 경우
+<ul>
+<li>관리자 비밀번호를 랜덤으로 생성, Public key를 이용해 암호화</li>
+<li>사용자는 AWS 콘솔이나 CLI를 이용해 관리자 (암호화된) 비밀번호를 획득할 수 있음</li>
+<li>사용자가 Private key로 접근하면 Private key로 비밀번호를 복호화해 인증 진행</li>
+</ul>
+</li>
+<li>더 높은 수준의 보안이 요구된다면, LDAP 혹은 Active Directory authentication을 구현하고, 아마존 EC2 key pair 인증은 비활성화 시킬 수 있다</li>
+</ul>
+<h4 id="Shared-Responsibility-Model-for-Container-Services">Shared Responsibility Model for Container Services</h4>
+<ul>
+<li>아마존 RDS나 EMR같은 Container services에서 AWS는 기본인프라와 기반서비스, OS와 플랫폼을 관리한다(그 외는 사용자 책임이라는 뜻으로 보임, c.f. 인프라서비스에서 OS와 플랫폼은 사용자 책임)</li>
+<li>예를 들어 아마존 RDS for Oracle은 오라클 DB 플랫폼 서비스도 포함한 Container의 모든 layer를 관리한다(데이터 백업과 복구 도구 등을 제공해줌). 그러나 Business continuity 와 Disaster recovery (BC/ DR) 정책은 사용자 몫이다</li>
+<li>AWS Container Services에서 해당서비스에 접근하기 위한 데이터와 방화벽 규칙은 사용자의 몫이다. 서비스 인스턴스에 대한 Security groups은 AWS가 제공</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-07-12T15:16:54.000Z" title="7/13/2018, 12:16:54 AM">2018/07/13</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.955Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Hexo/">Hexo</a></span><span class="level-item">8 minutes read (About 1220 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/07/13/hexo-https-github-pages/">Hexo HTTPS 적용하기(Github Pages)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>지난 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.</p>
+<p>Hexo 블로그는 <code>generate</code> 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a> 입니다. 저도 처음에 접근하기 쉽고 <code>github.io</code> 도메인이 좋아서 github pages 로 시작했습니다. 다른 포스트에서 차차 다른 호스팅 방식도 다뤄보려고 합니다(<em>Netlify, Gitlab pages</em> 등).</p>
+<h2 id="HTTPS">HTTPS</h2>
+<p>HTTPS에 대해서는 이전 <a href="https://futurecreator.github.io/2018/07/12/https-and-ssl-tls/">포스트</a>에서 자세히 살펴봤습니다. SSL 인증서와 암호화를 통해 클라이언트와 웹 서버 간 안전하게 통신할 수 있는 기술로 누출되면 위험한 정보를 다룰 때 사용합니다.</p>
+<p>물론 Hexo 블로그에서는 대부분 중요한 개인정보, 비밀번호, 신용카드 번호 등을 전송할 필요는 없습니다. 하지만 HTTPS로 연결하면 사용자들에게 신뢰를 줄 수 있고 보안을 강화해놓으면 나쁠 건 없겠죠.</p>
+<h2 id="적용하기">적용하기</h2>
+<p>먼저 Hexo 블로그 소스가 저장된 GitHub 페이지를 들어갑니다. 그 후에 상단의 탭에서 Settings 탭을 눌러 설정 메뉴로 들어갑니다.</p>
+<p><img src="https://help.github.com/assets/images/help/repository/repo-actions-settings.png" alt="Repository settings button"></p>
+<p>아래 쪽으로 내려오면 <code>Enforce HTTPS</code> 체크박스가 있습니다. 체크하면 바로 HTTP 적용된 것을 확인할 수 있습니다.</p>
+<p><img src="https://help.github.com/assets/images/help/pages/enforce-https-checkbox.png" alt="Enforce HTTPS checkbox"></p>
+<h2 id="혼합-콘텐츠-Mixed-content">혼합 콘텐츠 Mixed-content</h2>
+<p>Hexo 블로그에 적용해본 결과 딱히 문제가 발생하지 않았습니다. 하지만 HTTPS 적용 시 혼합 콘텐츠로 문제가 나타날 수 있습니다.</p>
+<p>혼합 콘텐츠는 HTTPS 컨텐츠 내에 HTTP 로 요청하는 하위 리소스가 있는 경우를 말합니다. HTTPS 로 안전한 페이지를 요청하지만, 그 페이지가 내부적으로 가지고 있는 리소스를 다시 로드할 때 HTTP 요청이므로 중간자 공격(<em>man-in-the-middle attack</em>)<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식
+">[1]</span></a></sup>에 취약하게 됩니다.</p>
+<p>HTTP로 이미지, 비디오, 오디오 콘텐츠 등의 리소스를 요청하는 경우 이걸 가로채서 의도하지 않은 콘텐츠로 바꿔치기 할 수 있습니다. 예를 들어 버튼의 이미지를 바꾼다거나, 사진을 부적절한 콘텐츠로 바꾼다거나, 제품의 이미지를 다른 제품으로 대체할 수도 있습니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[혼합 콘텐츠란?](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ko#browser-behavior-with-mixed-content)">[2]</span></a></sup> 이런 위험이 있는 경우 최신 브라우저에서는 경고로 표시합니다.</p>
+<p><img src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/passive-mixed-content-warnings.png?hl=ko" alt="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content"></p>
+<p>문제는 이런 리소스가 브라우저가 다운로드해서 실행할 수 있는 js, stylesheet, iframe 등의 리소스인 경우입니다. 공격자가 이런 리소스를 가로채는 경우 페이지 또는 웹 사이트 전체를 제어하거나 중요 정보를 훔치는 등 페이지에 대한 모든 것을 변경할 수 있습니다. 대부분의 최신 브라우저는 이런 위험한 요청을 차단합니다.</p>
+<p><img src="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/imgs/active-mixed-content-errors.png?hl=ko" alt="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content"></p>
+<p>Hexo 의 경우 리소스를 전부 가지고 있기 때문에 외부에 따로 HTTP 요청을 하는 작업은 없는 것으로 보입니다. 만약 에러가 난다면 다음과 같이 Github 고객센터 페이지에서 안내하는 <a target="_blank" rel="noopener" href="https://help.github.com/articles/securing-your-github-pages-site-with-https/">가이드</a>를 따라 수정하시면 되겠습니다.</p>
+<p><img src="https-mixed-content.png" alt="https://help.github.com/articles/securing-your-github-pages-site-with-https/"></p>
+<h2 id="Custom-domain">Custom domain</h2>
+<p>만약 커스텀 도메인을 사용하는데 HTTPS 적용 시 에러가 난다면, 이 <a target="_blank" rel="noopener" href="https://help.github.com/articles/troubleshooting-custom-domains/#https-errors">가이드</a>를 참고하세요.</p>
+<p>이번 포스트에서는 Github pages 를 이용해서 Hexo 블로그를 배포할 경우 HTTPS 를 적용하는 방법에 대해 알아봤습니다.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>[hexo-change-font-on-hueman-theme]</li>
+<li>[hexo-markdown-plugins]</li>
+<li>[generate-an-emoji-favicon]<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">공격자가 네트워크 연결을 도청하고 양자 간 통신을 보거나 수정하는 방식<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content?hl=ko#browser-behavior-with-mixed-content">혼합 콘텐츠란?</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-07-12T14:59:12.000Z" title="7/12/2018, 11:59:12 PM">2018/07/12</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.997Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">17 minutes read (About 2513 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/07/12/https-and-ssl-tls/">HTTPS 와 SSL(TLS)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Hexo 블로그에 HTTPS 적용하는 포스트를 작성하려다가 보니 먼저 HTTPS를 정리하는게 좋을 것 같습니다. 이번 포스트에서는 HTTPS의 원리에 대해 알아보겠습니다.</p>
+<h2 id="HTTPS">HTTPS</h2>
+<p><strong>HTTP(<em>Hypertext Transfer Protocol</em>)</strong> 은 HTML 을 주고받을 때 서로 지키기로 정한 규칙입니다. 그리고 <strong>HTTPS(<em>HTTP Secure</em>)</strong> 는 HTTP 의 보안을 강화한 것으로, 암호화된 연결로 웹 서버와 통신하는 방식입니다. HTTP 는 서버와 클라이언트가 주고 받는 메시지가 노출되어 가로채거나 위조될 위험이 있습니다. 따라서 비밀번호, 계좌번호 등 중요한 정보를 전송할 때는 HTTPS 를 이용하게 됩니다.</p>
+<p>HTTPS 를 사용하게 되면 브라우저마다 조금씩 다르지만 초록색과 자물쇠 표시를 이용해서 안전하게 연결된 사이트라는 걸 알려줍니다. 이는 스니핑, 피싱, 데이터변조 등으로부터 안전하다는 것을 의미하고, 방문자나 서비스 사용자에게 신뢰감을 줄 수 있습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[SSL 인증서란](https://www.ucert.co.kr/ssl/ssl.html)
+">[1]</span></a></sup></p>
+<p><img src="https_chrome.png" alt="Chrome"></p>
+<p><img src="https_safari.png" alt="Safari"></p>
+<p><img src="https_firefox.png" alt="Firefox"></p>
+<p>HTTPS는 <strong>SSL(Secure Socket Layer)</strong> 라는 기술을 이용합니다. 이는 IETF(국제 인터넷 표준화 기구)에서 표준화하면서 이름이 바뀌어 TLS(<em>Transport Layer Security</em>)라고도 부릅니다. 개인키(<em>Private Key</em>)와 공개키(<em>Public Key</em>)를 복합적으로 사용하고, 인증기관(<em>Certificate Authority, CA</em>)이라는 제3자를 이용해 보안을 강화하고 전송되는 데이터를 암호화합니다. SSL 에서 사용하는 개념들을 간단하게 살펴보겠습니다.</p>
+<h2 id="암호화-Encryption">암호화 Encryption</h2>
+<p>중요한 정보가 있습니다. 이 정보를 허락된 사람들만 볼 수 있도록 하기 위해, 알고리즘을 이용해 정보를 암호문으로 바꿀 수 있습니다. 이를 암호화(<em>Encryption</em>)이라고 하고 암호화된 정보는 복호화(<em>Decryption</em>) 과정을 통해 해독할 수 있습니다. 이런 암호화/복호화 과정에서 비밀번호와 비슷한 기능을 하는 것을 키(<em>Key</em>)라고 합니다.</p>
+<p>웹 사이트를 통해서 민감한 정보를 주고받을 때 필요합니다. 주로 다음과 같은 정보를 다룰 때 사용됩니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[SSL 인증서에 대해 알아야 할 모든 것](https://www.verisign.com/ko_KR/website-presence/website-optimization/ssl-certificates/index.xhtml)
+">[2]</span></a></sup></p>
+<ul>
+<li>로그인 및 암호</li>
+<li>금융 정보 (은행계좌, 신용카드 번호, 보안카드 번호 등)</li>
+<li>독점적인 정보</li>
+<li>법률 문서 및 계약서</li>
+<li>고객 목록</li>
+<li>의료 기록</li>
+</ul>
+<h2 id="대칭키-The-Symmetric-Key">대칭키 The Symmetric Key</h2>
+<p><img src="https://docs.aws.amazon.com/ko_kr/kms/latest/developerguide/images/Symmetric_Key_Encryption_sm.png" alt="암호화"></p>
+<p><img src="https://docs.aws.amazon.com/ko_kr/kms/latest/developerguide/images/Symmetric_Key_Decryption_sm.png" alt="복호화"></p>
+<p>암호화 방식에서 가장 쉽게 생각해볼 수 있는 방법은 암호화할 때 사용한 키를 복호화할 때도 그대로 사용하는 것입니다. 즉 정보 A 를 암호화한 후에 정보를 전달하고, 암호화에 사용한 키도 전달하는 겁니다. 이런 방식을 ‘대칭키’ 방식이라고 합니다. 간단한 방법이지만 이 키를 전달하는 것 자체도 위험한 과정입니다. 키가 유출되기 쉽기 때문에 안전한 방법이 아닙니다.</p>
+<h2 id="비밀키와-공개키-Private-Key-Public-Key">비밀키와 공개키 Private Key &amp; Public Key</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Public-key-crypto-1.svg/250px-Public-key-crypto-1.svg.png" alt="https://en.wikipedia.org/wiki/Public-key_cryptography"></p>
+<p>대칭키처럼 동일한 키를 사용하는 대신, 다른 두 개의 키를 사용하는 것을 '비대칭키(<em>Asymmetric Key</em>)'라고 합니다. 하나의 키로 암호화를 시키면 다른 하나의 키로 풀 수 있도록 합니다. 비밀키/공개키(<em>Private Key/Public Key</em>) 방식은 이런 키 쌍(<em>Key pair</em>)를 관리하는 방식입니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Public_key_encryption.svg/250px-Public_key_encryption.svg.png" alt="https://en.wikipedia.org/wiki/Public-key_cryptography"></p>
+<p>비밀키는 안전하게 보관된 키고, 공개키는 다른 사람들이 볼 수 있도록 공개된 키입니다. 공개키를 이용해서 암호화하면, 비밀키를 가진 사람만이 이 정보를 복호화할 수 있게 됩니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Private_key_signing.png/250px-Private_key_signing.png" alt="https://en.wikipedia.org/wiki/Public-key_cryptography"></p>
+<p>그렇다면 반대로 비밀키로 정보를 암호화한다면 어떨까요? 물론 공개키를 가진 사람이 풀 수 있습니다. 하지만 공개키는 말 그대로 공개되었기 때문에 마음 먹으면 누구나 풀 수 있게 됩니다.</p>
+<p>이런 방식은 쓸데없어 보이지만 유용하게 사용될 수 있습니다. A 라는 사람이 비밀키/공개키 쌍을 생성한 후에 공개키를 B 라는 사람에게 보냅니다. 그럼 A 라는 사람이 본인만이 가지고 있는 비밀키로 암호화된 정보를 보냈을 때, B 가 공개키로 풀 수 있겠죠. 즉, B 가 공개키로 풀 수 있다면 A 가 짝이 맞는 비밀키를 가지고 있다는 것을 증명하게 됩니다. 이렇게 암호화를 이용해 신원을 증명할 수 있는 방식을 '전자서명(<em>digital signature</em>)'이라고 합니다.<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Digital signature](https://en.wikipedia.org/wiki/Digital_signature)
+">[3]</span></a></sup></p>
+<h2 id="SSL-인증서-DIgital-Certificate">SSL 인증서 DIgital Certificate</h2>
+<p>인증서를 통한 보안 방식에는 다음과 같은 세 가지 역할자가 등장합니다.</p>
+<ul>
+<li>클라이언트 : 사용자</li>
+<li>서버 : 서비스 제공자</li>
+<li>CA : Certificate Authorities 인증 기관</li>
+</ul>
+<h3 id="신원-확인">신원 확인</h3>
+<p>SSL 방식에서 핵심 역할을 하는 것이 SSL 인증서(혹은 디지털 인증서) 입니다. 이러한 인증서는 사용자(클라이언트)가 접속한 서버가 애초에 의도한 서버가 맞는 것인지를 보장해줍니다. 인터넷뱅킹 사이트에 접속했다면 이게 정말 그 인터넷뱅킹이 맞는지, 가짜사이트는 아닌지 확인해줍니다. 즉, 웹 사이트의 신원을 확인해주는 역할을 합니다.</p>
+<p>이러한 인증서는 신뢰성을 공인받은 기업에서 구입할 수 있습니다. 이런 기업을 CA(<em>Certificate Authorities</em>)라고 합니다. CA는 인증서 신청을 받아서 검증하고 인증서를 발급해줍니다. 돈을 내고 안전한 사이트라고 보장하는 인증서를 사는 것이죠. CA는 안전한 사이트라는 것을 확인하고 공인된 인증서를 자신의 비밀키로 암호화해서 줍니다. 이제 인증을 받은 회사는 사용자가 서버에 접속할 때 인증서를 보냅니다.</p>
+<p>인증서는 클라이언트가 서버에 접속할 때 다운로드 됩니다. 그리고 브라우저에는 신뢰할 수 있는 CA 목록과 CA의 공개키를 가지고 있습니다. 브라우저가 해당 서버의 인증서를 받아서 CA의 공개키로 복호화 할 것이고, 만약 풀린다면 CA의 인증을 제대로 받은 안전한 사이트임을 확인할 수 있습니다. 위에서 살펴 본 전자서명 방식을 생각하시면 됩니다.</p>
+<p><img src="https://4.bp.blogspot.com/-6PB1NmSrPb0/VhwmosBiZdI/AAAAAAAAAIg/w_Y3XwZS_wk/s640/dubious-as-neutral.png" alt="https://security.googleblog.com/2015/10/simplifying-page-security-icon-in-chrome.html"></p>
+<p>따라서 제대로 된 인증서를 가진 사이트에 접속하면 HTTPS와 함께 초록색 혹은 자물쇠로 연결을 표시하지만, CA가 아닌 곳에서 인증을 받았다면 HTTPS 연결이라도 브라우저에서 경고 메시지를 보여줍니다.</p>
+<h3 id="동작-방식">동작 방식</h3>
+<p>먼저 서버가 신뢰할 수 있는 사이트라는 것을 확인한 클라이언트는 서버와의 핸드쉐이크 단계에서 주고 받은 랜덤 데이터를 이용해 키를 하나 만듭니다. 이 키를 이용해서 대칭키 방식으로 암호화된 정보를 주고받으려고 합니다. 문제는 이 대칭키를 그냥 보내면 위험하다는 거죠.</p>
+<p>인증서 안에는 해당 신청한 서비스의 정보와 서버의 공개키가 들어있습니다.<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[HTTPS와 SSL 인증서](https://opentutorials.org/course/228/4894)">[4]</span></a></sup> 대칭키를 서버에 안전하게 전송할 방법은 바로 이 서버의 공개키를 이용한 방법입니다. 생성한 대칭키를 서버의 공개키로 암호화한 후 서버에 보내면, 비밀키를 가진 서버만 대칭키를 복호화할 수 있습니다. 이렇게 대칭키를 교환했다면 준비는 끝났습니다. 대칭키의 경우 간단하지만 대칭키 자체를 주고받는 것이 문제였는데 해결되었네요.</p>
+<p>대칭키를 이용해서 정보를 교환하고, 사용된 대칭키는 SSL 접속이 끝나면 폐기됩니다.</p>
+<h2 id="정리">정리</h2>
+<p>이번 포스팅에서는 HTTPS 에 대해서 살펴봤습니다. 마지막으로 큰 줄기만 정리해보겠습니다.</p>
+<ul>
+<li>중요한 정보는 암호화가 필요해서 SSL이 적용된 HTTPS 를 사용해야 한다.</li>
+<li>CA는 서버를 인증하고 인증서를 발급한다.</li>
+<li>서버는 인증서에 서비스의 정보와 서버의 공개키를 저장해 제공한다.</li>
+<li>클라이언트는 인증서를 통해 서버가 신뢰할 수 있는지 확인할 수 있고,</li>
+<li>인증서에 있는 공개키를 이용해 서버와 대칭키를 교환할 수 있다.</li>
+</ul>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>[hexo-google-site-search-console-analytics]</li>
+<li>[google-search-how-to-work]</li>
+<li>[google-200-ranking-factors-korean-list]</li>
+</ul>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://www.ucert.co.kr/ssl/ssl.html">SSL 인증서란</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://www.verisign.com/ko_KR/website-presence/website-optimization/ssl-certificates/index.xhtml">SSL 인증서에 대해 알아야 할 모든 것</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Digital_signature">Digital signature</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://opentutorials.org/course/228/4894">HTTPS와 SSL 인증서</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li></ol></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-07-07T13:19:02.000Z" title="7/7/2018, 10:19:02 PM">2018/07/07</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.924Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">19 minutes read (About 2859 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/07/07/hexo-change-font-face-no-cdn/">일반 폰트를 웹에 적용하기</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이전 <a href="http://futurecreator.github.io/2018/06/12/hexo-change-font-on-hueman-theme/">포스트</a>에서 Hexo 내 폰트를 CDN 을 이용해 변경했습니다. <a target="_blank" rel="noopener" href="https://fonts.google.com/">구글 폰트</a>에서 제공하는 폰트 url 만 있으면 블로그 <code>&lt;header&gt;</code> 에 바로 포함시켜 쉽게 변경할 수 있습니다. 하지만 내가 사용하고자 하는 폰트가 없다면 어떻게 할까요?</p>
+<p>이번 포스팅에서는 웹에서 사용하는 폰트에 대해 자세히 알아보고 무료 폰트인 '미생체’를 이용해서 CDN 없이 블로그의 폰트를 적용해보겠습니다.</p>
+<h2 id="웹-폰트">웹 폰트</h2>
+<p>우리가 일반적으로 사용하는 폰트는 글자수가 굉장히 많습니다. 한글은 영어나 숫자와는 다르게 자음과 모음을 조합해서 글자를 만들기 때문입니다. 한글로 표현할 수 있는 글자 수는 11,172자나 되며 이 중 자주 사용하는 글자만 추려봐도 2,350자나 됩니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="현대 한글은 낱자를 엮어 11,172(첫소리 19 × 가운뎃소리 21 × (끝소리 27 + 끝소리 없음 1))글자 마디를 쓸 수 있다. 11,172자 중 399자는 무받침 글자이며 10,773자는 받침 글자이다. 사용 빈도는 KS X 1001 완성형 한글 코드에 선별된 2,350글자가 상위 99.9%로 알려져 있다.
+">[1]</span></a></sup> 여기에 각종 기호와 숫자, 단위, 일본어(히라가나, 가타카나), 한자 4888자 등을 추가한 것이 <a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/KS_X_1001">KS X 1001 완성형 한글 코드</a>입니다. 이걸 기반으로 하는 문자 인코딩이 EUC-KR입니다.</p>
+<p>웹에서는 필요한 폰트를 저장해서 사용하기 때문에 폰트 용량이 클 경우에는 페이지 로딩 속도가 현저하게 느려집니다. 물론 한번 저장한 폰트는 재사용이 가능하기에 다른 사이트에서도 많이 사용하는 폰트라면 큰 문제가 없지만, 유니크한 폰트를 사용할수록 사이트에 방문한 사용자는 산뜻한 폰트를 마주하기도 전에 답답함을 느낄 겁니다. 모바일에서 접속할 경우엔 데이터에도 무리가 가게 되겠죠.</p>
+<p>따라서 우리는 보통 웹에서 사용하는 폰트는 용량을 줄이고 최적화한 폰트를 사용합니다. 웹 폰트라고 하는데, 앞서 말한 <a target="_blank" rel="noopener" href="https://fonts.google.com/">구글 폰트</a>에서는 저작권에 상관 없이 사용할 수 있는 웹 폰트를 제공하고 있습니다. 이러한 폰트를 이용하면 사용자의 시스템에 폰트가 설치되어 있지 않아도 브라우저에서 다운로드해서 해당 폰트로 보여집니다. 또한 한번 받아놓은 폰트는 재활용되기 때문에 많이 사용되는 폰트일수록 이미 다운받아져 있을 가능성이 높기 때문에 성능 상 유리합니다.</p>
+<h2 id="폰트의-종류">폰트의 종류</h2>
+<p>폰트가 적용되는 방식을 알아보기 전에 폰트의 종류부터 살펴보겠습니다.</p>
+<h3 id="Serif">Serif</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Serif_and_sans-serif_03.svg/209px-Serif_and_sans-serif_03.svg.png" alt="https://en.wikipedia.org/wiki/Serif"></p>
+<p>세리프는 글자의 끝이 뾰족하게 돌출된 형식을 말합니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[세리프](https://ko.wikipedia.org/wiki/%EC%84%B8%EB%A6%AC%ED%94%84)
+">[2]</span></a></sup> 바탕체(명조체)가 세리프에 속합니다.</p>
+<h3 id="Sans-Serif">Sans-Serif</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Serif_and_sans-serif_01.svg/212px-Serif_and_sans-serif_01.svg.png" alt="https://en.wikipedia.org/wiki/Sans-serif"></p>
+<p>Sans 는 '없음’을 뜻하는 프랑스어로 산세리프는 세리프가 없는, 즉 돌출된 형태가 없는 글꼴입니다. 돋움체(고딕체)가 산세리프에 속합니다.</p>
+<h3 id="Monospace">Monospace</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/f/f0/Proportional-vs-monospace-v4.jpg" alt="https://en.wikipedia.org/wiki/Monospaced_font"></p>
+<p>모노스페이스는 각 글자가 사용하는 너비가 동일한 글꼴입니다. 보통 개발용 폰트는 각 글자의 혼동을 방지하기 위해서 각 글자가 사용하는 너비를 동일하게 가져갑니다.</p>
+<h3 id="Cursive">Cursive</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cursive.svg/220px-Cursive.svg.png" alt="https://en.wikipedia.org/wiki/Cursive"></p>
+<p>손으로 휘갈겨 쓰듯이 쓴 글꼴로 필기체를 의미합니다.</p>
+<h2 id="폰트가-적용되는-방식">폰트가 적용되는 방식</h2>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&quot;Times New Roman&quot;</span>, Times, serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>폰트는 보통 하나만 지정하지 않고, 여러 개를 묶어서 <code>font-family</code> 라는 이름으로 지정합니다. 왜냐하면 각 폰트에 따라서 지원하지 않는 문자가 있을 수 있고, 폰트 파일을 시스템에서 지원하지 않는 경우도 있기 때문입니다. 폰트를 여러개 지정한 경우 앞에서부터 차례로 적용되는데, 만약 맨 처음 지정한 글꼴이 지원하지 않으면 다음 글꼴을 적용하는 식입니다. 그래서 맨 마지막에 기본 글꼴을 적어주게 되면 브라우저에서 기본으로 지정되어 있는 글꼴이 사용됩니다.</p>
+<h3 id="Safe-Web-Font">Safe Web Font</h3>
+<p>물론 깨질 염려 없이 여러 브라우저와 시스템에서 사용할 수 있는 공통 폰트도 있습니다.<sup id="fnref:3"><a href="#fn:3" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Web Safe Fonts](https://www.lifewire.com/web-safe-fonts-3467430)
+">[3]</span></a></sup></p>
+<h4 id="Serif-v2">Serif</h4>
+<ul>
+<li>Courier</li>
+<li>Courier New</li>
+<li>Georgia</li>
+<li>Times</li>
+<li>Times New Roman</li>
+</ul>
+<h4 id="Sans-Serif-v2">Sans-Serif</h4>
+<ul>
+<li>Arial</li>
+<li>Arial Black</li>
+<li>Tahoma</li>
+<li>Trebuchet MS</li>
+<li>Verdana</li>
+</ul>
+<h4 id="Monospace-v2">Monospace</h4>
+<ul>
+<li>Courier</li>
+<li>Courier New</li>
+</ul>
+<h4 id="Cursive-v2">Cursive</h4>
+<ul>
+<li>Comic Sans (<em>Linux</em> 제외)</li>
+</ul>
+<h2 id="폰트-포맷-적용-전략">폰트 포맷 적용 전략</h2>
+<p>하지만 우리는 기존 웹 폰트에 없는 폰트를 사용하고자 합니다. 그렇다면 서버에 폰트를 직접 올려야겠죠. 폰트 파일은 하나가 아니라 여러 종류가 있습니다.<sup id="fnref:4"><a href="#fn:4" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Font Files](https://fileinfo.com/filetypes/font)
+">[4]</span></a></sup> 허나 안타깝게도 한번에 모든 브라우저를 지원할 수 있는 폰트 컨테이너는 없습니다. 모든 브라우저를 커버하기 위해서는 4가지 정도의 글꼴을 사용해야 합니다.</p>
+<h3 id="EOT-Embedded-Open-Type">EOT (Embedded Open Type)</h3>
+<p>익스플로러 하위 버전(<em>IE8</em> 이하)에서 지원합니다. IE9 부터는 WOFF 를 지원해서 필요 없지만, 아직 IE 8 이하의 브라우저도 꽤 쓰이는 것 같습니다.</p>
+<h3 id="TTF-True-Type-Font">TTF (True Type Font)</h3>
+<p>선을 그리는 방식인 외곽선 글꼴(벡터)로 확대해도 잘 깨지지 않습니다.</p>
+<h3 id="WOFF-Web-Open-Font-Format">WOFF (Web Open Font Format)</h3>
+<p>웹에서 사용할 수 있는 공통 폰트를 위해 표준화된 폰트입니다. 많은 제조사들이 지원하고 있습니다.</p>
+<h3 id="WOFF-2-0">WOFF 2.0</h3>
+<p>WOFF 폰트의 압축률을 늘려서 WOFF 대비 평균 30%, 최대 50%까지 용량을 절감할 수 있는 타입입니다.</p>
+<h3 id="최적의-폰트-포맷-적용-방법">최적의 폰트 포맷 적용 방법</h3>
+<p>결론적으로 다음과 같은 우선순위로 적용하면 됩니다.<sup id="fnref:5"><a href="#fn:5" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[웹 글꼴 최적화](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ko)">[5]</span></a></sup></p>
+<ol>
+<li>WOFF 2.0 을 먼저 적용한다.</li>
+<li>지원하지 않으면 WOFF 를 적용한다.</li>
+<li>WOFF 를 지원하지 않는 Android 4.4 이전 브라우저에는 TTF 를 적용한다.</li>
+<li>WOFF 를 지원하지 않는 IE 8 이하의 브라우저에는 EOT 를 적용한다.</li>
+</ol>
+<h2 id="폰트-파일-최적화">폰트 파일 최적화</h2>
+<p>이제 우리가 할 일은 폰트를 선택하고 웹에서 사용할 수 있도록 용량을 줄어야 합니다. 어떻게 줄이냐구요? <a target="_blank" rel="noopener" href="http://fontforge.github.io/en-US/">FontForge</a> 라는 프로그램을 이용해 폰트 파일을 열어서 필요없는 폰트를 지워야합니다(!). 보통 웹 폰트는 2,350자로 이루어져 있는데, 줄이자고 하면 더 줄일 수 있습니다. 우리가 보통 사용하는 글자들은 더 한정적이기 때문입니다. 굵은 글꼴이 필요하지 않다면 굵은 글꼴도 삭제해도 됩니다. 적은 용량의 웹 폰트인 <a target="_blank" rel="noopener" href="http://font.iropke.com/batang/">이롭게 바탕체</a>의 경우 보통 굵기(미디엄)만 제공합니다.</p>
+<p>FontForge 는 <a target="_blank" rel="noopener" href="http://fontforge.github.io/en-US/downloads/windows-dl/">Windows</a> 와 <a target="_blank" rel="noopener" href="http://fontforge.github.io/en-US/downloads/mac-dl/">macOS</a> 모두 지원합니다. 저는 맥에서 설치해보겠습니다. 먼저 홈페이지에서 다운로드 하고, <code>Detailed Guid</code> 버튼을 눌러서 세부 스텝을 따라 설치하면 됩니다. xQuartz 를 통해서 실행되기 때문에 먼저 설치가 되어야 합니다.</p>
+<p>설치 완료 후 실행하면 다음 화면을 확인할 수 있습니다.</p>
+<p><img src="ff.png" alt="FontForge"></p>
+<p>Open Font 눌러서 폰트 파일을 선택합니다. macOS 에서 폰트 경로는 <code>~/Library/Fonts</code> 폴더입니다. 파일을 연 후에 <code>Element &gt; File Info &gt; Unicode Range</code> 에 들어가면 유니코드 범위 아닌 문자들을 선택할 수 있습니다. 선택 후 Clear 해서 지울 수 있습니다.</p>
+<p><img src="ff2.png" alt="FontForge"></p>
+<p>하지만 이 툴이 오픈소스이다보니 불안정한 면도 있고 문자가 워낙 많아서 지워야할지 말아야할지 쉽게 알 수 없는 문자들도 많습니다. 쉬운 작업이 아니네요.</p>
+<p>다행히 이번에 작업해 볼 미생체는 미리 최적화 작업을 해주신 분이 계십니다.</p>
+<h2 id="미생체-적용해보기">미생체 적용해보기</h2>
+<p><a target="_blank" rel="noopener" href="http://webtoon.daum.net/event/misaengfont">미생체</a>는 윤태호 작가님의 손글씨로 만든 무료 폰트입니다. 11,172자를 손수 작성해 폰트를 만드셨다니 정말 대단하십니다. 무료 배포의 의도를 살려 2,350 글자로 추려서 웹폰트로 만들어주신 <a target="_blank" rel="noopener" href="http://martian36.tistory.com/1449">블로거</a>님도 계십니다. 감사합니다.</p>
+<p><img src="ms1.png" alt="FontForge"></p>
+<p>압축 파일을 열고 eot, ttf, woff, woff2 총 4가지 파일을 복사합니다. Hexo 블로그에서 각종 소스들을 저장하는 source 폴더 내 fonts 폴더를 생성해서 넣어줍니다.</p>
+<p>그리고 <code>@font-face</code> 구문을 이용해서 서버에서 받아와 사용할 폰트를 지정해줍니다. <code>head.ejs</code> 에 다음과 같이 추가해줍니다. 그럼 woff2 -&gt; woff -&gt; ttf -&gt; eot 타입 순으로 적용하게 됩니다.</p>
+<figure class="highlight css"><figcaption><span>head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;<span class="selector-tag">text</span>/css&quot;&gt;</span><br><span class="line">   <span class="keyword">@font-face</span> &#123;</span><br><span class="line">      <span class="attribute">font-family</span>: <span class="string">&#x27;sdmisaeng&#x27;</span>;</span><br><span class="line">      <span class="attribute">src</span>: <span class="built_in">local</span>(<span class="string">&#x27;sdmisaeng&#x27;</span>),</span><br><span class="line">         <span class="built_in">url</span>(<span class="string">&#x27;/fonts/sdmisaeng.woff2&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;woff2&#x27;</span>), </span><br><span class="line">         <span class="built_in">url</span>(<span class="string">&#x27;/fonts/sdmisaeng.woff&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;woff&#x27;</span>),</span><br><span class="line">         <span class="built_in">url</span>(<span class="string">&#x27;/fonts/sdmisaeng.ttf&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;truetype&#x27;</span>),</span><br><span class="line">         <span class="built_in">url</span>(<span class="string">&#x27;/fonts/sdmisaeng.eot&#x27;</span>) <span class="built_in">format</span>(<span class="string">&#x27;embedded-opentype&#x27;</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<p>이제 <code>font-family</code> 에 지정해야겠죠? 이전 포스트에서 지정했던 것처럼 Hueman 테마 기준으로는 <code>_variables.styl</code> 파일을 수정합니다. 만약 미생체에서 지원하지 않는 글꼴이 있으면 다음 글꼴로 넘어가는 식으로 적용됩니다.</p>
+<figure class="highlight styl"><figcaption><span>_variables.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Fonts</span></span><br><span class="line"><span class="attribute">font</span>-sans = sdmisaeng,NanumSquareRound,<span class="string">&quot;Helvetica Neue&quot;</span>, sans-serif</span><br></pre></td></tr></table></figure>
+<p>미생체가 적용된 모습입니다.</p>
+<p><img src="ms2.png" alt="미생체가 적용된 모습"></p>
+<h2 id="저작권-주의">저작권 주의</h2>
+<p>무료로 제공되는 웹 폰트의 경우에는 크게 상관없지만, 일반적으로 사용하는 폰트들, 그 중에서도 상용 폰트의 경우 저작권에 유의해야 합니다. 상용 폰트를 돈 주고 샀다고 해서 모든 범위에 사용할 수 있는 것이 아니기 때문에 사용 가능 범위를 미리 확인해봐야 합니다.</p>
+<p>처음에는 간단하게 작성하려 했는데 내용이 많아져 글이 길어졌네요. 이번 포스팅에서는 웹 폰트에 대해 자세히 알아보고 폰트를 직접 서버에 올려 적용해봤습니다. 감사합니다.</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">현대 한글은 낱자를 엮어 11,172(첫소리 19 × 가운뎃소리 21 × (끝소리 27 + 끝소리 없음 1))글자 마디를 쓸 수 있다. 11,172자 중 399자는 무받침 글자이며 10,773자는 받침 글자이다. 사용 빈도는 KS X 1001 완성형 한글 코드에 선별된 2,350글자가 상위 99.9%로 알려져 있다.<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%EC%84%B8%EB%A6%AC%ED%94%84">세리프</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://www.lifewire.com/web-safe-fonts-3467430">Web Safe Fonts</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://fileinfo.com/filetypes/font">Font Files</a><a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a target="_blank" rel="noopener" href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization?hl=ko">웹 글꼴 최적화</a><a href="#fnref:5" rev="footnote"> ↩</a></span></li></ol></div></div></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-07-07T09:53:06.000Z" title="7/7/2018, 6:53:06 PM">2018/07/07</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.862Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Reviews/">Reviews</a></span><span class="level-item">12 minutes read (About 1777 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/07/07/buy-me-a-coffee/">콘텐츠 제작자 후원의 새로운 방법 (BMC)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>종종 외국의 프리웨어 프로그램을 사용하다보면, '마음에 들면 커피 한 잔 사줘’라는 메시지를 종종 보곤 합니다. 아무래도 개발자들이 커피를 달고 사는 직업이다 보니, 후원 메시지를 커피 한 잔 사달라고 표현한 것입니다. 오픈소스 SW 라이선스 종류 중에는 '맘대로 쓰고 맥주 한잔 사줘라’라는 뜻의 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Beerware">Beerware</a> 도 있죠.</p>
+<h2 id="커피-한-잔-사주세요">커피 한 잔 사주세요</h2>
+<p>이런 문화를 서비스화시킨 회사가 있습니다. 마음에 드는 서비스를 보고 커피를 한 두잔 살 정도의 돈을 후원하는 <a target="_blank" rel="noopener" href="https://www.buymeacoffee.com/">Buy me a coffee</a> 라는 서비스입니다.여러 아티스트, 디자이너, 작가, 개발자, 포토그래퍼 등 각종 직업을 가진 사람들이 쉽게 후원을 받을 수 있도록 도와줍니다.</p>
+<p><img src="bmc1.png" alt="https://www.buymeacoffee.com/"></p>
+<p>해당 서비스를 이용하면 간단히 프로필을 만들고 버튼을 추가해서 후원받을 창구를 만들 수 있습니다. 단순히 돈을 받는 것이 아니라 커피 한 잔 사준다는 의미로 후원에 대한 부담을 줄일 수 있기도 합니다. 더 많은 후원자들에게 자신을 알릴 수 있고, 대시보드에서 페이지 뷰와 후원 현황을 확인할 수도 있습니다.</p>
+<h2 id="시작하기">시작하기</h2>
+<p>먼저 사이트에서 회원 가입하고 간단하게 자신의 프로필 페이지를 만듭니다. 자기소개나 간단한 자신의 스토리, 사진이나 동영상을 추가할 수 있습니다. 프로필을 만들고 해당 링크를 자신이 만든 사이트나 블로그에 추가하면 끝입니다.</p>
+<p><img src="bmc2.png" alt="https://www.buymeacoffee.com/"></p>
+<p>사용자가 해당 페이지에서 커피 잔 수를 선택하고 바로 후원할 수 있습니다. 카드와 페이팔 중 선택해서 후원할 수 있습니다. 국내에선 페이팔을 잘 사용하지 않다보니 조금 아쉽습니다. 좀 더 다양한 옵션이 추가될 수 있겠네요. 국내 서비스라면 네이버, 카카오, 삼성페이 등도 있을 것 같고, 비트코인 등 암호화폐를 지원하는 것도 좋을 것 같습니다.</p>
+<p><img src="bmc3.png" alt="https://www.buymeacoffee.com/"></p>
+<h2 id="버튼-만들기">버튼 만들기</h2>
+<p>이제 사용자들이 내 프로필에 접근할 수 있도록 블로그에 버튼을 추가해보겠습니다. 버튼 추가도 간단합니다. Dashboard 페이지에서 <code>Create your button</code> 을 눌러 버튼을 생성합니다.</p>
+<p><img src="bmc4.png" alt="https://www.buymeacoffee.com/"></p>
+<p>버튼에 표시되는 텍스트와 폰트를 선택하고 버튼의 색을 결정할 수 있습니다. 옵션이 많지는 않지만 HTML 코드로 생성하면 나중에 css 를 이용해서 변경할 수 있겠죠. 이미지 코드를 선택하면 생성한 이미지를 이용하는 간단한 링크를 만들어줍니다.</p>
+<p>홈페이지에서 생성한 코드는 다음과 같습니다. 이제 원하는 위치에 붙여넣기만 하면 됩니다. 하지만 css 코드가 같이 있어서 굉장히 지저분합니다. 블로그에 좀 더 클린하게 적용해보겠습니다.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"><span class="selector-class">.bmc-button</span> <span class="selector-tag">img</span>&#123;<span class="attribute">width</span>: <span class="number">27px</span> <span class="meta">!important</span>;<span class="attribute">margin-bottom</span>: <span class="number">1px</span> <span class="meta">!important</span>;<span class="attribute">box-shadow</span>: none <span class="meta">!important</span>;<span class="attribute">border</span>: none <span class="meta">!important</span>;<span class="attribute">vertical-align</span>: middle <span class="meta">!important</span>;&#125;<span class="selector-class">.bmc-button</span>&#123;<span class="attribute">line-height</span>: <span class="number">36px</span> <span class="meta">!important</span>;<span class="attribute">height</span>:<span class="number">37px</span> <span class="meta">!important</span>;<span class="attribute">text-decoration</span>: none <span class="meta">!important</span>;<span class="attribute">display</span>:inline-flex <span class="meta">!important</span>;<span class="attribute">color</span>:<span class="number">#000000</span> <span class="meta">!important</span>;<span class="attribute">background-color</span>:<span class="number">#FFDD00</span> <span class="meta">!important</span>;<span class="attribute">border-radius</span>: <span class="number">3px</span> <span class="meta">!important</span>;<span class="attribute">border</span>: <span class="number">1px</span> solid transparent <span class="meta">!important</span>;<span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">9px</span> <span class="meta">!important</span>;<span class="attribute">font-size</span>: <span class="number">23px</span> <span class="meta">!important</span>;<span class="attribute">letter-spacing</span>:<span class="number">0.6px</span> <span class="meta">!important</span>;;<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>) <span class="meta">!important</span>;-webkit-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>) <span class="meta">!important</span>;<span class="attribute">margin</span>: <span class="number">0</span> auto <span class="meta">!important</span>;<span class="attribute">font-family</span>:<span class="string">&#x27;Cookie&#x27;</span>, cursive <span class="meta">!important</span>;-webkit-<span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;<span class="attribute">box-sizing</span>: border-box <span class="meta">!important</span>;-o-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear <span class="meta">!important</span>;-webkit-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear <span class="meta">!important</span>;-moz-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear <span class="meta">!important</span>;-ms-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear <span class="meta">!important</span>;<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear <span class="meta">!important</span>;&#125;<span class="selector-class">.bmc-button</span><span class="selector-pseudo">:hover</span>, <span class="selector-class">.bmc-button</span><span class="selector-pseudo">:active</span>, <span class="selector-class">.bmc-button</span><span class="selector-pseudo">:focus</span> &#123;-webkit-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>) <span class="meta">!important</span>;<span class="attribute">text-decoration</span>: none <span class="meta">!important</span>;<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>) <span class="meta">!important</span>;<span class="attribute">opacity</span>: <span class="number">0.85</span> <span class="meta">!important</span>;<span class="attribute">color</span>:<span class="number">#000000</span> <span class="meta">!important</span>;&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://fonts.googleapis.com/css?family=Cookie&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;bmc-button&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://www.buymeacoffee.com/fcreator&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Buy me a coffee&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;margin-left:5px&quot;</span>&gt;</span>Buy me a coffee<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="블로그에-적용하기">블로그에 적용하기</h2>
+<p>먼저 버튼을 만드는 <code>&lt;a&gt;</code> 태그를 원하는 곳으로 이동시킵니다. 저는 각 포스트 끝나는 부분과 공유버튼 + 댓글(Disqus) 사이에 위치시키기 위해서 <code>article.ejs</code> 를 수정했습니다. <code>&lt;footer&gt;</code> 태그 위에 위치시키는데 버튼을 가운데 정렬하기 위해서 <code>&lt;div&gt;</code> 태그로 감싸고 <code>align=&quot;center&quot;</code> 속성을 추가했습니다.</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;bmc&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;bmc-button&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://www.buymeacoffee.com/fcreator&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Buy me a coffee&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;margin-left:5px&quot;</span>&gt;</span>Buy me a coffee<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>그리고 버튼에서 사용하는 글꼴을 <code>&lt;header&gt;</code> 에 추가해줍니다. <code>head.ejs</code> 에 글꼴 링크를 추가합니다.</p>
+<figure class="highlight html"><figcaption><span>head.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&quot;https://fonts.googleapis.com/css?family=Cookie&quot;</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>이제 스타일을 정리해보겠습니다. 테마 내 css 를 모아놓은 곳에 추가하면 됩니다. Hueman 테마를 기준으로 살펴보면 <code>(~theme)/source/_partial</code> 폴더에 Stylus 파일이 나뉘어져 있습니다. 여기에 <code>bmc.styl</code> 이라는 새로운 파일을 추가합니다. 그리고 메인 Stylus 파일인 <code>(~theme)/source/css/style.styl</code> 파일 맨 마지막에 다음과 같이 import 합니다.</p>
+<figure class="highlight stylus"><figcaption><span>style.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&quot;_partial/bmc&quot;</span></span><br></pre></td></tr></table></figure>
+<p>기존 css 코드를 다음과 같이 Stylus 포맷으로 수정합니다. 아래 속성을 그대로 복사해 <code>bmc.styl</code> 파일을 만드시면 됩니다. Stylus 는 기존 css 를 보기 좋게 만든 것으로 <code>;</code>, <code>&#123; &#125;</code> 를 적을 필요가 없고 중복되는 부분도 상당부분 제거하고 간단한 로직도 추가할 수 있는 포맷입니다. 자세한 문법은 <a target="_blank" rel="noopener" href="http://stylus-lang.com/">링크</a>를 참고하세요. 저는 추가로 하단 여백을 확보하기 위해서 마진을 추가했습니다. !important 속성은 적용 우선순위를 높여서 속성 강제적용하는 것인데 사실 여기서는 큰 의미가 없어서 일괄적으로 제거했습니다.</p>
+<figure class="highlight stylus"><figcaption><span>bmc.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#bmc</span></span><br><span class="line">   <span class="attribute">margin-bottom</span>: <span class="number">50px</span></span><br><span class="line"></span><br><span class="line"><span class="selector-class">.bmc-button</span></span><br><span class="line">   <span class="attribute">line-height</span>: <span class="number">36px</span></span><br><span class="line">   <span class="attribute">height</span>:<span class="number">37px</span></span><br><span class="line">   <span class="attribute">text-decoration</span>: none</span><br><span class="line">   <span class="attribute">display</span>:inline-flex</span><br><span class="line">   <span class="attribute">color</span>:<span class="number">#000000</span></span><br><span class="line">   <span class="attribute">background-color</span>:<span class="number">#FFDD00</span></span><br><span class="line">   <span class="attribute">border-radius</span>: <span class="number">3px</span></span><br><span class="line">   <span class="attribute">border</span>: <span class="number">1px</span> solid transparent</span><br><span class="line">   <span class="attribute">padding</span>: <span class="number">1px</span> <span class="number">9px</span></span><br><span class="line">   <span class="attribute">font-size</span>: <span class="number">23px</span></span><br><span class="line">   <span class="attribute">letter-spacing</span>:<span class="number">0.6px</span></span><br><span class="line">   <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>)</span><br><span class="line">   -webkit-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>)</span><br><span class="line">   <span class="attribute">margin</span>: <span class="number">0</span> auto</span><br><span class="line">   <span class="attribute">font-family</span>:<span class="string">&#x27;Cookie&#x27;</span>, cursive</span><br><span class="line">   -webkit-<span class="attribute">box-sizing</span>: border-box</span><br><span class="line">   <span class="attribute">box-sizing</span>: border-box</span><br><span class="line">   -o-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear</span><br><span class="line">   -webkit-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear</span><br><span class="line">   -moz-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear</span><br><span class="line">   -ms-<span class="attribute">transition</span>: <span class="number">0.3s</span> all linear</span><br><span class="line">   <span class="attribute">transition</span>: <span class="number">0.3s</span> all linear</span><br><span class="line">   <span class="selector-tag">img</span></span><br><span class="line">      <span class="attribute">width</span>: <span class="number">27px</span></span><br><span class="line">      <span class="attribute">margin-bottom</span>: <span class="number">1px</span></span><br><span class="line">      <span class="attribute">box-shadow</span>: none</span><br><span class="line">      <span class="attribute">border</span>: none</span><br><span class="line">      <span class="attribute">vertical-align</span>: middle</span><br><span class="line">   <span class="selector-pseudo">:hover</span></span><br><span class="line">   <span class="selector-pseudo">:active</span></span><br><span class="line">   <span class="selector-pseudo">:focus</span></span><br><span class="line">      -webkit-<span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>)</span><br><span class="line">      <span class="attribute">text-decoration</span>: none</span><br><span class="line">      <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">2px</span> <span class="built_in">rgba</span>(<span class="number">190</span>, <span class="number">190</span>, <span class="number">190</span>, <span class="number">0.5</span>)</span><br><span class="line">      <span class="attribute">opacity</span>: <span class="number">0.85</span></span><br><span class="line">      <span class="attribute">color</span>:<span class="number">#000000</span></span><br></pre></td></tr></table></figure>
+<p>그럼 각 포스트마다 직접 추가할 필요 없이 자동으로 하단에 추가되는 것을 확인할 수 있습니다.</p>
+<p>이번 포스트에서는 후원받을 수 있는 새로운 방법인 <a target="_blank" rel="noopener" href="https://www.buymeacoffee.com/">Buy me a coffee</a> 라는 서비스를 살펴봤습니다. 물론 이 버튼을 추가한다고 해서 후원받을 수 있는 것은 아니겠죠. 후원받을만한 좋은 콘텐츠를 꾸준하게 쌓는 것이 중요하겠습니다.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>[program-for-eye-health-eyeleo-flux-stretchly]</li>
+<li>[easy-diagram-plantuml-hexo-plugin]</li>
+<li>[record-terminal-asciinema]</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-07-04T14:25:12.000Z" title="7/4/2018, 11:25:12 PM">2018/07/04</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.783Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Cloud/">Cloud</a></span><span class="level-item">20 minutes read (About 3042 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/07/04/aws-certified/">AWS 자격증 준비하기</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발자들 사이에서 서버리스 아키텍쳐에 대해 이야기가 많이 나오면서 서버리스 컴퓨팅을 손쉽게 제공하는 AWS에도 관심이 많습니다. 저도 서버리스가 궁금해서 AWS에 가입을 하고 공부를 해봤습니다. 처음에는 새로운 개념도 많고 서비스도 많아서 복잡해보였는데 알면 알수록 재밌습니다. 사용자가 다양한 옵션을 간편하게 설정할 수 있고, 입문자가 쉽게 적응할 수 있도록 문서가 잘 정리되어 있습니다.</p>
+<p>감을 익히기 위해서 서비스를 조합해 서버리스를 이용한 사이트 몇 개를 만들어봤습니다. (블로그 오른편 사이드바 링크 목록에 있습니다) S3에서 정적 콘텐츠를 제공하고, Lambda에서 로직을 처리, DynamoDB에서는 데이터를 처리합니다. 비즈니스 로직 외에 관리해야 할 수많은 것(서버 및 <em>DB</em> 확장, 성능, 백업, 이중화 등등)들을 자동으로 관리해줍니다. 아이디어만 있으면 너무나 쉽고 빠르게 개발 할 수 있습니다. 이러한 놀라운 생산성은 대규모 서비스일수록 더 강력해질 것 같네요.</p>
+<p>그 이후로 조금 더 공부하기 위해서 AWS 자격증을 공부하기로 결정했습니다. 이번 포스팅에서는 자격증을 준비하기 위해서 어떤 자격증을 공부할지, 어떻게 공부해야 하는지 찾아본 자료들을 정리했습니다. 단, 저도 이제 준비를 하는 입장이라 공식 홈페이지의 정보를 제외한 정보의 유용성을 정확히 판단하기는 힘듭니다. 나중에 합격해서 좀 더 정확한 정보 + 후기를 올리고 싶네요 👏🏻</p>
+<h2 id="자격증-선택">자격증 선택</h2>
+<p><img src="https://d1.awsstatic.com/training-and-certification/cert-roadmap/AWS_Certification_Roadmap_April_2018.d51f56ef22f8d98ad54423c132a976eab2b94abf.png" alt="https://aws.amazon.com/ko/certification/"></p>
+<p>처음 선택할 수 있는 자격증은 다음 세 가지입니다. 어소시에이트 과정을 합격한 경우 다음 프로페셔널 과정에 도전할 수 있습니다.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/ko/certification/certified-solutions-architect-associate/">AWS 공인 솔루션스 아키텍트 – 어소시에이트</a> : 전체적인 구조 및 설계</li>
+<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/ko/certification/certified-developer-associate/">AWS 공인 개발자 – 어소시에이트</a> : 프로그래밍 및 코딩</li>
+<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/ko/certification/certified-sysops-admin-associate/">AWS 공인 시스템 운영 관리자 - 어소시에이트</a> : 최적화된 배포 및 운영</li>
+</ul>
+<h3 id="업데이트">업데이트</h3>
+<p>아키텍트, 개발자 과정은 최근 '새로운 버전’의 시험이 릴리스되었습니다. 새로운 서비스와 모범 사례, 아키텍트 등이 추가되었습니다. 제한 기간 동안 선택해서 응시할 수 있는데 저는 새로운 시험을 응시할 계획입니다.</p>
+<ul>
+<li>아키텍트 : 2018/02 릴리스 -&gt; 2018/08/12 까지 선택 응시 가능</li>
+<li>개발자 : 2018/06 릴리스 -&gt; 2018/11/19 까지 선택 응시 가능</li>
+<li>시스템 운영 관리자 : 2018/09/24 릴리즈 예정</li>
+</ul>
+<p>예전 버전에는 한글 시험도 있었지만, 새로운 버전은 영어와 일본어만 지원하고 있습니다.</p>
+<h3 id="아키텍트-자격증">아키텍트 자격증</h3>
+<p>고객의 요구 사항을 기반으로 아키텍처 설계 원칙을 사용해 솔루션을 정의하고, 모범 사례를 기반으로 프로젝트 구현 지침을 제공할 수 있는지 증명하는 자격입니다.</p>
+<ul>
+<li>AWS 클라우드 아키텍처 원칙에 대한 이해</li>
+<li>주어진 기술 요구 사항에 부합하는 AWS 서비스를 선택</li>
+<li>비용 효율적이고, 내결함성, 가용성, 확장성을 갖춘 시스템을 설계</li>
+<li>안전하고 안정적인 애플리케이션을 구축하는 권장 모범 사례에 대한 이해</li>
+<li>AWS 글로벌 인프라, 네트워크 기술 이해</li>
+<li>AWS 보안 기능 및 도구에 대한 이해</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf">클라우드를 위한 아키텍처 설계: AWS 모범 사례</a> 와 <a target="_blank" rel="noopener" href="https://aws.amazon.com/ko/architecture/well-architected/">AWS Well-Architected</a> 를 참고해서 공부합니다.</p>
+<h3 id="개발자">개발자</h3>
+<p>핵심적인 AWS 서비스와 아키텍처 모범 사례를 이해하고 클라우드 기반 애플리케이션을 능숙하게 개발, 배포 및 디버깅할 수 있는지 증명하는 자격증입니다.</p>
+<ul>
+<li>핵심 AWS 서비스와 아키텍처 모범 사례에 대한 이해</li>
+<li>AWS를 사용하여 클라우드 기반 애플리케이션을 개발, 배포, 디버깅하는 능력</li>
+<li>AWS 서비스 API, AWS CLI 및 SDK를 사용할 수 있는 능력</li>
+<li>AWS 보안 모범 사례를 적용해 코딩할 수 있는 능력</li>
+<li>AWS에서 모듈을 작성, 유지 관리, 디버깅할 수 있는 능력</li>
+<li>서버리스 애플리케이션을 능숙하게 코딩할 수 있는 능력</li>
+<li>CI/CD 파이프라인을 사용하여 AWS에 애플리케이션을 배포할 수 있는 능력</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://d0.awsstatic.com/whitepapers/Security/AWS_Security_Best_Practices.pdf">AWS 보안 모범 사례 백서</a>, <a target="_blank" rel="noopener" href="https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf">AWS Well-Architected Framework</a>, <a target="_blank" rel="noopener" href="https://d1.awsstatic.com/whitepapers/serverless-architectures-with-aws-lambda.pdf">AWS Lambda를 사용한 서버리스 아키텍처 백서</a>, <a target="_blank" rel="noopener" href="https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf">AWS에서 컨테이너식 마이크로 서비스를 실행 백서</a> 등을 참고해서 공부합니다.</p>
+<h3 id="시스템-운영-관리자">시스템 운영 관리자</h3>
+<p>AWS 플랫폼에서의 구축된 시스템을 배포, 관리, 운영에 대한 기술 전문성을 증명하는 자격증입니다.</p>
+<ul>
+<li>AWS에서 가용성이 높고 확장 가능하며 내결함성을 갖춘 시스템을 배포, 관리 및 운영</li>
+<li>기존 온프레미스 애플리케이션을 AWS로 마이그레이션</li>
+<li>적절한 AWS 운영 모범 사례 사용 식별</li>
+</ul>
+<p>2018년 9월 24일에 업데이트된 버전을 릴리스할 예정이라고 합니다.</p>
+<h3 id="당신의-선택은">당신의 선택은?</h3>
+<p>먼저, 아키텍트 자격증은 AWS 자격증 중 가장 자료도 많고 인기도 많은 자격증이었습니다. 시스템 인프라를 다루는 사람에게는 각종 서비스와 용어들이 익숙해서 유리한 자격증인데, 저는 개발을 위주로 하다보니, 인프라나 네트워크 쪽은 생소해서 조금 걱정되었습니다. 시스템 운영 관리자 또한 마찬가지였습니다.</p>
+<p>개발자는 서비스를 사용해서 애플리케이션을 구축하는 쪽에 관련된 자격증이라 좀 더 익숙하고 유용할 것 같았습니다. 하지만 아키텍트 자격증보다 난이도가 좀 높아보였습니다.</p>
+<p>이 세 자격증은 서로 연관된 부분도 많고 겹치는 부분도 있어서 연속해서 취득하는 분도 많은 것 같습니다. 세 자격증을 모두 취득한다면 어떤 것을 먼저해도 상관없을 것 같습니다. 저는 일단 개발자 -&gt; 아키텍트 -&gt; 시스템 운영 관리자 순으로 도전하기로 결정했습니다.</p>
+<h2 id="시험-관련">시험 관련</h2>
+<h3 id="개요">개요</h3>
+<ul>
+<li>문제 유형
+<ul>
+<li>4지선다형</li>
+<li>다중 응답형 (보기 5개 중 2개가 정답)</li>
+</ul>
+</li>
+<li>65문항 / 130분</li>
+<li>시험 전체 난이도에 따라 100~1,000점 사이의 점수로 계산되고 720점 이상 합격</li>
+<li>과락은 없음</li>
+<li>영어, 일본어 (한글 시험 없음)</li>
+<li>연습시험 20 USD</li>
+<li>시험 150 USD</li>
+</ul>
+<h3 id="4지선다-샘플-문제">4지선다 샘플 문제</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A company is storing an access key (access key ID and secret access key) in a text file on a custom AMI. The company uses the access key to access DynamoDB tables from instances created from the AMI. The security team has mandated a more secure solution.</span><br><span class="line"></span><br><span class="line">Which solution will meet the security team’s mandate?</span><br><span class="line"></span><br><span class="line">A. Put the access key in an S3 bucket, and retrieve the access key on boot from the instance.</span><br><span class="line">B. Pass the access key to the instances through instance user data.</span><br><span class="line">C. Obtain the access key from a key server launched in a private subnet.</span><br><span class="line">D. Create an IAM role with permissions to access the table, and launch all instances with the new role</span><br></pre></td></tr></table></figure>
+<h3 id="다중-응답형-샘플-문제">다중 응답형 샘플 문제</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">A company is developing a highly available web application using stateless web servers. Which services are suitable for storing session state data? (Select TWO.)</span><br><span class="line"></span><br><span class="line">A. CloudWatch</span><br><span class="line">B. DynamoDB</span><br><span class="line">C. Elastic Load Balancing</span><br><span class="line">D. ElastiCache</span><br><span class="line">E. Storage Gateway</span><br></pre></td></tr></table></figure>
+<h2 id="공부-방식">공부 방식</h2>
+<p><a target="_blank" rel="noopener" href="https://aws.amazon.com/ko/certification/certification-prep/?nc1=h_ls">공식 홈페이지</a>에서 추천하는 준비 방식은 다음과 같습니다. 여러 후기에서 시험 안내서나 샘플 문항 등 모두 꼼꼼히 살펴봐야 한다고 합니다. 세부사항은 자격증 별 안내 페이지에서 확인할 수 있습니다.</p>
+<ol>
+<li>시험 안내서</li>
+<li>샘플 문항 검토</li>
+<li>AWS 백서 / 모범사례 / FAQ 학습 (자격증마다 다름)</li>
+<li>연습 시험 응시</li>
+</ol>
+<h2 id="후기">후기</h2>
+<ul>
+<li>국내 자격증처럼 이론상으로만 공부하고 응시할 수준은 아니다. 실제로 많이 사용해본 사람에게 유리하다. 직접 사용해봐야 한다.</li>
+<li>특히 자격증마다 명시된 백서와 모범사례를 꼼꼼히 읽어봐야 한다.</li>
+<li>AWS 내의 여러 가지 서비스를 조합하고 옵션을 활성화해서 원하는 결과를 얻을 수 있을지, 복합적인 문제가 많다.</li>
+<li>udemy 의 영어 강좌가 도움이 된다고 함.
+<ul>
+<li>20만원인데 11,000원에 타임어택 할인 중인데 상시할인으로 보임</li>
+<li>이론 및 실습 강의 <a target="_blank" rel="noopener" href="https://www.udemy.com/aws-certified-solutions-architect-associate/learn/v4/overview">https://www.udemy.com/aws-certified-solutions-architect-associate/learn/v4/overview</a></li>
+<li>예상 시험 코스 <a target="_blank" rel="noopener" href="https://www.udemy.com/aws-certified-solutions-architect-associate-practice-tests/">https://www.udemy.com/aws-certified-solutions-architect-associate-practice-tests/</a></li>
+<li>최신 버전 내용 있는지 확인 필요함.</li>
+</ul>
+</li>
+<li>공식 교재가 있으나 비추
+<ul>
+<li>비싸고 두껍고 영어고 최신 정보 업데이트가 안되어있고 특정 서비스에 국한된 내용이 많음</li>
+<li>살거면 ebook 으로 살 것</li>
+</ul>
+</li>
+<li>덤프(유료)
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.passleader.com/amazon.html">https://www.passleader.com/amazon.html</a></li>
+<li>문제를 외우지 말고 정답을 명확하게 이해할 것.</li>
+</ul>
+</li>
+<li>QwikLabs 에서 실습하기
+<ul>
+<li>실제 AWS와 동일한 환경에서 AWS의 다양한 서비스와 기능을 실습할 수 있는 환경을 온라인 상에서 제공</li>
+<li><a target="_blank" rel="noopener" href="http://edu.supertrack.co.kr/community/news.php?ptype=view&amp;idx=5170&amp;page=1&amp;code=news">http://edu.supertrack.co.kr/community/news.php?ptype=view&amp;idx=5170&amp;page=1&amp;code=news</a></li>
+</ul>
+</li>
+<li>시험 장에서 신분 확인 시 신분증 2개 필요함 (주민등록증, 운전면허증, 신용카드 등)
+<ul>
+<li>신용카드도 신분증으로 사용할 수 있다고 함. 혹시 몰라서 다 가져갈 예정.</li>
+</ul>
+</li>
+<li>외국인을 위한 시험 시간 30분 추가 요청 -&gt; 업데이트 되면서 바뀐 것 같은데 시험 응시 후 확인 필요함.
+<ul>
+<li>AWS 교육 및 자격증 포털 로그인</li>
+<li><a target="_blank" rel="noopener" href="https://www.aws.training/Certification">https://www.aws.training/Certification</a> 에서 AWS 자격증 계정으로 들어가면</li>
+<li><a target="_blank" rel="noopener" href="https://www.certmetrics.com/amazon/">https://www.certmetrics.com/amazon/</a> 로 사이트 바뀜</li>
+<li>Upcoming Exams</li>
+<li>오른쪽 네 가지 선택 중 ‘Request Exam Accommodations’ 선택</li>
+<li>Accommodations Type 드랍다운 박스에서 ‘ESL +30Minutes’ 선택</li>
+<li>Create 클릭</li>
+</ul>
+</li>
+<li>추가로 AWS 공식 인증 학원 과정, 온라인 과정, 파트너 과정 등이 있음.</li>
+</ul>
+<h2 id="참고">참고</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://soulsearcher.github.io/blog/2018/04/10/preparing_for_certification/">AWS Certified Solutions Architect - Associate 2018 후기</a></li>
+<li><a target="_blank" rel="noopener" href="https://brunch.co.kr/@topasvga/233">(정보)31.AWS 아키자격증따는법-‘18년6월 업데이트’</a></li>
+<li><a target="_blank" rel="noopener" href="http://svrlove.blogspot.com/2017/07/aws-sa.html">AWS SA 자격증 시험 합격 후기</a></li>
+<li><a target="_blank" rel="noopener" href="http://linux.systemv.pe.kr/aws-certified-solutions-architect-associate-exam-%EC%8B%9C%ED%97%98-%ED%9B%84%EA%B8%B0/">AWS CERTIFIED SOLUTIONS ARCHITECT – ASSOCIATE EXAM 시험 후기</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/serithemage/AWSCertifiedSolutionsArchitectUnofficialStudyGuide">비공식 AWS 공인 솔루션스 아키텍트 - 어소시에이트 수험 가이드</a></li>
+<li><a target="_blank" rel="noopener" href="https://gist.github.com/serithemage/df61aaf396046eff7244b6eaa8d58d4a">비공식 AWS 공인 개발자 - 어소시에이트 수험 가이드</a></li>
+</ul>
+<p>이번 포스팅에서는 AWS 자격증을 살펴봤습니다. 자격증 준비하시는 분들에게 도움이 되었으면 하고, 자격증 취득하게 되면 후기도 올리겠습니다.</p>
+<h2 id="Related-Posts">Related Posts</h2>
+<ul>
+<li>[it-infrastructure-basics]</li>
+<li>[docker-container-basics]</li>
+<li>[google-cloud-summit-seoul-2018]</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-29T15:49:48.000Z" title="6/30/2018, 12:49:48 AM">2018/06/30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.963Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Reviews/">Reviews</a></span><span class="level-item">15 minutes read (About 2208 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/30/easy-diagram-plantuml-hexo-plugin/">쉽고 빠른 UML 그리기 (PlantUML)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다.</p>
+<p>개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 <a target="_blank" rel="noopener" href="http://plantuml.com/">PlantUML</a> 이라는 툴을 찾았습니다. 이번 포스팅에서는 코드를 짜듯이 UML을 간편하게 그릴 수 있는 PlantUML 과 Hexo 적용할 수 있는 플러그인 <a target="_blank" rel="noopener" href="https://github.com/oohcoder/hexo-tag-plantuml">hex-tag-plantuml</a> 을 알아보겠습니다.</p>
+<h2 id="PlantUML">PlantUML</h2>
+<p><img src="sample.png" alt="http://plantuml.com/"></p>
+<p>이 툴을 이용하면 어떻게 보여질지 신경쓰는 대신 표현해야 할 로직에 집중할 수 있습니다. 해당 로직을 문법에 따라 표현해주면 PlantUML이 알아서 그려줍니다. 선을 하나 하나 그리고 위치를 조정하고 글꼴을 수정하는 등의 추가적인 작업이 없으니 쉽고 빠릅니다. 물론 세부적인 명령으로 디자인도 수정이 가능합니다. 물론 코드를 generate 하는 등 복잡한 설계의 기능까진 할 수 없지만, 블로그에서 UML을 그리기에는 최적의 툴입니다.</p>
+<p>지원하는 UML 다이어그램은 다음과 같습니다.</p>
+<ul>
+<li>시퀀스 다이어그램 (<em>Sequence diagram</em>)</li>
+<li>유즈케이스 다이어그램 (<em>Usecase diagram</em>)</li>
+<li>클래스 다이어그램 (<em>Class diagram</em>)</li>
+<li>액티비티 다이어그램 (<em>Activity diagram</em>)</li>
+<li>컴포넌트 다이어그램 (<em>Component diagram</em>)</li>
+<li>상태 다이어그램 (<em>State diagram</em>)</li>
+<li>객체 다이어그램 (<em>Object diagram</em>)</li>
+<li>배포 다이어그램 (<em>Deployment diagram</em>)</li>
+<li>타이밍 다이어그램 (<em>Timing diagram</em>)</li>
+</ul>
+<p>UML 이외의 다이어그램도 지원한다고 합니다.</p>
+<ul>
+<li>Salt (그래픽 인터페이스 디자인)</li>
+<li>Archimate Diagram</li>
+<li>Ditaa (PlantUML 과 비슷하게 텍스트로 다이어그램을 그리는 오픈소스)</li>
+<li>Mathematic with AsciiMath or JLaTeXMath notation (수학적 표현을 텍스트로 쉽게 하기)</li>
+<li>Gantt diagram (프로젝트 일정 관리) (<em>beta</em>)</li>
+</ul>
+<p>종류도 많고 생소한 것도 많아서 하나씩 페이지에 들어가서 살펴보니 유용한게 많네요. <a href="ttp://plantuml.com/">PlantUML</a> 메인 페이지에 있는 <a target="_blank" rel="noopener" href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000">online generator</a> 를 이용하면 설치 없이 그려볼 수 있습니다. 여기서 모두 소개하기엔 기능이 너무 많아서 가장 친숙한 클래스 다이어그램을 그려보겠습니다.</p>
+<h2 id="클래스-다이어그램">클래스 다이어그램</h2>
+<p>객체 지향 프로그래밍에서는 관련된 데이터와 그 데이터를 사용해서 기능을 제공하는 메소드를 묶어서 하나의 객체(클래스)로 만듭니다. 이 클래스들이 서로 상호작용을 하면서 프로그램이 이루어집니다. 따라서 객체지향 설계는 '어떻게 클래스를 정의하고 어떤 관계로 놓을 것이냐’가 핵심이 됩니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Observer_w_update.svg/500px-Observer_w_update.svg.png" alt="https://en.wikipedia.org/wiki/Observer_pattern"></p>
+<p>이전 포스트 중에 옵저버 패턴을 자바로 구현해 본 <a href="http://futurecreator.github.io/2018/06/04/java-observer-pattern/">포스트</a>가 있습니다. 위키피디아에서 찾은 옵저버 패턴의 클래스 다이어그램을 인용했었는데요, 이 다이어그램을 PlantUML을 이용해서 직접 그려봤습니다. 처음 사용하는데도 문법이 쉬워서 <a target="_blank" rel="noopener" href="http://plantuml.com/class-diagram">가이드</a> 보고 금방 그릴 수 있었습니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/TL112i8m4BplA_RO8j47M0Gz2mg-86ct6j6i9Dk2rFxTK4ohegSiCyFCPCJAXN1d0lcMFEwr27a7O5ryQrs-SHtCiDCcYDUbzDYohR2vLLeeovVG0vGN7G8U6dEcKg9SuTO6APB12lbrXUYagoeRhJcFYAShj_G53YcEnTRtH8Gidz8Ik1xg_UkKL9lVgZ6oU2WrMVx1Dv2-gBmzdaJnI074geI6HVYANASne32hcdsnCDC8637hFg00wPfFzSWD0z0J>
+<h2 id="차근-차근-그려보기">차근 차근 그려보기</h2>
+<p>그럼 차근차근 그려보면서 대략적인 문법을 살펴보겠습니다.</p>
+<p>먼저 class 와 interface를 그립니다. Java 와 비슷해서 익숙한 문법입니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/oymhIIrAIqnELV1FAaujAaijKgZcUjJGpLcMdvcYK5gGabYIgg5fpLNBnPMSarXSh11ScfILcbm2LUMJMLnY0zDffv0FPHM39HDJKZJWfkPhWiMAKdFpor8nXC6svUMNPAPLmgIADJIvQW40>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span> &#123;</span><br><span class="line">  List&lt;Observer&gt; observers</span><br><span class="line">  <span class="title function_">add</span><span class="params">(Observer o)</span></span><br><span class="line">  remove(Observer o)</span><br><span class="line">  <span class="keyword">void</span> <span class="title function_">notifyObservers</span><span class="params">()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>필드와 메소드에 접근제어지시자를 붙여줄 수 있습니다. 그리고 인터페이스에 있는 update 메소드는 추상 메소드로 표시하겠습니다.</p>
+<ul>
+<li>private : -</li>
+<li>protected : #</li>
+<li>package : ~</li>
+<li>public : +</li>
+</ul>
+<img  src=http://www.plantuml.com/plantuml/svg/NOr12W8n34NtEKMMBU8954yWkF04QPk1YauaoHHawDqjuhXmztd_ytwTdNMYp7X9njfOSOKThfJCbR9tR58BBiz2pY4Ue0FaEvdXTKatpZxcUpnNy-CcEA5yamqJbH9-Qec3A3-ayH_ylCpYTNfjXOK8_Gq0>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line">  + &#123;<span class="keyword">abstract</span>&#125; <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span> &#123;</span><br><span class="line">  - List&lt;Observer&gt; observers</span><br><span class="line">  + add(Observer o)</span><br><span class="line">  + remove(Observer o)</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">notifyObservers</span><span class="params">()</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Observer 인터페이스를 implements 할 ObserverA, ObserverB 클래스도 추가로 그려줍니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/ROxD2i8m3CVlVOeSMyGdK0Gz2nvyWhJDeAABD5bXZBsxPTWTfhVmo_yhzKgvmq1myqAvK8R9x612Bvenw0o5KuJX7L79keEPJNYY2Dm7_w2WLRs7Qn8zDly9-7j93S8OxPhChf9CBowqWKj9pvgwiJt4khMiiVCoxcVHHdNvg_e0>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverA</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverB</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>이제 클래스 간의 관계를 그려보겠습니다. 관계만 맞으면 화살표 방향은 양쪽 중 어느쪽으로 해도 상관없습니다. 특정 방향은 화살표 중간에 명시해줄 수 있습니다.</p>
+<ul>
+<li>Extension  <code>&lt;|--</code></li>
+<li>Aggregation  <code>o--</code></li>
+<li>Composition  <code>*--</code></li>
+</ul>
+<img  src=http://www.plantuml.com/plantuml/svg/TOzD2i8m48NtESKiKoGdi0XsBRZm1FcPQaGRoKm3KdjtGp4HnEw6RzwyzyOFZB7N5k5e26F229FOmAGDSTIMPqZ1EnWVJZFAPYjcOM-Q24wZkQBbh5PmyCHjkTz1-4oKZRHpiZg79fE8zv3m1ouXGs3VFyk2P5F32jilvLOQ5L7tNrG3svTINySLtedoe8h-V64LwkeD>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Observer &lt;|-- ObserverA</span><br><span class="line">Observer &lt;|-- ObserverB</span><br><span class="line">Subject -right-o Observer</span><br></pre></td></tr></table></figure>
+<p>Extension 은 상속으로 기존 클래스를 확장하는 개념입니다. 상위 클래스의 요소를 가지고 새로운 내용을 추가하거나 기존 내용을 새롭게 정의하여 하나의 클래스를 만든 관계입니다.</p>
+<p>Aggregation 과 Composition 은 쉽게 말해 다른 클래스를 '사용’하는 경우입니다. 다른 객체를 사용하기 위해 선언하고 참조하는 등 의존 관계가 형성되고, 두 클래스는 수정의 영향을 같이 받게 됩니다. 단, composition 은 한 클래스가 다른 클래스의 일부인 관계이고, aggregation 은 그렇지 않습니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/Iyv9B2vM24WjAixFKwZcqbNmoImkiN5EBB9JI4uiAkQgvKe6gm2AWALTyz8pyr8LKi4KN1Og2bAGcLUYa5oPavcNabhad5S2L08rN3SdDQr4Dnza4XV8D0XV2weN0000>
+<p>예를 들면, Person 과 Car 는 aggregation 관계로, Car 와 Engine 은 composition 관계로 설정했습니다. Person 객체는 Car 객체를 가지고 있어 Car 객체가 없으면 동작할 수가 없습니다. 다만 차와 사람은 생명주기를 같이하진 않습니다. 반대로 Car 객체는 Engine 객체를 가지고 있지만 composition 관계로 설정했기 때문에 차가 생길 때 엔진 객체도 생성되고 차가 소멸될 때 엔진 인스턴스도 소멸됩니다. 즉, Car 객체가 Engine 객체의 생명주기를 책임집니다.</p>
+<p>notifyObservers 메소드에 대해 간략하게 메모를 추가하겠습니다. 메모 또한 상대 위치를 지정해줄 수 있습니다. 마지막으로 타이틀을 달아줍니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/TP312i8m38RlVOeSDwJw08w1EmiUV89sIxNY5ccpWSozksNO3iNTmfS_V_x4TepEg1hXf3sw0HsCOWEZqfwTgdc2WMm3_QDHZ5c-5vEexyfxEFVwXZK7jOIZzLp4-HBeK_bWf9ecIywK1-AmfG5_uBoa8xRc6Hi-ozEoo0vpk9L4KLJz5wM5nKlAnN65Lo8UA9szN5bIQecG4q4JCxL09dv25Beqv8gTNZu0WTdk2taHg-sI3hlvUdm3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title Observer Pattern</span><br><span class="line"></span><br><span class="line">note bottom of Subject</span><br><span class="line">  &lt;b&gt;for&lt;/b&gt; observer &lt;b&gt;in&lt;/b&gt; observers</span><br><span class="line">  observer.update();</span><br><span class="line">end note</span><br></pre></td></tr></table></figure>
+<p>완성된 버전과 전체 소스는 다음과 같습니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/TL112i8m4BplA_RO8j47M0Gz2mg-86ct6j6i9Dk2rFxTK4ohegSiCyFCPCJAXN1d0lcMFEwr27a7O5ryQrs-SHtCiDCcYDUbzDYohR2vLLeeovVG0vGN7G8U6dEcKg9SuTO6APB12lbrXUYagoeRhJcFYAShj_G53YcEnTRtH8Gidz8Ik1xg_UkKL9lVgZ6oU2WrMVx1Dv2-gBmzdaJnI074geI6HVYANASne32hcdsnCDC8637hFg00wPfFzSWD0z0J>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">title Observer Pattern</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line">  + &#123;<span class="keyword">abstract</span>&#125; <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span> &#123;</span><br><span class="line">  - List&lt;Observer&gt; observers</span><br><span class="line">  + add(Observer o)</span><br><span class="line">  + remove(Observer o)</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">notifyObservers</span><span class="params">()</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverA</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ObserverB</span> &#123;</span><br><span class="line">  + <span class="keyword">void</span> <span class="title function_">update</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Observer &lt;|-- ObserverA</span><br><span class="line">Observer &lt;|-- ObserverB</span><br><span class="line">Subject -right-o Observer</span><br><span class="line"></span><br><span class="line">note bottom of Subject</span><br><span class="line">  &lt;b&gt;<span class="keyword">for</span>&lt;/b&gt; observer &lt;b&gt;in&lt;/b&gt; observers</span><br><span class="line">  observer.update();</span><br><span class="line">end note</span><br></pre></td></tr></table></figure>
+<p>이외에 클래스 다이어그램에 관한 더 자세한 문법은 <a target="_blank" rel="noopener" href="http://plantuml.com/class-diagram">링크</a> 를 참고하시면 좋겠습니다.</p>
+<h2 id="Hexo-에-적용하기">Hexo 에 적용하기</h2>
+<p>PlantUML 은 JVM 상에서 동작하고 <code>java -jar</code> 명령어를 이용해 문법에 따라 작성된 text 파일을 다이어그램으로 그린 png 로 바꿔줍니다. 하지만 PlantUML을 지원하는 Hexo 플러그인 <a target="_blank" rel="noopener" href="https://github.com/oohcoder/hexo-tag-plantuml">hex-tag-plantuml</a> 을 설치하면 따로 PlantUML 을 설치할 필요가 없습니다.</p>
+<h3 id="설치하기">설치하기</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-tag-plantuml --save</span></span><br></pre></td></tr></table></figure>
+<h3 id="사용하기">사용하기</h3>
+<p>다음과 같은 태그를 이용해 사용하실 수 있습니다.</p>
+<img  src=http://www.plantuml.com/plantuml/svg/UzJGhG04Jlb9kdQEEPd9gGfM2XcfEJdv0000>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% plantuml %&#125;</span><br><span class="line">    Bob-&gt;Alice : hello</span><br><span class="line">&#123;% endplantuml %&#125;</span><br></pre></td></tr></table></figure>
+<p>이번 포스팅에서는 각종 다이어그램을 텍스트로 간단하게 그릴 수 있는 PlantUML을 알아봤습니다. 이제 간단하게 보여줄 UML이 필요할 때 쉽게 그릴 수 있습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>[hexo-twitter-plugin]</li>
+<li>[hexo-symbols-count-reading-time-plugin]</li>
+<li>[hexo-markdown-plugins]</li>
+<li>[hexo-change-font-on-hueman-theme]</li>
+<li>[generate-an-emoji-favicon]</li>
+<li>[search-engine-optimization-hexo-plugins]</li>
+<li>[hexo-tag-plugins]</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-20T13:12:04.000Z" title="6/20/2018, 10:12:04 PM">2018/06/20</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.794Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Hexo/">Hexo</a></span><span class="level-item">10 minutes read (About 1512 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/20/hexo-twitter-plugin/">Hexo 트위터 연동 플러그인 (Deprecated)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><blockquote>
+<p>⚠️ <strong>Deprecated</strong>: 이 글에서 소개하는 <code>hexo-tag-twitter</code>와 <code>hexo-tag-tweetable-quote</code> 플러그인은 더 이상 유지보수되지 않으며, X(Twitter) API 변경으로 작동하지 않을 수 있습니다.</p>
+</blockquote>
+<p>저는 SNS를 많이 하지 않습니다. 사진을 잘 찍지 않으니 인스타도 안하고, 할 이야기가 있으면 페북 대신 <a href="http://futurecreator.github.io/">블로그</a>나 <a target="_blank" rel="noopener" href="https://medium.com/@fcreator">미디엄</a>을 이용합니다. 그나마 하는 것이 <a target="_blank" rel="noopener" href="https://twitter.com/fcreator_twt">트위터</a>입니다. 가끔은 뉴스보다 더 빠르게 소식이 올라오기도 하고, 짧고 재미있는 읽을 거리가 많아서 종종 들어갑니다.</p>
+<p>트위터는 정적인 블로그와 달리 콘텐츠의 전파 및 소비의 속도가 굉장히 빠릅니다. 그래서 블로그를 홍보할 때는 트위터가 굉장히 유용한데요, 이번 포스트에서는 단순한 포스트 공유 버튼을 넘어서 트위터와 연동해서 사용할 수 있는 Hexo 플러그인 두 가지를 살펴 보겠습니다.</p>
+<h2 id="트윗-인용하기">트윗 인용하기</h2>
+<p>블로그를 하다병면 트윗을 인용해서 사용하고 싶을 때가 있습니다. 그럴 때 딱히 방법이 없으면 귀찮게 캡쳐해서 첨부해야겠죠. 대신 <a target="_blank" rel="noopener" href="https://github.com/tea3/hexo-tag-twitter">hexo-tag-twitter</a> 플러그인을 이용해서 간단하게 첨부해 볏도록 하겠습니다.</p>
+<h3 id="설치하기">설치하기</h3>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i -S hexo-tag-twitter</span></span><br></pre></td></tr></table></figure>
+<h3 id="사용하기">사용하기</h3>
+<blockquote>
+<p>(플러그인 폐기로 인해 트윗 임베드를 표시할 수 없습니다. <a target="_blank" rel="noopener" href="https://twitter.com/hdhXD/status/1024286456473247745">원본 트윗 보기</a>)</p>
+</blockquote>
+<p>가장 사용하기 쉬운 방법입니다. 그냥 트윗 url 을 복사해서 넣으면 됩니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 첫번째 방법: 가장 간단한 방법</span></span><br><span class="line"><span class="comment"># &#123;% twitter tweet-url %&#125;</span></span><br><span class="line"><span class="comment"># 예: &#123;% twitter https://twitter.com/hdhXD/status/1024286456473247745 %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>해당 url 을 살펴 보시면 사용자 아이디와 트윗 아이디 두 가지로 이루어져 있습니다. 이걸 이용해서 좀 더 깔끔하게 작성할 수 있습니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 두번째 방법: 깔끔해서 보기 좋은 방법</span></span><br><span class="line"><span class="comment"># &#123;% twitter tweet-id user-id %&#125;</span></span><br><span class="line"><span class="comment"># 예: &#123;% twitter 1024286456473247745 hdhXD %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>만약 저 트윗이 본인의 트윗이거나, 지속적으로 인용하는 사용자라면 아예 설정에서 기본값으로 고정필 수도 있습니다.</p>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">tagTwitter:</span></span><br><span class="line">  <span class="attr">id:</span> <span class="string">hdhXD</span></span><br></pre></td></tr></table></figure>
+<p>그렇다면 다음과 같이 트윗 아이디만 가지고도 사용 가능합니다. 당연하게도 트윗 아이디를 지정필은 후에도 첫번째, 두번째 방법으로 다른 유저의 트윗도 첨부 가능합니다. 만약 로컬 서버에서 테스트할 때 적용이 안된다면 서버를 올렸다 낵려 보시면 됩니다.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 세번째 방법: user-id 기본값을 설정필은 방법</span></span><br><span class="line"><span class="comment"># &#123;% twitter tweet-id %&#125;</span></span><br><span class="line"><span class="comment"># 예: &#123;% twitter 1024286456473247745 %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>하지만 그냥 url 그대로 붙여넣는 첫번째 방법이 제일 쉽고 간단한 방법이네요.</p>
+<h2 id="인용구를-쉽게-트윗하기">인용구를 쉽게 트윗하기</h2>
+<p>Hexo의 대부분 테마에는 트위터에 쉽게 공유할 수 있는 share 버튼이 달려 있습니다. 그런데 포스트 url이 아닌 포스트 내에 있는 명언이나 인용구를 트위터에 공유하고 싶다면 어떨까요? Medium이라면 바로 원하는 부분에 블록을 씌우고 트윗 버튼을 눌렀겠지만, 아쉽게도 Hexo에는 그런 기능이 없네요. 그렇다면 손수 복사해서 트윗을 써야 할 겁니다.</p>
+<p>명언이나 인용구를 트윗하기 쉽게 만들어주는 <a target="_blank" rel="noopener" href="https://github.com/iamchathu/hexo-tag-tweetable-quote">hexo-tag-tweetable-quote</a> 플러그인이 있습니다. 물론 독자가 원하는 부분을 자유자재로 트윗할 수 있는 것은 아니지만, 보통 마크다운에서 <code>&gt;</code> 로 처리하는 인용구를 트윗하기 쉽게 만들어 줄 수 있습니다.</p>
+<h3 id="설치-및-설정하기">설치 및 설정하기</h3>
+<p>다른 여타 플러그인과 마찬가지로 <code>npm</code> 을 이용해서 설치하고 <code>_config.yml</code> 파일에 설정 내용을 넣어 줍니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm i -S hexo-tag-tweetable-quote</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">tweetableQuote:</span></span><br><span class="line">  <span class="attr">quote_font_color :</span> <span class="comment">#258fb8 # 글자 색</span></span><br><span class="line">  <span class="attr">quote_font_size  :</span> <span class="number">1.</span><span class="string">2em</span> <span class="comment"># 글자 크기</span></span><br><span class="line">  <span class="attr">link_font_color  :</span> <span class="comment">#6e7b8d # 링크 색</span></span><br><span class="line">  <span class="attr">link_font_size   :</span> <span class="number">0.</span><span class="string">9em</span> <span class="comment"># 링크 크기</span></span><br><span class="line">  <span class="attr">via_twitter_account :</span> <span class="string">fcreator_twt</span> <span class="comment"># 트윗 계정</span></span><br><span class="line">  <span class="attr">related_twitter_accounts :</span> <span class="string">hdhXD,twitter</span> <span class="comment"># 연관된 트윗 계정으로 트윗 다음에 나옴</span></span><br></pre></td></tr></table></figure>
+<h3 id="사용법">사용법</h3>
+<blockquote>
+<p>“잃어버린 시간은 결코 다시 찾을 수 없다.” — 벤자민 프랭클린<br>
+(플러그인 폐기로 트윗 버튼을 표시할 수 없습니다)</p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># &#123;% tweetableQuote &#x27;명언/인용구&#x27; &#x27;작가/출처&#x27; [&#x27;해시태그&#x27;] %&#125;</span></span><br><span class="line"><span class="comment"># 예: &#123;% tweetableQuote &#x27;잃어버린 시간은 결코 다시 찾을 수 없다.&#x27; &#x27;벤자민 프랭클린&#x27; &#x27;quote,book&#x27; %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>사용법도 간단합니다. 여기서 해시태그는 옵션으로 콤마(,)를 이용해서 여러 개 넣어 줄 수 있습니다. 간단하게 인용구를 트윗할 수 있도록 만들었습니다. 저는 기본값에서 설정을 조금 바꿔서 글자 크기를 줄여 봤습니다.</p>
+<p>아쉬운 점이 있다면 글자 색과 링크 색은 바꿔도 적용되지가 않네요. 이 부분은 직접 css 를 건드려야 할 것 같습니다. 다양한 커스터마이징 기능이 없는 것도 조금 아쉽습니다.</p>
+<p>이번 포스팅에서는 트위터와 연동해서 사용할 수 있는 플러그인을 알아 봤습니다. <a target="_blank" rel="noopener" href="https://github.com/tea3/hexo-tag-twitter">hexo-tag-twitter</a>는 블로거가 트윗을 쉽게 인용할 수 있는 플러그인이었고, <a target="_blank" rel="noopener" href="https://github.com/iamchathu/hexo-tag-tweetable-quote">hexo-tag-tweetable-quote</a>는 독자들이 명언이나 인용구를 트윗하기 쉽게 만들어 주는 플러그인이었습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>[hexo-symbols-count-reading-time-plugin]</li>
+<li>[hexo-markdown-plugins]</li>
+<li>[hexo-change-font-on-hueman-theme]</li>
+<li>[generate-an-emoji-favicon]</li>
+<li>[search-engine-optimization-hexo-plugins]</li>
+<li>[hexo-tag-plugins]</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-18T13:47:22.000Z" title="6/18/2018, 10:47:22 PM">2018/06/18</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:02.016Z" title="2/23/2026, 7:37:02 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Hexo/">Hexo</a></span><span class="level-item">8 minutes read (About 1231 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/18/hexo-symbols-count-reading-time-plugin/">Hexo 글자 수와 리딩 타임 추가하기</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>블로그 서비스인 <a target="_blank" rel="noopener" href="https://medium.com/">Medium</a> 은 글을 읽을 때 소요될 시간을 미리 표시해줍니다. 독자들이 이 글을 읽는데 얼마나 소요될지를 미리 파악함으로써, 글의 질을 예측해볼 수 있고 이 글을 계속 읽을지 말지를 결정하는데 도움이 됩니다.</p>
+<p><img src="medium.png" alt="https://medium.com/s/trustissues/a-new-tech-manifesto-21d251058af3"></p>
+<p>소소하지만 탐나는 기능이었습니다. Hexo 블로그에는 이런 기능이 없나 살펴봤더니 역시나 있었습니다. 이번 포스팅에서는 글자 수와 읽을 때 소요되는 시간을 보여주는 <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-symbols-count-time">hexo-symbols-count-time</a> 플러그인을 적용해보겠습니다.</p>
+<h2 id="설치-및-설정하기">설치 및 설정하기</h2>
+<p>설치는 다른 여타 플러그인과 마찬가지로 간단합니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-symbols-count-time --save</span></span><br></pre></td></tr></table></figure>
+<p>블로그 루트 폴더에 있는 <code>_config.yml</code> 에 설정 내용을 추가합니다.</p>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="사용하기">사용하기</h2>
+<p>세부적인 설정에 앞서서 잘 나오는지부터 테스트해보겠습니다. 해당 플러그인은 다음 세 가지 방식의 렌더러를 지원합니다.</p>
+<ul>
+<li>EJS: &lt;%- template %&gt;</li>
+<li>SWIG / Nunjucks: </li>
+<li>Jade: span= template</li>
+</ul>
+<p>제가 사용하는 Hueman 테마는 ejs 를 사용합니다. 일단 적당한 곳에 추가를 해보겠습니다. <code>article.ejs</code> 를 열어 <code>footer</code> 위에 다음과 같이 추가해보겠습니다.</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Symbols Count : &lt;%- symbolsCount(post.content) %&gt;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">Symbols Time : &lt;%- symbolsTime(post.content) %&gt;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>결과는 다음과 같이 잘 나오네요. 다른 테마를 사용하시는 분들도 테마 폴더에 있는 레이아웃 중에 원하시는 곳에 추가하시면 됩니다.</p>
+<p><img src="test1.png" alt=""></p>
+<h2 id="계산-방식">계산 방식</h2>
+<p>조금 더 세부적으로 살펴보겠습니다. 이 플러그인은 현재 포스트 (혹은 사이트 전체)의 글자수를 세고, 이 글자수를 바탕으로 단어가 몇 개인지 파악합니다. 이 때 설정하는 값이 <strong>AWL (평균단어길이)</strong> 입니다. 단어가 몇 개 정도인지 파악한 후에 1분 당 읽을 수 있는 글자수, 즉 읽는 속도를 바탕으로 읽는데 예상 소요 시간을 계산합니다. 이때 이 읽는 속도가 <strong>WPM (분당 읽는 단어)</strong> 입니다.</p>
+<ul>
+<li>AWL (<em>Average Word Length</em>) : 평균 단어 길이. 기본값은 4.</li>
+<li>WPM (<em>Words Per Minute</em>) : 분당 읽을 수 있는 단어. 즉 읽는 속도. 기본값은 275.</li>
+</ul>
+<p>따라서, 만약 글자수가 4000개라면 -&gt; 1000단어라고 보고 -&gt; 분당 275단어니까 읽는 시간은 3.6분 정도로 계산하는 식입니다.</p>
+<h2 id="설정-변경하기">설정 변경하기</h2>
+<p>일단 추가한 위치를 수정해야겠습니다. 사용자가 본문을 읽기 전에 이 글의 양이 어느정도 되는지 전달하기 위해서는 제목 바로 아래에 추가하는 것이 더 좋겠네요. 다음으로 글자 수 자체로는 이 포스트의 양을 판단하기에 썩 도움이 되지 않을 것 같습니다. 그보다는 읽을 때 어느 정도 시간이 걸릴 지 소요되는 시간을 알려주는 것이 더 가치있는 정보일 것입니다. 그래서 저는 해당 포스트의 시간 정보만 보여주도록 설정하겠습니다.</p>
+<p>그렇다면 평균 단어 길이(<em>AWL</em>)와 분당 글자 수(<em>WPM</em>)는 어떨까요? 한글 기준으로 띄어쓰기를 생각해본다면 평균적으로 3~5글자 정도인 것 같으니 디폴트 값인 4글자로 충분할 것 같습니다. 하지만 IT 블로그 특성 상 영어와 코드가 섞여 있기 때문에 글 읽는 속도인 WPM 은 좀 줄여서 210 정도로 설정하겠습니다.</p>
+<p>해당 내용을 반영하여 <code>article.ejs</code> 파일에 다음과 같이 추가합니다. 저는 이모지를 이용해서 시계를 넣었습니다.</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article-subtitle&quot;</span>&gt;</span></span><br><span class="line">  &lt;%- partial(&#x27;post/date&#x27;, &#123; class_name: &#x27;article-date&#x27;, date_format: null &#125;) %&gt;</span><br><span class="line">  &lt;%- partial(&#x27;post/tag&#x27;) %&gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;reading-time&quot;</span>&gt;</span>⏱ &lt;%- symbolsTime(post.content, 4, 210, &#x27;분&#x27;) %&gt;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>그리고 왼쪽으로 여백을 주기 위해서 마진을 추가하겠습니다. <code>style.styl</code> 파일에 클래스를 추가합니다.</p>
+<figure class="highlight css"><figcaption><span>style.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.reading-time</span></span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">15px</span></span><br></pre></td></tr></table></figure>
+<p>그럼 포스트 제목 아래에 다음과 같이 잘 나오는 걸 확인할 수 있습니다.</p>
+<p><img src="test2.png" alt="http://futurecreator.github.io/2018/06/16/record-terminal-asciinema/"></p>
+<p>템플릿에 적용한 거라 나중에 템플릿에서 이모지를 변경하면 이전 포스트와 새로운 포스트 모두 적용되니 수정하기도 좋습니다.</p>
+<p>이번 포스팅에서는 소소하지만 사용자에게 유용할만한 플러그인을 살펴봤습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>[hexo-markdown-plugins]</li>
+<li>[hexo-change-font-on-hueman-theme]</li>
+<li>[generate-an-emoji-favicon]</li>
+<li>[search-engine-optimization-hexo-plugins]</li>
+<li>[hexo-tag-plugins]</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-15T18:15:36.000Z" title="6/16/2018, 3:15:36 AM">2018/06/16</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.872Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Reviews/">Reviews</a></span><span class="level-item">8 minutes read (About 1180 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/16/record-terminal-asciinema/">터미널을 보기 쉽게 녹화하기</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>개발 블로그를 하다보면 터미널 작업을 업로드해야 할 때가 종종 있습니다. 커맨드를 실행하면 많은 작업이 스쳐 지나가지만 보통 블로그에 올리는 것은 실행할 커맨드나 실행된 결과 화면 뿐입니다. 그래서 블로그를 참고해서 작업을 진행할 때는 이게 제대로 동작하는 것인지, 발생한 오류가 그냥 넘어가도 될만한 것인지 확인하기 어려운 경우가 많습니다.</p>
+<p>대신 처음부터 끝까지 녹화된 화면을 올리면 어떨까요?</p>
+<h2 id="asciinema">asciinema</h2>
+<script type="text/javascript" src="https://asciinema.org/a/113463.js" id="asciicast-113463" async></script>
+<p><a href="">asciinema</a>는 터미널 화면을 녹화하고 공유하는 툴입니다. 단순한 화면 녹화라면 이렇게 소개해드리지 않았을 겁니다. 녹화된 영상과 달리 실행 중인 커맨드를 <strong>복사</strong>할 수 있습니다. 위 영상을 재생해보시면 커맨드 복사가 가능한 것을 확인하실 수 있을 겁니다.</p>
+<p>asciinema 는 설치와 사용이 정말 쉽습니다. 사용하는 입장에서도 쉽게 포스트의 퀄리티를 높일 수 있고, 블로그를 방문한 분들도 단순 커맨드보다 도움이 되어 win-win 할 수 있는 툴입니다.</p>
+<h2 id="어떻게-가능할까">어떻게 가능할까?</h2>
+<ul>
+<li>asciinema 를 설치하고 녹화를 시작하면 화면의 아웃풋을 모두 캡쳐해서 저장합니다.</li>
+<li>녹화된 결과를 <a target="_blank" rel="noopener" href="http://asciinema.org">asciinema.org</a> 에서 제공하는 API 를 이용해서 바로 업로드합니다.</li>
+<li>업로드된 결과를 javascript 플레이어를 이용해서 재생합니다.</li>
+</ul>
+<p>asciinema 는 유닉스의 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pseudoterminal">가상 터미널을</a> 이용한 script 커맨드에서 영감을 받아 만들어졌습니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://asciinema.org/docs/how-it-works
+">[1]</span></a></sup> 키보드를 이용한 사용자의 입력과 화면에 출력되는 내용, 시간 등을 캡쳐해 <code>.ascii</code> 포맷으로  메모리에 저장합니다.<sup id="fnref:2"><a href="#fn:2" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="https://github.com/asciinema/asciinema/blob/master/doc/asciicast-v1.md">[2]</span></a></sup> 이는 ANSI escape code 에 따라서 커서의 위치, 색깔 등 여러 정보가 저장됩니다.</p>
+<p>녹화된 파일은 사용자의 선택에 따라 <a target="_blank" rel="noopener" href="http://asciinema.org">asciinema.org</a> 에 업로드되고, 업로드된 영상은 <a target="_blank" rel="noopener" href="https://vt100.net/emu/dec_ansi_parser">ANSI-compatible video terminals parser</a> 를 이용해서 파싱 후 재생됩니다. 이는 iTerm, xterm, Gnome Terminal 등 여러 터미널에서도 잘 동작합니다. 이러한 작업으로 인해 단순 영상 재생이 아니라 텍스트 복사가 가능해집니다.</p>
+<h2 id="설치하기">설치하기</h2>
+<p>asciinema 는 리눅스와 macOS 에서 동작합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># macOS (Homebrew)</span></span><br><span class="line">$ brew install asciinema</span><br><span class="line"></span><br><span class="line"><span class="comment"># Ubuntu</span></span><br><span class="line">$ <span class="built_in">sudo</span> apt-add-repository ppa:zanchey/asciinema</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get update</span><br><span class="line">$ <span class="built_in">sudo</span> apt-get install asciinema</span><br><span class="line"></span><br><span class="line"><span class="comment"># Fedora 21 버전 이하</span></span><br><span class="line">$ <span class="built_in">sudo</span> yum install asciinema</span><br><span class="line"><span class="comment"># Fedora 22 버전 이상</span></span><br><span class="line">$ <span class="built_in">sudo</span> dnf install asciinema</span><br><span class="line"></span><br><span class="line"><span class="comment"># Pip (Python 3)</span></span><br><span class="line">$ <span class="built_in">sudo</span> pip3 install asciinema</span><br></pre></td></tr></table></figure>
+<p>이외에 가능한 버전과 설치 방법은 <a target="_blank" rel="noopener" href="https://asciinema.org/docs/installation">링크</a>를 참고하세요.</p>
+<h2 id="녹화하기">녹화하기</h2>
+<p>사용법은 정말 간단합니다. 다음 영상으로 확인해보시죠.</p>
+<script type="text/javascript" src="https://asciinema.org/a/187355.js" id="asciicast-187355" async></script>
+<h5 id="1-asciinema-rec-녹화를-시작합니다">1. <code>asciinema rec</code> 녹화를 시작합니다.</h5>
+<h5 id="2-녹화할-작업을-합니다">2. 녹화할 작업을 합니다.</h5>
+<h5 id="3-exit-를-입력하거나-swig￼7-swig￼8-로-녹화를-중지합니다">3. <code>exit</code> 를 입력하거나 <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">d</kbd> 로 녹화를 중지합니다.</h5>
+<h5 id="4-완료된-작업은-swig￼9-를-눌러-바로-업로드하고-업로드된-url-을-확인합니다">4. 완료된 작업은 <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Enter↵</kbd> 를 눌러 바로 업로드하고 업로드된 url 을 확인합니다.</h5>
+<h5 id="5-혹은-swig￼10-swig￼11-를-눌러-업로드하지-않고-로컬에-저장합니다">5. 혹은 <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Ctrl</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">c</kbd> 를 눌러 업로드하지 않고 로컬에 저장합니다.</h5>
+<p>녹화 후 업로드된 파일을 관리하기 위해서 <a target="_blank" rel="noopener" href="http://asciinema.org">asciinema.org</a> 에서 가입한 계정 정보와 터미널을 연동시킬 수 있습니다. 로컬에서 파일로 관리하는 것보다 편하고, 녹화한 영상을 활용하기에도 편해서 이 방법을 추천드립니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ asciinema auth</span><br></pre></td></tr></table></figure>
+<h2 id="Hexo-에-영상-추가하기">Hexo 에 영상 추가하기</h2>
+<p>자, 이제 녹화한 영상을 Hexo 블로그에 첨부해보도록 하겠습니다. <a target="_blank" rel="noopener" href="https://github.com/narongdejsrn/hexo-tag-asciinema">hexo-tag-asciinema<br>
+</a> 플러그인을 사용하면 아주 쉽게 추가가 가능합니다.</p>
+<p>설치부터 해보겠습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-tag-asciinema</span><br></pre></td></tr></table></figure>
+<p>설치된 플러그인은 다음과 같이 사용할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asciinema video_id %&#125;</span><br></pre></td></tr></table></figure>
+<p>위 영상 마지막에 보면 업로드 후에는 업로드된 url 을 확인할 수 있는데요, 이 뒤에 붙어있는 것이 video_id 입니다.</p>
+<p><a target="_blank" rel="noopener" href="https://asciinema.org/a/187354">https://asciinema.org/a/187354</a></p>
+<p>그럼 다음처럼 쉽게 영상을 첨부할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asciinema 187354 %&#125;</span><br></pre></td></tr></table></figure>
+<p>이번 포스트에서는 쉽게 터미널을 녹화하고 공유할 수 있는 툴인 asciinema 를 살펴봤습니다. 저도 앞으로 적극 사용해봐야겠네요.</p>
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://asciinema.org/docs/how-it-works<a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">https://github.com/asciinema/asciinema/blob/master/doc/asciicast-v1.md<a href="#fnref:2" rev="footnote"> ↩</a></span></li></ol></div></div></div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/4/">Previous</a></div><div class="pagination-next"><a href="/page/6/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/4/">4</a></li><li><a class="pagination-link is-current" href="/page/5/">5</a></li><li><a class="pagination-link" href="/page/6/">6</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/10/">10</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">94</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">233</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Cloud/"><span class="level-start"><span class="level-item">Cloud</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">51</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Apple/"><span class="level-start"><span class="level-item">Apple</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Column/"><span class="level-start"><span class="level-item">Column</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/MSA/"><span class="level-start"><span class="level-item">MSA</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Spark/"><span class="level-start"><span class="level-item">Spark</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Vert-x/"><span class="level-start"><span class="level-item">Vert.x</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Reviews/"><span class="level-start"><span class="level-item">Reviews</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-03-13T15:38:26.000Z">2019/03/14</time></p><p class="title"><a href="/2019/03/14/serverless-architecture/">서버리스 Serverless 아키텍처 파헤치기</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-03-04T16:46:15.000Z">2019/03/05</time></p><p class="title"><a href="/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/">오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request</a></p><p class="categories"><a href="/categories/Programming/">Programming</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-02-26T15:10:14.000Z">2019/02/27</time></p><p class="title"><a href="/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/">Git과 CronJob을 활용한 쿠버네티스 오브젝트 YAML 자동 백업</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-02-24T16:43:07.000Z">2019/02/25</time></p><p class="title"><a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-01-19T08:40:16.000Z">2019/01/19</time></p><p class="title"><a href="/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/">스프링 부트 컨테이너와 CI/CD 환경 구성하기</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">March 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/02/"><span class="level-start"><span class="level-item">February 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">January 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">December 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/11/"><span class="level-start"><span class="level-item">November 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/10/"><span class="level-start"><span class="level-item">October 2018</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">September 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/07/"><span class="level-start"><span class="level-item">July 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/06/"><span class="level-start"><span class="level-item">June 2018</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">January 2017</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/07/"><span class="level-start"><span class="level-item">July 2016</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/06/"><span class="level-start"><span class="level-item">June 2016</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/DS-Store/"><span class="tag">.DS_Store</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1970/"><span class="tag">1970</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/2018/"><span class="tag">2018</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Big-O/"><span class="tag">Big-O</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/adsense/"><span class="tag">adsense</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/advanced/"><span class="tag">advanced</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/analytics/"><span class="tag">analytics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/apache/"><span class="tag">apache</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api/"><span class="tag">api</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api-gateway/"><span class="tag">api_gateway</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/architect/"><span class="tag">architect</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/architecture/"><span class="tag">architecture</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/asciinema/"><span class="tag">asciinema</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/atom/"><span class="tag">atom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/aws/"><span class="tag">aws</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backup/"><span class="tag">backup</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bar/"><span class="tag">bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basic/"><span class="tag">basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basics/"><span class="tag">basics</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/best/"><span class="tag">best</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blocking/"><span class="tag">blocking</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bmc/"><span class="tag">bmc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/brunch/"><span class="tag">brunch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/build/"><span class="tag">build</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/buymeacoffee/"><span class="tag">buymeacoffee</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos/"><span class="tag">centos</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos7/"><span class="tag">centos7</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/certified/"><span class="tag">certified</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ci-cd/"><span class="tag">ci-cd</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/clean/"><span class="tag">clean</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/clone/"><span class="tag">clone</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/closure/"><span class="tag">closure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cloud/"><span class="tag">cloud</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cluster/"><span class="tag">cluster</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/code/"><span class="tag">code</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/collect/"><span class="tag">collect</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/community/"><span class="tag">community</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/concat/"><span class="tag">concat</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/consolas/"><span class="tag">consolas</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/container/"><span class="tag">container</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cqrs/"><span class="tag">cqrs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/data-management/"><span class="tag">data_management</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/datatype/"><span class="tag">datatype</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deep-dive/"><span class="tag">deep_dive</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/delimiter/"><span class="tag">delimiter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deploy/"><span class="tag">deploy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deployment/"><span class="tag">deployment</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/design/"><span class="tag">design</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/developer/"><span class="tag">developer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/editor/"><span class="tag">editor</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/emoji/"><span class="tag">emoji</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/error/"><span class="tag">error</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/event-driven/"><span class="tag">event_driven</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/event-sourcing/"><span class="tag">event_sourcing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/evernote/"><span class="tag">evernote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/exam/"><span class="tag">exam</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/exception/"><span class="tag">exception</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/eye/"><span class="tag">eye</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/faas/"><span class="tag">faas</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/favicon/"><span class="tag">favicon</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/filter/"><span class="tag">filter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fold/"><span class="tag">fold</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/font/"><span class="tag">font</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/foo/"><span class="tag">foo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fork/"><span class="tag">fork</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/framework/"><span class="tag">framework</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/functional-interface/"><span class="tag">functional_interface</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/functional-programming/"><span class="tag">functional_programming</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gce/"><span class="tag">gce</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gcp/"><span class="tag">gcp</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/generics/"><span class="tag">generics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gitlab/"><span class="tag">gitlab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gke/"><span class="tag">gke</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google/"><span class="tag">google</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-cloud-platform/"><span class="tag">google_cloud_platform</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-cloud-summit/"><span class="tag">google_cloud_summit</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googlebot/"><span class="tag">googlebot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hadoop/"><span class="tag">hadoop</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/health/"><span class="tag">health</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/highest-salaries/"><span class="tag">highest_salaries</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hosting/"><span class="tag">hosting</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/https/"><span class="tag">https</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hueman/"><span class="tag">hueman</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/infrastructure/"><span class="tag">infrastructure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/install/"><span class="tag">install</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/installation/"><span class="tag">installation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/inter-process-communication/"><span class="tag">inter_process_communication</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/introduction/"><span class="tag">introduction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios/"><span class="tag">ios</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ipc/"><span class="tag">ipc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/issue/"><span class="tag">issue</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iterm2/"><span class="tag">iterm2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java-11/"><span class="tag">java_11</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/javascript/"><span class="tag">javascript</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jdk/"><span class="tag">jdk</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kube-backup/"><span class="tag">kube_backup</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kubernetes/"><span class="tag">kubernetes</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lambda/"><span class="tag">lambda</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/latest/"><span class="tag">latest</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lazy-invocation/"><span class="tag">lazy_invocation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lts/"><span class="tag">lts</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mac/"><span class="tag">mac</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macos/"><span class="tag">macos</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/major/"><span class="tag">major</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/map/"><span class="tag">map</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mariadb/"><span class="tag">mariadb</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/medium/"><span class="tag">medium</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/metatag/"><span class="tag">metatag</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method-references/"><span class="tag">method_references</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/microservices/"><span class="tag">microservices</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/middleware/"><span class="tag">middleware</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/minor/"><span class="tag">minor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/monolith/"><span class="tag">monolith</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/monospaced/"><span class="tag">monospaced</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/msa/"><span class="tag">msa</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiple/"><span class="tag">multiple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql/"><span class="tag">mysql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/n/"><span class="tag">n</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namecard/"><span class="tag">namecard</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/netflix/"><span class="tag">netflix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nodejs/"><span class="tag">nodejs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nonblocking/"><span class="tag">nonblocking</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/npki/"><span class="tag">npki</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/npm/"><span class="tag">npm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/null-safe/"><span class="tag">null_safe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/object/"><span class="tag">object</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/observer/"><span class="tag">observer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ohmyzsh/"><span class="tag">ohmyzsh</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/open-source/"><span class="tag">open_source</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/opengraph/"><span class="tag">opengraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optional/"><span class="tag">optional</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/osx/"><span class="tag">osx</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pagerank/"><span class="tag">pagerank</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pages/"><span class="tag">pages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/parallel/"><span class="tag">parallel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/patch/"><span class="tag">patch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pattern/"><span class="tag">pattern</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plugin/"><span class="tag">plugin</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plugins/"><span class="tag">plugins</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plusoperator/"><span class="tag">plusoperator</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pomodoro/"><span class="tag">pomodoro</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/postach/"><span class="tag">postach</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/practies/"><span class="tag">practies</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/program/"><span class="tag">program</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming/"><span class="tag">programming</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming-font/"><span class="tag">programming_font</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming-languages/"><span class="tag">programming_languages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pull-request/"><span class="tag">pull_request</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/re-invent/"><span class="tag">re-invent</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/readingtime/"><span class="tag">readingtime</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/record/"><span class="tag">record</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/reduce/"><span class="tag">reduce</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/refactoring/"><span class="tag">refactoring</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/release/"><span class="tag">release</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sample/"><span class="tag">sample</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/scala/"><span class="tag">scala</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/search/"><span class="tag">search</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/security/"><span class="tag">security</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/semver/"><span class="tag">semver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/seo/"><span class="tag">seo</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/seoul/"><span class="tag">seoul</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/server/"><span class="tag">server</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/serverless/"><span class="tag">serverless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/service-discovery/"><span class="tag">service_discovery</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/serviceful-serverless/"><span class="tag">serviceful_serverless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/settings/"><span class="tag">settings</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/simplified/"><span class="tag">simplified</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/snapshot/"><span class="tag">snapshot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/social/"><span class="tag">social</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spark/"><span class="tag">spark</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring/"><span class="tag">spring</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring-boot/"><span class="tag">spring-boot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring-boot/"><span class="tag">spring_boot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/springboot/"><span class="tag">springboot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ssl/"><span class="tag">ssl</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stable/"><span class="tag">stable</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/start/"><span class="tag">start</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/strategy/"><span class="tag">strategy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/streams/"><span class="tag">streams</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/string/"><span class="tag">string</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringbuffer/"><span class="tag">stringbuffer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringbuilder/"><span class="tag">stringbuilder</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringjoiner/"><span class="tag">stringjoiner</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/support/"><span class="tag">support</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift/"><span class="tag">swift</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tag/"><span class="tag">tag</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/terminal/"><span class="tag">terminal</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/theme/"><span class="tag">theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/thread/"><span class="tag">thread</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/time/"><span class="tag">time</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tls/"><span class="tag">tls</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/twitter/"><span class="tag">twitter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/type-inference/"><span class="tag">type_inference</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uml/"><span class="tag">uml</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unix/"><span class="tag">unix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/update/"><span class="tag">update</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/upgrade/"><span class="tag">upgrade</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/usage/"><span class="tag">usage</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable/"><span class="tag">variable</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable-scope/"><span class="tag">variable_scope</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/velocity/"><span class="tag">velocity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/version/"><span class="tag">version</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/versioning/"><span class="tag">versioning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/verticle/"><span class="tag">verticle</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vertx/"><span class="tag">vertx</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/virtual-machine/"><span class="tag">virtual_machine</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/virtualization/"><span class="tag">virtualization</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vm/"><span class="tag">vm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webfont/"><span class="tag">webfont</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webmaster/"><span class="tag">webmaster</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/why/"><span class="tag">why</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/windows/"><span class="tag">windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/wordcount/"><span class="tag">wordcount</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/worker/"><span class="tag">worker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/writing/"><span class="tag">writing</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yaml/"><span class="tag">yaml</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/zsh/"><span class="tag">zsh</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Eric Han</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
         },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-</div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
-    
-    <em class="page-title-link" data-url="home">Home</em>
-    </h1>
-</div>
-                        <div class="main-body-content">
-                            
-    
-        
-            
-                
-                        
-                            <section class="archives-wrap">
-                                <div class="archive-year-wrap">
-                                    <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>
-                                        2018
-                                    </a>
-                                </div>
-                                <div class="archives">
-                                    
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Cloud/">Cloud</a>
-            </p>
-            <p class="date"><time datetime="2018-07-12T15:51:43.000Z" itemprop="datePublished">2018/07/13</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/13/aws-security-best-practies/">AWS 보안 모범 사례 백서 (번역/요약)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            이 포스트는 AWS 자격증 스터디에서 AWS Security Best Practies 백서(2016/08)를 한글로 번역 및 요약한 자료입니다. 해당 포스트는 계속해서 업데이트 됩니다.
-마지막 업데이트 : 2018/07/12
-
-AWS를 사용하면 ISO 27001표준 ISMS(Information Security Managment System)를 쉽게 구축할
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2018-07-12T15:16:54.000Z" itemprop="datePublished">2018/07/13</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/13/hexo-https-github-pages/">Hexo HTTPS 적용하기(Github Pages)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            지난 포스트에서는 HTTPS 를 왜 사용하는지, 어떤 원리로 동작하는지에 대해 알아봤습니다. 이번 포스팅에서는 Hexo 블로그에 HTTPS 를 적용해보겠습니다.
-Hexo 블로그는 generate 한 후에 나오는 public 폴더만 있으면 어디든 호스팅할 수 있습니다. 그래서 여러가지 서비스와 연동해 사용할 수 있는데, 가장 많이 사용하는 것이 GitHub 
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-07-12T14:59:12.000Z" itemprop="datePublished">2018/07/12</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/12/https-and-ssl-tls/">HTTPS 와 SSL(TLS)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Hexo 블로그에 HTTPS 적용하는 포스트를 작성하려다가 보니 먼저 HTTPS를 정리하는게 좋을 것 같습니다. 이번 포스트에서는 HTTPS의 원리에 대해 알아보겠습니다.
-HTTPS
-HTTP(Hypertext Transfer Protocol) 은 HTML 을 주고받을 때 서로 지키기로 정한 규칙입니다. 그리고 HTTPS(HTTP Secure) 는 HTTP 
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-07-07T13:19:02.000Z" itemprop="datePublished">2018/07/07</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/07/hexo-change-font-face-no-cdn/">일반 폰트를 웹에 적용하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            이전 포스트에서 Hexo 내 폰트를 CDN 을 이용해 변경했습니다. 구글 폰트에서 제공하는 폰트 url 만 있으면 블로그 &lt;header&gt; 에 바로 포함시켜 쉽게 변경할 수 있습니다. 하지만 내가 사용하고자 하는 폰트가 없다면 어떻게 할까요?
-이번 포스팅에서는 웹에서 사용하는 폰트에 대해 자세히 알아보고 무료 폰트인 '미생체’를 이용해서 CDN 없
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-07-07T09:53:06.000Z" itemprop="datePublished">2018/07/07</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/07/buy-me-a-coffee/">콘텐츠 제작자 후원의 새로운 방법 (BMC)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            종종 외국의 프리웨어 프로그램을 사용하다보면, '마음에 들면 커피 한 잔 사줘’라는 메시지를 종종 보곤 합니다. 아무래도 개발자들이 커피를 달고 사는 직업이다 보니, 후원 메시지를 커피 한 잔 사달라고 표현한 것입니다. 오픈소스 SW 라이선스 종류 중에는 '맘대로 쓰고 맥주 한잔 사줘라’라는 뜻의 Beerware 도 있죠.
-커피 한 잔 사주세요
-이런 문화를
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Cloud/">Cloud</a>
-            </p>
-            <p class="date"><time datetime="2018-07-04T14:25:12.000Z" itemprop="datePublished">2018/07/04</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/07/04/aws-certified/">AWS 자격증 준비하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            개발자들 사이에서 서버리스 아키텍쳐에 대해 이야기가 많이 나오면서 서버리스 컴퓨팅을 손쉽게 제공하는 AWS에도 관심이 많습니다. 저도 서버리스가 궁금해서 AWS에 가입을 하고 공부를 해봤습니다. 처음에는 새로운 개념도 많고 서비스도 많아서 복잡해보였는데 알면 알수록 재밌습니다. 사용자가 다양한 옵션을 간편하게 설정할 수 있고, 입문자가 쉽게 적응할 수 있도
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-06-29T15:49:48.000Z" itemprop="datePublished">2018/06/30</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/30/easy-diagram-plantuml-hexo-plugin/">쉽고 빠른 UML 그리기 (PlantUML)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            개발 블로그를 하다보면 클래스 다이어그램같은 UML 을 올려야할 때가 있습니다. 그러면 GUI 툴을 이용해서 그려야 하는데, 자주 그리는 사람이 아닌 이상 복사해서 수정할 포맷도 없고 일일이 그리는 것은 상당히 귀찮습니다.
-개발 시에도 사용 가능하고 Hexo 쉽게 적용할 수 있는 툴은 없을까 찾다가 PlantUML 이라는 툴을 찾았습니다. 이번 포스팅에서는
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2018-06-20T13:12:04.000Z" itemprop="datePublished">2018/06/20</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/20/hexo-twitter-plugin/">Hexo 트위터 연동 플러그인</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            저는 SNS를 많이 하지 않습니다. 사진을 잘 찍지 않으니 인스타도 안하고, 할 이야기가 있으면 페북 대신 블로그나 미디엄을 이용합니다. 그나마 하는 것이 트위터입니다. 가끔은 뉴스보다 더 빠르게 소식이 올라오기도 하고, 짧고 재미있는 읽을 거리가 많아서 종종 들어갑니다.
-트위터는 정적인 블로그와 달리 콘텐츠의 전파 및 소비의 속도가 굉장히 빠릅니다. 그래
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-            </p>
-            <p class="date"><time datetime="2018-06-18T13:47:22.000Z" itemprop="datePublished">2018/06/18</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/18/hexo-symbols-count-reading-time-plugin/">Hexo 글자 수와 리딩 타임 추가하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            블로그 서비스인 Medium 은 글을 읽을 때 소요될 시간을 미리 표시해줍니다. 독자들이 이 글을 읽는데 얼마나 소요될지를 미리 파악함으로써, 글의 질을 예측해볼 수 있고 이 글을 계속 읽을지 말지를 결정하는데 도움이 됩니다.
-
-소소하지만 탐나는 기능이었습니다. Hexo 블로그에는 이런 기능이 없나 살펴봤더니 역시나 있었습니다. 이번 포스팅에서는 글자 수와
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Reviews/">Reviews</a>
-            </p>
-            <p class="date"><time datetime="2018-06-15T18:15:36.000Z" itemprop="datePublished">2018/06/16</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/16/record-terminal-asciinema/">터미널을 보기 쉽게 녹화하기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            개발 블로그를 하다보면 터미널 작업을 업로드해야 할 때가 종종 있습니다. 커맨드를 실행하면 많은 작업이 스쳐 지나가지만 보통 블로그에 올리는 것은 실행할 커맨드나 실행된 결과 화면 뿐입니다. 그래서 블로그를 참고해서 작업을 진행할 때는 이게 제대로 동작하는 것인지, 발생한 오류가 그냥 넘어가도 될만한 것인지 확인하기 어려운 경우가 많습니다.
-대신 처음부터 
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-                                                        
-                                </div>
-                            </section>
-                            
-                                
-                                    <nav id="page-nav">
-                                        <span class="pages">
-                                            Page 5 
-                                                of 10
-                                        </span>
-                                        <a class="extend prev" rel="prev" href="/page/4/">&lt;</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/">&gt;</a>
-                                    </nav>
-                                    
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>follow:</p>
-        <ul class="social-links">
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
-                        <i class="icon fa fa-rss"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-    
-    <div class="widgets-container">
-        
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2026 Eric Han</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-        
-    
-    <script>
-    var disqus_shortname = 'futurecreator';
-    
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-
-
-
-
-
-<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-
-
-<script src="/vendor/scrollLoading/main.js"></script>
-
-
-
-
-<!-- Custom Scripts -->
-
-<script src="/js/main.js"></script>
-
-
-    </div>
-</body>
-</html>
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

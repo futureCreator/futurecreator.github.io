@@ -1,587 +1,502 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>Category: Programming - Eric Han&#039;s IT Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Eric Han&#039;s IT Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eric Han&#039;s IT Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Eric Han&amp;#39;s IT Blog"><meta property="og:type" content="blog"><meta property="og:title" content="Eric Han&#039;s IT Blog"><meta property="og:url" content="https://futurecreator.github.io/"><meta property="og:site_name" content="Eric Han&#039;s IT Blog"><meta property="og:description" content="Eric Han&amp;#39;s IT Blog"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://futurecreator.github.io/img/og_image.png"><meta property="article:author" content="Eric Han"><meta property="article:tag" content="it, dev, review"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://futurecreator.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://futurecreator.github.io"},"headline":"Eric Han's IT Blog","image":["https://futurecreator.github.io/img/og_image.png"],"author":{"@type":"Person","name":"Eric Han"},"publisher":{"@type":"Organization","name":"Eric Han's IT Blog","logo":{"@type":"ImageObject","url":"https://futurecreator.github.io/img/logo.svg"}},"description":"Eric Han&#39;s IT Blog"}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
-  
-    <title>
-      
-        Category: Programming |
-          
-            Eric Han&#39;s IT Blog
-    </title>
-    <link rel="canonical" href="https://futurecreator.github.io/categories/programming/page/4/">
-      
-          
-            <link rel="icon" href="/images/favicions/favicon6.png">
-            
-              
-<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
 
-                
-<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
 
-                  
-<link rel="stylesheet" href="/css/style.css">
-
-                    
-<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
-
-                      
-
-
-<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
-
-
-
-
-<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
-
-
-
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-79199094-2', 'auto');
-ga('send', 'pageview');
-
-</script>
-
-
-
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
-                        <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
-<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
-</head>
-<body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
-                    </h1>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                        <li class="main-nav-list-item">
-                                            <a class="main-nav-list-link" href="/">
-                                                Home
-                                            </a>
-                                        </li>
-                                        
-                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
-                                    
-                                        <li class="main-nav-list-item">
-                                            <a class="main-nav-list-link" href="/about">
-                                                About
-                                            </a>
-                                        </li>
-                                        
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
-
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories/">Categories</a></li><li class="is-active"><a href="#" aria-current="page">Programming</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-14T12:04:59.000Z" title="6/14/2018, 9:04:59 PM">2018/06/14</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.966Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">14 minutes read (About 2086 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/14/variety-of-markdown-and-Implementations/">마크다운의 종류와 선택</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>저는 여러 정보나 생각을 글로 정리하길 좋아합니다. 마크다운(<em>Markdown</em>)은 이러한 목적에 정확하게 부합하는 툴입니다. 애초에 네이버나 티스토리가 아닌 Hexo 로 블로그를 시작한 것도 마크다운을 지원하기 때문이었습니다. 오늘은 마크다운의 종류에 대해서 알아보겠습니다.</p>
+<h2 id="Markdown">Markdown</h2>
+<p>마크다운은 2014년 <a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/">존 그루버(John Gruber)</a>와 아론 스워츠(<em>Aaron Swartz</em>)가 함께 만든 마크업 언어(<em>Markup language</em>)입니다. 마크업 언어는 문서나 데이터가 화면에 어떻게 보이는지, 혹은 데이터의 구조가 어떻게 되는지를 부가적으로 설명해주는 언어입니다. HTML(<em>Hyper-Text Markup Language</em>)을 생각하면 쉽습니다. HTML이 해당 문서의 내용 외에 내용의 구조 및 디자인에 대한 정보를 가지고 있는 걸 생각하면 마크업 언어의 개념이 와닿으실 것 같습니다.</p>
+<p><img src="atom_md.png" alt="http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/"></p>
+<p>마크업 언어라는 말이 어렵더라도 상관없습니다. 마크다운은 정말 쉽습니다. 처음 만들어진 목적 자체가 '플레인 텍스트를 읽기 쉽고 쓰기 쉽게 하자’입니다. 간단한 문법(<em>Syntax</em>)을 지키면 일반 텍스트를 보기 좋게 다양한 포맷으로 변환해줍니다. 개발할 때는 README 파일을 만들 때 주로 사용하고, 각종 블로그를 포함해 글을 쓰는 곳이면 어디서나 많이 사용되고 있습니다. 저는 복잡한 내용을 체계적으로 정리할 때 마크다운을 사용하고 정리한 내용을 바로 블로그에 올리기도 합니다.</p>
+<h2 id="Implementations">Implementations</h2>
+<p>존 그루버가 마크다운 텍스트를 HTML 로 변환하는 펄 스크립트(<code>Markdown.pl</code>)를 작성한 이후 많은 사람들이 다양한 언어로 마크다운 파서(<em>Parser</em>)를 구현했습니다. 그 과정에서 각 파서들은 기본적인 기능에 테이블, 각주, 정의 리스트 등 추가적인 기능을 덧붙이기도 했고, 공식 명세에 잘 나타나있지 않은 <strong>모호한 부분</strong>에 대해서는 각자 스타일로 구현하면서 파편화되었습니다.</p>
+<p>여기서 기존 명세의 '모호한 부분’이란 뭘까요? 사실 마크다운은 굉장히 심플하기 때문에 별 문제 없어보이지만 막상 그것을 구현하고 할 때에는 자잘한 이슈에 부딪힙니다.</p>
+<p>몇 가지 예를 들어 보겠습니다.</p>
+<ul>
+<li>숫자 리스트 마커 1. 뒤에 2. 가 바로 오지 않는 경우, 다시 1. 로 시작해야할까, 아니면 2. 로 유지해야할까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. one</span><br><span class="line"></span><br><span class="line">2. two</span><br><span class="line">3. three</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.  one</span><br><span class="line">    - a</span><br><span class="line"></span><br><span class="line">    - b</span><br><span class="line">2.  two</span><br></pre></td></tr></table></figure>
+<ul>
+<li>숫자 리스트 마커의 정렬은 왼쪽으로? 오른쪽으로?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 8. item 1</span><br><span class="line"> 9. item 2</span><br><span class="line">10. item 3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>숫자 리스트와 bullets 리스트가 붙어 있을 경우 하나의 리스트로 봐야할까, 두 개의 리스트로 봐야할까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. fee</span><br><span class="line">2. fie</span><br><span class="line">-  foe</span><br><span class="line">-  fum</span><br></pre></td></tr></table></figure>
+<ul>
+<li>서브 리스트의 인텐드는 어디까지 들어갈 수 있을까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- one</span><br><span class="line">	- two</span><br><span class="line">		- three</span><br><span class="line">			- ...</span><br></pre></td></tr></table></figure>
+<ul>
+<li>marker 와 strong 구문 중 어떤 것을 우선시할까?</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*foo *bar* baz*</span><br></pre></td></tr></table></figure>
+<p>이 외에도 <a target="_blank" rel="noopener" href="https://github.github.com/gfm/#why-is-a-spec-needed-">다양한 이슈</a>에 대해서 오리지널 명세에 나타나 있지 않거나 구현체마다 다르게 구현한 경우가 많습니다. 이에 따라 마크다운 표준화 작업이 진행되었습니다.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7763">RFC 7763</a> The text/markdown Media Type</li>
+<li><a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7764">RFC 7764</a> Guidance on Markdown: Design Philosophies, Stability Strategies, and Select Registrations</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/markdown/markdown.github.com/wiki/Implementations">마크다운 구현 파서 리스트</a>를 보시면 마크다운 파서는 참 많고, 각자 기능도 조금씩 다르다는 걸 알 수 있습니다. 이외에도 개인적으로 입맛에 맞게 직접 만들거나 기존의 파서 라이브러리를 수정해서 사용하시는 분들도 있구요. 그래서 많은 마크다운 파서 중에서 RFC 에 나타나있는 몇 가지 마크다운에 대해서 간단히 알아보겠습니다.</p>
+<ul>
+<li>CommonMark</li>
+<li>GitHub Flavored Markdown</li>
+<li>MultiMarkdown</li>
+<li>Pandoc</li>
+</ul>
+<h3 id="CommonMark">CommonMark</h3>
+<p><a target="_blank" rel="noopener" href="http://commonmark.org/">CommonMark</a>는 제각각으로 구현된 마크다운의 표준 문법을 정의하는 프로젝트입니다. CommonMark 에서 정의한 <a target="_blank" rel="noopener" href="https://spec.commonmark.org/">스펙</a>에 따라 이를 기반으로 많은 마크다운 프로젝트가 생겨났습니다.</p>
+<blockquote>
+<p>We propose a standard, unambiguous syntax specification for Markdown, along with a suite of comprehensive tests to validate Markdown implementations against this specification. We believe this is necessary, even essential, for the future of Markdown.</p>
+</blockquote>
+<p>CommonMark 를 구현한 파서 리스트는 <a target="_blank" rel="noopener" href="https://github.com/commonmark/CommonMark/wiki/List-of-CommonMark-Implementations">링크</a>를 참고하세요.</p>
+<h3 id="GFM-GitHub-Flavored-Markdown">GFM (GitHub Flavored Markdown)</h3>
+<p><a target="_blank" rel="noopener" href="https://guides.github.com/features/mastering-markdown/">GFM</a> 은 GitHub 에서 기존 마크다운에 여러 기능을 추가하여 커스터마이징한 버전입니다. 깃헙 내에서 <a target="_blank" rel="noopener" href="http://README.md">README.md</a> 파일 같은 <code>.md</code>, <code>.markdown</code> 확장자를 가진 파일과 comments 를 달 때도 사용 가능해서 많은 개발자들이 사용하는 버전입니다.</p>
+<p>GFM 은 Fenced Codeblocks, Syntax Highlighting, Tables, URL AutoLinking, To-dos, Strikethrough 등의 <a target="_blank" rel="noopener" href="https://github.github.com/gfm/">추가 기능</a>을 지원합니다.</p>
+<h3 id="MultiMarkdown">MultiMarkdown</h3>
+<p><a target="_blank" rel="noopener" href="http://fletcherpenney.net/multimarkdown/">MultiMarkdown</a> 마크다운을 확장한 첫 프로젝트로, 기존 마크다운에 <a target="_blank" rel="noopener" href="https://rawgit.com/fletcher/human-markdown-reference/master/index.html">여러 기능</a>을 추가한 버전입니다.</p>
+<h3 id="Pandoc">Pandoc</h3>
+<p><a target="_blank" rel="noopener" href="https://pandoc.org/index.html">Pandoc</a> 은 마크다운 텍스트를 다양한 포맷의 파일로 변환하는 기능을 강화한 마크다운입니다.</p>
+<h2 id="어떻게-선택해야할까">어떻게 선택해야할까?</h2>
+<p>대부분 본인이 사용하는 서비스에서 지원하는 마크다운을 사용하게 되겠지만, 본인에게 선택권이 있는 경우에는 마크다운 구현체가 워낙 많다보니 고민이 되실 수 있습니다. 무엇을 기준으로 선택할 수 있을까요?</p>
+<p>마크다운을 파싱한 결과를 한번에 볼 수 있는 사이트가 있습니다. <a target="_blank" rel="noopener" href="https://babelmark.github.io/">babelmark3</a>라는 사이트인데요, 내가 필요로 하는 기능을 입력해보면 어떤 파서에서 그것을 구현하고 있는지 확인할 수도 있고, 같은 코드라도 어떤 식으로 표현하고 있는지 한번에 확인할 수 있는 굉장히 유용한 사이트입니다.</p>
+<p>그럼 예를 한번 들어보겠습니다. 제 Hexo 블로그는 글을 작성하는 시점 기준으로 GFM 을 지원하는 렌더러를 사용하고 있습니다. 하지만 저는 출처를 남기거나 간단하게 보충 설명을 달 수 있는 ‘각주’ 기능이 필요한데 스펙을 보니 지원을 안하는 것 같습니다. 한번 확인해보겠습니다.</p>
+<p><img src="footnote-test.png" alt=""></p>
+<p>결과를 확인해보시면 총 34개의 파서 중에 21개의 파서가 해당 문법을 지원하지 않고 있네요. 이 중에는 각주 기능을 지원하지 않거나, 지원하더라도 해당 문법이 아니라 다른 문법으로 지원하고 있을겁니다. 현재 사용하는 GFM 도 목록 중에 있습니다.</p>
+<p><img src="footnote-not-working.png" alt=""></p>
+<p>다른 파서는 어떨까요? multimarkdown 을 보시면 각주 기능을 제대로 지원하는 것을 보실 수 있습니다.</p>
+<p><img src="footnote-multimarkdown.png" alt="multimarkdown"></p>
+<p>재미있는 것은, 같은 기능을 지원하더라도 구현하는 방법이 같지는 않다는 것입니다. 다음은 pandoc 에서 변환한 결과인데 multimarkdown 과 조금씩 다른 걸 확인할 수 있습니다.</p>
+<p><img src="footnote-pandoc.png" alt="pandoc"></p>
+<p>이번 포스팅에서는 마크다운이 무엇인지부터 마크다운의 종류, 그리고 구현체의 선택까지 알아봤습니다. 참고하셔서 마크다운 재밌게 사용하시면 좋겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li><a href="http://futurecreator.github.io/2018/06/14/hexo-markdown-plugins/">Hexo 마크다운 플러그인 변경하기</a></li>
+<li><a href="http://futurecreator.github.io/2016/06/14/atom-as-markdown-editor/">Atom 을 마크다운(Markdown) 에디터로 사용하기</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-11T13:02:09.000Z" title="6/11/2018, 10:02:09 PM">2018/06/11</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.840Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">11 minutes read (About 1589 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/11/about-clean-code/">클린코드가 시작되는 곳</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다.</p>
+<h2 id="기술적-부채">기술적 부채</h2>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Technical_debt">Technical Debt</a>라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 '빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다. 이 빚은 당장은 편하지만 이자가 점점 붙어서 나중에 감당하기 어려운 수준까지 늘어날 수 있습니다. 바로 소프트웨어의 품질에 관련된 빚입니다.</p>
+<p>이 빚은 개발 프로세스의 압박, 테스트 코드와 문서의 부재, 오너쉽과 협업의 부재 등 개발 과정에서 전반적으로 나타날 수 있는 문제들입니다. 현실에서도 적당한 부채는 도움이 되듯이, 프로젝트 상 자원의 한계 때문에 어느 정도의 빚은 가지고 가게 됩니다. 하지만 과도한 빚으로 인해 SW의 품질이 낮아지고 이는 개발 당시에는 큰 문제가 없어보이지만 향후 운영 과정에서 눈덩이처럼 불어나 닥쳐오는 빚이 됩니다.</p>
+<p>이 모든 것이 코딩에서만 비롯되는 문제는 아니지만, 클린코드와 리팩토링은 코드에 관련된 내용입니다. 사실 클린코드는 이미 수년전부터 너무나 많이 회자되었고, 대부분 많이 들어보셨을 내용입니다. 하지만 그럼에도 불구하고 지금까지 클린코드와 코드 품질에 대해 이야기가 나오는 것은 SW 개발의 특성 상 코드의 품질을 정의하거나 측정하고 관리하는 것이 쉽지 않기 때문일겁니다.</p>
+<h2 id="클린하지-않을-이유">클린하지 않을 이유</h2>
+<p>클린 코드는 다음과 같이 간단하게 정의해볼 수 있습니다.</p>
+<ul>
+<li>사용자의 요구사항을 잘 반영한 코드</li>
+<li>쉽게 변경이 가능해서 유지보수가 쉬운 코드</li>
+<li>읽기 좋아서 담당자가 바뀌더라도 쉽게 볼 수 있는 코드</li>
+</ul>
+<p>클린코드에 대해서 이야기할 때, 현업에서 들리는 가장 많은 이야기는 이겁니다.</p>
+<p><em>“누가 좋은 줄 모르나요? 할 여력이 없어서 그렇지…”</em></p>
+<p>맞습니다. 개발이든, 운영이든 시간과 자원의 압박에서 자유로울 수 없고, 그리고 같은 코드를 짜도 시간을 더 들여서 클린하게 짠다고 해서 위에서는 관심도 없고 주변에서 알아주는 사람도 없습니다. SI 같은 경우는 ‘내가 운영할 것도 아닌데, 뭐’ 라는 마인드로 대충 짜는 경우도 있었습니다. 그래서 코드 리뷰를 점차 도입하고, 장인정신(SW Craftsmanship)을 강조하며, 코드에 대한 오너십을 강화하기 위해 코드실명제를 도입한다는 이야기도 들립니다.</p>
+<p>코드 품질에 관련한 툴을 사용하기도 합니다. PMD 나 Fortify 등 코드 품질 관련 도구를 자동화된 빌드 과정에 넣어 개발자들에게 이메일이 수시로 날아가기도 합니다. 이 모든 것들이 개발자에겐 스트레스로 다가옵니다. ‘바빠 죽겠는데 뭘 또 고치란 말이야?’.</p>
+<h2 id="개발자의-마인드-그리고-스킬">개발자의 마인드, 그리고 스킬</h2>
+<p><img src="https://images.unsplash.com/photo-1511306162219-1c5a469ab86c?ixlib=rb-0.3.5&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;s=d37b68a5a2ad7387cb4f4d85936bc771&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80" alt="https://unsplash.com/photos/2MuZ23gkFKo"></p>
+<p>그렇다면 코드의 품질을 높이기 위해서 가장 중요한 것은 무엇일까요? 저는 실제 코드를 짜는 개발자들의 의식 변화와 스킬 훈련이 가장 중요하다고 생각합니다.</p>
+<p>물론 개발자들이 코드를 클린하게 짤 수 없는 이유는 충분합니다. 하지만 개발자 스스로의 변화가 우선시되어야 하는 이유는, 여건이 안되더라도 개발자가 능력이 있다면 주어진 여건 하에서 코드 품질을 올릴 것이고 이는 결국 수정을 해야 하는 개발자 자신에게 득이 되는 일입니다. 반대로 개발자가 코드 품질에 대한 이해와 스킬이 부족하다면 여건이 갖춰지더라도 코드 품질은 오를리가 만무합니다. 따라서 개발자들이 변화의 중심에 서야 합니다.</p>
+<p>위에서부터 클린코딩을 강요하면 웃지 못할 해프팅이 벌어지기도 합니다. 어떤 개발팀에서는 테스트 커버리지를 100% 채우기 위해 의미없는 VO 클래스를 테스트하기도 하고, assert 문을 넣지 않고 통과시켜 버리기도 한다고 합니다. 정말 그 자체로 의미 없는 일입니다.</p>
+<p>클린 코드를 중요하게 생각하는 개발자가 늘어나면 위에서부터의 변화가 아니라 아래서부터의 변화가 생겨나고 문화를 만들어질 것입니다. 쉽지는 않겠지만 이것이 옳은 변화라고 생각합니다. 이를 뒷받침하기 위해 위에서도 강요가 아니라 코드 품질을 높이는 활동을 중요하게 인식하고 장려해야겠죠.</p>
+<p>교육 후 개발자들의 마인드는 처음과 조금 바뀌었습니다. ‘꼭 해야할까?’ 에서 ‘해보니 좋네’, ‘해볼만 하다’ 라는 마인드로 바뀐 개발자들이 많았습니다. 정말 긍정적인 변화입니다. 하지만 실제 현업에 적용하려면 계속해서 연습하는 숙달의 과정이 필요합니다. 이를 뒷받침할 수 있는 여러 교육 과정과 지원, 그리고 개발자 스스로의 노력이 필요하겠죠. 저 또한 마찬가지입니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-09T15:55:05.000Z" title="6/10/2018, 12:55:05 AM">2018/06/10</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.788Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">14 minutes read (About 2047 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/10/medium-writing-paradigm-shift/">Medium, 글쓰기의 새로운 패러다임</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>이 블로그는 IT 와 개발에 관련된 주제를 블로그입니다. 기술 외적인 주제나 내 자신의 이야기를 쓰고 싶어졌고, 새로운 블로그를 만들기 위해서 서비스를 둘러봤습니다. '<a target="_blank" rel="noopener" href="https://brunch.co.kr/">브런치</a>’와 '<a target="_blank" rel="noopener" href="https://medium.com/">미디엄(Medium)</a>'이 제일 눈에 들어오더군요. 두 서비스 모두 글쓰기 자체에 초점을 맞춘 서비스였습니다. 그리고 브런치는 미디엄을 벤치마킹한 서비스라고 하더군요.</p>
+<p>미디엄과 브런치를 비교하는 글들이 꽤 있었습니다. 읽어보고나서 저는 브런치에 새로운 블로그를 만들겠다고 결정했습니다. 미디엄은 우리나라 사용자가 별로 없어서 한글 컨텐츠가 부족했고, 한글 자체가 제대로 지원이 안되는 등 우리나라 사용자에게는 불편한 점이 많았기 때문입니다.</p>
+<p>하지만 브런치를 사용하겠다 마음을 먹었음에도 미디엄에 자꾸 눈이 갔습니다. 미디엄의 고유한 기능에 대한 궁금증을 속 시원하게 해결하지 못했기 때문이죠. Response 나 Note 같은 기능들은 브런치에 존재하지 않았습니다. <strong>이 기능들은 무엇이고 왜 만들어졌을까?</strong> 하는 의문이 생겼습니다.</p>
+<p>그래서 일단 브런치는 접어두고 마음 가는 대로 미디엄에 대해서 좀 더 알아보기로 했습니다.</p>
+<h2 id="Medium">Medium</h2>
+<p><img src="medium.png" alt="https://medium.com/about"></p>
+<p>미디엄은 2012년 런칭한 서비스로, 구글의 블로그 서비스인 ‘블로거’와 마이크로 블로그 ‘트위터’를 만든 <a target="_blank" rel="noopener" href="https://twitter.com/ev">에반 윌리엄스가</a> 만든 서비스로 유명합니다. 미디엄은 이 두 서비스의 장점을 합친 서비스라고 볼 수 있는데 기존의 블로그와는 다른 새로운 성격을 찾아볼 수 있습니다.</p>
+<p>일반적인 블로그는 필자가 쓴 글을 저장하는데 초점이 맞춰져 있습니다. 특정 주제에 대한 필자의 생각을 잘 담아서 축적할 수 있는 저장소의 역할을 합니다. 자체로는 전파할 수 있는 기능이 없고 댓글이라는 소극적인 형태의 소통을 할 수 있습니다.</p>
+<p>이번엔 트위터를 생각해보죠. 트위터의 트윗은 140자의 짧은 메시지이고 리트윗과 멘션이라는 기능을 이용해 소비와 전파가 빨리 되고 소통이 굉장히 활발합니다. 블로그가 정적이라면 트위터는 동적인 성격을 가지고 있습니다.</p>
+<p>미디엄은 중간적인 형태로 트위터보다 내용이 긴 글을 Response 와 Note 라는 기능을 통해 전파와 소통을 할 수 있는 서비스입니다.</p>
+<h2 id="미디엄의-고유-기능">미디엄의 고유 기능</h2>
+<p>기존의 블로그는 이런 식으로 흘러갑니다.</p>
+<ul>
+<li>필자가 글을 쓴다.</li>
+<li>저장된 글이 독자들에게 노출된다.</li>
+<li>독자들은 좋아요(추천)을 누르고 댓글을 단다.</li>
+</ul>
+<p>이번엔 미디엄의 흐름을 살펴보겠습니다.</p>
+<ul>
+<li>글의 초안을 작성한다.
+<ul>
+<li>다른 필자들에게 공유해 검토와 피드백을 받을 수 있다.</li>
+<li>글을 퍼블리쉬하면 피드백을 준 필자들은 Thanks to 로 기록된다.</li>
+</ul>
+</li>
+<li>저장된 글이 독자들에게 노출된다.</li>
+<li>독자들이 필자에게 피드백을 한다.
+<ul>
+<li>글의 특정 부분에 형광펜 표시를 하는 highlight.</li>
+<li>글의 특정 부분에 댓글을 남기는 note.</li>
+<li>필자의 글에 대한 나의 생각을 적는 response.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Draft-초안">Draft, 초안</h3>
+<p><img src="share.png" alt=""></p>
+<p>필자가 글을 쓰게 되면 초안으로 저장이 되는데, 이는 다른 필자들에게 링크 형태로 공유해 피드백을 받을 수 있습니다. 받은 피드백을 바탕으로 글을 수정하고 정식으로 게시(<em>publish</em>) 하게 되면 Thanks to … 에 피드백을 준 필자들이 함께 표시됩니다. 필자들간의 소통을 할 수 있는 기능입니다.</p>
+<p><img src="https://help.medium.com/hc/en-us/article_attachments/204793887/WILD_FLAVOR___invironment___Medium.png" alt=""></p>
+<h3 id="Note-댓글">Note, 댓글</h3>
+<p><img src="format.png" alt=""></p>
+<p>미디엄은 기존 피드백 방법인 댓글보다 좀 더 세밀한 피드백이 가능합니다. 글의 특정 부분에 - 단어, 문단 등 마음대로 - 형광펜(<em>highlight</em>)을 칠하거나 댓글을 남길 수 있습니다. 기본적으로 private 으로 설정된 상태로 필자와 댓글을 남긴 독자만 볼 수 있습니다.</p>
+<p><img src="note.png" alt=""></p>
+<h3 id="Response-트랙백">Response, 트랙백</h3>
+<p><img src="response.png" alt=""></p>
+<p>독자가 해당 글에 대한 생각을 표현하기 위해서는 response 라는 기능을 이용합니다. 사람의 생각이라는 것은 다른 사람과의 소통을 통해 의미를 갖습니다. 단순한 댓글을 넘어서 다른 사람이 쓴 글에 반박 혹은 동조를 하거나, 인용을 통해서 새로운 자신의 글을 작성할 수 있습니다. 티스토리의 트랙백과 비슷한 기능인데, 댓글과 마찬가지로 글의 특정 부분에도 가능하므로 좀 더 진화된 기능이라 하겠습니다.</p>
+<p>이를 통해서 여러 사람들의 생각이 활발하게 공유됩니다. 저는 단편적인 악플이 가득한 뉴스 기사를 보면서 댓글이라는 기능 자체에 대해 회의감이 들었는데, note 와 response 는 그보다 훨씬 발전된 개념이 아닐 수 없습니다.</p>
+<h2 id="Publications-잡지">Publications, 잡지</h2>
+<p>Publications 는 간행물이라는 뜻으로 꽤 재미있는 기능입니다. 말 그대로 일종의 잡지처럼 동작합니다. 특정 주제에 대해 잡지를 만든 사람은 편집자가 됩니다. 편집자는 이 잡지에 필자들을 추가할 수 있고, 필자들은 자신이 쓴 글을 편집자에게 제출할 수 있습니다. 그러면 편집자는 이러한 글을 검토해서 피드백해주거나 잡지에 추가할 수 있습니다.</p>
+<p>꼭 잡지의 형식과 닮았습니다. 하지만 그 뒤에는 광고가 없습니다. 광고에 의한 글 쓰기가 아닙니다!</p>
+<h2 id="이외의-기능들">이외의 기능들</h2>
+<ul>
+<li>글을 쓰는 깔끔하고 편리한 환경</li>
+<li>필자 화면에서 보이는 그대로 독자들에게 보임</li>
+<li><a target="_blank" rel="noopener" href="https://unsplash.com/">Unsplash</a>의 사진을 쉽게 첨부 가능</li>
+<li>특정 주제와 필자를 구독</li>
+<li>트위터에 공유가 쉽다</li>
+<li>스마트폰에서 소비하기 쉽도록 디자인된 기능 (Series)</li>
+<li>and more…</li>
+</ul>
+<p>이렇게 미디엄에 대해서 알아보면서 저는 마음이 바뀌었습니다. 브런치 대신 미디엄을 사용하기로.</p>
+<p>브런치도 새로운 서비스이긴 했지만 단순히 글 쓰기 환경을 개선하고 작가를 검토해 글의 품질을 올렸을 뿐 컨텐츠를 생산하고 소비하는 방식 자체가 크게 새롭진 않았습니다. 미디엄을 벤치마킹했다고는 하지만 핵심적인 기능이 빠져있는 느낌입니다.</p>
+<p>물론 포스트 초반에 말씀드린 것처럼, 우리나라 사용자가 부족한 탓에 이러한 장점을 충분히 활용할 수 없는 것이 사실입니다. 이러한 우려는 이미 오래전부터 있었습니다. 그래도 기존과는 다른 새로운 기능들을 체험해보고 싶어서 미디엄을 사용하기로 결정했습니다. 이러고 얼마 못 가 브런치로 갈아탈지도 모르는 일이지만 말입니다. 앞으로 미디엄 한글 사용자가 더 많이 늘었으면 합니다.</p>
+<p>이번 포스팅에서는 미디엄의 소개와 기능에 대해 살펴봤습니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-07T13:24:42.000Z" title="6/7/2018, 10:24:42 PM">2018/06/07</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:02.002Z" title="2/23/2026, 7:37:02 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">14 minutes read (About 2045 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/07/computer-system-time/">컴퓨터 시간의 1970년은 무슨 의미일까?</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Java 에서 시간을 다루는 클래스인 <code>java.util.Date</code> 클래스를 쓰다가 문득 의문이 들었습니다. 다음은 현재 시간을 가져오는 <code>getTime()</code> 메소드인데요, 왜 1970년 1월 1일 기준일까요? 그리고 왜 milliseconds 기준일까요?</p>
+<blockquote>
+<p><code>public long getTime()</code><br>
+Returns the number of milliseconds since <strong>January 1, 1970, 00:00:00 GMT</strong> represented by this Date object.</p>
+</blockquote>
+<p>이번 포스팅에서는 시간과 컴퓨터 시스템의 관계를 알아보겠습니다.</p>
+<h2 id="태양시-solar-time">태양시 (solar time)</h2>
+<p>인간이 시간이라는 것을 구분하기 시작할 때 가장 쉬운 방법이 무엇이었을까요? 아마도 태양이었을 겁니다. 매일 동쪽에서 떠올라 머리 위를 지나 서쪽으로 지는 태양. 이 태양이 우리 머리 위에 올 때를 정오라고 합니다. 이를 기준으로 다시 정오가 되는 것을 하루 (1일)라고 볼 수 있겠죠.</p>
+<p>태양시는 이렇게 태양을 기준으로 하는 시각계입니다. 북극점과 남극점을 최단 거리로 연결하는 선, 즉 태양이 관측자의 머리 바로 위를 지날 때는 12간지 중 자시🐭(00시)와 오시🐴(12시)에 온다고 해서 자오선(경선, <em>meridian</em>)이라고 하는데, 이를 기준으로 하루를 삼습니다.</p>
+<h2 id="세계시-Universal-Time-UT">세계시 (Universal Time, UT)</h2>
+<p>이렇게 지구와 태양을 바탕으로 세계 표준으로 정한 시각이 세계시입니다. 세계시의 종류에는 다음과 같습니다.</p>
+<ul>
+<li>UT0: 별이나 천체의 일주운동을 이용해 태양의 위치를 결정</li>
+<li>UT1: UT0 에 극점이 움직이는 극운동을 보정하여 계산</li>
+</ul>
+<h2 id="더-정밀한-원자-시계">더 정밀한 원자 시계</h2>
+<p>하지만 태양시는 일정하지가 않습니다. 태양의 빛이 지구까지 오는 시간은 8분 12초 ~ 8분 28초라고 합니다. 즉, 우리가 눈으로 보고 생각한 태양시와 실제 태양의 위치에 따른 태양시는 약 1.35초 ~ 1.39초가 날 수밖에 없죠. 게다가 지구가 23.5도 기울어져 있고 공전이 타원궤도이기 때문에 계절에 따라 조금 다르다고 합니다. 태양의 운동이 매일 같지 않았다는 걸 바빌로니아 사람들은 이미 알고 있었다고 하네요. 게다가 지구의 자전 또한 점점 느려집니다.</p>
+<p>앞서 매우 큰 지구와 태양으로 시간을 측정했다면 매우 작은 원자로도 시간을 측정하는 방법도 있습니다. 원자는 들뜸과 바닥 상태를 주기적으로 반복하는데, 이 고유한 진동의 주파수를 이용하면 정밀한 시간을 잴 수 있다는걸 알게 되었습니다. 세슘 원자 시계의 경우 1초 동안 진동하는 횟수는 9,192,631,770번으로 30만 년에 1초의 오차를 보인다고 합니다.</p>
+<h2 id="협정-세계시-Coordinated-Universal-Time-UTC">협정 세계시 (Coordinated Universal Time, UTC)</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Standard_World_Time_Zones.png/800px-Standard_World_Time_Zones.png" alt="https://en.wikipedia.org/wiki/Coordinated_Universal_Time"></p>
+<p>어쨌든 우리가 사는 세상은 지구와 태양이 있는 세상이니 해가 경선에 있는 시간을 맞추기 위해서는 원자 시계에도 그 오차를 반영해야겠죠? 따라서 1월 1일이나 7월 1일 0시를 기점으로 1초를 더하거나 빼서 세슘 원자시계와 태양시의 차이의 오차를 보정하는데 이 1초를 윤초(<em>leap second</em>)라고 합니다. 이렇게 보정한 시간을 협정 세계시라고 정하고 1972년 1월 1일부터 국제적인 표준시가 되었습니다.</p>
+<p>자, 그렇다면 실마리가 보이는군요. UTC 를 기준으로 하는건 UTC가 세계 표준시이기 때문이고, 1970년을 기준으로 하는건 아마도 1972년부터 UTC가 시행되었기 때문인 듯 합니다.</p>
+<h2 id="컴퓨터가-시간을-세는-법">컴퓨터가 시간을 세는 법</h2>
+<p>컴퓨터는 어떻게 시간을 셀까요? CPU는 심장이 뛰듯 tick 을 발생시키는데 이를 기준으로 시스템이 돌아갑니다. 그래서 컴퓨터가 사람의 시간을 측정하는 방법은 특정 시점을 기준으로 그 때부터 발생된 틱의 수를 세는 방식입니다.</p>
+<p>유닉스에서는 이 시작점을 POSIX time 혹은 Epoch time 이라고 하는데 바로 1970년 1월 1일 00:00:00 UTC 입니다. 이때부터 시작된 경과 시간을 초로 환산해 정수로 나타낸 것입니다. 이렇게 계산된 시간은 유닉스 계열 운영체제와 파일 형식들에서 사용되고 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">millis</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line">System.out.println(millis); <span class="comment">// prints a Unix timestamp in milliseconds</span></span><br><span class="line">System.out.println(millis / <span class="number">1000</span>); <span class="comment">// prints the same Unix timestamp in seconds</span></span><br></pre></td></tr></table></figure>
+<p>이 누적된 초 또는 밀리초는 협정 세계시 UTC를 기준으로 하고 있기 때문에 어느 나라든 동일하고, 사용자의 위치에 따라 시차를 달리해서 보여줄 수가 있는 것이죠.</p>
+<p><img src="https://currentmillis.com/tutorials/timezone-offset-vs-UTC.png" alt="https://currentmillis.com/tutorials/system-currentTimeMillis.html"></p>
+<h2 id="밀리초-milliseconds-의-장점">밀리초(milliseconds)의 장점</h2>
+<p>이렇게 프로그래밍에서 밀리초로 시간을 저장하게 되면 어떤 장점이 있을까요?</p>
+<h3 id="간단한-아키텍쳐">간단한 아키텍쳐</h3>
+<p><img src="https://currentmillis.com/standard/specification/c/architecture.png" alt="https://currentmillis.com/tutorials/system-currentTimeMillis.html"></p>
+<ul>
+<li>DB에는 일반 숫자로 시간을 저장할 수 있습니다.</li>
+<li>서버에서는 사용자의 위치와 시차에 상관없이 이 숫자만 처리하면 됩니다.</li>
+<li>클라이언트에 보여줄 때는 어디든 해당 로컬 타임존으로 변환해서 보여줄 수 있습니다.</li>
+</ul>
+<h3 id="벤치마킹">벤치마킹</h3>
+<p>심플한 숫자로 이루어져 있어 간단히 성능을 측정할 때도 좋구요.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="variable">start</span> <span class="operator">=</span> System.currentTimeMillis();</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">1000</span>; i++) &#123;</span><br><span class="line">  <span class="type">int</span>[] myNumbers = <span class="keyword">new</span> <span class="title class_">int</span>[] &#123; <span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">9</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">1</span> &#125;;</span><br><span class="line">  sort(myNumbers);</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(<span class="string">&quot;Duration: &quot;</span> + (System.currentTimeMillis() - start));</span><br></pre></td></tr></table></figure>
+<h3 id="유니크한-ID">유니크한 ID</h3>
+<p>이 숫자를 이용해서 유니크한 아이디를 만들어낼 수 있습니다. 임시파일을 생성하거나 임시토큰을 만들어낼 수 있습니다.</p>
+<p>이 외에도 여러가지 용도로 사용이 가능합니다.</p>
+<h2 id="이대로-괜찮을까">이대로 괜찮을까?</h2>
+<p>하지만 여기서 또 한 가지 의문이 들 수도 있습니다. 유한한 정수 변수에 무한한 시간을 어떻게 담을 수 있을까요?</p>
+<p>맞습니다. 오버플로우 문제가 발생할 수 있죠. 대부분의 32비트 운영 체제에서 초 시간을 저장하는 <code>time_t</code> 자료형은 32비트 정수형입니다. 그렇다면 2^31-1 초가 지난 <strong>2038년 1월 19일 화요일 03:14:07 UTC</strong> 가 오면 어떻게 될까요?</p>
+<p>이러한 문제를 2038년 문제(<em>year 2038 problem, Unix Millennium bug, Y2K38</em>)라고 합니다. 오버플로우가 발생해서 음수가 되어버리고 1970년 또는 1901년으로 돌아가서 32비트 유닉스와 관련된 시스템은 모두 장애가 나버릴겁니다!</p>
+<p>2038년이면 지금이 2018년이니까 20년 정도 남았습니다. 간단한 방법은 64비트 정수로 바꾸는 겁니다. 새로 만드는 프로그램은 상관없지만 이미 짜여져 오랫동안 사용해야 하는 프로그램들이 문제가 될텐데 지속적으로 수정하고 있다고 합니다. 만약 64비트 정수를 사용하면 이러한 문제를 약 3000억 년 정도 연기시킬 수 있고, 태양의 수명은 약 123억년이라고 하니 별 걱정 없겠네요.</p>
+<p>이번 포스팅에서는 시간의 종류와 컴퓨터에서 어떻게 시간을 측정하게 되었는지 살펴봤습니다.</p>
+<h2 id="참고자료">참고자료</h2>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%ED%98%91%EC%A0%95_%EC%84%B8%EA%B3%84%EC%8B%9C">https://ko.wikipedia.org/wiki/협정_세계시</a></li>
+<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%EC%9C%A4%EC%B4%88">https://ko.wikipedia.org/wiki/윤초</a></li>
+<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%8B%9C%EA%B0%84">https://ko.wikipedia.org/wiki/시스템_시간</a></li>
+<li><a target="_blank" rel="noopener" href="https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%89%EC%8A%A4_%EC%8B%9C%EA%B0%84">https://ko.wikipedia.org/wiki/유닉스_시간</a></li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-07T11:20:57.000Z" title="6/7/2018, 8:20:57 PM">2018/06/07</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.958Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Apple/">Apple</a></span><span class="level-item">2 minutes read (About 360 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/07/macos-npki-location/">macOS 공인인증서는 어디에 있을까?</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>저 또한 macOS 를 잘 사용하고 있지만 한 가지 불편한 점이 있다면 <strong>공인인증서</strong>입니다. 예전엔 macOS 에서 인터넷 뱅킹 및 여러 금융사에 접속하기조차 안되는 경우도 있었지만, 지금은 웬만한 금융사는 macOS 와 safari 에서도 원활하게 접속하도록 지원하고 있습니다.</p>
+<p>다만 공인인증서 관련된 기능 중 하나가 공인인증서 복사인데 이 기능이 Windows 에서만 가능한 곳도 있더라구요. 가끔은 수동으로 옮겨야할 때가 있습니다. macOS 에서는 공인인증서가 어디에 저장될까요?</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/library/Preferences/NPKI</span><br></pre></td></tr></table></figure>
+<p>macOS 에서 공인인증서는 바로 이 경로에 저장됩니다. 다른 곳에서 사용하시던 공인인증서가 담긴 NPKI 폴더를 Preferences 폴더 밑에 두시면 공인인증서 사용 시 검색이 되고, 인증서 내보내기 기능이 안될 경우엔 이 폴더를 통째로 옮겨도 사용 가능합니다. 저도 며칠 전 맥북에서 사용하던 인증서를 안드로이드 태블릿으로 옮길 때 이런 방법으로 옮겼습니다.</p>
+<kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Command⌘</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">Shift⇧</kbd> + <kbd style="border:1px solid gray;font-size:1.2em;box-shadow:1px 0 1px 0 #eee, 0 2px 0 2px #ccc, 0 2px 0 3px #444;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;margin:2px 3px;padding:1px 5px;">g</kbd>
+<p>참고로 macOS 에서 특정 폴더로 바로 이동하실 때는 Finder 에서 ‘이동하기’ 단축키를 사용하면 편합니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-05T12:55:38.000Z" title="6/5/2018, 9:55:38 PM">2018/06/05</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.909Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">6 minutes read (About 862 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/05/metasyntactic-variables-foo-bar/">foo, bar 의 어원을 찾아서</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>프로그래밍을 하다보면 책이나 웹 사이트의 예제 코드에서 foo, bar 와 같은 문자를 흔히 볼 수 있는데요, 변수명 또는 함수명을 짓거나 간단한 문자열 값이 필요한데 딱히 쓸 말이 없을 때 주로 사용하는 문자들입니다.</p>
+<p>이런 문자들을 Metasyntactic variable 이라고 합니다. 굳이 우리말로 하자면 ‘메타문법적 변수’ 라고나 할까요. 그런데 왜 하필 foo, bar 일까요? 이건 어디서 왔고 어떤 의미를 지니고 있는 걸까요?</p>
+<p>정답부터 얘기하자면 ‘모른다’ 입니다. foo, bar 의 정확한 어원은 알 수 없지만 몇 가지 설이 있습니다.</p>
+<h2 id="전쟁-중-나온-은어">전쟁 중 나온 은어</h2>
+<p>첫 번째로 세계 2차 대전 (1939 ~ 1945)에서 나온 은어 FUBAR 에서 유래되었다는 설입니다. FUBAR 는 F*cked Up Beyond All Repair/Recognition 의 준말로 ‘수리할 수 없을 정도로 엉망인’, ‘고칠 수도 없고, 알아볼 수도 없을 정도로 망쳐진’ 이라는 뜻입니다.</p>
+<h2 id="Smokey-Stover">Smokey Stover</h2>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Smokeycover.jpg/170px-Smokeycover.jpg" alt="https://en.wikipedia.org/wiki/Foobar"></p>
+<p>1930 ~ 1952년 사이에 만화가 Bill Holman 이 그린 Smokey Stover 라는 코믹북에서 foo 라는 단어가 처음 등장했다고 하는데, 차이나타운에서 Good luck (행운을 빈다)는 의미었다고 합니다. 한자 ‘복 복’(福) 자가 중국어로 fu (<em>foo</em>) 라고 발음된다고 하네요. 여기서 유래되었다는 것이 두 번째 설입니다.</p>
+<h2 id="프로그래밍에서의-foo-bar">프로그래밍에서의 foo, bar</h2>
+<p>프로그래밍에서 처음 foo, bar 가 등장한 건 어디서였을까요? 바로 MIT의 Tech Model Railroad Club (<em>TMRC</em>) 이라고 합니다.</p>
+<p>이 동호회에서 만든 모형 열차에는 비상 정지 버튼이 있었는데 멈출 때 화면에 FOO 라는 글자가 나와서 ‘Foo switch’ 라고 불렀습니다. 그 이후 TMRC 용어 사전에</p>
+<blockquote>
+<p>Foo는 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Om_mani_padme_hum">옴 마니 반메 훔</a> 을 '푸 마니 반메 훔’이라고 잘못 인용한 데서 온 말이다.</p>
+</blockquote>
+<p>라고 기록되었다고 하네요. 한번 쯤은 들어보셨을 '옴 마니 반메 훔’은 산스크트리어로 불교에서의 기도문(주문) 중 하나인데 좀 뜬금없는 등장입니다.</p>
+<p>이 foo 에다가 FUBAR 에서 온 bar 가 합쳐졌다는 이야기도 있고, foo 스위치 옆에 bar 스위치도 있었다는 이야기도 있습니다. 어쨌거나 MIT 해커들은 여기서 영감을 얻어서 변수명에 foo 와 bar 를 사용하기 시작했다고 합니다.</p>
+<h2 id="foo-bar-다음은">foo, bar 다음은?</h2>
+<p>foo, bar 외에 사용할 수 있는 것들은 무엇이 있을까요?</p>
+<h3 id="공통">공통</h3>
+<p>보통 foo, bar 를 많이 들어보셨을텐데 몇 가지 더 있습니다. 신기한 점은 나라 혹은 언어 별로 조금씩 다르다는 점입니다.</p>
+<ul>
+<li>dgx</li>
+<li>dfs</li>
+<li>foobar</li>
+<li>foo</li>
+<li>bar</li>
+<li>baz</li>
+<li>qux</li>
+<li>quux</li>
+<li>corge</li>
+<li>grault</li>
+<li>graply</li>
+<li>waldo</li>
+<li>fred</li>
+<li>plugh</li>
+<li>xyzzy</li>
+<li>thud</li>
+</ul>
+<h3 id="영국">영국</h3>
+<ul>
+<li>wibble</li>
+<li>wobble</li>
+<li>wubble</li>
+<li>flob</li>
+</ul>
+<h3 id="호주">호주</h3>
+<ul>
+<li>blep</li>
+<li>blah</li>
+<li>boop</li>
+</ul>
+<h3 id="일본">일본</h3>
+<ul>
+<li>hoge</li>
+<li>piyo</li>
+</ul>
+<h3 id="Python">Python</h3>
+<p>파이썬을 짤 때 자주 쓰이는 건 따로 있다고 하네요.</p>
+<ul>
+<li>spam</li>
+<li>ham</li>
+<li>eggs</li>
+</ul>
+<h2 id="참고-사이트">참고 사이트</h2>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Metasyntactic_variable">https://en.wikipedia.org/wiki/Metasyntactic_variable</a><br>
+<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Foobar">https://en.wikipedia.org/wiki/Foobar</a></p>
+<p>이번 포스팅에서는 foo, bar 의 어원과 메타문법적 변수들의 종류에 대해 알아봤습니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-05T12:40:08.000Z" title="6/5/2018, 9:40:08 PM">2018/06/05</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.888Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Column/">Column</a></span><span class="level-item">11 minutes read (About 1617 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/05/pomodoro-technique-bear-focus-timer/">집중력을 유지하는 뽀모도로 테크닉</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>제가 최대 관심사 중 하나는 바로 <strong>집중력</strong>입니다. 주어진 시간은 한정적이고 나의 체력과 주의 또한 한정적이기 때문에, 이를 '어떻게 효율적으로 사용할 것인가’를 중요하게 생각합니다. 어영부영 하루를 보내고 잠자리에 누워서 오늘 하루 뭘 한지도 모른 채 후회 속에서 잠이 들기엔 하루가 너무 아까우니까요.</p>
+<h2 id="잦은-휴식을-이용한-체력-집중력-유지">잦은 휴식을 이용한 체력/집중력 유지</h2>
+<p>누구나 집중력을 높이기 위한 자신만의 방법이 있습니다. 조용한 도서관에서, 화이트 노이즈를 듣고, 커피를 물처럼 마시기도 합니다. 뽀모도로 기법도 이런 집중력을 높이는 하나의 방법인데요, 단순히 집중력을 높이는 것에서 더 나아가 장기간 집중력을 유지할 수 있는 방법입니다.</p>
+<ul>
+<li>25분 작업 + 5분 휴식 = 1 뽀모(<em>Pomo</em>) 라고 합니다.</li>
+<li>1 Pomo 내에서 할 일을 정했으면 그 일만 합니다.</li>
+<li>휴식 때는 휴식만 합니다.</li>
+<li>4 Pomo 후에는 20분 ~ 1시간 정도 길게 휴식을 취합니다.</li>
+<li>Pomo (30분)를 기준으로 계획을 세울 수 있습니다.
+<ul>
+<li>하루 8시간 = 15 Pomo</li>
+<li>일주일 = 75 Pomo</li>
+</ul>
+</li>
+</ul>
+<p>잦은 휴식을 통해서 <strong>높은 집중력 상태를 유지</strong>하는 것이 뽀모도로 기법의 핵심입니다.</p>
+<h2 id="장점">장점</h2>
+<p>저는 직업 상 혼자서 개발하는 시간이 많은 편입니다. 가끔 회의가 있지만 나름 조절이 가능하기 때문에 아침마다 30분 단위로 시간을 계획하고 집중력 있게 업무를 할 수 있습니다. 아침 첫 Pomo를 하루 계획하는데 사용하고 두 달 넘게 뽀모도로를 적용한 결과 다음과 같은 장점이 있었습니다.</p>
+<ol>
+<li>시간을 구분해서 정량화된 계획을 짤 수 있고 리뷰할 수 있습니다.</li>
+<li>집중력을 방해하는 것을 알아낼 수 있습니다.</li>
+<li>시간의 효율성이 증가해 여유 시간이 생깁니다.</li>
+<li>체력이 안배됩니다.</li>
+</ol>
+<p>일단 정확한 목표 설정으로 시간을 효율적으로 쓸 수 있었고, 주기적인 휴식으로 인해 높은 집중력을 유지할 수 있었습니다. 게다가 세부적인 계획을 짤 수 있어 명확히 오늘한 일과 걸린 시간을 정량적으로 확인할 수 있었습니다.</p>
+<h2 id="단점">단점</h2>
+<p>물론 뽀모도로가 만능은 아닙니다. 직업과 업무에 따라 혼자서 집중해서 하기 어려운 경우도 많습니다. 각종 업무 전화와 회의, 그리고 수시로 나를 찾는 사람들까지 온전히 집중하기가 어렵습니다. 최근에는 회사 차원에서 적극적으로 뽀모도로 기법을 도입하는 경우도 있다고 하네요.</p>
+<p>또한 학생의 경우 시험 시간은 25분이 아니라 훨씬 길기 때문에 긴 집중시간이 필요하기 때문에 맞지 않을 수 있습니다.</p>
+<ol>
+<li>근무환경에 맞지 않을 수 있다.</li>
+<li>공부에 적용하는 경우 시험 시간과 맞지 않는다.</li>
+</ol>
+<p>업무에는 맞지 않더라도 퇴근 후 개인 시간 관리에 뽀모도로를 적용해보는 것도 좋을 듯 합니다.</p>
+<h2 id="궁금한-점">궁금한 점</h2>
+<h3 id="중간에-흐름이-끊기면요">중간에 흐름이 끊기면요?</h3>
+<p>전화가 온다거나 동료의 방해(?), 개인적인 일들로 흐름이 끊기는 경우 Pomo 로 치지 않고 급한 일을 처리한 후 다시 시작합니다.</p>
+<h3 id="25분-동안-집중이-잘-안됩니다-ㅠㅠ">25분 동안 집중이 잘 안됩니다 ㅠㅠ</h3>
+<p>집중력을 방해하는 생각과 할 일들이 떠오른다면 간단히 메모해놓고 나중에 모아서 처리합니다.</p>
+<h3 id="보통-일은-25분이-넘지-않나요">보통 일은 25분이 넘지 않나요?</h3>
+<p>일을 쪼개거나 Pomo 를 여러개로 잡습니다.</p>
+<h3 id="집중해서-하니까-Pomo-중에-시간이-남았어요">집중해서 하니까 Pomo 중에 시간이 남았어요!</h3>
+<p>해당 Pomo에 했던 일을 돌아보면서 정리합니다.</p>
+<h3 id="1-Pomo가-안되는-자잘자잘한-일들은-어떡하죠">1 Pomo가 안되는 자잘자잘한 일들은 어떡하죠?</h3>
+<p>모아서 처리하거나 Pomo 외 시간에 따로 처리합니다.</p>
+<h3 id="저는-몇-시간-동안-집중할-수-있는데-중간에-끊어버리는게-손해-같아요">저는 몇 시간 동안 집중할 수 있는데 중간에 끊어버리는게 손해 같아요.</h3>
+<p>1~2시간동안 집중하는 경우 점점 집중력이 떨어져 나중에는 효율없이 시간만 잡아먹는 것을 볼 수 있습니다. 단기적으로는 손해인 것처럼 보여도 장기적으로는 효율적입니다.<br>
+개발자의 경우 중간에 한번 흐름을 타면 끊지 않으려고 장시간 동안 붙잡고 있는 경우가 많습니다. 특히 뭐가 잘 안되는 경우엔 더욱 그런데 이럴 때도 과감하게 쉬어주는 것이 좋습니다.</p>
+<h2 id="뽀모도로-타이머">뽀모도로 타이머</h2>
+<p>뽀모도로 기법에 맞춘 여러가지 타이머가 웹과 앱으로 나와있습니다. 그 중에서 제가 사용하는 <a target="_blank" rel="noopener" href="https://itunes.apple.com/kr/app/bft-bear-focus-timer/id1328806990?mt=8">BFT</a> 를 소개해드리겠습니다.</p>
+<p><img src="https://static.wixstatic.com/media/924689_947aa3c7dd1d427aabda725a5d426a55~mv2_d_2048_2048_s_2.png/v1/fill/w_888,h_837,al_c,usm_0.66_1.00_0.01/924689_947aa3c7dd1d427aabda725a5d426a55~mv2_d_2048_2048_s_2.png" alt="https://www.bearfocustimer.com/"></p>
+<p>BFT는 Bear Focus Timer 의 약자로 상당히 직관적이고 귀여운 UI를 가진 타이머입니다. 사실 집중에 제일 방해가 되는 것이 바로 스마트폰인데요, 타이머를 켜고 스마트폰을 뒤집어놓으면 타이머가 시작됩니다. 중간에 다시 뒤집어서 화면을 보면 타이머는 멈춥니다. 이런 강제적인 설정이 집중에 도움이 됩니다.</p>
+<p><img src="https://static.wixstatic.com/media/924689_16521a909b15456191de57a8376f471c~mv2.png/v1/fill/w_234,h_508,al_c,usm_0.66_1.00_0.01/924689_16521a909b15456191de57a8376f471c~mv2.png" alt="https://www.bearfocustimer.com/"></p>
+<p>게다가 제가 좋아하는 화이트 노이즈를 들을 수 있습니다. 빗소리, 장작 소리, 바람 소리가 있고 최근에는 커피 가는 소리도 추가되었더군요. 개인적으로 노래를 듣는 것보다 훨씬 집중에 도움이 되어서 좋아합니다.</p>
+<p>BFT는 iOS 에서 1.09 달러에 구매하실 수 있습니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-05T12:22:22.000Z" title="6/5/2018, 9:22:22 PM">2018/06/05</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.830Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Java/">Java</a></span><span class="level-item">6 minutes read (About 828 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/05/jdk-installation-for-linux-centos7/">CentOS7 JDK 설치 및 버전 관리</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다.</p>
+<h2 id="설치-파일-다운로드">설치 파일 다운로드</h2>
+<p><a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK 다운로드 페이지</a> 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다.</p>
+<p>다른 방법으로는 웹 상의 파일 다운로드 명령어인 <code>wget</code> 을 이용해서 바로 받을 수 있습니다. 다운로드 페이지에서 원하는 버전 다운로드 링크 주소를 복사해서 다음처럼 명령어를 입력하시면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget --no-check-certificate --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<p>혹시나 <code>wget</code> 이 없다면 다음 명령어로 설치하시면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install wget -y</span><br></pre></td></tr></table></figure>
+<h2 id="설치하기">설치하기</h2>
+<p>설치는 그냥 원하시는 폴더에 압축을 풀면 끝납니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 디렉토리 생성</span><br><span class="line">$ mkdir /usr/local/java</span><br><span class="line"></span><br><span class="line"># 파일 이동</span><br><span class="line">$ mv jdk-8u171-linux-x64.tar.gz /usr/local/java</span><br><span class="line"></span><br><span class="line"># 압축 해제</span><br><span class="line">$ tar xvzf jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="버전-관리하기">버전 관리하기</h2>
+<p><code>alternatives</code> 명령어는 심볼릭 링크를 관리할 수 있는 툴입니다. 이를 이용해서 설치된 자바 버전 중 필요한 자바 버전을 선택해 심볼릭 링크를 설정해줄 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives</span><br><span class="line">alternatives version 1.7.4 - Copyright (C) 2001 Red Hat, Inc.</span><br><span class="line">This may be freely redistributed under the terms of the GNU Public License.</span><br><span class="line"></span><br><span class="line">usage: alternatives --install &lt;link&gt; &lt;name&gt; &lt;path&gt; &lt;priority&gt;</span><br><span class="line">                    [--initscript &lt;service&gt;]</span><br><span class="line">                    [--family &lt;family&gt;]</span><br><span class="line">                    [--slave &lt;link&gt; &lt;name&gt; &lt;path&gt;]*</span><br><span class="line">       alternatives --remove &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --auto &lt;name&gt;</span><br><span class="line">       alternatives --config &lt;name&gt;</span><br><span class="line">       alternatives --display &lt;name&gt;</span><br><span class="line">       alternatives --set &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --list</span><br><span class="line"></span><br><span class="line">common options: --verbose --test --help --usage --version --keep-missing</span><br><span class="line">                --altdir &lt;directory&gt; --admindir &lt;directory&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-생성하기">심볼릭 링크 생성하기</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --install /usr/bin/java java /usr/local/java/jdk1.8.0_171/bin/java 1</span><br><span class="line">$ alternatives --install /usr/bin/java javac /usr/local/java/jdk1.8.0_171/bin/javac 1</span><br><span class="line">$ alternatives --install /usr/bin/java javaws /usr/local/java/jdk1.8.0_171/bin/javaws 1</span><br><span class="line"></span><br><span class="line">$ alternatives --set java /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">$ alternatives --set javac /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">$ alternatives --set javaws /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-설정하기">심볼릭 링크 설정하기</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br></pre></td></tr></table></figure>
+<p>위 명령어를 입력하면 java 로 정의된 심볼릭 링크들을 볼 수 있는데 제가 몇 번 삽질해서 잘못 등록한 자바 버전들을 볼 수 있습니다. 여기서 특정 버전을 골라서 선택할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br><span class="line"></span><br><span class="line">There are 4 programs which provide &#x27;java&#x27;.</span><br><span class="line"></span><br><span class="line">  Selection    Command</span><br><span class="line">-----------------------------------------------</span><br><span class="line"> + 1           /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">   2           /usr/local/java/jdk1.8.0_112/bin/java</span><br><span class="line">*  3           /bin/java</span><br><span class="line">   4           /usr/local/java/jdk1.8.0_171//bin/java</span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number:</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-삭제">심볼릭 링크 삭제</h3>
+<p>잘못 등록한 심볼릭 링크를 삭제해보겠습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --remove java /usr/local/java/jdk1.8.0_171//bin/java</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-리스트-조회">심볼릭 링크 리스트 조회</h3>
+<p><code>--list</code> 옵션으로 잘 정의되었는지 확인해보겠습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --list</span><br><span class="line">java    manual  /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">javac   manual  /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">javaws  manual  /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
+<h2 id="JAVA-HOME-환경변수-설정하기">JAVA_HOME 환경변수 설정하기</h2>
+<p><code>/etc/profile</code> 파일 밑에 다음 명령어를 추가하시면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/profile</span><br><span class="line">export JAVA_HOME=$(readlink -f /usr/bin/java | sed &quot;s:bin/java::&quot;)</span><br><span class="line"></span><br><span class="line"># 변경 사항 반영</span><br><span class="line">$ . /etc/profile</span><br></pre></td></tr></table></figure>
+<h2 id="설치-확인하기">설치 확인하기</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version &quot;1.8.0_171&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_171-b11)</span><br><span class="line">Java HotSpot(TM) Client VM (build 25.171-b11, mixed mode)</span><br></pre></td></tr></table></figure>
+<p>이상으로 CentOS 7 에서 JDK 를 설치하고 버전 관리하는 법을 알아봤습니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-04T12:40:27.000Z" title="6/4/2018, 9:40:27 PM">2018/06/04</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.927Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Java/">Java</a></span><span class="level-item">12 minutes read (About 1806 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/04/java-observer-pattern/">Java 옵저버 패턴 (Observer Pattern)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>하나 혹은 여러 클래스가 어떤 클래스의 상태 변화에 따라 동작해야하는 경우를 생각해봅시다.</p>
+<p>예를 하나 들어보겠습니다. 제가 요즘 재밌게 보고 있는 페이지 중 <a target="_blank" rel="noopener" href="https://1boon.kakao.com/dogear">‘책 끝을 접다’</a> 라는 페이지가 있습니다. 책 소개해주는 페이지인데 흥미진진하게 소개를 해줘서 책을 사고 싶게 만드는 걸로 유명합니다. 저는 이 페이지에 신규 컨텐츠가 등록되었는지 종종 들어가서 확인해보곤 하는데요, 언제 신규 컨텐츠가 나오는지 모르면 궁금할 때마다 혹은 필요할 때마다 수시로 들어가서 확인해야 합니다.</p>
+<p>하지만 ‘구독하기’ 기능을 이용하면 신규 컨텐츠가 등록될 때마다 카카오톡으로 이모티콘이 오기 때문에 바로 확인할 수 있습니다. 이처럼 신규 컨텐츠 등록이라는 상태를 내가 직접 확인하는 것이 아니라, <strong>책끝을접다 페이지에서 구독자들의 카카오톡 정보를 리스트로 가지고 신규 컨텐츠가 등록될 때 모든 구독자에게 카카오톡을 전송하는 방식</strong>으로 보다 효율적으로 구성할 수 있는 것이 옵저버 패턴입니다.</p>
+<p>여기서 상태를 가지고 있는 책끝을접다 페이지를 주체 객체 혹은 Observable 객체라고 하고, 상태 정보를 필요로 하는 구독자들을 Observer 객체라고 합니다. Observer 는 '관찰자’로 번역되므로 ‘상태를 관찰하고 있는’ 클래스라고 보시면 되고, Observable 객체는 ‘관찰되어지는’ 객체라고 보시면 되겠습니다.</p>
+<h2 id="구조">구조</h2>
+<p>핵심은 주체 객체와 옵저버 객체의 결합도를 느슨하게 유지하는 것입니다.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Observer_w_update.svg/500px-Observer_w_update.svg.png" alt="https://en.wikipedia.org/wiki/Observer_pattern"></p>
+<ul>
+<li>주체 객체는 옵저버들의 리스트를 가지고 옵저버를 추가/삭제하는 메소드를 제공합니다.</li>
+<li>옵저버 추가/삭제 메소드를 이용해서 주체 객체의 상태를 구독하거나 해지할 수 있습니다.</li>
+<li>옵저버 인터페이스를 구현한 각 옵저버들은 update() 라는 메소드를 구현해야 합니다.</li>
+<li>주체 객체는 옵저버 객체가 추가되거나 삭제되더라도 영향을 받지 않습니다.</li>
+<li>상태 변화 시 주체 객체는 각 옵저버의 udpate() 메소드를 실행합니다.</li>
+</ul>
+<h2 id="예시-코드-구현">예시 코드 구현</h2>
+<p>다시 예시로 돌아가서, 조금 더 알기 쉽게 코드로 구현해보겠습니다.</p>
+<p>다음은 책끝을접다 클래스인데 옵저버 패턴을 적용하지 않으면 <code>is신규컨텐츠등록</code> 메소드를 이용해 구독자들이 일일이 확인을 해야 합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class 책끝을접다 <span class="keyword">implements</span> <span class="title class_">Observable</span> &#123;</span><br><span class="line"></span><br><span class="line">    List&lt;Observer&gt; observerList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> 신규컨텐츠등록;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> is신규컨텐츠등록() &#123;</span><br><span class="line">        <span class="keyword">return</span> 신규컨텐츠등록;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 신규컨텐츠나왔다() &#123;</span><br><span class="line">        신규컨텐츠등록 = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그렇다면 Observer 와 Observable 인터페이스를 작성해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Observable</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> 구독하기(Observer o);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> 구독해지(Observer o);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> 구독자들에게알리기();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">void</span> 업데이트();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>주체 객체가 구현할 Observable 인터페이스에는 옵저버들을 추가/삭제하는 메소드와 각 옵저버들에게 상태 변화를 알리는 메소드를 가지고 있습니다. 옵저버가 구현해야 할 Observer 인터페이스는 상태변화에 따른 로직을 구현할 메소드를 가지고 있습니다. 이제 인터페이스들을 이용해서 옵저버 패턴을 적용해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class 책끝을접다 <span class="keyword">implements</span> <span class="title class_">Observable</span> &#123;</span><br><span class="line"></span><br><span class="line">    List&lt;Observer&gt; observerList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="type">boolean</span> 신규컨텐츠등록;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> is신규컨텐츠등록() &#123;</span><br><span class="line">        <span class="keyword">return</span> 신규컨텐츠등록;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 신규컨텐츠나왔다() &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;신규 컨텐츠가 등록되었습니다.&quot;</span>);</span><br><span class="line">		신규컨텐츠등록 = <span class="literal">true</span>;</span><br><span class="line">        구독자들에게알리기();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 구독하기(Observer o) &#123;</span><br><span class="line">        observerList.add(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 구독해지(Observer o) &#123;</span><br><span class="line">        observerList.remove(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 구독자들에게알리기() &#123;</span><br><span class="line">        observerList.forEach(Observer::업데이트);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>구독자를 간단하게 두 개 정도 만들어봤습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class 라이언 <span class="keyword">implements</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 업데이트() &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;라이언: 책 끝을 접다 재밌다!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> class 무지 <span class="keyword">implements</span> <span class="title class_">Observer</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> 업데이트() &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;무지: 콘한테 책 끝을 접다 공유해야지!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>그럼 테스트를 통해서 상태 변화에 따라 옵저버들의 로직이 자동으로 실행되는 것을 확인해보겠습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">책끝을접다 페이지 = <span class="keyword">new</span> 책끝을접다();</span><br><span class="line">Observer 구독자<span class="number">1</span> = <span class="keyword">new</span> 라이언();</span><br><span class="line">Observer 구독자<span class="number">2</span> = <span class="keyword">new</span> 무지();</span><br><span class="line"></span><br><span class="line">페이지.구독하기(구독자<span class="number">1</span>);</span><br><span class="line">페이지.구독하기(구독자<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">페이지.신규컨텐츠나왔다();</span><br><span class="line"></span><br><span class="line">페이지.구독해지(구독자<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">페이지.신규컨텐츠나왔다();</span><br></pre></td></tr></table></figure>
+<p>라이언과 무지가 구독을 한 후에 신규컨텐츠가 나오자 각각의 업데이트 메소드가 실행되었습니다. 또한 무지가 구독을 해지하자 신규 컨텐츠 등록 시 라이언에게만 정보가 가는 것을 확인할 수 있었습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">신규 컨텐츠가 등록되었습니다.</span><br><span class="line">라이언: 책 끝을 접다 재밌다!</span><br><span class="line">무지: 콘한테 책 끝을 접다 공유해야지!</span><br><span class="line"></span><br><span class="line">신규 컨텐츠가 등록되었습니다.</span><br><span class="line">라이언: 책 끝을 접다 재밌다!</span><br></pre></td></tr></table></figure>
+<h2 id="Java-에서-제공하는-옵저버-패턴">Java 에서 제공하는 옵저버 패턴</h2>
+<p>옵저버 패턴은 간단하고 유용하게 쓰일 수 있는 패턴이라 자바에서도 기본으로 제공하고 있습니다. 바로 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/Observable.html">Observable</a> 클래스와 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/Observer.html">Observer</a> 인터페이스인데요, 이를 이용하면 좀 더 쉽게 구현할 수 있습니다.</p>
+<p>하지만 위 예시에서 인터페이스를 이용해 따로 구현한 이유도 있습니다. 바로 Observable 객체가 클래스이다 보니 다중상속이 불가능하기 때문에 다른 클래스를 상속받고 있다면 사용할 수 없게 됩니다. 이럴 때는 직접 구현해서 사용하는 것이 더 좋겠죠.</p>
+<h2 id="정리">정리</h2>
+<p>옵저버 패턴은 주체의 상태에 따라서 해당 상태 정보를 구독하는 옵저버들에게 연락이 가고 자동으로 내용이 업데이트 되는 방식입니다. 이를 이용해서 주체와 옵저버 간의 의존을 약하게 유지하면서 다양한 상태에 따른 로직을 유연하게 구현할 수 있습니다.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-06-01T15:34:23.000Z" title="6/2/2018, 12:34:23 AM">2018/06/02</time></span><span class="level-item">Updated&nbsp;<time dateTime="2026-02-23T10:37:01.846Z" title="2/23/2026, 7:37:01 PM">2026/02/23</time></span><span class="level-item"><a class="link-muted" href="/categories/Programming/">Programming</a><span> / </span><a class="link-muted" href="/categories/Programming/Java/">Java</a></span><span class="level-item">3 minutes read (About 494 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/06/02/java-string-joiner/">Java StringJoiner (문자열 구분자 붙이기)</a></p><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/8/docs/api/java/util/StringJoiner.html">StringJoiner</a> 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.</p>
+<p>StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(<em>delimiter</em>) 를 지정해줄 수 있는게 특징입니다.</p>
+<h2 id="간단한-예제">간단한 예제</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">String</span> <span class="variable">first</span> <span class="operator">=</span> <span class="string">&quot;관우&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">second</span> <span class="operator">=</span> <span class="string">&quot;장비&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">third</span> <span class="operator">=</span> <span class="string">&quot;조운&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">fourth</span> <span class="operator">=</span> <span class="string">&quot;황충&quot;</span>;</span><br><span class="line"><span class="type">String</span> <span class="variable">fifth</span> <span class="operator">=</span> <span class="string">&quot;마초&quot;</span>;</span><br></pre></td></tr></table></figure>
+<p>오호대장군 다섯 명이 있다고 할 때, 다섯 명 이름을 “-” 로 붙여서 출력해보도록 합니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">관우-장비-조운-황충-마초</span><br></pre></td></tr></table></figure>
+<h3 id="String-operator">String + operator</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String 오호대장군 = first + <span class="string">&quot;-&quot;</span> + <span class="string">&quot;second&quot;</span> + <span class="string">&quot;-&quot;</span> + third + <span class="string">&quot;-&quot;</span> + fourth + <span class="string">&quot;-&quot;</span> + fifth;</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
+<h3 id="StringBuffer-StringBuilder">StringBuffer / StringBuilder</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringBuffer</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">sb.append(first);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(second);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(third);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(fourth);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line">sb.append(fifth);</span><br><span class="line">sb.append(<span class="string">&quot;-&quot;</span>);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = sb.toString();</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
+<h3 id="StringJoiner">StringJoiner</h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StringJoiner</span> <span class="variable">sj</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringJoiner</span>(<span class="string">&quot;-&quot;</span>);</span><br><span class="line"></span><br><span class="line">sj.add(first);</span><br><span class="line">sj.add(second);</span><br><span class="line">sj.add(third);</span><br><span class="line">sj.add(fourth);</span><br><span class="line">sj.add(fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = sj.toString();</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
+<p>자동으로 구분자를 사이사이에 붙여주기 때문에 코드가 훨씬 줄었습니다.  그리고 prefix 와 suffix 도 붙여줄 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// public StringJoiner(CharSequence delimiter, CharSequence prefix, CharSequence suffix)</span></span><br><span class="line"><span class="type">StringJoiner</span> <span class="variable">sj</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringJoiner</span>(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;[&quot;</span>, <span class="string">&quot;]&quot;</span>);</span><br><span class="line"></span><br><span class="line">sj.add(first);</span><br><span class="line">sj.add(second);</span><br><span class="line">sj.add(third);</span><br><span class="line">sj.add(fourth);</span><br><span class="line">sj.add(fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = sj.toString();</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[관우-장비-조운-황충-마초]</span><br></pre></td></tr></table></figure>
+<p>StringJoiner 은 stream 을 이용해서 쉽게 사용할 수 있습니다.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; 장군들 = Arrays.asList(first, second, third, fourth, fifth);</span><br><span class="line"></span><br><span class="line">String 오호대장군 = 장군들.stream().collect(Collectors.joining(<span class="string">&quot;-&quot;</span>, <span class="string">&quot;[&quot;</span>, <span class="string">&quot;]&quot;</span>));</span><br><span class="line">System.out.println(오호대장군);</span><br></pre></td></tr></table></figure>
+<p>이처럼 StringJoiner 는 공백이나 구분자를 반복해서 붙여야하는 경우에 유용하게 사용하실 수 있습니다.</p>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/categories/Programming/page/3/">Previous</a></div><div class="pagination-next"><a href="/categories/Programming/page/5/">Next</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/categories/Programming/">1</a></li><li><a class="pagination-link" href="/categories/Programming/page/2/">2</a></li><li><a class="pagination-link" href="/categories/Programming/page/3/">3</a></li><li><a class="pagination-link is-current" href="/categories/Programming/page/4/">4</a></li><li><a class="pagination-link" href="/categories/Programming/page/5/">5</a></li><li><a class="pagination-link" href="/categories/Programming/page/6/">6</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">94</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">233</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">Links</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Cloud/"><span class="level-start"><span class="level-item">Cloud</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">51</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Apple/"><span class="level-start"><span class="level-item">Apple</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Column/"><span class="level-start"><span class="level-item">Column</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/MSA/"><span class="level-start"><span class="level-item">MSA</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Spark/"><span class="level-start"><span class="level-item">Spark</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Vert-x/"><span class="level-start"><span class="level-item">Vert.x</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Reviews/"><span class="level-start"><span class="level-item">Reviews</span></span><span class="level-end"><span class="level-item tag">9</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-03-13T15:38:26.000Z">2019/03/14</time></p><p class="title"><a href="/2019/03/14/serverless-architecture/">서버리스 Serverless 아키텍처 파헤치기</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-03-04T16:46:15.000Z">2019/03/05</time></p><p class="title"><a href="/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/">오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request</a></p><p class="categories"><a href="/categories/Programming/">Programming</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-02-26T15:10:14.000Z">2019/02/27</time></p><p class="title"><a href="/2019/02/27/kubernetes-object-yaml-auto-backup-using-git-and-cronjob/">Git과 CronJob을 활용한 쿠버네티스 오브젝트 YAML 자동 백업</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-02-24T16:43:07.000Z">2019/02/25</time></p><p class="title"><a href="/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/">개발자를 위한 쿠버네티스(Kubernetes) 클러스터 구성하기(Kubeadm, GCE, CentOS)</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2019-01-19T08:40:16.000Z">2019/01/19</time></p><p class="title"><a href="/2019/01/19/spring-boot-containerization-and-ci-cd-to-kubernetes-cluster/">스프링 부트 컨테이너와 CI/CD 환경 구성하기</a></p><p class="categories"><a href="/categories/Cloud/">Cloud</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">March 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/02/"><span class="level-start"><span class="level-item">February 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">January 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">December 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/11/"><span class="level-start"><span class="level-item">November 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/10/"><span class="level-start"><span class="level-item">October 2018</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">September 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/07/"><span class="level-start"><span class="level-item">July 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/06/"><span class="level-start"><span class="level-item">June 2018</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">January 2017</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/07/"><span class="level-start"><span class="level-item">July 2016</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/06/"><span class="level-start"><span class="level-item">June 2016</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">Tags</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/DS-Store/"><span class="tag">.DS_Store</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1970/"><span class="tag">1970</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/2018/"><span class="tag">2018</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Big-O/"><span class="tag">Big-O</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/adsense/"><span class="tag">adsense</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/advanced/"><span class="tag">advanced</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/analytics/"><span class="tag">analytics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/apache/"><span class="tag">apache</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api/"><span class="tag">api</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/api-gateway/"><span class="tag">api_gateway</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/architect/"><span class="tag">architect</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/architecture/"><span class="tag">architecture</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/asciinema/"><span class="tag">asciinema</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/atom/"><span class="tag">atom</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/aws/"><span class="tag">aws</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/backup/"><span class="tag">backup</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bar/"><span class="tag">bar</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basic/"><span class="tag">basic</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/basics/"><span class="tag">basics</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/best/"><span class="tag">best</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blocking/"><span class="tag">blocking</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/blog/"><span class="tag">blog</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/bmc/"><span class="tag">bmc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/brunch/"><span class="tag">brunch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/build/"><span class="tag">build</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/buymeacoffee/"><span class="tag">buymeacoffee</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos/"><span class="tag">centos</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/centos7/"><span class="tag">centos7</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/certified/"><span class="tag">certified</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ci-cd/"><span class="tag">ci-cd</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/clean/"><span class="tag">clean</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/clone/"><span class="tag">clone</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/closure/"><span class="tag">closure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cloud/"><span class="tag">cloud</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cluster/"><span class="tag">cluster</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/code/"><span class="tag">code</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/collect/"><span class="tag">collect</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/community/"><span class="tag">community</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/concat/"><span class="tag">concat</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/consolas/"><span class="tag">consolas</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/container/"><span class="tag">container</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/cqrs/"><span class="tag">cqrs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/data-management/"><span class="tag">data_management</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/datatype/"><span class="tag">datatype</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deep-dive/"><span class="tag">deep_dive</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/delimiter/"><span class="tag">delimiter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deploy/"><span class="tag">deploy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/deployment/"><span class="tag">deployment</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/design/"><span class="tag">design</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/developer/"><span class="tag">developer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/docker/"><span class="tag">docker</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/editor/"><span class="tag">editor</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/emoji/"><span class="tag">emoji</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/error/"><span class="tag">error</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/event-driven/"><span class="tag">event_driven</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/event-sourcing/"><span class="tag">event_sourcing</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/evernote/"><span class="tag">evernote</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/exam/"><span class="tag">exam</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/exception/"><span class="tag">exception</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/eye/"><span class="tag">eye</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/faas/"><span class="tag">faas</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/favicon/"><span class="tag">favicon</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/filter/"><span class="tag">filter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fold/"><span class="tag">fold</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/font/"><span class="tag">font</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/foo/"><span class="tag">foo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/fork/"><span class="tag">fork</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/framework/"><span class="tag">framework</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/functional-interface/"><span class="tag">functional_interface</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/functional-programming/"><span class="tag">functional_programming</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gce/"><span class="tag">gce</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gcp/"><span class="tag">gcp</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/generics/"><span class="tag">generics</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/github/"><span class="tag">github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gitlab/"><span class="tag">gitlab</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/gke/"><span class="tag">gke</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google/"><span class="tag">google</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-cloud-platform/"><span class="tag">google_cloud_platform</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/google-cloud-summit/"><span class="tag">google_cloud_summit</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/googlebot/"><span class="tag">googlebot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hadoop/"><span class="tag">hadoop</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/health/"><span class="tag">health</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo/"><span class="tag">hexo</span><span class="tag">20</span></a></div><div class="control"><a class="tags has-addons" href="/tags/highest-salaries/"><span class="tag">highest_salaries</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hosting/"><span class="tag">hosting</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/https/"><span class="tag">https</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hueman/"><span class="tag">hueman</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/infrastructure/"><span class="tag">infrastructure</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/install/"><span class="tag">install</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/installation/"><span class="tag">installation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/inter-process-communication/"><span class="tag">inter_process_communication</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/introduction/"><span class="tag">introduction</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ios/"><span class="tag">ios</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ipc/"><span class="tag">ipc</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/issue/"><span class="tag">issue</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iterm2/"><span class="tag">iterm2</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java/"><span class="tag">java</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/java-11/"><span class="tag">java_11</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/javascript/"><span class="tag">javascript</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/jdk/"><span class="tag">jdk</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kube-backup/"><span class="tag">kube_backup</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/kubernetes/"><span class="tag">kubernetes</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lambda/"><span class="tag">lambda</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/latest/"><span class="tag">latest</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lazy-invocation/"><span class="tag">lazy_invocation</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/linux/"><span class="tag">linux</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/lts/"><span class="tag">lts</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mac/"><span class="tag">mac</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macos/"><span class="tag">macos</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/major/"><span class="tag">major</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/map/"><span class="tag">map</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mariadb/"><span class="tag">mariadb</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/markdown/"><span class="tag">markdown</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/medium/"><span class="tag">medium</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/message/"><span class="tag">message</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/metatag/"><span class="tag">metatag</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/method-references/"><span class="tag">method_references</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/microservices/"><span class="tag">microservices</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/middleware/"><span class="tag">middleware</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/minor/"><span class="tag">minor</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/monolith/"><span class="tag">monolith</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/monospaced/"><span class="tag">monospaced</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/msa/"><span class="tag">msa</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/multiple/"><span class="tag">multiple</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/mysql/"><span class="tag">mysql</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/n/"><span class="tag">n</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/namecard/"><span class="tag">namecard</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/naver/"><span class="tag">naver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/netflix/"><span class="tag">netflix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/network/"><span class="tag">network</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nodejs/"><span class="tag">nodejs</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/nonblocking/"><span class="tag">nonblocking</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/npki/"><span class="tag">npki</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/npm/"><span class="tag">npm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/null-safe/"><span class="tag">null_safe</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/object/"><span class="tag">object</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/observer/"><span class="tag">observer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ohmyzsh/"><span class="tag">ohmyzsh</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/open-source/"><span class="tag">open_source</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/opengraph/"><span class="tag">opengraph</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/optional/"><span class="tag">optional</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/osx/"><span class="tag">osx</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pagerank/"><span class="tag">pagerank</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pages/"><span class="tag">pages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/parallel/"><span class="tag">parallel</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/patch/"><span class="tag">patch</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pattern/"><span class="tag">pattern</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plugin/"><span class="tag">plugin</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plugins/"><span class="tag">plugins</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/plusoperator/"><span class="tag">plusoperator</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pomodoro/"><span class="tag">pomodoro</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/postach/"><span class="tag">postach</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/practies/"><span class="tag">practies</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/program/"><span class="tag">program</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming/"><span class="tag">programming</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming-font/"><span class="tag">programming_font</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/programming-languages/"><span class="tag">programming_languages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pull-request/"><span class="tag">pull_request</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/re-invent/"><span class="tag">re-invent</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/readingtime/"><span class="tag">readingtime</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/record/"><span class="tag">record</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/reduce/"><span class="tag">reduce</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/refactoring/"><span class="tag">refactoring</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/release/"><span class="tag">release</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/repository/"><span class="tag">repository</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/sample/"><span class="tag">sample</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/scala/"><span class="tag">scala</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/search/"><span class="tag">search</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/security/"><span class="tag">security</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/semver/"><span class="tag">semver</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/seo/"><span class="tag">seo</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/seoul/"><span class="tag">seoul</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/server/"><span class="tag">server</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/serverless/"><span class="tag">serverless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/service-discovery/"><span class="tag">service_discovery</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/serviceful-serverless/"><span class="tag">serviceful_serverless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/settings/"><span class="tag">settings</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/simplified/"><span class="tag">simplified</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/snapshot/"><span class="tag">snapshot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/social/"><span class="tag">social</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spark/"><span class="tag">spark</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring/"><span class="tag">spring</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring-boot/"><span class="tag">spring-boot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/spring-boot/"><span class="tag">spring_boot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/springboot/"><span class="tag">springboot</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ssl/"><span class="tag">ssl</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stable/"><span class="tag">stable</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/start/"><span class="tag">start</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/strategy/"><span class="tag">strategy</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/streams/"><span class="tag">streams</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/string/"><span class="tag">string</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringbuffer/"><span class="tag">stringbuffer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringbuilder/"><span class="tag">stringbuilder</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/stringjoiner/"><span class="tag">stringjoiner</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/support/"><span class="tag">support</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/swift/"><span class="tag">swift</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tag/"><span class="tag">tag</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/terminal/"><span class="tag">terminal</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/theme/"><span class="tag">theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/thread/"><span class="tag">thread</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/time/"><span class="tag">time</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/timer/"><span class="tag">timer</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/tls/"><span class="tag">tls</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/twitter/"><span class="tag">twitter</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/type-inference/"><span class="tag">type_inference</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/uml/"><span class="tag">uml</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/unix/"><span class="tag">unix</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/update/"><span class="tag">update</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/upgrade/"><span class="tag">upgrade</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/usage/"><span class="tag">usage</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable/"><span class="tag">variable</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/variable-scope/"><span class="tag">variable_scope</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/velocity/"><span class="tag">velocity</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/version/"><span class="tag">version</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/versioning/"><span class="tag">versioning</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/verticle/"><span class="tag">verticle</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vertx/"><span class="tag">vertx</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/virtual-machine/"><span class="tag">virtual_machine</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/virtualization/"><span class="tag">virtualization</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/vm/"><span class="tag">vm</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/web/"><span class="tag">web</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webfont/"><span class="tag">webfont</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/webmaster/"><span class="tag">webmaster</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/why/"><span class="tag">why</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/windows/"><span class="tag">windows</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/wordcount/"><span class="tag">wordcount</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/worker/"><span class="tag">worker</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/writing/"><span class="tag">writing</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/yaml/"><span class="tag">yaml</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/zsh/"><span class="tag">zsh</span><span class="tag">1</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">Subscribe for updates</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="Subscribe"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Eric Han</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
         },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-</div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
-    
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">Programming</em>
-    </h1>
-</div>
-                        <div class="main-body-content">
-                            
-    
-        
-            
-                
-                        
-                            <section class="archives-wrap">
-                                <div class="archive-year-wrap">
-                                    <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>
-                                        2018
-                                    </a>
-                                </div>
-                                <div class="archives">
-                                    
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-14T12:04:59.000Z" itemprop="datePublished">2018/06/14</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/14/variety-of-markdown-and-Implementations/">마크다운의 종류와 선택</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            저는 여러 정보나 생각을 글로 정리하길 좋아합니다. 마크다운(Markdown)은 이러한 목적에 정확하게 부합하는 툴입니다. 애초에 네이버나 티스토리가 아닌 Hexo 로 블로그를 시작한 것도 마크다운을 지원하기 때문이었습니다. 오늘은 마크다운의 종류에 대해서 알아보겠습니다.
-Markdown
-마크다운은 2014년 존 그루버(John Gruber)와 아론 스워츠
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-11T13:02:09.000Z" itemprop="datePublished">2018/06/11</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/11/about-clean-code/">클린코드가 시작되는 곳</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            사내강사로 여러 교육을 진행했지만, 저 스스로에게도 도움이 되었던 강의는 클린코드 확산 교육이었습니다. 이는 작년에 클린코드 교육을 진행하면서 느꼈던 점을 적어본 글입니다.
-기술적 부채
-Technical Debt라는 용어가 있습니다. 기술적인 부채, 즉 기술적인 '빚’입니다. 개발하면서 빚을 질 수 있을까요? 네, 우리는 개발을 하면서 빚을 지고 있습니다.
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-09T15:55:05.000Z" itemprop="datePublished">2018/06/10</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/10/medium-writing-paradigm-shift/">Medium, 글쓰기의 새로운 패러다임</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            이 블로그는 IT 와 개발에 관련된 주제를 블로그입니다. 기술 외적인 주제나 내 자신의 이야기를 쓰고 싶어졌고, 새로운 블로그를 만들기 위해서 서비스를 둘러봤습니다. '브런치’와 '미디엄(Medium)'이 제일 눈에 들어오더군요. 두 서비스 모두 글쓰기 자체에 초점을 맞춘 서비스였습니다. 그리고 브런치는 미디엄을 벤치마킹한 서비스라고 하더군요.
-미디엄과 브
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-07T13:24:42.000Z" itemprop="datePublished">2018/06/07</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/07/computer-system-time/">컴퓨터 시간의 1970년은 무슨 의미일까?</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Java 에서 시간을 다루는 클래스인 java.util.Date 클래스를 쓰다가 문득 의문이 들었습니다. 다음은 현재 시간을 가져오는 getTime() 메소드인데요, 왜 1970년 1월 1일 기준일까요? 그리고 왜 milliseconds 기준일까요?
-
-public long getTime()
-Returns the number of milliseconds si
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Apple/">Apple</a>
-            </p>
-            <p class="date"><time datetime="2018-06-07T11:20:57.000Z" itemprop="datePublished">2018/06/07</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/07/macos-npki-location/">macOS 공인인증서는 어디에 있을까?</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            저 또한 macOS 를 잘 사용하고 있지만 한 가지 불편한 점이 있다면 공인인증서입니다. 예전엔 macOS 에서 인터넷 뱅킹 및 여러 금융사에 접속하기조차 안되는 경우도 있었지만, 지금은 웬만한 금융사는 macOS 와 safari 에서도 원활하게 접속하도록 지원하고 있습니다.
-다만 공인인증서 관련된 기능 중 하나가 공인인증서 복사인데 이 기능이 Window
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-05T12:55:38.000Z" itemprop="datePublished">2018/06/05</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/05/metasyntactic-variables-foo-bar/">foo, bar 의 어원을 찾아서</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            프로그래밍을 하다보면 책이나 웹 사이트의 예제 코드에서 foo, bar 와 같은 문자를 흔히 볼 수 있는데요, 변수명 또는 함수명을 짓거나 간단한 문자열 값이 필요한데 딱히 쓸 말이 없을 때 주로 사용하는 문자들입니다.
-이런 문자들을 Metasyntactic variable 이라고 합니다. 굳이 우리말로 하자면 ‘메타문법적 변수’ 라고나 할까요. 그런데 왜
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Column/">Column</a>
-            </p>
-            <p class="date"><time datetime="2018-06-05T12:40:08.000Z" itemprop="datePublished">2018/06/05</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/05/pomodoro-technique-bear-focus-timer/">집중력을 유지하는 뽀모도로 테크닉</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            제가 최대 관심사 중 하나는 바로 집중력입니다. 주어진 시간은 한정적이고 나의 체력과 주의 또한 한정적이기 때문에, 이를 '어떻게 효율적으로 사용할 것인가’를 중요하게 생각합니다. 어영부영 하루를 보내고 잠자리에 누워서 오늘 하루 뭘 한지도 모른 채 후회 속에서 잠이 들기엔 하루가 너무 아까우니까요.
-잦은 휴식을 이용한 체력/집중력 유지
-누구나 집중력을 높
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-05T12:22:22.000Z" itemprop="datePublished">2018/06/05</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/05/jdk-installation-for-linux-centos7/">CentOS7 JDK 설치 및 버전 관리</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다.
-설치 파일 다운로드
-JDK 다운로드 페이지 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다.
-다른 방법으로는 웹 상의 파
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-        
-            
-                                        
-                                            
-                                                <div class="article-row">
-                                                    
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-04T12:40:27.000Z" itemprop="datePublished">2018/06/04</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/04/java-observer-pattern/">Java 옵저버 패턴 (Observer Pattern)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            하나 혹은 여러 클래스가 어떤 클래스의 상태 변화에 따라 동작해야하는 경우를 생각해봅시다.
-예를 하나 들어보겠습니다. 제가 요즘 재밌게 보고 있는 페이지 중 ‘책 끝을 접다’ 라는 페이지가 있습니다. 책 소개해주는 페이지인데 흥미진진하게 소개를 해줘서 책을 사고 싶게 만드는 걸로 유명합니다. 저는 이 페이지에 신규 컨텐츠가 등록되었는지 종종 들어가서 확인해
-        </p>
-    </div>
-</article>
-                                                            
-                                                    
-        
-            
-                                        
-                                            
-                                                        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <p class="category">
-            <a class="article-category-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Programming/Java/">Java</a>
-            </p>
-            <p class="date"><time datetime="2018-06-01T15:34:23.000Z" itemprop="datePublished">2018/06/02</time></p>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/06/02/java-string-joiner/">Java StringJoiner (문자열 구분자 붙이기)</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            StringBuilder 또는 StringBuffer 를 사용하다보면 중간 중간에 공백(문자)을 넣어야하는 경우에는 귀찮고 가독성도 떨어지는 면이 있습니다. 혹시나 하고 봤더니 Java 8 에 추가된 StringJoiner 라는 클래스가 있더라구요. 쓸만한 것 같아서 소개드립니다.
-StringJoiner 는 여러 문자들을 연결할 때 붙일 구분자(delimi
-        </p>
-    </div>
-</article>
-                                                            
-                                                </div>
-                                                
-                                                    
-                                                        
-                                </div>
-                            </section>
-                            
-                                
-                                    <nav id="page-nav">
-                                        <span class="pages">
-                                            Page 4 
-                                                of 6
-                                        </span>
-                                        <a class="extend prev" rel="prev" href="/categories/Programming/page/3/">&lt;</a><a class="page-number" href="/categories/Programming/">1</a><a class="page-number" href="/categories/Programming/page/2/">2</a><a class="page-number" href="/categories/Programming/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/categories/Programming/page/5/">5</a><a class="page-number" href="/categories/Programming/page/6/">6</a><a class="extend next" rel="next" href="/categories/Programming/page/5/">&gt;</a>
-                                    </nav>
-                                    
-
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>follow:</p>
-        <ul class="social-links">
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
-                        <i class="icon fa fa-rss"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-    
-    <div class="widgets-container">
-        
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <!-- <img src="/images/logo/writer/xingkai.png"> -->
-                <p>&copy; 2026 Eric Han</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-        
-    
-    <script>
-    var disqus_shortname = 'futurecreator';
-    
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-
-
-
-
-
-<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
-
-
-<script src="/vendor/scrollLoading/main.js"></script>
-
-
-
-
-<!-- Custom Scripts -->
-
-<script src="/js/main.js"></script>
-
-
-    </div>
-</body>
-</html>
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>
