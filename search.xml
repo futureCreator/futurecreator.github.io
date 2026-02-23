@@ -1192,9 +1192,9 @@
             
             <tag> lambda </tag>
             
-            <tag> functional_interface </tag>
-            
             <tag> type_inference </tag>
+            
+            <tag> functional_interface </tag>
             
         </tags>
       
