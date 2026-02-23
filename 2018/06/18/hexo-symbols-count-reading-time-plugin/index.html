@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+    <title>
+      
+        Hexo 글자 수와 리딩 타임 추가하기 |
+          
+            Eric Han&#39;s IT Blog
+    </title>
+    <link rel="canonical" href="https://futurecreator.github.io/2018/06/18/hexo-symbols-count-reading-time-plugin/">
+      
+          
+            <link rel="icon" href="/images/favicions/favicon6.png">
+            
+              
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+                
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+                  
+<link rel="stylesheet" href="/css/style.css">
+
+                    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+                      
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+                        <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Hexo/">Hexo</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-hexo-symbols-count-reading-time-plugin" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo 글자 수와 리딩 타임 추가하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/18/hexo-symbols-count-reading-time-plugin/" class="article-date">
+    <time datetime="2018-06-18T13:47:22.000Z" itemprop="datePublished">2018/06/18</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              8 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>블로그 서비스인 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://medium.com/">Medium</a> 은 글을 읽을 때 소요될 시간을 미리 표시해줍니다. 독자들이 이 글을 읽는데 얼마나 소요될지를 미리 파악함으로써, 글의 질을 예측해볼 수 있고 이 글을 계속 읽을지 말지를 결정하는데 도움이 됩니다.</p>
+<p><img src="medium.png" alt="https://medium.com/s/trustissues/a-new-tech-manifesto-21d251058af3"></p>
+<p>소소하지만 탐나는 기능이었습니다. Hexo 블로그에는 이런 기능이 없나 살펴봤더니 역시나 있었습니다. 이번 포스팅에서는 글자 수와 읽을 때 소요되는 시간을 보여주는 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/theme-next/hexo-symbols-count-time">hexo-symbols-count-time</a> 플러그인을 적용해보겠습니다.</p>
+<h2 id="설치-및-설정하기">설치 및 설정하기</h2>
+<p>설치는 다른 여타 플러그인과 마찬가지로 간단합니다.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install hexo-symbols-count-time --save</span></span><br></pre></td></tr></table></figure>
+<p>블로그 루트 폴더에 있는 <code>_config.yml</code> 에 설정 내용을 추가합니다.</p>
+<figure class="highlight yaml"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h2 id="사용하기">사용하기</h2>
+<p>세부적인 설정에 앞서서 잘 나오는지부터 테스트해보겠습니다. 해당 플러그인은 다음 세 가지 방식의 렌더러를 지원합니다.</p>
+<ul>
+<li>EJS: &lt;%- template %&gt;</li>
+<li>SWIG / Nunjucks: </li>
+<li>Jade: span= template</li>
+</ul>
+<p>제가 사용하는 Hueman 테마는 ejs 를 사용합니다. 일단 적당한 곳에 추가를 해보겠습니다. <code>article.ejs</code> 를 열어 <code>footer</code> 위에 다음과 같이 추가해보겠습니다.</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Symbols Count : &lt;%- symbolsCount(post.content) %&gt;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">Symbols Time : &lt;%- symbolsTime(post.content) %&gt;<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>결과는 다음과 같이 잘 나오네요. 다른 테마를 사용하시는 분들도 테마 폴더에 있는 레이아웃 중에 원하시는 곳에 추가하시면 됩니다.</p>
+<p><img src="test1.png" alt></p>
+<h2 id="계산-방식">계산 방식</h2>
+<p>조금 더 세부적으로 살펴보겠습니다. 이 플러그인은 현재 포스트 (혹은 사이트 전체)의 글자수를 세고, 이 글자수를 바탕으로 단어가 몇 개인지 파악합니다. 이 때 설정하는 값이 <strong>AWL (평균단어길이)</strong> 입니다. 단어가 몇 개 정도인지 파악한 후에 1분 당 읽을 수 있는 글자수, 즉 읽는 속도를 바탕으로 읽는데 예상 소요 시간을 계산합니다. 이때 이 읽는 속도가 <strong>WPM (분당 읽는 단어)</strong> 입니다.</p>
+<ul>
+<li>AWL (<em>Average Word Length</em>) : 평균 단어 길이. 기본값은 4.</li>
+<li>WPM (<em>Words Per Minute</em>) : 분당 읽을 수 있는 단어. 즉 읽는 속도. 기본값은 275.</li>
+</ul>
+<p>따라서, 만약 글자수가 4000개라면 -&gt; 1000단어라고 보고 -&gt; 분당 275단어니까 읽는 시간은 3.6분 정도로 계산하는 식입니다.</p>
+<h2 id="설정-변경하기">설정 변경하기</h2>
+<p>일단 추가한 위치를 수정해야겠습니다. 사용자가 본문을 읽기 전에 이 글의 양이 어느정도 되는지 전달하기 위해서는 제목 바로 아래에 추가하는 것이 더 좋겠네요. 다음으로 글자 수 자체로는 이 포스트의 양을 판단하기에 썩 도움이 되지 않을 것 같습니다. 그보다는 읽을 때 어느 정도 시간이 걸릴 지 소요되는 시간을 알려주는 것이 더 가치있는 정보일 것입니다. 그래서 저는 해당 포스트의 시간 정보만 보여주도록 설정하겠습니다.</p>
+<p>그렇다면 평균 단어 길이(<em>AWL</em>)와 분당 글자 수(<em>WPM</em>)는 어떨까요? 한글 기준으로 띄어쓰기를 생각해본다면 평균적으로 3~5글자 정도인 것 같으니 디폴트 값인 4글자로 충분할 것 같습니다. 하지만 IT 블로그 특성 상 영어와 코드가 섞여 있기 때문에 글 읽는 속도인 WPM 은 좀 줄여서 210 정도로 설정하겠습니다.</p>
+<p>해당 내용을 반영하여 <code>article.ejs</code> 파일에 다음과 같이 추가합니다. 저는 이모지를 이용해서 시계를 넣었습니다.</p>
+<figure class="highlight html"><figcaption><span>article.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;article-subtitle&quot;</span>&gt;</span></span><br><span class="line">  &lt;%- partial(&#x27;post/date&#x27;, &#123; class_name: &#x27;article-date&#x27;, date_format: null &#125;) %&gt;</span><br><span class="line">  &lt;%- partial(&#x27;post/tag&#x27;) %&gt;</span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;reading-time&quot;</span>&gt;</span>⏱ &lt;%- symbolsTime(post.content, 4, 210, &#x27;분&#x27;) %&gt;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>그리고 왼쪽으로 여백을 주기 위해서 마진을 추가하겠습니다. <code>style.styl</code> 파일에 클래스를 추가합니다.</p>
+<figure class="highlight css"><figcaption><span>style.styl</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.reading-time</span></span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">15px</span></span><br></pre></td></tr></table></figure>
+<p>그럼 포스트 제목 아래에 다음과 같이 잘 나오는 걸 확인할 수 있습니다.</p>
+<p><img src="test2.png" alt="http://futurecreator.github.io/2018/06/16/record-terminal-asciinema/"></p>
+<p>템플릿에 적용한 거라 나중에 템플릿에서 이모지를 변경하면 이전 포스트와 새로운 포스트 모두 적용되니 수정하기도 좋습니다.</p>
+<p>이번 포스팅에서는 소소하지만 사용자에게 유용할만한 플러그인을 살펴봤습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>
+<a href="/2018/06/14/hexo-markdown-plugins/" title="Hexo 마크다운 플러그인 변경하기">Hexo 마크다운 플러그인 변경하기</a>
+</li>
+<li>
+<a href="/2018/06/12/hexo-change-font-on-hueman-theme/" title="Hexo 폰트 변경하기 (Hueman 테마)">Hexo 폰트 변경하기 (Hueman 테마)</a>
+</li>
+<li>
+<a href="/2018/06/11/generate-an-emoji-favicon/" title="이모지로 파비콘 Favicon 만들기">이모지로 파비콘 Favicon 만들기</a>
+</li>
+<li>
+<a href="/2016/06/23/search-engine-optimization-hexo-plugins/" title="검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인">검색 엔진 최적화(SEO)에 유용한 Hexo 플러그인</a>
+</li>
+<li>
+<a href="/2016/06/19/hexo-tag-plugins/" title="Hexo 태그 플러그인 (Tag plugins) 살펴보기">Hexo 태그 플러그인 (Tag plugins) 살펴보기</a></li>
+</ul>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/20/hexo-twitter-plugin/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            Hexo 트위터 연동 플러그인
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/16/record-terminal-asciinema/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">터미널을 보기 쉽게 녹화하기</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2026 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/18/hexo-symbols-count-reading-time-plugin/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

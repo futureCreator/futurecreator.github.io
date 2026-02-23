@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+    <title>
+      
+        CentOS7 JDK 설치 및 버전 관리 |
+          
+            Eric Han&#39;s IT Blog
+    </title>
+    <link rel="canonical" href="https://futurecreator.github.io/2018/06/05/jdk-installation-for-linux-centos7/">
+      
+          
+            <link rel="icon" href="/images/favicions/favicon6.png">
+            
+              
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+                
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+                  
+<link rel="stylesheet" href="/css/style.css">
+
+                    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+                      
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+                        <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Java/">Java</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-jdk-installation-for-linux-centos7" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        CentOS7 JDK 설치 및 버전 관리
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2018/06/05/jdk-installation-for-linux-centos7/" class="article-date">
+    <time datetime="2018-06-05T12:22:22.000Z" itemprop="datePublished">2018/06/05</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              11 분
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>급하게 Linux 서버에 JDK 를 설치할 일이 생겼습니다. CentOS 에서는 JDK를 어떻게 설치하고 버전을 관리하는지 살펴보겠습니다.</p>
+<h2 id="설치-파일-다운로드">설치 파일 다운로드</h2>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">JDK 다운로드 페이지</a> 에서 리눅스 버전용 JDK를 다운로드 받을 수 있습니다. 32비트, 64비트를 확인해서 받으신 후 WinSCP 같은 FTP 툴을 이용해서 옮깁니다.</p>
+<p>다른 방법으로는 웹 상의 파일 다운로드 명령어인 <code>wget</code> 을 이용해서 바로 받을 수 있습니다. 다운로드 페이지에서 원하는 버전 다운로드 링크 주소를 복사해서 다음처럼 명령어를 입력하시면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget --no-check-certificate --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<p>혹시나 <code>wget</code> 이 없다면 다음 명령어로 설치하시면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yum install wget -y</span><br></pre></td></tr></table></figure>
+<h2 id="설치하기">설치하기</h2>
+<p>설치는 그냥 원하시는 폴더에 압축을 풀면 끝납니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># 디렉토리 생성</span><br><span class="line">$ mkdir /usr/local/java</span><br><span class="line"></span><br><span class="line"># 파일 이동</span><br><span class="line">$ mv jdk-8u171-linux-x64.tar.gz /usr/local/java</span><br><span class="line"></span><br><span class="line"># 압축 해제</span><br><span class="line">$ tar xvzf jdk-8u171-linux-x64.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="버전-관리하기">버전 관리하기</h2>
+<p><code>alternatives</code> 명령어는 심볼릭 링크를 관리할 수 있는 툴입니다. 이를 이용해서 설치된 자바 버전 중 필요한 자바 버전을 선택해 심볼릭 링크를 설정해줄 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives</span><br><span class="line">alternatives version 1.7.4 - Copyright (C) 2001 Red Hat, Inc.</span><br><span class="line">This may be freely redistributed under the terms of the GNU Public License.</span><br><span class="line"></span><br><span class="line">usage: alternatives --install &lt;link&gt; &lt;name&gt; &lt;path&gt; &lt;priority&gt;</span><br><span class="line">                    [--initscript &lt;service&gt;]</span><br><span class="line">                    [--family &lt;family&gt;]</span><br><span class="line">                    [--slave &lt;link&gt; &lt;name&gt; &lt;path&gt;]*</span><br><span class="line">       alternatives --remove &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --auto &lt;name&gt;</span><br><span class="line">       alternatives --config &lt;name&gt;</span><br><span class="line">       alternatives --display &lt;name&gt;</span><br><span class="line">       alternatives --set &lt;name&gt; &lt;path&gt;</span><br><span class="line">       alternatives --list</span><br><span class="line"></span><br><span class="line">common options: --verbose --test --help --usage --version --keep-missing</span><br><span class="line">                --altdir &lt;directory&gt; --admindir &lt;directory&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-생성하기">심볼릭 링크 생성하기</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --install /usr/bin/java java /usr/local/java/jdk1.8.0_171/bin/java 1</span><br><span class="line">$ alternatives --install /usr/bin/java javac /usr/local/java/jdk1.8.0_171/bin/javac 1</span><br><span class="line">$ alternatives --install /usr/bin/java javaws /usr/local/java/jdk1.8.0_171/bin/javaws 1</span><br><span class="line"></span><br><span class="line">$ alternatives --set java /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">$ alternatives --set javac /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">$ alternatives --set javaws /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-설정하기">심볼릭 링크 설정하기</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br></pre></td></tr></table></figure>
+<p>위 명령어를 입력하면 java 로 정의된 심볼릭 링크들을 볼 수 있는데 제가 몇 번 삽질해서 잘못 등록한 자바 버전들을 볼 수 있습니다. 여기서 특정 버전을 골라서 선택할 수 있습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --config java</span><br><span class="line"></span><br><span class="line">There are 4 programs which provide &#x27;java&#x27;.</span><br><span class="line"></span><br><span class="line">  Selection    Command</span><br><span class="line">-----------------------------------------------</span><br><span class="line"> + 1           /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">   2           /usr/local/java/jdk1.8.0_112/bin/java</span><br><span class="line">*  3           /bin/java</span><br><span class="line">   4           /usr/local/java/jdk1.8.0_171//bin/java</span><br><span class="line"></span><br><span class="line">Enter to keep the current selection[+], or type selection number:</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-삭제">심볼릭 링크 삭제</h3>
+<p>잘못 등록한 심볼릭 링크를 삭제해보겠습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --remove java /usr/local/java/jdk1.8.0_171//bin/java</span><br></pre></td></tr></table></figure>
+<h3 id="심볼릭-링크-리스트-조회">심볼릭 링크 리스트 조회</h3>
+<p><code>--list</code> 옵션으로 잘 정의되었는지 확인해보겠습니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ alternatives --list</span><br><span class="line">java    manual  /usr/local/java/jdk1.8.0_171/bin/java</span><br><span class="line">javac   manual  /usr/local/java/jdk1.8.0_171/bin/javac</span><br><span class="line">javaws  manual  /usr/local/java/jdk1.8.0_171/bin/javaws</span><br></pre></td></tr></table></figure>
+<h2 id="JAVA-HOME-환경변수-설정하기">JAVA_HOME 환경변수 설정하기</h2>
+<p><code>/etc/profile</code> 파일 밑에 다음 명령어를 추가하시면 됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/profile</span><br><span class="line">export JAVA_HOME=$(readlink -f /usr/bin/java | sed &quot;s:bin/java::&quot;)</span><br><span class="line"></span><br><span class="line"># 변경 사항 반영</span><br><span class="line">$ . /etc/profile</span><br></pre></td></tr></table></figure>
+<h2 id="설치-확인하기">설치 확인하기</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ java -version</span><br><span class="line"></span><br><span class="line">java version &quot;1.8.0_171&quot;</span><br><span class="line">Java(TM) SE Runtime Environment (build 1.8.0_171-b11)</span><br><span class="line">Java HotSpot(TM) Client VM (build 25.171-b11, mixed mode)</span><br></pre></td></tr></table></figure>
+<p>이상으로 CentOS 7 에서 JDK 를 설치하고 버전 관리하는 법을 알아봤습니다.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/06/05/pomodoro-technique-bear-focus-timer/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            집중력을 유지하는 뽀모도로 테크닉
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/06/04/java-observer-pattern/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Java 옵저버 패턴 (Observer Pattern)</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2026 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2018/06/05/jdk-installation-for-linux-centos7/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>

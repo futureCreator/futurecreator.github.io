@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans+Mono">
+  
+    <title>
+      
+        스위프트(Swift) 시작하기 |
+          
+            Eric Han&#39;s IT Blog
+    </title>
+    <link rel="canonical" href="https://futurecreator.github.io/2016/06/27/swift-get-started/">
+      
+          
+            <link rel="icon" href="/images/favicions/favicon6.png">
+            
+              
+<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+
+                
+<link rel="stylesheet" href="/vendor/score-dream/css/styles.css">
+
+                  
+<link rel="stylesheet" href="/css/style.css">
+
+                    
+<script src="/vendor/jquery/2.0.3/jquery.min.js"></script>
+
+                      
+
+
+<link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
+
+
+
+
+<link rel="stylesheet" href="/vendor/scrollLoading/style.css">
+
+
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-79199094-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+
+
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script>
+                        <meta name="naver-site-verification" content="3b37509fddeb6247d17fb82c1e7fc2c2b51417d1">
+<meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/">
+                                                Home
+                                            </a>
+                                        </li>
+                                        
+                                <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Cloud/">Cloud</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Hexo/">Hexo</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/">Programming</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Apple/">Apple</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Column/">Column</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Java/">Java</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/JavaScript/">JavaScript</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/MSA/">MSA</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Spark/">Spark</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Vert-x/">Vert.x</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Programming/Web/">Web</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Reviews/">Reviews</a></li></ul>
+                                    
+                                        <li class="main-nav-list-item">
+                                            <a class="main-nav-list-link" href="/about">
+                                                About
+                                            </a>
+                                        </li>
+                                        
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something...">
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Programming/">Programming</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/Programming/Apple/">Apple</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-swift-get-started" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        스위프트(Swift) 시작하기
+        </h1>
+    
+
+      </header>
+      
+        <div class="article-subtitle">
+          🗓
+          <a href="/2016/06/27/swift-get-started/" class="article-date">
+    <time datetime="2016-06-27T14:50:15.000Z" itemprop="datePublished">2016/06/27</time>
+</a>
+            <span class="reading-time">⏰ 소요시간
+              1:34
+            </span>
+        </div>
+
+        <div class="article-entry" itemprop="articleBody">
+          <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="About-Swift">About Swift</h2>
+<blockquote><p>Swift is a new programming language for iOS, OS X, watchOS, and tvOS apps that builds on the best of C and Objective-C, without the constraints of C compatibility</p>
+<footer><strong>Apple Inc.</strong><cite>The Swift Programming Language</cite></footer></blockquote>
+<p>iOS 개발을 시작하면서 스위프트 (Swift) 공부를 시작했습니다. 스위프트는 애플이 새롭게 소개한 iOS, OS X 개발을 위한 언어입니다. 새로운 언어로의 전환은 굉장히 큰 일이죠. 구글이 안드로이드를 만드는 언어로 자바와 완전히 호환되는 새로운 언어를 공개한다고 상상해보니 이게 얼마나 중요한 일인지 더 와닿는 것 같습니다. 처음 시작하는 저에게는 Objective-C 나 스위프트나 새롭기는 매한가지지만, 이왕 배우려면 스위프트를 배우는 게 낫겠죠?</p>
+<p>스위프트를 간단히 공부해보면서 느낀 점은 두 가지입니다. <strong>재밌다, 그리고 생소하다.</strong> 세미콜론도 없고 간단한 syntax 는 불필요한 작업 없이 코드를 빠르게 작성하게 해주었습니다. 스위프트 (Swift; 재빠른, 신속한)의 이름만 봐도 알 수 있죠. 하지만 생략할 수 있는 부분이 많다보니, 같은 코드라도 여러 가지로 표현이 가능했습니다. 생산성이 높아지겠지만 읽기가 어려웠습니다. 물론 자바도 개발자마다 코딩 스타일이 달라서 프로젝트마다 코딩 스타일 가이드가 있긴 합니다만 이 정도로 다르진 않았습니다. 게다가 너무 줄여놓으면 다른 사람이 만든 코드를 읽기가 어려울 것 같았습니다. 유지보수를 위해 소스의 가독성이 높은 코드가 인정을 받았다면 이제는 생산성이 더 중요한 것인가 싶기도 합니다.</p>
+<p>애플이 만든 Swift 공식 가이드를 iBooks 에서 다운받을 수 있었습니다. 혹은 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://developer.apple.com/library/ios/documentation/Swift/Conceptual/Swift_Programming_Language/index.html#//apple_ref/doc/uid/TP40014097-CH3-ID0">애플 개발자 홈페이지</a> 에서 확인가능합니다. 그래서 공부할 자료가 따로 필요 없었죠. 한 문장 한 문장 번역을 할 순 없을 것 같고 코드만 가져오겠습니다. 가이드 내에 있는 모든 코드를 작성해보고 공부한 내용을 정리하는 식으로 진행하려고 합니다. 좋은 책은 예제에 모든 내용을 함축하고 있다고 생각하거든요.</p>
+<h2 id="Swift-Tour">Swift Tour</h2>
+<p>첫 장은 Swift Tour 입니다. 자세한 설명보다는 전체적으로 스위프트를 훑어보는 장이군요. 먼저 ‘Hello, world!’ 를 출력해봅시다. 세미콜론을 생략할 수 있습니다. 세미콜론 안쓰는게 처음에는 낯설었는데 금방 익숙해지네요.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello, World!&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Simple-Values">Simple Values</h3>
+<p>변수는 값을 할당한 후 변경이 가능하고, 상수는 값을 한번만 할당 가능합니다. 변수와 상수 모두 선언 시 반드시 값을 할당해야 합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 변수</span></span><br><span class="line"><span class="keyword">var</span> myVariable <span class="operator">=</span> <span class="number">42</span></span><br><span class="line">myVariable <span class="operator">=</span> <span class="number">50</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 상수</span></span><br><span class="line"><span class="keyword">let</span> myConstant <span class="operator">=</span> <span class="number">42</span></span><br></pre></td></tr></table></figure>
+<p>타입 선언입니다. 타입을 지정하지 않으면 초기값으로 타입을 유추합니다. 타입이 맞지 않으면 에러가 납니다. 타입은 한번 정해지면 변경할 수 없습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> implicitInteger <span class="operator">=</span> <span class="number">70</span></span><br><span class="line"><span class="keyword">let</span> implicitDouble <span class="operator">=</span> <span class="number">70.0</span></span><br><span class="line"><span class="keyword">let</span> explicitDouble: <span class="type">Double</span> <span class="operator">=</span> <span class="number">70</span></span><br><span class="line"><span class="keyword">let</span> explicitFloat: <span class="type">Float</span> <span class="operator">=</span> <span class="number">4</span> <span class="comment">// 타입 에러</span></span><br></pre></td></tr></table></figure>
+<p>타입의 암묵적 변환은 할 수 없고 명시적으로만 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> label <span class="operator">=</span> <span class="string">&quot;The width is&quot;</span></span><br><span class="line"><span class="keyword">let</span> width <span class="operator">=</span> <span class="number">94</span></span><br><span class="line"><span class="keyword">let</span> widthLabel <span class="operator">=</span> label <span class="operator">+</span> <span class="type">String</span>(width)  <span class="comment">// 타입 변환</span></span><br><span class="line">widthLabel <span class="operator">=</span> label <span class="operator">+</span> width              <span class="comment">// 타입 에러</span></span><br></pre></td></tr></table></figure>
+<p>문자열 안에 값을 표현하려면 백슬래시() 안에 표현할 값을 넣습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> apples <span class="operator">=</span> <span class="number">3</span></span><br><span class="line"><span class="keyword">let</span> oranges <span class="operator">=</span> <span class="number">5</span></span><br><span class="line"><span class="keyword">let</span> appleSummary <span class="operator">=</span> <span class="string">&quot;I have <span class="subst">\(apples)</span> apples.&quot;</span></span><br><span class="line"><span class="keyword">let</span> fruitSummary <span class="operator">=</span> <span class="string">&quot;I have <span class="subst">\(apples <span class="operator">+</span> oranges)</span> pieces of fruit.&quot;</span></span><br></pre></td></tr></table></figure>
+<p>배열 (Array)은 인덱스 (index)를 가지고 순차적으로 값을 저장하는 자료구조입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> shoppingList <span class="operator">=</span> [<span class="string">&quot;catfish&quot;</span>, <span class="string">&quot;water&quot;</span>, <span class="string">&quot;tulips&quot;</span>, <span class="string">&quot;blue paint&quot;</span>]</span><br><span class="line">shoppingList[<span class="number">1</span>] <span class="operator">=</span> <span class="string">&quot;bottle of water&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Dictionary 는 key 와 value 쌍으로 자료를 저장하는 자료구조입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> occupations <span class="operator">=</span> [</span><br><span class="line">    <span class="string">&quot;Malcolm&quot;</span>: <span class="string">&quot;Captain&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Kaylee&quot;</span>: <span class="string">&quot;Mechanic&quot;</span></span><br><span class="line">]</span><br><span class="line">occupations[<span class="string">&quot;Jayne&quot;</span>] <span class="operator">=</span> <span class="string">&quot;Public Relations&quot;</span></span><br></pre></td></tr></table></figure>
+<p>빈 배열과 Dictionary 를 만들려면 타입을 지정해서 초기화 함수를 사용합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> emptyArray <span class="operator">=</span> [<span class="type">String</span>]()</span><br><span class="line"><span class="keyword">let</span> emptyDictionary <span class="operator">=</span> [<span class="type">String</span>: <span class="type">Float</span>]()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 타입을 지정하기 전에는 다음과 같이 빈 값을 할당</span></span><br><span class="line">shoppingList <span class="operator">=</span> []</span><br><span class="line">occupations <span class="operator">=</span> [:]</span><br></pre></td></tr></table></figure>
+<h3 id="Control-Flow">Control Flow</h3>
+<p>조건문과 반복문을 알아봅시다.</p>
+<ul>
+<li>조건문
+<ul>
+<li><code>if</code></li>
+<li><code>switch</code></li>
+</ul>
+</li>
+<li>반복문
+<ul>
+<li><code>for-in</code></li>
+<li><code>for</code></li>
+<li><code>while</code></li>
+<li><code>repeat-while</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> individualScroes <span class="operator">=</span> [<span class="number">75</span>, <span class="number">42</span>, <span class="number">103</span>, <span class="number">87</span>, <span class="number">12</span>]</span><br><span class="line"><span class="keyword">var</span> teamScore <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> score <span class="keyword">in</span> individualScroes &#123;</span><br><span class="line">    <span class="keyword">if</span> score <span class="operator">&gt;</span> <span class="number">50</span> &#123;</span><br><span class="line">        teamScore <span class="operator">+=</span> <span class="number">3</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        teamScore <span class="operator">+=</span> <span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(teamScore)</span><br></pre></td></tr></table></figure>
+<h4 id="if">if</h4>
+<p>if 조건부에 오는 값은 반드시 Boolean 표현식이어야 합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> teamScore &#123; <span class="comment">// 타입 에러</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>타입 뒤에 물음표 (?) 를 붙이면 Optional 값이 됩니다. Optinal 값은 값이 없을 수도 있음을 의미합니다. 빈 값이라던가 의미 없는 값이라던가 하는 것도 결국 값이 있는 것이고, 값이 없다는 것은 아직 값이 할당되지 않은 상태를 명시적으로 표시하는 방법입니다. nil 은 값이 없음을 표현합니다 (기존의 null 을 생각하면 됩니다).</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> optionalString: <span class="type">String</span>? <span class="operator">=</span> <span class="string">&quot;Hello&quot;</span></span><br><span class="line"><span class="built_in">print</span>(optionalString <span class="operator">==</span> <span class="literal">nil</span>)</span><br></pre></td></tr></table></figure>
+<p>if 와 let 을 같이 쓰는 경우, optionalName 이 nil 이 아니면 true, nil 이면 false 값을 갖습니다. 만약 nil 이 아니면 해당 블록 내에서 name 이라는 상수로 사용 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> optionalName: <span class="type">String</span>? <span class="operator">=</span> <span class="string">&quot;John Appleseed&quot;</span></span><br><span class="line"><span class="keyword">var</span> greeting <span class="operator">=</span> <span class="string">&quot;Hello!&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> name <span class="operator">=</span> optionalName &#123;</span><br><span class="line">    greeting <span class="operator">=</span> <span class="string">&quot;Hello, <span class="subst">\(name)</span>&quot;</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    greeting <span class="operator">=</span> <span class="string">&quot;Hello, Unknown&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(greeting)</span><br></pre></td></tr></table></figure>
+<p>?? 연산자는 nickName 이 nil 인 경우에 default 값을 줍니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> nickName: <span class="type">String</span>? <span class="operator">=</span> <span class="literal">nil</span></span><br><span class="line"><span class="keyword">let</span> fullName: <span class="type">String</span> <span class="operator">=</span> <span class="string">&quot;John Appleseed&quot;</span></span><br><span class="line"><span class="keyword">let</span> informalGreeting <span class="operator">=</span> <span class="string">&quot;Hi <span class="subst">\(nickName <span class="operator">??</span> fullName)</span>&quot;</span></span><br><span class="line"><span class="built_in">print</span>(informalGreeting)</span><br></pre></td></tr></table></figure>
+<h4 id="Switch">Switch</h4>
+<p>switch 문을 살펴봅시다. 다양한 값과 비교 연산자를 사용 가능하고, break 문이 필요없습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vagetable <span class="operator">=</span> <span class="string">&quot;red pepper&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> vagetable &#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;celery&quot;</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Add some raisins and make ants on a log.&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> <span class="string">&quot;cucumber&quot;</span>, <span class="string">&quot;watercress&quot;</span>:</span><br><span class="line">    <span class="comment">// 여러 케이스를 지정하는 경우</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;that would make a good tea sandwich.&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> <span class="keyword">let</span> x <span class="keyword">where</span> x.hasSuffix(<span class="string">&quot;pepper&quot;</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Is it a spicy <span class="subst">\(x)</span>?&quot;</span>)</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">    <span class="comment">// default 존재하지 않으면 에러가 난다</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Everything tastes good in soup.&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="for-in">for-in</h4>
+<p>반복문 중 하나인 for-in 문 입니다. 배열과 Dictionary 를 순회할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> interestingNumbers <span class="operator">=</span> [</span><br><span class="line">    <span class="string">&quot;Prime&quot;</span>: [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>],</span><br><span class="line">    <span class="string">&quot;Fibonacci&quot;</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>],</span><br><span class="line">    <span class="string">&quot;Square&quot;</span>: [<span class="number">1</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">16</span>, <span class="number">25</span>]</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> largest <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (kind, numbers) <span class="keyword">in</span> interestingNumbers &#123;</span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</span><br><span class="line">        <span class="keyword">if</span> number <span class="operator">&gt;</span> largest &#123;</span><br><span class="line">            largest <span class="operator">=</span> number</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(largest)</span><br></pre></td></tr></table></figure>
+<h4 id="while">while</h4>
+<p>while 문은 조건에 만족하는 동안 작업을 반복 수행합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> n <span class="operator">=</span> <span class="number">2</span></span><br><span class="line"><span class="keyword">while</span> n <span class="operator">&lt;</span> <span class="number">100</span> &#123;</span><br><span class="line">    n <span class="operator">=</span> n <span class="operator">*</span> <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(n)</span><br></pre></td></tr></table></figure>
+<p>reapeat 문을 사용하면 조건을 체크하기 전에 먼저 작업을 수행하기 때문에 최소한 한 번은 작업을 수행합니다. <code>do-while</code> 문을 생각하시면 됩니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> m <span class="operator">=</span> <span class="number">2</span></span><br><span class="line"><span class="keyword">repeat</span> &#123;</span><br><span class="line">    m <span class="operator">=</span> m <span class="operator">*</span> <span class="number">2</span></span><br><span class="line">&#125; <span class="keyword">while</span> m <span class="operator">&lt;</span> <span class="number">100</span></span><br><span class="line"><span class="built_in">print</span>(m)</span><br><span class="line"></span><br><span class="line"><span class="comment">// ... 는 같은 값까지 확인</span></span><br><span class="line"><span class="comment">// ..&lt; 는 값 미만까지 확인</span></span><br><span class="line"><span class="keyword">var</span> total <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span> <span class="operator">..&lt;</span> <span class="number">4</span> &#123;</span><br><span class="line">    <span class="comment">// 0, 1, 2, 3</span></span><br><span class="line">    total <span class="operator">+=</span> i</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(total)</span><br></pre></td></tr></table></figure>
+<h3 id="Functions-and-Closures">Functions and Closures</h3>
+<h4 id="Functions">Functions</h4>
+<p>func 를 사용해서 함수를 선언합니다. arguments 는 타입을 지정해주고, -&gt; 뒤에는 리턴 타입을 명시합니다. 함수 사용 시에는 파라미터 이름에 맞춰 넣습니다. 여기서 첫번째 파라미터는 파라미터 이름을 생략 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">greet</span>(<span class="params">name</span>: <span class="type">String</span>, <span class="params">day</span>: <span class="type">String</span>) -&gt; <span class="type">String</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;Hello <span class="subst">\(name)</span>, today is <span class="subst">\(day)</span>.&quot;</span></span><br><span class="line">&#125;</span><br><span class="line">greet(<span class="string">&quot;Bob&quot;</span>, day: <span class="string">&quot;Tuesday&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>함수는 값을 여러 개 반환할 수 있습니다. 더 정확히 얘기하면 Tuple 로 여러 값을 묶어서 한번에 반환할 수 있습니다. Tuple 은 값을 묶어주는 것으로 구조체나 클래스 같은 것보다 간편하게 값을 묶는 용도로 사용합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">calculateStatistics</span>(<span class="params">scores</span>: [<span class="type">Int</span>]) -&gt; (min:<span class="type">Int</span>, max:<span class="type">Int</span>, sum:<span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> min <span class="operator">=</span> scores[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">var</span> max <span class="operator">=</span> scores[<span class="number">0</span>]</span><br><span class="line">    <span class="keyword">var</span> sum <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> score <span class="keyword">in</span> scores &#123;</span><br><span class="line">        <span class="keyword">if</span> score <span class="operator">&gt;</span> max &#123;</span><br><span class="line">            max <span class="operator">=</span> score</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> score <span class="operator">&lt;</span> min &#123;</span><br><span class="line">            min <span class="operator">=</span> score</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        sum <span class="operator">+=</span> score</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (min, max, sum)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> statistics <span class="operator">=</span> calculateStatistics([<span class="number">5</span>, <span class="number">3</span>, <span class="number">100</span>, <span class="number">3</span>, <span class="number">9</span>])</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(statistics.sum) <span class="comment">// . 으로 접근 가능</span></span><br><span class="line"><span class="built_in">print</span>(statistics.<span class="number">2</span>)   <span class="comment">// 0, 1, 2 순서로 sum 을 가리킴</span></span><br></pre></td></tr></table></figure>
+<p>함수는 여러개의 가변인자를 받을 수 있고, 가변 인자는 배열처럼 접근 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">sumOf</span>(<span class="params">numbers</span>: <span class="type">Int</span>...) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> sum <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(numbers.count) <span class="comment">// 배열처럼 사용 가능</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> number <span class="keyword">in</span> numbers &#123;</span><br><span class="line">        sum <span class="operator">+=</span> number</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sumOf() <span class="comment">// 인자가 없어도 에러가 나지 않는다</span></span><br><span class="line">sumOf(<span class="number">42</span>, <span class="number">597</span>, <span class="number">12</span>)</span><br></pre></td></tr></table></figure>
+<p>함수 내부에 함수를 선언할 수 있습니다 (중첩함수; Nested function). 중첩함수는 바깥쪽 함수에서 변수처럼 사용이 가능합니다. 또한 자세히 보시면 중첩함수인 add() 에서 바깥쪽 함수의 변수인 y 에 접근하고 있는 걸 볼 수 있습니다. 이것이 클로저 (Closure)의 개념 중 하나입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">returnFifteen</span>() -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> y <span class="operator">=</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">add</span>() &#123;</span><br><span class="line">        y <span class="operator">+=</span> <span class="number">5</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    add()</span><br><span class="line">    <span class="keyword">return</span> y</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">returnFifteen()</span><br></pre></td></tr></table></figure>
+<p>함수는 1급 타입입니다. javaScript 의 함수를 생각하시면 됩니다.</p>
+<p>1급 타입이라는 것은,</p>
+<ul>
+<li>변수에 담을 수 있다.</li>
+<li>인자로 받을 수 있다.</li>
+<li>반환이 가능하다.<br>
+을 의미합니다.</li>
+</ul>
+<p>다음 코드는 함수를 리턴하고 함수를 변수에 담는 예제입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// -&gt; ((Int) -&gt; Int)</span></span><br><span class="line"><span class="comment">// Int 를 파라미터로 받고 Int 를 리턴하는 함수 타입을 리턴</span></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">makeIncrementer</span>() -&gt; ((<span class="type">Int</span>) -&gt; <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">addOne</span>(<span class="params">number</span>: <span class="type">Int</span>) -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> <span class="operator">+</span> number</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// addOne 이라는 함수 자체를 리턴</span></span><br><span class="line">    <span class="keyword">return</span> addOne</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 리턴되는 함수를 변수에 받아서 실행 가능</span></span><br><span class="line"><span class="keyword">var</span> increment <span class="operator">=</span> makeIncrementer()</span><br><span class="line">increment(<span class="number">7</span>)</span><br></pre></td></tr></table></figure>
+<p>다음 코드는 함수를 파라미터로 받는 예제입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">hasAnyMatches</span>(<span class="params">list</span>: [<span class="type">Int</span>], <span class="params">condition</span>: (<span class="type">Int</span>) -&gt; <span class="type">Bool</span>) -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> item <span class="keyword">in</span> list &#123;</span><br><span class="line">        <span class="keyword">if</span> condition(item) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">lessThanTen</span>(<span class="params">number</span>: <span class="type">Int</span>) -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> number <span class="operator">&lt;</span> <span class="number">10</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> numbers <span class="operator">=</span> [<span class="number">20</span>, <span class="number">19</span>, <span class="number">7</span>, <span class="number">12</span>]</span><br><span class="line"></span><br><span class="line">hasAnyMatches(numbers, condition: lessThanTen)</span><br></pre></td></tr></table></figure>
+<h4 id="Closure">Closure</h4>
+<p>클로저는 어떠한 함수와 그 함수의 환경 (컨텍스트)를 묶어놓은 것입니다. 그 환경은 클로저를 어떻게 만드느냐에 따라 결정됩니다. 중첨첩 함수에서도 클로저를 볼 수 있었습니다. 클로저에 대한 자세한 내용은 따로 포스트를 만들어야 할 것 같네요. 어쨌든 Swift 의 클로저는 무명함수 (Anonymous Functions) 로 선언 가능합니다. <code>in</code> 키워드 앞에는 클로저의 파라미터와 리턴 타입을 명시합니다. 아래 코드의 클로저는 배열의 각 숫자에 3을 곱하는 작업을 수행하게 됩니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">numbers.map(&#123;</span><br><span class="line">    (number: <span class="type">Int</span>) -&gt; <span class="type">Int</span> <span class="keyword">in</span> <span class="comment">// 파라미터와 리턴 타입</span></span><br><span class="line">    <span class="keyword">let</span> result <span class="operator">=</span> <span class="number">3</span> <span class="operator">*</span> number</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>여기서 함수의 파라미터와 리턴 타입을 아는 경우 생략할 수 있습니다. 여기서는 map 의 파라미터로 들어오는 함수의 파라미터와 리턴 타입이 정해져 있는 상태입니다. 이럴 때는 생략이 가능합니다. 리턴 구문도 생략 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> mappedNumbers <span class="operator">=</span> numbers.map(&#123;</span><br><span class="line">    number <span class="keyword">in</span> <span class="comment">// 클롤저의 파라미터 타입과 리턴 타입을 생략</span></span><br><span class="line">    <span class="number">3</span> <span class="operator">*</span> number <span class="comment">// 리턴 구문 생략</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">print</span>(mappedNumbers)</span><br></pre></td></tr></table></figure>
+<p>여기서 더 줄일 수 있습니다. 매개변수를 받는 괄호 안에 중괄호 ({}) 를 이용해서 클로저를 넣었는데요, 이 때 괄호를 생략하고 중괄호 형태로 수정이 가능합니다. 게다가 매개변수의 이름까지 생략하고 번호를 이용해서 참조할 수도 있습니다. <code>$0</code> 은 첫 번째 파라미터를, ‘$1’ 은 두 번째 파라미터를 말합니다. 따라서 다음과 같이 표현이 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">numbers.map &#123;</span><br><span class="line">    <span class="number">3</span> <span class="operator">*</span> <span class="variable">$0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>너무 생소해져서 스위프트가 싫어질 것 같네요… 하지만 익숙해지면 편할 것 같습니다. 아래는 다른 예입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> sortedNumbers <span class="operator">=</span> numbers.sort &#123;</span><br><span class="line">    <span class="variable">$0</span> <span class="operator">&gt;</span> <span class="variable">$1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(sortedNumbers)</span><br></pre></td></tr></table></figure>
+<h3 id="Object-and-Classes">Object and Classes</h3>
+<p>클래스는 변수와 메소드 (함수)로 이루어져 있습니다. 다음과 같이 선언할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Shape</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> numberOfSides <span class="operator">=</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;A shape with <span class="subst">\(numberOfSides)</span> sides.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>인스턴스를 생성하고 인스턴스에 접근하는 방법입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> shape <span class="operator">=</span> <span class="type">Shape</span>()</span><br><span class="line">shape.numberOfSides <span class="operator">=</span> <span class="number">7</span></span><br><span class="line"><span class="keyword">var</span> shapeDescription <span class="operator">=</span> shape.simpleDescription();</span><br></pre></td></tr></table></figure>
+<p>클래스 내 변수는 선언할 때 초기값을 할당하거나 <code>init</code> 생성자를 이용해서 초기화해야 합니다. <code>self</code> 키워드는 해당 클래스의 변수를 의미합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">NamedShape</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> numberOfSide: <span class="type">Int</span> <span class="operator">=</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">var</span> name: <span class="type">String</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 초기화</span></span><br><span class="line">    <span class="keyword">init</span>(<span class="params">name</span>: <span class="type">String</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.name <span class="operator">=</span> name</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;A shape with <span class="subst">\(numberOfSide)</span> sides.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>상속입니다. 상속은 클래스명 뒤에 <code>:</code> 를 붙여서 상속할 클래스를 표시합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Square</span>: <span class="title class_ inherited__">NamedShape</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> sideLength: <span class="type">Double</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">init</span>(<span class="params">sideLength</span>: <span class="type">Double</span>, <span class="params">name</span>: <span class="type">String</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.sideLength <span class="operator">=</span> sideLength</span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(name: name)</span><br><span class="line">        numberOfSide <span class="operator">=</span> <span class="number">4</span> <span class="comment">// 부모 클래스의 변수</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">area</span>() -&gt; <span class="type">Double</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> sideLength <span class="operator">*</span> sideLength</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;A square with sides of length <span class="subst">\(sideLength)</span>.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> test <span class="operator">=</span> <span class="type">Square</span>(sideLength: <span class="number">5.2</span>, name: <span class="string">&quot;my test square&quot;</span>)</span><br><span class="line"></span><br><span class="line">test.area()</span><br><span class="line">test.simpleDescription()</span><br></pre></td></tr></table></figure>
+<p>프로퍼티는 getter 와 setter 를 가질 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">EquilateralTriangle</span>: <span class="title class_ inherited__">NamedShape</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> sideLength: <span class="type">Double</span> <span class="operator">=</span> <span class="number">0.0</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">init</span>(<span class="params">sideLength</span>: <span class="type">Double</span>, <span class="params">name</span>: <span class="type">String</span>) &#123;</span><br><span class="line">        <span class="keyword">self</span>.sideLength <span class="operator">=</span> sideLength <span class="comment">// 하위 클래스의 속성 값 지정</span></span><br><span class="line">        <span class="keyword">super</span>.<span class="keyword">init</span>(name: name)       <span class="comment">// 상위 클래스 init 호출</span></span><br><span class="line">        numberOfSide <span class="operator">=</span> <span class="number">3</span>             <span class="comment">// setter 없이 그냥 접근 가능함</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> perimeter: <span class="type">Double</span> &#123;</span><br><span class="line">        <span class="keyword">get</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">3.0</span> <span class="operator">*</span> sideLength</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">set</span> &#123;</span><br><span class="line">            <span class="comment">// newValue 는 새로운 값을 의미</span></span><br><span class="line">            sideLength <span class="operator">=</span> newValue <span class="operator">/</span> <span class="number">3.0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">override</span> <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;An equilateral triangle with sides of length <span class="subst">\(sideLength)</span>.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> triangle <span class="operator">=</span> <span class="type">EquilateralTriangle</span>(sideLength: <span class="number">3.1</span>, name: <span class="string">&quot;a triangle&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(triangle.perimeter) <span class="comment">// 9.3</span></span><br><span class="line"></span><br><span class="line">triangle.perimeter <span class="operator">=</span> <span class="number">9.9</span></span><br><span class="line"><span class="built_in">print</span>(triangle.sideLength)  <span class="comment">// 3.3</span></span><br></pre></td></tr></table></figure>
+<p>willSet 과 didSet 을 이용해서 setter 를 수행하기 전, 후에 실행되는 코드를 작성할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">TriangleAndSquare</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> square: <span class="type">Square</span> &#123;</span><br><span class="line">        <span class="keyword">willSet</span> &#123;</span><br><span class="line">            triangle.sideLength <span class="operator">=</span> newValue.sideLength</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> triangle: <span class="type">EquilateralTriangle</span> &#123;</span><br><span class="line">        <span class="keyword">willSet</span> &#123;</span><br><span class="line">            square.sideLength <span class="operator">=</span> newValue.sideLength</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">init</span>(<span class="params">size</span>: <span class="type">Double</span>, <span class="params">name</span>: <span class="type">String</span>) &#123;</span><br><span class="line">        square <span class="operator">=</span> <span class="type">Square</span>(sideLength: size, name: name)</span><br><span class="line">        triangle <span class="operator">=</span> <span class="type">EquilateralTriangle</span>(sideLength: size, name: name)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> triangleAndSquare <span class="operator">=</span> <span class="type">TriangleAndSquare</span>(size: <span class="number">10</span>, name: <span class="string">&quot;another test shape&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(triangleAndSquare.square.sideLength)    <span class="comment">// 10</span></span><br><span class="line"><span class="built_in">print</span>(triangleAndSquare.triangle.sideLength)  <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line">triangleAndSquare.square <span class="operator">=</span> <span class="type">Square</span>(sideLength: <span class="number">50</span>, name: <span class="string">&quot;larger square&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(triangleAndSquare.triangle.sideLength)  <span class="comment">// 50</span></span><br></pre></td></tr></table></figure>
+<p>클래스를 Optional 로 선언하면 nil 값이 올 수 있습니다. 사용할 때는 물음표 (?)를 붙여서 사용해야 합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> optionalSqure: <span class="type">Square</span>? <span class="operator">=</span> <span class="type">Square</span>(sideLength: <span class="number">2.5</span>, name: <span class="string">&quot;optional square&quot;</span>)</span><br><span class="line"><span class="keyword">let</span> sideLength <span class="operator">=</span> optionalSqure<span class="operator">?</span>.sideLength</span><br></pre></td></tr></table></figure>
+<h3 id="Enumerations-and-Structures">Enumerations and Structures</h3>
+<h4 id="Enumerations">Enumerations</h4>
+<p>열거형은 값을 나열해서 표현하는 것으로 값이 중요한 것이 아니라, 순서 상 값을 구분하는 용도로 만든 자료형입니다. 열거형에는 타입을 지정할 수 있고 메서드를 포함할 수 있습니다. 열거형의 값은 자동으로 할당되는데 아래 코드에서는 첫번째 값을 1로 주었기 때문에 차례로 2, 3, 4 순으로 할당됩니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Rank</span>: <span class="title class_ inherited__">Int</span> &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">Ace</span> <span class="operator">=</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Two</span>, <span class="type">Three</span>, <span class="type">Four</span>, <span class="type">Five</span>, <span class="type">Six</span>, <span class="type">Seven</span>, <span class="type">Eight</span>, <span class="type">Nine</span>, <span class="type">Ten</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Jack</span>, <span class="type">Queen</span>, <span class="type">King</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Ace</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;ace&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Jack</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;jack&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Queen</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;queen&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .<span class="type">King</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;king&quot;</span></span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="type">String</span>(<span class="keyword">self</span>.rawValue)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> ace <span class="operator">=</span> <span class="type">Rank</span>.<span class="type">Ace</span></span><br><span class="line"><span class="keyword">let</span> aceRawValue <span class="operator">=</span> ace.rawValue <span class="comment">// 실제값</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(ace)                  <span class="comment">// Ace</span></span><br><span class="line"><span class="built_in">print</span>(aceRawValue)          <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">print</span>(<span class="type">Rank</span>.<span class="type">Queen</span>)           <span class="comment">// Queen</span></span><br><span class="line"><span class="built_in">print</span>(<span class="type">Rank</span>.<span class="type">Queen</span>.rawValue)  <span class="comment">// 12</span></span><br></pre></td></tr></table></figure>
+<p><code>init?(rawValue:)</code> initializer 를 이용해서 rowValue 로 열거형 인스턴스를 생성할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> convertedRank <span class="operator">=</span> <span class="type">Rank</span>(rawValue: <span class="number">3</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> threeDescription <span class="operator">=</span> convertedRank.simpleDescription()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">Suit</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Spades</span>, <span class="type">Hearts</span>, <span class="type">Diamonds</span>, <span class="type">Clubs</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">switch</span> <span class="keyword">self</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Spades</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;spades&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Hearts</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;hearts&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Diamonds</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;diamonds&quot;</span></span><br><span class="line">        <span class="keyword">case</span> .<span class="type">Clubs</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;clubs&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> hearts <span class="operator">=</span> <span class="type">Suit</span>.<span class="type">Hearts</span></span><br><span class="line"><span class="keyword">let</span> heartDescription <span class="operator">=</span> hearts.simpleDescription()</span><br></pre></td></tr></table></figure>
+<h4 id="Struct">Struct</h4>
+<p>구조체는 <code>struct</code> 키워드를 이용해 선언합니다. 구조체는 클래스와 거의 비슷하지만 보통 인스턴스가 참조 복사 형태로 전달된다는 점과 달리, 값 복사 형태로 전달됩니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Card</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> rank: <span class="type">Rank</span></span><br><span class="line">    <span class="keyword">var</span> suit: <span class="type">Suit</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">simpleDescription</span>() -&gt; <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;The <span class="subst">\(rank.simpleDescription())</span> of <span class="subst">\(suit.simpleDescription())</span>&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> threeOfSpades <span class="operator">=</span> <span class="type">Card</span>(rank: .<span class="type">Three</span>, suit: .<span class="type">Spades</span>)</span><br><span class="line"><span class="keyword">let</span> threeOfSpadesDescription <span class="operator">=</span> threeOfSpades.simpleDescription()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(threeOfSpades) <span class="comment">// Card(rank: HelloSwift.Rank.Three, suit: HelloSwift.Suit.Spades)</span></span><br><span class="line"><span class="built_in">print</span>(threeOfSpadesDescription) <span class="comment">// The 3 of spades</span></span><br></pre></td></tr></table></figure>
+<p>Associatd Value 는 Enumerations 의 case 에 특정한 값을 할당해서 저장한 후에 나중에 활용할 수 있는 방식입니다. 아래 코드를 보시면 ServerResponse 는 Result(String, String) 또는 Failure(String) 둘 중 하나의 값만을 가질 수 있는 상태입니다. 값을 할당 시에 저장한 두 개의 String 값은 switch 문에서 아래 코드와 같이 사용 가능합니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">ServerResponse</span> &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">Result</span>(<span class="type">String</span>, <span class="type">String</span>)</span><br><span class="line">    <span class="keyword">case</span> <span class="type">Failure</span>(<span class="type">String</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> success <span class="operator">=</span> <span class="type">ServerResponse</span>.<span class="type">Result</span>(<span class="string">&quot;6:00 am&quot;</span>, <span class="string">&quot;8:09 pm&quot;</span>)</span><br><span class="line"><span class="keyword">let</span> failure <span class="operator">=</span> <span class="type">ServerResponse</span>.<span class="type">Failure</span>(<span class="string">&quot;Out of cheese.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">switch</span> success &#123;</span><br><span class="line"><span class="keyword">case</span> <span class="keyword">let</span> .<span class="type">Result</span>(sunrise, sunset): <span class="comment">// case .Result(let sunrise, let sunset) 과 같은 의미</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Sunrise is at 6:00 am and sunset is at 8:09 pm.</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Sunrise is at <span class="subst">\(sunrise)</span> and sunset is at <span class="subst">\(sunset)</span>.&quot;</span>)</span><br><span class="line"><span class="keyword">case</span> <span class="keyword">let</span> .<span class="type">Failure</span>(message):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Failure... <span class="subst">\(message)</span>&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Protocols-and-Extensions">Protocols and Extensions</h3>
+<h4 id="Protocols">Protocols</h4>
+<p>프로토콜은 자바의 인터페이스와 비슷한 개념입니다. 반드시 구현해야 하는 것을 명시할 수 있습니다. 프로토콜은 일종의 타입으로써 다형성을 구현할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">protocol</span> <span class="title class_">ExampleProtocol</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> simpleDescription: <span class="type">String</span> &#123; <span class="keyword">get</span> &#125;</span><br><span class="line">    <span class="keyword">mutating</span> <span class="keyword">func</span> <span class="title function_">adjust</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>클래스 뿐만 아니라, Enumerations 와 구조체에도 프로토콜을 적용할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Class</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SimpleClass</span>: <span class="title class_ inherited__">ExampleProtocol</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> simpleDescription: <span class="type">String</span> <span class="operator">=</span> <span class="string">&quot;A very simple class.&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> anotherProperty: <span class="type">Int</span> <span class="operator">=</span> <span class="number">69105</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">func</span> <span class="title function_">adjust</span>() &#123;</span><br><span class="line">        simpleDescription <span class="operator">+=</span> <span class="string">&quot; Now 100% adjusted.&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a <span class="operator">=</span> <span class="type">SimpleClass</span>()</span><br><span class="line"><span class="built_in">print</span>(a.simpleDescription) <span class="comment">// A very simple class</span></span><br><span class="line"></span><br><span class="line">a.adjust()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> aDescription <span class="operator">=</span> a.simpleDescription</span><br><span class="line"><span class="built_in">print</span>(aDescription) <span class="comment">// A very simple class. Now 100% adjusted.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// Structure</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">SimpleStructure</span>: <span class="title class_ inherited__">ExampleProtocol</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> simpleDescription: <span class="type">String</span> <span class="operator">=</span> <span class="string">&quot;A simple structure&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="keyword">func</span> <span class="title function_">adjust</span>() &#123;</span><br><span class="line">        simpleDescription <span class="operator">+=</span> <span class="string">&quot; (adjusted)&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> b <span class="operator">=</span> <span class="type">SimpleStructure</span>()</span><br><span class="line"><span class="built_in">print</span>(b.simpleDescription)</span><br><span class="line"></span><br><span class="line">b.adjust()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> bDescription <span class="operator">=</span> b.simpleDescription</span><br><span class="line"><span class="built_in">print</span>(bDescription)</span><br></pre></td></tr></table></figure>
+<h4 id="Extensions">Extensions</h4>
+<p>Extension 은 기존의 객체 타입에 코드를 추가할 수 있는 기능입니다. 라이브러리나 프레임워크의 소스에도 추가할 수 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">extension</span> <span class="title class_">Int</span>: <span class="title class_ inherited__">ExampleProtocol</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> simpleDescription: <span class="type">String</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;The number <span class="subst">\(<span class="keyword">self</span>)</span>&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="keyword">func</span> <span class="title function_">adjust</span>() &#123;</span><br><span class="line">        <span class="keyword">self</span> <span class="operator">+=</span> <span class="number">42</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="number">7</span>.simpleDescription)</span><br></pre></td></tr></table></figure>
+<h3 id="Generics">Generics</h3>
+<p>제네릭 (Generics)는 특정 타입임을 명시하는 방법입니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">repeatItem</span>&lt;<span class="type">Item</span>&gt;(<span class="params">item</span>:<span class="type">Item</span>, <span class="params">numberOfTimes</span>: <span class="type">Int</span>) -&gt; [<span class="type">Item</span>] &#123;</span><br><span class="line">    <span class="keyword">var</span> result <span class="operator">=</span> [<span class="type">Item</span>]()</span><br><span class="line">    <span class="keyword">for</span> <span class="keyword">_</span> <span class="keyword">in</span> <span class="number">0</span><span class="operator">..&lt;</span>numberOfTimes &#123;</span><br><span class="line">        result.append(item)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line">repeatItem(<span class="string">&quot;knock&quot;</span>, numberOfTimes:<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>스위프트의 Optional Value 를 제네릭을 이용해 표현해보면 다음과 같습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> <span class="title class_">OptionalValue</span>&lt;<span class="type">Wrapped</span>&gt; &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="type">None</span></span><br><span class="line">    <span class="keyword">case</span> <span class="type">Some</span>(<span class="type">Wrapped</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> possibleInteger: <span class="type">OptionalValue</span>&lt;<span class="type">Int</span>&gt; <span class="operator">=</span> .<span class="type">None</span></span><br><span class="line">possibleInteger <span class="operator">=</span> .<span class="type">Some</span>(<span class="number">100</span>)</span><br></pre></td></tr></table></figure>
+<p><code>where</code> 키워드를 이용해서 특정 타입에 대한 조건을 줄 수도 있습니다.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">func</span> <span class="title function_">anyCommonElements</span> &lt;<span class="type">T</span>:<span class="type">SequenceType</span>, <span class="type">U</span>:<span class="type">SequenceType</span> where <span class="type">T</span>.<span class="type">Generator</span>.<span class="type">Element</span>:<span class="type">Equatable</span>, <span class="type">T</span>.<span class="type">Generator</span>.<span class="type">Element</span> == <span class="type">U</span>.<span class="type">Generator</span>.<span class="type">Element</span>&gt; (<span class="params">lhs</span>:<span class="type">T</span>, <span class="keyword">_</span> <span class="params">rhs</span>: <span class="type">U</span>) -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">for</span> lhsItem <span class="keyword">in</span> lhs &#123;</span><br><span class="line">        <span class="keyword">for</span> rhsItem <span class="keyword">in</span> rhs &#123;</span><br><span class="line">            <span class="keyword">if</span> lhsItem <span class="operator">==</span> rhsItem &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">anyCommonElements([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<p>전체적으로 어떤 모양새인지 훑어보는 장이었습니다. 만만한 언어는 아닌 것 같네요. 하지만 여기서 이해가 가질 않는 부분이 있더라도 뒤에서 자세하게 살펴볼 것이니 크게 상관 없을 것 같습니다. 다음 포스팅에서는 앞에서부터 차근차근 다뤄보겠습니다.</p>
+
+        </div>
+        <footer class="article-footer">
+          
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+  </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>follow:</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/futureCreator" target="_blank" rel="external nofollow noopener noreferrer">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/06/28/google-200-ranking-factors-korean-list/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            구글 검색 상위 노출을 결정 짓는 200가지 요소 (2018)
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/06/24/hexo-ds-store-error/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">Hexo .DS_Store TypeError 해결 방법</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a><span class="archive-list-count">19</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">19</span></li></ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <!-- <img src="/images/logo/writer/xingkai.png"> -->
+                <p>&copy; 2026 Eric Han</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'futurecreator';
+    
+    
+    var disqus_url = 'https://futurecreator.github.io/2016/06/27/swift-get-started/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+<script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/vendor/scrollLoading/jquery.scrollLoading.js"></script>
+
+
+<script src="/vendor/scrollLoading/main.js"></script>
+
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+    </div>
+</body>
+</html>
