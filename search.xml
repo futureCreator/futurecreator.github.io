@@ -1676,9 +1676,9 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> markdown </tag>
             
             <tag> plugin </tag>
             
@@ -2393,13 +2393,13 @@
       
         <tags>
             
-            <tag> web </tag>
-            
-            <tag> markdown </tag>
-            
             <tag> hexo </tag>
             
+            <tag> web </tag>
+            
             <tag> blog </tag>
+            
+            <tag> markdown </tag>
             
         </tags>
       
@@ -2726,9 +2726,9 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
             <tag> blog </tag>
+            
+            <tag> markdown </tag>
             
             <tag> evernote </tag>
             
@@ -3007,13 +3007,13 @@
       
         <tags>
             
-            <tag> web </tag>
-            
-            <tag> markdown </tag>
-            
             <tag> hexo </tag>
             
+            <tag> web </tag>
+            
             <tag> blog </tag>
+            
+            <tag> markdown </tag>
             
         </tags>
       
