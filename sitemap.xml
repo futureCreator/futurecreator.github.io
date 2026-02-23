@@ -821,7 +821,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/2016/06/17/google-search-how-to-work/</loc>
+    <loc>https://futurecreator.github.io/2016/06/18/spring-boot-get-started/</loc>
     
     <lastmod>2026-02-23</lastmod>
     
@@ -830,7 +830,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/2016/06/18/spring-boot-get-started/</loc>
+    <loc>https://futurecreator.github.io/2016/06/17/google-search-how-to-work/</loc>
     
     <lastmod>2026-02-23</lastmod>
     
@@ -999,20 +999,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/googlebot/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/pagerank/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/spring/</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -1028,6 +1014,20 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/velocity/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/googlebot/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/pagerank/</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2273,27 +2273,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/programming-font/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/consolas/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/monospaced/</loc>
-    <lastmod>2026-02-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/infrastructure/</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -2323,6 +2302,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/virtualization/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/programming-font/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/consolas/</loc>
+    <lastmod>2026-02-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/monospaced/</loc>
     <lastmod>2026-02-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
