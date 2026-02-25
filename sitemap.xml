@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2026/02/25/2026-02-25-defense-of-not-reading-code/</loc>
+    
+    <lastmod>2026-02-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2026/02/25/claude-md-pitfalls/</loc>
     
     <lastmod>2026-02-25</lastmod>
@@ -2729,6 +2738,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/categories/Programming/MSA/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/categories/%EA%B0%9C%EB%B0%9C/%EC%83%9D%EA%B0%81/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/categories/%EA%B0%9C%EB%B0%9C/%EC%83%9D%EA%B0%81/AI/</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
