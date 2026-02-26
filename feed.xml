@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-02-26T14:52:46.204Z</updated>
+  <updated>2026-02-26T15:43:23.042Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://futurecreator.github.io/2026/02/26/citrini-research-ai-future-scenario/"/>
     <id>https://futurecreator.github.io/2026/02/26/citrini-research-ai-future-scenario/</id>
     <published>2026-02-26T07:42:56.000Z</published>
-    <updated>2026-02-26T14:52:46.204Z</updated>
+    <updated>2026-02-26T15:43:23.042Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Citrini Research가 공개한 투자 리서치 보고서는 2028년 6월을 가정한 시나리오를 통해 AI가 향후 1-2년 내에 경제에 미칠 파급력을 구조적으로 전망하고 있다. 이 글은 그들의 핵심 주장을 정리한 것이다.</p><span id="more"></span><p>핵심 전제: 인간 지능 대체의 나선</p><p>과거 기술 혁신인 ATM이나 인터넷은 도구에 불과했다. 하지만 AI는 다르다. AI는 인간이 대처될 영역에서조차 스스로 진화하는 일반 지능이며, 화이트칼라 노동자를 대체하는 속도가 새로운 일자리를 창출하는 속도보다 훨씬 빠르다는 것이 Citrini의 핵심 전제다.</p><p>1단계: SaaS 산업의 붕괴 (2025말~2026)</p><p>2025년 말, Claude Code나 Codex 같은 AI 코딩 도구의 역량이 비약적으로 향상되었다. 숙련된 개발자라면 중견기업용 SaaS 제품의 핵심 기능을 단 몇 주 만에 복제할 수 있게 되었다.</p><p>기업 CIO들은 연간 50만 달러 규모의 소프트웨어 계약 갱신을 앞두고 차라리 이걸 우리가 직접 만들어볼까 하는 근본적인 질문을 던지기 시작했다. 한 포춘 500대 기업 구매 관리자는 OpenAI의 현장 파견 엔지니어들이 AI 도구로 벤더 소프트웨어를 자체 구축하는 방안을 제안했다며 기존 가격 대비 30% 인하된 조건으로 계약을 갱신하는 데 성공했다.</p><p>ServiceNow 같은 기록 시스템조차도 위협받았다. 이들은 사용자 수 기반으로 라이선스를 판매했는데, 고객사들이 AI 도입으로 인력을 15% 감축하자 소프트웨어 라이선스도 15% 취소했다. 고객사의 이익 마진을 높여주던 AI 주도 인력 감축이 기계적으로 SaaS 기업 본연의 수익 기반을 파괴한 것이다.</p><p>SaaS 기업들은 생존을 위해 AI를 도입했고 그 과정에서 자체 인력을 해고했다. 절감한 비용으로 더 강력한 AI에 투자했고 더 많은 인력을 해고할 수 있게 되었다. 워크플로우 자동화를 팔던 회사가 더 진본된 AI 워크플로우 자동화 기술에 의해 파괴당하는 아이러니가 벌어진 것이다.</p><p>2단계: 중개 비즈니스의 소멸 (2027)</p><p>지난 50년간 미국 경제는 거대한 지대 추구 생태계를 구축해 왔다. 이 생태계는 시간과 인내심이 부족하고 꼼꼼한 실사 대신 익숙한 브랜드에 의존하며 귀찮은 클릭 몇 번을 피하기 위해 바가지 요금을 기꺼이 감수한다는 인간의 근본적인 한계 위에 세워져 있었다.</p><p>2027년 초, Qwen의 오픈소스 에이전트 쇼퍼가 등장했다. 이는 소비자의 구매 결정 과정을 AI가 완전히 대신 처리하도록 만든 신호탄이었다. 불과 몇 주 만에 모든 주요 AI 비서들이 이 에이전트 기반 상거래 기능을 흡수했다.</p><p>AI 에이전트는 사용자의 선호도를 파악해 백그라운드에서 끊임없이 실행되었다. 상거래는 인간이 그때그때 내리는 파편화된 결정의 연속이 아니라 연결된 모든 소비자를 대신해 연중무휴 24시간 돌아가는 지속적인 최적화 프로세스로 진화했다.</p><p>여행 예약 플랫폼들이 첫 번째 희생양이 되었다. 개인 AI 에이전트들은 어떤 상용 플랫폼보다도 빠르고 저렴하게 항공편과 호텔과 현지 교통편과 포인트 최적화와 예산 제약과 환불 규정까지 고려한 완벽한 여행 일정을 짜냈다.</p><p>보험 산업도 타격을 입었다. 매년 갱신 시점마다 시장의 모든 보험 상품을 스캔하고 비교하는 에이전트들로 인해 보험사들이 고객의 수동적 갱신을 통해 날로 먹던 프리미엄 마진의 15~20%가 증발했다.</p><p>부동산 시장도 예외는 아니었다. 중개인과 소비자 간의 심각한 정보 비대칭성 때문에 매수자들은 수십 년 동안 5~6%라는 살인적인 수수료를 당연하게 여겨왔다. 하지만 다중 매물 공유 시스템 접근 권한과 수십 년 치의 거래 데이터를 학습한 AI 에이전트가 그 지식 기반을 단 1초 만에 복제해 내자 주요 대도시의 평균 매수 측 중개 수수료는 2.5~3%에서 1% 미만으로 쪼그라들었다.</p><p>도어대시와 우버이츠 같은 배달 플랫폼도 붕괴했다. 코딩 에이전트들은 배달 앱 시장의 진입 장벽을 완전히 허물어 버렸다. 유능한 개발자라면 단 몇 주 만에 기존 앱과 완벽히 기능이 동일한 경쟁 앱을 배포할 수 있었고 이들은 배달 수수료의 90~95%를 기사에게 그대로 돌려주는 파격적인 정책으로 기존 플랫폼의 배달원들을 무서운 속도로 빼앗아 갔다.</p><p>소비자 에이전트들은 사실상 모든 소비자 거래의 작동 방식 자체를 뜯어고쳤다. 인간은 고작 프로틴 바 한 상자를 사기 위해 5개의 쇼핑 앱을 켜놓고 일일이 가격을 비교할 시간도 의지도 없다. 하지만 지치지 않는 기계는 한다.</p><p>3단계: 금융 시스템 위기 (2027~2028)</p><p>사모펀드 시장은 폭발적으로 팽창해 있었다. 2015년 1조 달러 미만에서 2026년 2.5조 달러 이상으로 성장한 프라이빗 크레딧 시장의 상당 비율이 소프트웨어 및 기술 기업의 거래에 투입되었다.</p><p>Zendesk 사태가 모든 것을 입증하는 스모킹 건이 되었다. 2022년 헬만 앤 프리드먼과 페류리라는 물력 102억 달러를 쏟아부어 Zendesk를 상장 폐지시켰다. 이 거대한 차입금 패키지는 블랙스톤이 주도하고 아폴로와 블루 아울과 HPS 등이 대주단으로 참여한 50억 달러 규모의 다이렉트 랜딩이며 EBITDA 대비 물력 25배에 달하는 미친 레버리지였다.</p><p>하지만 2027년 중반이 되자 AI 에이전트들은 이미 1년 가까이 인간을 대신해 기업의 고객 서비스를 완벽하게 자율 처리하고 있었다. Zendesk가 스스로 개척하고 정의했던 비즈니스 카테고리 자체를 아예 티켓 자체를 생성할 필요도 없이 문제를 즉각 해결해 버리는 AI 시스템이 대체한 것이다.</p><p>역사상 가장 거대했던 ARR 기반 대출은 역사상 가장 거대한 프라이빗 크레딧 소프트웨어 디폴트 사태로 이름을 남겼다.</p><p>13조 달러 규모의 미국 주거용 모기지 시장도 위기에 처했다. 화이트칼라 상위 10%는 미국 내 모든 소비자 지출의 50% 이상을 차지하는데 이들의 소득 창출 능력이 AI에 의해 구조적이고 영구적으로 파괴되었다.</p><p>FICO 신용점수 780점에 계약금 20%를 성실히 납부한 방탄조끼를 입은 듯 안전한 초우량 대출자들이 대출 실행 직후 세상이 변해버린 것이다. 이들은 인간의 노동 가치가 지금처럼 유지될 것이라 굳게 믿으며 더 이상 존재하지 않는 미래를 담보로 수십 년짜리 빚을 낸 것이다.</p><p>유령 GDP와 디플레이션 나선</p><p>AI는 통계상 생산성 폭발을 기록하지만 실물 경제에서는 순환하지 않는 생산량을 만들어냈다. 이를 유령 GDP라고 부른다. GPU 클러스터가 맨해튼 10,000명의 부가가치를 대체하지만 그 기계는 사치품을 사지 않는다.</p><p>AI 역량 향상에서 시작해 인력 해고와 비용 절감과 AI 투자 증가로 이어지고 다시 더 강력한 AI가 되는 악순환이 반복되었다. 소비 위축으로 기업 마진이 압박받자 더 공격적인 AI 도입이 이루어졌고 화이트칼라 소득 파괴는 13조 모기지 시장 위기로 이어져 금융 시스템 불안으로 번졌다.</p><p>정부의 금리 인하나 양적 완화는 금융 유동성을 막을 순 있어도 AI가 18만 달러 연봉 PM 업무를 월 200달러에 처리하는 현실은 바꿀 수 없다. 이번 위기는 순환적이 아닌 구조적 붕괴다.</p><p>나의 관점</p><p>이 시나리오는 당장 닥칠 일은 아니더라도 충분히 현실적인 가능성으로 다가온다. 화이트칼라 일자리가 긱 이코노미로 대체되고, 그마저도 자율주행 기술에 의해 사라질 수 있다는 전망은 공포 그 자체다. 더 근본적인 두려움은 AI를 관리하는 역할조차 결국 AI에게 대체될 수 있다는 점이다.</p><p>하지만 구조적 위기의 이면에는 새로운 기회가 존재한다. 만약 이러한 생산성 혁명이 실현된다면 인간은 생존을 위한 노동에서 핵심적인 부분을 핵방출하게 될 것이다. 남는 시간을 채우기 위한 콘텐츠와 경험에 대한 수요는 폭발적으로 늘어날 것이고, 그들의 관심을 사로잡을 수 있는 플랫폼이나 서비스가 새로운 수익의 중심이 될 것이다. 기술이 모든 것을 대체하는 시대에 오히려 인간의 시간과 관심을 얼마나 효과적으로 활용하느냐가 핵심 경쟁력이 될 수 있다는 의미다.</p><p>출처: <a href="https://contents.premium.naver.com/barbarian/stockideas/contents/260223164947190bc">Citrini Research</a></p>]]></content>
     
@@ -30,7 +30,7 @@
     
     
     
-    <category term="REVIEWS" scheme="https://futurecreator.github.io/categories/REVIEWS/"/>
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
     
     <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
@@ -48,7 +48,7 @@
     <link href="https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/"/>
     <id>https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/</id>
     <published>2026-02-26T06:11:43.000Z</published>
-    <updated>2026-02-26T14:52:43.494Z</updated>
+    <updated>2026-02-26T15:43:23.050Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Claude Code나 Cursor, Windsurf 같은 코딩 에이전트를 쓰다 본능적으로 skill과 subagent를 나눠서 써야 하는 순간이 온다. 나도 처음에는 skill만으로 충분하지 않나 생각했는데, 제대로 써보니까 둘의 차이가 명확해졌다.</p><span id="more"></span><p>Skill은 마크다운 기반의 지식/절차 파일이다. 에이전트가 특정 상황에서 참고하거나 실행할 수 있는 작업 가이드 역할을 한다. SKILL.md에 명세를 적어두면 에이전트가 상황에 맞게 내용을 확인하고 지시대로 수행한다.</p><p>Subagent는 독립된 세션에서 실행되는 별도의 에이전트 인스턴스다. 메인 세션과 컨텍스트를 공유하지 않는다. 새로운 터미널 탭을 열어서 거기서 작업을 시키는 것과 비슷하다. 완전히 격리된 환경에서 돌아간다.</p><p>처음에는 subagent가 과필요처럼 느껴졌다. Skill로 순차 처리하면 되는 거 아닌가 싶었다. 하지만 실제로 써보니까 subagent의 장점이 명확했다.</p><p>첫째, 컨텍스트 오염을 방지할 수 있다. 메인 세션에서 복잡한 작업을 하면 토큰 소모가 급증하고, 이전 대화의 잔재물이 계속 쌓인다. Subagent는 작업이 끝나면 그 세션이 종료되니까 메인 세션의 컨텍스트는 깨끗하게 유지된다.</p><p>둘째, 툴을 격리할 수 있다. Skill은 메인 세션의 툴셋을 그대로 쓴다. 하지만 subagent는 별도의 툴셋을 가질 수 있다. 예를 들어 메인 에이전트는 코드 작성용 툴을 쓰고, subagent는 문서화나 테스트 전용 툴을 쓰는 식으로 역할을 분리할 수 있다.</p><p>셋째, 병렬 실행이 가능하다. 여러 subagent를 동시에 띄워서 각각 다른 작업을 시킬 수 있다. Skill은 기본적으로 순차 처리다. 동시에 여러 skill을 호출하려면 복잡한 오케스트레이션이 필요하다. Subagent는 자연스럽게 병렬화된다.</p><p>내 워크플로우에서도 변화가 있었다. 이전에는 복잡한 리팩토링을 메인 세션에서 한참 동안 끌고 갔다. 결과적으로 토큰도 많이 쓰고, 에이전트가 중간에 맥빠지는 현상도 있었다. 지금은 리팩토링을 subagent에 위임하고, 나는 결과만 검증하는 식으로 바꿨다. 훨씬 효율적이다.</p><p>Skill과 subagent를 적절히 구분해서 쓰는 것은 코딩 에이전트를 제대로 활용하는 데 필수적이다. 단순한 도구 호출은 skill로, 복잡하거나 격리가 필요한 작업은 subagent로. 이 구분을 명확히 알고 쓰면 생산성이 확실히 달라진다.</p>]]></content>
     
@@ -57,7 +57,7 @@
     
     
     
-    <category term="REVIEWS" scheme="https://futurecreator.github.io/categories/REVIEWS/"/>
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
     
     <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
@@ -320,6 +320,33 @@
   </entry>
   
   <entry>
+    <title>CLI는 레거시라서 AI 에이전트에게 좋다</title>
+    <link href="https://futurecreator.github.io/2025/08/27/cli-legacy-for-ai-agents/"/>
+    <id>https://futurecreator.github.io/2025/08/27/cli-legacy-for-ai-agents/</id>
+    <published>2025-08-27T01:00:00.000Z</published>
+    <updated>2026-02-26T15:38:48.280Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Andrej Karpathy가 최근 X에서 한 말이 개발자 커뮤니티를 들썩이게 했습니다. “CLI는 레거시 기술이라서 AI 에이전트에게 좋다.” 직관적으로는 모순처럼 들리는 이 문장에 14년차 인프라 엔지니어로서 깊이 공감합니다. 실제로 저는 요즘 OpenClaw에 수많은 CLI 도구를 연결해 사용하고 있거든요.</p><span id="more"></span><p>Karpathy의 핵심 주장은 단순합니다. CLI가 수십 년간 거의 변하지 않았기 때문에 AI 모델의 학습 데이터에 CLI 사용법이 풍부하게 포함되어 있습니다. 새로운 API나 프로토콜은 학습 데이터에 드물지만, grep, sed, awk, curl 같은 명령어는 코드와 문서 어디에나 존재합니다. 에이전트는 이런 도구를 “본능적으로” 다룰 수 있습니다.</p><p>출처: <a href="https://x.com/karpathy/status/2026360908398862478">Andrej Karpathy X</a></p><p>왜 CLI가 에이전트에게 특별히 잘 맞는지 몇 가지 이유를 정리했습니다.</p><p>우선 텍스트 스트림 기반 구조입니다. Unix 철학의 핵심인 &quot;stdout을 stdin으로 파이핑&quot;하는 방식은 LLM의 텍스트 처리 방식과 완벽하게 일치합니다. 에이전트가 읽고, 파싱하고, 다음 명령으로 넘기는 과정이 자연스럽습니다.</p><p>출처: <a href="https://www.firecrawl.dev/blog/why-clis-are-better-for-agents">Firecrawl Blog</a></p><p>두 번째는 결정론적 피드백입니다. CLI는 종료 코드로 성공(0)과 실패(1 이상)를 명확히 구분합니다. 에이전트는 사람의 개입 없이도 스스로 결과를 판단하고 재시도할 수 있습니다. &quot;이 작업이 끝났는가&quot;를 판단하는 것이 에이전트에게 가장 어려운 문제인데, CLI는 이 문제를 단순화합니다.</p><p>세 번째는 문서화 방식입니다. <code>--help</code> 플래그 하나로 모든 사용법을 즉시 확인할 수 있습니다. 별도의 스키마 정의나 API 문서 페이지를 찾아볼 필요가 없습니다. 에이전트가 도구를 처음 만났을 때도 즉시 사용 가능한 구조입니다.</p><p>출처: <a href="https://www.hrishidigital.com.au/blog/cli-vs-mcp-ai-agents/">hrishidigital.com</a></p><p>네 번째로 상태 단순성이 있습니다. CLI 도구는 파일시스템을 유일한 상태 저장소로 사용합니다. 에이전트 입장에서는 “파일이 생성되었는가”, &quot;내용이 수정되었는가&quot;만 확인하면 됩니다. 복잡한 상태 관리가 필요 없습니다.</p><p>마지막으로 CI/CD 통합이 쉽다는 점입니다. 터미널 기반 에이전트는 스크립트나 파이프라인에 바이너리처럼 삽입 가능합니다. GitHub Actions 한 줄 추가로 에이전트를 실행할 수 있습니다.</p><p>출처: <a href="https://www.firecrawl.dev/blog/why-clis-are-better-for-agents">Firecrawl Blog</a></p><p>이론을 실전으로 옮겨볼 일이 있었습니다. 저는 최근 OpenClaw에 다양한 CLI 도구를 연결하고 있습니다. 이메일 관리를 위한 himalaya, GitHub 제어를 위한 gh, PDF 편집을 위한 nano-pdf, 블로그 관리를 위한 hexo-cli 등입니다. 새로운 도구가 필요할 때마다 CLI로 래핑하여 에이전트에게 바로 사용하게 합니다.</p><p>MCP(Model Context Protocol) 같은 새로운 표준을 기다리기보다, 이미 존재하는 수천 개의 검증된 CLI 도구를 에이전트에게 쥐어주는 것이 지금 당장 가능한 전략입니다. 레거시는 단점이 아니라 에이전트에게는 오히려 가장 친숙한 인터페이스입니다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Andrej Karpathy가 최근 X에서 한 말이 개발자 커뮤니티를 들썩이게 했습니다. “CLI는 레거시 기술이라서 AI 에이전트에게 좋다.” 직관적으로는 모순처럼 들리는 이 문장에 14년차 인프라 엔지니어로서 깊이 공감합니다. 실제로 저는 요즘 OpenClaw에 수많은 CLI 도구를 연결해 사용하고 있거든요.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="CLI" scheme="https://futurecreator.github.io/tags/CLI/"/>
+    
+    <category term="DevTools" scheme="https://futurecreator.github.io/tags/DevTools/"/>
+    
+    <category term="Agent" scheme="https://futurecreator.github.io/tags/Agent/"/>
+    
+  </entry>
+  
+  <entry>
     <title>서버리스 Serverless 아키텍처 파헤치기</title>
     <link href="https://futurecreator.github.io/2019/03/14/serverless-architecture/"/>
     <id>https://futurecreator.github.io/2019/03/14/serverless-architecture/</id>
@@ -545,35 +572,6 @@
     <category term="cloud" scheme="https://futurecreator.github.io/tags/cloud/"/>
     
     <category term="gcp" scheme="https://futurecreator.github.io/tags/gcp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>최고의 프로그래밍 폰트는?</title>
-    <link href="https://futurecreator.github.io/2018/11/12/my-best-programming-font-top-3/"/>
-    <id>https://futurecreator.github.io/2018/11/12/my-best-programming-font-top-3/</id>
-    <published>2018-11-12T14:29:09.000Z</published>
-    <updated>2026-02-23T11:42:29.001Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>하루 종일 화면을 들여다보며 키보드를 두드리는 개발자에게 빠질 수 없는 것 중 하나가 <strong>프로그래밍 폰트</strong>(개발용 폰트)입니다. 프로그래밍 폰트는 각 문자의 폭이 일정한 <a href="https://en.wikipedia.org/wiki/Monospaced_font">고정폭 글꼴</a>(<em>Monospaced font</em>)을 기반으로 헷갈릴 여지가 있는 글자를 없애도록 설계된 폰트입니다. 아래 그림은 일반 굴림체와 프로그래밍 폰트인 Consolas, D2 Coding 폰트를 비교한 표인데요. 굴림체와 달리 프로그래밍 폰트는 숫자 <code>1</code>, 영어 소문자 <code>l</code>, 한글 <code>ㅣ</code>, 특수기호 <code>|</code> 를 구분할 수 있도록 만든 것을 볼 수 있습니다. 숫자 <code>0</code>, 영어 대문자 <code>O</code>, 한글 <code>ㅇ</code> 도 마찬가지입니다. 마침표와 쉼표도 헷갈리기 쉬운 문자 중 하나인데 프로그래밍 폰트는 좀 더 확실하게 차이점을 보여주고 있습니다. 표에는 없지만 <code>Z</code>와 <code>2</code>, <code>S</code>와 <code>5</code>, <code>G</code>와 <code>6</code> 등도 헷갈리기 쉬운 문자입니다.</p><span id="more"></span><p><img src="https://cloud.githubusercontent.com/assets/6773678/19587983/8d1a2304-979d-11e6-8320-4e8f0546e716.JPG" alt="https://github.com/naver/d2codingfont"></p><p>코드를 작성할 때는 글자, 숫자 하나에 결과가 크게 달라질 수 있고 오타 에러가 발생하면 디버깅하기 힘들기 때문에 대부분의 개발자가 프로그래밍 폰트를 사용합니다. 이번 포스트에서는 제가 좋아하는 프로그래밍 폰트를 (주관적인 순위와 함께) 가볍게 소개해드리려고 합니다.</p><h2 id="프로그래밍-폰트와-개발자의-취향">프로그래밍 폰트와 개발자의 취향</h2><p>프로그래밍 폰트는 생산성 향상에 필수이면서도 개발자 취향을 많이 탑니다.</p><p>주변 개발자들에게 물어보면 이클립스의 기본 폰트인 <a href="https://en.wikipedia.org/wiki/Consolas">Consolas</a> 를 쓰는 사람이 제일 많았습니다. Consolas 는 Microsoft 에서 개발해 Windows 에 기본 내장되어 있는 폰트입니다. Consolas 는 한글이 표현되지 않다보니 한글도 잘 표현해주는 <a href="https://github.com/naver/d2codingfont">D2 Coding</a> 을 쓰는 사람도 많았습니다. 사실 프로그래밍 폰트는 다양하지만 언뜻 보면 비슷비슷해 보이는 것이 사실이라 굳이 새로운 폰트를 사용할 필요를 못느낄 수도 있습니다.</p><p><img src="consolas.png" alt="Consolas"></p><p>반대로 글씨체를 중요하게 생각하는 개발자도 있습니다. 저도 폰트를 꽤 자주 바꾸는 편입니다. 맨날 보는 화면이라도 테마나 폰트를 바꾸면 기분전환도 되고 집중도 더 잘 되더라구요. 사실 프로그래밍 폰트 외에 각종 에디터, 웹 브라우저도 수시로 폰트를 바꿔가며 사용합니다.</p><h2 id="나만의-프로그래밍-폰트-순위-TOP-3">나만의 프로그래밍 폰트 순위 TOP 3</h2><p>제가 프로그래밍 폰트를 고르는 기준은 얼마나 ‘눈에 잘 들어오는지‘ 입니다.  지금까지 사용해 본 폰트 중에서 제 마음에 든 폰트는 다음과 같습니다.</p><h3 id="IBM-Plex-Mono">IBM Plex Mono</h3><p><img src="ibm-plex-mono.png" alt="IBM Plex Mono"></p><p>1위는 제 최애 폰트인 <a href="https://www.ibm.com/plex/">IBM Plex Mono</a> 입니다. 이름에서 알 수 있듯이 IBM 에서 만든 폰트로 IBM Plex 폰트 중 모노스페이스 폰트입니다. 돋움체(<em>Sans-Serif</em>) 같은 느낌의 폰트 중에서도 단연 눈에 띄는 시원시원한 바탕체(<em>Serif</em>) 스타일의 폰트입니다. 특히 한껏 꺾인 중괄호(Brace, <code>{}</code>)가 매력 포인트입니다. 현재 이 블로그에서 코드를 표현할 때 사용하는 폰트이기도 합니다.</p><h3 id="Hack">Hack</h3><p><img src="hack.png" alt="Hack"></p><p>2위는 <a href="https://sourcefoundry.org/hack/">Hack</a> 입니다. Hack 은 Source Foundry 에서 만든 오픈 소스 폰트로 <a href="https://www.gnome.org/fonts/">Bitstream Vera</a> 와 <a href="http://dejavu-fonts.org/wiki/Main_Page">DejaVu</a> 폰트를 기반으로 만들어졌습니다. 전체적으로 부드럽고 둥글둥글하며 각 글자의 너비가 적당해서 가독성이 높아서 선호합니다. IBM Plex Mono 를 사용하기 전까지 주로 사용한 폰트입니다.</p><h3 id="Source-Code-Pro">Source Code Pro</h3><p><img src="source-code-pro.png" alt="Source Code Pro"></p><p>3위는 <a href="https://github.com/adobe-fonts/source-code-pro">Source Code Pro</a> 입니다. Adobe 에서 만든 오픈 소스 폰트인데요. 너비가 넓고 글자 사이의 간격이 넓어 답답하지 않고 눈에 잘 들어옵니다. 한 때 많이 사용했지만 다른 폰트에 비해 화면에 들어오는 코드가 적기 때문에 불편할 때가 종종 있습니다.</p><h3 id="번외-D2-Coding">(번외) D2 Coding</h3><p><img src="d2-coding.png" alt="D2 Coding"></p><p><a href="https://github.com/naver/d2codingfont">D2 Coding</a> 은 네이버에서 나눔바른고딕을 기반으로 만든 프로그래밍 폰트입니다. 영문자 뿐만 아니라 한글과도 조화롭고 비슷한 글자도 확실하게 구분한 폰트입니다. 그래서 한글 주석이 많거나 fallback 폰트로 사용합니다. 외국 폰트의 경우 한글을 지원하지 않는 경우가 많아 fallback 폰트로 지정해놓으면 한글만 D2 Coding 으로 나오게 됩니다. 사실 한글을 지원하는 프로그래밍 폰트 자체가 많지 않기 때문에 선택지가 (거의) 없습니다. 그래서 Consolas 에 맑은 고딕을 추가해서 사용하는 분들도 있다고 하네요.</p><h2 id="이-외에-인기-있는-폰트">이 외에 인기 있는 폰트</h2><p>좀 더 알아볼까요? 저는 잘 사용하지 않지만 개발자들이 주로 사용하는 폰트는 다음과 같습니다. 한 번 쭉 보시고 마음에 드는 폰트가 있으면 써보셔도 좋을 것 같습니다. 저는 Anonymous Pro 와 Red Hat 에서 만든 Liberation Mono 에 눈이 가네요.</p><h3 id="Fira-Code"><a href="https://github.com/tonsky/FiraCode">Fira Code</a></h3><p><img src="fira-code.png" alt="Fira Code"></p><h3 id="DejaVu-Sans-Mono"><a href="https://dejavu-fonts.github.io/">DejaVu Sans Mono</a></h3><p><img src="dejavu.png" alt="DejaVu Sans Mono"></p><h3 id="Inconsolata-g"><a href="https://en.wikipedia.org/wiki/Inconsolata">Inconsolata-g</a></h3><p><img src="inconsolata-g.png" alt="Inconsolata-g"></p><h3 id="Ubuntu-Mono-by-Ubuntu"><a href="https://design.ubuntu.com/font/">Ubuntu Mono</a> by Ubuntu</h3><p><img src="ubuntu-mono.png" alt="Ubuntu Mono"></p><h3 id="Anonymous-Pro"><a href="https://www.marksimonson.com/fonts/view/anonymous-pro">Anonymous Pro</a></h3><p><img src="anonymous-pro.png" alt="Anonymous Pro"></p><h3 id="M"><a href="https://mplus-fonts.osdn.jp/about-en.html">M+</a></h3><p><img src="m-plus.png" alt="M+"></p><h3 id="PT-Mono"><a href="https://www.fontsquirrel.com/fonts/pt-mono">PT Mono</a></h3><p><img src="pt-mono.png" alt="PT Mono"></p><h3 id="Liberation-Mono-by-Red-Hat"><a href="https://www.fontsquirrel.com/fonts/liberation-mono">Liberation Mono</a> by Red Hat</h3><p><img src="liberation-mono.png" alt="Liberation Mono"></p><h3 id="Iosevka"><a href="http://typeof.net/Iosevka/">Iosevka</a></h3><p><img src="iosevka.png" alt="Iosevka"></p><h3 id="Menlo-by-Apple"><a href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</a> by Apple</h3><p><img src="menlo.png" alt="Menlo"></p><h3 id="Monaco-by-Apple"><a href="https://en.wikipedia.org/wiki/Monaco_(typeface)">Monaco</a> by Apple</h3><p><img src="monaco.png" alt="Monaco"></p><h3 id="Meslo-LG"><a href="https://github.com/andreberg/Meslo-Font">Meslo LG</a></h3><p><img src="meslo-lg.png" alt="Meslo LG"></p><p>Meslo LG 는 Apple 의 Menlo 를 커스터마이징한 폰트입니다.</p><h2 id="당신의-폰트는-무엇인가요">당신의 폰트는 무엇인가요?</h2><p>여러분이 좋아하는 프로그래밍 폰트는 무엇인가요? 댓글에 남겨주시면 리스트에 추가하도록 하겠습니다. 감사합니다!</p><h2 id="Related-Posts">Related Posts</h2><ul><li>[variety-of-markdown-and-Implementations]</li><li>[hexo-change-font-face-no-cdn]</li><li>[medium-writing-paradigm-shift]</li><li>[metasyntactic-variables-foo-bar]</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;하루 종일 화면을 들여다보며 키보드를 두드리는 개발자에게 빠질 수 없는 것 중 하나가 &lt;strong&gt;프로그래밍 폰트&lt;/strong&gt;(개발용 폰트)입니다. 프로그래밍 폰트는 각 문자의 폭이 일정한 &lt;a href=&quot;https://en.wikipedia.org/wiki/Monospaced_font&quot;&gt;고정폭 글꼴&lt;/a&gt;(&lt;em&gt;Monospaced font&lt;/em&gt;)을 기반으로 헷갈릴 여지가 있는 글자를 없애도록 설계된 폰트입니다. 아래 그림은 일반 굴림체와 프로그래밍 폰트인 Consolas, D2 Coding 폰트를 비교한 표인데요. 굴림체와 달리 프로그래밍 폰트는 숫자 &lt;code&gt;1&lt;/code&gt;, 영어 소문자 &lt;code&gt;l&lt;/code&gt;, 한글 &lt;code&gt;ㅣ&lt;/code&gt;, 특수기호 &lt;code&gt;|&lt;/code&gt; 를 구분할 수 있도록 만든 것을 볼 수 있습니다. 숫자 &lt;code&gt;0&lt;/code&gt;, 영어 대문자 &lt;code&gt;O&lt;/code&gt;, 한글 &lt;code&gt;ㅇ&lt;/code&gt; 도 마찬가지입니다. 마침표와 쉼표도 헷갈리기 쉬운 문자 중 하나인데 프로그래밍 폰트는 좀 더 확실하게 차이점을 보여주고 있습니다. 표에는 없지만 &lt;code&gt;Z&lt;/code&gt;와 &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;S&lt;/code&gt;와 &lt;code&gt;5&lt;/code&gt;, &lt;code&gt;G&lt;/code&gt;와 &lt;code&gt;6&lt;/code&gt; 등도 헷갈리기 쉬운 문자입니다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Programming" scheme="https://futurecreator.github.io/categories/Programming/"/>
-    
-    <category term="Column" scheme="https://futurecreator.github.io/categories/Programming/Column/"/>
-    
-    
-    <category term="font" scheme="https://futurecreator.github.io/tags/font/"/>
-    
-    <category term="programming_font" scheme="https://futurecreator.github.io/tags/programming-font/"/>
-    
-    <category term="consolas" scheme="https://futurecreator.github.io/tags/consolas/"/>
-    
-    <category term="monospaced" scheme="https://futurecreator.github.io/tags/monospaced/"/>
     
   </entry>
   

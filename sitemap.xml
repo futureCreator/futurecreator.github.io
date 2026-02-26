@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/</loc>
+    
+    <lastmod>2026-02-26</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/2026/02/26/citrini-research-ai-future-scenario/</loc>
     
     <lastmod>2026-02-26</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/</loc>
+    <loc>https://futurecreator.github.io/2025/08/27/cli-legacy-for-ai-agents/</loc>
     
     <lastmod>2026-02-26</lastmod>
     
@@ -2795,6 +2804,27 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://futurecreator.github.io/tags/CLI/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/DevTools/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/Agent/</loc>
+    <lastmod>2026-02-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -2889,7 +2919,7 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/REVIEWS/</loc>
+    <loc>https://futurecreator.github.io/categories/AI/</loc>
     <lastmod>2026-02-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
