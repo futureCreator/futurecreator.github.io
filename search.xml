@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>에이전트에게 가장 좋은 도구는 결국 CLI였다</title>
+      <link href="/2026/02/26/cli-legacy-ai-agents-karpathy/"/>
+      <url>/2026/02/26/cli-legacy-ai-agents-karpathy/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Andrej Karpathy가 CLI는 레거시 기술이기 때문에 AI 에이전트가 오히려 가장 잘 다룬다고 말했다. 처음 들으면 역설처럼 들리지만, 실제로 에이전트를 운용해 본 입장에서 이건 정확한 관찰이다.</p><span id="more"></span><p>나는 14년째 클라우드 인프라를 운영하면서 온갖 도구를 써왔다. 최근에는 AI 에이전트에게 일을 시키는 데 시간을 많이 쓰고 있는데, MCP 같은 새로운 프로토콜보다 그냥 CLI를 쥐어주는 게 압도적으로 잘 된다는 걸 체감하고 있다.</p><p>Karpathy의 논점은 단순하다. CLI는 수십 년간 거의 변하지 않았고, 그 사용법이 인터넷 곳곳에 방대하게 축적되어 있다. LLM이 학습한 데이터에 CLI 사용 사례가 풍부하게 포함되어 있으니, 에이전트 입장에서는 가장 친숙한 인터페이스인 셈이다.</p><p>출처: <a href="https://x.com/karpathy/status/2026360908398862478">Karpathy X 포스트</a></p><p>기술적으로 CLI가 에이전트에게 맞는 이유도 명확하다. Unix 철학의 stdout에서 stdin으로 이어지는 파이핑은 LLM의 텍스트 처리 방식과 구조적으로 일치한다. 종료 코드 0과 1이라는 결정론적 피드백은 에이전트가 성공과 실패를 즉시 판단하고 자가 수정할 수 있게 해준다. tool --help 하나면 스키마 정의 없이도 사용법을 바로 파악한다. 파일시스템이 유일한 상태이므로 작성됨과 안 됨만 판단하면 된다. 스크립트와 파이프라인에 바이너리처럼 끼워 넣을 수 있어서 CI/CD 통합도 자연스럽다.</p><p>출처: <a href="https://www.firecrawl.dev/blog/why-clis-are-better-for-agents">Firecrawl - Why CLIs Are Better for AI Coding Agents Than IDEs</a></p><p>MCP가 나쁘다는 게 아니다. MCP는 표준화된 도구 연결 프로토콜로서 의미가 있다. 하지만 현실에서 에이전트에게 새 도구를 줄 때, MCP 서버를 세팅하고 스키마를 정의하고 인증을 붙이는 과정과, CLI 바이너리 하나를 설치하고 --help를 읽게 하는 과정의 마찰 차이는 크다. 에이전트는 이미 CLI를 알고 있다. 새로운 프로토콜은 에이전트가 학습해야 하는 또 다른 추상화 레이어다.</p><p>출처: <a href="https://www.hrishidigital.com.au/blog/cli-vs-mcp-ai-agents/">hrishidigital - Why AI Agents Work Better with Bash Than Fancy Protocols</a></p><p>실제로 나는 이 원칙을 OpenClaw 에이전트 운용에 적용하고 있다. 이메일은 himalaya CLI, 웹 검색은 Brave Search CLI, 블로그 관리는 hexo CLI, GitHub 작업은 gh CLI를 쥐어준다. 에이전트가 이 도구들을 다루는 걸 보면 별도의 트레이닝 없이도 자연스럽게 사용한다. --help로 옵션을 확인하고, 파이프라인을 조합하고, 에러가 나면 종료 코드를 보고 재시도한다. MCP 서버를 따로 띄울 필요가 없다.</p><p>이 경험에서 얻은 교훈은 간단하다. 에이전트에게 새 능력을 줄 때, 화려한 프로토콜부터 찾지 말고 CLI가 있는지 먼저 찾아보라는 것이다. 대부분의 개발 도구는 이미 CLI를 가지고 있다. 그 CLI는 수십 년간 문서화되고 테스트되었다. 에이전트의 학습 데이터에도 이미 들어가 있다.</p><p>Karpathy가 지적한 것처럼, 추상화 계층을 높이는 것이 항상 답은 아니다. 때로는 가장 오래된 인터페이스가 가장 효율적인 인터페이스다. CLI가 레거시라서 좋은 게 아니라, 레거시여서 보편적이고, 보편적이어서 에이전트가 잘 쓰는 것이다.</p><p>출처: <a href="https://www.speakeasy.com/blog/engineering-agent-friendly-cli">Speakeasy - Making Your CLI Agent-Friendly</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> REVIEWS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> opinion </tag>
+            
+            <tag> agent </tag>
+            
+            <tag> cli </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Citrini Research가 전망한 AI의 미래</title>
       <link href="/2026/02/26/citrini-research-ai-future-scenario/"/>
       <url>/2026/02/26/citrini-research-ai-future-scenario/</url>
