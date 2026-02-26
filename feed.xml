@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-02-26T00:22:30.235Z</updated>
+  <updated>2026-02-26T00:30:51.837Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Claude Code의 진짜 힘은 코드 생성이 아니다 - 컨텍스트 오케스트레이션의 시대</title>
+    <link href="https://futurecreator.github.io/2026/02/26/claude-code-context-orchestration/"/>
+    <id>https://futurecreator.github.io/2026/02/26/claude-code-context-orchestration/</id>
+    <published>2026-02-26T01:00:00.000Z</published>
+    <updated>2026-02-26T00:30:51.837Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Claude Code를 한 달 이상 사용하면서 깨달은 한 가지가 있다. 이 도구의 진정한 가치는 코드를 얼마나 잘 생성하느냐가 아니라, 흩어진 정보를 어떻게 연결하고 orchestration하느냐에 있다는 것이다. 코드 생성은 그 결과물 중 하나일 뿐, 본질은 컨텍스트 오케스트레이션에 있다.</p><span id="more"></span><p>최근 Zenn에 올라온 한 글을 읽고 이 생각이 더욱 확신으로 바뀌었다. 작성자는 Claude Code를 이용해 하루에 기사를 발행하고, 영어로 번역해서 여러 플랫폼에 크로스포스팅하며, 관련 파일들을 업데이트하고 커밋까지 하는 전 과정을 코드 한 줄 쓰지 않고 완료했다. Claude Code가 한 일은 단순히 코드를 생성한 것이 아니라, 흩어진 컨텍스트를 읽고 올바른 순서로 올바른 도구를 호출한 것이었다.</p><p>이 경험을 통해 나는 컨텍스트 오케스트레이션 개념에 주목하게 되었다. LLM에 제공되는 정보 컨텍스트를 체계적으로 설계하고 관리하며, 다양한 데이터 소스와 메모리 메커니즘을 큐레이션하고 통합해서 필요한 배경지식을 제때 제공하는 것이다. 오케스트레이션 레이어는 벡터 DB에서 컨텍스트 데이터를 가져오거나 대화 상태와 메모리를 관리하는 일을 프레임워크 차원에서 단순화한다.</p><p>특히 멀티 에이전트 환경으로 갈수록 각 에이전트의 중간 산출물이 누적되어 컨텍스트가 급격히 커진다. 이때 요약이나 선택적 프루닝 같은 컨텍스트 컴팩션을 단계 사이에 넣는 것이 중요하다. Claude Code의 5층 컨텍스트 구조는 이런 오케스트레이션의 좋은 사례라고 볼 수 있다.</p><p>첫 번째 레이어는 글로벌 규칙으로, 사용자 홈 디렉토리의 .claude/rules/에 위치한다. 코딩 규칙이나 보안 체크 같은 판단 기준을 담고 있다. 두 번째는 글로벌 스킬로, 반복적인 작업의 절차와 노하우를 저장한다. 세 번째는 전문 에이전트로, 특정 역할을 맡은 에이전트들을 관리한다. 네 번째는 워크스페이스 설정인 CLAUDE.md로, 프로젝트의 기술 스택이나 빌드 명령, 주요 규칙을 담는다. 마지막 다섯 번째는 프로젝트별 스킬과 에이전트, 그리고 auto memory로 구성된다.</p><p>이 구조의 핵심은 세션이 종료되어도 컨텍스트가 유지된다는 점이다. 예를 들어 한 세션에서 특정 오류의 해결책을 발견하면, 다음 세션에서 같은 문제를 만났을 때 다시 조사할 필요 없이 바로 해결책을 적용할 수 있다. 프로젝트를 넘어서도 컨텍스트를 전달할 수 있는데, 한 프로젝트에서 디버깅하며 얻은 인사이트를 즉시 다른 프로젝트의 기사 초안으로 변환할 수 있다.</p><p>재미있는 역설이 있다. 컨텍스트를 더 많이 쌓을수록 한 세션당 작업 시간은 오히려 짧아진다는 것이다. 처음에는 Qiita에 크로스포스트해달라는 요청에 30분 이상이 걸렸지만, 규칙과 스킬이 쌓이고 메모리가 축적되면서 이제는 y 한 글자 입력으로 2분 만에 동일한 작업이 완료된다. 컨텍스트가 매번 설명해야 하는 비용을 흡수하는 것이다.</p><p>프롬프트 엔지니어링과 컨텍스트 오케스트레이션은 다르다. 프롬프트 엔지니어링은 한 번의 입출력을 최적화하는 기술이라면, 컨텍스트 오케스트레이션은 세션을 넘어선 지식 기반을 구축하는 행위다. 시간이 갈수록 효과가 커지는 자기 증식 피드백 루프를 만드는 것이다.</p><p>실제로 적용핵려면 간단한 순서로 시작할 수 있다. 먼저 프로젝트 루트에 CLAUDE.md를 만들어 기술 스택과 빌드 명령을 기록한다. 프로젝트 디렉토리 내에서 Claude Code를 실행하면 auto memory가 자동으로 활성화된다. 세 번 이상 반복되는 작업은 .claude/skills/에 SKILL.md로 문서화하고, 매번 말하는 판단 기준은 .claude/rules/로 옮긴다.</p><p>컨텍스트 오케스트레이션은 AI 도구 사용의 새로운 패러다임이다. 코드를 생성하게 하는 것에서 나아가, AI가 스스로 컨텍스트를 읽고 판단하고 움직이게 하는 것이다. 이 관점이 바뀔 때 우리는 AI 도구를 더 효과적으로 활용할 수 있게 된다.</p><p>출처: <a href="https://zenn.dev/shimo4228/articles/claude-code-context-orchestration">Claude Code の真価はコード生成ではない</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Claude Code를 한 달 이상 사용하면서 깨달은 한 가지가 있다. 이 도구의 진정한 가치는 코드를 얼마나 잘 생성하느냐가 아니라, 흩어진 정보를 어떻게 연결하고 orchestration하느냐에 있다는 것이다. 코드 생성은 그 결과물 중 하나일 뿐, 본질은 컨텍스트 오케스트레이션에 있다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="Claude Code" scheme="https://futurecreator.github.io/tags/Claude-Code/"/>
+    
+    <category term="context orchestration" scheme="https://futurecreator.github.io/tags/context-orchestration/"/>
+    
+    <category term="LLM" scheme="https://futurecreator.github.io/tags/LLM/"/>
+    
+  </entry>
   
   <entry>
     <title>북미 IT 채용 시장이 보여주는 AI 시대의 각자도생</title>
@@ -568,33 +595,6 @@
     <category term="google_cloud_summit" scheme="https://futurecreator.github.io/tags/google-cloud-summit/"/>
     
     <category term="seoul" scheme="https://futurecreator.github.io/tags/seoul/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>마이크로서비스 Microservices (7) 모놀리스 리팩토링</title>
-    <link href="https://futurecreator.github.io/2018/10/19/microservices-refactoring-for-monolith/"/>
-    <id>https://futurecreator.github.io/2018/10/19/microservices-refactoring-for-monolith/</id>
-    <published>2018-10-19T12:40:06.000Z</published>
-    <updated>2026-02-23T11:42:28.999Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="모놀리스에서-마이크로서비스로">모놀리스에서 마이크로서비스로</h2><span id="more"></span><p>모놀리식(<em>monolithic</em>) 애플리케이션을 마이크로서비스(<em>microservices</em>) 애플리케이션으로 바꾸고 싶다면 어떻게 하시겠습니까? 처음부터 마이크로서비스 기반으로 다시 작성해야 할까요?</p><blockquote><p>폭파시키고 처음부터 작성해야 할 때는 진짜로 폭파했을 때 뿐이다.</p><footer><strong>Martin Fowler</strong></footer></blockquote><p>아닙니다. 처음부터 다시 만드는 일은 너무나 어려운 작업이고 큰 위험이 따르는 작업이죠. 대신에 점차적으로 개선해나가야 합니다. 하나의 큰 애플리케이션을 작은 서비스로 조금씩 쪼개나가야 합니다. 열대우림을 상상해봅시다. 여기엔 Strangler vine 이라는 식물이 있는데 아래 사진처럼 생겼습니다. 열대우림은 나무가 너무 많다보니 땅에 있으면 햇빛을 많이 받을 수가 없습니다. 그래서 이 식물은 햇빛을 받기 위해 다른 나무를 타고 올라갑니다. 결국 원래 나무는 죽고 이 식물만 남게 됩니다.</p><p><img src="https://www.nginx.com/wp-content/uploads/2016/03/Richardson-microservices-part7-fig.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p><p>갑자기 왜 나무 이야기냐구요? 우리는 바로 이 식물의 전략을 따라 리팩토링 하려고 합니다. 기존 애플리케이션을 따라 새로운 마이크로서비스를 만들고 기존 애플리케이션은 자연스럽게 없어집니다.</p><p>이를 위한 세 가지 전략을 한 번 살펴보겠습니다.</p><h2 id="1-삽질은-그만">1. 삽질은 그만!</h2><p>우리가 구덩이에 있다면 삽질을 멈춰야 합니다.<sup id="fnref:1"><a href="#fn:1" rel="footnote"><span class="hint--top hint--error hint--medium hint--rounded hint--bounce" aria-label="[Law of holes](https://en.wikipedia.org/wiki/Law_of_holes)">[1]</span></a></sup> 파면 팔수록 더 깊이 빠지게 되죠. 관리되지 않는 모놀리식 애플리케이션에 딱 맞는 말이죠. 즉 모놀리스 애플리케이션이 더 커지는 걸 막아야 합니다. 커지면 커질수록 더 관리하기 어려워지기 때문입니다. 그래서 여기에 새로운 코드를 추가하면 안됩니다! 대신 새로운 코드를 새로운 마이크로서비스로 만드는 것이 이 전략의 핵심입니다.</p><p><img src="https://www.nginx.com/wp-content/uploads/2016/03/Adding_a_secure_microservice_alongside_a_monolithic_application-1024x865.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p><p>새로운 기능을 새로운 서비스로 만들고 나면 요청을 라우팅해줄 라우터(<em>router</em>)가 필요합니다. 마치 API 게이트웨이처럼 말이죠. 그리고 모놀리스와 새로운 서비스 사이에 글루 코드(<em>glue code</em>)가 필요합니다. 글루 코드는 두 서비스를 연결해주는 코드를 말하는데요, 서비스를 새로 만들긴 했지만 아직 완전히 분리되기엔 데이터가 완전하지 않기 때문에 글루 코드를 이용해 모놀리스에서 데이터를 가져와야 합니다. 이런 글루 코드는 아직 오염되지 않은 서비스와 오염된 모놀리스 사이를 나눠주기 때문에 오염 방지 레이어(<em>anti-corruption layer</em>)라고도 합니다. 글루 코드는 다음과 같이 구현할 수 있습니다.</p><ul><li>모놀리스가 제공하는 API 사용</li><li>모놀리스의 DB에 바로 접근</li><li>모놀리스 DB를 복사해서 새로운 서비스에서 관리</li></ul><p>이 전략은 좋지만 모놀리스가 아직 건재합니다. 이제 모놀리스를 쪼갤 전략을 살펴보겠습니다.</p><h2 id="2-레이어-분리하기">2. 레이어 분리하기</h2><p>모놀리스 로직을 줄여가기 위해서 프론트엔드와 백엔드를 분리하겠습니다. 보통 엔터프라이즈 애플리케이션은 3계층 구조로 이루어져 있습니다.</p><ul><li>프레젠테이션 레이어(<em>Presentation layer</em>): HTTP 요청을 다루는 계층. REST API 를 제공하거나 HTML 기반의 웹  UI를 제공.</li><li>비즈니스 로직 레이어(<em>Business logic layer</em>): 애플리케이션의 비즈니스 로직이 들어있는 핵심 계층.</li><li>데이터 액세스 레이어(<em>Data-access layer</em>): 데이터베이스나 메시지 브로커(<em>message brokers</em>)에 접근하는 계층.</li></ul><p>여기서 프레젠테이션 레이어와 나머지 비즈니스 로직 레이어 + 데이터 액세스 레이어는 쉽게 분리할 수 있습니다. 따라서 프레젠테이션 레이어로 하나의 서비스를 만들고, 나머지 비즈니스 로직 레이어와 데이터 액세스 레이어를 하나의 서비스로 해서 두 개의 서비스로 분리할 수 있습니다. 그리고 나서 프레젠테이션 레이어가 호출할 수 있는 API 를 제공합니다.</p><p><img src="https://www.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part7-refactoring.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p><p>프레젠테이션 레이어에는 비즈니스 로직이 없기 때문에 쉽게 분리할 수 있습니다. 그리고 자연스럽게 비즈니스 로직 쪽에서 API 를 제공할 수 있게 됩니다. 그럼 마지막 세 번째 전략으로 나머지 부분도 모두 마이크로서비스로 바꿔봅시다.</p><h2 id="3-서비스-뽑아내기">3. 서비스 뽑아내기</h2><h3 id="서비스-고르기">서비스 고르기</h3><p>세 번째 전략은 기존의 모놀리스 속 모듈을 하나의 독립적인 마이크로서비스로 만드는 것입니다. 모두 서비스로 분리하고 나면 모놀리스는 완전히 사라지게 됩니다.</p><p>모놀리스 안에는 수십에서 수백 개의 모듈이 있습니다. 어떤 모듈을 서비스로 뽑아내야 할까요?</p><p>우선 뽑아내기 쉬운 모듈부터 작업을 해나가면 뽑아내는 작업에 익숙해질 수 있습니다. 그리고 변경이 자주 일어나는 모듈을 먼저 뽑아내는 것이 좋습니다. 왜냐하면 마이크로서비스로 뽑아내고 나면 독립적으로 개발하고 배포가 가능하기 때문에 시간을 아낄 수 있습니다.</p><p>자원을 많이 사용하는 모듈은 따로 뽑아내서 관리하는 것이 좋습니다. 예를 들면 인메모리 DB 를 사용하는 모듈이 있다면 메모리를 많이 잡아먹을 것이고, 복잡한 알고리즘을 수행하는 로직이 있다면 CPU 자원을 많이 사용할 겁니다. 이런 모듈은 따로 뽑아서 관리하는 것이 좋습니다.</p><p>서비스가 뭉쳐있는 부분도 뽑아내기 쉽습니다. 예를 들어 특정 모듈들이 다른 모듈들과 비동기 메시지 방식으로 통신하는 경우에는 분리가 쉽습니다.</p><h3 id="서비스-뽑아내기">서비스 뽑아내기</h3><p>먼저 뽑아낼 모듈과 모놀리스 사이에 인터페이스를 정의합니다. 서비스와 모놀리스는 서로 데이터가 필요해서 양방향 API 인 경우가 많고, 종속성이 얽혀 있어서 인터페이스를 정의하기 어려울 수 있습니다. 특히 도메인 모델 패턴(<em>Domain Model pattern</em>)을 이용해 구현한 경우라면 도메인 모델 클래스를 나누기가 어렵습니다. 이런 종속성을 끊으려면 중요한 코드를 변경해야 할 때가 있습니다.</p><p>인터페이스를 정의하고 난 후에 이를 이용해서 모놀리스 모듈을 마이크로서비스로 분리합니다. 아래 그림은 인터페이스를 정의하고 분리하는 모습을 보여줍니다. 호출 관계에 따라서 API 의 방향이 정해집니다.</p><p><img src="https://www.nginx.com/wp-content/uploads/2016/04/Richardson-microservices-part7-extract-module.png" alt="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/"></p><p>이런 작업을 반복해서 마이크로서비스를 늘려갈수록 모놀리스는 작아지고 개발 속도는 빨라지게 됩니다.</p><h2 id="참고">참고</h2><ul><li><a href="https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/">Refactoring a Monolith into Microservices | NGINX Blog</a></li></ul><h2 id="Related-Posts">Related Posts</h2><ul><li>[what-is-microservices-architecture]</li><li>[microservices-with-api-gateway]</li><li>[inter-process-communication-in-microservices]</li><li>[service-discovery-in-microservices]</li><li>[microservices-and-event-driven-data-management]</li><li>[microservices-deployment-strategy]</li><li>[microservices-refactoring-for-monolith]</li></ul><div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://en.wikipedia.org/wiki/Law_of_holes">Law of holes</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li></ol></div></div>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;모놀리스에서-마이크로서비스로&quot;&gt;모놀리스에서 마이크로서비스로&lt;/h2&gt;</summary>
-    
-    
-    
-    <category term="Programming" scheme="https://futurecreator.github.io/categories/Programming/"/>
-    
-    <category term="MSA" scheme="https://futurecreator.github.io/categories/Programming/MSA/"/>
-    
-    
-    <category term="microservices" scheme="https://futurecreator.github.io/tags/microservices/"/>
-    
-    <category term="monolith" scheme="https://futurecreator.github.io/tags/monolith/"/>
-    
-    <category term="refactoring" scheme="https://futurecreator.github.io/tags/refactoring/"/>
     
   </entry>
   
