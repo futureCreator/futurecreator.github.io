@@ -174,6 +174,38 @@
   </entry>
   
   <entry>
+    <title>SaaS의 종말과 그 다음의 세계</title>
+    <link href="https://futurecreator.github.io/2026/02/26/saas-end-world/"/>
+    <id>https://futurecreator.github.io/2026/02/26/saas-end-world/</id>
+    <published>2026-02-25T23:00:00.000Z</published>
+    <updated>2026-02-26T14:43:11.871Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>코드가 아닌 설계로 세상을 바꾸던 시대는 한동안 계속되었지만, SaaS의 성장 모멘텀도 언젠가는 한계를 맞이했다는 시그널이 뚜렷해졌다. 아래 글은 같은 흐름을 보도한 사례들을 모아 정리하고, 그 뒤 어떤 세계가 열릴지에 대한 예측을 담는다.</p><p>출처: <a href="https://news.hada.io/topic?id=27017">https://news.hada.io/topic?id=27017</a> (에이전트 AI 코딩의 변화에 관한 분석 포함)</p><ul><li>SaaS 종말의 주된 논점은 비용 증가, 공급 과잉, 확장성의 한계, 그리고 점점 더 강력해지는 로컬/에지 컴퓨팅의 각축이다. 케이스 스터디를 보면, 단일 플랫폼에 의존하던 아키텍처가 네트워크 지연, 데이터 소유권, 보안 정책 등으로 제약을 받으면서 분산형 툴체인으로의 전환이 가속화되고 있다.</li><li>또 다른 사례로는 대형 벤더의 API 의존도 축소, 로우코드/노코드의 한계 확장, 에이전트 기반 자동화의 비용-효율성 문제를 들 수 있다. 일부 프로젝트는 에이전트의 자동화 능력을 활용해 로컬에서의 코딩/배포를 대폭 단축했고, 이 흐름은 개발 주기의 재설계로 이어졌다.</li><li>SaaS의 종말 이후 세계는 어떤 모습일까? 예측은 주로 다음 포인트에 집중된다.<ul><li>분산화된 도구 체인: 서로 다른 모듈들이 필요에 따라 연결되고, 데이터 소유권과 파생 데이터를 로컬/엣지에서 부분적으로 처리한다.</li><li>파일-기반/메시지-기반 협업: 인간이 직접 간섭하는 대신, 파일과 메시지 중심의 워크플로우가 보편화된다.</li><li>컴퓨팅의 지능화: 파이프라인의 각 단계에서 AI가 의사결정을 보조하고, 사람은 설계와 검증에 더 집중한다.</li><li>경제성의 재정렬: 구독형 모델의 한계로 인해 사용량-값비교형 모델, 오픈 소스 친화적 흐름이 등장한다.</li></ul></li></ul><p>요약하면 SaaS는 하나의 거대한 플랫폼에서 벗어나, 더 작은 단위의 도구들이 네트워크로 엮이는 방향으로 재배치된다. 이 흐름 속에서 블로그 글은 서로 다른 케이스와 데이터 포인트를 모아 읽기 쉬운 인사이트로 다듬는 것이 핵심이다.</p><p>출처 및 참고: <a href="https://news.hada.io/topic?id=27017">https://news.hada.io/topic?id=27017</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;코드가 아닌 설계로 세상을 바꾸던 시대는 한동안 계속되었지만, Saa</summary>
+      
+    
+    
+    
+    <category term="cloud" scheme="https://futurecreator.github.io/categories/cloud/"/>
+    
+    <category term="dev" scheme="https://futurecreator.github.io/categories/cloud/dev/"/>
+    
+    <category term="ai" scheme="https://futurecreator.github.io/categories/cloud/dev/ai/"/>
+    
+    
+    <category term="saas" scheme="https://futurecreator.github.io/tags/saas/"/>
+    
+    <category term="economics" scheme="https://futurecreator.github.io/tags/economics/"/>
+    
+    <category term="tech-shift" scheme="https://futurecreator.github.io/tags/tech-shift/"/>
+    
+  </entry>
+  
+  <entry>
     <title>코드를 읽지 않는다는 것에 대한 단상</title>
     <link href="https://futurecreator.github.io/2026/02/25/2026-02-25-defense-of-not-reading-code/"/>
     <id>https://futurecreator.github.io/2026/02/25/2026-02-25-defense-of-not-reading-code/</id>
@@ -545,35 +577,6 @@
     <category term="cloud" scheme="https://futurecreator.github.io/tags/cloud/"/>
     
     <category term="gcp" scheme="https://futurecreator.github.io/tags/gcp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>최고의 프로그래밍 폰트는?</title>
-    <link href="https://futurecreator.github.io/2018/11/12/my-best-programming-font-top-3/"/>
-    <id>https://futurecreator.github.io/2018/11/12/my-best-programming-font-top-3/</id>
-    <published>2018-11-12T14:29:09.000Z</published>
-    <updated>2026-02-23T11:42:29.001Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>하루 종일 화면을 들여다보며 키보드를 두드리는 개발자에게 빠질 수 없는 것 중 하나가 <strong>프로그래밍 폰트</strong>(개발용 폰트)입니다. 프로그래밍 폰트는 각 문자의 폭이 일정한 <a href="https://en.wikipedia.org/wiki/Monospaced_font">고정폭 글꼴</a>(<em>Monospaced font</em>)을 기반으로 헷갈릴 여지가 있는 글자를 없애도록 설계된 폰트입니다. 아래 그림은 일반 굴림체와 프로그래밍 폰트인 Consolas, D2 Coding 폰트를 비교한 표인데요. 굴림체와 달리 프로그래밍 폰트는 숫자 <code>1</code>, 영어 소문자 <code>l</code>, 한글 <code>ㅣ</code>, 특수기호 <code>|</code> 를 구분할 수 있도록 만든 것을 볼 수 있습니다. 숫자 <code>0</code>, 영어 대문자 <code>O</code>, 한글 <code>ㅇ</code> 도 마찬가지입니다. 마침표와 쉼표도 헷갈리기 쉬운 문자 중 하나인데 프로그래밍 폰트는 좀 더 확실하게 차이점을 보여주고 있습니다. 표에는 없지만 <code>Z</code>와 <code>2</code>, <code>S</code>와 <code>5</code>, <code>G</code>와 <code>6</code> 등도 헷갈리기 쉬운 문자입니다.</p><span id="more"></span><p><img src="https://cloud.githubusercontent.com/assets/6773678/19587983/8d1a2304-979d-11e6-8320-4e8f0546e716.JPG" alt="https://github.com/naver/d2codingfont"></p><p>코드를 작성할 때는 글자, 숫자 하나에 결과가 크게 달라질 수 있고 오타 에러가 발생하면 디버깅하기 힘들기 때문에 대부분의 개발자가 프로그래밍 폰트를 사용합니다. 이번 포스트에서는 제가 좋아하는 프로그래밍 폰트를 (주관적인 순위와 함께) 가볍게 소개해드리려고 합니다.</p><h2 id="프로그래밍-폰트와-개발자의-취향">프로그래밍 폰트와 개발자의 취향</h2><p>프로그래밍 폰트는 생산성 향상에 필수이면서도 개발자 취향을 많이 탑니다.</p><p>주변 개발자들에게 물어보면 이클립스의 기본 폰트인 <a href="https://en.wikipedia.org/wiki/Consolas">Consolas</a> 를 쓰는 사람이 제일 많았습니다. Consolas 는 Microsoft 에서 개발해 Windows 에 기본 내장되어 있는 폰트입니다. Consolas 는 한글이 표현되지 않다보니 한글도 잘 표현해주는 <a href="https://github.com/naver/d2codingfont">D2 Coding</a> 을 쓰는 사람도 많았습니다. 사실 프로그래밍 폰트는 다양하지만 언뜻 보면 비슷비슷해 보이는 것이 사실이라 굳이 새로운 폰트를 사용할 필요를 못느낄 수도 있습니다.</p><p><img src="consolas.png" alt="Consolas"></p><p>반대로 글씨체를 중요하게 생각하는 개발자도 있습니다. 저도 폰트를 꽤 자주 바꾸는 편입니다. 맨날 보는 화면이라도 테마나 폰트를 바꾸면 기분전환도 되고 집중도 더 잘 되더라구요. 사실 프로그래밍 폰트 외에 각종 에디터, 웹 브라우저도 수시로 폰트를 바꿔가며 사용합니다.</p><h2 id="나만의-프로그래밍-폰트-순위-TOP-3">나만의 프로그래밍 폰트 순위 TOP 3</h2><p>제가 프로그래밍 폰트를 고르는 기준은 얼마나 ‘눈에 잘 들어오는지‘ 입니다.  지금까지 사용해 본 폰트 중에서 제 마음에 든 폰트는 다음과 같습니다.</p><h3 id="IBM-Plex-Mono">IBM Plex Mono</h3><p><img src="ibm-plex-mono.png" alt="IBM Plex Mono"></p><p>1위는 제 최애 폰트인 <a href="https://www.ibm.com/plex/">IBM Plex Mono</a> 입니다. 이름에서 알 수 있듯이 IBM 에서 만든 폰트로 IBM Plex 폰트 중 모노스페이스 폰트입니다. 돋움체(<em>Sans-Serif</em>) 같은 느낌의 폰트 중에서도 단연 눈에 띄는 시원시원한 바탕체(<em>Serif</em>) 스타일의 폰트입니다. 특히 한껏 꺾인 중괄호(Brace, <code>{}</code>)가 매력 포인트입니다. 현재 이 블로그에서 코드를 표현할 때 사용하는 폰트이기도 합니다.</p><h3 id="Hack">Hack</h3><p><img src="hack.png" alt="Hack"></p><p>2위는 <a href="https://sourcefoundry.org/hack/">Hack</a> 입니다. Hack 은 Source Foundry 에서 만든 오픈 소스 폰트로 <a href="https://www.gnome.org/fonts/">Bitstream Vera</a> 와 <a href="http://dejavu-fonts.org/wiki/Main_Page">DejaVu</a> 폰트를 기반으로 만들어졌습니다. 전체적으로 부드럽고 둥글둥글하며 각 글자의 너비가 적당해서 가독성이 높아서 선호합니다. IBM Plex Mono 를 사용하기 전까지 주로 사용한 폰트입니다.</p><h3 id="Source-Code-Pro">Source Code Pro</h3><p><img src="source-code-pro.png" alt="Source Code Pro"></p><p>3위는 <a href="https://github.com/adobe-fonts/source-code-pro">Source Code Pro</a> 입니다. Adobe 에서 만든 오픈 소스 폰트인데요. 너비가 넓고 글자 사이의 간격이 넓어 답답하지 않고 눈에 잘 들어옵니다. 한 때 많이 사용했지만 다른 폰트에 비해 화면에 들어오는 코드가 적기 때문에 불편할 때가 종종 있습니다.</p><h3 id="번외-D2-Coding">(번외) D2 Coding</h3><p><img src="d2-coding.png" alt="D2 Coding"></p><p><a href="https://github.com/naver/d2codingfont">D2 Coding</a> 은 네이버에서 나눔바른고딕을 기반으로 만든 프로그래밍 폰트입니다. 영문자 뿐만 아니라 한글과도 조화롭고 비슷한 글자도 확실하게 구분한 폰트입니다. 그래서 한글 주석이 많거나 fallback 폰트로 사용합니다. 외국 폰트의 경우 한글을 지원하지 않는 경우가 많아 fallback 폰트로 지정해놓으면 한글만 D2 Coding 으로 나오게 됩니다. 사실 한글을 지원하는 프로그래밍 폰트 자체가 많지 않기 때문에 선택지가 (거의) 없습니다. 그래서 Consolas 에 맑은 고딕을 추가해서 사용하는 분들도 있다고 하네요.</p><h2 id="이-외에-인기-있는-폰트">이 외에 인기 있는 폰트</h2><p>좀 더 알아볼까요? 저는 잘 사용하지 않지만 개발자들이 주로 사용하는 폰트는 다음과 같습니다. 한 번 쭉 보시고 마음에 드는 폰트가 있으면 써보셔도 좋을 것 같습니다. 저는 Anonymous Pro 와 Red Hat 에서 만든 Liberation Mono 에 눈이 가네요.</p><h3 id="Fira-Code"><a href="https://github.com/tonsky/FiraCode">Fira Code</a></h3><p><img src="fira-code.png" alt="Fira Code"></p><h3 id="DejaVu-Sans-Mono"><a href="https://dejavu-fonts.github.io/">DejaVu Sans Mono</a></h3><p><img src="dejavu.png" alt="DejaVu Sans Mono"></p><h3 id="Inconsolata-g"><a href="https://en.wikipedia.org/wiki/Inconsolata">Inconsolata-g</a></h3><p><img src="inconsolata-g.png" alt="Inconsolata-g"></p><h3 id="Ubuntu-Mono-by-Ubuntu"><a href="https://design.ubuntu.com/font/">Ubuntu Mono</a> by Ubuntu</h3><p><img src="ubuntu-mono.png" alt="Ubuntu Mono"></p><h3 id="Anonymous-Pro"><a href="https://www.marksimonson.com/fonts/view/anonymous-pro">Anonymous Pro</a></h3><p><img src="anonymous-pro.png" alt="Anonymous Pro"></p><h3 id="M"><a href="https://mplus-fonts.osdn.jp/about-en.html">M+</a></h3><p><img src="m-plus.png" alt="M+"></p><h3 id="PT-Mono"><a href="https://www.fontsquirrel.com/fonts/pt-mono">PT Mono</a></h3><p><img src="pt-mono.png" alt="PT Mono"></p><h3 id="Liberation-Mono-by-Red-Hat"><a href="https://www.fontsquirrel.com/fonts/liberation-mono">Liberation Mono</a> by Red Hat</h3><p><img src="liberation-mono.png" alt="Liberation Mono"></p><h3 id="Iosevka"><a href="http://typeof.net/Iosevka/">Iosevka</a></h3><p><img src="iosevka.png" alt="Iosevka"></p><h3 id="Menlo-by-Apple"><a href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</a> by Apple</h3><p><img src="menlo.png" alt="Menlo"></p><h3 id="Monaco-by-Apple"><a href="https://en.wikipedia.org/wiki/Monaco_(typeface)">Monaco</a> by Apple</h3><p><img src="monaco.png" alt="Monaco"></p><h3 id="Meslo-LG"><a href="https://github.com/andreberg/Meslo-Font">Meslo LG</a></h3><p><img src="meslo-lg.png" alt="Meslo LG"></p><p>Meslo LG 는 Apple 의 Menlo 를 커스터마이징한 폰트입니다.</p><h2 id="당신의-폰트는-무엇인가요">당신의 폰트는 무엇인가요?</h2><p>여러분이 좋아하는 프로그래밍 폰트는 무엇인가요? 댓글에 남겨주시면 리스트에 추가하도록 하겠습니다. 감사합니다!</p><h2 id="Related-Posts">Related Posts</h2><ul><li>[variety-of-markdown-and-Implementations]</li><li>[hexo-change-font-face-no-cdn]</li><li>[medium-writing-paradigm-shift]</li><li>[metasyntactic-variables-foo-bar]</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;하루 종일 화면을 들여다보며 키보드를 두드리는 개발자에게 빠질 수 없는 것 중 하나가 &lt;strong&gt;프로그래밍 폰트&lt;/strong&gt;(개발용 폰트)입니다. 프로그래밍 폰트는 각 문자의 폭이 일정한 &lt;a href=&quot;https://en.wikipedia.org/wiki/Monospaced_font&quot;&gt;고정폭 글꼴&lt;/a&gt;(&lt;em&gt;Monospaced font&lt;/em&gt;)을 기반으로 헷갈릴 여지가 있는 글자를 없애도록 설계된 폰트입니다. 아래 그림은 일반 굴림체와 프로그래밍 폰트인 Consolas, D2 Coding 폰트를 비교한 표인데요. 굴림체와 달리 프로그래밍 폰트는 숫자 &lt;code&gt;1&lt;/code&gt;, 영어 소문자 &lt;code&gt;l&lt;/code&gt;, 한글 &lt;code&gt;ㅣ&lt;/code&gt;, 특수기호 &lt;code&gt;|&lt;/code&gt; 를 구분할 수 있도록 만든 것을 볼 수 있습니다. 숫자 &lt;code&gt;0&lt;/code&gt;, 영어 대문자 &lt;code&gt;O&lt;/code&gt;, 한글 &lt;code&gt;ㅇ&lt;/code&gt; 도 마찬가지입니다. 마침표와 쉼표도 헷갈리기 쉬운 문자 중 하나인데 프로그래밍 폰트는 좀 더 확실하게 차이점을 보여주고 있습니다. 표에는 없지만 &lt;code&gt;Z&lt;/code&gt;와 &lt;code&gt;2&lt;/code&gt;, &lt;code&gt;S&lt;/code&gt;와 &lt;code&gt;5&lt;/code&gt;, &lt;code&gt;G&lt;/code&gt;와 &lt;code&gt;6&lt;/code&gt; 등도 헷갈리기 쉬운 문자입니다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Programming" scheme="https://futurecreator.github.io/categories/Programming/"/>
-    
-    <category term="Column" scheme="https://futurecreator.github.io/categories/Programming/Column/"/>
-    
-    
-    <category term="font" scheme="https://futurecreator.github.io/tags/font/"/>
-    
-    <category term="programming_font" scheme="https://futurecreator.github.io/tags/programming-font/"/>
-    
-    <category term="consolas" scheme="https://futurecreator.github.io/tags/consolas/"/>
-    
-    <category term="monospaced" scheme="https://futurecreator.github.io/tags/monospaced/"/>
     
   </entry>
   
