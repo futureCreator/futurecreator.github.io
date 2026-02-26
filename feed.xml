@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-02-26T15:58:10.808Z</updated>
+  <updated>2026-02-26T16:01:20.558Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://futurecreator.github.io/2026/02/27/cli-legacy-for-ai-agents/"/>
     <id>https://futurecreator.github.io/2026/02/27/cli-legacy-for-ai-agents/</id>
     <published>2026-02-26T15:45:00.000Z</published>
-    <updated>2026-02-26T15:58:10.808Z</updated>
+    <updated>2026-02-26T16:01:20.558Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Andrej Karpathy가 최근 X에서 한 말이 개발자 커뮤니티를 들썩이게 했다. ‘CLI는 레거시 기술이라서 AI 에이전트에게 좋다.’ 직관적으로는 모순처럼 들리는 이 문장에 14년차 인프라 엔지니어로서 깊이 공감했다. 실제로 나는 요즘 OpenClaw에 수많은 CLI 도구를 연결해 사용하고 있다.</p><span id="more"></span><p>Karpathy의 핵심 주장은 단순했다. CLI가 수십 년간 거의 변하지 않았기 때문에 AI 모델의 학습 데이터에 CLI 사용법이 풍부하게 포함되어 있다. 새로운 API나 프로토콜은 학습 데이터에 드물지만, grep, sed, awk, curl 같은 명령어는 코드와 문서 어디에나 존재했다. 에이전트는 이런 도구를 ‘본능적으로’ 다룰 수 있다.</p><p>출처: <a href="https://x.com/karpathy/status/2026360908398862478">Andrej Karpathy X</a></p><p>왜 CLI가 에이전트에게 특별히 잘 맞는지 몇 가지 이유를 정리했다.</p><p>우선 텍스트 스트림 기반 구조다. Unix 철학의 핵심인 'stdout을 stdin으로 파이핑’하는 방식은 LLM의 텍스트 처리 방식과 완벽하게 일치했다. 에이전트가 읽고, 파싱하고, 다음 명령으로 넘기는 과정이 자연스러웠다.</p><p>출처: <a href="https://www.firecrawl.dev/blog/why-clis-are-better-for-agents">Firecrawl Blog</a></p><p>두 번째는 결정론적 피드백이다. CLI는 종료 코드로 성공(0)과 실패(1 이상)를 명확히 구분한다. 에이전트는 사람의 개입 없이도 스스로 결과를 판단하고 재시도할 수 있다. '이 작업이 끝났는가’를 판단하는 것이 에이전트에게 가장 어려운 문제였는데, CLI는 이 문제를 단순화했다.</p><p>세 번째는 문서화 방식이다. ‘–help’ 플래그 하나로 모든 사용법을 즉시 확인할 수 있다. 별도의 스키마 정의나 API 문서 페이지를 찾아볼 필요가 없었다. 에이전트가 도구를 처음 만났을 때도 즉시 사용 가능한 구조였다.</p><p>출처: <a href="https://www.hrishidigital.com.au/blog/cli-vs-mcp-ai-agents/">hrishidigital.com</a></p><p>네 번째로 상태 단순성이 있다. CLI 도구는 파일시스템을 유일한 상태 저장소로 사용한다. 에이전트 입장에서는 ‘파일이 생성되었는가’, '내용이 수정되었는가’만 확인하면 된다. 복잡한 상태 관리가 필요 없었다.</p><p>마지막으로 CI/CD 통합이 쉽다는 점이다. 터미널 기반 에이전트는 스크립트나 파이프라인에 바이너리처럼 삽입 가능하다. GitHub Actions 한 줄 추가로 에이전트를 실행할 수 있었다.</p><p>출처: <a href="https://www.firecrawl.dev/blog/why-clis-are-better-for-agents">Firecrawl Blog</a></p><p>이론을 실전으로 옮겨볼 일이 있었다. 나는 최근 OpenClaw에 다양한 CLI 도구를 연결하고 있다. 이메일 관리를 위한 himalaya, GitHub 제어를 위한 gh, PDF 편집을 위한 nano-pdf, 블로그 관리를 위한 hexo-cli 등이 있다. 새로운 도구가 필요할 때마다 CLI로 래핑하여 에이전트에게 바로 사용하게 한다.</p><p>MCP(Model Context Protocol) 같은 새로운 표준을 기다리기보다, 이미 존재하는 수천 개의 검증된 CLI 도구를 에이전트에게 쥐어주는 것이 지금 당장 가능한 전략이다. 레거시는 단점이 아니라 에이전트에게는 오히려 가장 친숙한 인터페이스였다.</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Andrej Karpathy가 최근 X에서 한 말이 개발자 커뮤니티를 들썩이게 했다. ‘CLI는 레거시 기술이라서 AI 에이전트에게 좋다.’ 직관적으로는 모순처럼 들리는 이 문장에 14년차 인프라 엔지니어로서 깊이 공감했다. 실제로 나는 요즘 OpenClaw에 수많은 CLI 도구를 연결해 사용하고 있다.</p><span id="more"></span><p>Karpathy의 핵심 주장은 단순했다. CLI가 수십 년간 거의 변하지 않았기 때문에 AI 모델의 학습 데이터에 CLI 사용법이 풍부하게 포함되어 있다. 새로운 API나 프로토콜은 학습 데이터에 드물지만, grep, sed, awk, curl 같은 명령어는 코드와 문서 어디에나 존재했다. 에이전트는 이런 도구를 ‘본능적으로’ 다룰 수 있다.</p><p>왜 CLI가 에이전트에게 특별히 잘 맞는지 몇 가지 이유를 정리했다.</p><p>우선 텍스트 스트림 기반 구조다. Unix 철학의 핵심인 'stdout을 stdin으로 파이핑’하는 방식은 LLM의 텍스트 처리 방식과 완벽하게 일치했다. 에이전트가 읽고, 파싱하고, 다음 명령으로 넘기는 과정이 자연스러웠다.</p><p>두 번째는 결정론적 피드백이다. CLI는 종료 코드로 성공(0)과 실패(1 이상)를 명확히 구분한다. 에이전트는 사람의 개입 없이도 스스로 결과를 판단하고 재시도할 수 있다. '이 작업이 끝났는가’를 판단하는 것이 에이전트에게 가장 어려운 문제였는데, CLI는 이 문제를 단순화했다.</p><p>세 번째는 문서화 방식이다. ‘–help’ 플래그 하나로 모든 사용법을 즉시 확인할 수 있다. 별도의 스키마 정의나 API 문서 페이지를 찾아볼 필요가 없었다. 에이전트가 도구를 처음 만났을 때도 즉시 사용 가능한 구조였다.</p><p>네 번째로 상태 단순성이 있다. CLI 도구는 파일시스템을 유일한 상태 저장소로 사용한다. 에이전트 입장에서는 ‘파일이 생성되었는가’, '내용이 수정되었는가’만 확인하면 된다. 복잡한 상태 관리가 필요 없었다.</p><p>마지막으로 CI/CD 통합이 쉽다는 점이다. 터미널 기반 에이전트는 스크립트나 파이프라인에 바이너리처럼 삽입 가능하다. GitHub Actions 한 줄 추가로 에이전트를 실행할 수 있었다.</p><p>이론을 실전으로 옮겨볼 일이 있었다. 나는 최근 OpenClaw에 다양한 CLI 도구를 연결하고 있다. 이메일 관리를 위한 himalaya, GitHub 제어를 위한 gh, PDF 편집을 위한 nano-pdf, 블로그 관리를 위한 hexo-cli 등이 있다. 새로운 도구가 필요할 때마다 CLI로 래핑하여 에이전트에게 바로 사용하게 한다.</p><p>MCP(Model Context Protocol) 같은 새로운 표준을 기다리기보다, 이미 존재하는 수천 개의 검증된 CLI 도구를 에이전트에게 쥐어주는 것이 지금 당장 가능한 전략이다. 레거시는 단점이 아니라 에이전트에게는 오히려 가장 친숙한 인터페이스였다.</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;Andrej Karpathy가 최근 X에서 한 말이 개발자 커뮤니티를 들썩이게 했다. ‘CLI는 레거시 기술이라서 AI 에이전트에게 좋다.’ 직관적으로는 모순처럼 들리는 이 문장에 14년차 인프라 엔지니어로서 깊이 공감했다. 실제로 나는 요즘 OpenClaw에 수많은 CLI 도구를 연결해 사용하고 있다.&lt;/p&gt;</summary>
@@ -238,11 +238,11 @@
     
     <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
     
-    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
-    
     <category term="코딩에이전트" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%94%A9%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/"/>
     
     <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
+    
+    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
     
   </entry>
   
@@ -265,11 +265,11 @@
     
     <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
     
+    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
+    
     <category term="코드리뷰" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/"/>
     
     <category term="PR" scheme="https://futurecreator.github.io/tags/PR/"/>
-    
-    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
     
   </entry>
   
