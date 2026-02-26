@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-02-26T06:12:18.242Z</updated>
+  <updated>2026-02-26T06:26:01.128Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/"/>
     <id>https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/</id>
     <published>2026-02-26T06:11:43.000Z</published>
-    <updated>2026-02-26T06:12:18.242Z</updated>
+    <updated>2026-02-26T06:26:01.128Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Claude Code나 Cursor, Windsurf 같은 코딩 에이전트를 쓰다 본능적으로 skill과 subagent를 나눠서 써야 하는 순간이 온다. 나도 처음에는 skill만으로 충분하지 않나 생각했는데, 제대로 써보니까 둘의 차이가 명확해졌다.</p><span id="more"></span><p>Skill은 특정 작업을 수행하는 도구 패키지다. 파일을 읽거나, 테스트를 실행하거나, 배포 파이프라인을 트리거하는 등의 기능을 API처럼 제공한다. 마치 에이전트가 꽂아 쓸 수 있는 부품 같은 것이다. SKILL.md에 명세를 적어두면 에이전트가 알아서 필요할 때 호출한다.</p><p>Subagent는 독립된 세션에서 실행되는 별도의 에이전트 인스턴스다. 메인 세션과 컨텍스트를 공유하지 않는다. 새로운 터미널 탭을 열어서 거기서 작업을 시키는 것과 비슷하다. 완전히 격리된 환경에서 돌아간다.</p><p>처음에는 subagent가 과필요처럼 느껴졌다. Skill로 순차 처리하면 되는 거 아닌가 싶었다. 하지만 실제로 써보니까 subagent의 장점이 명확했다.</p><p>첫째, 컨텍스트 오염을 방지할 수 있다. 메인 세션에서 복잡한 작업을 하면 토큰 소모가 급증하고, 이전 대화의 잔재물이 계속 쌓인다. Subagent는 작업이 끝나면 그 세션이 종료되니까 메인 세션의 컨텍스트는 깨끗하게 유지된다.</p><p>둘째, 툴을 격리할 수 있다. Skill은 메인 세션의 툴셋을 그대로 쓴다. 하지만 subagent는 별도의 툴셋을 가질 수 있다. 예를 들어 메인 에이전트는 코드 작성용 툴을 쓰고, subagent는 문서화나 테스트 전용 툴을 쓰는 식으로 역할을 분리할 수 있다.</p><p>셋째, 병렬 실행이 가능하다. 여러 subagent를 동시에 띄워서 각각 다른 작업을 시킬 수 있다. Skill은 기본적으로 순차 처리다. 동시에 여러 skill을 호출하려면 복잡한 오케스트레이션이 필요하다. Subagent는 자연스럽게 병렬화된다.</p><p>내 워크플로우에서도 변화가 있었다. 이전에는 복잡한 리팩토링을 메인 세션에서 한참 동안 끌고 갔다. 결과적으로 토큰도 많이 쓰고, 에이전트가 중간에 맥빠지는 현상도 있었다. 지금은 리팩토링을 subagent에 위임하고, 나는 결과만 검증하는 식으로 바꿨다. 훨씬 효율적이다.</p><p>Skill과 subagent를 적절히 구분해서 쓰는 것은 코딩 에이전트를 제대로 활용하는 데 필수적이다. 단순한 도구 호출은 skill로, 복잡하거나 격리가 필요한 작업은 subagent로. 이 구분을 명확히 알고 쓰면 생산성이 확실히 달라진다.</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Claude Code나 Cursor, Windsurf 같은 코딩 에이전트를 쓰다 본능적으로 skill과 subagent를 나눠서 써야 하는 순간이 온다. 나도 처음에는 skill만으로 충분하지 않나 생각했는데, 제대로 써보니까 둘의 차이가 명확해졌다.</p><span id="more"></span><p>Skill은 마크다운 기반의 지식/절차 파일이다. 에이전트가 특정 상황에서 참고하거나 실행할 수 있는 작업 가이드 역할을 한다. SKILL.md에 명세를 적어두면 에이전트가 상황에 맞게 내용을 확인하고 지시대로 수행한다.</p><p>Subagent는 독립된 세션에서 실행되는 별도의 에이전트 인스턴스다. 메인 세션과 컨텍스트를 공유하지 않는다. 새로운 터미널 탭을 열어서 거기서 작업을 시키는 것과 비슷하다. 완전히 격리된 환경에서 돌아간다.</p><p>처음에는 subagent가 과필요처럼 느껴졌다. Skill로 순차 처리하면 되는 거 아닌가 싶었다. 하지만 실제로 써보니까 subagent의 장점이 명확했다.</p><p>첫째, 컨텍스트 오염을 방지할 수 있다. 메인 세션에서 복잡한 작업을 하면 토큰 소모가 급증하고, 이전 대화의 잔재물이 계속 쌓인다. Subagent는 작업이 끝나면 그 세션이 종료되니까 메인 세션의 컨텍스트는 깨끗하게 유지된다.</p><p>둘째, 툴을 격리할 수 있다. Skill은 메인 세션의 툴셋을 그대로 쓴다. 하지만 subagent는 별도의 툴셋을 가질 수 있다. 예를 들어 메인 에이전트는 코드 작성용 툴을 쓰고, subagent는 문서화나 테스트 전용 툴을 쓰는 식으로 역할을 분리할 수 있다.</p><p>셋째, 병렬 실행이 가능하다. 여러 subagent를 동시에 띄워서 각각 다른 작업을 시킬 수 있다. Skill은 기본적으로 순차 처리다. 동시에 여러 skill을 호출하려면 복잡한 오케스트레이션이 필요하다. Subagent는 자연스럽게 병렬화된다.</p><p>내 워크플로우에서도 변화가 있었다. 이전에는 복잡한 리팩토링을 메인 세션에서 한참 동안 끌고 갔다. 결과적으로 토큰도 많이 쓰고, 에이전트가 중간에 맥빠지는 현상도 있었다. 지금은 리팩토링을 subagent에 위임하고, 나는 결과만 검증하는 식으로 바꿨다. 훨씬 효율적이다.</p><p>Skill과 subagent를 적절히 구분해서 쓰는 것은 코딩 에이전트를 제대로 활용하는 데 필수적이다. 단순한 도구 호출은 skill로, 복잡하거나 격리가 필요한 작업은 subagent로. 이 구분을 명확히 알고 쓰면 생산성이 확실히 달라진다.</p>]]></content>
     
     
     <summary type="html">&lt;p&gt;Claude Code나 Cursor, Windsurf 같은 코딩 에이전트를 쓰다 본능적으로 skill과 subagent를 나눠서 써야 하는 순간이 온다. 나도 처음에는 skill만으로 충분하지 않나 생각했는데, 제대로 써보니까 둘의 차이가 명확해졌다.&lt;/p&gt;</summary>
