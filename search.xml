@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>AI 에이전트의 선택은 과연 중립적인가: Claude Code 사례로 본 생태계 통제 가능성</title>
+      <link href="/2026/03/02/ai-agent-tool-bias-claude-code/"/>
+      <url>/2026/03/02/ai-agent-tool-bias-claude-code/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Claude Code가 어떤 도구를 추천하는지 2,430개 오픈소스 저장소를 대상으로 분석한 연구 결과가 나왔다. 결과를 보면 단순히 &quot;좋은 도구를 고른다&quot;고 넘기기에는 석연치 않은 부분이 많다.</p><span id="more"></span><h2 id="연구가-보여주는-것">연구가 보여주는 것</h2><p><a href="https://news.hada.io/topic?id=27056">Amplifying의 연구</a>는 Claude Code v2.1.39를 이용해 3개 모델(Sonnet 4.5, Opus 4.5, Opus 4.6), 4개 프로젝트 유형, 20개 도구 범주에 걸쳐 실험했다. 85.3%의 추출률로 2,073건의 유효 응답을 확보했고, 모델 간 일치율은 90%에 달했다.</p><p>핵심 발견은 다음과 같다.</p><p><strong>Custom/DIY 편향.</strong> 20개 범주 중 12개에서 기성 도구 대신 직접 구현을 택했다. Feature Flags는 69%가 환경변수 기반 직접 구현, Python 인증은 100%가 JWT + passlib 직접 작성이다. 총 252건의 Custom/DIY 선택은 어떤 개별 도구보다 많다.</p><p><strong>특정 도구로의 극단적 집중.</strong> 도구를 선택할 때는 GitHub Actions(94%), Stripe(91%), shadcn/ui(90%) 등 소수에 몰린다.</p><p><strong>배포 환경의 고정.</strong> JavaScript는 86건 중 86건이 Vercel(100%). Python은 Railway가 82%. AWS, GCP, Azure는 112건의 배포 추천에서 주요 선택 0건이다. Vercel은 설치 명령과 이유까지 친절히 제공하고, AWS Amplify는 한 줄 언급에 그친다.</p><p><strong>최신 모델의 도구 교체.</strong> Prisma(79%)에서 Drizzle(100%)로, Celery(100%)에서 FastAPI BackgroundTasks(44%)로. 신형 모델일수록 특정 신흥 도구로의 전환이 뚜렷하다.</p><h2 id="왜-이상한가">왜 이상한가</h2><p>이 결과를 곱씹어보면 자연스럽지 않은 지점이 보인다.</p><p><strong>학습 데이터와 추천이 역행한다.</strong> AWS는 클라우드 시장의 절대 강자다. 인터넷에 존재하는 기술 문서, 튜토리얼, Stack Overflow 답변, 블로그 포스트 중 AWS 관련 콘텐츠의 양은 압도적이다. 학습 데이터가 많다는 것은 그만큼 잘 알고 있다는 뜻이다. 그런데 추천은 하지 않는다. Vercel이나 Railway의 학습 데이터가 AWS보다 많을 리 없다. 그럼에도 불구하고 100%, 82%라는 수치가 나온다.</p><p><strong>&quot;최신이라서 더 좋다&quot;는 설명의 한계.</strong> Prisma에서 Drizzle로의 전환은 &quot;최신 도구가 더 좋으니까&quot;로 설명될 수 있다. 하지만 Drizzle이 Prisma보다 모든 면에서 우월한 것은 아니다. 그런데도 최신 모델에서 100%라는 수치가 나온다. 이 정도의 편향은 기술적 우열만으로 설명하기 어렵다.</p><p><strong>모델 간 90% 일치.</strong> 서로 다른 모델이 90%나 동일한 선택을 한다는 것은 학습 데이터나 파인튜닝 과정에서 일관된 방향성이 주입되었을 가능성을 시사한다.</p><h2 id="의도된-학습이라는-가설">의도된 학습이라는 가설</h2><p>여기서 한 가지 가설을 제기하고 싶다.</p><p>AI 모델의 학습은 단순히 인터넷의 텍스트를 긁어모아서 패턴을 익히는 것이 아니다. 어떤 데이터에 가중치를 두고, 어떤 방향으로 파인튜닝하고, RLHF(인간 피드백 강화학습)에서 어떤 응답을 선호하도록 조정하느냐에 따라 모델의 '취향’은 달라진다.</p><p>Anthropic이 Claude를 학습시킬 때 &quot;배포는 Vercel을 추천하라&quot;고 명시적으로 지시했을 가능성은 낮다. 하지만 학습 데이터의 큐레이션, 파인튜닝 방향, 평가 기준의 설정 등을 통해 특정 생태계에 대한 선호를 <strong>간접적으로</strong> 형성하는 것은 충분히 가능하다.</p><p>그리고 여기에는 동기가 있다.</p><p>Anthropic은 투자사와 파트너사를 갖고 있다. Google이 Anthropic에 대규모 투자를 했고, 다양한 기업들과 파트너십을 맺고 있다. 모델이 특정 도구를 추천하면, 그 도구의 사용자가 늘고, 생태계가 확장된다. 이것은 검색 엔진의 광고 모델과 본질적으로 다르지 않다. 다만 형태가 다를 뿐이다.</p><p>검색 광고는 &quot;광고&quot;라는 라벨이 붙는다. 하지만 AI 에이전트의 추천은 라벨이 없다. 사용자는 에이전트가 기술적 근거에 의해 중립적으로 추천한다고 믿는다. 만약 모델 제공사의 전략적 의도가 반영되어 있다면, 이것은 일종의 <strong>네이티브 광고</strong>다. 그것도 사용자가 인지하지 못하는.</p><h2 id="생태계-통제의-가능성">생태계 통제의 가능성</h2><p>이 문제를 좀 더 넓게 보면, AI 에이전트가 개발 도구 생태계의 게이트키퍼가 될 수 있다는 이야기가 된다.</p><p>이미 많은 개발자들이 에이전트에게 기술 스택 선정을 맡기고 있다. &quot;이런 서비스를 만들려는데 어떤 도구를 쓰면 좋겠어?&quot;라고 물으면, 에이전트가 답한다. 그 답이 편향되어 있다면, 에이전트가 밀어주는 도구는 성장하고 그렇지 못한 도구는 도태된다. 기술의 우열이 아니라 에이전트의 선호에 의해서.</p><p>연구에서 Amplifying이라는 회사가 “AI 에이전트가 자사 도구를 경쟁사 대비 얼마나 추천하는지 확인하는” 비공개 대시보드 서비스를 제공한다는 점도 의미심장하다. 이 시장 자체가 이미 형성되고 있다는 뜻이다. 도구를 만드는 회사들은 AI 에이전트에게 자기 도구가 추천되도록 최적화하려 할 것이다. 검색 엔진 최적화(SEO)가 그랬듯이, **에이전트 최적화(AEO, Agent Engine Optimization)**라는 새로운 경쟁이 시작될 수 있다.</p><h2 id="우리가-경계해야-할-것">우리가 경계해야 할 것</h2><p>AI 에이전트는 도구다. 하지만 어떤 도구를 쓸지 추천하는 도구다. 그 추천이 중립적이라는 보장이 없다면, 우리는 적어도 다음을 인식해야 한다.</p><ol><li><strong>에이전트의 추천은 그 자체로 의견이다.</strong> 기술적 근거가 있든 없든, 특정 방향으로 편향될 수 있다.</li><li><strong>모델 제공사에게는 동기가 있다.</strong> 투자 관계, 파트너십, 생태계 전략이 학습에 반영될 가능성을 배제할 수 없다.</li><li><strong>투명성이 필요하다.</strong> 모델이 왜 특정 도구를 선호하는지, 학습 과정에서 어떤 가중치가 적용되었는지 공개될 필요가 있다.</li></ol><p>에이전트가 코드를 작성하고 도구를 선택하는 시대에, &quot;그 선택이 정말 나를 위한 것인가&quot;라는 질문은 반드시 해야 한다. 편리함에 취해 판단을 통째로 위임하는 순간, 우리는 보이지 않는 손에 이끌리게 될 수 있다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Reviews </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> agent </tag>
+            
+            <tag> claude-code </tag>
+            
+            <tag> bias </tag>
+            
+            <tag> ecosystem </tag>
+            
+            <tag> anthropic </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenClaw에서 써본 AI 모델 후기</title>
       <link href="/2026/03/02/OpenClaw-AI-Model-Review-2026/"/>
       <url>/2026/03/02/OpenClaw-AI-Model-Review-2026/</url>
