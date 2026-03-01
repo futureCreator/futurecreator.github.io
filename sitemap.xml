@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://futurecreator.github.io/posts/498328036/</loc>
-    
-    <lastmod>2026-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/posts/3394666156/</loc>
-    
-    <lastmod>2026-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/posts/1794024149/</loc>
-    
-    <lastmod>2026-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/posts/4138851194/</loc>
     
     <lastmod>2026-03-01</lastmod>
@@ -1115,27 +1088,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/agent/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/bias/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/ecosystem/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/anthropic/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3095,13 +3047,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/Bias/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -3110,13 +3055,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/PR/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/tags/Ecosystem/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

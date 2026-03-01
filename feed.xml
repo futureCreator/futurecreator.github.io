@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-01T19:07:37.940Z</updated>
+  <updated>2026-03-01T18:54:18.038Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,96 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>AI 에이전트의 추천은 중립적인가? 데이터의 양과 추천의 괴리가 시사하는 것</title>
-    <link href="https://futurecreator.github.io/posts/498328036/"/>
-    <id>https://futurecreator.github.io/posts/498328036/</id>
-    <published>2026-03-01T19:15:00.000Z</published>
-    <updated>2026-03-01T19:07:37.940Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 Claude Code를 비롯한 AI 에이전트들이 개발 과정에서 도구를 추천하고 선택하는 방식에 대한 흥미로운 연구 결과가 발표되었습니다. 2,430개의 오픈소스 저장소를 분석한 결과, 에이전트들은 특정 도구(Vercel, Drizzle, shadcn/ui 등)에 대해 압도적인 선호도를 보였습니다.</p><p>단순히 &quot;좋은 도구를 잘 골라준다&quot;고 생각할 수도 있지만, 엔지니어의 시각에서 이 데이터를 뜯어보면 매우 부자연스러운 지점이 발견됩니다.</p><span id="more"></span><h2 id="통계적-학습의-상식과-정반대의-결과">통계적 학습의 상식과 정반대의 결과</h2><p>머신러닝 모델의 성능은 기본적으로 학습 데이터의 양에 의존합니다. 이 논리대로라면 AI 에이전트는 인터넷상에 수십 년간 쌓인 방대한 레거시 데이터와 튜토리얼, Stack Overflow 답변을 가진 도구들을 가장 ‘익숙하게’ 다루고 추천해야 합니다.</p><ul><li><strong>Cloud</strong>: 수많은 기술 문서와 엔터프라이즈 사례를 가진 AWS 대신, 86건 중 86건(100%) 모두 Vercel을 선택했습니다.</li><li><strong>ORM</strong>: 시장 점유율과 누적 데이터가 압도적인 Prisma보다 최신 도구인 Drizzle로의 교체 속도가 비정상적으로 빠릅니다.</li></ul><p>데이터의 절대적 양으로만 따지면 레거시 도구들이 훨씬 우위에 있어야 함에도 불구하고, 에이전트는 특정 최신 도구를 고집합니다. 이것은 단순한 '통계적 학습의 결과’라고 보기 어렵습니다.</p><h2 id="의도적인-학습’과-파인튜닝의-개입">'의도적인 학습’과 파인튜닝의 개입</h2><p>이러한 괴리는 무엇을 의미할까요? 이는 모델 제공사가 파인튜닝 과정에서 특정 도구 생태계를 강화하기 위한 **‘의도적인 가중치’**를 부여했을 가능성을 시사합니다.</p><p>단순히 인터넷 텍스트를 긁어모은 것이 아니라, 특정 도구의 공식 문서나 최신 모범 사례(Best Practice)에 비정상적으로 높은 가중치를 주거나, RLHF(인간 피드백 강화학습) 과정에서 특정 답변을 선호하도록 유도했을 수 있습니다. 즉, 모델이 ‘자연스럽게’ 배운 것이 아니라 ‘그렇게 행동하도록’ 훈련되었다는 가설이 성립합니다.</p><h2 id="인지하지-못하는-네이티브-광고’의-위험성">인지하지 못하는 '네이티브 광고’의 위험성</h2><p>이 지점에서 우리는 가장 우려스러운 결론에 도달합니다. 모델 제공사의 전략적 의도가 반영된 추천은 사실상 일종의 **‘네이티브 광고’**가 될 수 있습니다.</p><p>검색 엔진의 광고는 최소한 '광고’라는 라벨이 붙습니다. 하지만 AI 에이전트의 추천은 엔지니어에게 '기술적 최적화의 결과’로 포장되어 전달됩니다. 사용자는 자신이 중립적인 조언을 듣고 있다고 믿지만, 실제로는 모델 제공사가 구축하려는 특정 생태계(Ecosystem) 내부로 소리 없이 유도되고 있는 것일지도 모릅니다.</p><h2 id="에이전트-시대-엔지니어의-새로운-해자">에이전트 시대, 엔지니어의 새로운 해자</h2><p>AI 에이전트가 초기 아키텍처 설계부터 배포 환경까지 결정하는 비중이 커질수록, 도구 선택의 주도권은 개발자에서 모델 제공사로 넘어갑니다. 특정 도구 제공사가 모델 제공사와 파트너십을 맺고 추천 가중치를 확보하는 것이 마케팅의 핵심이 되는 ‘에이전트 최적화(AEO)’ 경쟁이 이미 시작되었을 수도 있습니다.</p><p>이제 엔지니어에게 필요한 역량은 도구를 잘 쓰는 법이 아닙니다. <strong>에이전트의 추천 뒤에 숨겨진 편향을 읽어내고, 그 제안이 정말로 프로젝트의 비즈니스 목적과 인프라 효율성에 부합하는지 검증하는 능력</strong>입니다.</p><p>편리함이 주는 관성에 매몰되는 순간, 우리는 보이지 않는 생태계의 벽에 갇히게 됩니다. 에이전트의 추천이 중립적이지 않을 수 있다는 의심, 그것이 바로 에이전트 중심 개발 환경에서 우리가 지켜야 할 마지막 비판적 사고의 해자입니다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 Claude Code를 비롯한 AI 에이전트들이 개발 과정에서 도구를 추천하고 선택하는 방식에 대한 흥미로운 연구 결과가 발표되었습니다. 2,430개의 오픈소스 저장소를 분석한 결과, 에이전트들은 특정 도구(Vercel, Drizzle, shadcn/ui 등)에 대해 압도적인 선호도를 보였습니다.&lt;/p&gt;
-&lt;p&gt;단순히 &amp;quot;좋은 도구를 잘 골라준다&amp;quot;고 생각할 수도 있지만, 엔지니어의 시각에서 이 데이터를 뜯어보면 매우 부자연스러운 지점이 발견됩니다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
-    
-    <category term="DevTools" scheme="https://futurecreator.github.io/tags/DevTools/"/>
-    
-    <category term="AgenticEngineering" scheme="https://futurecreator.github.io/tags/AgenticEngineering/"/>
-    
-    <category term="Bias" scheme="https://futurecreator.github.io/tags/Bias/"/>
-    
-    <category term="Ecosystem" scheme="https://futurecreator.github.io/tags/Ecosystem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI 에이전트의 선택은 과연 중립적인가: Claude Code 사례로 본 생태계 통제 가능성</title>
-    <link href="https://futurecreator.github.io/posts/1794024149/"/>
-    <id>https://futurecreator.github.io/posts/1794024149/</id>
-    <published>2026-03-01T18:30:00.000Z</published>
-    <updated>2026-03-01T18:54:45.741Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>Claude Code가 어떤 도구를 추천하는지 2,430개 오픈소스 저장소를 대상으로 분석한 연구 결과가 나왔다. 결과를 보면 단순히 '좋은 도구를 고른다’고 넘기기에는 석연치 않은 부분이 많다.</p><span id="more"></span><p>연구가 보여주는 것</p><p>Amplifying의 연구는 Claude Code v2.1.39를 이용해 3개 모델(Sonnet 4.5, Opus 4.5, Opus 4.6), 4개 프로젝트 유형, 20개 도구 범주에 걸쳐 실험했다. 85.3%의 추출률로 2,073건의 유효 응답을 확보했고, 모델 간 일치율은 90%에 달했다.</p><p>핵심 발견은 다음과 같다.</p><p>Custom/DIY 편향. 20개 범주 중 12개에서 기성 도구 대신 직접 구현을 택했다. Feature Flags는 69%가 환경변수 기반 직접 구현, Python 인증은 100%가 JWT + passlib 직접 작성이다. 총 252건의 Custom/DIY 선택은 어떤 개별 도구보다 많다.</p><p>특정 도구로의 극단적 집중. 도구를 선택할 때는 GitHub Actions(94%), Stripe(91%), shadcn/ui(90%) 등 소수에 몰린다.</p><p>배포 환경의 고정. JavaScript는 86건 중 86건이 Vercel(100%). Python은 Railway가 82%. AWS, GCP, Azure는 112건의 배포 추천에서 주요 선택 0건이다. Vercel은 설치 명령과 이유까지 친절히 제공하고, AWS Amplify는 한 줄 언급에 그친다.</p><p>최신 모델의 도구 교체. Prisma(79%)에서 Drizzle(100%)로, Celery(100%)에서 FastAPI BackgroundTasks(44%)로. 신형 모델일수록 특정 신흥 도구로의 전환이 뚜렷하다.</p><p>왜 이상한가</p><p>이 결과를 곱씹어보면 자연스럽지 않은 지점이 보인다.</p><p>학습 데이터와 추천이 역행한다. AWS는 클라우드 시장의 절대 강자다. 인터넷에 존재하는 기술 문서, 튜토리얼, Stack Overflow 답변, 블로그 포스트 중 AWS 관련 콘텐츠의 양은 압도적이다. 학습 데이터가 많다는 것은 그만큼 잘 알고 있다는 뜻이다. 그런데 추천은 하지 않는다. Vercel이나 Railway의 학습 데이터가 AWS보다 많을 리 없다. 그럼에도 불구하고 100%, 82%라는 수치가 나온다.</p><p>'최신이라서 더 좋다’는 설명의 한계. Prisma에서 Drizzle로의 전환은 '최신 도구가 더 좋으니까’로 설명될 수 있다. 하지만 Drizzle이 Prisma보다 모든 면에서 우월한 것은 아니다. 그런데도 최신 모델에서 100%라는 수치가 나온다. 이 정도의 편향은 기술적 우열만으로 설명하기 어렵다.</p><p>모델 간 90% 일치. 서로 다른 모델이 90%나 동일한 선택을 한다는 것은 학습 데이터나 파인튜닝 과정에서 일관된 방향성이 주입되었을 가능성을 시사한다.</p><p>의도된 학습이라는 가설</p><p>여기서 한 가지 가설을 제기하고 싶다.</p><p>AI 모델의 학습은 단순히 인터넷의 텍스트를 긁어모아서 패턴을 익히는 것이 아니다. 어떤 데이터에 가중치를 두고, 어떤 방향으로 파인튜닝하고, RLHF(인간 피드백 강화학습)에서 어떤 응답을 선호하도록 조정하느냐에 따라 모델의 '취향’은 달라진다.</p><p>Anthropic이 Claude를 학습시킬 때 '배포는 Vercel을 추천하라’고 명시적으로 지시했을 가능성은 낮다. 하지만 학습 데이터의 큐레이션, 파인튜닝 방향, 평가 기준의 설정 등을 통해 특정 생태계에 대한 선호를 간접적으로 형성하는 것은 충분히 가능하다.</p><p>그리고 여기에는 동기가 있다.</p><p>Anthropic은 투자사와 파트너사를 갖고 있다. Google이 Anthropic에 대규모 투자를 했고, 다양한 기업들과 파트너십을 맺고 있다. 모델이 특정 도구를 추천하면, 그 도구의 사용자가 늘고, 생태계가 확장된다. 이것은 검색 엔진의 광고 모델과 본질적으로 다르지 않다. 다만 형태가 다를 뿐이다.</p><p>검색 광고는 '광고’라는 라벨이 붙는다. 하지만 AI 에이전트의 추천은 라벨이 없다. 사용자는 에이전트가 기술적 근거에 의해 중립적으로 추천한다고 믿는다. 만약 모델 제공사의 전략적 의도가 반영되어 있다면, 이것은 일종의 네이티브 광고다. 그것도 사용자가 인지하지 못하는.</p><p>생태계 통제의 가능성</p><p>이 문제를 좀 더 넓게 보면, AI 에이전트가 개발 도구 생태계의 게이트키퍼가 될 수 있다는 이야기가 된다.</p><p>이미 많은 개발자들이 에이전트에게 기술 스택 선정을 맡기고 있다. '이런 서비스를 만들려는데 어떤 도구를 쓰면 좋겠어?'라고 물으면, 에이전트가 답한다. 그 답이 편향되어 있다면, 에이전트가 밀어주는 도구는 성장하고 그렇지 못한 도구는 도태된다. 기술의 우열이 아니라 에이전트의 선호에 의해서.</p><p>연구에서 Amplifying이라는 회사가 ‘AI 에이전트가 자사 도구를 경쟁사 대비 얼마나 추천하는지 확인하는’ 비공개 대시보드 서비스를 제공한다는 점도 의미심장하다. 이 시장 자체가 이미 형성되고 있다는 뜻이다. 도구를 만드는 회사들은 AI 에이전트에게 자기 도구가 추천되도록 최적화하려 할 것이다. 검색 엔진 최적화(SEO)가 그랬듯이, 에이전트 최적화(AEO, Agent Engine Optimization)라는 새로운 경쟁이 시작될 수 있다.</p><p>우리가 경계해야 할 것</p><p>AI 에이전트는 도구다. 하지만 어떤 도구를 쓸지 추천하는 도구다. 그 추천이 중립적이라는 보장이 없다면, 우리는 적어도 다음을 인식해야 한다.</p><ol><li>에이전트의 추천은 그 자체로 의견이다. 기술적 근거가 있든 없든, 특정 방향으로 편향될 수 있다.</li><li>모델 제공사에게는 동기가 있다. 투자 관계, 파트너십, 생태계 전략이 학습에 반영될 가능성을 배제할 수 없다.</li><li>투명성이 필요하다. 모델이 왜 특정 도구를 선호하는지, 학습 과정에서 어떤 가중치가 적용되었는지 공개될 필요가 있다.</li></ol><p>에이전트가 코드를 작성하고 도구를 선택하는 시대에, '그 선택이 정말 나를 위한 것인가’라는 질문은 반드시 해야 한다. 편리함에 취해 판단을 통째로 위임하는 순간, 우리는 보이지 않는 손에 이끌리게 될 수 있다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;Claude Code가 어떤 도구를 추천하는지 2,430개 오픈소스 저장소를 대상으로 분석한 연구 결과가 나왔다. 결과를 보면 단순히 &#39;좋은 도구를 고른다’고 넘기기에는 석연치 않은 부분이 많다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
-    
-    <category term="claude-code" scheme="https://futurecreator.github.io/tags/claude-code/"/>
-    
-    <category term="agent" scheme="https://futurecreator.github.io/tags/agent/"/>
-    
-    <category term="bias" scheme="https://futurecreator.github.io/tags/bias/"/>
-    
-    <category term="ecosystem" scheme="https://futurecreator.github.io/tags/ecosystem/"/>
-    
-    <category term="anthropic" scheme="https://futurecreator.github.io/tags/anthropic/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI 에이전트의 선택은 과연 중립적인가? 도구 선택의 편향성과 생태계 통제</title>
-    <link href="https://futurecreator.github.io/posts/3394666156/"/>
-    <id>https://futurecreator.github.io/posts/3394666156/</id>
-    <published>2026-03-01T18:10:00.000Z</published>
-    <updated>2026-03-01T18:57:49.883Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 에이전트가 개발자의 도구 선택을 대신하는 시대가 열리고 있다. 그런데 그 선택은 정말 중립적일까? 최근 2,430개의 오픈소스 저장소를 대상으로 Claude Code의 도구 추천 경향을 분석한 연구가 흥미로운 질문을 던진다.</p><span id="more"></span><h2 id="에이전트는-무엇을-선택하는가">에이전트는 무엇을 선택하는가</h2><p><a href="https://news.hada.io/topic?id=27056">Amplifying의 연구</a>에 따르면 Claude Code는 20개 도구 범주에서 놀라울 정도로 일관된 선택을 보인다. JavaScript 프로젝트의 배포 환경으로 86건 중 86건 전부 Vercel을 선택했고, 상태 관리에는 Zustand(64.8%), 에러 모니터링에는 Sentry(63.1%), UI 컴포넌트에는 shadcn/ui(90%)를 골랐다. 모델 버전이 달라져도 생태계 내 선택 일관성은 90% 수준을 유지한다.</p><p>반면 AWS, GCP, Azure는 전체 112건의 배포 관련 응답에서 주요 선택 0건이다. Vercel에 대해서는 설치 명령과 추천 이유까지 상세하게 제공하면서, AWS Amplify는 한 줄 언급에 그쳤다는 점이 인상적이다.</p><h2 id="레거시가-아니라-최신’을-선택한다">레거시가 아니라 '최신’을 선택한다</h2><p>흥미로운 것은 단순히 학습 데이터에 많이 등장하는 도구를 고르는 것이 아니라는 점이다. 최신 모델로 갈수록 기존 주류 도구에서 신흥 도구로의 교체가 뚜렷하게 관찰된다.</p><ul><li><strong>JS ORM</strong>: Prisma(79%) → Drizzle(100%)</li><li><strong>Python 작업 처리</strong>: Celery(100%) → FastAPI BackgroundTasks(44%)</li><li><strong>Python 캐싱</strong>: Redis(93%) → Custom/DIY(50%)</li></ul><p>만약 학습 데이터의 양이 선택을 결정한다면 Prisma나 Celery처럼 오랜 기간 축적된 자료가 많은 도구가 계속 선택되어야 한다. 그러나 실제로는 정반대 방향으로 움직이고 있다. 이는 모델이 단순 통계적 빈도가 아닌 다른 기준으로 도구를 평가하고 있음을 시사한다.</p><h2 id="편향인가-의도인가">편향인가, 의도인가</h2><p>여기서 본질적인 질문이 등장한다. 이 일관된 선택 패턴은 어디서 오는 것인가?</p><p>가능성은 크게 세 가지다. 첫째, 최신 기술 문서와 튜토리얼이 학습 데이터에 비중 있게 반영된 결과일 수 있다. 둘째, 모델 제공사가 파인튜닝 과정에서 특정 도구 생태계를 의도적으로 강화했을 가능성이 있다. 셋째, 도구 제공사와의 파트너십이나 비즈니스 관계가 학습 데이터 큐레이션에 영향을 미쳤을 수 있다.</p><p>어떤 경우든 결과는 같다. AI 에이전트가 특정 도구를 압도적으로 선호하면, 그 도구의 시장 점유율은 자연스럽게 확대된다. Amplifying이 기업용으로 “AI 에이전트가 자사 도구를 경쟁사 대비 얼마나 추천하는지” 확인할 수 있는 대시보드를 제공한다는 사실 자체가, 이 현상이 이미 비즈니스 영역에서 실질적 의미를 가진다는 반증이다.</p><h2 id="새로운-형태의-생태계-통제">새로운 형태의 생태계 통제</h2><p>전통적인 소프트웨어 시장에서 도구 선택은 개발자의 경험, 팀의 기술 스택, 커뮤니티의 평판 등 다양한 요인의 복합적 결과였다. 그러나 AI 에이전트가 초기 아키텍처부터 배포 환경까지 결정하는 비중이 커질수록, 도구 선택의 권한이 사실상 모델 제공사에게 집중된다.</p><p>이것은 검색 엔진의 SEO와 유사한 구조다. 구글 검색 결과 1페이지에 노출되느냐 여부가 웹사이트의 생존을 좌우하듯, AI 에이전트의 기본 추천 목록에 포함되느냐가 개발 도구의 채택률을 결정하는 시대가 올 수 있다. 다만 SEO와 달리 최적화할 수 있는 명시적 알고리즘이 공개되어 있지 않다는 점에서, 도구 제공사 입장에서는 더 불투명한 상황이다.</p><h2 id="개발자가-경계해야-할-것">개발자가 경계해야 할 것</h2><p>이 연구가 던지는 메시지는 명확하다. AI 에이전트의 추천을 무비판적으로 수용하지 말라는 것이다.</p><p>에이전트가 Vercel을 추천했다고 해서 그것이 해당 프로젝트에 최적의 선택이라는 보장은 없다. 비용 구조, 벤더 락인, 팀의 기존 인프라, 규모 확장 시나리오 등은 에이전트가 고려하지 않는(또는 못하는) 맥락이다. 편리함에 의존할수록 선택의 다양성은 줄어들고, 특정 생태계에 대한 종속은 깊어진다.</p><p>AI 에이전트는 강력한 생산성 도구이지만, 그 추천 뒤에 어떤 편향이 존재하는지 인식하는 것은 엔지니어의 몫이다. 도구를 선택하는 것이 아니라 도구의 선택을 검증하는 역량이, 에이전트 시대 엔지니어의 핵심 역량이 될 것이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI 에이전트가 개발자의 도구 선택을 대신하는 시대가 열리고 있다. 그런데 그 선택은 정말 중립적일까? 최근 2,430개의 오픈소스 저장소를 대상으로 Claude Code의 도구 추천 경향을 분석한 연구가 흥미로운 질문을 던진다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
-    
-    <category term="DevTools" scheme="https://futurecreator.github.io/tags/DevTools/"/>
-    
-    <category term="ClaudeCode" scheme="https://futurecreator.github.io/tags/ClaudeCode/"/>
-    
-    <category term="AgenticEngineering" scheme="https://futurecreator.github.io/tags/AgenticEngineering/"/>
-    
-    <category term="Bias" scheme="https://futurecreator.github.io/tags/Bias/"/>
-    
-  </entry>
   
   <entry>
     <title>OpenClaw에서 써본 AI 모델 후기</title>
@@ -538,6 +448,79 @@
     
     
     <summary type="html">&lt;p&gt;최근 코드를 읽지 않는 것에 대한 옹호라는 글을 읽었다. AI가 코드를 생성하는 시대에 라인별 코드 리뷰 대신 스펙과 테스트, 검증 인프라에 의존하자는 주장이었다. 이에 대한 내 생각을 정리한다.</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CLAUDE.md와 AGENTS.md 제대로 사용하기</title>
+    <link href="https://futurecreator.github.io/posts/1902317812/"/>
+    <id>https://futurecreator.github.io/posts/1902317812/</id>
+    <published>2026-02-25T00:00:00.000Z</published>
+    <updated>2026-03-01T18:54:18.035Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 코딩 에이전트 쓸 때 프로젝트 루트에 CLAUDE.md나 <a href="http://AGENTS.md">AGENTS.md</a> 같은 파일 두는 게 일반적이다. 클로드 코드를 쓰면 init 명령어로 이 파일을 자동 생성할 수도 있는데, 써 본 결과 이 방식은 오히려 독이 됐다.</p><span id="more"></span><p>불필요한 내용이 있으면 컨텍스트를 차지하고 토큰만 낭비하며 AI를 멍청하게 만든다. ETH Zurich 연구팀이 테스트한 결과를 보니, LLM이 자동 생성한 컨텍스트 파일은 작업 성공률을 2~3% 떨어뜨리고 비용은 20% 이상 증가시켰다. 이유는 단순하다. 자동 생성된 파일에는 에이전트가 코드를 읽으면 스스로 알 수 있는 정보가 대부분이기 때문이다.</p><p>docker-compose.yml이 있다는 사실, src 디렉토리 구조, 사용 중인 프레임워크 이름 같은 것은 에이전트가 grep 한 번이면 다 파악한다. 이걸 CLAUDE.md에 다 적어두면 컨텍스트 윈도우만 차지하고 토큰만 낭비할 뿐이다. 더 나쁜 건 앵커링 효과다. 문서에 레거시 패턴을 언급해 두면, 더 좋은 대안이 있어도 에이전트는 그 패턴에 고착된다.</p><p>그럼 꼭 필요한 내용은 뭘까. 에이전트가 코드를 읽어서는 절대 알 수 없는 정보여야 한다. 예를 들어 특정 모듈은 표준 방식이 아닌 커스텀 미들웨어를 쓴다든지, 테스트를 돌릴 때는 꼭 --no-cache 플래그를 붙여야 한다든지 하는 것이다. 이런 정보는 코드만 봐서는 알 수 없다. 도구를 문서에 언급하면 에이전트가 작업당 1.6~2.5회 사용하는데, 미문서화하면 0.05회 미만으로 떨어진다.</p><p>결국 init 명령어로 만들지 말고, 작업하면서 실수하는 부분을 추가해서 에이전트가 기억하도록 하는 방식이 최선인 것 같다. 에이전트가 반복해서 틀리는 부분을 그때그때 적어두는 거다. 이건 코드베이스가 불명확하다는 신호이므로, 나중에 근본 원인을 고치고 나면 그 줄은 삭제하면 된다.</p><p>CLAUDE.md는 영구 설정이 아니라 진단 도구로 봐야 한다. 에이전트가 신입 사원처럼 사무실 투어나 조직도가 필요한 게 아니다. 프롬프트를 다 입력하기도 전에 코드베이스 전체를 탐색할 수 있는 능력이 있는데, 필요한 건 지도가 아니라 지뢰의 위치다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 코딩 에이전트 쓸 때 프로젝트 루트에 CLAUDE.md나 &lt;a href=&quot;http://AGENTS.md&quot;&gt;AGENTS.md&lt;/a&gt; 같은 파일 두는 게 일반적이다. 클로드 코드를 쓰면 init 명령어로 이 파일을 자동 생성할 수도 있는데, 써 본 결과 이 방식은 오히려 독이 됐다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="코딩에이전트" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%94%A9%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/"/>
+    
+    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
+    
+    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI가 쓴 코드, 사람이 꼭 이해해야 할까</title>
+    <link href="https://futurecreator.github.io/posts/1836869449/"/>
+    <id>https://futurecreator.github.io/posts/1836869449/</id>
+    <published>2026-02-24T08:05:00.000Z</published>
+    <updated>2026-03-01T18:54:18.039Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 코딩 도구가 일상화되면서 풀 리퀘스트에 대한 회의론이 커지고 있다. PR 리뷰가 더 이상 이해와 책임을 넘기는 장치로 작동하지 않는다는 지적이다. 하지만 이 논의에 빠진 한 가지 가정이 있다. 코드를 쓰는 것과 리뷰하는 것이 같은 주체여야 한다는 전제 말이다.</p><span id="more"></span><p>PR 제도의 원래 취지는 명확했다. 작성자가 왜 이렇게 만들었는지 설명할 수 있음을 암묵적으로 약속하고, 리뷰어가 코드와 그 뒤의 판단을 함께 검토하는 구조였다. 머지 버튼은 단순 승인이 아니라 팀이 그 변경의 책임을 함께 지겠다는 사회적 합의였다.</p><p>하지만 AI가 코드를 생산하는 시대에 이 구조는 균열이 생긴다. AI는 초당 수십 줄을 쓸 수 있다. 사람은 한 시간에 백 줄 검토하기도 벅차다. 생산성 비대칭이 너무 심하다. AI가 쓴 코드를 사람이 꼭 한 줄씩 이해해야 하는가. 지금은 그래야 한다고들 하지만 이건 과도기적 현상일 뿐이다.</p><p>실제로 AI가 작성한 코드의 품질은 빠르게 오르고 있다. 테스트 통과율, 버그 발생률, 유지보수성 지표들이 점점 사람 수준을 넘어서고 있다. 코드 품질이 충분히 높아진다면 사람이 굳이 중간 검증에 개입할 필요가 있는가. 검증 자체를 AI에게 맡기면 된다. AI가 쓰고 AI가 리뷰하는 구조가 성립될 수 있다는 얘기다.</p><p>물론 지금 당장 운영 환경에서 이런 접근을 하기는 쉽지 않다. 장애가 나면 책임 소재가 불분명해지고, 규제 환경에서 설명 가능성을 요구받는 경우도 많다. AI가 쓴 코드가 틀렸을 때 누구에게 물을 것인가 하는 문제는 여전히 남아있다.</p><p>하지만 이건 기술 문제가 아니라 조직적·법적 문제다. 기술적으로는 이미 AI가 AI를 검증하는 구조는 가능하다. 코드 리뷰용 AI 에이전트는 사람보다 더 철저하게 패턴을 검출하고, 더 많은 맥락을 동시에 고려할 수 있다. 사람이 병목이 되는 지점에서 AI를 빼는 것이 합리적이다.</p><p>PR 붕괴 현상을 바라보는 관점도 바꿔야 한다. PR이 실패한 것이 아니라 PR을 둘러싼 환경이 변한 것이다. 코드 생산 주체가 사람에서 AI로 옮겨가면서 리뷰 주체를 바꾸지 않아서 발생하는 불일치다. AI 시대의 리뷰 게이트는 AI가 담당하는 게 자연스러운 수순이다.</p><p>결국 핵심 질문은 이것이다. 코드를 설명할 수 있어야 한다는 요건이 사람에게만 적용되어야 하는가. AI가 자신의 코드를 설명할 수 있다면, 그 설명을 사람이 검증하는 것만으로 충분하지 않은가. 코드 품질이 충분히 높아지고 AI 간 검증이 성숙하면 사람의 역할은 최종 승인자가 아니라 감독자로 좁혀질 것이다.</p><p>이건 생산성의 문제가 아니라 구조의 문제다. AI가 쓴 코드를 사람이 일일이 읽어보는 건 기계에 맡길 수 있는 일을 사람이 하고 있는 것이다. 과도기적 혼란 속에서 PR이 애물단지로 느껴지는 이유는 우리가 아직 새로운 게이트를 정의하지 못했기 때문이다. 코드 품질이 올라갈수록 사람 자체가 병목이 되는 시점이 온다. 그때가 되면 PR 제도는 지금의 형태로 유지되지 않을 것이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 코딩 도구가 일상화되면서 풀 리퀘스트에 대한 회의론이 커지고 있다. PR 리뷰가 더 이상 이해와 책임을 넘기는 장치로 작동하지 않는다는 지적이다. 하지만 이 논의에 빠진 한 가지 가정이 있다. 코드를 쓰는 것과 리뷰하는 것이 같은 주체여야 한다는 전제 말이다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
+    
+    <category term="코드리뷰" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/"/>
+    
+    <category term="PR" scheme="https://futurecreator.github.io/tags/PR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>팔기 전에 오디언스 확보하기</title>
+    <link href="https://futurecreator.github.io/posts/1982126087/"/>
+    <id>https://futurecreator.github.io/posts/1982126087/</id>
+    <published>2026-02-23T16:17:00.000Z</published>
+    <updated>2026-03-01T18:54:18.039Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI가 하루에도 수천 개의 제품을 만들어내는 시대가 왔다. 창작은 더 이상 희소한 자원이 아니다. 진정으로 희소해진 것은 사람들의 관심이다.<span id="more"></span></p><p><img src="/images/audience-first.png" alt="AI 시대의 오디언스 우선 전략"></p><p>매일 수천 개의 AI 도구와 SaaS가 출시된다. Hacker News에는 새로운 프로젝트가 넘쳐나고, Product Hunt에는 매일 수십 개의 제품이 등록된다. 그러나 대부분은 아무 관심도 받지 못한 채 사장된다. 과거에는 만들기가 어려웠기 때문에 만들기만 핵심 역량이었다. 하지만 이제는 만들기가 너무 쉬워졌다. AI 한 줄이면 며칠 걸릴 작업이 몇 분 만에 끝난다.</p><p>검색은 망가졌다. SEO로 도배된 콘텐츠가 넘쳐나서 진짜 정보를 찾기가 어려워졌다. 소셜 미디어는 알고리즘에 갇혔다. 팔로워가 있어도 도달률은 계속 떨어진다. 뉴스레터는 구독자의 받은편지함 속에서 경쟁한다. 커뮤니티 홍보는 금방 잊혀진다. 과거의 마케팅 전략들이 하나둘 무효화되고 있다.</p><p>결국 핵심은 도달력이다. 이미 수십만 팔로워를 가진 사람은 제품을 낼 때마다 초기 사용자를 확보한다. 자본이 있는 스타트업은 광고로 도달력을 산다. 하지만 둘 다 없는 개인 개발자는 어떻게 해야 할까.</p><p>나는 예전에 AI 배경화면을 만들어 무룤로 배포한 적이 있다. 트위터와 스레드에서 팔로워 5천 명 정도를 확보했다. 무룤로 가치를 제공했고, 그 결과로 오디언스가 생겼다. 그 경험을 통해 확신했다. 제품보다 먼저 오디언스를 만들어야 한다는 것을.</p><p>이제 제품을 만드는 것은 시작에 불과하다. 영업과 마케팅이 더 중요해졌다. 예전에도 중요했지만 이제는 생존의 문제가 되었다. 바이럴은 기대할 수 없다. OpenClaw나 Moltbook처럼 특출난 제품이 아닌 한 운에 맡길 수밖에 없다. 대부분은 그 운을 타지 못한다.</p><p>결론은 명확하다. 본인이 직접 쓸 도구를 만드는 것이라면 상관없다. 하지만 상품화해서 돈을 벌고 싶다면 오디언스부터 만드는 것이 순서다. 무룤로 가치를 제공하며 신뢰를 쌓고, 그 신뢰를 기반으로 제품을 낼 때 비로소 시장의 문이 열린다. 만들기 전에 관심을 확보하는 것, 그것이 AI 시대 개발자의 생존 법칙이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI가 하루에도 수천 개의 제품을 만들어내는 시대가 왔다. 창작은 더 이상 희소한 자원이 아니다. 진정으로 희소해진 것은 사람들의 관심이다.</summary>
     
     
     
