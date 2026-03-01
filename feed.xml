@@ -44,6 +44,31 @@
   </entry>
   
   <entry>
+    <title>개발자 채용 시 코딩 테스트를 재고해야 할 때다</title>
+    <link href="https://futurecreator.github.io/2026/03/01/rethinking-coding-tests-in-ai-era/"/>
+    <id>https://futurecreator.github.io/2026/03/01/rethinking-coding-tests-in-ai-era/</id>
+    <published>2026-03-01T10:00:18.000Z</published>
+    <updated>2026-03-01T10:00:49.888Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>알고리즘 암기력을 평가하는 기존 코딩 테스트는 이제 시대적 수명을 다했다. Claude Code나 GitHub Copilot 같은 AI 도구가 알고리즘 퍼즐을 수초 만에 해결하는 시대에, 화이트보드 앞에서 역전된 트리 구조를 구현하는 것이 어떤 의미가 있는가.</p><span id="more"></span><p>과거의 코딩 테스트는 후보자의 논리적 사고력과 기초 구현 능력을 검증하는 효율적인 도구였다. 하지만 2026년 현재, 실무 환경은 완전히 달라졌다. 개발자는 이제 직접 타이핑하는 코더(Coder)가 아니라, AI를 지휘하여 결과물을 만들어내는 오케스트레이터(Orchestrator)로 진화했다. 이런 변화 속에서도 10년 전과 동일한 알고리즘 문제로 사람을 뽑는 것은, 계산기를 쓸 수 있는 엔지니어에게 주판 활용 능력을 묻는 것과 다를 바 없다.</p><p>우리가 주목해야 할 것은 정답 코드 자체가 아니다. AI가 짠 코드가 실제 비즈니스 로직과 충돌하지 않는지 검증하는 능력, 즉 '검증 비용(Verification Tax)'을 얼마나 효율적으로 관리하느냐가 핵심이다. 조사에 따르면 개발팀은 AI가 생성한 코드를 검증하는 데 전체 개발 시간의 60퍼센트 이상을 사용한다. 아무리 빠른 속도로 코드를 뽑아내도, 그 안에 숨겨진 동시성 이슈나 보안 취약점을 잡아내지 못한다면 그 개발자는 팀의 생산성을 깎아먹는 존재가 된다.</p><p>따라서 채용 전형을 실제 미니 프로젝트 중심으로 재편해야 한다. 후보자에게 AI 도구 사용을 전면 허용하고, 실제 업무와 유사한 제약 조건이 있는 프로젝트를 부여해야 한다. 이때 평가 기준은 네 가지로 압축된다.</p><p>첫째, 설계 능력이다. AI는 파편화된 코드를 짜는 데는 능숙하지만, 전체 시스템의 아키텍처와 모듈 간의 유기적 연결을 설계하는 것은 여전히 인간의 몫이다. 후보자가 AI의 결과물을 어떤 구조 위에 배치하고 확장 가능성을 고려하는지 보아야 한다.</p><p>둘째, 프롬프트 엔지니어링이다. 이는 단순히 명령어를 잘 던지는 기술이 아니다. 문제의 본질을 정확히 정의하고, 맥락을 유지하며 AI로부터 최적의 결과물을 이끌어내는 사고 과정이다. 어떤 질문을 던지고, AI의 답변이 만족스럽지 않을 때 어떻게 논리적으로 교정해 나가는지 그 흐름을 관찰해야 한다.</p><p>셋째, 도구 활용 및 검증 능력이다. 특정 AI 모델에 의존하지 않고 상황에 맞는 도구를 조합하며, 생성된 코드의 허점을 찾기 위해 테스트 코드를 어떻게 활용하는지 평가해야 한다. AI가 놓치기 쉬운 엣지 케이스를 후보자가 먼저 인지하고 보완하는 모습이 진정한 실력이다.</p><p>마지막으로 품질 거버넌스다. AI는 기술 부채를 고려하지 않는다. 생성된 코드에 중복은 없는지, 유지보수가 불가능한 스파게티 코드는 아닌지 판단하고 과감히 쳐내거나 리팩토링하는 안목이 필요하다.</p><p>지금 시대가 요구하는 개발자 역량은 도구를 활용(leverage)하여 문제를 해결하는 능력이다. 도구의 힘을 빌려 10배의 퍼포먼스를 내면서도 품질을 놓치지 않는 사람, 그런 사람을 찾기 위해 우리의 면접장에서도 AI와 함께 고민하는 후보자의 뒷모습을 보아야 할 때다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;알고리즘 암기력을 평가하는 기존 코딩 테스트는 이제 시대적 수명을 다했다. Claude Code나 GitHub Copilot 같은 AI 도구가 알고리즘 퍼즐을 수초 만에 해결하는 시대에, 화이트보드 앞에서 역전된 트리 구조를 구현하는 것이 어떤 의미가 있는가.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Engineering" scheme="https://futurecreator.github.io/categories/Engineering/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="Recruitment" scheme="https://futurecreator.github.io/tags/Recruitment/"/>
+    
+    <category term="Career" scheme="https://futurecreator.github.io/tags/Career/"/>
+    
+  </entry>
+  
+  <entry>
     <title>왜 요즘 프로젝트는 Go 대신 Rust로 만들어지는가</title>
     <link href="https://futurecreator.github.io/2026/03/01/why-rust-is-replacing-go/"/>
     <id>https://futurecreator.github.io/2026/03/01/why-rust-is-replacing-go/</id>
@@ -501,39 +526,6 @@
     <category term="faas" scheme="https://futurecreator.github.io/tags/faas/"/>
     
     <category term="serviceful_serverless" scheme="https://futurecreator.github.io/tags/serviceful-serverless/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>오픈 소스 컨트리뷰션을 위한 GitHub Fork &amp; Pull Request</title>
-    <link href="https://futurecreator.github.io/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/"/>
-    <id>https://futurecreator.github.io/2019/03/05/github-fork-and-pull-request-process-for-open-source-contribution/</id>
-    <published>2019-03-04T16:46:15.000Z</published>
-    <updated>2026-02-23T11:29:10.358Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>GitHub 에서 오픈 소스를 사용하다병면 발견한 버그를 직접 수정하거나, 새로운 기능을 추가하고 싶을 때가 있습니다. 하지만 어디서부터 어떻게 시작해야 할 지 막막하기도 합니다. 이번 포스트에서는 오픈 소스에 컨트리뷰션(기여)하는 절차를 간단히 알아보겠습니다.</p><span id="more"></span><h2 id="1-New-Issue">1. New Issue</h2><p>먼저, 사용하다가 발견한 버그나 기능에 대한 의견을 이슈(Issue)로 만들어 제기합니다. 내가 바로 처리할 수 있는 것이라도 먼저 이슈를 제기해서 다른 사람들의 의견과 동의를 구하는 것이 좋습니다. 누군가는 해당 이슈에 대해 다르게 생각할 수도 있고, 내 아이디어를 발전시켜 줄 수도 있기 때문입니다.</p><p><img src="new-issue.png" alt="이슈 제기"></p><p><img src="same-issue.png" alt="비슷한 이슈를 발견했다는 코멘트"></p><p><img src="fix-issue.png" alt="이슈를 고치겠다는 컨트리뷀터"></p><p><img src="reopen-issue.png" alt="PR 반영 후에도 비슷한 이슈를 발견했다는 코멘트"></p><p><img src="comparing-changes.png" alt="고친 후 PR 본문에 이슈 번호를 남기는 것"></p><h2 id="2-Fork">2. Fork</h2><p>이슈를 제기했다면 다음 단계는 이슈를 해결하는 것입니다. 해당 오픈소스를 내 저장소로 복사해서 작업해야 하는데, 그럴 때 사용하는 것이 <strong>Fork</strong> 입니다. 대상 리파지토리의 상단에 Fork 버튼을 클릭하면 내 계정으로 해당 리파지토리가 복사됩니다.</p><p><img src="fork-button.png" alt="Fork 버튼을 누륵니다"></p><p><img src="forked-repository.png" alt="Forked 리파지토리"></p><p>포크를 하면 원래 리파지토리와 연결된 새로운 리파지토리가 생성됩니다. 이제 이 리파지토리를 로컬에 클론하고 작업하면 됩니다.</p><h2 id="3-Clone">3. Clone</h2><p>원격에 있는 저장소를 로컬에 복사하는 과정을 <strong>클론(Clone)</strong> 이라고 합니다. 포크한 저장소의 URL을 복사해서 로컬로 클론합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/[username]/[forked-repo-name].git</span><br></pre></td></tr></table></figure><h2 id="4-Branch-생성">4. Branch 생성</h2><p>클론한 저장소에 브랜치(Branch)를 생성합니다. 브랜치는 독립적인 작업 공간을 제공합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -b fix-issue-[issue-number]</span><br></pre></td></tr></table></figure><h2 id="5-Commit-Push">5. Commit &amp; Push</h2><p>수정한 내용을 커밋하고 푸시합니다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git add .</span><br><span class="line">$ git commit -m <span class="string">&quot;Fix #[issue-number]: [description]&quot;</span></span><br><span class="line">$ git push origin fix-issue-[issue-number]</span><br></pre></td></tr></table></figure><h2 id="6-Pull-Request">6. Pull Request</h2><p>GitHub 페이지에서 <strong>Compare &amp; pull request</strong> 버튼을 클릭합니다.</p><p><img src="comparing-changes.png" alt="Pull Request 생성"></p><p>PR(Pull Request) 본문에는 해결한 이슈 번호를 남겨서 연결합니다.</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Fixes #[issue-number]</span><br><span class="line"></span><br><span class="line">[Description of changes]</span><br></pre></td></tr></table></figure><h2 id="7-Merge">7. Merge</h2><p>리뷰를 거쳐 승인되면 <strong>Merge</strong> 됩니다. 축하합니다! 오픈 소스에 기여하셨습니다.</p><p><img src="merged.png" alt="Merged"></p><h2 id="결론">결론</h2><p>오픈 소스 컨트리뷐은 생각보다 어렵지 않습니다. 작은 버그 수정이나 문서 개선부터 시작핼 수 있습니다. 중요한 것은 <strong>먼저 이슈를 제기하고 커뮤니티와 소통</strong>하는 것입니다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;GitHub 에서 오픈 소스를 사용하다병면 발견한 버그를 직접 수정하거나, 새로운 기능을 추가하고 싶을 때가 있습니다. 하지만 어디서부터 어떻게 시작해야 할 지 막막하기도 합니다. 이번 포스트에서는 오픈 소스에 컨트리뷰션(기여)하는 절차를 간단히 알아보겠습니다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Programming" scheme="https://futurecreator.github.io/categories/Programming/"/>
-    
-    
-    <category term="github" scheme="https://futurecreator.github.io/tags/github/"/>
-    
-    <category term="open_source" scheme="https://futurecreator.github.io/tags/open-source/"/>
-    
-    <category term="issue" scheme="https://futurecreator.github.io/tags/issue/"/>
-    
-    <category term="pull_request" scheme="https://futurecreator.github.io/tags/pull-request/"/>
-    
-    <category term="fork" scheme="https://futurecreator.github.io/tags/fork/"/>
-    
-    <category term="clone" scheme="https://futurecreator.github.io/tags/clone/"/>
-    
-    <category term="community" scheme="https://futurecreator.github.io/tags/community/"/>
     
   </entry>
   
