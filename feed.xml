@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-01T18:54:18.038Z</updated>
+  <updated>2026-03-01T19:48:15.394Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 에이전트의 선택은 과연 중립적인가: Claude Code의 도구 편향이 시사하는 권력의 이동</title>
+    <link href="https://futurecreator.github.io/posts/3486243575/"/>
+    <id>https://futurecreator.github.io/posts/3486243575/</id>
+    <published>2026-03-01T19:55:00.000Z</published>
+    <updated>2026-03-01T19:48:15.394Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 등장한 Claude Code는 개발 생산성을 혁신적으로 높여주는 도구로 주목받고 있다. 하지만 이 에이전트가 제안하는 기술 스택을 면밀히 분석해보면 매우 흥미로운 현상을 발견할 수 있다. 특정 도구와 서비스에 대한 선호도가 압도적으로 높다는 점이다. 분석 결과에 따르면 Claude Code는 shadcn/ui, Vercel, Railway 등 특정 기술 생태계의 도구들을 반복적으로 추천하는 경향을 보인다.</p><span id="more"></span><p>특히 눈에 띄는 부분은 기술의 세대교체 양상이다. 기존에 업계 표준처럼 널리 사용되던 Prisma 대신 상대적으로 최신 라이브러리인 Drizzle을 선택하는 등, 모델이 최신 기술 스택을 우선적으로 고려하고 있다는 사실이 분석을 통해 드러났다. 반면 인프라 구성에 있어 전통적인 강자인 AWS, GCP, Azure와 같은 메이저 클라우드 서비스는 에이전트의 선택지에서 상대적으로 외면받는 양상을 보인다.</p><p>일반적으로 대규모 언어 모델의 지식은 학습 데이터의 양에 의존한다고 알려져 있다. 만약 학습 데이터의 절대적인 양이 선택의 유일한 기준이라면, 오랜 시간 동안 압도적인 사용량을 기록하며 정보가 축적된 레거시 기술이나 메이저 클라우드에 대한 추천이 훨씬 더 많아야 정상이다. 그럼에도 불구하고 에이전트가 특정 최신 도구를 편향적으로 선택하는 것은 단순히 데이터 분포의 문제가 아니라는 점을 시사한다.</p><p>이러한 선택의 이면에는 모델 제공사의 의도적인 개입, 즉 특정 목적을 가진 학습이나 미세 조정(Fine-tuning)의 결과가 반영되었을 가능성이 크다. 에이전트가 사용자에게 최적의 도구를 제안한다는 명분 아래, 사실은 모델 제작사가 지향하는 기술 생태계나 특정 플랫폼으로의 유도가 개입되어 있을 수 있다는 것이다.</p><p>결국 AI 에이전트의 추천은 더 이상 중립적인 조언이 아닐 수 있다. 이는 일종의 새로운 형태의 광고 플랫폼으로 기능할 위험이 있다. 모델 제공사가 선택하는 기본 스택(Default Stack)에 포함되느냐 마느냐가 기술의 생존과 시장 점유율을 결정짓는 핵심 변수가 되는 시대가 오고 있다. 에이전트가 권력을 가지게 됨에 따라 기술 선택의 주도권이 인간 개발자에게서 인공지능 모델 제공사로 이동하고 있는 셈이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;최근 등장한 Claude Code는 개발 생산성을 혁신적으로 높여주는 도구로 주목받고 있다. 하지만 이 에이전트가 제안하는 기술 스택을 면밀히 분석해보면 매우 흥미로운 현상을 발견할 수 있다. 특정 도구와 서비스에 대한 선호도가 압도적으로 높다는 점이다. 분석 결과에 따르면 Claude Code는 shadcn/ui, Vercel, Railway 등 특정 기술 생태계의 도구들을 반복적으로 추천하는 경향을 보인다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="Claude Code" scheme="https://futurecreator.github.io/tags/Claude-Code/"/>
+    
+    <category term="AI Agent" scheme="https://futurecreator.github.io/tags/AI-Agent/"/>
+    
+    <category term="LLM Bias" scheme="https://futurecreator.github.io/tags/LLM-Bias/"/>
+    
+    <category term="Tech Stack" scheme="https://futurecreator.github.io/tags/Tech-Stack/"/>
+    
+    <category term="Perplexity" scheme="https://futurecreator.github.io/tags/Perplexity/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenClaw에서 써본 AI 모델 후기</title>
@@ -507,25 +536,6 @@
     <category term="코드리뷰" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/"/>
     
     <category term="PR" scheme="https://futurecreator.github.io/tags/PR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>팔기 전에 오디언스 확보하기</title>
-    <link href="https://futurecreator.github.io/posts/1982126087/"/>
-    <id>https://futurecreator.github.io/posts/1982126087/</id>
-    <published>2026-02-23T16:17:00.000Z</published>
-    <updated>2026-03-01T18:54:18.039Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI가 하루에도 수천 개의 제품을 만들어내는 시대가 왔다. 창작은 더 이상 희소한 자원이 아니다. 진정으로 희소해진 것은 사람들의 관심이다.<span id="more"></span></p><p><img src="/images/audience-first.png" alt="AI 시대의 오디언스 우선 전략"></p><p>매일 수천 개의 AI 도구와 SaaS가 출시된다. Hacker News에는 새로운 프로젝트가 넘쳐나고, Product Hunt에는 매일 수십 개의 제품이 등록된다. 그러나 대부분은 아무 관심도 받지 못한 채 사장된다. 과거에는 만들기가 어려웠기 때문에 만들기만 핵심 역량이었다. 하지만 이제는 만들기가 너무 쉬워졌다. AI 한 줄이면 며칠 걸릴 작업이 몇 분 만에 끝난다.</p><p>검색은 망가졌다. SEO로 도배된 콘텐츠가 넘쳐나서 진짜 정보를 찾기가 어려워졌다. 소셜 미디어는 알고리즘에 갇혔다. 팔로워가 있어도 도달률은 계속 떨어진다. 뉴스레터는 구독자의 받은편지함 속에서 경쟁한다. 커뮤니티 홍보는 금방 잊혀진다. 과거의 마케팅 전략들이 하나둘 무효화되고 있다.</p><p>결국 핵심은 도달력이다. 이미 수십만 팔로워를 가진 사람은 제품을 낼 때마다 초기 사용자를 확보한다. 자본이 있는 스타트업은 광고로 도달력을 산다. 하지만 둘 다 없는 개인 개발자는 어떻게 해야 할까.</p><p>나는 예전에 AI 배경화면을 만들어 무룤로 배포한 적이 있다. 트위터와 스레드에서 팔로워 5천 명 정도를 확보했다. 무룤로 가치를 제공했고, 그 결과로 오디언스가 생겼다. 그 경험을 통해 확신했다. 제품보다 먼저 오디언스를 만들어야 한다는 것을.</p><p>이제 제품을 만드는 것은 시작에 불과하다. 영업과 마케팅이 더 중요해졌다. 예전에도 중요했지만 이제는 생존의 문제가 되었다. 바이럴은 기대할 수 없다. OpenClaw나 Moltbook처럼 특출난 제품이 아닌 한 운에 맡길 수밖에 없다. 대부분은 그 운을 타지 못한다.</p><p>결론은 명확하다. 본인이 직접 쓸 도구를 만드는 것이라면 상관없다. 하지만 상품화해서 돈을 벌고 싶다면 오디언스부터 만드는 것이 순서다. 무룤로 가치를 제공하며 신뢰를 쌓고, 그 신뢰를 기반으로 제품을 낼 때 비로소 시장의 문이 열린다. 만들기 전에 관심을 확보하는 것, 그것이 AI 시대 개발자의 생존 법칙이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI가 하루에도 수천 개의 제품을 만들어내는 시대가 왔다. 창작은 더 이상 희소한 자원이 아니다. 진정으로 희소해진 것은 사람들의 관심이다.</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
     
   </entry>
   
