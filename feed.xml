@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-01T16:32:58.680Z</updated>
+  <updated>2026-03-01T16:39:49.987Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenClaw에서 써본 AI 모델 후기</title>
+    <link href="https://futurecreator.github.io/2026/03/02/OpenClaw-AI-Model-Review-2026/"/>
+    <id>https://futurecreator.github.io/2026/03/02/OpenClaw-AI-Model-Review-2026/</id>
+    <published>2026-03-01T16:50:00.000Z</published>
+    <updated>2026-03-01T16:39:49.987Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OpenClaw를 통해 다양한 AI 모델을 실무와 개인 프로젝트에 적용해 봤다. 각 모델이 가진 개성과 한계가 명확하게 드러났기에 그간의 경험을 정리했다.</p><span id="more"></span><p>Opus 4.6과 Sonnet 4.6은 여전히 성능 면에서 압도적이다. 복잡한 코딩이나 깊은 추론이 필요한 작업에서 가장 신뢰할 수 있는 결과물을 내놓았다. 하지만 비용 부담이 너무 컸다. Sonnet이 그나마 합리적인 대안으로 꼽히지만 대량의 작업을 맡기기에는 여전히 비싼 축에 속했다.</p><p>GLM-5는 성능 자체만 놓고 보면 꽤 준수했다. 특히 코드 생성 능력은 서구권 모델들과 견주어도 손색이 없었다. 하지만 결정적인 문제는 Rate Limit이었다. 실사용 중에 빈번하게 발생하는 제한 때문에 워크플로우가 끊기기 일쑤였다. 안정적인 서비스 운영이나 연속적인 작업에는 부적합하다는 판단을 내렸다.</p><p>Kimi K2.5는 가성비가 매우 훌륭했다. Moonshot API의 빠른 속도 덕분에 초기에는 주력으로 고려하기도 했다. 하지만 중요한 순간에 이른바 '삽질’을 하는 경우가 잦았다. 복잡한 지시사항을 놓치거나 엉뚱한 방향으로 작업을 수행할 때가 많아 더 똑똑한 모델의 필요성을 절감하게 됐다.</p><p>결국 당분간 주력 모델로 Gemini 3 Flash를 채택하기로 결정했다. 합리적인 가격과 빠른 속도, 그리고 기대 이상의 뛰어난 성능을 보여줬다. 특히 OpenClaw와 같은 에이전트 환경에서 도구 사용과 추론 속도의 균형이 매우 잘 맞았다. 현재로서는 가장 만족스러운 선택지다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;OpenClaw를 통해 다양한 AI 모델을 실무와 개인 프로젝트에 적용해 봤다. 각 모델이 가진 개성과 한계가 명확하게 드러났기에 그간의 경험을 정리했다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
+    
+    <category term="LLM" scheme="https://futurecreator.github.io/tags/LLM/"/>
+    
+    <category term="OpenClaw" scheme="https://futurecreator.github.io/tags/OpenClaw/"/>
+    
+    <category term="Gemini" scheme="https://futurecreator.github.io/tags/Gemini/"/>
+    
+    <category term="GLM" scheme="https://futurecreator.github.io/tags/GLM/"/>
+    
+    <category term="Moonshot" scheme="https://futurecreator.github.io/tags/Moonshot/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenClaw 모델 결국 정착지는 제미나이인가</title>
@@ -505,25 +538,6 @@
     <category term="코드리뷰" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/"/>
     
     <category term="PR" scheme="https://futurecreator.github.io/tags/PR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>팔기 전에 오디언스 확보하기</title>
-    <link href="https://futurecreator.github.io/2026/02/24/audience-first-in-ai-era/"/>
-    <id>https://futurecreator.github.io/2026/02/24/audience-first-in-ai-era/</id>
-    <published>2026-02-23T16:17:00.000Z</published>
-    <updated>2026-02-23T16:56:46.759Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI가 하루에도 수천 개의 제품을 만들어내는 시대가 왔다. 창작은 더 이상 희소한 자원이 아니다. 진정으로 희소해진 것은 사람들의 관심이다.<span id="more"></span></p><p><img src="/images/audience-first.png" alt="AI 시대의 오디언스 우선 전략"></p><p>매일 수천 개의 AI 도구와 SaaS가 출시된다. Hacker News에는 새로운 프로젝트가 넘쳐나고, Product Hunt에는 매일 수십 개의 제품이 등록된다. 그러나 대부분은 아무 관심도 받지 못한 채 사장된다. 과거에는 만들기가 어려웠기 때문에 만들기만 핵심 역량이었다. 하지만 이제는 만들기가 너무 쉬워졌다. AI 한 줄이면 며칠 걸릴 작업이 몇 분 만에 끝난다.</p><p>검색은 망가졌다. SEO로 도배된 콘텐츠가 넘쳐나서 진짜 정보를 찾기가 어려워졌다. 소셜 미디어는 알고리즘에 갇혔다. 팔로워가 있어도 도달률은 계속 떨어진다. 뉴스레터는 구독자의 받은편지함 속에서 경쟁한다. 커뮤니티 홍보는 금방 잊혀진다. 과거의 마케팅 전략들이 하나둘 무효화되고 있다.</p><p>결국 핵심은 도달력이다. 이미 수십만 팔로워를 가진 사람은 제품을 낼 때마다 초기 사용자를 확보한다. 자본이 있는 스타트업은 광고로 도달력을 산다. 하지만 둘 다 없는 개인 개발자는 어떻게 해야 할까.</p><p>나는 예전에 AI 배경화면을 만들어 무룤로 배포한 적이 있다. 트위터와 스레드에서 팔로워 5천 명 정도를 확보했다. 무룤로 가치를 제공했고, 그 결과로 오디언스가 생겼다. 그 경험을 통해 확신했다. 제품보다 먼저 오디언스를 만들어야 한다는 것을.</p><p>이제 제품을 만드는 것은 시작에 불과하다. 영업과 마케팅이 더 중요해졌다. 예전에도 중요했지만 이제는 생존의 문제가 되었다. 바이럴은 기대할 수 없다. OpenClaw나 Moltbook처럼 특출난 제품이 아닌 한 운에 맡길 수밖에 없다. 대부분은 그 운을 타지 못한다.</p><p>결론은 명확하다. 본인이 직접 쓸 도구를 만드는 것이라면 상관없다. 하지만 상품화해서 돈을 벌고 싶다면 오디언스부터 만드는 것이 순서다. 무룤로 가치를 제공하며 신뢰를 쌓고, 그 신뢰를 기반으로 제품을 낼 때 비로소 시장의 문이 열린다. 만들기 전에 관심을 확보하는 것, 그것이 AI 시대 개발자의 생존 법칙이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI가 하루에도 수천 개의 제품을 만들어내는 시대가 왔다. 창작은 더 이상 희소한 자원이 아니다. 진정으로 희소해진 것은 사람들의 관심이다.</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
     
   </entry>
   

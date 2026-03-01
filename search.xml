@@ -4,6 +4,43 @@
   
     
     <entry>
+      <title>OpenClaw에서 써본 AI 모델 후기</title>
+      <link href="/2026/03/02/OpenClaw-AI-Model-Review-2026/"/>
+      <url>/2026/03/02/OpenClaw-AI-Model-Review-2026/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OpenClaw를 통해 다양한 AI 모델을 실무와 개인 프로젝트에 적용해 봤다. 각 모델이 가진 개성과 한계가 명확하게 드러났기에 그간의 경험을 정리했다.</p><span id="more"></span><p>Opus 4.6과 Sonnet 4.6은 여전히 성능 면에서 압도적이다. 복잡한 코딩이나 깊은 추론이 필요한 작업에서 가장 신뢰할 수 있는 결과물을 내놓았다. 하지만 비용 부담이 너무 컸다. Sonnet이 그나마 합리적인 대안으로 꼽히지만 대량의 작업을 맡기기에는 여전히 비싼 축에 속했다.</p><p>GLM-5는 성능 자체만 놓고 보면 꽤 준수했다. 특히 코드 생성 능력은 서구권 모델들과 견주어도 손색이 없었다. 하지만 결정적인 문제는 Rate Limit이었다. 실사용 중에 빈번하게 발생하는 제한 때문에 워크플로우가 끊기기 일쑤였다. 안정적인 서비스 운영이나 연속적인 작업에는 부적합하다는 판단을 내렸다.</p><p>Kimi K2.5는 가성비가 매우 훌륭했다. Moonshot API의 빠른 속도 덕분에 초기에는 주력으로 고려하기도 했다. 하지만 중요한 순간에 이른바 '삽질’을 하는 경우가 잦았다. 복잡한 지시사항을 놓치거나 엉뚱한 방향으로 작업을 수행할 때가 많아 더 똑똑한 모델의 필요성을 절감하게 됐다.</p><p>결국 당분간 주력 모델로 Gemini 3 Flash를 채택하기로 결정했다. 합리적인 가격과 빠른 속도, 그리고 기대 이상의 뛰어난 성능을 보여줬다. 특히 OpenClaw와 같은 에이전트 환경에서 도구 사용과 추론 속도의 균형이 매우 잘 맞았다. 현재로서는 가장 만족스러운 선택지다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Reviews </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> Claude </tag>
+            
+            <tag> LLM </tag>
+            
+            <tag> OpenClaw </tag>
+            
+            <tag> Gemini </tag>
+            
+            <tag> GLM </tag>
+            
+            <tag> Moonshot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenClaw 모델 결국 정착지는 제미나이인가</title>
       <link href="/2026/03/02/openclaw-ai-models-review/"/>
       <url>/2026/03/02/openclaw-ai-models-review/</url>
