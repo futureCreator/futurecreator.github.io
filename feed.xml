@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-01T08:00:59.172Z</updated>
+  <updated>2026-03-01T09:23:57.978Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -17,56 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>AI 코딩이 초래하는 비용에 대한 생각</title>
-    <link href="https://futurecreator.github.io/2026/03/01/ai-coding-cost-and-perspective/"/>
-    <id>https://futurecreator.github.io/2026/03/01/ai-coding-cost-and-perspective/</id>
-    <published>2026-03-01T07:58:20.000Z</published>
-    <updated>2026-03-01T08:00:59.172Z</updated>
+    <title>AI 코딩이 초래하는 비용: 인지 부채와 생산성의 갈림길</title>
+    <link href="https://futurecreator.github.io/2026/03/01/cost-of-ai-coding-and-cognitive-debt/"/>
+    <id>https://futurecreator.github.io/2026/03/01/cost-of-ai-coding-and-cognitive-debt/</id>
+    <published>2026-03-01T10:15:00.000Z</published>
+    <updated>2026-03-01T09:23:57.978Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 코딩 도구를 매일 사용하면서 생산성이 확실히 올랐다는 것을 체감하고 있다. 하지만 최근 인지 부채와 기술 퇴화에 관한 글을 읽고, AI 도구의 이면에 있는 비용에 대해 다시 생각하게 되었다. 계산기와 엑셀 덕분에 직접 계산할 필요가 없어진 것이 잘못된 것은 아니듯, AI 코딩도 비슷한 패턴을 따를 수 있다는 생각이 들었다. 다만 지금은 과도기적 시점이므로 균형 잡힌 시각이 필요하다.</p><span id="more"></span><p>인지 부채와 기술 퇴화</p><p>AI 코딩 도구를 사용하면서 느끼는 가장 큰 변화는 문제 해결 방식의 전환이다. 이전에는 직접 코드를 작성하며 개념을 이해하고, 오류를 만나면 디버깅을 통해 깊이 있는 학습이 이루어졌다. 하지만 AI에게 반복적 사고를 위임하면 두뇌 경로가 약화되고 코드 이핼력이 감소한다는 연구 결과가 있다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI 코딩 도구를 매일 사용하면서 생산성이 확실히 올랐다는 것을 체감하고 있다. 하지만 최근 인지 부채와 기술 퇴화에 관한 글을 읽고, AI 도구의 이면에 있는 비용에 대해 다시 생각하게 되었다. 계산기와 엑셀 덕분에 직접 계산할 필요가 없어진 것이 잘못된 것은 아니듯, AI 코딩도 비슷한 패턴을 따를 수 있다는 생각이 들었다. 다만 지금은 과도기적 시점이므로 균형 잡힌 시각이 필요하다.&lt;/p&gt;</summary>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 코딩 도구가 보편화되면서 개발 환경은 전례 없는 변화를 맞이하고 있다. 하지만 이 화려한 생산성 뒤에는 보이지 않는 비용이 숨어 있다.</p><span id="more"></span><p>최근 발표된 Shen과 Tamkin의 연구에 따르면 AI 보조를 받은 그룹은 개념 이해와 디버깅 능력에서 비보조 그룹보다 17% 낮은 점수를 기록했다. 이는 단순히 도구를 사용하는 것을 넘어 인지 부채라는 새로운 형태의 비용을 지불하고 있음을 시사한다.</p><p>인지 부채는 AI에 사고 과정을 위임함으로써 발생하는 두뇌 경로의 약화와 코드 이해력의 결핍을 의미한다. 반복적인 코딩 작업과 문제 해결을 AI에 맡기면 개발자의 장기 기억 형성과 패턴 인식 능력이 저하된다는 것이다. 단 1시간의 수동적 AI 사용만으로도 이러한 기술 침식이 측정될 정도라고 한다.</p><p>특히 우려되는 지점은 시니어 육성 파이프라인의 붕괴다. 주니어 개발자가 AI가 생성한 코드를 이해 없이 복제하기 시작하면서 조직 내 시니어 개발자로 성장하는 경로가 차단되고 있다. AI는 초보자에게 시니어급 산출물을 즉시 제공하지만 그 과정에서 필요한 고통스러운 학습을 생략하게 만든다. 이는 장기적으로 조직 내 지식 전수를 어렵게 만들고 복잡한 시스템 리스크를 관리할 수 있는 진짜 시니어의 부재로 이어진다.</p><p>Goodhart의 법칙 또한 경계해야 할 부분이다. 측정치가 목표가 되는 순간 그것은 더 이상 좋은 측정치가 아니라는 원칙이다. AI 도입 후 코드 생성량이나 티켓 처리 속도를 생산성 지표로 강제하면 개발자들은 내용에 대한 이해 없이 지표 맞추기에 급급해진다. 결국 형식적인 순응만 남고 코드의 질적 저하와 유지보수 비용 폭증으로 이어진다.</p><p>코딩 과정에서의 몰입과 문제를 해결했을 때의 성취감 또한 무시할 수 없는 비용이다. 모든 것을 AI에 위임한 검수자 역할로 전락한 개발자는 업무의 의미를 잃고 더 빨리 번아웃에 직면하게 된다. 결국 사용 여부가 아니라 사용 방식이 핵심이다. 설명 요청이나 개념 질문 등 능동적인 학습을 유지하는 방식만이 인지 부채를 최소화할 수 있다.</p><p>14년 차 클라우드 엔지니어로서 현재의 흐름을 지켜보며 확실한 생산성 향상을 체감하고 있다. 위 글에서 지적하는 인지 부채나 시니어 육성 파이프라인의 붕괴에 대한 우려에도 부분적으로 동의한다. 하지만 이것이 반드시 잘못된 방향이라고만 할 수는 없다.</p><p>우리는 이미 계산기와 엑셀을 사용하면서 직접 계산하는 능력을 잃어버렸다. 그렇다고 해서 그것이 퇴보라고 말하는 사람은 없다. 그냥 직접 계산할 필요가 없어졌을 뿐이다. 코딩 또한 마찬가지다. 현재는 AI가 인간의 역할을 대체해 나가는 과도기일 뿐이며 우리는 그에 맞는 새로운 역량을 정의해 나가야 하는 시점에 서 있다. 직접 코드를 짜는 능력보다 AI를 얼마나 잘 조율하고 시스템 전체를 설계하느냐가 더 중요한 시대가 오고 있다.</p>]]></content>
     
     
+    <summary type="html">&lt;p&gt;AI 코딩 도구가 보편화되면서 개발 환경은 전례 없는 변화를 맞이하고 있다. 하지만 이 화려한 생산성 뒤에는 보이지 않는 비용이 숨어 있다.&lt;/p&gt;</summary>
     
-    <category term="개발" scheme="https://futurecreator.github.io/categories/%EA%B0%9C%EB%B0%9C/"/>
     
     
-    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
+    <category term="Tech" scheme="https://futurecreator.github.io/categories/Tech/"/>
     
-    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
     
-    <category term="코딩" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%94%A9/"/>
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
     
-    <category term="인지부채" scheme="https://futurecreator.github.io/tags/%EC%9D%B8%EC%A7%80%EB%B6%80%EC%B1%84/"/>
+    <category term="Coding" scheme="https://futurecreator.github.io/tags/Coding/"/>
+    
+    <category term="Engineering" scheme="https://futurecreator.github.io/tags/Engineering/"/>
+    
+    <category term="Productivity" scheme="https://futurecreator.github.io/tags/Productivity/"/>
     
   </entry>
   
   <entry>
-    <title>Rust가 Go를 앞서는 시대, AI 코딩이 바꾼 판도</title>
-    <link href="https://futurecreator.github.io/2026/03/01/rust-vs-go-ai-coding/"/>
-    <id>https://futurecreator.github.io/2026/03/01/rust-vs-go-ai-coding/</id>
-    <published>2026-03-01T07:57:37.000Z</published>
-    <updated>2026-03-01T07:59:50.191Z</updated>
+    <title>왜 요즘 프로젝트는 Go 대신 Rust로 만들어지는가</title>
+    <link href="https://futurecreator.github.io/2026/03/01/why-rust-is-replacing-go/"/>
+    <id>https://futurecreator.github.io/2026/03/01/why-rust-is-replacing-go/</id>
+    <published>2026-03-01T09:40:00.000Z</published>
+    <updated>2026-03-01T09:24:08.868Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>요즘 터미널 에뮬레이터나 CLI 도구를 별생각 없이 설치하다 본 Rust로 작성된 프로젝트가 눈에 많이 띈다. 과거에는 Go로 만들어진 도구가 대부분이었는데, 이제는 상황이 바뀌고 있다. 왜 이런 변화가 일어나고 있는지, 그리고 AI 코딩이 이 흐름에 어떤 영향을 미치고 있는지 정리해 본다.</p><span id="more"></span><p>Rust와 Go의 철학적 차이를 먼저 짚고 넘어가야 한다. Go는 단순함을 최우선으로 한다. 문법이 간결하고 배우기 쉬우며, 가비지 컬렉터로 메모리 관리를 자동화한다. 반면 Rust는 제로코스트 추상화를 추구한다. 컴파일 타임에 메모리 안전성을 보장하는 borrow checker와 lifetime 시스템을 통해 런타임 오버헤드 없이 고성능을 달성한다. 이 차이는 두 언어의 사용처를 명확히 갈랐다. Go는 빠른 개발과 팀 협업에, Rust는 시스템 프로그래밍과 성능이 중요한 도구에 적합했다.</p><p>최근 Rust의 부상은 뚜렷하다. 터미널 에뮬레이터인 Alacritty와 Warp, 파일 관리자인 Yazi, ripgrep이나 fd 같은 검색 도구, 그리고 많은 최신 CLI 유틸리티들이 Rust로 작성되고 있다. 이런 도구들의 공통점은 속도다. Rust는 C나 C<ins>에 버금가는 성능을 제공하면서도 메모리 안전성을 보장한다. 과거에는 이런 도구를 만들려면 C</ins>를 써야 했고, 그만큼 개발 난이도가 높았다. Rust는 그 간극을 메우는 대안이 되었다.</p><p>여기서 AI 코딩의 등장이 변수가 된다. Rust의 가장 큰 진입 장벽은 borrow checker와 lifetime 개념이었다. 컴파일러가 엄격하게 메모리 규칙을 검사하기 때문에 초보자는 쉽게 좌절한다. 소유권 개념을 이해하지 못하면 코드 한 줄 제대로 짜기 어렵다. 하지만 AI 코딩 도구는 이 문제를 상당 부분 해결해 준다. AI가 borrow checker 에러를 해석하고 수정 제안을 해 주면, 개발자는 복잡한 메모리 모델을 완벽히 이해하지 않아도 Rust 코드를 작성할 수 있다. 과거에는 Rust를 쓰려면 언어 자체를 깊이 파고들어야 했지만, 이제는 AI가 그 허들을 낮춰 주고 있다.</p><p>그렇다고 Go가 쓸모없어진 것은 아니다. Go는 여전히 팀 개발과 빠른 출시에 탁월한 선택이다. 문법이 단순해서 누구나 쉽게 읽고 쓸 수 있고, 빠른 컴파일과 훌륭한 동시성 지원은 마이크로서비스 개발에 강점이다. 프로토타입을 빠르게 만들어 시장의 반응을 봐야 할 때, 또는 여러 개발자가 함께 작업해야 할 때 Go는 여전히 최선이다. Rust가 도구 개발에서 두각을 나타내고 있지만, Go는 서버 개발의 주력 언어로서 입지를 유지하고 있다.</p><p>나의 관점에서 AI 코딩은 Rust의 복잡성을 보완하는 촉매제 역할을 하고 있다. 과거 가비지 컬렉터가 등장했을 때 개발자들은 메모리 관리의 부담에서 벗어나 더 높은 추상화 수준에서 코딩할 수 있게 되었다. 비슷하게 AI 코딩은 Rust의 저수준 제어 능력을 유지하면서도 개발 경험을 크게 개선하고 있다. Rust의 성능과 안전성을 원하면서도 진입 장벽이 걱정되었다면, 지금이 바로 도전할 때다. AI가 옆에서 도와줄 것이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;요즘 터미널 에뮬레이터나 CLI 도구를 별생각 없이 설치하다 본 Rust로 작성된 프로젝트가 눈에 많이 띈다. 과거에는 Go로 만들어진 도구가 대부분이었는데, 이제는 상황이 바뀌고 있다. 왜 이런 변화가 일어나고 있는지, 그리고 AI 코딩이 이 흐름에 어떤 영향을 미치고 있는지 정리해 본다.&lt;/p&gt;</summary>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 시스템 프로그래밍과 인프라 도구 영역에서 흥미로운 변화가 관찰되고 있다. 전통적으로 이 분야의 절대 강자였던 Go(Golang) 대신 Rust를 선택하는 신규 프로젝트가 급격히 늘어나는 추세다. 단순히 언어의 인기가 높아서일까, 아니면 기술적인 필연성이 작용하고 있는 것일까.</p><span id="more"></span><p>먼저 눈에 띄는 실사례들을 살펴보자. AWS의 서버리스 인프라를 지탱하는 Firecracker는 보안과 초경량성을 위해 Rust로 개발되었다. 컨테이너 런타임인 Deno는 Node.js의 한계를 넘기 위해 핵심 엔진을 Rust로 구축했고, 서비스 메시 도구인 Linkerd는 성능 오버헤드를 줄이기 위해 프록시 계층을 Go에서 Rust로 전면 재작성했다. 이외에도 <code>ripgrep</code>, <code>bat</code>, <code>fd</code>와 같이 기존 유닉스 도구를 대체하는 고성능 CLI 툴들도 대거 Rust의 힘을 빌리고 있다.</p><p>Go와 Rust는 각기 다른 철학을 지닌다. Go의 핵심 가치는 단순함과 생산성이다. 가비지 컬렉터(GC)를 통해 메모리 관리를 자동화하고, 고루틴과 채널이라는 강력한 추상화로 동시성 프로그래밍을 쉽게 만들었다. 반면 Rust는 안전성과 성능에 타협하지 않는다. GC 없이 소유권(Ownership) 시스템을 통해 컴파일 시점에 메모리 안전성을 보장하며, C/C++ 수준의 하드웨어 제어 능력을 제공한다.</p><p>과거에는 이 두 언어 사이의 선택 기준이 명확했다. '빠르게 만들고 협업하기 좋은 도구’가 필요하면 Go를, '실수가 용납되지 않는 극한의 성능과 안전성’이 필요하면 Rust를 선택했다. 하지만 최근에는 그 균형추가 Rust 쪽으로 더 많이 기우는 느낌이다. 그 이유는 인프라 시스템이 점점 더 거대해지고 정밀해지면서, GC로 인한 미세한 지연 시간(Latency)조차도 시스템 전체의 성능 병목으로 작용하기 시작했기 때문이다.</p><p>여기에 결정적인 변수가 하나 더 추가되었다. 바로 AI 코딩의 등장이다. 필자가 관찰한 바에 따르면, Rust의 가장 큰 진입 장벽이었던 '학습 곡선’이 AI 덕분에 급격히 낮아졌다.</p><p>과거에는 빌림 검사기(Borrow Checker)가 내뱉는 난해한 에러 메시지 앞에서 좌절하고 다시 익숙한 Go로 돌아가는 엔지니어가 많았다. 하지만 이제는 Claude나 Gemini 같은 AI 모델이 복잡한 수명 주기(Lifetime) 문제를 실시간으로 해석해주고, 안전한 리팩토링 코드를 제안한다. 'Rust는 어렵다’는 이유로 포기하던 시대는 끝났다. 이제는 AI라는 든든한 조수와 함께 Rust의 모든 장점을 온전히 누릴 수 있게 된 것이다.</p><p>결국 최근의 Rust 열풍은 기술적 우수성에 AI라는 실질적인 생산성 도구가 결합된 결과라고 생각한다. 인프라의 복잡도가 높아질수록 Rust가 제공하는 '컴파일 시점의 확신’은 더욱 소중해질 것이며, AI는 그 확신으로 가는 길을 더 평탄하게 만들어줄 것이다.</p>]]></content>
     
     
+    <summary type="html">&lt;p&gt;최근 시스템 프로그래밍과 인프라 도구 영역에서 흥미로운 변화가 관찰되고 있다. 전통적으로 이 분야의 절대 강자였던 Go(Golang) 대신 Rust를 선택하는 신규 프로젝트가 급격히 늘어나는 추세다. 단순히 언어의 인기가 높아서일까, 아니면 기술적인 필연성이 작용하고 있는 것일까.&lt;/p&gt;</summary>
     
-    <category term="tech" scheme="https://futurecreator.github.io/categories/tech/"/>
     
     
-    <category term="programming" scheme="https://futurecreator.github.io/tags/programming/"/>
+    <category term="Engineering" scheme="https://futurecreator.github.io/categories/Engineering/"/>
     
-    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
     
-    <category term="rust" scheme="https://futurecreator.github.io/tags/rust/"/>
+    <category term="Rust" scheme="https://futurecreator.github.io/tags/Rust/"/>
     
-    <category term="go" scheme="https://futurecreator.github.io/tags/go/"/>
+    <category term="Go" scheme="https://futurecreator.github.io/tags/Go/"/>
+    
+    <category term="Systems Programming" scheme="https://futurecreator.github.io/tags/Systems-Programming/"/>
+    
+    <category term="Infrastructure" scheme="https://futurecreator.github.io/tags/Infrastructure/"/>
+    
+    <category term="AI Coding" scheme="https://futurecreator.github.io/tags/AI-Coding/"/>
     
   </entry>
   
@@ -459,9 +461,9 @@
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
     
-    <category term="vibe-coding" scheme="https://futurecreator.github.io/tags/vibe-coding/"/>
-    
     <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
+    
+    <category term="vibe-coding" scheme="https://futurecreator.github.io/tags/vibe-coding/"/>
     
     <category term="development" scheme="https://futurecreator.github.io/tags/development/"/>
     
