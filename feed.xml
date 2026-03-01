@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-01T15:07:00.917Z</updated>
+  <updated>2026-03-01T16:32:58.680Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenClaw 모델 결국 정착지는 제미나이인가</title>
+    <link href="https://futurecreator.github.io/2026/03/02/openclaw-ai-models-review/"/>
+    <id>https://futurecreator.github.io/2026/03/02/openclaw-ai-models-review/</id>
+    <published>2026-03-01T16:40:00.000Z</published>
+    <updated>2026-03-01T16:32:58.680Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>에이전트 시스템인 OpenClaw를 운영하며 다양한 인공지능 모델을 실전에 투입해 봤다. 각 모델마다 내세우는 지표는 화려하지만 실제 작업 환경에서 느끼는 체감 지능과 비용 효율은 천차만별이었다. 14년 차 클라우드 엔지니어로서 실무에 가장 적합한 모델을 찾기 위해 진행한 유랑의 기록을 공유한다.</p><span id="more"></span><p>클로드 시리즈인 Opus 4.6과 Sonnet 4.6은 지능 측면에서 타의 추종을 불허했다. 특히 복잡한 코딩 작업이나 다단계 추론이 필요한 상황에서 보여주는 결과물은 탁월했다. 하지만 문제는 비용이었다. 상시 구동되는 에이전트 특성상 쏟아지는 토큰을 감당하기에 Opus는 지나치게 고가였다. 그나마 현실적인 대안으로 꼽히는 Sonnet 역시 메인 모델로 쓰기에는 지갑 사정이 여의치 않았다. 성능은 확실하지만 가성비라는 벽에 부딪혔다.</p><p>중국계 모델인 GLM-5는 의외로 나쁘지 않은 성능을 보여줬다. 특히 한국어 이해도나 코딩 보조 능력에서 준수한 모습을 보였다. 하지만 결정적인 결함은 네트워크 안정성과 호출 제한이었다. 잦은 Rate Limit 발생으로 인해 에이전트의 연속적인 작업이 끊기기 일쑤였다. 실무에서 가장 중요한 요소 중 하나인 '필요할 때 언제든 응답해야 한다’는 조건을 충족하지 못해 결국 실사용 후보군에서 제외했다.</p><p>문샷 AI의 Kimi K2.5는 가성비 면에서 매력적인 선택지였다. 저렴한 비용으로 꽤 높은 수준의 결과물을 내놓았지만 결정적인 순간에 소위 '삽질’을 하는 경우가 발생했다. 논리적 흐름을 놓치거나 엉뚱한 도구를 호출하는 식의 실수는 에이전트 신뢰도를 크게 떨어뜨렸다. 단순한 작업에는 무리가 없으나 결국 더 높은 지능과 안정성이 필요하다는 결론에 도달했다.</p><p>현재 내린 결론은 구글의 제미나이 3 플래시(Gemini 3 Flash)다. 합리적인 가격 정책과 압도적인 처리 속도, 그리고 기대 이상의 준수한 성능을 보여줬다. 특히 OpenClaw의 도구 호출과 연동했을 때의 안정성이 뛰어났다. 당분간은 제미나이를 주력 모델로 삼아 에이전트를 운영할 예정이다. 결국 최고의 모델은 가장 똑똑한 모델이 아니라, 적절한 지능을 갖추면서도 지치지 않고 합리적으로 일해주는 모델이었다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;에이전트 시스템인 OpenClaw를 운영하며 다양한 인공지능 모델을 실전에 투입해 봤다. 각 모델마다 내세우는 지표는 화려하지만 실제 작업 환경에서 느끼는 체감 지능과 비용 효율은 천차만별이었다. 14년 차 클라우드 엔지니어로서 실무에 가장 적합한 모델을 찾기 위해 진행한 유랑의 기록을 공유한다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
+    
+    <category term="LLM" scheme="https://futurecreator.github.io/tags/LLM/"/>
+    
+    <category term="OpenClaw" scheme="https://futurecreator.github.io/tags/OpenClaw/"/>
+    
+    <category term="Gemini" scheme="https://futurecreator.github.io/tags/Gemini/"/>
+    
+    <category term="GLM" scheme="https://futurecreator.github.io/tags/GLM/"/>
+    
+    <category term="Kimi" scheme="https://futurecreator.github.io/tags/Kimi/"/>
+    
+  </entry>
   
   <entry>
     <title>에이전틱 엔지니어링: 역할보다 컴포넌트가 중요한 이유</title>
@@ -493,33 +524,6 @@
     
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>방치 중이던 iMac에 OpenClaw를 설치했다</title>
-    <link href="https://futurecreator.github.io/2026/02/24/openclaw-imac-setup/"/>
-    <id>https://futurecreator.github.io/2026/02/24/openclaw-imac-setup/</id>
-    <published>2026-02-23T15:00:00.000Z</published>
-    <updated>2026-02-23T15:26:26.970Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>집에 오래 방치해 두었던 인텔 아이맥이 있다. 더 이상 주력 머신으로 쓰지 않아서 책상 위에서 먼지만 쌓이고 있었는데, 이번에 OpenClaw를 설치해서 다시 쓰기 시작했다.</p><span id="more"></span><p>로컬에서 돌리는 구조라 외부에 엔드포인트를 노출할 일은 없다. 하지만 어쨌든 인터넷에 연결된 환경이기 때문에 정보 유출 가능성은 염두에 둬야 한다. 토큰이나 비밀번호 같은 민감한 정보는 애플 키체인에 저장해 두고 필요할 때 접근해서 사용하고 있다. 기본적으로 에이전트가 파일을 읽고 쓰거나 셸 명령을 실행할 수 있는 권한을 가지고 있으니, 적어도 어떤 동작을 하는지는 확인하는 습관이 필요하다.</p><p>처음에는 Opus 4.6을 썼는데 토큰 소모가 감당이 안 되서 지금은 Kimi K2.5를 주로 쓰고 있다. 생각보다 꽤 쓸만하다. 컨텍스트가 길어지면 토큰이 많이 소모되긴 하지만, 중요한 내용은 장기 기억으로 저장해 두고 새 세션을 시작하면 그나마 관리가 된다.</p><p>처음에는 당장 써먹을 곳이 안 보일 수 있다. 하지만 이리저리 대화하다 본면 자연스럽게 써먹을 일들이 생긴다. 직업이나 생활 패턴이 다르니까 각자에게 맞는 자동화 지점이 보일 것이다. 나는 가장 먼저 링크 저장을 시켰다. 평소에 저장하고 싶었던 링크를 던져주면 알아서 분류해서 저장하고, 필요할 때 꺼내준다.</p><p>옵시디언 볼트를 OpenClaw 워크스페이스 안에 두고 동기화를 맞춰두면 같은 문서를 볼면서 대화할 수 있어서 편하다. 이야기한 내용을 바탕으로 문서를 작성하거나 정리하기 좋고, 여러 아이디어를 나누면서 기획서를 만드는 일도 수월하다.</p><p>오늘 퇴근 길에 새로 한 일은 Hexo를 설치해서 방치해 두었던 블로그를 리뉴얼하고 마이그레이션한 것이다. 이 모든 것이 텔레그램으로 뚝딱 이루어졌다. 직접 했으면 꽤 시간이 걸렸을 일이다.</p><p>핵심은 에이전트에게 컴퓨터를 다룰 권한을 주고, CLI와 API, 브라우저도 열어주면 진짜 비서처럼 일을 시킬 수 있다는 점이다. 단순히 질문하고 답변을 받는 수준이 아니라 실제 작업을 대행하게 할 수 있다. 생산성 측면에서 상당한 차이가 있다.</p><p>그럼에도 불구하고 써보고 나서 딱히 쓸 일이 없다거나, Claude Code나 Cursor나 다를 바 없다고 하는 사람들이 있다. 물론 컴퓨터 앞에 오래 앉아있는 사람에게는 차이가 덜 느껴질 수도 있다. 하지만 출퇴근 시간이나 점심 시간, 개인적인 컴퓨터를 사용할 일이 있을 때 비서를 부를 수 있다는 점은 확실히 다르다.</p><p>Nanobot이나 PicoClaw 같은 경량화 버전들도 많이 나왔지만, 나는 OpenClaw가 가장 물건이다. 일단 한 번 설치해 보고 꾸준히 사용해 볼 것을 권한다. 처음에는 어색할 수 있지만, 쓰다 본면 자기에게 맞는 사용법이 자연스럽게 찾아진다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;집에 오래 방치해 두었던 인텔 아이맥이 있다. 더 이상 주력 머신으로 쓰지 않아서 책상 위에서 먼지만 쌓이고 있었는데, 이번에 OpenClaw를 설치해서 다시 쓰기 시작했다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
-    
-    <category term="productivity" scheme="https://futurecreator.github.io/tags/productivity/"/>
-    
-    <category term="openclaw" scheme="https://futurecreator.github.io/tags/openclaw/"/>
-    
-    <category term="self-hosted" scheme="https://futurecreator.github.io/tags/self-hosted/"/>
     
   </entry>
   
