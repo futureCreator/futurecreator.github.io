@@ -125,6 +125,36 @@
   </entry>
   
   <entry>
+    <title>에이전틱 엔지니어링: 역할 기반이 아닌 컴포넌트 기반으로 에이전트를 설계하라</title>
+    <link href="https://futurecreator.github.io/2026/03/01/agentic-engineering-component-over-role/"/>
+    <id>https://futurecreator.github.io/2026/03/01/agentic-engineering-component-over-role/</id>
+    <published>2026-02-28T15:00:00.000Z</published>
+    <updated>2026-03-01T14:30:36.474Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 소프트웨어 엔지니어링의 가장 뜨거운 화두는 단연 '에이전틱 AI(Agentic AI)'입니다. Gartner에 따르면, 2024년 1분기 대비 2025년 2분기 동안 멀티에이전트 시스템(MAS)에 대한 시장의 문의가 무려 <strong>1,445% 급증</strong>했다고 합니다. 이는 단순히 호기심을 넘어, 기업들이 실제 프로덕션 환경에 에이전트를 도입하기 위해 치열하게 고민하고 있음을 보여주는 지표입니다.</p><p>우리가 처음 멀티에이전트 시스템을 접할 때 가장 먼저 마주하는 개념은 '역할(Role)'입니다. CrewAI나 AutoGen 같은 프레임워크를 사용해 “너는 숙련된 PM이야”, “너는 꼼꼼한 QA 엔지니어고”, &quot;너는 천재 개발자야&quot;라고 역할을 부여하는 방식이죠. 하지만 실제 복잡한 비즈니스 로직을 에이전트로 구현해 본 엔지니어라면 곧 깨닫게 됩니다. 역할 기반의 설계가 직관적이긴 하지만, 시스템의 규모가 커질수록 통제 불가능한 복잡성에 직면한다는 사실을 말입니다.</p><p>오늘은 왜 우리가 <strong>역할 기반(Role-based)</strong> 분리에서 벗어나 <strong>컴포넌트 기반(Component-based)</strong> 설계로 나아가야 하는지, 그 실질적인 이유와 아키텍처적 통찰을 공유하고자 합니다.</p><hr><h3 id="1-역할-기반-설계의-함정-직관의-배신">1. 역할 기반 설계의 함정: 직관의 배신</h3><p>PM, Dev, QA로 에이전트를 나누는 방식은 인간의 조직 구조를 모사하기 때문에 이해하기 쉽고 거버넌스가 명확해 보입니다. 하지만 이는 '수단’일 뿐 '목적’이 되어서는 안 됩니다.</p><p>McKinsey가 50개 이상의 에이전틱 빌드 사례를 분석한 결과는 매우 흥미롭습니다. 그들은 **“에이전트 자체가 아니라 워크플로우(Workflow)가 핵심”**이라고 강조합니다. 역할 기반 분리에만 매몰될 경우, 정작 중요한 실행 흐름보다 에이전트 간의 페르소나 설정과 상호작용 오버헤드에 더 많은 리소스를 낭비하게 됩니다. 결과적으로 시스템의 복잡도만 기하급수적으로 늘어나고, 정교한 제어는 어려워지는 역설에 빠지게 됩니다.</p><h3 id="2-왜-컴포넌트-기반-설계인가">2. 왜 컴포넌트 기반 설계인가?</h3><p>컴포넌트 기반 아키텍처는 에이전트를 하나의 거대한 인격체로 보는 것이 아니라, <strong>특정 목적을 수행하는 재사용 가능한 모듈</strong>로 정의합니다. TechTarget은 이러한 구조가 추론 엔진(Reasoning engines), 메모리 시스템(Memory systems), 도구 통합(Tool integrations)을 자유롭게 조합할 수 있게 하는 에이전틱 플랫폼의 핵심 평가 기준이라고 설명합니다.</p><p>컴포넌트 기반 설계가 가져다주는 실질적인 이점은 다음과 같습니다.</p><h4 id="①-독립-컨텍스트-유지를-통한-컨텍스트-오염-방지">① 독립 컨텍스트 유지를 통한 컨텍스트 오염 방지</h4><p>2025년 9월 arXiv에 발표된 연구에 따르면, **“에이전트의 환각(Hallucination)은 단일 모델과 달리 파이프라인 상에서 여러 단계에 걸쳐 전파되고 복합적으로 진화(Multi-state transitions)”**하는 경향을 보입니다.</p><p>역할 중심의 거대한 에이전트는 너무 넓은 컨텍스트를 가집니다. PM 에이전트가 잘못된 시장 분석 정보를 내뱉으면, 그 뒤를 잇는 개발 에이전트는 그 환각을 진실로 믿고 코드를 짭니다. 반면, 컴포넌트 기반으로 설계하여 각 단계를 작고 명확한 단위(Single-responsibility)로 쪼개면, 특정 단계에서 발생한 환각이 다음 단계로 오염되는 것을 효과적으로 차단할 수 있습니다.</p><h4 id="②-개별-에이전트-단위의-Eval-및-Observability-적용">② 개별 에이전트 단위의 Eval 및 Observability 적용</h4><p>모든 엔지니어링의 기본은 &quot;측정할 수 없으면 개선할 수 없다&quot;는 것입니다. 거대한 ‘역할’ 에이전트는 내부에서 어떤 추론 과정을 거쳐 실패했는지 디버깅하기가 매우 어렵습니다.</p><p>하지만 컴포넌트 단위로 설계하면, 각 컴포넌트의 입력과 출력에 대해 개별적으로 평가(Evaluation)를 수행할 수 있습니다. 어떤 컴포넌트가 성능 저하를 일으키는지, 어느 지점에서 토큰 낭비가 심한지 가시성을 확보할 수 있게 됩니다. 이는 Stack AI 2026 가이드에서 제안하는 **“명시적 상태(Explicit state)와 관측 가능성(Observability)에 집중하라”**는 권고와도 일치합니다.</p><h4 id="③-마이크로서비스-MSA-와-같은-독립-배포-및-교체-가능성">③ 마이크로서비스(MSA)와 같은 독립 배포 및 교체 가능성</h4><p>컴포넌트 기반 에이전트는 소프트웨어 공학의 마이크로서비스 아키텍처와 매우 닮아 있습니다. 특정 기능을 수행하는 에이전트 컴포넌트의 성능이 떨어진다면, 전체 시스템을 건드리지 않고 해당 컴포넌트의 프롬프트나 모델(예: GPT-4o에서 Claude 3.7로)만 교체하여 배포할 수 있습니다. 이러한 유연성은 변화 속도가 빠른 AI 생태계에서 생존하기 위한 필수 조건입니다.</p><h3 id="3-Production-grade-에이전트를-위한-베스트-프랙티스">3. Production-grade 에이전트를 위한 베스트 프랙티스</h3><p>2025년 12월 arXiv에 게재된 실무 가이드에서는 운영 환경에 적합한 에이전틱 워크플로우를 위해 다음과 같은 원칙을 제시합니다.</p><ul><li><strong>Single-tool &amp; Single-responsibility</strong>: 하나의 에이전트는 하나의 도구 혹은 하나의 명확한 책임만 가집니다.</li><li><strong>KISS(Keep It Simple, Stupid) 원칙</strong>: 복잡한 페르소나 설정보다 단순하고 명확한 워크플로우 로직이 우선입니다.</li><li><strong>Workflow logic과 MCP(Model Context Protocol) 서버의 분리</strong>: 추론 로직과 데이터 공급원을 깔끔하게 분리하여 결합도를 낮춥니다.</li></ul><p>결국 성공적인 에이전틱 엔지니어링의 핵심은 **“원하는 결과(Outcome)에 대한 명확성에서 시작하여, 그것을 안전하게 달성할 수 있는 가장 단순한 워크플로우 형상을 선택하는 것”**입니다.</p><hr><h3 id="결론-역할은-조율-Orchestration-레이어일-뿐이다">결론: 역할은 조율(Orchestration) 레이어일 뿐이다</h3><p>오해하지 말아야 할 점은 역할 기반 접근을 완전히 버려야 한다는 뜻이 아닙니다. 역할(Role)은 사용자 인터페이스나 최상위 조율 레이어에서 거버넌스를 정의할 때 여전히 유용한 은유입니다.</p><p>하지만 실제 시스템을 구축하는 엔지니어의 관점에서는 **컴포넌트 설계를 우선(Component-first)**해야 합니다. 재사용 가능한 작은 컴포넌트들을 먼저 견고하게 만들고, 이들을 조합하여 워크플로우를 구성한 뒤, 마지막에 이 워크플로우를 아우르는 페르소나를 씌우는 방식이 되어야 합니다.</p><p>에이전트 자체가 똑똑해지기를 기대하기보다, 똑똑하게 설계된 워크플로우 위에서 에이전트가 제 성능을 발휘하도록 만드는 것. 이것이 바로 2026년 현재, 우리가 지향해야 할 에이전틱 엔지니어링의 본질입니다.</p><p>여러분은 에이전트를 설계할 때 인격을 먼저 부여하시나요, 아니면 기능을 먼저 정의하시나요? 이제는 '역할’이라는 화려한 수식어 뒤에 숨은 '컴포넌트’의 가치에 집중할 때입니다.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;최근 소프트웨어 엔지니어링의 가장 뜨거운 화두는 단연 &#39;에이전틱 AI</summary>
+      
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="architecture" scheme="https://futurecreator.github.io/tags/architecture/"/>
+    
+    <category term="agentic-ai" scheme="https://futurecreator.github.io/tags/agentic-ai/"/>
+    
+    <category term="multi-agent" scheme="https://futurecreator.github.io/tags/multi-agent/"/>
+    
+    <category term="software-engineering" scheme="https://futurecreator.github.io/tags/software-engineering/"/>
+    
+  </entry>
+  
+  <entry>
     <title>바이브 코딩 다음은 AI 에이전트 팀 오케스트레이션이다</title>
     <link href="https://futurecreator.github.io/2026/02/28/ai-agent-team-orchestration-next-step/"/>
     <id>https://futurecreator.github.io/2026/02/28/ai-agent-team-orchestration-next-step/</id>
@@ -493,33 +523,6 @@
     <category term="openclaw" scheme="https://futurecreator.github.io/tags/openclaw/"/>
     
     <category term="self-hosted" scheme="https://futurecreator.github.io/tags/self-hosted/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>바이브 코딩을 폄하하는 사람들에게</title>
-    <link href="https://futurecreator.github.io/2026/02/23/%EB%B0%94%EC%9D%B4%EB%B8%8C-%EC%BD%94%EB%94%A9%EC%9D%84-%ED%8F%84%ED%95%98%ED%95%98%EB%8A%94-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%97%90%EA%B2%8C/"/>
-    <id>https://futurecreator.github.io/2026/02/23/%EB%B0%94%EC%9D%B4%EB%B8%8C-%EC%BD%94%EB%94%A9%EC%9D%84-%ED%8F%84%ED%95%98%ED%95%98%EB%8A%94-%EC%82%AC%EB%9E%8C%EB%93%A4%EC%97%90%EA%B2%8C/</id>
-    <published>2026-02-23T14:42:30.000Z</published>
-    <updated>2026-02-23T15:50:45.325Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>바이브 코딩(Vibe Coding)에 대해 부정적인 시각이 많다. 개발도 제대로 모르는 사람들이 AI를 이용해 쓰레기 같은 코드를 양산하고, 코드를 읽을 줄도 모르고 이해할 줄도 모른 채 그냥 복사-붙여넣기만 하다가 결국 망가진다는 주장이다. 또, AI로 만들어낸 결과물이 투두리스트나 가계부처럼 특별할 것 없는 것들이 대부분이며, 비슷비슷한 아이디어에 몰려서 똑같은 제품을 반복해서 만들어낸다는 비판도 있다.</p><span id="more"></span><p>물론 이런 지적들이 전혀 근거 없는 것은 아니다. 하지만 중요한 건 방향과 속도다.</p><p>우리는 지금 아주 초기 단계에 있다. 클로드 코드(Claude Code)가 공개된 지 겨우 1년이 조금 넘었을 뿐이다. 1년 만에 이만큼의 변화가 일어났는데, 앞으로 얼마나 더 빠르게 발전할지 상상해 볼 수 있을 것이다.</p><p>이 변화의 방향이 뒤집히지 않을 것이라는 것은 불 보듯 뻔하다. 오히려 속도는 더욱 빨라질 것이다.</p><p>진정한 변화는 어디서 올까? 오랫동안 특정 분야에서 일하며 축적한 도메인 지식과 실전 경험을 가진 사람들이, 자신이 겪은 진짜 페인 포인트를 직접 해결하는 앱을 만들 수 있게 되었다는 점이다.</p><p>이전까지는 아이디어가 있어도 개발자를 고용하거나 직접 학습하는 데 막대한 시간과 비용이 들어야 했다. 이제는 그것이 획기적으로 단축되었다. 몇 시간이면 프로토타입이 나오고, 며칠이면 실제로 동작하는 도구를 만들 수 있다.</p><p>예전에는 필요한 기능이 있으면 여러 SaaS 제품들을 설치하고 써볼며 비교하며 내게 맞는 것을 찾아다녔다. 이제 그럴 시간에 그냥 내게 딱 맞는 프로그램을 만드는 게 더 효율적이다.</p><p>내 워크플로우에 꼭 필요한 기능만 넣고, 불필요한 것은 과감히 버린다. 내가 쓰는 다른 도구들과 딱 맞게 연동한다. 이런 맞춤형 도구를 이제 누구나 만들 수 있다.</p><p>이런 맥락에서 'SaaS의 종말’이라는 말이 나오는 것이다.</p><p>나 역시 개인적인 작은 프로젝트들을 진행하며 내가 원하던 도구들을 직접 만들고 있다. 회사 업무에서도 AI를 적극적으로 활용하고 있으며, 더욱 효과적으로 활용할 방법을 끊임없이 고민하고 있다.</p><p>이런 상황에서 바이브 코딩을 폄하하는 것은 시대의 흐름을 외면하는 것에 불과하다. 비판할 시간에 내가 필요한 것을 만들어보는 편이 훨씬 생산적이다.</p><p>바이브 코딩이 낳은 초기 결과물들이 미흡하다고 해서 이 흐름을 무시할 수는 없다. 중요한 것은 코드를 직접 타이핑하느냐 마느냐가 아니라, 문제를 해결하는 도구를 얼마나 빠르고 효율적으로 만들 수 있느냐다. 그리고 이 경쟁에서 도메인 지식과 경험을 가진 사람들이 유리하다는 것은 분명하다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;바이브 코딩(Vibe Coding)에 대해 부정적인 시각이 많다. 개발도 제대로 모르는 사람들이 AI를 이용해 쓰레기 같은 코드를 양산하고, 코드를 읽을 줄도 모르고 이해할 줄도 모른 채 그냥 복사-붙여넣기만 하다가 결국 망가진다는 주장이다. 또, AI로 만들어낸 결과물이 투두리스트나 가계부처럼 특별할 것 없는 것들이 대부분이며, 비슷비슷한 아이디어에 몰려서 똑같은 제품을 반복해서 만들어낸다는 비판도 있다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
-    
-    <category term="vibe-coding" scheme="https://futurecreator.github.io/tags/vibe-coding/"/>
-    
-    <category term="development" scheme="https://futurecreator.github.io/tags/development/"/>
-    
-    <category term="opinion" scheme="https://futurecreator.github.io/tags/opinion/"/>
     
   </entry>
   
