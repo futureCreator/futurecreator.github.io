@@ -2892,13 +2892,6 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/cursor/</loc>
-    <lastmod>2026-03-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://futurecreator.github.io/tags/rust/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -2906,14 +2899,21 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/golang/</loc>
+    <loc>https://futurecreator.github.io/tags/%EC%BD%94%EB%94%A9/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/tags/ai-coding/</loc>
+    <loc>https://futurecreator.github.io/tags/%EC%9D%B8%EC%A7%80%EB%B6%80%EC%B1%84/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/go/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -3013,14 +3013,14 @@
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/ai/</loc>
+    <loc>https://futurecreator.github.io/categories/%EA%B0%9C%EB%B0%9C/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://futurecreator.github.io/categories/dev/</loc>
+    <loc>https://futurecreator.github.io/categories/tech/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
