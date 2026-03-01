@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>에이전틱 엔지니어링: 역할보다 컴포넌트가 중요한 이유</title>
+      <link href="/2026/03/02/agentic-engineering-component-over-role/"/>
+      <url>/2026/03/02/agentic-engineering-component-over-role/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 에이전틱 엔지니어링 분야에서 CrewAI와 같은 프레임워크가 제안하는 역할 기반 설계가 직관적인 모델로 자리 잡았다. 하지만 실무적인 관점에서 보면 PM, QA, 개발자 에이전트식의 역할 분리보다 공통 작업을 재사용 가능한 컴포넌트로 분리하는 것이 훨씬 중요하다. 역할은 인간의 조직 체계를 모방한 수단일 뿐이며, 그 자체가 목적이 되어서는 안 된다.</p><span id="more"></span><p>맥킨지가 50개 이상의 에이전틱 빌드 사례를 분석한 결과에 따르면, 성공적인 시스템의 핵심은 에이전트의 페르소나가 아니라 워크플로우 설계에 있었다. 에이전트를 개별 인격체로 대우하기보다 특정 기능을 수행하는 독립적인 실행 단위로 정의할 때 시스템의 안정성이 확보되었다.</p><p>독립적인 컨텍스트를 유지하며 컴포넌트 단위로 설계해야 하는 이유는 명확하다. 첫째, 컨텍스트 오염을 방지할 수 있다. 한 에이전트에서 발생한 환각이 전체 파이프라인으로 전파되는 것을 막으려면 명확한 경계가 필요하다.</p><p>둘째, 개별 에이전트 단위로 평가와 관측성을 적용하기 용이하다. 전체 시스템이 아니라 특정 컴포넌트의 성능을 정량적으로 측정하고 개선할 수 있다.</p><p>셋째, 마이크로서비스 아키텍처처럼 독립적인 배포와 교체가 가능하다. 특정 모듈의 모델을 바꾸거나 로직을 수정해도 전체 시스템에 미치는 영향을 최소화할 수 있다.</p><p>결국 에이전틱 시스템의 완성도는 얼마나 정교한 역할을 부여하느냐가 아니라, 얼마나 견고하고 재사용 가능한 워크플로우 컴포넌트를 구축하느냐에 달려 있다. 역할 기반의 환상에서 벗어나 엔지니어링 중심의 컴포넌트 설계를 지향해야 한다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Reviews </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Agentic Engineering </tag>
+            
+            <tag> AI Agent </tag>
+            
+            <tag> Component-based Design </tag>
+            
+            <tag> Workflow </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Claude Code에서 서브 에이전트를 활용해야 하는 이유와 Agentic Engineering</title>
       <link href="/2026/03/01/agentic-engineering-claude-code/"/>
       <url>/2026/03/01/agentic-engineering-claude-code/</url>
