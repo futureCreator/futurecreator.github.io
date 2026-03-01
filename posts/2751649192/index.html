@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hexo 네임카드 추가하기 (Github Card) - Eric Han&#039;s IT Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Eric Han&#039;s IT Blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Eric Han&#039;s IT Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Github Card"><meta property="og:type" content="blog"><meta property="og:title" content="Hexo 네임카드 추가하기 (Github Card)"><meta property="og:url" content="https://futurecreator.github.io/posts/2751649192/"><meta property="og:site_name" content="Eric Han&#039;s IT Blog"><meta property="og:description" content="Github Card"><meta property="og:locale" content="en_US"><meta property="og:image" content="https://camo.githubusercontent.com/222d804618d12ea390963d6a0445e546c091ee7e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3239303439362f313335303936372f32383036393834382d333731362d313165332d386638372d3062656634356166663163342e706e67"><meta property="article:published_time" content="2016-06-21T08:25:34.000Z"><meta property="article:modified_time" content="2026-02-23T11:42:28.977Z"><meta property="article:author" content="Eric Han"><meta property="article:tag" content="hexo"><meta property="article:tag" content="github"><meta property="article:tag" content="namecard"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://camo.githubusercontent.com/222d804618d12ea390963d6a0445e546c091ee7e/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3239303439362f313335303936372f32383036393834382d333731362d313165332d386638372d3062656634356166663163342e706e67"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://futurecreator.github.io/posts/2751649192/"},"headline":"Hexo 네임카드 추가하기 (Github Card)","image":[],"datePublished":"2016-06-21T08:25:34.000Z","dateModified":"2026-02-23T11:42:28.977Z","author":{"@type":"Person","name":"Eric Han"},"publisher":{"@type":"Organization","name":"Eric Han's IT Blog","logo":{"@type":"ImageObject","url":"https://futurecreator.github.io/img/logo.svg"}},"description":"Github Card"}</script><link rel="canonical" href="https://futurecreator.github.io/posts/2751649192/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sarasa-gothic@latest/font/sarasa-mono-k-regular.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><link rel="stylesheet" href="/css/custom.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2948714191026958" crossorigin="anonymous"></script><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/feed.xml" title="Eric Han's IT Blog" type="application/atom+xml">
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/futureCreator"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2016-06-21T08:25:34.000Z" title="6/21/2016, 5:25:34 PM">2016/06/21</time></span><span class="level-item"><a class="link-muted" href="/categories/Hexo/">Hexo</a></span></div></div><h1 class="title is-3 is-size-4-mobile">Hexo 네임카드 추가하기 (Github Card)</h1><div class="content"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="Github-Card">Github Card</h2>
+<span id="more"></span>
+<p><img src="github_card.png" alt="http://lab.lepture.com/github-cards/"></p>
+<p>블로그에 저런 네임카드를 넣고 싶었는데 마땅한 걸 못찾아서 그냥 About 페이지에 <a target="_blank" rel="noopener" href="http://about.me">About.me</a> 페이지를 연결했습니다. 드디어 괜찮은 걸 찾았네요. <a target="_blank" rel="noopener" href="http://lab.lepture.com/github-cards">Github Card</a> 는 Github 의 네임 카드를 만들어주는 모듈입니다.</p>
+<p>사이트에 가서 <code>username</code> 을 넣으면 유저 네임카드를 자동으로 생성해줍니다. 혹은 <code>username/repository name</code> 이렇게 넣으시면 해당 repository 의 네임카드를 만들 수도 있습니다.</p>
+<p><img src="user_card_default.png" alt="Github user card"><br>
+<img src="repo_card_default.png" alt="Github repository card"></p>
+<p>테마는 2가지가 있습니다. 위에 보신 것이 default 이고 아래는 medium 테마입니다.</p>
+<p><img src="user_card_medium.png" alt="Github user card"><br>
+<img src="repo_card_medium.png" alt="Github repository card"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;github-card&quot;</span> <span class="attr">data-github</span>=<span class="string">&quot;futurecreator&quot;</span> <span class="attr">data-width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">data-height</span>=<span class="string">&quot;&quot;</span> <span class="attr">data-theme</span>=<span class="string">&quot;default&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdn.jsdelivr.net/github-cards/latest/widget.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>생성을 하면 코드가 자동으로 생성되는데요, 이 코드를 복사해서 원하시는 곳에 넣으면 됩니다. 속성을 원하시는대로 변경하실 수도 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>GitHub 유저 네임</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>GitHub 리파지토리 네임</td>
+</tr>
+<tr>
+<td>width</td>
+<td>카드 가로 크기 (기본값 400)</td>
+</tr>
+<tr>
+<td>height</td>
+<td>카드 세로 크기 (기본값 200)</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>테마 (default 또는 mideum)</td>
+</tr>
+<tr>
+<td>target</td>
+<td>링크를 새 탭에서 열게 하려면 값을 공백 (“”)으로 설정</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Hexo-에-적용하기">Hexo 에 적용하기</h2>
+<p>이제 Hexo 에 적용해보겠습니다. 저는 사이드바 (Sidebar) 부분 상단에 넣으려고 합니다. Hueman 테마 기준으로 사이드바의 레이아웃은 <code>Sidebar.ejs</code> 에서 정의합니다.</p>
+<figure class="highlight html"><figcaption><span>sidebar.ejs</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aside</span> <span class="attr">id</span>=<span class="string">&quot;sidebar&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;sidebar-toggle&quot;</span> <span class="attr">title</span>=<span class="string">&quot;Expand Sidebar&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;toggle icon&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;sidebar-top&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&lt;%= __(&#x27;sidebar.follow&#x27;) %&gt;:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;social-links&quot;</span>&gt;</span></span><br><span class="line">            &lt;% for (var i in theme.customize.social_links) &#123; %&gt;</span><br><span class="line">                &lt;% if (theme.customize.social_links[i]) &#123; %&gt;</span><br><span class="line">                <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;social-tooltip&quot;</span> <span class="attr">title</span>=<span class="string">&quot;&lt;%= i %&gt;&quot;</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%- url_for(theme.customize.social_links[i]) %&gt;&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;icon fa fa-&lt;%= i %&gt;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">                &lt;% &#125; %&gt;</span><br><span class="line">            &lt;% &#125; %&gt;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- github card 넣을 자리 --&gt;</span></span><br><span class="line">    &lt;% if (is_post()) &#123; %&gt;</span><br><span class="line">        &lt;%- partial(&#x27;post/nav&#x27;, &#123;post: page&#125;) %&gt;</span><br><span class="line">    &lt;% &#125; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;widgets-container&quot;</span>&gt;</span></span><br><span class="line">        &lt;% if (theme.widgets) &#123; %&gt;</span><br><span class="line">            &lt;% theme.widgets.forEach(function(widget) &#123; %&gt;</span><br><span class="line">                &lt;%- partial(&#x27;widget/&#x27; + widget) %&gt;</span><br><span class="line">            &lt;% &#125;) %&gt;</span><br><span class="line">        &lt;% &#125; %&gt;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    &lt;%- partial(&#x27;custom_ad/adsense&#x27;) %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>보시면 사이드바 상단에 토글버튼, 소셜링크 아이콘이 출력되는걸 볼 수 있습니다. 그 다음에 각종 위젯이 나오는데 그 바로 위에 넣겠습니다. 그리고 <code>width</code> 속성값이 기본적으로 400 으로 되어있는데 이 값을 주지 않으면 상위 <code>&lt;div&gt;</code> 에 맞춰서 표시됩니다. 지금 제 블로그의 사이드바를 보시면 적용된 것을 바로 확인하실 수 있습니다.</p>
+<h2 id="Hexo-플러그인-활용하기">Hexo 플러그인 활용하기</h2>
+<p>Hexo 에 Github Card 를 자동생성 해주는 <a target="_blank" rel="noopener" href="https://github.com/Gisonrg/hexo-github-card">플러그인</a> 이 존재합니다. <a href="http://futurecreator.github.io/2016/06/19/hexo-tag-plugins/">태그 플러그인</a> 으로 본문 상에 Github Card 를 쉽게 출력할 수 있습니다. Hexo 태그 플러그인에 대해 궁금하신 분들은 이전 포스트를 참고하시기 바랍니다.</p>
+<p>[hexo-tag-plugins]</p>
+<h3 id="설치">설치</h3>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install --save hexo-github-card</span><br></pre></td></tr></table></figure>
+<h3 id="사용">사용</h3>
+<p>태그 플러그인으로 본문 상에 다음과 같은 코드를 작성하면 됩니다. 그러면 해당 위치에 네임카드가 삽입됩니다.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% githubCard user [repo] [width = 400] [theme] %&#125;</span><br></pre></td></tr></table></figure>
+<p>사용할 수 있는 옵션은 다음과 같습니다.</p>
+<table>
+<thead>
+<tr>
+<th>옵션</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user</td>
+<td>GitHub 유저 네임</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>GitHub 리파지토리 네임</td>
+</tr>
+<tr>
+<td>width</td>
+<td>카드 가로 크기 (기본값 400)</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>테마 (default 또는 mideum)</td>
+</tr>
+</tbody>
+</table>
+<p>Github Card 를 이용해서 Hexo 블로그에 네임카드를 넣어봤습니다. 핸드폰이나 PC 에서도 크기에 따라 잘 나오네요. 다음 포스트에서는 Github card plugin 처럼 유용한 Hexo plugin 을 살펴보겠습니다.</p>
+<h3 id="Related-Posts">Related Posts</h3>
+<ul>
+<li>[get-started-with-hexo]</li>
+<li>[hexo-apply-hueman-theme]</li>
+<li>[hexo-basic-usage]</li>
+<li>[hexo-tag-plugins]</li>
+<li>[add-github-card-to-hexo]</li>
+<li>[add-github-repository-timeline-badge-to-hexo]</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>Hexo 네임카드 추가하기 (Github Card)</p><p><a href="https://futurecreator.github.io/posts/2751649192/">https://futurecreator.github.io/posts/2751649192/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>Author</h6><p>Eric Han</p></div></div><div class="level-item is-narrow"><div><h6>Posted on</h6><p>2016/06/21</p></div></div><div class="level-item is-narrow"><div><h6>Updated on</h6><p>2026/02/23</p></div></div><div class="level-item is-narrow"><div><h6>Licensed under</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/hexo/">hexo</a><a class="link-muted mr-2" rel="tag" href="/tags/github/">github</a><a class="link-muted mr-2" rel="tag" href="/tags/namecard/">namecard</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/posts/1086067204/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Hexo 에 Github 저장소 타임라인 (Repository timeline) 정보 추가하기</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/posts/3132266310/"><span class="level-item">Hexo 기본 사용법</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card" id="comments"><div class="card-content"><h3 class="title is-5">Comments</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://futurecreator.github.io/posts/2751649192/';
+            this.page.identifier = 'posts/2751649192/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'futureCreator' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/profile.png" alt="Eric Han"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Eric Han</p><p class="is-size-6 is-block">Cloud Architecture</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Earth, Solar System</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">Posts</p><a href="/archives/"><p class="title">117</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Categories</p><a href="/categories/"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">Tags</p><a href="/tags/"><p class="title">289</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/futureCreator" target="_blank" rel="me noopener">Follow</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="GitHub" href="https://github.com/futureCreator"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">Categories</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Cloud/"><span class="level-start"><span class="level-item">Cloud</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Hexo/"><span class="level-start"><span class="level-item">Hexo</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/"><span class="level-start"><span class="level-item">Programming</span></span><span class="level-end"><span class="level-item tag">51</span></span></a><ul><li><a class="level is-mobile" href="/categories/Programming/Algorithm/"><span class="level-start"><span class="level-item">Algorithm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Apple/"><span class="level-start"><span class="level-item">Apple</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Column/"><span class="level-start"><span class="level-item">Column</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Java/"><span class="level-start"><span class="level-item">Java</span></span><span class="level-end"><span class="level-item tag">17</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/JavaScript/"><span class="level-start"><span class="level-item">JavaScript</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/MSA/"><span class="level-start"><span class="level-item">MSA</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Spark/"><span class="level-start"><span class="level-item">Spark</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Vert-x/"><span class="level-start"><span class="level-item">Vert.x</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/categories/Programming/Web/"><span class="level-start"><span class="level-item">Web</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li></ul></li><li><a class="level is-mobile" href="/categories/Reviews/"><span class="level-start"><span class="level-item">Reviews</span></span><span class="level-end"><span class="level-item tag">32</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">Recents</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-01T18:30:00.000Z">2026/03/02</time></p><p class="title"><a href="/posts/1794024149/">AI 에이전트의 선택은 과연 중립적인가: Claude Code 사례로 본 생태계 통제 가능성</a></p><p class="categories"><a href="/categories/Reviews/">Reviews</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-01T16:50:00.000Z">2026/03/02</time></p><p class="title"><a href="/posts/2818049591/">OpenClaw에서 써본 AI 모델 후기</a></p><p class="categories"><a href="/categories/Reviews/">Reviews</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-01T15:15:00.000Z">2026/03/02</time></p><p class="title"><a href="/posts/2843199067/">에이전틱 엔지니어링: 역할보다 컴포넌트가 중요한 이유</a></p><p class="categories"><a href="/categories/Reviews/">Reviews</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-01T13:50:00.000Z">2026/03/01</time></p><p class="title"><a href="/posts/2046875964/">Claude Code에서 서브 에이전트를 활용해야 하는 이유와 Agentic Engineering</a></p><p class="categories"><a href="/categories/Reviews/">Reviews</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2026-03-01T10:15:00.000Z">2026/03/01</time></p><p class="title"><a href="/posts/1378844837/">AI 코딩이 초래하는 비용: 인지 부채와 생산성의 갈림길</a></p><p class="categories"><a href="/categories/Reviews/">Reviews</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">Archives</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2026/03/"><span class="level-start"><span class="level-item">March 2026</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile" href="/archives/2026/02/"><span class="level-start"><span class="level-item">February 2026</span></span><span class="level-end"><span class="level-item tag">16</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/03/"><span class="level-start"><span class="level-item">March 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/02/"><span class="level-start"><span class="level-item">February 2019</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2019/01/"><span class="level-start"><span class="level-item">January 2019</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/12/"><span class="level-start"><span class="level-item">December 2018</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/11/"><span class="level-start"><span class="level-item">November 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/10/"><span class="level-start"><span class="level-item">October 2018</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/09/"><span class="level-start"><span class="level-item">September 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/08/"><span class="level-start"><span class="level-item">August 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/07/"><span class="level-start"><span class="level-item">July 2018</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/06/"><span class="level-start"><span class="level-item">June 2018</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li><li><a class="level is-mobile" href="/archives/2018/05/"><span class="level-start"><span class="level-item">May 2018</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile" href="/archives/2017/01/"><span class="level-start"><span class="level-item">January 2017</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/07/"><span class="level-start"><span class="level-item">July 2016</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2016/06/"><span class="level-start"><span class="level-item">June 2016</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li></ul></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Eric Han&#039;s IT Blog" height="28"></a><p class="is-size-7"><span>&copy; 2026 Eric Han</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2024</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="GitHub" href="https://github.com/futureCreator"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="Back to top" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "This website uses cookies to improve your experience.",
+          dismiss: "Got it!",
+          allow: "Allow cookies",
+          deny: "Decline",
+          link: "Learn more",
+          policy: "Cookie Policy",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="Type something..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script data-pjax src="/js/insight.js" defer></script><script data-pjax>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"Type something...","untitled":"(Untitled)","posts":"Posts","pages":"Pages","categories":"Categories","tags":"Tags"});
+        });</script></body></html>

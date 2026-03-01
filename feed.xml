@@ -18,8 +18,8 @@
   
   <entry>
     <title>AI 에이전트의 선택은 과연 중립적인가: Claude Code 사례로 본 생태계 통제 가능성</title>
-    <link href="https://futurecreator.github.io/2026/03/02/ai-agent-tool-bias-claude-code/"/>
-    <id>https://futurecreator.github.io/2026/03/02/ai-agent-tool-bias-claude-code/</id>
+    <link href="https://futurecreator.github.io/posts/1794024149/"/>
+    <id>https://futurecreator.github.io/posts/1794024149/</id>
     <published>2026-03-01T18:30:00.000Z</published>
     <updated>2026-03-01T18:43:32.113Z</updated>
     
@@ -49,8 +49,8 @@
   
   <entry>
     <title>OpenClaw에서 써본 AI 모델 후기</title>
-    <link href="https://futurecreator.github.io/2026/03/02/OpenClaw-AI-Model-Review-2026/"/>
-    <id>https://futurecreator.github.io/2026/03/02/OpenClaw-AI-Model-Review-2026/</id>
+    <link href="https://futurecreator.github.io/posts/2818049591/"/>
+    <id>https://futurecreator.github.io/posts/2818049591/</id>
     <published>2026-03-01T16:50:00.000Z</published>
     <updated>2026-03-01T16:39:49.987Z</updated>
     
@@ -82,8 +82,8 @@
   
   <entry>
     <title>에이전틱 엔지니어링: 역할보다 컴포넌트가 중요한 이유</title>
-    <link href="https://futurecreator.github.io/2026/03/02/agentic-engineering-component-over-role/"/>
-    <id>https://futurecreator.github.io/2026/03/02/agentic-engineering-component-over-role/</id>
+    <link href="https://futurecreator.github.io/posts/2843199067/"/>
+    <id>https://futurecreator.github.io/posts/2843199067/</id>
     <published>2026-03-01T15:15:00.000Z</published>
     <updated>2026-03-01T15:07:00.917Z</updated>
     
@@ -109,8 +109,8 @@
   
   <entry>
     <title>Claude Code에서 서브 에이전트를 활용해야 하는 이유와 Agentic Engineering</title>
-    <link href="https://futurecreator.github.io/2026/03/01/agentic-engineering-claude-code/"/>
-    <id>https://futurecreator.github.io/2026/03/01/agentic-engineering-claude-code/</id>
+    <link href="https://futurecreator.github.io/posts/2046875964/"/>
+    <id>https://futurecreator.github.io/posts/2046875964/</id>
     <published>2026-03-01T13:50:00.000Z</published>
     <updated>2026-03-01T14:11:56.524Z</updated>
     
@@ -136,8 +136,8 @@
   
   <entry>
     <title>AI 코딩이 초래하는 비용: 인지 부채와 생산성의 갈림길</title>
-    <link href="https://futurecreator.github.io/2026/03/01/cost-of-ai-coding-and-cognitive-debt/"/>
-    <id>https://futurecreator.github.io/2026/03/01/cost-of-ai-coding-and-cognitive-debt/</id>
+    <link href="https://futurecreator.github.io/posts/1378844837/"/>
+    <id>https://futurecreator.github.io/posts/1378844837/</id>
     <published>2026-03-01T10:15:00.000Z</published>
     <updated>2026-03-01T09:53:32.244Z</updated>
     
@@ -163,8 +163,8 @@
   
   <entry>
     <title>개발자 채용 시 코딩 테스트를 재고해야 할 때다</title>
-    <link href="https://futurecreator.github.io/2026/03/01/rethinking-coding-tests-in-ai-era/"/>
-    <id>https://futurecreator.github.io/2026/03/01/rethinking-coding-tests-in-ai-era/</id>
+    <link href="https://futurecreator.github.io/posts/2869666902/"/>
+    <id>https://futurecreator.github.io/posts/2869666902/</id>
     <published>2026-03-01T10:00:18.000Z</published>
     <updated>2026-03-01T13:24:26.927Z</updated>
     
@@ -188,8 +188,8 @@
   
   <entry>
     <title>왜 요즘 프로젝트는 Go 대신 Rust로 만들어지는가</title>
-    <link href="https://futurecreator.github.io/2026/03/01/why-rust-is-replacing-go/"/>
-    <id>https://futurecreator.github.io/2026/03/01/why-rust-is-replacing-go/</id>
+    <link href="https://futurecreator.github.io/posts/2742092646/"/>
+    <id>https://futurecreator.github.io/posts/2742092646/</id>
     <published>2026-03-01T09:40:00.000Z</published>
     <updated>2026-03-01T09:53:35.533Z</updated>
     
@@ -217,8 +217,8 @@
   
   <entry>
     <title>바이브 코딩 다음은 AI 에이전트 팀 오케스트레이션이다</title>
-    <link href="https://futurecreator.github.io/2026/02/28/ai-agent-team-orchestration-next-step/"/>
-    <id>https://futurecreator.github.io/2026/02/28/ai-agent-team-orchestration-next-step/</id>
+    <link href="https://futurecreator.github.io/posts/1083132666/"/>
+    <id>https://futurecreator.github.io/posts/1083132666/</id>
     <published>2026-02-28T07:00:00.000Z</published>
     <updated>2026-02-28T07:18:01.770Z</updated>
     
@@ -236,8 +236,8 @@
   
   <entry>
     <title>Claude Code로 병렬 에이전트 워크플로우 구축하기</title>
-    <link href="https://futurecreator.github.io/2026/02/28/claude-code-parallel-agent-workflow/"/>
-    <id>https://futurecreator.github.io/2026/02/28/claude-code-parallel-agent-workflow/</id>
+    <link href="https://futurecreator.github.io/posts/3580147482/"/>
+    <id>https://futurecreator.github.io/posts/3580147482/</id>
     <published>2026-02-28T02:42:37.000Z</published>
     <updated>2026-02-28T07:18:01.765Z</updated>
     
@@ -261,8 +261,8 @@
   
   <entry>
     <title>테스트 코드가 해자가 되는 시대, 과연 그럴까</title>
-    <link href="https://futurecreator.github.io/2026/02/27/ai-era-test-code-moat/"/>
-    <id>https://futurecreator.github.io/2026/02/27/ai-era-test-code-moat/</id>
+    <link href="https://futurecreator.github.io/posts/2123699120/"/>
+    <id>https://futurecreator.github.io/posts/2123699120/</id>
     <published>2026-02-27T02:57:58.000Z</published>
     <updated>2026-02-28T07:18:01.760Z</updated>
     
@@ -286,8 +286,8 @@
   
   <entry>
     <title>CLI는 레거시라서 AI 에이전트에게 좋다</title>
-    <link href="https://futurecreator.github.io/2026/02/27/cli-legacy-for-ai-agents/"/>
-    <id>https://futurecreator.github.io/2026/02/27/cli-legacy-for-ai-agents/</id>
+    <link href="https://futurecreator.github.io/posts/2755587922/"/>
+    <id>https://futurecreator.github.io/posts/2755587922/</id>
     <published>2026-02-26T15:45:00.000Z</published>
     <updated>2026-02-27T03:20:13.937Z</updated>
     
@@ -313,8 +313,8 @@
   
   <entry>
     <title>Citrini Research가 전망한 AI의 미래</title>
-    <link href="https://futurecreator.github.io/2026/02/26/citrini-research-ai-future-scenario/"/>
-    <id>https://futurecreator.github.io/2026/02/26/citrini-research-ai-future-scenario/</id>
+    <link href="https://futurecreator.github.io/posts/925943548/"/>
+    <id>https://futurecreator.github.io/posts/925943548/</id>
     <published>2026-02-26T07:42:56.000Z</published>
     <updated>2026-02-26T15:43:23.042Z</updated>
     
@@ -340,8 +340,8 @@
   
   <entry>
     <title>Claude Code에서 Skill과 Subagent를 구분해서 쓰는 이유</title>
-    <link href="https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/"/>
-    <id>https://futurecreator.github.io/2026/02/26/claude-code-skill-vs-subagent/</id>
+    <link href="https://futurecreator.github.io/posts/1108661657/"/>
+    <id>https://futurecreator.github.io/posts/1108661657/</id>
     <published>2026-02-26T06:11:43.000Z</published>
     <updated>2026-02-26T15:43:23.050Z</updated>
     
@@ -365,8 +365,8 @@
   
   <entry>
     <title>AI를 깊이 사용하는 사람은 0.3%뿐이다</title>
-    <link href="https://futurecreator.github.io/2026/02/26/ai-adoption-0-3-percent/"/>
-    <id>https://futurecreator.github.io/2026/02/26/ai-adoption-0-3-percent/</id>
+    <link href="https://futurecreator.github.io/posts/3855849699/"/>
+    <id>https://futurecreator.github.io/posts/3855849699/</id>
     <published>2026-02-26T01:00:00.000Z</published>
     <updated>2026-02-26T01:16:33.251Z</updated>
     
@@ -391,8 +391,8 @@
   
   <entry>
     <title>Claude Code의 진짜 힘은 코드 생성이 아니다 - 컨텍스트 오케스트레이션의 시대</title>
-    <link href="https://futurecreator.github.io/2026/02/26/claude-code-context-orchestration/"/>
-    <id>https://futurecreator.github.io/2026/02/26/claude-code-context-orchestration/</id>
+    <link href="https://futurecreator.github.io/posts/3888332194/"/>
+    <id>https://futurecreator.github.io/posts/3888332194/</id>
     <published>2026-02-26T01:00:00.000Z</published>
     <updated>2026-02-26T00:36:26.885Z</updated>
     
@@ -418,8 +418,8 @@
   
   <entry>
     <title>북미 IT 채용 시장이 보여주는 AI 시대의 각자도생</title>
-    <link href="https://futurecreator.github.io/2026/02/26/2026-02-26-ai-era-individual-survival/"/>
-    <id>https://futurecreator.github.io/2026/02/26/2026-02-26-ai-era-individual-survival/</id>
+    <link href="https://futurecreator.github.io/posts/830574391/"/>
+    <id>https://futurecreator.github.io/posts/830574391/</id>
     <published>2026-02-26T00:20:00.000Z</published>
     <updated>2026-02-26T00:22:30.235Z</updated>
     
@@ -445,8 +445,8 @@
   
   <entry>
     <title>에이전트 오케스트레이션에 대한 단상</title>
-    <link href="https://futurecreator.github.io/2026/02/26/agent-orchestration-thoughts/"/>
-    <id>https://futurecreator.github.io/2026/02/26/agent-orchestration-thoughts/</id>
+    <link href="https://futurecreator.github.io/posts/659076475/"/>
+    <id>https://futurecreator.github.io/posts/659076475/</id>
     <published>2026-02-25T23:00:00.000Z</published>
     <updated>2026-02-25T15:54:25.678Z</updated>
     
@@ -470,8 +470,8 @@
   
   <entry>
     <title>코드를 읽지 않는다는 것에 대한 단상</title>
-    <link href="https://futurecreator.github.io/2026/02/25/2026-02-25-defense-of-not-reading-code/"/>
-    <id>https://futurecreator.github.io/2026/02/25/2026-02-25-defense-of-not-reading-code/</id>
+    <link href="https://futurecreator.github.io/posts/2207840744/"/>
+    <id>https://futurecreator.github.io/posts/2207840744/</id>
     <published>2026-02-25T10:30:00.000Z</published>
     <updated>2026-02-25T10:44:45.693Z</updated>
     
@@ -489,8 +489,8 @@
   
   <entry>
     <title>CLAUDE.md와 AGENTS.md 제대로 사용하기</title>
-    <link href="https://futurecreator.github.io/2026/02/25/claude-md-pitfalls/"/>
-    <id>https://futurecreator.github.io/2026/02/25/claude-md-pitfalls/</id>
+    <link href="https://futurecreator.github.io/posts/1902317812/"/>
+    <id>https://futurecreator.github.io/posts/1902317812/</id>
     <published>2026-02-25T00:00:00.000Z</published>
     <updated>2026-02-25T00:50:06.658Z</updated>
     
@@ -516,8 +516,8 @@
   
   <entry>
     <title>AI가 쓴 코드, 사람이 꼭 이해해야 할까</title>
-    <link href="https://futurecreator.github.io/2026/02/24/ai-code-review-future/"/>
-    <id>https://futurecreator.github.io/2026/02/24/ai-code-review-future/</id>
+    <link href="https://futurecreator.github.io/posts/1836869449/"/>
+    <id>https://futurecreator.github.io/posts/1836869449/</id>
     <published>2026-02-24T08:05:00.000Z</published>
     <updated>2026-02-24T08:35:03.964Z</updated>
     
