@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-02T07:47:40.022Z</updated>
+  <updated>2026-03-02T11:37:52.756Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -17,11 +17,30 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>인공지능 시대에 다시 만나는 마크다운의 가치</title>
+    <link href="https://futurecreator.github.io/posts/2429808311/"/>
+    <id>https://futurecreator.github.io/posts/2429808311/</id>
+    <published>2026-03-02T11:45:00.000Z</published>
+    <updated>2026-03-02T11:37:52.756Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>예전에 마크다운 문서를 활용하는 방법에 대해 책 기획과 집필 제안을 받은 적이 있었다. 당시에는 마크다운이 개발자들에게는 익숙하지만 일반인들에게는 생소했고, 쓰면 좋지만 굳이 안 써도 그만인 도구라는 인식이 강했다. 워드나 한글처럼 이미 익숙한 도구들을 두고 마크다운을 배워야 할 강력한 동기를 찾기 어려웠고, 결국 프로젝트는 진행되지 못했다.</p><span id="more"></span><p>하지만 인공지능 기술이 급격히 발전하면서 상황이 완전히 달라졌다. 최근 대형 언어 모델(LLM)이 문서를 이해하고 처리하는 과정에서 마크다운이 가장 효율적인 데이터 구조라는 사실이 밝혀지고 있기 때문이다. 이제 마크다운은 단순히 편리한 메모 도구를 넘어, AI와 효율적으로 소통하기 위한 핵심 언어가 되었다.</p><p>인공지능이 마크다운을 선호하는 기술적인 이유는 명확하다. HTML이나 JSON 같은 형식은 태그와 속성값이 너무 많아 AI가 처리해야 할 토큰(Token) 비용이 기하급수적으로 늘어난다. 반면 마크다운은 <code>#</code>이나 <code>-</code> 같은 최소한의 기호만으로 문서의 구조를 정의한다. 실제로 같은 내용의 HTML 문서를 마크다운으로 변환하면 토큰 사용량을 3배 이상 절약할 수 있다는 연구 결과도 있다.</p><p>단순히 양을 줄이는 것만이 장점은 아니다. 마크다운은 문서의 계층 구조를 명확하게 전달한다. 헤더를 통해 섹션 간의 관계를 파악하고, 리스트와 코드 블록을 통해 정보의 성격을 직관적으로 이해한다. AI가 학습한 방대한 양의 데이터 역시 이러한 마크다운 형식을 포함하고 있어, 모델이 정보를 추출하고 요약할 때 환각 현상을 줄이고 정확도를 높이는 데 결정적인 역할을 한다.</p><p>과거에는 마크다운을 개인의 기록 방식 중 하나로 치부했다면, 이제는 인공지능에게 업무를 지시하고 데이터를 제공하는 데 필수적인 규격이 되었다. 기술의 변화가 도구의 가치를 재발견하게 만든 셈이다. 다시 그 기획을 마주한다면, 이제는 마크다운을 꼭 써야만 하는 이유를 아주 명확하게 설명할 수 있을 것 같다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;예전에 마크다운 문서를 활용하는 방법에 대해 책 기획과 집필 제안을 받은 적이 있었다. 당시에는 마크다운이 개발자들에게는 익숙하지만 일반인들에게는 생소했고, 쓰면 좋지만 굳이 안 써도 그만인 도구라는 인식이 강했다. 워드나 한글처럼 이미 익숙한 도구들을 두고 마크다운을 배워야 할 강력한 동기를 찾기 어려웠고, 결국 프로젝트는 진행되지 못했다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>앤트로픽이 보여주는 AI 교육의 새로운 기준</title>
     <link href="https://futurecreator.github.io/posts/2186355094/"/>
     <id>https://futurecreator.github.io/posts/2186355094/</id>
     <published>2026-03-02T07:50:00.000Z</published>
-    <updated>2026-03-02T07:47:40.022Z</updated>
+    <updated>2026-03-02T07:47:44.792Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.</p><span id="more"></span><p>무료로 공개된 이 온라인 강의들은 클로드의 기초적인 사용법부터 API 활용, 클로드 코드 개발 워크플로, MCP(Model Context Protocol) 서버 구축까지 개발자에게 실질적으로 필요한 내용을 폭넓게 다룬다. 특히 클로드 코드를 워크플로에 통합하는 실습 과정이나 재사용 가능한 마크다운 기반의 에이전트 스킬을 생성하는 과정은 현재 AI 에이전트 생태계에서 가장 핵심적인 부분이다.</p><p>단순히 기술적인 내용에만 치우치지 않았다는 점도 인상적이다. 비개발자나 교육자, 학생들을 위한 AI 플루언시(AI Fluency) 과정을 별도로 제공하며 AI 시스템과 효과적이고 윤리적으로 협업하는 프레임워크를 제시한다. AWS나 구글 클라우드 같은 주요 플랫폼과의 통합 과정까지 포함되어 있어 엔터프라이즈 환경에서의 활용성도 놓치지 않았다.</p><p>결국 도구는 그것을 다루는 사람의 역량에 따라 결과물이 달라진다. 앤트로픽은 좋은 도구를 만드는 것에서 나아가 그 도구를 제대로 다룰 수 있는 환경을 직접 구축하고 있다. 클로드 코드에 추가되는 기능들이나 이런 교육 커리큘럼을 보면 이들이 지향하는 바가 단순히 똑똑한 모델이 아니라 인간의 생산성을 극대화하는 진정한 파트너라는 점을 다시 한번 확인하게 된다.</p>]]></content>
     
@@ -509,33 +528,6 @@
     
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>CLAUDE.md와 AGENTS.md 제대로 사용하기</title>
-    <link href="https://futurecreator.github.io/posts/1902317812/"/>
-    <id>https://futurecreator.github.io/posts/1902317812/</id>
-    <published>2026-02-25T00:00:00.000Z</published>
-    <updated>2026-03-01T18:54:18.035Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 코딩 에이전트 쓸 때 프로젝트 루트에 CLAUDE.md나 <a href="http://AGENTS.md">AGENTS.md</a> 같은 파일 두는 게 일반적이다. 클로드 코드를 쓰면 init 명령어로 이 파일을 자동 생성할 수도 있는데, 써 본 결과 이 방식은 오히려 독이 됐다.</p><span id="more"></span><p>불필요한 내용이 있으면 컨텍스트를 차지하고 토큰만 낭비하며 AI를 멍청하게 만든다. ETH Zurich 연구팀이 테스트한 결과를 보니, LLM이 자동 생성한 컨텍스트 파일은 작업 성공률을 2~3% 떨어뜨리고 비용은 20% 이상 증가시켰다. 이유는 단순하다. 자동 생성된 파일에는 에이전트가 코드를 읽으면 스스로 알 수 있는 정보가 대부분이기 때문이다.</p><p>docker-compose.yml이 있다는 사실, src 디렉토리 구조, 사용 중인 프레임워크 이름 같은 것은 에이전트가 grep 한 번이면 다 파악한다. 이걸 CLAUDE.md에 다 적어두면 컨텍스트 윈도우만 차지하고 토큰만 낭비할 뿐이다. 더 나쁜 건 앵커링 효과다. 문서에 레거시 패턴을 언급해 두면, 더 좋은 대안이 있어도 에이전트는 그 패턴에 고착된다.</p><p>그럼 꼭 필요한 내용은 뭘까. 에이전트가 코드를 읽어서는 절대 알 수 없는 정보여야 한다. 예를 들어 특정 모듈은 표준 방식이 아닌 커스텀 미들웨어를 쓴다든지, 테스트를 돌릴 때는 꼭 --no-cache 플래그를 붙여야 한다든지 하는 것이다. 이런 정보는 코드만 봐서는 알 수 없다. 도구를 문서에 언급하면 에이전트가 작업당 1.6~2.5회 사용하는데, 미문서화하면 0.05회 미만으로 떨어진다.</p><p>결국 init 명령어로 만들지 말고, 작업하면서 실수하는 부분을 추가해서 에이전트가 기억하도록 하는 방식이 최선인 것 같다. 에이전트가 반복해서 틀리는 부분을 그때그때 적어두는 거다. 이건 코드베이스가 불명확하다는 신호이므로, 나중에 근본 원인을 고치고 나면 그 줄은 삭제하면 된다.</p><p>CLAUDE.md는 영구 설정이 아니라 진단 도구로 봐야 한다. 에이전트가 신입 사원처럼 사무실 투어나 조직도가 필요한 게 아니다. 프롬프트를 다 입력하기도 전에 코드베이스 전체를 탐색할 수 있는 능력이 있는데, 필요한 건 지도가 아니라 지뢰의 위치다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI 코딩 에이전트 쓸 때 프로젝트 루트에 CLAUDE.md나 &lt;a href=&quot;http://AGENTS.md&quot;&gt;AGENTS.md&lt;/a&gt; 같은 파일 두는 게 일반적이다. 클로드 코드를 쓰면 init 명령어로 이 파일을 자동 생성할 수도 있는데, 써 본 결과 이 방식은 오히려 독이 됐다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
-    
-    <category term="코딩에이전트" scheme="https://futurecreator.github.io/tags/%EC%BD%94%EB%94%A9%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/"/>
-    
-    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
-    
-    <category term="생산성" scheme="https://futurecreator.github.io/tags/%EC%83%9D%EC%82%B0%EC%84%B1/"/>
     
   </entry>
   
