@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>앤트로픽이 보여주는 AI 교육의 새로운 기준</title>
+      <link href="/posts/2186355094/"/>
+      <url>/posts/2186355094/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.</p><span id="more"></span><p>무료로 공개된 이 온라인 강의들은 클로드의 기초적인 사용법부터 API 활용, 클로드 코드 개발 워크플로, MCP(Model Context Protocol) 서버 구축까지 개발자에게 실질적으로 필요한 내용을 폭넓게 다룬다. 특히 클로드 코드를 워크플로에 통합하는 실습 과정이나 재사용 가능한 마크다운 기반의 에이전트 스킬을 생성하는 과정은 현재 AI 에이전트 생태계에서 가장 핵심적인 부분이다.</p><p>단순히 기술적인 내용에만 치우치지 않았다는 점도 인상적이다. 비개발자나 교육자, 학생들을 위한 AI 플루언시(AI Fluency) 과정을 별도로 제공하며 AI 시스템과 효과적이고 윤리적으로 협업하는 프레임워크를 제시한다. AWS나 구글 클라우드 같은 주요 플랫폼과의 통합 과정까지 포함되어 있어 엔터프라이즈 환경에서의 활용성도 놓치지 않았다.</p><p>결국 도구는 그것을 다루는 사람의 역량에 따라 결과물이 달라진다. 앤트로픽은 좋은 도구를 만드는 것에서 나아가 그 도구를 제대로 다룰 수 있는 환경을 직접 구축하고 있다. 클로드 코드에 추가되는 기능들이나 이런 교육 커리큘럼을 보면 이들이 지향하는 바가 단순히 똑똑한 모델이 아니라 인간의 생산성을 극대화하는 진정한 파트너라는 점을 다시 한번 확인하게 된다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Reviews </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Claude </tag>
+            
+            <tag> Claude Code </tag>
+            
+            <tag> Anthropic </tag>
+            
+            <tag> AI Education </tag>
+            
+            <tag> MCP </tag>
+            
+            <tag> AI Fluency </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>OpenClaw 모델 사용 후기</title>
       <link href="/posts/2779386402/"/>
       <url>/posts/2779386402/</url>
