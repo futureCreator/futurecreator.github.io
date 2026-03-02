@@ -39,13 +39,13 @@
       
         <tags>
             
-            <tag> Claude </tag>
-            
-            <tag> Claude Code </tag>
-            
             <tag> Anthropic </tag>
             
             <tag> AI Education </tag>
+            
+            <tag> Claude </tag>
+            
+            <tag> Claude Code </tag>
             
             <tag> MCP </tag>
             
@@ -76,11 +76,11 @@
             
             <tag> Claude </tag>
             
-            <tag> LLM </tag>
-            
             <tag> OpenClaw </tag>
             
             <tag> Gemini </tag>
+            
+            <tag> LLM </tag>
             
             <tag> Tech Stack </tag>
             
@@ -109,11 +109,11 @@
             
             <tag> Claude Code </tag>
             
+            <tag> Tech Stack </tag>
+            
             <tag> AI Agent </tag>
             
             <tag> LLM Bias </tag>
-            
-            <tag> Tech Stack </tag>
             
             <tag> Perplexity </tag>
             
@@ -436,9 +436,9 @@
             
             <tag> ai </tag>
             
-            <tag> claude-code </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> claude-code </tag>
             
         </tags>
       
@@ -492,13 +492,13 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
             <tag> Claude Code </tag>
             
-            <tag> context orchestration </tag>
-            
             <tag> LLM </tag>
+            
+            <tag> AI </tag>
+            
+            <tag> context orchestration </tag>
             
         </tags>
       
@@ -602,11 +602,11 @@
       
         <tags>
             
+            <tag> Claude </tag>
+            
             <tag> AI </tag>
             
             <tag> 코딩에이전트 </tag>
-            
-            <tag> Claude </tag>
             
             <tag> 생산성 </tag>
             
@@ -714,9 +714,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> vibe-coding </tag>
+            
+            <tag> ai </tag>
             
             <tag> development </tag>
             
@@ -2401,9 +2401,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
             
             <tag> plugin </tag>
             
@@ -3118,13 +3118,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> web </tag>
             
-            <tag> blog </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
@@ -3451,9 +3451,9 @@
       
         <tags>
             
-            <tag> blog </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> blog </tag>
             
             <tag> evernote </tag>
             
@@ -3732,13 +3732,13 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> web </tag>
             
-            <tag> blog </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> blog </tag>
             
         </tags>
       
