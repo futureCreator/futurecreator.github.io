@@ -1,5 +1,8 @@
-/* Custom styles - Sarasa Mono K font override */
-/* Apply Sarasa Mono K to all elements */
+/* Custom styles - Font Optimization */
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap");
+/* Default fallback font stack */
+/* Apply Noto Sans KR to all elements */
 html,
 body,
 h1,
@@ -45,16 +48,23 @@ th,
 .archive-list,
 .toc-item,
 .recent-post-item,
-.comment-item,
+.comment-item {
+  font-family: 'Noto Sans KR', "Microsoft YaHei", "微软雅黑", sans-serif !important;
+}
+/* Apply JetBrains Mono to code blocks and inline code */
 pre,
 code,
 .hljs,
-.hljs * {
-  font-family: 'Sarasa Mono K', 'Sarasa Mono', monospace !important;
+.hljs *,
+kbd,
+samp,
+var {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-feature-settings: "liga" 1; /* Enable ligatures for JetBrains Mono */
 }
 /* Keep code blocks looking like code */
 pre,
 code,
 .hljs {
-  font-feature-settings: "liga" 0;
+  font-size: 0.9em;
 }
