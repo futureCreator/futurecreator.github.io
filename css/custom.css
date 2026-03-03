@@ -1,4 +1,11 @@
-/* Custom styles - Font Optimization (CodexMono KR) */
+/* Custom styles - Font Optimization (KoPubWorld & CodexMono KR) */
+/* Import KoPubWorld from Google Fonts or similar CDN is not standard, 
+   using a common CDN for KoPubWorld if available, but since standard Google Fonts doesn't have it,
+   I'll use the most stable @import for it or keep Noto Sans KR as fallback if it's not pre-installed.
+   For now, I'll use the recommended @import for KoPubWorld from a public CDN. */
+@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
+/* fallback example */
+@import url("https://webfontworld.github.io/KoPubWorldDotum/KoPubWorldDotum.css");
 /* Import CodexMono KR from jsDelivr CDN */
 @font-face {
   font-family: 'CodexMono KR';
@@ -8,7 +15,7 @@
   font-display: swap;
 }
 /* Default font stack */
-/* Apply CodexMono KR to all elements */
+/* Apply KoPubWorld to all elements */
 html,
 body,
 h1,
@@ -55,7 +62,7 @@ th,
 .toc-item,
 .recent-post-item,
 .comment-item {
-  font-family: 'CodexMono KR', 'Noto Sans KR', sans-serif !important;
+  font-family: 'KoPubWorldDotum', 'Noto Sans KR', sans-serif !important;
 }
 /* Apply CodexMono KR to code blocks and inline code */
 pre,
