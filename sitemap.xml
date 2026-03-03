@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/posts/3351934455/</loc>
+    
+    <lastmod>2026-03-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/posts/1126431187/</loc>
     
     <lastmod>2026-03-03</lastmod>
@@ -3140,6 +3149,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/self-hosted/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/Font/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/Development/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/CodexMono/</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
