@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-02T13:16:48.276Z</updated>
+  <updated>2026-03-03T08:20:06.451Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 코딩이 만든 생산성의 역설과 엔지니어의 생존법</title>
+    <link href="https://futurecreator.github.io/posts/1126431187/"/>
+    <id>https://futurecreator.github.io/posts/1126431187/</id>
+    <published>2026-03-03T08:35:00.000Z</published>
+    <updated>2026-03-03T08:20:06.451Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 도구의 확산으로 코드 작성을 시작하는 문턱이 낮아진 것은 분명한 사실이다. 그러나 코드 작성이 쉬워졌다고 해서 엔지니어링의 본질까지 쉬워진 것은 아니다. 오히려 생산성이 높아질수록 조직의 기대치는 상승하고 엔지니어가 짊어져야 할 업무의 복잡성은 더 커지고 있다.</p><span id="more"></span><p>현재 아키텍트와 엔지니어 그리고 개발자의 영역을 아우르며 일하고 있는 입장에서 AI가 가져온 변화는 매우 긍정적이다. 반복적인 구현 단계를 AI에게 맡기고 더 높은 수준의 설계와 의사결정에 집중할 수 있게 되었기 때문이다. 특히 한 번 바이브 코딩의 속도감을 맛보고 나면 예전처럼 일일이 코드를 직접 손으로 치는 방식으로 돌아가는 것은 상상하기 어렵다. 생산성의 비약적인 상승은 거부할 수 없는 흐름이 되었다.</p><p>하지만 이러한 흐름 속에서 새로운 병목 현상이 발생하고 있다. AI를 통해 누구나 방대한 양의 코드를 쏟아낼 수 있게 되었지만 그 코드가 올바르게 작동하는지 검증하고 품질을 유지할 수 있는 능력은 여전히 사람의 몫으로 남아있다. 많은 사람이 코드를 생산하고 있지만 정작 그것을 심도 있게 검수할 능력을 갖춘 전문가는 부족한 실정이다.</p><p>이러한 간극 때문에 숙련된 전문가에게 도움을 요청하는 수요가 당분간은 크게 늘어날 것으로 보인다. AI가 작성한 코드의 논리적 결함을 찾아내고 전체 아키텍처와의 조화를 확인하는 작업은 고도의 전문성을 요구하기 때문이다. 물론 머지않은 미래에는 이러한 코드 리뷰조차 AI가 상당 부분 대체하게 될 가능성이 높다.</p><p>결국 중요한 것은 기술적 도구의 변화에 매몰되지 않고 이 거대한 흐름에 어떻게 적응하느냐는 점이다. 코드 작성 자체의 비중이 줄어든 만큼 엔지니어는 더 넓은 시야에서 제품의 가치와 시스템의 안정성을 바라볼 수 있어야 한다. 변화를 거부하기보다는 AI를 활용해 더 큰 가치를 창출하는 방향으로 자신의 역할을 재정의하는 능력이 앞으로의 생존을 결정지을 것이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 도구의 확산으로 코드 작성을 시작하는 문턱이 낮아진 것은 분명한 사실이다. 그러나 코드 작성이 쉬워졌다고 해서 엔지니어링의 본질까지 쉬워진 것은 아니다. 오히려 생산성이 높아질수록 조직의 기대치는 상승하고 엔지니어가 짊어져야 할 업무의 복잡성은 더 커지고 있다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="Coding" scheme="https://futurecreator.github.io/tags/Coding/"/>
+    
+    <category term="Engineering" scheme="https://futurecreator.github.io/tags/Engineering/"/>
+    
+    <category term="Productivity" scheme="https://futurecreator.github.io/tags/Productivity/"/>
+    
+  </entry>
   
   <entry>
     <title>인공지능 시대에 다시 만나는 마크다운의 가치</title>
@@ -509,25 +536,6 @@
     <category term="agent" scheme="https://futurecreator.github.io/tags/agent/"/>
     
     <category term="workflow" scheme="https://futurecreator.github.io/tags/workflow/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>코드를 읽지 않는다는 것에 대한 단상</title>
-    <link href="https://futurecreator.github.io/posts/2207840744/"/>
-    <id>https://futurecreator.github.io/posts/2207840744/</id>
-    <published>2026-02-25T10:30:00.000Z</published>
-    <updated>2026-03-02T13:16:48.307Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 코드를 읽지 않는 것에 대한 옹호라는 글을 읽었다. AI가 코드를 생성하는 시대에 라인별 코드 리뷰 대신 스펙과 테스트, 검증 인프라에 의존하자는 주장이었다. 이에 대한 내 생각을 정리한다.<span id="more"></span></p><p>코드를 전부 읽을 필요가 없다는 점에는 공감한다. AI가 작성하든 사람이 작성하든 버그는 언제나 발생할 수 있는 부분이다. 그리고 그것을 다른 사람이 읽는다고 해서 반드시 찾아낼 수 있는 것도 아니다. 실제로 문제가 발생한 뒤에 디버깅해서 추적하는 일이 훨씬 많지 않은가 생각한다. 코드 리뷰를 하면서 이상한 부분을 발견하는 경우도 있지만, 대부분은 정상적으로 동작하는 것처럼 보이다가 실제 운영 환경에서 문제가 터지는 경우가 많다.</p><p>그래서 여러 가지 테스트 단계가 있는 것이다. 유닛 테스트부터 통합 테스트, 스테이징 환경 테스트, Canary 배포까지. 코드를 읽는 것만큼이나 혹은 그보다 더 중요한 것은 코드가 의도한 대로 동작하는지 검증하는 것이다. AI가 코드를 인간보다 많은 버그를 발생시킨다고 한다. 하지만 그것은 테스트 코드와 코드 검증 시스템으로 해결할 수 있는 문제다. 정적 분석 도구, 린터, 보안 스캔, 뮤테이션 테스트 등 이미 우리는 인간의 검토를 보완할 수 있는 다양한 도구들을 가지고 있다.</p><p>인간이 코드를 직접 읽고 검토하는 것만이 유일한 해결책은 아니다. 오히려 AI가 생성한 코드를 검토하는 것보다 AI가 생성한 테스트 코드로 검증하는 것이 더 효과적일 수도 있다. 중요한 것은 코드가 아니라 제품이 의도한 대로 동작하는지다. 코드는 그저 제품을 만드는 수단 중 하나일 뿐이다.</p><p>물론 안전이 직접적으로 걸린 시스템이나 보안에 민감한 영역, 중대한 아키텍처 결정에서는 여전히 인간의 검토가 필요하다. 내비게이션에만 의존하다 보인 길을 찾는 감각을 잃게 되듯, AI에만 의존하다 보인 코드를 읽는 능력을 잃게 된다. 하지만 모든 코드를 읽으려는 집착은 이제는 버려야 할 때가 되었다. 코드는 점점 구현의 세부사항으로 이동하고 있으며, 스펙과 아키텍처, 검증 레이어가 핵심 산출물로 부상하고 있다. 이 흐름에 적응하는 것이 오히려 더 생산적인 개발자가 되는 길이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 코드를 읽지 않는 것에 대한 옹호라는 글을 읽었다. AI가 코드를 생성하는 시대에 라인별 코드 리뷰 대신 스펙과 테스트, 검증 인프라에 의존하자는 주장이었다. 이에 대한 내 생각을 정리한다.</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
     
   </entry>
   
