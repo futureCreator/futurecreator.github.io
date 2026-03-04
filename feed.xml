@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-04T14:23:02.614Z</updated>
+  <updated>2026-03-04T15:26:08.157Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 에이전트에게 명령 대신 목표를 던져야 하는 이유</title>
+    <link href="https://futurecreator.github.io/posts/1336821167/"/>
+    <id>https://futurecreator.github.io/posts/1336821167/</id>
+    <published>2026-03-04T15:30:00.000Z</published>
+    <updated>2026-03-04T15:26:08.157Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 에이전트와 협업하며 깨달은 사실은 지시 방식이 결과물의 질을 완전히 결정한다는 점이다. 과거의 코딩이 어떻게(How)를 작성하는 과정이었다면 에이전트 시대의 코딩은 무엇을(What) 달성할지 정의하는 과정으로 변하고 있다. 명령형 지시와 목표 지향적 지시의 차이를 이해하는 것이 에이전틱 엔지니어링의 핵심이다.</p><span id="more"></span><p>명령형 지시는 단계별 절차를 나열하는 방식이다. 예컨대 토스트 메시지가 겹쳐 보이는 문제를 해결해달라고 요청하는 식이다. 이 경우 에이전트는 눈앞의 현상만 해결하려 든다. z-index 값을 높이거나 위치를 살짝 조정하는 임시방편을 선택할 확률이 높다. 에이전트에게 추론의 여지를 주지 않고 특정 행동만 강요하기 때문에 발생하는 문제다.</p><p>반면 목표 지향적 지시는 최종적으로 도달해야 할 상태를 선언한다. 동시에 여러 토스트가 발생해도 화면에는 최대 세 개까지만 수직으로 쌓여야 하며 초과 시 오래된 것부터 제거되어야 한다는 성공 기준을 명시하는 방식이다. 이렇게 지시하면 에이전트는 내부적으로 큐 매니저를 설계하거나 상태 관리 로직을 도입하는 등 근본적인 해결책을 스스로 찾아낸다.</p><p>AI 에이전트의 내부 구조 자체가 목표를 향해 설계되어 있다는 점을 이해해야 한다. 에이전트는 목표를 받으면 계획을 세우고 실행한 뒤 결과를 관찰하며 성공 기준에 도달했는지 검증한다. 목표가 명확할수록 에이전트는 자율적으로 예외 상황을 처리하고 최적의 경로를 탐색한다. 규칙이 많아질수록 지시 이행 능력이 떨어지는 거대 언어 모델의 특성상 세부 규칙을 나열하기보다 성공 상태를 정의하는 편이 훨씬 효율적이다.</p><p>이 맥락에서 테스트 주도 개발(TDD)은 가장 강력한 목표 정의 수단이 된다. 테스트 코드는 에이전트가 통과해야 할 이진화된 성공 기준을 제공한다. 지시문이 길어지면 에이전트의 컨텍스트가 흐트러질 수 있지만 테스트 스위트는 기준점을 명확히 유지해준다. 에이전트가 테스트를 통과시키기 위해 스스로 코드를 수정하고 검증하는 루프를 돌게 만드는 것이 핵심이다.</p><p>좋은 지시는 역할과 목표 그리고 제약 사항과 성공 기준의 구조를 갖춰야 한다. 정체성을 부여하고 달성하려는 상태를 선언형 문장으로 정의한다. 금지 사항을 명시한 뒤 완료되었다고 판단할 수 있는 구체적인 조건을 붙인다. ~해라가 아닌 ~한 상태여야 한다는 표현을 사용하는 것만으로도 에이전트의 추론 능력을 극대화할 수 있다.</p><p>개발자의 역할은 이제 코드를 한 줄씩 적는 타이피스트에서 시스템의 목표 상태를 설계하는 설계자로 옮겨가고 있다. 에이전트에게 무엇이 성공인지 명확히 알려줄수록 우리는 더 적은 노력으로 더 견고한 시스템을 얻게 된다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 에이전트와 협업하며 깨달은 사실은 지시 방식이 결과물의 질을 완전히 결정한다는 점이다. 과거의 코딩이 어떻게(How)를 작성하는 과정이었다면 에이전트 시대의 코딩은 무엇을(What) 달성할지 정의하는 과정으로 변하고 있다. 명령형 지시와 목표 지향적 지시의 차이를 이해하는 것이 에이전틱 엔지니어링의 핵심이다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="Agent" scheme="https://futurecreator.github.io/tags/Agent/"/>
+    
+    <category term="Coding" scheme="https://futurecreator.github.io/tags/Coding/"/>
+    
+    <category term="Prompt Engineering" scheme="https://futurecreator.github.io/tags/Prompt-Engineering/"/>
+    
+  </entry>
   
   <entry>
     <title>아이맥과 클로드 코드로 구축한 원격 개발 환경</title>
@@ -522,35 +549,6 @@
     <category term="Recruitment" scheme="https://futurecreator.github.io/tags/Recruitment/"/>
     
     <category term="Career" scheme="https://futurecreator.github.io/tags/Career/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>왜 요즘 프로젝트는 Go 대신 Rust로 만들어지는가</title>
-    <link href="https://futurecreator.github.io/posts/2742092646/"/>
-    <id>https://futurecreator.github.io/posts/2742092646/</id>
-    <published>2026-03-01T09:40:00.000Z</published>
-    <updated>2026-03-03T13:28:30.684Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 시스템 프로그래밍과 인프라 도구 영역에서 흥미로운 변화가 관찰되고 있다. 전통적으로 이 분야의 절대 강자였던 Go(Golang) 대신 Rust를 선택하는 신규 프로젝트가 급격히 늘어나는 추세다. 단순히 언어의 인기가 높아서일까, 아니면 기술적인 필연성이 작용하고 있는 것일까.</p><span id="more"></span><p>먼저 눈에 띄는 실사례들을 살펴보자. AWS의 서버리스 인프라를 지탱하는 Firecracker는 보안과 초경량성을 위해 Rust로 개발되었다. 컨테이너 런타임인 Deno는 Node.js의 한계를 넘기 위해 핵심 엔진을 Rust로 구축했고, 서비스 메시 도구인 Linkerd는 성능 오버헤드를 줄이기 위해 프록시 계층을 Go에서 Rust로 전면 재작성했다. 이외에도 <code>ripgrep</code>, <code>bat</code>, <code>fd</code>와 같이 기존 유닉스 도구를 대체하는 고성능 CLI 툴들도 대거 Rust의 힘을 빌리고 있다.</p><p>Go와 Rust는 각기 다른 철학을 지닌다. Go의 핵심 가치는 단순함과 생산성이다. 가비지 컬렉터(GC)를 통해 메모리 관리를 자동화하고, 고루틴과 채널이라는 강력한 추상화로 동시성 프로그래밍을 쉽게 만들었다. 반면 Rust는 안전성과 성능에 타협하지 않는다. GC 없이 소유권(Ownership) 시스템을 통해 컴파일 시점에 메모리 안전성을 보장하며, C/C++ 수준의 하드웨어 제어 능력을 제공한다.</p><p>과거에는 이 두 언어 사이의 선택 기준이 명확했다. '빠르게 만들고 협업하기 좋은 도구’가 필요하면 Go를, '실수가 용납되지 않는 극한의 성능과 안전성’이 필요하면 Rust를 선택했다. 하지만 최근에는 그 균형추가 Rust 쪽으로 더 많이 기우는 느낌이다. 그 이유는 인프라 시스템이 점점 더 거대해지고 정밀해지면서, GC로 인한 미세한 지연 시간(Latency)조차도 시스템 전체의 성능 병목으로 작용하기 시작했기 때문이다.</p><p>여기에 결정적인 변수가 하나 더 추가되었다. 바로 AI 코딩의 등장이다. 필자가 관찰한 바에 따르면, Rust의 가장 큰 진입 장벽이었던 '학습 곡선’이 AI 덕분에 급격히 낮아졌다.</p><p>과거에는 빌림 검사기(Borrow Checker)가 내뱉는 난해한 에러 메시지 앞에서 좌절하고 다시 익숙한 Go로 돌아가는 엔지니어가 많았다. 하지만 이제는 Claude나 Gemini 같은 AI 모델이 복잡한 수명 주기(Lifetime) 문제를 실시간으로 해석해주고, 안전한 리팩토링 코드를 제안한다. 'Rust는 어렵다’는 이유로 포기하던 시대는 끝났다. 이제는 AI라는 든든한 조수와 함께 Rust의 모든 장점을 온전히 누릴 수 있게 된 것이다.</p><p>결국 최근의 Rust 열풍은 기술적 우수성에 AI라는 실질적인 생산성 도구가 결합된 결과라고 생각한다. 인프라의 복잡도가 높아질수록 Rust가 제공하는 '컴파일 시점의 확신’은 더욱 소중해질 것이며, AI는 그 확신으로 가는 길을 더 평탄하게 만들어줄 것이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 시스템 프로그래밍과 인프라 도구 영역에서 흥미로운 변화가 관찰되고 있다. 전통적으로 이 분야의 절대 강자였던 Go(Golang) 대신 Rust를 선택하는 신규 프로젝트가 급격히 늘어나는 추세다. 단순히 언어의 인기가 높아서일까, 아니면 기술적인 필연성이 작용하고 있는 것일까.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="Rust" scheme="https://futurecreator.github.io/tags/Rust/"/>
-    
-    <category term="Go" scheme="https://futurecreator.github.io/tags/Go/"/>
-    
-    <category term="Systems Programming" scheme="https://futurecreator.github.io/tags/Systems-Programming/"/>
-    
-    <category term="Infrastructure" scheme="https://futurecreator.github.io/tags/Infrastructure/"/>
-    
-    <category term="AI Coding" scheme="https://futurecreator.github.io/tags/AI-Coding/"/>
     
   </entry>
   
