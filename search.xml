@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>비개발자의 해커톤 대상 수령이 증명한 에이전트의 가능성</title>
+      <link href="/posts/560594275/"/>
+      <url>/posts/560594275/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 요즘IT에 올라온 한 비개발자의 해커톤 대상 수기(‘40대 비개발자, 어떻게 해커톤에서 대상을 탈 수 있었을까?’)는 AI 에이전트 시대의 개발 패러다임 변화를 상징적으로 보여준다. 코딩 지식이 부족한 개인이 숙련된 개발자들이 모인 대회에서 두 번이나 대상을 거머쥔 사실은 단순히 운으로 치부하기에는 시사하는 바가 매우 크다.</p><span id="more"></span><p>가장 눈에 띄는 점은 기획에 쏟은 시간의 비중이다. 대부분의 참가자가 대회 시작과 동시에 키보드를 두드릴 때 이 비개발자 참가자는 전체 개발 시간의 절반을 AI와 대화하며 기획을 다듬는 데 썼다. 이는 코딩(How)보다 목표 정의(What)가 결과물의 수준을 결정한다는 에이전틱 엔지니어링의 핵심 원칙과 일맥상통한다. 에이전트에게 무엇을 만들지 명확하고 구체적으로 지시할수록 구현 단계에서의 시행착오는 줄어들고 결과물의 밀도는 높아진다.</p><p>여러 모델을 활용한 크로스 체크 전략도 인상적이다. Claude와 Gemini 그리고 GPT를 번갈아 사용하며 아이디어의 창의성과 현실적 제약을 동시에 검증하는 방식은 에이전트 오케스트레이션의 실전판이라 할 만하다. 각 모델의 강점을 파악하고 서로 보완하게 만드는 안목은 이제 개발 언어의 문법을 외우는 것보다 훨씬 중요한 역량이 되고 있다. 단일 모델의 환각이나 편향에 빠지지 않고 다각도에서 검토를 거친 기획은 결국 탄탄한 구현으로 이어질 수밖에 없다.</p><p>심사 기준 자체를 AI에게 묻고 이를 기획에 반영한 대목은 에이전트의 메타 인지적 활용 사례다. AI가 무엇을 중요하게 평가할지 예측하고 그에 맞춰 시스템의 핵심 가치를 강조하는 전략은 매우 영리하다. 이는 단순히 기술적 구현에 매몰되지 않고 시스템이 해결하고자 하는 문제와 제공하는 가치를 심사위원(인간과 AI 모두)의 언어로 번역해낸 과정이다.</p><p>결국 이 수기가 보여준 성공 방정식은 명확하다. 코딩 기술의 해자가 낮아진 자리를 정교한 목표 설계와 다각적인 검증 역량이 채우고 있다는 점이다. 기술적 장벽은 AI가 허물어주고 있으며 인간은 이제 그 위에서 어떤 가치를 창출할지 결정하는 설계자의 역할에 집중해야 한다. 비개발자가 해커톤에서 대상을 받는 현상은 특이점이 아니라 앞으로 우리가 마주할 새로운 표준의 시작일지도 모른다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Reviews </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> Coding </tag>
+            
+            <tag> Hackathon </tag>
+            
+            <tag> Agent </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>자동화의 완성은 실행이 아닌 검증에 있다</title>
       <link href="/posts/1132753363/"/>
       <url>/posts/1132753363/</url>
@@ -22,11 +53,11 @@
             
             <tag> agent </tag>
             
-            <tag> openclaw </tag>
-            
             <tag> automation </tag>
             
             <tag> devops </tag>
+            
+            <tag> openclaw </tag>
             
         </tags>
       
@@ -53,9 +84,9 @@
             
             <tag> AI </tag>
             
-            <tag> Agent </tag>
-            
             <tag> Coding </tag>
+            
+            <tag> Agent </tag>
             
             <tag> Prompt Engineering </tag>
             
@@ -138,11 +169,11 @@
       
         <tags>
             
+            <tag> Workflow </tag>
+            
             <tag> Agentic Engineering </tag>
             
             <tag> AI Agent </tag>
-            
-            <tag> Workflow </tag>
             
             <tag> System Design </tag>
             
@@ -169,13 +200,13 @@
       
         <tags>
             
+            <tag> Development </tag>
+            
             <tag> Go </tag>
             
             <tag> Infrastructure </tag>
             
             <tag> AI Agent </tag>
-            
-            <tag> Development </tag>
             
         </tags>
       
@@ -235,40 +266,9 @@
             
             <tag> AI </tag>
             
+            <tag> Agent </tag>
+            
             <tag> CLI </tag>
-            
-            <tag> Agent </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>AI 시대 개발자의 생존과 에이전트 조율 능력</title>
-      <link href="/posts/770044951/"/>
-      <url>/posts/770044951/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 인공지능 기술의 급격한 발전으로 주니어 개발자 채용 시장이 얼어붙었다는 소식이 들려오곤 한다. 한편에서는 AI의 한계를 깨달은 기업들이 다시 주니어 채용을 늘리고 있다는 상반된 보도도 나온다. 이러한 혼란 속에서 분명한 사실은 개발자에게 요구되는 핵심 역량의 축이 이동하고 있다는 점이다.</p><span id="more"></span><p>주니어와 시니어의 생산성 격차를 고려할 때 AI라는 강력한 도구는 분명 경험이 풍부한 시니어에게 날개를 달아준다. 하지만 역설적으로 AI는 주니어가 시니어의 생산성을 빠르게 추격할 수 있게 돕는 가교 역할도 수행한다. 실제로 메타나 야후 같은 기업에서는 AI 도구에 능숙한 신입 사원들이 과거 몇 달씩 걸리던 업무 적응 기간을 단 며칠로 단축하며 놀라운 성과를 내고 있다.</p><p>기업들이 주니어 채용을 다시 고민하는 이유는 AI가 인간 개발자를 완전히 대체할 수 없다는 현실을 직시했기 때문이다. AI는 반복적인 코딩을 자동화할 수 있지만 시스템의 전체적인 맥락을 이해하고 창의적인 해결책을 제시하는 것은 여전히 인간의 영역이다. 특히 아마존웹서비스(AWS)의 리더십은 주니어 개발자들이 미래의 시니어로 성장할 잠재력을 가진 소중한 자산임을 강조하며 채용 중단의 위험성을 경고하기도 했다.</p><p>앞으로는 직접 코드를 타이핑하는 속도보다 AI 에이전트를 얼마나 능숙하게 다루고 조율하느냐가 개발자의 실력을 판가름하는 척도가 될 것이다. 단순한 코드 생성을 넘어 시스템 설계와 디버깅 그리고 AI가 내놓은 결과물을 검증하고 정교하게 다듬는 능력이 핵심이다. 이미 많은 기업이 학벌이나 자격증보다 실질적인 AI 활용 능력과 프로젝트 경험을 중시하는 기술 기반 채용으로 선회하고 있다. 우리 회사 또한 개인 KPI에 AI 활용 능력이나 활용한 사례 등을 넣기 시작했다.</p><p>과거의 잣대로 현재의 변화를 판단하는 것은 위험하다. 코딩이라는 행위 자체가 사라지지는 않겠지만 그 비중은 줄어들 수밖에 없다. 이제 개발자는 단순한 구현자가 아니라 AI 에이전트라는 팀원을 이끄는 관리자가 되어야 한다. 기업의 인사 기준 역시 이러한 변화를 따라가는 것이 자명하며 이에 적응하는 살아남을 것이라고 본다.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Reviews </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> AI </tag>
-            
-            <tag> Agent </tag>
-            
-            <tag> Career </tag>
-            
-            <tag> Developer </tag>
             
         </tags>
       
@@ -308,6 +308,37 @@
     
     
     <entry>
+      <title>AI 시대 개발자의 생존과 에이전트 조율 능력</title>
+      <link href="/posts/770044951/"/>
+      <url>/posts/770044951/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 인공지능 기술의 급격한 발전으로 주니어 개발자 채용 시장이 얼어붙었다는 소식이 들려오곤 한다. 한편에서는 AI의 한계를 깨달은 기업들이 다시 주니어 채용을 늘리고 있다는 상반된 보도도 나온다. 이러한 혼란 속에서 분명한 사실은 개발자에게 요구되는 핵심 역량의 축이 이동하고 있다는 점이다.</p><span id="more"></span><p>주니어와 시니어의 생산성 격차를 고려할 때 AI라는 강력한 도구는 분명 경험이 풍부한 시니어에게 날개를 달아준다. 하지만 역설적으로 AI는 주니어가 시니어의 생산성을 빠르게 추격할 수 있게 돕는 가교 역할도 수행한다. 실제로 메타나 야후 같은 기업에서는 AI 도구에 능숙한 신입 사원들이 과거 몇 달씩 걸리던 업무 적응 기간을 단 며칠로 단축하며 놀라운 성과를 내고 있다.</p><p>기업들이 주니어 채용을 다시 고민하는 이유는 AI가 인간 개발자를 완전히 대체할 수 없다는 현실을 직시했기 때문이다. AI는 반복적인 코딩을 자동화할 수 있지만 시스템의 전체적인 맥락을 이해하고 창의적인 해결책을 제시하는 것은 여전히 인간의 영역이다. 특히 아마존웹서비스(AWS)의 리더십은 주니어 개발자들이 미래의 시니어로 성장할 잠재력을 가진 소중한 자산임을 강조하며 채용 중단의 위험성을 경고하기도 했다.</p><p>앞으로는 직접 코드를 타이핑하는 속도보다 AI 에이전트를 얼마나 능숙하게 다루고 조율하느냐가 개발자의 실력을 판가름하는 척도가 될 것이다. 단순한 코드 생성을 넘어 시스템 설계와 디버깅 그리고 AI가 내놓은 결과물을 검증하고 정교하게 다듬는 능력이 핵심이다. 이미 많은 기업이 학벌이나 자격증보다 실질적인 AI 활용 능력과 프로젝트 경험을 중시하는 기술 기반 채용으로 선회하고 있다. 우리 회사 또한 개인 KPI에 AI 활용 능력이나 활용한 사례 등을 넣기 시작했다.</p><p>과거의 잣대로 현재의 변화를 판단하는 것은 위험하다. 코딩이라는 행위 자체가 사라지지는 않겠지만 그 비중은 줄어들 수밖에 없다. 이제 개발자는 단순한 구현자가 아니라 AI 에이전트라는 팀원을 이끄는 관리자가 되어야 한다. 기업의 인사 기준 역시 이러한 변화를 따라가는 것이 자명하며 이에 적응하는 살아남을 것이라고 본다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Reviews </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> Agent </tag>
+            
+            <tag> Career </tag>
+            
+            <tag> Developer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>코딩의 즐거움을 더하는 나만의 프로그래밍 폰트 이야기</title>
       <link href="/posts/1041746435/"/>
       <url>/posts/1041746435/</url>
@@ -330,11 +361,11 @@
             
             <tag> Development </tag>
             
-            <tag> CodexMono </tag>
-            
             <tag> JetBrainsMono </tag>
             
             <tag> SarasaMono </tag>
+            
+            <tag> CodexMono </tag>
             
         </tags>
       
@@ -541,13 +572,13 @@
       
         <tags>
             
+            <tag> Workflow </tag>
+            
             <tag> Agentic Engineering </tag>
             
             <tag> AI Agent </tag>
             
             <tag> Component-based Design </tag>
-            
-            <tag> Workflow </tag>
             
         </tags>
       
@@ -775,11 +806,11 @@
             
             <tag> AI </tag>
             
+            <tag> Agent </tag>
+            
             <tag> CLI </tag>
             
             <tag> DevTools </tag>
-            
-            <tag> Agent </tag>
             
         </tags>
       
@@ -895,9 +926,9 @@
             
             <tag> Claude Code </tag>
             
-            <tag> LLM </tag>
-            
             <tag> AI </tag>
+            
+            <tag> LLM </tag>
             
             <tag> context orchestration </tag>
             
