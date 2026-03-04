@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-04T15:28:22.206Z</updated>
+  <updated>2026-03-04T23:03:57.232Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>자동화의 완성은 실행이 아닌 검증에 있다</title>
+    <link href="https://futurecreator.github.io/posts/1132753363/"/>
+    <id>https://futurecreator.github.io/posts/1132753363/</id>
+    <published>2026-03-04T23:15:00.000Z</published>
+    <updated>2026-03-04T23:03:57.232Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 오픈클로를 활용한 자동화 사례들을 살펴보면 흥미로운 지점이 발견된다. 많은 사용자가 자동화의 성능을 얼마나 많은 명령을 동시에 내리는지 혹은 얼마나 복잡한 로직을 구현하는지에 집중하지만 실제 결과물의 품질은 전혀 다른 곳에서 결정된다. 바로 자동화된 태스크를 검증하는 단계다.</p><p>실행했다는 사실 자체가 성공을 보장하지는 않는다. 에이전트가 명령을 수행하고 완료했다고 보고하더라도 내부적으로는 오류가 발생했거나 의도한 결과물이 생성되지 않았을 가능성이 상존한다. 이른바 실행한 척하는 문제를 해결하기 위해서는 명확한 종료 조건과 검증 루틴이 필수적이다.</p><p>가장 기본적이면서도 강력한 체크 포인트는 세 가지로 요약된다. 로그 파일의 생성 여부와 내용 확인, 결과물인 아티팩트의 경로 유효성, 그리고 프로세스의 종료 코드다. 특히 종료 코드가 0인지 확인하는 습관만으로도 불필요한 재작업의 80% 이상을 줄일 수 있다.</p><span id="more"></span><p>에이전트에게 일을 맡길 때 단순히 무엇을 하라고 지시하는 단계를 넘어서야 한다. 어떤 상태가 되어야 성공으로 간주할 것인지에 대한 정의를 함께 제공해야 한다. 예를 들어 파일을 수정하라고 했다면 수정 후 특정 키워드가 포함되었는지 검사하는 단계를 명시하는 식이다.</p><p>결국 자동화는 명령을 내리는 기술이 아니라 결과를 확정 짓는 설계의 영역이다. 검증 구조가 빈약한 자동화는 오히려 관리해야 할 부채만 늘릴 뿐이다. 탄탄한 검증 루틴을 고정하는 것이야말로 진정한 의미의 효율성을 확보하는 유일한 길이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;최근 오픈클로를 활용한 자동화 사례들을 살펴보면 흥미로운 지점이 발견된다. 많은 사용자가 자동화의 성능을 얼마나 많은 명령을 동시에 내리는지 혹은 얼마나 복잡한 로직을 구현하는지에 집중하지만 실제 결과물의 품질은 전혀 다른 곳에서 결정된다. 바로 자동화된 태스크를 검증하는 단계다.&lt;/p&gt;
+&lt;p&gt;실행했다는 사실 자체가 성공을 보장하지는 않는다. 에이전트가 명령을 수행하고 완료했다고 보고하더라도 내부적으로는 오류가 발생했거나 의도한 결과물이 생성되지 않았을 가능성이 상존한다. 이른바 실행한 척하는 문제를 해결하기 위해서는 명확한 종료 조건과 검증 루틴이 필수적이다.&lt;/p&gt;
+&lt;p&gt;가장 기본적이면서도 강력한 체크 포인트는 세 가지로 요약된다. 로그 파일의 생성 여부와 내용 확인, 결과물인 아티팩트의 경로 유효성, 그리고 프로세스의 종료 코드다. 특히 종료 코드가 0인지 확인하는 습관만으로도 불필요한 재작업의 80% 이상을 줄일 수 있다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="agent" scheme="https://futurecreator.github.io/tags/agent/"/>
+    
+    <category term="openclaw" scheme="https://futurecreator.github.io/tags/openclaw/"/>
+    
+    <category term="automation" scheme="https://futurecreator.github.io/tags/automation/"/>
+    
+    <category term="devops" scheme="https://futurecreator.github.io/tags/devops/"/>
+    
+  </entry>
   
   <entry>
     <title>AI 에이전트에게 명령 대신 목표를 던져야 하는 이유</title>
@@ -524,31 +553,6 @@
     <category term="Engineering" scheme="https://futurecreator.github.io/tags/Engineering/"/>
     
     <category term="Productivity" scheme="https://futurecreator.github.io/tags/Productivity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>개발자 채용 시 코딩 테스트를 재고해야 할 때다</title>
-    <link href="https://futurecreator.github.io/posts/2869666902/"/>
-    <id>https://futurecreator.github.io/posts/2869666902/</id>
-    <published>2026-03-01T10:00:18.000Z</published>
-    <updated>2026-03-03T13:28:30.684Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>알고리즘 암기력을 평가하는 기존 코딩 테스트는 이제 시대적 수명을 다했다. Claude Code나 GitHub Copilot 같은 AI 도구가 알고리즘 퍼즐을 수초 만에 해결하는 시대에, 화이트보드 앞에서 역전된 트리 구조를 구현하는 것이 어떤 의미가 있는가.</p><span id="more"></span><p>과거의 코딩 테스트는 후보자의 논리적 사고력과 기초 구현 능력을 검증하는 효율적인 도구였다. 하지만 2026년 현재, 실무 환경은 완전히 달라졌다. 개발자는 이제 직접 타이핑하는 코더(Coder)가 아니라, AI를 지휘하여 결과물을 만들어내는 오케스트레이터(Orchestrator)로 진화했다. 이런 변화 속에서도 10년 전과 동일한 알고리즘 문제로 사람을 뽑는 것은, 계산기를 쓸 수 있는 엔지니어에게 주판 활용 능력을 묻는 것과 다를 바 없다.</p><p>우리가 주목해야 할 것은 정답 코드 자체가 아니다. AI가 짠 코드가 실제 비즈니스 로직과 충돌하지 않는지 검증하는 능력, 즉 '검증 비용(Verification Tax)'을 얼마나 효율적으로 관리하느냐가 핵심이다. 조사에 따르면 개발팀은 AI가 생성한 코드를 검증하는 데 전체 개발 시간의 60퍼센트 이상을 사용한다. 아무리 빠른 속도로 코드를 뽑아내도, 그 안에 숨겨진 동시성 이슈나 보안 취약점을 잡아내지 못한다면 그 개발자는 팀의 생산성을 깎아먹는 존재가 된다.</p><p>따라서 채용 전형을 실제 미니 프로젝트 중심으로 재편해야 한다. 후보자에게 AI 도구 사용을 전면 허용하고, 실제 업무와 유사한 제약 조건이 있는 프로젝트를 부여해야 한다. 이때 평가 기준은 네 가지로 압축된다.</p><p>첫째, 설계 능력이다. AI는 파편화된 코드를 짜는 데는 능숙하지만, 전체 시스템의 아키텍처와 모듈 간의 유기적 연결을 설계하는 것은 여전히 인간의 몫이다. 후보자가 AI의 결과물을 어떤 구조 위에 배치하고 확장 가능성을 고려하는지 보아야 한다.</p><p>둘째, 프롬프트 엔지니어링이다. 이는 단순히 명령어를 잘 던지는 기술이 아니다. 문제의 본질을 정확히 정의하고, 맥락을 유지하며 AI로부터 최적의 결과물을 이끌어내는 사고 과정이다. 어떤 질문을 던지고, AI의 답변이 만족스럽지 않을 때 어떻게 논리적으로 교정해 나가는지 그 흐름을 관찰해야 한다.</p><p>셋째, 도구 활용 및 검증 능력이다. 특정 AI 모델에 의존하지 않고 상황에 맞는 도구를 조합하며, 생성된 코드의 허점을 찾기 위해 테스트 코드를 어떻게 활용하는지 평가해야 한다. AI가 놓치기 쉬운 엣지 케이스를 후보자가 먼저 인지하고 보완하는 모습이 진정한 실력이다.</p><p>마지막으로 품질 거버넌스다. AI는 기술 부채를 고려하지 않는다. 생성된 코드에 중복은 없는지, 유지보수가 불가능한 스파게티 코드는 아닌지 판단하고 과감히 쳐내거나 리팩토링하는 안목이 필요하다.</p><p>지금 시대가 요구하는 개발자 역량은 도구를 활용(leverage)하여 문제를 해결하는 능력이다. 도구의 힘을 빌려 10배의 퍼포먼스를 내면서도 품질을 놓치지 않는 사람, 그런 사람을 찾기 위해 우리의 면접장에서도 AI와 함께 고민하는 후보자의 뒷모습을 보아야 할 때다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;알고리즘 암기력을 평가하는 기존 코딩 테스트는 이제 시대적 수명을 다했다. Claude Code나 GitHub Copilot 같은 AI 도구가 알고리즘 퍼즐을 수초 만에 해결하는 시대에, 화이트보드 앞에서 역전된 트리 구조를 구현하는 것이 어떤 의미가 있는가.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
-    
-    <category term="Recruitment" scheme="https://futurecreator.github.io/tags/Recruitment/"/>
-    
-    <category term="Career" scheme="https://futurecreator.github.io/tags/Career/"/>
     
   </entry>
   
