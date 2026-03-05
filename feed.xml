@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-05T03:36:47.319Z</updated>
+  <updated>2026-03-05T03:45:27.639Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -17,36 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>작업 성격에 맞는 모델 매칭: model-matchmaker의 가치</title>
-    <link href="https://futurecreator.github.io/posts/1258665665/"/>
-    <id>https://futurecreator.github.io/posts/1258665665/</id>
-    <published>2026-03-05T03:45:00.000Z</published>
-    <updated>2026-03-05T03:36:47.319Z</updated>
+    <title>코딩하지 않는 엔지니어링과 하네스 설계의 가치</title>
+    <link href="https://futurecreator.github.io/posts/3966415108/"/>
+    <id>https://futurecreator.github.io/posts/3966415108/</id>
+    <published>2026-03-05T03:48:00.000Z</published>
+    <updated>2026-03-05T03:45:27.639Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>단순한 파일 이름을 바꾸거나 git 커밋 메시지를 작성하는 데 Claude Opus 같은 고성능 모델을 사용하는 것은 닭 잡는 데 소 잡는 칼을 쓰는 격이다. 비용도 비쌀뿐더러 응답 속도도 느려 작업의 리듬을 깬다.</p><p>최근 공개된 model-matchmaker는 Cursor나 Claude Code 환경에서 프롬프트의 성격을 분석해 적절한 모델 티어를 추천해 주는 로컬 훅 도구다.</p><p>이 도구의 핵심은 '로컬 실행’과 '결정론적 분류’에 있다. 별도의 API 호출 없이 로컬 쉘 스크립트 기반의 키워드 매칭을 통해 프롬프트를 분류한다. 예를 들어 git commit이나 rename 같은 단순 작업은 Haiku를, 일반적인 구현은 Sonnet을, 아키텍처 분석이나 복잡한 추론은 Opus를 사용하도록 유도한다.</p><p>프록시 방식이 아닌 로컬 훅 방식을 채택하여 보안 위협을 최소화한 점도 인상적이다. 모든 결정은 로컬 로그에 기록되며, 필요한 경우 프롬프트 앞에 '!'를 붙여 필터를 우회할 수도 있다.</p><p>제작자의 분석에 따르면, 단순 구현 작업의 60-70%는 Sonnet으로 충분하며 이를 통해 전체 AI 비용의 50-70%를 절감할 수 있다고 한다. 무엇보다 가벼운 모델의 빠른 응답 속도는 개발자의 몰입(flow)을 유지하는 데 큰 도움을 준다.</p><p>로컬 모델(Ollama 등)을 사용하는 환경에서도 모델 크기에 따른 자원 낭비를 줄이는 용도로 응용이 가능해 보인다. 효율적인 에이전틱 엔지니어링을 고민한다면 참고할 만한 도구다.</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>OpenAI가 최근 공개한 하네스 엔지니어링에 관한 리포트는 개발자의 역할이 어디로 향하고 있는지를 명확하게 보여준다. 지난 5개월간 단 한 줄의 코드도 직접 작성하지 않고 실제 사용자가 있는 제품을 빌드한 이 실험은 엔지니어링의 본질이 코드 작성이 아닌 시스템 설계에 있음을 증명했다. 사람이 직접 코딩했을 때보다 10배 빠른 속도로 100만 라인의 코드를 생산해낸 결과는 단순히 속도의 문제를 넘어선다.</p><span id="more"></span><p>하네스 엔지니어링은 에이전트가 코드를 완벽하게 작성하고 실행할 수 있도록 제어 환경을 설계하는 일을 의미한다. 야생마를 길들이기 위해 마구를 채우듯 에이전트가 일탈하지 않고 목표를 향해 달릴 수 있는 인프라를 구축하는 것이 핵심이다. 이제 엔지니어의 주 업무는 구현이 아니라 에이전트가 읽을 수 있는 지도를 제작하고 기계적인 제어 장치를 마련하며 지속적인 피드백 루프를 구축하는 것으로 전환된다.</p><p>이 과정에서 가장 중요한 것은 저장소를 유일한 진실의 원천으로 만드는 일이다. 에이전트에게는 저장소 외부에 존재하는 슬랙 메시지나 구두 합의는 존재하지 않는 정보와 같다. 모든 맥락과 설계 의도를 코드와 문서로 명시하여 에이전트가 언제든 스스로 파악할 수 있는 가청성을 확보해야 한다. AGENTS.md는 거대한 지침서가 아니라 에이전트가 필요한 정보를 찾아갈 수 있는 이정표가 되어야 하며 필요한 시점에 정보를 노출하는 전략이 필수적이다.</p><p>또한 에이전트의 생산성을 담보하는 것은 엄격한 아키텍처와 자동화된 검증 도구다. 에이전트가 엉뚱한 방향으로 나가지 않도록 계층 구조를 강제하고 이를 기계적으로 검사하는 린터를 에이전트 스스로 제작하게 하여 관리 비용을 최소화한다. 사람이 일일이 코드를 리뷰하는 대신 에이전트끼리 서로의 코드를 검증하고 피드백을 주고받는 루프를 내재화하여 인간의 개입을 전략적인 의사결정 단계로 한정시킨다.</p><p>결국 미래의 엔지니어링 경쟁력은 코딩 실력이 아니라 에이전트를 얼마나 정교하게 조율할 수 있느냐에 달려 있다. 에이전트가 마음껏 능력을 발휘하면서도 통제 가능한 환경을 만드는 하네스 설계 역량이 우상향 성장을 결정짓는 핵심 지표가 될 것이다. 기술적 부채를 지속적으로 정리하는 자동화된 가비지 컬렉션 루틴까지 갖춘다면 엔지니어는 더 높은 차원의 가치 창출에 집중할 수 있다.</p>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css&quot;&gt;&lt;p&gt;단순한 파일 이름을 바꾸거나 git 커밋 메시지를 작성하는 데 Cla</summary>
-      
+    <summary type="html">&lt;p&gt;OpenAI가 최근 공개한 하네스 엔지니어링에 관한 리포트는 개발자의 역할이 어디로 향하고 있는지를 명확하게 보여준다. 지난 5개월간 단 한 줄의 코드도 직접 작성하지 않고 실제 사용자가 있는 제품을 빌드한 이 실험은 엔지니어링의 본질이 코드 작성이 아닌 시스템 설계에 있음을 증명했다. 사람이 직접 코딩했을 때보다 10배 빠른 속도로 100만 라인의 코드를 생산해낸 결과는 단순히 속도의 문제를 넘어선다.&lt;/p&gt;</summary>
     
     
     
-    <category term="dev" scheme="https://futurecreator.github.io/categories/dev/"/>
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
     
-    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
     
-    <category term="model" scheme="https://futurecreator.github.io/tags/model/"/>
+    <category term="Engineering" scheme="https://futurecreator.github.io/tags/Engineering/"/>
     
-    <category term="claude" scheme="https://futurecreator.github.io/tags/claude/"/>
+    <category term="Codex" scheme="https://futurecreator.github.io/tags/Codex/"/>
     
-    <category term="cursor" scheme="https://futurecreator.github.io/tags/cursor/"/>
-    
-    <category term="efficiency" scheme="https://futurecreator.github.io/tags/efficiency/"/>
-    
-    <category term="automation" scheme="https://futurecreator.github.io/tags/automation/"/>
+    <category term="OpenAI" scheme="https://futurecreator.github.io/tags/OpenAI/"/>
     
   </entry>
   
