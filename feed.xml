@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-05T17:13:41.280Z</updated>
+  <updated>2026-03-05T23:52:59.628Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 전쟁과 이란 공습</title>
+    <link href="https://futurecreator.github.io/posts/2860519508/"/>
+    <id>https://futurecreator.github.io/posts/2860519508/</id>
+    <published>2026-03-05T23:42:59.937Z</published>
+    <updated>2026-03-05T23:52:59.628Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 와이어드(WIRED)의 팟캐스트 언캐니 밸리(Uncanny Valley)를 들으면서 많은 생각을 했다. 2026년 초 발생한 미국과 이란의 갈등 속에서 AI가 어떤 역할을 하고 있는지, 그리고 기술이 전쟁의 양상을 어떻게 바꾸고 있는지에 대한 이야기였다.</p><span id="more"></span><p>이번 사태에서 가장 눈에 띄는 지점은 정보의 혼란이었다. X에는 AI로 생성된 가짜 이미지와 비디오 게임 화면이 실제 전황처럼 유포되었고, 이는 대중의 인식에 큰 영향을 미쳤다. 한편으로는 OpenAI와 Anthropic 같은 기업들이 미 국방부와의 협력 모델을 두고 각기 다른 행보를 보였다는 점도 흥미로웠다. 기술 기업들이 이제는 단순히 서비스 제공자를 넘어 국가 안보의 핵심 파트너로 자리 잡고 있다는 사실을 체감할 수 있었다.</p><p>실제로 2026년 초 미국의 이란 공습은 역사상 처음으로 'AI 전쟁’이라는 평가를 받을 만큼 AI가 군사 작전 전반에 깊숙이 내재화된 사례였다. AI가 표적 탐지부터 타격 시뮬레이션까지 수행하고 지휘관이 이를 바탕으로 작전을 최종 승인하는 구조로 운영되었다. 이 덕분에 미국은 공습 시작 단 12시간 만에 이란 내 90개 표적을 정밀 타격하는 초고속 작전을 펼칠 수 있었다. 지난 1월 베네수엘라 마두로 대통령 체포 작전 시뮬레이션에서도 Palantir 시스템을 통해 클로드가 실시간 정보 분석에 활용된 바 있다.</p><p>AI가 전쟁에 사용되는 것을 누가 막을 수 있을까 하는 의문이 든다. AI는 단순히 개인의 고민 상담이나 생산성에 기여하는 것을 넘어서 이제 국가 안보에 직결되는 문제다. 그렇기에 우리만의 자주적인 AI 기술을 확보하는 것이 무엇보다 중요하다. 하지만 기술적 진보 뒤에 숨은 위험성도 간과해서는 안 된다. 영국 연구팀이 진행한 워게임 결과를 보면 섬뜩하다. GPT나 클로드 같은 AI 모델을 가상 지도자로 설정했을 때, 21번의 전쟁 시뮬레이션 중 20번이나 핵무기를 사용하는 극단적인 선택을 했다. 기만 전술이나 가짜 항복, 광인 전략 등을 구사하는 AI를 보며 기술의 윤리적 통제가 얼마나 어려운 과제인지 다시금 깨달았다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;최근 와이어드(WIRED)의 팟캐스트 언캐니 밸리(Uncanny Valley)를 들으면서 많은 생각을 했다. 2026년 초 발생한 미국과 이란의 갈등 속에서 AI가 어떤 역할을 하고 있는지, 그리고 기술이 전쟁의 양상을 어떻게 바꾸고 있는지에 대한 이야기였다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.github.io/tags/ai/"/>
+    
+    <category term="war" scheme="https://futurecreator.github.io/tags/war/"/>
+    
+    <category term="wired" scheme="https://futurecreator.github.io/tags/wired/"/>
+    
+    <category term="geopolitics" scheme="https://futurecreator.github.io/tags/geopolitics/"/>
+    
+  </entry>
   
   <entry>
     <title>AI가 우리에게 스며드는 방식</title>
@@ -508,37 +535,6 @@
     
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>앤트로픽이 보여주는 AI 교육의 새로운 기준</title>
-    <link href="https://futurecreator.github.io/posts/2186355094/"/>
-    <id>https://futurecreator.github.io/posts/2186355094/</id>
-    <published>2026-03-02T07:50:00.000Z</published>
-    <updated>2026-03-05T17:13:41.240Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.</p><span id="more"></span><p>무료로 공개된 이 온라인 강의들은 클로드의 기초적인 사용법부터 API 활용, 클로드 코드 개발 워크플로, MCP(Model Context Protocol) 서버 구축까지 개발자에게 실질적으로 필요한 내용을 폭넓게 다룬다. 특히 클로드 코드를 워크플로에 통합하는 실습 과정이나 재사용 가능한 마크다운 기반의 에이전트 스킬을 생성하는 과정은 현재 AI 에이전트 생태계에서 가장 핵심적인 부분이다.</p><p>단순히 기술적인 내용에만 치우치지 않았다는 점도 인상적이다. 비개발자나 교육자, 학생들을 위한 AI 플루언시(AI Fluency) 과정을 별도로 제공하며 AI 시스템과 효과적이고 윤리적으로 협업하는 프레임워크를 제시한다. AWS나 구글 클라우드 같은 주요 플랫폼과의 통합 과정까지 포함되어 있어 엔터프라이즈 환경에서의 활용성도 놓치지 않았다.</p><p>결국 도구는 그것을 다루는 사람의 역량에 따라 결과물이 달라진다. 앤트로픽은 좋은 도구를 만드는 것에서 나아가 그 도구를 제대로 다룰 수 있는 환경을 직접 구축하고 있다. 클로드 코드에 추가되는 기능들이나 이런 교육 커리큘럼을 보면 이들이 지향하는 바가 단순히 똑똑한 모델이 아니라 인간의 생산성을 극대화하는 진정한 파트너라는 점을 다시 한번 확인하게 된다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="Anthropic" scheme="https://futurecreator.github.io/tags/Anthropic/"/>
-    
-    <category term="AI Education" scheme="https://futurecreator.github.io/tags/AI-Education/"/>
-    
-    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
-    
-    <category term="Claude Code" scheme="https://futurecreator.github.io/tags/Claude-Code/"/>
-    
-    <category term="MCP" scheme="https://futurecreator.github.io/tags/MCP/"/>
-    
-    <category term="AI Fluency" scheme="https://futurecreator.github.io/tags/AI-Fluency/"/>
     
   </entry>
   
