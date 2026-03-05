@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/posts/155123773/</loc>
+    
+    <lastmod>2026-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/posts/1565937110/</loc>
     
     <lastmod>2026-03-05</lastmod>
@@ -111,15 +120,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/posts/3966415108/</loc>
-    
-    <lastmod>2026-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/posts/155123773/</loc>
     
     <lastmod>2026-03-05</lastmod>
     
@@ -3554,13 +3554,6 @@
   
   <url>
     <loc>https://futurecreator.github.io/categories/Programming/MSA/</loc>
-    <lastmod>2026-03-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/categories/tech/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
