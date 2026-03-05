@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-05T14:02:04.883Z</updated>
+  <updated>2026-03-05T14:44:47.047Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>단순함이 승진에 도움이 되지 않는 이유와 해결책</title>
+    <link href="https://futurecreator.github.io/posts/3089316669/"/>
+    <id>https://futurecreator.github.io/posts/3089316669/</id>
+    <published>2026-03-05T14:43:55.884Z</published>
+    <updated>2026-03-05T14:44:47.047Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>엔지니어링 팀에서 흔히 발생하는 문제가 하나 있다. 바로 단순함을 추구하는 사람보다 복잡하게 무언가를 만드는 사람이 더 좋은 평가를 받는다는 점이다. 에츠허르 데이크스트라는 단순함은 큰 미덕이지만 이를 달성하려면 노력이 필요하고 가치를 알아보려면 교육이 필요하다고 말했다. 불행히도 현실에서는 복잡한 것이 더 잘 팔리는 경우가 많다.</p><span id="more"></span><p>똑같은 기능을 개발하는데 어떤 엔지니어는 50줄의 코드로 깔끔하게 끝냈고, 다른 엔지니어는 확장성을 고려한다며 새로운 추상화 계층과 시스템을 도입해 3주가 걸렸다고 가정해보자. 승진 심사 때 복잡하게 만든 사람은 온갖 화려한 수식어를 붙여 자신의 성과를 자랑할 수 있지만, 단순하게 만든 사람은 그저 기능을 구현했다고 말할 뿐이다. 결국 시스템은 복잡함을 똑똑함으로 착각하고 보상하게 된다.</p><p>이런 문제는 면접 단계부터 시작된다. 간단한 설계를 제안하면 면접관은 확장성을 묻고, 지원자는 점차 더 많은 박스와 화살표를 그리며 설계를 복잡하게 만든다. 결국 복잡함이 사람을 감동시킨다는 잘못된 교훈을 얻게 된다. 디자인 리뷰에서도 나중에 필요할지도 모른다는 이유로 당장 필요 없는 코드를 추가하는 일이 빈번하다. 경험이 부족할수록 코드가 더 프로페셔널해 보인다는 착각에 빠져 불필요한 추상화를 더하게 된다.</p><p>하지만 나는 이것이 단순히 단순함과 복잡함의 대결이라고만 생각하지 않는다. 결국 자신이 한 일을 어떻게 포장하고 자신을 PR하느냐의 문제다. 실제 현업에서 엔지니어들이 무조건 복잡한 것만 선택하지는 않는다. 기한이나 인력 같은 가용 자원이 한정되어 있기 때문에 결국 최적의 답을 찾아가기 마련이다. 문제는 그 과정에서 내린 결정의 가치를 승진 심사 때 어떻게 전략적으로 보여주느냐에 달려 있다.</p><p>단순함은 그 자체로 목소리를 내지 못한다. 따라서 엔지니어는 자신의 단순한 작업 뒤에 숨은 판단 과정을 가시화해야 한다. 단순히 기능을 구현했다고 말하는 대신, 복잡한 대안들을 검토한 끝에 왜 이 방식이 현재와 미래 요구 사항을 모두 충족하는 최선이었는지 설명해야 한다. 아무것도 하지 않기로 한 결정도 중요한 결정이며, 이를 문서화하는 능력이 필요하다. 내가 선택하지 않은 복잡함에 대해 이야기할 줄 알아야 한다.</p><p>리더의 역할도 중요하다. 단순히 거대한 시스템을 만든 것에 환호할 것이 아니라, 코드를 삭제하거나 불필요한 복잡성을 피한 엔지니어를 공개적으로 칭찬해야 한다. 질문의 방향을 무조건적인 확장성에서 단순함으로 바꿔야 한다. 복잡함을 보상하고 단순함을 무시한다면, 우리는 결국 유지보수하기 힘든 시스템만 얻게 될 것이다. 해결책은 의외로 복잡하지 않다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;엔지니어링 팀에서 흔히 발생하는 문제가 하나 있다. 바로 단순함을 추구하는 사람보다 복잡하게 무언가를 만드는 사람이 더 좋은 평가를 받는다는 점이다. 에츠허르 데이크스트라는 단순함은 큰 미덕이지만 이를 달성하려면 노력이 필요하고 가치를 알아보려면 교육이 필요하다고 말했다. 불행히도 현실에서는 복잡한 것이 더 잘 팔리는 경우가 많다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="커리어" scheme="https://futurecreator.github.io/tags/%EC%BB%A4%EB%A6%AC%EC%96%B4/"/>
+    
+    <category term="엔지니어링" scheme="https://futurecreator.github.io/tags/%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/"/>
+    
+    <category term="자기계발" scheme="https://futurecreator.github.io/tags/%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C/"/>
+    
+    <category term="조직문화" scheme="https://futurecreator.github.io/tags/%EC%A1%B0%EC%A7%81%EB%AC%B8%ED%99%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>AI가 우리에게 스며드는 방식</title>
     <link href="https://futurecreator.github.io/posts/1565937110/"/>
     <id>https://futurecreator.github.io/posts/1565937110/</id>
     <published>2026-03-05T13:50:00.000Z</published>
-    <updated>2026-03-05T14:02:04.883Z</updated>
+    <updated>2026-03-05T14:02:09.216Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>하루하루가 정말 빠르게 돌아간다. 새로운 모델, 새로운 기능이 경쟁적으로 쏟아진다. 코드를 짜고 이미지를 만들고 영상을 뽑아낸다. AI로 수익을 창출한다는 자극적인 홍보와 강의팔이도 넘쳐난다. 하지만 한 발짝만 밖으로 나와보면 세상은 놀라울 정도로 조용하다.</p><span id="more"></span><p>대부분은 그게 무엇인지조차 모르거나 한두 번 시도해보고는 쓸 곳이 없다고 말한다. 이게 현실이다. AI에 열광하는 사람들은 자신 같은 이들이 다수라고 착각하지만 그들은 0.1퍼센트에 불과하다. 매일 새벽까지 워크플로우를 자동화하고 API를 연동하며 기뻐하는 이들은 알고리즘이 만든 버블 속에 살고 있을 뿐이다. 나머지 99.9퍼센트는 가랑비에 옷 젖는 줄도 모른 채 변화를 맞이한다. 그리고 바로 그 지점이 AI가 인류에게 스며드는 진짜 방식이다.</p><p>배달 앱이 처음 나왔을 때 식당 사장님들은 코웃음을 쳤지만 이제는 플랫폼 없는 세상을 상상하기 어렵다. 수수료 구조를 파악했을 때는 이미 플랫폼 위에 올라탄 뒤였다. 네비게이션도 마찬가지였다. 길을 잘 안다고 자부하던 베테랑 기사들은 기계를 무시했지만 카카오택시가 나오자 손님이 사라졌다. 기술을 거부한 것이 아니라 기술이 판을 바꿨다는 사실을 몰랐을 뿐이다.</p><p>패턴은 항상 같다. 처음에는 무시하고 다음에는 방관하다가 마지막에는 종속된다. AI는 지금 정확히 그 경로를 밟고 있다. 넷플릭스는 다음 드라마를 골라주고 쿠팡은 살 물건을 예측한다. 사람들은 이를 AI를 쓴다고 인식하지 않고 그저 기술이 편해졌다고 생각한다. 가전제품 속에 녹아든 보이지 않는 레이어로서 AI는 사람들을 사용하고 있다.</p><p>여기서 양극화가 일어난다. 하지만 이는 잘 쓰는 사람과 못 쓰는 사람의 구도가 아니다. AI를 의식적으로 다루는 극소수와 AI 인프라 위에서 살아가는 대다수의 구도다. 플랫폼을 만드는 사람과 그 위에서 장사하는 사람 사이에는 설명하기 어려운 격차가 존재한다.</p><p>코딩을 배우고 에이전트를 만들며 자동화 파이프라인을 설계하는 행위는 새로운 종류의 인프라를 깔고 있는 셈이다. 나머지는 그 인프라 위에서 생활한다. 깔려 있는 인프라가 바뀌었다는 것을 체감하는 순간은 어느 날 갑자기 직업이 사라지거나 일의 가치가 폭락했을 때다.</p>]]></content>
     
@@ -508,37 +535,6 @@
     
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>앤트로픽이 보여주는 AI 교육의 새로운 기준</title>
-    <link href="https://futurecreator.github.io/posts/2186355094/"/>
-    <id>https://futurecreator.github.io/posts/2186355094/</id>
-    <published>2026-03-02T07:50:00.000Z</published>
-    <updated>2026-03-05T06:01:06.417Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.</p><span id="more"></span><p>무료로 공개된 이 온라인 강의들은 클로드의 기초적인 사용법부터 API 활용, 클로드 코드 개발 워크플로, MCP(Model Context Protocol) 서버 구축까지 개발자에게 실질적으로 필요한 내용을 폭넓게 다룬다. 특히 클로드 코드를 워크플로에 통합하는 실습 과정이나 재사용 가능한 마크다운 기반의 에이전트 스킬을 생성하는 과정은 현재 AI 에이전트 생태계에서 가장 핵심적인 부분이다.</p><p>단순히 기술적인 내용에만 치우치지 않았다는 점도 인상적이다. 비개발자나 교육자, 학생들을 위한 AI 플루언시(AI Fluency) 과정을 별도로 제공하며 AI 시스템과 효과적이고 윤리적으로 협업하는 프레임워크를 제시한다. AWS나 구글 클라우드 같은 주요 플랫폼과의 통합 과정까지 포함되어 있어 엔터프라이즈 환경에서의 활용성도 놓치지 않았다.</p><p>결국 도구는 그것을 다루는 사람의 역량에 따라 결과물이 달라진다. 앤트로픽은 좋은 도구를 만드는 것에서 나아가 그 도구를 제대로 다룰 수 있는 환경을 직접 구축하고 있다. 클로드 코드에 추가되는 기능들이나 이런 교육 커리큘럼을 보면 이들이 지향하는 바가 단순히 똑똑한 모델이 아니라 인간의 생산성을 극대화하는 진정한 파트너라는 점을 다시 한번 확인하게 된다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="Anthropic" scheme="https://futurecreator.github.io/tags/Anthropic/"/>
-    
-    <category term="AI Education" scheme="https://futurecreator.github.io/tags/AI-Education/"/>
-    
-    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
-    
-    <category term="Claude Code" scheme="https://futurecreator.github.io/tags/Claude-Code/"/>
-    
-    <category term="MCP" scheme="https://futurecreator.github.io/tags/MCP/"/>
-    
-    <category term="AI Fluency" scheme="https://futurecreator.github.io/tags/AI-Fluency/"/>
     
   </entry>
   

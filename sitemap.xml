@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/posts/3089316669/</loc>
+    
+    <lastmod>2026-03-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/posts/1565937110/</loc>
     
     <lastmod>2026-03-05</lastmod>
@@ -3461,6 +3470,27 @@
   
   <url>
     <loc>https://futurecreator.github.io/tags/self-hosted/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%9E%90%EA%B8%B0%EA%B3%84%EB%B0%9C/</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.github.io/tags/%EC%A1%B0%EC%A7%81%EB%AC%B8%ED%99%94/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
