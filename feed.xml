@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-05T13:42:00.723Z</updated>
+  <updated>2026-03-05T13:42:21.076Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://futurecreator.github.io/posts/2299049333/"/>
     <id>https://futurecreator.github.io/posts/2299049333/</id>
     <published>2026-03-05T13:50:00.000Z</published>
-    <updated>2026-03-05T13:42:00.723Z</updated>
+    <updated>2026-03-05T13:42:21.076Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 얼리어답터들의 세계는 지금 축제다. 코드를 짜고 이미지를 만들고 영상을 뽑아내며 매일 새로운 모델이 나오고 누군가는 게임체인저라고 외친다. 트위터 타임라인은 프롬프트 엔지니어링 팁으로 넘쳐나고 유튜브에는 AI로 수익을 창출한다는 자극적인 썸네일이 쏟아진다. 하지만 한 발짝만 밖으로 나와보면 세상은 놀라울 정도로 조용하다.</p><p>주변 사람들에게 물어보면 대부분은 그게 무엇인지조차 모르거나 한두 번 시도해보고는 무엇을 물어봐야 할지 모르겠다며 끝낸다. 이게 현실이다. AI에 열광하는 사람들은 자신 같은 이들이 다수라고 착각하지만 그들은 상위 0.1퍼센트에 불과하다. 매일 새벽까지 워크플로우를 자동화하고 API를 연동하는 이들은 알고리즘이 만든 버블 속에 살고 있을 뿐이다.</p><p>나머지 99.9퍼센트는 가랑비에 옷 젖는 줄도 모른 채 변화를 맞이한다. 그리고 바로 그 지점이 AI가 인류에게 스며드는 진짜 방식이다.</p><span id="more"></span><p>배달 앱이 처음 나왔을 때 식당 사장님들은 코웃음을 쳤지만 이제는 플랫폼 없는 세상을 상상하기 어렵다. 수수료 구조를 파악했을 때는 이미 플랫폼 위에 올라탄 뒤였다. 네비게이션도 마찬가지였다. 길을 잘 안다고 자부하던 베테랑 기사들은 기계를 무시했지만 카카오택시가 나오자 손님이 사라졌다. 기술을 거부한 것이 아니라 기술이 판을 바꿨다는 사실을 몰랐을 뿐이다.</p><p>패턴은 항상 같다. 처음에는 무시하고 다음에는 방관하다가 마지막에는 종속된다. AI는 지금 정확히 그 경로를 밟고 있다. 넷플릭스는 다음 드라마를 골라주고 쿠팡은 살 물건을 예측한다. 사람들은 이를 AI를 쓴다고 인식하지 않고 그저 기술이 편해졌다고 생각한다. 가전제품 속에 녹아든 보이지 않는 레이어로서 AI는 사람들을 사용하고 있다.</p><p>여기서 양극화가 일어난다. 하지만 이는 잘 쓰는 사람과 못 쓰는 사람의 구도가 아니다. AI를 의식적으로 다루는 극소수와 AI 인프라 위에서 살아가는 대다수의 구도다. 플랫폼을 만드는 사람과 그 위에서 장사하는 사람 사이에는 설명하기 어려운 격차가 존재한다.</p><p>코딩을 배우고 에이전트를 만들며 자동화 파이프라인을 설계하는 행위는 새로운 종류의 인프라를 깔고 있는 셈이다. 나머지는 그 인프라 위에서 생활한다. 깔려 있는 인프라가 바뀌었다는 것을 체감하는 순간은 어느 날 갑자기 직업이 사라지거나 일의 가치가 폭락했을 때다. 그때가 되어서야 깨닫겠지만 이미 가랑비에 옷은 젖을 대로 젖은 뒤다.</p><p>안타깝게도 AI는 가랑비가 아니라 소나기라는 사실을 잊어서는 안 된다.</p>]]></content>
     
@@ -29,6 +29,33 @@
     <summary type="html">&lt;p&gt;AI 얼리어답터들의 세계는 지금 축제다. 코드를 짜고 이미지를 만들고 영상을 뽑아내며 매일 새로운 모델이 나오고 누군가는 게임체인저라고 외친다. 트위터 타임라인은 프롬프트 엔지니어링 팁으로 넘쳐나고 유튜브에는 AI로 수익을 창출한다는 자극적인 썸네일이 쏟아진다. 하지만 한 발짝만 밖으로 나와보면 세상은 놀라울 정도로 조용하다.&lt;/p&gt;
 &lt;p&gt;주변 사람들에게 물어보면 대부분은 그게 무엇인지조차 모르거나 한두 번 시도해보고는 무엇을 물어봐야 할지 모르겠다며 끝낸다. 이게 현실이다. AI에 열광하는 사람들은 자신 같은 이들이 다수라고 착각하지만 그들은 상위 0.1퍼센트에 불과하다. 매일 새벽까지 워크플로우를 자동화하고 API를 연동하는 이들은 알고리즘이 만든 버블 속에 살고 있을 뿐이다.&lt;/p&gt;
 &lt;p&gt;나머지 99.9퍼센트는 가랑비에 옷 젖는 줄도 모른 채 변화를 맞이한다. 그리고 바로 그 지점이 AI가 인류에게 스며드는 진짜 방식이다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="AI" scheme="https://futurecreator.github.io/tags/AI/"/>
+    
+    <category term="Insight" scheme="https://futurecreator.github.io/tags/Insight/"/>
+    
+    <category term="Paradigm" scheme="https://futurecreator.github.io/tags/Paradigm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI가 세상에 스며드는 진짜 방식</title>
+    <link href="https://futurecreator.github.io/posts/2080270733/"/>
+    <id>https://futurecreator.github.io/posts/2080270733/</id>
+    <published>2026-03-05T13:50:00.000Z</published>
+    <updated>2026-03-05T13:44:50.566Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 얼리어답터들의 세계는 지금 축제다. 코드를 짜고 이미지를 만들고 영상을 뽑아낸다. 매일 새로운 모델이 나오고 매일 누군가가 이건 진짜 게임체인저라고 외친다. 트위터 타임라인은 프롬프트 엔지니어링 팁으로 넘쳐나고 유튜브엔 AI로 월 1000만원 벌기 썸네일이 쏟아진다.</p><p>그런데 한 발짝만 밖으로 나와보면 세상은 놀라울 정도로 조용하다.</p><p>주변 사람들에게 물어봤다. Claude를 쓰느냐고. ChatGPT를 쓰느냐고. 대부분은 &quot;그게 뭔데?&quot;거나 기껏해야 &quot;아 그거, 한번 해봤는데 뭘 물어봐야 할지 모르겠더라&quot;에서 끝난다. 이게 진짜 현실이다.</p><span id="more"></span><p>AI에 열광하거나 우려하는 사람들은 자신 같은 사람들이 다수라고 착각한다. 하지만 그들은 상위 0.1%다. 매일 새벽까지 프롬프트를 다듬고 MCP, Skills, API를 연동하고 워크플로우를 자동화하는 사람들. 이들은 자기 주변도 비슷할 거라고 생각하지만 그건 알고리즘이 만든 버블일 뿐이다.</p><p>나머지 99.9%는 가랑비에 옷 젖는 줄도 모른다. 그리고 바로 그 지점이 AI가 진짜로 인류에게 스며드는 방식이다.</p><p>배달의민족이 처음 나왔을 때 동네 식당 사장님들은 코웃음을 쳤다. 이젠 배달앱 없는 세상이 잘 그려지지 않는다. 수수료 구조가 어떻게 돌아가는지 파악했을 때는 이미 플랫폼 위에 올라탄 뒤였다.</p><p>네비게이션도 그랬다. 서울 지리를 외우던 베테랑 택시기사들은 네비를 무시했다. 기계가 길을 아냐, 내가 알지. 그런데 카카오택시가 나오자 손님이 사라졌다. 기술을 거부한 게 아니다. 기술이 판을 바꿨다는 걸 몰랐을 뿐이다.</p><p>틱톡은 처음엔 애들이나 하는 거였다. 지금은 50대 자영업자가 릴스를 찍지 않으면 가게가 안 돌아간다. 누구도 자기가 알고리즘에 종속됐다고 자각하지 못한 채 매일 15초짜리 영상을 올리고 있다.</p><p>패턴은 항상 같다. 처음엔 무시하고 다음엔 방관하고 마지막엔 종속된다. AI는 지금 정확히 그 경로를 밟고 있다.</p><p>넷플릭스는 AI로 당신의 다음 드라마를 골라주고 있다. 쿠팡은 AI로 당신이 살 물건을 예측하고 있다. 사람들은 그걸 &quot;AI를 쓴다&quot;고 인식하지 않는다. 그냥 요즘 기술이 편하네, 넷플릭스 추천 잘하네라고 생각할 뿐이다. 이게 AI의 진짜 침투 경로다.</p><p>화려한 프롬프트 엔지니어링이 아니라 가전제품 속에 녹아든 보이지 않는 레이어. 사람들은 AI를 사용하는 게 아니라 AI에 사용당하는 쪽에 더 가깝다. 그리고 대부분은 그 사실을 모른다. 알 필요도 느끼지 못한다.</p><p>그래서 양극화는 일어난다. 하지만 사람들이 상상하는 그런 양극화가 아니다. AI를 잘 쓰는 사람 vs 못 쓰는 사람의 구도가 아니라 AI를 의식적으로 다루는 극소수 vs AI 위에서 살아가는 대다수의 구도다. 후자가 불행한 건 아니다. 배민 수수료 구조를 모른다고 배달 못 시키는 건 아니니까. 다만 플랫폼을 만드는 사람과 플랫폼 위에서 장사하는 사람 사이에는 설명하기 어려운 종류의 격차가 존재한다.</p><p>AI 시대의 격차도 그런 종류가 될 것이다.</p><p>코딩을 배우고 에이전트를 만들고 자동화 파이프라인을 설계하는 사람들은 새로운 종류의 인프라를 깔고 있는 셈이다. 나머지는 그 인프라 위에서 생활한다. 깔려 있는 인프라가 바뀌었다는 걸 체감하는 건 어느 날 갑자기 자기 직업이 사라졌을 때, 혹은 자기가 하던 일의 가치가 폭락했을 때다.</p><p>그때 가서야 아, 이게 AI 때문이었어?라고 깨닫는다. 하지만 그때는 이미 가랑비에 옷이 젖을 대로 젖은 뒤다.</p><p>안타깝게도 AI는 가랑비가 아니라 소나기라는 사실을 잊어서는 안 된다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 얼리어답터들의 세계는 지금 축제다. 코드를 짜고 이미지를 만들고 영상을 뽑아낸다. 매일 새로운 모델이 나오고 매일 누군가가 이건 진짜 게임체인저라고 외친다. 트위터 타임라인은 프롬프트 엔지니어링 팁으로 넘쳐나고 유튜브엔 AI로 월 1000만원 벌기 썸네일이 쏟아진다.&lt;/p&gt;
+&lt;p&gt;그런데 한 발짝만 밖으로 나와보면 세상은 놀라울 정도로 조용하다.&lt;/p&gt;
+&lt;p&gt;주변 사람들에게 물어봤다. Claude를 쓰느냐고. ChatGPT를 쓰느냐고. 대부분은 &amp;quot;그게 뭔데?&amp;quot;거나 기껏해야 &amp;quot;아 그거, 한번 해봤는데 뭘 물어봐야 할지 모르겠더라&amp;quot;에서 끝난다. 이게 진짜 현실이다.&lt;/p&gt;</summary>
     
     
     
@@ -510,37 +537,6 @@
     
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>앤트로픽이 보여주는 AI 교육의 새로운 기준</title>
-    <link href="https://futurecreator.github.io/posts/2186355094/"/>
-    <id>https://futurecreator.github.io/posts/2186355094/</id>
-    <published>2026-03-02T07:50:00.000Z</published>
-    <updated>2026-03-05T06:01:06.417Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.</p><span id="more"></span><p>무료로 공개된 이 온라인 강의들은 클로드의 기초적인 사용법부터 API 활용, 클로드 코드 개발 워크플로, MCP(Model Context Protocol) 서버 구축까지 개발자에게 실질적으로 필요한 내용을 폭넓게 다룬다. 특히 클로드 코드를 워크플로에 통합하는 실습 과정이나 재사용 가능한 마크다운 기반의 에이전트 스킬을 생성하는 과정은 현재 AI 에이전트 생태계에서 가장 핵심적인 부분이다.</p><p>단순히 기술적인 내용에만 치우치지 않았다는 점도 인상적이다. 비개발자나 교육자, 학생들을 위한 AI 플루언시(AI Fluency) 과정을 별도로 제공하며 AI 시스템과 효과적이고 윤리적으로 협업하는 프레임워크를 제시한다. AWS나 구글 클라우드 같은 주요 플랫폼과의 통합 과정까지 포함되어 있어 엔터프라이즈 환경에서의 활용성도 놓치지 않았다.</p><p>결국 도구는 그것을 다루는 사람의 역량에 따라 결과물이 달라진다. 앤트로픽은 좋은 도구를 만드는 것에서 나아가 그 도구를 제대로 다룰 수 있는 환경을 직접 구축하고 있다. 클로드 코드에 추가되는 기능들이나 이런 교육 커리큘럼을 보면 이들이 지향하는 바가 단순히 똑똑한 모델이 아니라 인간의 생산성을 극대화하는 진정한 파트너라는 점을 다시 한번 확인하게 된다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="Anthropic" scheme="https://futurecreator.github.io/tags/Anthropic/"/>
-    
-    <category term="AI Education" scheme="https://futurecreator.github.io/tags/AI-Education/"/>
-    
-    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
-    
-    <category term="Claude Code" scheme="https://futurecreator.github.io/tags/Claude-Code/"/>
-    
-    <category term="MCP" scheme="https://futurecreator.github.io/tags/MCP/"/>
-    
-    <category term="AI Fluency" scheme="https://futurecreator.github.io/tags/AI-Fluency/"/>
     
   </entry>
   
