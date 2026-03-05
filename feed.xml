@@ -6,7 +6,7 @@
   <link href="https://futurecreator.github.io/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.github.io/"/>
-  <updated>2026-03-05T14:02:09.216Z</updated>
+  <updated>2026-03-05T15:22:42.009Z</updated>
   <id>https://futurecreator.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>단순함이 무시당하는 엔지니어링 생태계에서 살아남는 법</title>
+    <link href="https://futurecreator.github.io/posts/799993029/"/>
+    <id>https://futurecreator.github.io/posts/799993029/</id>
+    <published>2026-03-05T15:21:49.823Z</published>
+    <updated>2026-03-05T15:22:42.009Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>에츠허르 데이크스트라는 단순함은 훌륭한 미덕이지만 이를 달성하려면 노력이 필요하고 가치를 알아보려면 교육이 필요하다고 말했다. 게다가 복잡함은 더 잘 팔린다는 말도 덧붙였다. 실제 엔지니어링 팀에서도 이런 일은 비일비재하다. 인터뷰나 승진 심사, 디자인 리뷰에서 단순하게 문제를 해결한 사람은 아무런 보상을 받지 못하고, 오히려 오버엔지니어링을 한 사람이 더 매력적인 서사를 가져가는 경우가 많다.</p><span id="more"></span><p>두 명의 엔지니어를 상상해 보자. 엔지니어 A는 50줄의 코드로 문제를 깔끔하게 해결했다. 읽기 쉽고 테스트도 편하다. 반면 엔지니어 B는 새로운 추상화 레이어와 메시징 시스템을 도입하며 3주 동안 거창한 시스템을 만들었다. 승진 심사 때 누가 더 눈에 띌까? 당연히 엔지니어 B다. 확장 가능한 아키텍처를 설계했다는 화려한 문구는 승진 심사 위원들의 눈을 사로잡는다. 반면 엔지니어 A의 성과는 '기능 구현’이라는 세 단어로 축약되기 십상이다.</p><p>복잡함은 똑똑해 보인다. 시스템 자체가 복잡함을 보상하도록 설계되어 있기 때문이다. 이런 현상은 채용 인터뷰에서부터 시작된다. 단순한 API와 데이터베이스를 제안하면 면접관은 '1,000만 사용자가 오면 어떻게 할 거냐’고 묻는다. 결국 큐와 샤딩을 추가해야 면접관이 만족한다. 여기서 우리는 단순함이 충분하지 않다는 잘못된 교훈을 얻는다. 디자인 리뷰에서도 마찬가지다. 나중에 필요할지도 모르는 기능을 위해 불필요한 추상화를 추가하는 것이 더 전문적인 것처럼 느껴지곤 한다.</p><p>하지만 진정한 시니어리티는 더 많은 도구를 사용하는 법을 아는 것이 아니라, 언제 그것을 쓰지 말아야 할지 아는 능력에서 나온다. 누구나 복잡하게 만들 수 있지만, 단순함을 유지하는 데는 더 큰 경험과 확신이 필요하다. 단순히 코드가 예뻐 보이는 것을 넘어, 유지보수 비용을 낮추는 것이 진짜 실력이다.</p><p>나는 이 문제가 단순히 단순함의 가치에 대한 이해 부족이라기보다, 자신이 한 일을 어떻게 포장하고 홍보하느냐의 문제라고 생각한다. 실무에서는 기한과 인력 같은 자원이 한정되어 있기 때문에 무조건 복잡한 것만 선택할 수는 없다. 결국 최적의 답을 찾아가기 마련인데, 이것을 승진 심사 때 어떻게 설명하느냐는 오롯이 본인의 몫이다. 단순함 그 자체가 보상받지 못한다면, 그 단순함을 선택한 '결정의 무게’를 증명해야 한다.</p><p>단순함을 선택했다면 그 과정에 들어간 판단력을 가시화해야 한다. '기능 X 구현’이라고 적지 말고, '이벤트 기반 아키텍처를 포함한 세 가지 방안을 검토했으나 현재 요구사항에 가장 적합한 단순 구현 방안을 선택해 장애 없이 배포함’이라고 적어야 한다. 무언가를 하지 않기로 한 결정도 중요한 성과다. 디자인 리뷰에서도 '나중에 추가하는 비용과 지금 추가하는 비용을 비교했을 때 기다리는 것이 이득’임을 논리적으로 설명해야 한다.</p><p>엔지니어링 리더들의 역할도 중요하다. 확장성을 묻기 전에 '가장 단순한 버전은 무엇인가’를 먼저 물어야 한다. 복잡한 시스템의 나열이 아니라 그 결정이 꼭 필요했는지를 검증해야 한다. 코드를 삭제하거나 불필요한 도입을 막은 엔지니어를 공개적으로 칭찬하는 문화도 필요하다. 복잡함만 보상하고 단순함을 무시한다면, 결국 우리 앞에는 관리하기 힘든 거대한 쓰레기 더미만 남게 될 것이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;에츠허르 데이크스트라는 단순함은 훌륭한 미덕이지만 이를 달성하려면 노력이 필요하고 가치를 알아보려면 교육이 필요하다고 말했다. 게다가 복잡함은 더 잘 팔린다는 말도 덧붙였다. 실제 엔지니어링 팀에서도 이런 일은 비일비재하다. 인터뷰나 승진 심사, 디자인 리뷰에서 단순하게 문제를 해결한 사람은 아무런 보상을 받지 못하고, 오히려 오버엔지니어링을 한 사람이 더 매력적인 서사를 가져가는 경우가 많다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
+    
+    
+    <category term="커리어" scheme="https://futurecreator.github.io/tags/%EC%BB%A4%EB%A6%AC%EC%96%B4/"/>
+    
+    <category term="엔지니어링문화" scheme="https://futurecreator.github.io/tags/%EC%97%94%EC%A7%80%EB%8B%88%EC%96%B4%EB%A7%81%EB%AC%B8%ED%99%94/"/>
+    
+    <category term="단순함" scheme="https://futurecreator.github.io/tags/%EB%8B%A8%EC%88%9C%ED%95%A8/"/>
+    
+    <category term="소프트웨어설계" scheme="https://futurecreator.github.io/tags/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%84%A4%EA%B3%84/"/>
+    
+  </entry>
   
   <entry>
     <title>AI가 우리에게 스며드는 방식</title>
@@ -508,37 +535,6 @@
     
     <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>앤트로픽이 보여주는 AI 교육의 새로운 기준</title>
-    <link href="https://futurecreator.github.io/posts/2186355094/"/>
-    <id>https://futurecreator.github.io/posts/2186355094/</id>
-    <published>2026-03-02T07:50:00.000Z</published>
-    <updated>2026-03-05T06:01:06.417Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.</p><span id="more"></span><p>무료로 공개된 이 온라인 강의들은 클로드의 기초적인 사용법부터 API 활용, 클로드 코드 개발 워크플로, MCP(Model Context Protocol) 서버 구축까지 개발자에게 실질적으로 필요한 내용을 폭넓게 다룬다. 특히 클로드 코드를 워크플로에 통합하는 실습 과정이나 재사용 가능한 마크다운 기반의 에이전트 스킬을 생성하는 과정은 현재 AI 에이전트 생태계에서 가장 핵심적인 부분이다.</p><p>단순히 기술적인 내용에만 치우치지 않았다는 점도 인상적이다. 비개발자나 교육자, 학생들을 위한 AI 플루언시(AI Fluency) 과정을 별도로 제공하며 AI 시스템과 효과적이고 윤리적으로 협업하는 프레임워크를 제시한다. AWS나 구글 클라우드 같은 주요 플랫폼과의 통합 과정까지 포함되어 있어 엔터프라이즈 환경에서의 활용성도 놓치지 않았다.</p><p>결국 도구는 그것을 다루는 사람의 역량에 따라 결과물이 달라진다. 앤트로픽은 좋은 도구를 만드는 것에서 나아가 그 도구를 제대로 다룰 수 있는 환경을 직접 구축하고 있다. 클로드 코드에 추가되는 기능들이나 이런 교육 커리큘럼을 보면 이들이 지향하는 바가 단순히 똑똑한 모델이 아니라 인간의 생산성을 극대화하는 진정한 파트너라는 점을 다시 한번 확인하게 된다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;최근 앤트로픽의 행보를 보면 말 그대로 보법이 다르다는 느낌을 받는다. 단순히 모델의 성능을 높이는 경쟁에 매몰되지 않고 사용자가 실제로 무엇을 원하고 어떤 도구가 필요한지 정확히 꿰뚫고 있다. 이번에 공개한 앤트로픽 코스(Anthropic Courses) 역시 그 연장선에 있다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Reviews" scheme="https://futurecreator.github.io/categories/Reviews/"/>
-    
-    
-    <category term="Anthropic" scheme="https://futurecreator.github.io/tags/Anthropic/"/>
-    
-    <category term="AI Education" scheme="https://futurecreator.github.io/tags/AI-Education/"/>
-    
-    <category term="Claude" scheme="https://futurecreator.github.io/tags/Claude/"/>
-    
-    <category term="Claude Code" scheme="https://futurecreator.github.io/tags/Claude-Code/"/>
-    
-    <category term="MCP" scheme="https://futurecreator.github.io/tags/MCP/"/>
-    
-    <category term="AI Fluency" scheme="https://futurecreator.github.io/tags/AI-Fluency/"/>
     
   </entry>
   
