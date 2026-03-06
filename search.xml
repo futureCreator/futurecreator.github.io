@@ -20,13 +20,9 @@
       
         <tags>
             
-            <tag> ai agents </tag>
+            <tag> ai-agent </tag>
             
-            <tag> multi-agent systems </tag>
-            
-            <tag> crewai </tag>
-            
-            <tag> agentic engineering </tag>
+            <tag> agentic-engineering </tag>
             
         </tags>
       
@@ -57,7 +53,7 @@
             
             <tag> llm </tag>
             
-            <tag> software-engineering </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -82,15 +78,15 @@
       
         <tags>
             
+            <tag> terminal </tag>
+            
             <tag> ai </tag>
             
-            <tag> cli </tag>
+            <tag> productivity </tag>
             
-            <tag> software-design </tag>
+            <tag> career </tag>
             
-            <tag> automation </tag>
-            
-            <tag> developer-experience </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -117,11 +113,9 @@
             
             <tag> ai </tag>
             
-            <tag> agent </tag>
+            <tag> productivity </tag>
             
-            <tag> automation </tag>
-            
-            <tag> saas </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -150,10 +144,6 @@
             
             <tag> productivity </tag>
             
-            <tag> browser </tag>
-            
-            <tag> chrome </tag>
-            
         </tags>
       
     </entry>
@@ -177,13 +167,7 @@
       
         <tags>
             
-            <tag> gpt-5 </tag>
-            
-            <tag> openai </tag>
-            
-            <tag> ai-safety </tag>
-            
-            <tag> emotional-reliance </tag>
+            <tag> ai </tag>
             
         </tags>
       
@@ -210,12 +194,6 @@
             
             <tag> ai </tag>
             
-            <tag> war </tag>
-            
-            <tag> wired </tag>
-            
-            <tag> geopolitics </tag>
-            
         </tags>
       
     </entry>
@@ -239,11 +217,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Insight </tag>
-            
-            <tag> Paradigm </tag>
+            <tag> career </tag>
             
         </tags>
       
@@ -287,13 +263,7 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
-            <tag> Engineering </tag>
-            
-            <tag> Codex </tag>
-            
-            <tag> OpenAI </tag>
+            <tag> ai </tag>
             
         </tags>
       
@@ -318,15 +288,11 @@
       
         <tags>
             
-            <tag> strategy </tag>
-            
-            <tag> engineering </tag>
-            
-            <tag> simplicity </tag>
+            <tag> git </tag>
             
             <tag> career </tag>
             
-            <tag> pr </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -351,13 +317,11 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Coding </tag>
+            <tag> career </tag>
             
-            <tag> Hackathon </tag>
-            
-            <tag> Agent </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -382,13 +346,11 @@
       
         <tags>
             
-            <tag> agent </tag>
+            <tag> ci-cd </tag>
             
-            <tag> automation </tag>
+            <tag> productivity </tag>
             
-            <tag> devops </tag>
-            
-            <tag> openclaw </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -413,13 +375,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Coding </tag>
-            
-            <tag> Agent </tag>
-            
-            <tag> Prompt Engineering </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -444,7 +402,7 @@
       
         <tags>
             
-            <tag> RemoteWork,OpenClaw,ClaudeCode,Tailwind,iMac </tag>
+            <tag> claude </tag>
             
         </tags>
       
@@ -469,13 +427,9 @@
       
         <tags>
             
-            <tag> workflow </tag>
-            
             <tag> productivity </tag>
             
             <tag> llm </tag>
-            
-            <tag> engineering </tag>
             
         </tags>
       
@@ -500,13 +454,11 @@
       
         <tags>
             
-            <tag> Workflow </tag>
+            <tag> productivity </tag>
             
-            <tag> Agentic Engineering </tag>
+            <tag> ai-agent </tag>
             
-            <tag> AI Agent </tag>
-            
-            <tag> System Design </tag>
+            <tag> agentic-engineering </tag>
             
         </tags>
       
@@ -531,13 +483,9 @@
       
         <tags>
             
-            <tag> Development </tag>
+            <tag> cloud </tag>
             
-            <tag> Go </tag>
-            
-            <tag> Infrastructure </tag>
-            
-            <tag> AI Agent </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -562,13 +510,13 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> git </tag>
             
-            <tag> Agent </tag>
+            <tag> ai </tag>
             
-            <tag> Workflow </tag>
+            <tag> productivity </tag>
             
-            <tag> Git </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -593,13 +541,11 @@
       
         <tags>
             
-            <tag> MCP </tag>
+            <tag> terminal </tag>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Agent </tag>
-            
-            <tag> CLI </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -624,13 +570,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> hexo </tag>
             
-            <tag> Coding </tag>
-            
-            <tag> VibeCoding </tag>
-            
-            <tag> Bug </tag>
+            <tag> ai </tag>
             
         </tags>
       
@@ -655,13 +597,11 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Agent </tag>
+            <tag> career </tag>
             
-            <tag> Career </tag>
-            
-            <tag> Developer </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -684,20 +624,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> Font </tag>
-            
-            <tag> Development </tag>
-            
-            <tag> JetBrainsMono </tag>
-            
-            <tag> SarasaMono </tag>
-            
-            <tag> CodexMono </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -719,13 +645,7 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
-            <tag> Font </tag>
-            
-            <tag> Development </tag>
-            
-            <tag> CodexMono </tag>
+            <tag> ai </tag>
             
         </tags>
       
@@ -750,13 +670,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Coding </tag>
-            
-            <tag> Engineering </tag>
-            
-            <tag> Productivity </tag>
+            <tag> productivity </tag>
             
         </tags>
       
@@ -800,17 +716,11 @@
       
         <tags>
             
-            <tag> Anthropic </tag>
+            <tag> ai </tag>
             
-            <tag> AI Education </tag>
+            <tag> claude </tag>
             
-            <tag> Claude </tag>
-            
-            <tag> Claude Code </tag>
-            
-            <tag> MCP </tag>
-            
-            <tag> AI Fluency </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -835,15 +745,11 @@
       
         <tags>
             
-            <tag> Claude </tag>
+            <tag> ai </tag>
             
-            <tag> OpenClaw </tag>
+            <tag> claude </tag>
             
-            <tag> Gemini </tag>
-            
-            <tag> LLM </tag>
-            
-            <tag> Tech Stack </tag>
+            <tag> llm </tag>
             
         </tags>
       
@@ -868,15 +774,11 @@
       
         <tags>
             
-            <tag> Claude Code </tag>
+            <tag> ai </tag>
             
-            <tag> Tech Stack </tag>
+            <tag> llm </tag>
             
-            <tag> AI Agent </tag>
-            
-            <tag> LLM Bias </tag>
-            
-            <tag> Perplexity </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -901,13 +803,11 @@
       
         <tags>
             
-            <tag> Workflow </tag>
+            <tag> productivity </tag>
             
-            <tag> Agentic Engineering </tag>
+            <tag> ai-agent </tag>
             
-            <tag> AI Agent </tag>
-            
-            <tag> Component-based Design </tag>
+            <tag> agentic-engineering </tag>
             
         </tags>
       
@@ -932,13 +832,13 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ci-cd </tag>
             
-            <tag> ClaudeCode </tag>
+            <tag> ai </tag>
             
-            <tag> AgenticEngineering </tag>
+            <tag> claude </tag>
             
-            <tag> DevOps </tag>
+            <tag> agentic-engineering </tag>
             
         </tags>
       
@@ -963,13 +863,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Coding </tag>
-            
-            <tag> Engineering </tag>
-            
-            <tag> Productivity </tag>
+            <tag> productivity </tag>
             
         </tags>
       
@@ -994,11 +890,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> Recruitment </tag>
-            
-            <tag> Career </tag>
+            <tag> career </tag>
             
         </tags>
       
@@ -1023,15 +917,9 @@
       
         <tags>
             
-            <tag> Rust </tag>
+            <tag> cloud </tag>
             
-            <tag> Go </tag>
-            
-            <tag> Systems Programming </tag>
-            
-            <tag> Infrastructure </tag>
-            
-            <tag> AI Coding </tag>
+            <tag> ai </tag>
             
         </tags>
       
@@ -1075,11 +963,11 @@
       
         <tags>
             
-            <tag> agent </tag>
-            
-            <tag> workflow </tag>
+            <tag> productivity </tag>
             
             <tag> claude </tag>
+            
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1106,9 +994,7 @@
             
             <tag> ai </tag>
             
-            <tag> test </tag>
-            
-            <tag> tdd </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -1133,13 +1019,11 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> terminal </tag>
             
-            <tag> Agent </tag>
+            <tag> ai </tag>
             
-            <tag> CLI </tag>
-            
-            <tag> DevTools </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1164,13 +1048,7 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
-            <tag> 미래 </tag>
-            
-            <tag> 경제 </tag>
-            
-            <tag> 전망 </tag>
+            <tag> ai </tag>
             
         </tags>
       
@@ -1199,7 +1077,7 @@
             
             <tag> productivity </tag>
             
-            <tag> claude-code </tag>
+            <tag> claude </tag>
             
         </tags>
       
@@ -1228,8 +1106,6 @@
             
             <tag> productivity </tag>
             
-            <tag> future </tag>
-            
         </tags>
       
     </entry>
@@ -1253,13 +1129,11 @@
       
         <tags>
             
-            <tag> Claude Code </tag>
+            <tag> ai </tag>
             
-            <tag> AI </tag>
+            <tag> llm </tag>
             
-            <tag> LLM </tag>
-            
-            <tag> context orchestration </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1284,13 +1158,9 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> ai </tag>
             
-            <tag> 개발자 </tag>
-            
-            <tag> 커리어 </tag>
-            
-            <tag> 북미 </tag>
+            <tag> career </tag>
             
         </tags>
       
@@ -1317,9 +1187,9 @@
             
             <tag> ai </tag>
             
-            <tag> agent </tag>
+            <tag> productivity </tag>
             
-            <tag> workflow </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1363,13 +1233,13 @@
       
         <tags>
             
-            <tag> Claude </tag>
+            <tag> ai </tag>
             
-            <tag> AI </tag>
+            <tag> productivity </tag>
             
-            <tag> 코딩에이전트 </tag>
+            <tag> claude </tag>
             
-            <tag> 생산성 </tag>
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1394,13 +1264,13 @@
       
         <tags>
             
-            <tag> AI </tag>
+            <tag> git </tag>
             
-            <tag> 생산성 </tag>
+            <tag> ai </tag>
             
-            <tag> 코드리뷰 </tag>
+            <tag> productivity </tag>
             
-            <tag> PR </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -1448,10 +1318,6 @@
             
             <tag> productivity </tag>
             
-            <tag> openclaw </tag>
-            
-            <tag> self-hosted </tag>
-            
         </tags>
       
     </entry>
@@ -1475,13 +1341,7 @@
       
         <tags>
             
-            <tag> vibe-coding </tag>
-            
             <tag> ai </tag>
-            
-            <tag> development </tag>
-            
-            <tag> opinion </tag>
             
         </tags>
       
@@ -1506,19 +1366,9 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> lambda </tag>
-            
             <tag> cloud </tag>
             
-            <tag> gcp </tag>
-            
             <tag> serverless </tag>
-            
-            <tag> faas </tag>
-            
-            <tag> serviceful_serverless </tag>
             
         </tags>
       
@@ -1543,19 +1393,7 @@
       
         <tags>
             
-            <tag> github </tag>
-            
-            <tag> open_source </tag>
-            
-            <tag> issue </tag>
-            
-            <tag> pull_request </tag>
-            
-            <tag> fork </tag>
-            
-            <tag> clone </tag>
-            
-            <tag> community </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -1580,19 +1418,7 @@
       
         <tags>
             
-            <tag> backup </tag>
-            
             <tag> kubernetes </tag>
-            
-            <tag> open_source </tag>
-            
-            <tag> cluster </tag>
-            
-            <tag> kube_backup </tag>
-            
-            <tag> object </tag>
-            
-            <tag> yaml </tag>
             
             <tag> git </tag>
             
@@ -1619,17 +1445,13 @@
       
         <tags>
             
-            <tag> container </tag>
+            <tag> linux </tag>
+            
+            <tag> docker </tag>
             
             <tag> kubernetes </tag>
             
-            <tag> gce </tag>
-            
-            <tag> google_cloud_platform </tag>
-            
-            <tag> centos </tag>
-            
-            <tag> vm </tag>
+            <tag> cloud </tag>
             
         </tags>
       
@@ -1654,27 +1476,19 @@
       
         <tags>
             
-            <tag> github </tag>
+            <tag> hexo </tag>
             
-            <tag> deploy </tag>
-            
-            <tag> container </tag>
+            <tag> java </tag>
             
             <tag> docker </tag>
             
             <tag> kubernetes </tag>
             
-            <tag> gcp </tag>
-            
-            <tag> spring-boot </tag>
-            
-            <tag> gke </tag>
-            
-            <tag> gitlab </tag>
+            <tag> cloud </tag>
             
             <tag> ci-cd </tag>
             
-            <tag> build </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -1699,11 +1513,7 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> 2018 </tag>
-            
-            <tag> re-invent </tag>
+            <tag> cloud </tag>
             
         </tags>
       
@@ -1728,17 +1538,9 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> basics </tag>
-            
-            <tag> container </tag>
-            
             <tag> docker </tag>
             
             <tag> cloud </tag>
-            
-            <tag> gcp </tag>
             
         </tags>
       
@@ -1760,18 +1562,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> font </tag>
-            
-            <tag> programming_font </tag>
-            
-            <tag> consolas </tag>
-            
-            <tag> monospaced </tag>
-            
-        </tags>
       
     </entry>
     
@@ -1796,23 +1586,11 @@
             
             <tag> linux </tag>
             
-            <tag> basics </tag>
-            
             <tag> docker </tag>
             
             <tag> kubernetes </tag>
             
             <tag> cloud </tag>
-            
-            <tag> infrastructure </tag>
-            
-            <tag> server </tag>
-            
-            <tag> network </tag>
-            
-            <tag> middleware </tag>
-            
-            <tag> virtualization </tag>
             
         </tags>
       
@@ -1837,11 +1615,7 @@
       
         <tags>
             
-            <tag> spring </tag>
-            
-            <tag> release </tag>
-            
-            <tag> spring_boot </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -1866,19 +1640,11 @@
       
         <tags>
             
-            <tag> google </tag>
-            
-            <tag> aws </tag>
+            <tag> seo </tag>
             
             <tag> kubernetes </tag>
             
             <tag> cloud </tag>
-            
-            <tag> gcp </tag>
-            
-            <tag> google_cloud_summit </tag>
-            
-            <tag> seoul </tag>
             
         </tags>
       
@@ -1905,9 +1671,7 @@
             
             <tag> microservices </tag>
             
-            <tag> monolith </tag>
-            
-            <tag> refactoring </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -1934,14 +1698,6 @@
             
             <tag> microservices </tag>
             
-            <tag> event_driven </tag>
-            
-            <tag> event_sourcing </tag>
-            
-            <tag> cqrs </tag>
-            
-            <tag> data_management </tag>
-            
         </tags>
       
     </entry>
@@ -1965,19 +1721,15 @@
       
         <tags>
             
-            <tag> deployment </tag>
-            
             <tag> microservices </tag>
-            
-            <tag> strategy </tag>
-            
-            <tag> virtual_machine </tag>
-            
-            <tag> container </tag>
             
             <tag> docker </tag>
             
             <tag> kubernetes </tag>
+            
+            <tag> cloud </tag>
+            
+            <tag> ci-cd </tag>
             
         </tags>
       
@@ -2002,15 +1754,9 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> msa </tag>
-            
             <tag> microservices </tag>
             
-            <tag> service_discovery </tag>
-            
-            <tag> netflix </tag>
+            <tag> cloud </tag>
             
         </tags>
       
@@ -2035,15 +1781,7 @@
       
         <tags>
             
-            <tag> reduce </tag>
-            
-            <tag> functional_programming </tag>
-            
-            <tag> filter </tag>
-            
-            <tag> map </tag>
-            
-            <tag> fold </tag>
+            <tag> functional-programming </tag>
             
         </tags>
       
@@ -2070,11 +1808,7 @@
             
             <tag> java </tag>
             
-            <tag> functional_programming </tag>
-            
-            <tag> why </tag>
-            
-            <tag> scala </tag>
+            <tag> functional-programming </tag>
             
         </tags>
       
@@ -2099,15 +1833,7 @@
       
         <tags>
             
-            <tag> msa </tag>
-            
             <tag> microservices </tag>
-            
-            <tag> ipc </tag>
-            
-            <tag> inter_process_communication </tag>
-            
-            <tag> message </tag>
             
         </tags>
       
@@ -2132,11 +1858,7 @@
       
         <tags>
             
-            <tag> release </tag>
-            
-            <tag> java_11 </tag>
-            
-            <tag> lts </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -2161,15 +1883,7 @@
       
         <tags>
             
-            <tag> msa </tag>
-            
             <tag> microservices </tag>
-            
-            <tag> architecture </tag>
-            
-            <tag> api_gateway </tag>
-            
-            <tag> api </tag>
             
         </tags>
       
@@ -2194,15 +1908,7 @@
       
         <tags>
             
-            <tag> msa </tag>
-            
             <tag> microservices </tag>
-            
-            <tag> architecture </tag>
-            
-            <tag> monolith </tag>
-            
-            <tag> introduction </tag>
             
         </tags>
       
@@ -2224,26 +1930,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> version </tag>
-            
-            <tag> versioning </tag>
-            
-            <tag> semver </tag>
-            
-            <tag> major </tag>
-            
-            <tag> minor </tag>
-            
-            <tag> patch </tag>
-            
-            <tag> snapshot </tag>
-            
-            <tag> release </tag>
-            
-        </tags>
       
     </entry>
     
@@ -2267,16 +1953,6 @@
         <tags>
             
             <tag> java </tag>
-            
-            <tag> streams </tag>
-            
-            <tag> advanced </tag>
-            
-            <tag> lazy_invocation </tag>
-            
-            <tag> null_safe </tag>
-            
-            <tag> simplified </tag>
             
         </tags>
       
@@ -2303,15 +1979,7 @@
             
             <tag> java </tag>
             
-            <tag> basics </tag>
-            
-            <tag> streams </tag>
-            
-            <tag> collect </tag>
-            
-            <tag> reduce </tag>
-            
-            <tag> parallel </tag>
+            <tag> functional-programming </tag>
             
         </tags>
       
@@ -2336,13 +2004,7 @@
       
         <tags>
             
-            <tag> basic </tag>
-            
-            <tag> spark </tag>
-            
-            <tag> hadoop </tag>
-            
-            <tag> apache </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -2369,8 +2031,6 @@
             
             <tag> java </tag>
             
-            <tag> optional </tag>
-            
         </tags>
       
     </entry>
@@ -2395,10 +2055,6 @@
         <tags>
             
             <tag> java </tag>
-            
-            <tag> generics </tag>
-            
-            <tag> deep_dive </tag>
             
         </tags>
       
@@ -2425,10 +2081,6 @@
             
             <tag> java </tag>
             
-            <tag> lambda </tag>
-            
-            <tag> closure </tag>
-            
         </tags>
       
     </entry>
@@ -2454,10 +2106,6 @@
             
             <tag> java </tag>
             
-            <tag> lambda </tag>
-            
-            <tag> exception </tag>
-            
         </tags>
       
     </entry>
@@ -2478,16 +2126,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> programming_languages </tag>
-            
-            <tag> highest_salaries </tag>
-            
-            <tag> 2018 </tag>
-            
-        </tags>
       
     </entry>
     
@@ -2511,10 +2149,6 @@
         <tags>
             
             <tag> java </tag>
-            
-            <tag> lambda </tag>
-            
-            <tag> variable_scope </tag>
             
         </tags>
       
@@ -2541,11 +2175,7 @@
             
             <tag> java </tag>
             
-            <tag> jdk </tag>
-            
-            <tag> lambda </tag>
-            
-            <tag> functional_interface </tag>
+            <tag> functional-programming </tag>
             
         </tags>
       
@@ -2572,10 +2202,6 @@
             
             <tag> java </tag>
             
-            <tag> lambda </tag>
-            
-            <tag> method_references </tag>
-            
         </tags>
       
     </entry>
@@ -2599,9 +2225,7 @@
       
         <tags>
             
-            <tag> mysql </tag>
-            
-            <tag> installation </tag>
+            <tag> database </tag>
             
         </tags>
       
@@ -2628,11 +2252,7 @@
             
             <tag> java </tag>
             
-            <tag> lambda </tag>
-            
-            <tag> type_inference </tag>
-            
-            <tag> functional_interface </tag>
+            <tag> functional-programming </tag>
             
         </tags>
       
@@ -2659,11 +2279,7 @@
             
             <tag> markdown </tag>
             
-            <tag> editor </tag>
-            
-            <tag> windows </tag>
-            
-            <tag> macos </tag>
+            <tag> terminal </tag>
             
         </tags>
       
@@ -2690,10 +2306,6 @@
             
             <tag> java </tag>
             
-            <tag> lambda </tag>
-            
-            <tag> basics </tag>
-            
         </tags>
       
     </entry>
@@ -2717,15 +2329,9 @@
       
         <tags>
             
-            <tag> aws </tag>
+            <tag> cloud </tag>
             
-            <tag> certified </tag>
-            
-            <tag> developer </tag>
-            
-            <tag> sample </tag>
-            
-            <tag> exam </tag>
+            <tag> career </tag>
             
         </tags>
       
@@ -2752,11 +2358,7 @@
             
             <tag> hexo </tag>
             
-            <tag> deployment </tag>
-            
-            <tag> backup </tag>
-            
-            <tag> hosting </tag>
+            <tag> ci-cd </tag>
             
         </tags>
       
@@ -2781,13 +2383,7 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> certified </tag>
-            
-            <tag> architect </tag>
-            
-            <tag> framework </tag>
+            <tag> cloud </tag>
             
         </tags>
       
@@ -2812,15 +2408,9 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> certified </tag>
-            
             <tag> security </tag>
             
-            <tag> best </tag>
-            
-            <tag> practies </tag>
+            <tag> cloud </tag>
             
         </tags>
       
@@ -2847,11 +2437,9 @@
             
             <tag> hexo </tag>
             
-            <tag> github </tag>
+            <tag> security </tag>
             
-            <tag> https </tag>
-            
-            <tag> pages </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -2876,13 +2464,9 @@
       
         <tags>
             
-            <tag> web </tag>
+            <tag> seo </tag>
             
-            <tag> https </tag>
-            
-            <tag> ssl </tag>
-            
-            <tag> tls </tag>
+            <tag> security </tag>
             
         </tags>
       
@@ -2909,10 +2493,6 @@
             
             <tag> hexo </tag>
             
-            <tag> font </tag>
-            
-            <tag> webfont </tag>
-            
         </tags>
       
     </entry>
@@ -2933,16 +2513,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> bmc </tag>
-            
-            <tag> buymeacoffee </tag>
-            
-            <tag> support </tag>
-            
-        </tags>
       
     </entry>
     
@@ -2965,9 +2535,7 @@
       
         <tags>
             
-            <tag> aws </tag>
-            
-            <tag> certified </tag>
+            <tag> cloud </tag>
             
         </tags>
       
@@ -2994,10 +2562,6 @@
             
             <tag> hexo </tag>
             
-            <tag> plugin </tag>
-            
-            <tag> uml </tag>
-            
         </tags>
       
     </entry>
@@ -3023,10 +2587,6 @@
             
             <tag> hexo </tag>
             
-            <tag> plugin </tag>
-            
-            <tag> twitter </tag>
-            
         </tags>
       
     </entry>
@@ -3050,11 +2610,7 @@
       
         <tags>
             
-            <tag> plugin </tag>
-            
-            <tag> wordcount </tag>
-            
-            <tag> readingtime </tag>
+            <tag> hexo </tag>
             
         </tags>
       
@@ -3080,10 +2636,6 @@
         <tags>
             
             <tag> terminal </tag>
-            
-            <tag> record </tag>
-            
-            <tag> asciinema </tag>
             
         </tags>
       
@@ -3111,8 +2663,6 @@
             <tag> markdown </tag>
             
             <tag> hexo </tag>
-            
-            <tag> plugin </tag>
             
         </tags>
       
@@ -3162,11 +2712,7 @@
       
         <tags>
             
-            <tag> eye </tag>
-            
-            <tag> health </tag>
-            
-            <tag> program </tag>
+            <tag> productivity </tag>
             
         </tags>
       
@@ -3193,10 +2739,6 @@
             
             <tag> hexo </tag>
             
-            <tag> hueman </tag>
-            
-            <tag> font </tag>
-            
         </tags>
       
     </entry>
@@ -3217,14 +2759,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> emoji </tag>
-            
-            <tag> favicon </tag>
-            
-        </tags>
       
     </entry>
     
@@ -3247,9 +2781,7 @@
       
         <tags>
             
-            <tag> clean </tag>
-            
-            <tag> code </tag>
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -3274,11 +2806,7 @@
       
         <tags>
             
-            <tag> writing </tag>
-            
-            <tag> medium </tag>
-            
-            <tag> brunch </tag>
+            <tag> productivity </tag>
             
         </tags>
       
@@ -3303,11 +2831,7 @@
       
         <tags>
             
-            <tag> time </tag>
-            
-            <tag> 1970 </tag>
-            
-            <tag> unix </tag>
+            <tag> terminal </tag>
             
         </tags>
       
@@ -3332,9 +2856,7 @@
       
         <tags>
             
-            <tag> macos </tag>
-            
-            <tag> npki </tag>
+            <tag> terminal </tag>
             
         </tags>
       
@@ -3357,14 +2879,6 @@
       </categories>
       
       
-        <tags>
-            
-            <tag> foo </tag>
-            
-            <tag> bar </tag>
-            
-        </tags>
-      
     </entry>
     
     
@@ -3386,11 +2900,7 @@
       
         <tags>
             
-            <tag> pomodoro </tag>
-            
-            <tag> timer </tag>
-            
-            <tag> ios </tag>
+            <tag> productivity </tag>
             
         </tags>
       
@@ -3415,11 +2925,9 @@
       
         <tags>
             
+            <tag> java </tag>
+            
             <tag> linux </tag>
-            
-            <tag> centos7 </tag>
-            
-            <tag> jdk </tag>
             
         </tags>
       
@@ -3444,11 +2952,7 @@
       
         <tags>
             
-            <tag> design </tag>
-            
-            <tag> pattern </tag>
-            
-            <tag> observer </tag>
+            <tag> design-pattern </tag>
             
         </tags>
       
@@ -3473,9 +2977,7 @@
       
         <tags>
             
-            <tag> stringjoiner </tag>
-            
-            <tag> delimiter </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -3500,15 +3002,7 @@
       
         <tags>
             
-            <tag> string </tag>
-            
-            <tag> concat </tag>
-            
-            <tag> stringbuilder </tag>
-            
-            <tag> stringbuffer </tag>
-            
-            <tag> plusoperator </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -3533,19 +3027,7 @@
       
         <tags>
             
-            <tag> mac </tag>
-            
-            <tag> osx </tag>
-            
-            <tag> macos </tag>
-            
             <tag> terminal </tag>
-            
-            <tag> iterm2 </tag>
-            
-            <tag> zsh </tag>
-            
-            <tag> ohmyzsh </tag>
             
         </tags>
       
@@ -3570,17 +3052,7 @@
       
         <tags>
             
-            <tag> vertx </tag>
-            
-            <tag> verticle </tag>
-            
-            <tag> thread </tag>
-            
-            <tag> blocking </tag>
-            
-            <tag> nonblocking </tag>
-            
-            <tag> worker </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -3607,13 +3079,7 @@
             
             <tag> java </tag>
             
-            <tag> vertx </tag>
-            
-            <tag> verticle </tag>
-            
-            <tag> deploy </tag>
-            
-            <tag> multiple </tag>
+            <tag> ci-cd </tag>
             
         </tags>
       
@@ -3635,28 +3101,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> javascript </tag>
-            
-            <tag> nodejs </tag>
-            
-            <tag> npm </tag>
-            
-            <tag> n </tag>
-            
-            <tag> update </tag>
-            
-            <tag> upgrade </tag>
-            
-            <tag> latest </tag>
-            
-            <tag> stable </tag>
-            
-            <tag> version </tag>
-            
-        </tags>
       
     </entry>
     
@@ -3681,11 +3125,7 @@
             
             <tag> algorithm </tag>
             
-            <tag> Big-O </tag>
-            
             <tag> java </tag>
-            
-            <tag> programming </tag>
             
         </tags>
       
@@ -3712,10 +3152,6 @@
             
             <tag> java </tag>
             
-            <tag> variable </tag>
-            
-            <tag> datatype </tag>
-            
         </tags>
       
     </entry>
@@ -3740,8 +3176,6 @@
         <tags>
             
             <tag> hexo </tag>
-            
-            <tag> error </tag>
             
         </tags>
       
@@ -3768,8 +3202,6 @@
             
             <tag> hexo </tag>
             
-            <tag> error </tag>
-            
         </tags>
       
     </entry>
@@ -3793,13 +3225,11 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> markdown </tag>
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -3824,13 +3254,9 @@
       
         <tags>
             
-            <tag> mac </tag>
+            <tag> terminal </tag>
             
-            <tag> writing </tag>
-            
-            <tag> iOS </tag>
-            
-            <tag> osx </tag>
+            <tag> productivity </tag>
             
         </tags>
       
@@ -3855,9 +3281,7 @@
       
         <tags>
             
-            <tag> google </tag>
-            
-            <tag> search </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -3879,14 +3303,6 @@
           
       </categories>
       
-      
-        <tags>
-            
-            <tag> swift </tag>
-            
-            <tag> start </tag>
-            
-        </tags>
       
     </entry>
     
@@ -3910,10 +3326,6 @@
         <tags>
             
             <tag> hexo </tag>
-            
-            <tag> .DS_Store </tag>
-            
-            <tag> error </tag>
             
         </tags>
       
@@ -3942,8 +3354,6 @@
             
             <tag> seo </tag>
             
-            <tag> plugins </tag>
-            
         </tags>
       
     </entry>
@@ -3969,11 +3379,7 @@
             
             <tag> hexo </tag>
             
-            <tag> github </tag>
-            
-            <tag> plugins </tag>
-            
-            <tag> repository </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -4000,9 +3406,7 @@
             
             <tag> hexo </tag>
             
-            <tag> github </tag>
-            
-            <tag> namecard </tag>
+            <tag> git </tag>
             
         </tags>
       
@@ -4029,10 +3433,6 @@
             
             <tag> hexo </tag>
             
-            <tag> basic </tag>
-            
-            <tag> usage </tag>
-            
         </tags>
       
     </entry>
@@ -4056,17 +3456,9 @@
       
         <tags>
             
-            <tag> mysql </tag>
+            <tag> terminal </tag>
             
-            <tag> mariadb </tag>
-            
-            <tag> install </tag>
-            
-            <tag> settings </tag>
-            
-            <tag> mac </tag>
-            
-            <tag> windows </tag>
+            <tag> database </tag>
             
         </tags>
       
@@ -4093,10 +3485,6 @@
             
             <tag> hexo </tag>
             
-            <tag> plugin </tag>
-            
-            <tag> tag </tag>
-            
         </tags>
       
     </entry>
@@ -4122,11 +3510,7 @@
             
             <tag> markdown </tag>
             
-            <tag> blog </tag>
-            
-            <tag> evernote </tag>
-            
-            <tag> postach </tag>
+            <tag> hexo </tag>
             
         </tags>
       
@@ -4151,11 +3535,7 @@
       
         <tags>
             
-            <tag> spring </tag>
-            
-            <tag> springboot </tag>
-            
-            <tag> velocity </tag>
+            <tag> java </tag>
             
         </tags>
       
@@ -4180,13 +3560,7 @@
       
         <tags>
             
-            <tag> google </tag>
-            
-            <tag> search </tag>
-            
-            <tag> googlebot </tag>
-            
-            <tag> pagerank </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -4213,9 +3587,7 @@
             
             <tag> hexo </tag>
             
-            <tag> google </tag>
-            
-            <tag> adsense </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -4240,11 +3612,7 @@
       
         <tags>
             
-            <tag> opengraph </tag>
-            
-            <tag> social </tag>
-            
-            <tag> metatag </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -4271,12 +3639,6 @@
             
             <tag> hexo </tag>
             
-            <tag> search </tag>
-            
-            <tag> naver </tag>
-            
-            <tag> webmaster </tag>
-            
             <tag> seo </tag>
             
         </tags>
@@ -4302,15 +3664,9 @@
       
         <tags>
             
-            <tag> web </tag>
+            <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
-            <tag> google </tag>
-            
-            <tag> search </tag>
-            
-            <tag> analytics </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -4335,13 +3691,9 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> markdown </tag>
             
-            <tag> atom </tag>
-            
-            <tag> editor </tag>
+            <tag> seo </tag>
             
         </tags>
       
@@ -4368,12 +3720,6 @@
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
-            
-            <tag> theme </tag>
-            
-            <tag> plugin </tag>
-            
         </tags>
       
     </entry>
@@ -4397,13 +3743,11 @@
       
         <tags>
             
-            <tag> web </tag>
-            
             <tag> markdown </tag>
             
             <tag> hexo </tag>
             
-            <tag> blog </tag>
+            <tag> seo </tag>
             
         </tags>
       
