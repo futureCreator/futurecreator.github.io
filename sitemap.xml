@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.github.io/posts/488757781/</loc>
+    
+    <lastmod>2026-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.github.io/posts/3780406559/</loc>
     
     <lastmod>2026-03-06</lastmod>
@@ -23,15 +32,6 @@
     <loc>https://futurecreator.github.io/posts/295180914/</loc>
     
     <lastmod>2026-03-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://futurecreator.github.io/posts/2860519508/</loc>
-    
-    <lastmod>2026-03-05</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
