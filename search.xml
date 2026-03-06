@@ -53,13 +53,13 @@
             
             <tag> ai </tag>
             
-            <tag> automation </tag>
-            
             <tag> cli </tag>
             
-            <tag> developer-experience </tag>
-            
             <tag> software-design </tag>
+            
+            <tag> automation </tag>
+            
+            <tag> developer-experience </tag>
             
         </tags>
       
@@ -88,9 +88,9 @@
             
             <tag> agent </tag>
             
-            <tag> saas </tag>
-            
             <tag> automation </tag>
+            
+            <tag> saas </tag>
             
         </tags>
       
@@ -562,11 +562,11 @@
       
         <tags>
             
+            <tag> MCP </tag>
+            
             <tag> AI </tag>
             
             <tag> Agent </tag>
-            
-            <tag> MCP </tag>
             
             <tag> CLI </tag>
             
@@ -1222,9 +1222,9 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
             <tag> Claude Code </tag>
+            
+            <tag> AI </tag>
             
             <tag> LLM </tag>
             
@@ -1332,9 +1332,9 @@
       
         <tags>
             
-            <tag> AI </tag>
-            
             <tag> Claude </tag>
+            
+            <tag> AI </tag>
             
             <tag> 코딩에이전트 </tag>
             
