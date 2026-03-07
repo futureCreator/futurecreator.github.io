@@ -3,6 +3,7 @@
         var light = document.getElementById('theme-light');
         var dark = document.getElementById('theme-dark');
         if (!light || !dark) return;
+        document.documentElement.classList.add('theme-transitioning');
         if (theme === 'dark') {
             light.disabled = true;
             dark.disabled = false;
@@ -12,6 +13,9 @@
         }
         localStorage.setItem('theme', theme);
         updateToggleIcon(theme);
+        setTimeout(function () {
+            document.documentElement.classList.remove('theme-transitioning');
+        }, 300);
     }
 
     function updateToggleIcon(theme) {
