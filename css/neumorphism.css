@@ -10995,6 +10995,16 @@ a.article-nav-next span {
     margin-right: 0rem;
   }
 }
+#reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #6c63ff;
+  z-index: 9999;
+  transition: width 0.08s ease-out;
+}
 @media screen and (max-width: 768px) {
   footer.footer .level-start {
     text-align: center;

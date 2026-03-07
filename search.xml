@@ -412,9 +412,9 @@
             
             <tag> ai </tag>
             
-            <tag> career </tag>
-            
             <tag> ai-agent </tag>
+            
+            <tag> career </tag>
             
         </tags>
       
@@ -692,9 +692,9 @@
             
             <tag> ai </tag>
             
-            <tag> career </tag>
-            
             <tag> ai-agent </tag>
+            
+            <tag> career </tag>
             
         </tags>
       
@@ -811,9 +811,9 @@
             
             <tag> ai </tag>
             
-            <tag> ai-agent </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1056,9 +1056,9 @@
       
         <tags>
             
-            <tag> ai-agent </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai-agent </tag>
             
             <tag> productivity </tag>
             
@@ -1328,9 +1328,9 @@
             
             <tag> ai </tag>
             
-            <tag> ai-agent </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai-agent </tag>
             
             <tag> productivity </tag>
             
@@ -1538,9 +1538,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> cloud </tag>
+            
+            <tag> linux </tag>
             
             <tag> docker </tag>
             
@@ -1569,6 +1569,8 @@
       
         <tags>
             
+            <tag> cloud </tag>
+            
             <tag> git </tag>
             
             <tag> hexo </tag>
@@ -1576,8 +1578,6 @@
             <tag> java </tag>
             
             <tag> ci-cd </tag>
-            
-            <tag> cloud </tag>
             
             <tag> docker </tag>
             
@@ -1677,9 +1677,9 @@
       
         <tags>
             
-            <tag> linux </tag>
-            
             <tag> cloud </tag>
+            
+            <tag> linux </tag>
             
             <tag> docker </tag>
             
@@ -1733,9 +1733,9 @@
       
         <tags>
             
-            <tag> seo </tag>
-            
             <tag> cloud </tag>
+            
+            <tag> seo </tag>
             
             <tag> kubernetes </tag>
             
@@ -1814,9 +1814,9 @@
       
         <tags>
             
-            <tag> ci-cd </tag>
-            
             <tag> cloud </tag>
+            
+            <tag> ci-cd </tag>
             
             <tag> microservices </tag>
             
@@ -2753,9 +2753,9 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> markdown </tag>
             
         </tags>
       
@@ -3318,11 +3318,11 @@
       
         <tags>
             
+            <tag> hexo </tag>
+            
             <tag> seo </tag>
             
             <tag> markdown </tag>
-            
-            <tag> hexo </tag>
             
         </tags>
       
@@ -3443,9 +3443,9 @@
       
         <tags>
             
-            <tag> seo </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       
@@ -3601,9 +3601,9 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> markdown </tag>
             
         </tags>
       
@@ -3678,9 +3678,9 @@
       
         <tags>
             
-            <tag> seo </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       
@@ -3730,9 +3730,9 @@
       
         <tags>
             
-            <tag> seo </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       
@@ -3757,9 +3757,9 @@
       
         <tags>
             
-            <tag> seo </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> seo </tag>
             
         </tags>
       
@@ -3836,11 +3836,11 @@
       
         <tags>
             
+            <tag> hexo </tag>
+            
             <tag> seo </tag>
             
             <tag> markdown </tag>
-            
-            <tag> hexo </tag>
             
         </tags>
       
