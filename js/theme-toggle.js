@@ -27,7 +27,10 @@
     }
 
     function init() {
-        var savedTheme = localStorage.getItem('theme') || 'light';
+        var savedTheme = localStorage.getItem('theme');
+        if (!savedTheme) {
+            savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
         applyTheme(savedTheme);
 
         var btn = document.getElementById('theme-toggle-btn');
