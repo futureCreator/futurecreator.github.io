@@ -635,9 +635,9 @@
             
             <tag> ai </tag>
             
-            <tag> career </tag>
-            
             <tag> ai-agent </tag>
+            
+            <tag> career </tag>
             
         </tags>
       
@@ -830,9 +830,9 @@
             
             <tag> productivity </tag>
             
-            <tag> git </tag>
-            
             <tag> ai-agent </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -915,9 +915,9 @@
             
             <tag> ai </tag>
             
-            <tag> career </tag>
-            
             <tag> ai-agent </tag>
+            
+            <tag> career </tag>
             
         </tags>
       
@@ -1792,9 +1792,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> ci-cd </tag>
+            
+            <tag> git </tag>
             
             <tag> hexo </tag>
             
