@@ -389,7 +389,7 @@ th:not([align]) {
 }
 html {
   background-color: #f7f7f7;
-  font-size: 14px;
+  font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -412,7 +412,7 @@ button,
 input,
 select,
 textarea {
-  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif;
+  font-family: 'Noto Sans KR', Ubuntu, Roboto, 'Open Sans', sans-serif;
 }
 code,
 pre {
@@ -1064,13 +1064,13 @@ a.has-text-grey-lightest:focus {
   font-weight: 700 !important;
 }
 .is-family-primary {
-  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Noto Sans KR', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .is-family-secondary {
-  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Noto Sans KR', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .is-family-sans-serif {
-  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Noto Sans KR', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .is-family-monospace {
   font-family: monospace !important;
@@ -10262,6 +10262,10 @@ body {
 body > .section {
   flex-grow: 1;
 }
+html.theme-transitioning,
+html.theme-transitioning * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
 @media screen and (min-width: 1088px) {
   ::-webkit-scrollbar {
     width: 8px;
@@ -10815,18 +10819,25 @@ article.article .article-meta {
 article.article .content {
   word-wrap: break-word;
   font-size: 1.1rem;
+  line-height: 1.78;
+}
+article.article .content p {
+  margin-bottom: 1.4em;
 }
 article.article .content h1 {
   font-size: 1.75em;
 }
 article.article .content h2 {
   font-size: 1.5em;
+  margin-top: 2em;
 }
 article.article .content h3 {
   font-size: 1.25em;
+  margin-top: 2em;
 }
 article.article .content h4 {
   font-size: 1.125em;
+  margin-top: 2em;
 }
 article.article .content h5 {
   font-size: 1em;
@@ -11611,7 +11622,7 @@ figure.highlight.foldable div.level-left {
 .cc-window,
 .cc-revoke {
   font-size: 1.1rem !important;
-  font-family: Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif !important;
+  font-family: 'Noto Sans KR', Ubuntu, Roboto, 'Open Sans', sans-serif !important;
 }
 .cc-window {
   color: #4a4a4a !important;
