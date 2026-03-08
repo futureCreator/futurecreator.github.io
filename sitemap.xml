@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.cloud/posts/3401511712/</loc>
+    
+    <lastmod>2026-03-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.cloud/posts/3647550889/</loc>
     
     <lastmod>2026-03-08</lastmod>
@@ -1704,6 +1713,20 @@
   
   <url>
     <loc>https://futurecreator.cloud/tags/vibecoding/</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/sqlite/</loc>
+    <lastmod>2026-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/rust/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
