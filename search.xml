@@ -53,11 +53,11 @@
             
             <tag> ai </tag>
             
-            <tag> learning </tag>
-            
             <tag> notebooklm </tag>
             
             <tag> education </tag>
+            
+            <tag> learning </tag>
             
             <tag> prompts </tag>
             
@@ -152,9 +152,9 @@
             
             <tag> ai </tag>
             
-            <tag> agentic-engineering </tag>
-            
             <tag> code-review </tag>
+            
+            <tag> agentic-engineering </tag>
             
             <tag> software-quality </tag>
             
@@ -280,9 +280,9 @@
             
             <tag> coding </tag>
             
-            <tag> software-development </tag>
-            
             <tag> learning </tag>
+            
+            <tag> software-development </tag>
             
             <tag> vibecoding </tag>
             
@@ -1313,9 +1313,9 @@
             
             <tag> ci-cd </tag>
             
-            <tag> claude </tag>
-            
             <tag> agentic-engineering </tag>
+            
+            <tag> claude </tag>
             
         </tags>
       
