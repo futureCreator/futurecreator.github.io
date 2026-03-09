@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.cloud/posts/2845114156/</loc>
+    
+    <lastmod>2026-03-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.cloud/posts/1836869449/</loc>
     
     <lastmod>2026-03-09</lastmod>
@@ -1909,6 +1918,27 @@
   
   <url>
     <loc>https://futurecreator.cloud/tags/ai-safety/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/opensource/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/autoresearch/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/karpathy/</loc>
     <lastmod>2026-03-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
