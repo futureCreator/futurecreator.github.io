@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> coding </tag>
             
@@ -51,9 +51,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> llm </tag>
             
@@ -115,9 +115,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> coding </tag>
             
@@ -146,13 +146,13 @@
       
         <tags>
             
-            <tag> ai-agent </tag>
+            <tag> terminal </tag>
             
-            <tag> programming </tag>
+            <tag> ai-agent </tag>
             
             <tag> software </tag>
             
-            <tag> terminal </tag>
+            <tag> programming </tag>
             
         </tags>
       
@@ -177,11 +177,11 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> workflow </tag>
             
@@ -241,15 +241,15 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
-            <tag> software </tag>
+            <tag> ai </tag>
             
             <tag> engineering </tag>
             
             <tag> refactoring </tag>
+            
+            <tag> software </tag>
             
         </tags>
       
@@ -276,13 +276,13 @@
             
             <tag> ai </tag>
             
-            <tag> education </tag>
-            
-            <tag> learning </tag>
-            
             <tag> experience </tag>
             
+            <tag> education </tag>
+            
             <tag> knowledge </tag>
+            
+            <tag> learning </tag>
             
         </tags>
       
@@ -309,11 +309,11 @@
             
             <tag> ai </tag>
             
-            <tag> software-development </tag>
-            
             <tag> coding-agent </tag>
             
             <tag> llms </tag>
+            
+            <tag> software-development </tag>
             
         </tags>
       
@@ -371,13 +371,13 @@
       
         <tags>
             
-            <tag> ai-agent </tag>
-            
-            <tag> software-quality </tag>
-            
             <tag> claude </tag>
             
+            <tag> ai-agent </tag>
+            
             <tag> codereview </tag>
+            
+            <tag> software-quality </tag>
             
             <tag> sdlc </tag>
             
@@ -470,11 +470,11 @@
             
             <tag> ai </tag>
             
-            <tag> notebooklm </tag>
-            
             <tag> education </tag>
             
             <tag> learning </tag>
+            
+            <tag> notebooklm </tag>
             
             <tag> prompts </tag>
             
@@ -569,11 +569,11 @@
             
             <tag> ai </tag>
             
-            <tag> code-review </tag>
-            
             <tag> agentic-engineering </tag>
             
             <tag> software-quality </tag>
+            
+            <tag> code-review </tag>
             
         </tags>
       
@@ -598,11 +598,11 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> coding </tag>
             
@@ -662,9 +662,9 @@
       
         <tags>
             
-            <tag> programming </tag>
-            
             <tag> engineering </tag>
+            
+            <tag> programming </tag>
             
             <tag> llm </tag>
             
@@ -695,11 +695,11 @@
       
         <tags>
             
+            <tag> software-development </tag>
+            
             <tag> coding </tag>
             
             <tag> learning </tag>
-            
-            <tag> software-development </tag>
             
             <tag> vibecoding </tag>
             
@@ -790,9 +790,9 @@
             
             <tag> ai </tag>
             
-            <tag> software </tag>
-            
             <tag> engineering </tag>
+            
+            <tag> software </tag>
             
             <tag> agents </tag>
             
@@ -821,13 +821,13 @@
       
         <tags>
             
+            <tag> claude </tag>
+            
             <tag> ai </tag>
             
             <tag> cloud </tag>
             
             <tag> programming </tag>
-            
-            <tag> claude </tag>
             
         </tags>
       
@@ -941,9 +941,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> clean-code </tag>
             
@@ -972,15 +972,15 @@
       
         <tags>
             
-            <tag> ai </tag>
+            <tag> terminal </tag>
             
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> clean-code </tag>
             
             <tag> career </tag>
-            
-            <tag> terminal </tag>
             
         </tags>
       
@@ -1005,9 +1005,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> ai-agent </tag>
             
@@ -1034,9 +1034,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -1182,11 +1182,11 @@
       
         <tags>
             
+            <tag> git </tag>
+            
             <tag> clean-code </tag>
             
             <tag> career </tag>
-            
-            <tag> git </tag>
             
         </tags>
       
@@ -1404,13 +1404,13 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
-            <tag> ai-agent </tag>
-            
             <tag> git </tag>
+            
+            <tag> ai </tag>
+            
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1435,11 +1435,11 @@
       
         <tags>
             
+            <tag> terminal </tag>
+            
             <tag> ai </tag>
             
             <tag> ai-agent </tag>
-            
-            <tag> terminal </tag>
             
         </tags>
       
@@ -1464,9 +1464,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -1564,9 +1564,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -1610,11 +1610,11 @@
       
         <tags>
             
+            <tag> claude </tag>
+            
             <tag> ai </tag>
             
             <tag> ai-agent </tag>
-            
-            <tag> claude </tag>
             
         </tags>
       
@@ -1639,9 +1639,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> llm </tag>
             
@@ -1726,13 +1726,13 @@
       
         <tags>
             
+            <tag> claude </tag>
+            
             <tag> ai </tag>
             
             <tag> ci-cd </tag>
             
             <tag> agentic-engineering </tag>
-            
-            <tag> claude </tag>
             
         </tags>
       
@@ -1757,9 +1757,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -1859,9 +1859,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai-agent </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -1913,11 +1913,11 @@
       
         <tags>
             
+            <tag> terminal </tag>
+            
             <tag> ai </tag>
             
             <tag> ai-agent </tag>
-            
-            <tag> terminal </tag>
             
         </tags>
       
@@ -1967,11 +1967,11 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -1996,9 +1996,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -2079,9 +2079,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
             <tag> ai-agent </tag>
             
@@ -2127,13 +2127,13 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
-            <tag> ai-agent </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
+            
+            <tag> ai-agent </tag>
             
         </tags>
       
@@ -2158,13 +2158,13 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
             
-            <tag> clean-code </tag>
-            
             <tag> git </tag>
+            
+            <tag> ai </tag>
+            
+            <tag> clean-code </tag>
             
         </tags>
       
@@ -2208,9 +2208,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -2341,11 +2341,11 @@
             
             <tag> cloud </tag>
             
-            <tag> linux </tag>
-            
             <tag> docker </tag>
             
             <tag> kubernetes </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -2370,15 +2370,15 @@
       
         <tags>
             
-            <tag> ci-cd </tag>
+            <tag> hexo </tag>
             
             <tag> git </tag>
             
-            <tag> hexo </tag>
+            <tag> java </tag>
+            
+            <tag> ci-cd </tag>
             
             <tag> cloud </tag>
-            
-            <tag> java </tag>
             
             <tag> docker </tag>
             
@@ -2480,11 +2480,11 @@
             
             <tag> cloud </tag>
             
-            <tag> linux </tag>
-            
             <tag> docker </tag>
             
             <tag> kubernetes </tag>
+            
+            <tag> linux </tag>
             
         </tags>
       
@@ -3171,9 +3171,9 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
             <tag> terminal </tag>
+            
+            <tag> markdown </tag>
             
         </tags>
       
@@ -3223,9 +3223,9 @@
       
         <tags>
             
-            <tag> career </tag>
-            
             <tag> cloud </tag>
+            
+            <tag> career </tag>
             
         </tags>
       
@@ -3250,9 +3250,9 @@
       
         <tags>
             
-            <tag> ci-cd </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> ci-cd </tag>
             
         </tags>
       
@@ -3329,9 +3329,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> git </tag>
             
             <tag> security </tag>
             
@@ -3971,9 +3971,9 @@
       
         <tags>
             
-            <tag> ci-cd </tag>
-            
             <tag> java </tag>
+            
+            <tag> ci-cd </tag>
             
         </tags>
       
@@ -4148,9 +4148,9 @@
       
         <tags>
             
-            <tag> productivity </tag>
-            
             <tag> terminal </tag>
+            
+            <tag> productivity </tag>
             
         </tags>
       
@@ -4271,9 +4271,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -4298,9 +4298,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
@@ -4350,9 +4350,9 @@
       
         <tags>
             
-            <tag> database </tag>
-            
             <tag> terminal </tag>
+            
+            <tag> database </tag>
             
         </tags>
       

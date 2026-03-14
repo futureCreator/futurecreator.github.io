@@ -11042,7 +11042,9 @@ footer.footer .level-end .field {
 .pagination .pagination-previous a,
 .pagination .pagination-next a {
   color: #3d4852;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -11052,6 +11054,14 @@ footer.footer .level-end .field {
   border: none;
   background: #e0e5ec;
   box-shadow: 9px 9px 16px rgba(163,177,198,0.6), -9px -9px 16px rgba(255,255,255,0.5);
+}
+.pagination .pagination-previous,
+.pagination .pagination-next {
+  padding: 0;
+}
+.pagination .pagination-previous a,
+.pagination .pagination-next a {
+  padding: 0.375em 0.75em;
 }
 .pagination .pagination-link.is-current {
   background: #6c63ff;
