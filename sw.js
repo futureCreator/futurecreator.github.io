@@ -1,4 +1,4 @@
-const CACHE_NAME = 'futurecreator-v1';
+const CACHE_NAME = 'futurecreator-v2';
 const OFFLINE_URL = '/';
 
 const PRECACHE_ASSETS = [
@@ -7,7 +7,7 @@ const PRECACHE_ASSETS = [
     '/css/custom.css',
     '/js/main.js',
     '/js/column.js',
-    '/images/profile.png',
+    '/images/profile-wizard.png',
 ];
 
 self.addEventListener('install', event => {
