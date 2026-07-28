@@ -22,11 +22,11 @@
             
             <tag> ai </tag>
             
-            <tag> rust </tag>
+            <tag> golang </tag>
             
             <tag> vibecoding </tag>
             
-            <tag> golang </tag>
+            <tag> rust </tag>
             
             <tag> typescript </tag>
             
@@ -88,9 +88,9 @@
             
             <tag> ai </tag>
             
-            <tag> anthropic </tag>
-            
             <tag> coding </tag>
+            
+            <tag> anthropic </tag>
             
         </tags>
       
@@ -340,11 +340,11 @@
             
             <tag> ai </tag>
             
+            <tag> coding </tag>
+            
             <tag> software </tag>
             
             <tag> economics </tag>
-            
-            <tag> coding </tag>
             
             <tag> developer </tag>
             
@@ -470,9 +470,9 @@
             
             <tag> automation </tag>
             
-            <tag> workflow </tag>
-            
             <tag> agent </tag>
+            
+            <tag> workflow </tag>
             
         </tags>
       
@@ -561,9 +561,9 @@
             
             <tag> ai </tag>
             
-            <tag> agents </tag>
-            
             <tag> llm </tag>
+            
+            <tag> agents </tag>
             
             <tag> workflows </tag>
             
@@ -916,11 +916,11 @@
             
             <tag> ai </tag>
             
+            <tag> saas </tag>
+            
             <tag> mlp </tag>
             
             <tag> product-strategy </tag>
-            
-            <tag> saas </tag>
             
         </tags>
       
@@ -1139,6 +1139,8 @@
       
         <tags>
             
+            <tag> rust </tag>
+            
             <tag> engineering </tag>
             
             <tag> programming </tag>
@@ -1146,8 +1148,6 @@
             <tag> llm </tag>
             
             <tag> sqlite </tag>
-            
-            <tag> rust </tag>
             
         </tags>
       
@@ -1176,9 +1176,9 @@
             
             <tag> coding </tag>
             
-            <tag> learning </tag>
-            
             <tag> vibecoding </tag>
+            
+            <tag> learning </tag>
             
         </tags>
       
