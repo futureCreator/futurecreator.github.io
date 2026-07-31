@@ -6,7 +6,7 @@
   <link href="https://futurecreator.cloud/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.cloud/"/>
-  <updated>2026-07-28T16:14:05.574Z</updated>
+  <updated>2026-07-31T16:09:35.385Z</updated>
   <id>https://futurecreator.cloud/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI 시대, 사람의 코드 리뷰는 필요할까</title>
+    <link href="https://futurecreator.cloud/posts/533443415/"/>
+    <id>https://futurecreator.cloud/posts/533443415/</id>
+    <published>2026-07-31T16:06:17.413Z</published>
+    <updated>2026-07-31T16:09:35.385Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>엉클 밥으로 알려진 로버트 C. 마틴의 X 글이 코드 리뷰를 둘러싼 논쟁을 다시 불렀다. 그 글에 따르면 에이전트가 작성한 코드를 직접 읽기보다 테스트 커버리지, 의존성 구조, 사이클로매틱 복잡도, 모듈 크기, 뮤테이션 테스트 같은 지표로 품질을 판단해야 한다. 코딩은 AI에 맡기고 사람은 더 높은 수준에서 관리하자는 주장이다.</p><span id="more"></span><p>그 글은 정해진 범위 안에서 AI를 통제하고 품질 지표를 신뢰할 수 있다면, 인간의 코드 확인이 생산성 병목이 된다는 논리다. 효율을 위해 리뷰를 줄이자는 주장과 책임을 위해 리뷰해야 한다는 반론이 맞부딪히는 지점이다.</p><p>내가 보기에는 회사 프로젝트에서는 후자의 부담을 무시하기 어렵다. AI는 자신이 만든 수정으로 장애나 보안 사고가 나도 책임지지 않는다. 개인 프로젝트라면 전적으로 맡길 수 있지만, 회사 코드라면 내가 수정 내용을 확인하고 어떤 위험을 받아들였는지 설명할 수 있어야 한다. 다만 모든 줄을 사람이 읽으면 AI 활용의 병목을 그대로 남긴다.</p><p>확인하지 않은 채 PR만 올리는 것도 문제다. 그 몫을 다른 팀원에게 넘기는 일이고, 팀원들이 AI로 리뷰하면 생성과 검증이 모두 비슷한 자동화 결과에 의존하게 된다. 테스트 통과만으로 운영 환경의 권한 경계, 데이터 상태, 장애 복구까지 보장할 수 없다는 점도 남는다.</p><p>실무에서는 변경 위험도에 따라 검증 수준을 나누는 편이 낫다. 단순 작업은 CI와 자동 리뷰로 끝내되, 결제, 인증, 마이그레이션과 같은 핵심적은 부분에 대해서는 작성자가 핵심 흐름과 실패 경로를 직접 확인해야 한다. 커버리지와 복잡도뿐 아니라 시나리오 테스트와 보안 검사를 함께 걸고, PR에는 AI가 바꾼 이유와 남은 불확실성을 적는다. 리뷰를 없애기보다 사람이 책임질 지점을 좁히는 방향이 현실적이다.</p><hr><p>관련 글</p><ul><li><a href="/posts/2468830261/" title="바이브 코딩을 폄하하는 사람들에게">바이브 코딩을 폄하하는 사람들에게</a></li><li><a href="/posts/4138851194/" title="방치 중이던 iMac에 OpenClaw를 설치했다">방치 중이던 iMac에 OpenClaw를 설치했다</a></li><li><a href="/posts/1836869449/" title="AI가 쓴 코드, 사람이 꼭 이해해야 할까">AI가 쓴 코드, 사람이 꼭 이해해야 할까</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;엉클 밥으로 알려진 로버트 C. 마틴의 X 글이 코드 리뷰를 둘러싼 논쟁을 다시 불렀다. 그 글에 따르면 에이전트가 작성한 코드를 직접 읽기보다 테스트 커버리지, 의존성 구조, 사이클로매틱 복잡도, 모듈 크기, 뮤테이션 테스트 같은 지표로 품질을 판단해야 한다. 코딩은 AI에 맡기고 사람은 더 높은 수준에서 관리하자는 주장이다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="software engineering" scheme="https://futurecreator.cloud/tags/software-engineering/"/>
+    
+    <category term="code review" scheme="https://futurecreator.cloud/tags/code-review/"/>
+    
+    <category term="developer productivity" scheme="https://futurecreator.cloud/tags/developer-productivity/"/>
+    
+  </entry>
   
   <entry>
     <title>내가 Go를 좋아하는 이유</title>
@@ -540,33 +567,6 @@
     <category term="coding" scheme="https://futurecreator.cloud/tags/coding/"/>
     
     <category term="software-engineering" scheme="https://futurecreator.cloud/tags/software-engineering/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>에이전트 시대의 도래와 나만의 커맨드 센터 구축기</title>
-    <link href="https://futurecreator.cloud/posts/884632855/"/>
-    <id>https://futurecreator.cloud/posts/884632855/</id>
-    <published>2026-03-12T04:44:31.677Z</published>
-    <updated>2026-07-28T16:14:05.637Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>프로그래밍이 죽었다는 말은 사실 과장된 표현이다. 오히려 지금은 그 어느 때보다 역동적으로 변화하고 있는 시기다. 이전까지 우리가 파일 하나하나를 수정하며 정성스럽게 코드를 작성하던 방식이 이제는 에이전트에게 지시를 내리고 그 결과를 조율하는 방식으로 진화하고 있다. 이런 변화 속에서 개발자의 환경은 단순한 에디터를 넘어 하나의 커맨드 센터로 탈바꿈해야 할 운명에 처했다. 우리가 다루는 단위가 파일에서 에이전트로 옮겨가고 있다는 사실을 인지하는 것이 중요하다.</p><span id="more"></span><p>한 흥미로운 시각에 따르면 다음 세대의 VS Code를 누가 차지할 것인가는 이 커맨드 센터를 누가 가장 먼저, 그리고 가장 제대로 정의하느냐에 달려 있다고 한다. 지금까지의 도구들은 인간이 텍스트를 효율적으로 입력하는 데 초점을 맞췄지만, 앞으로는 수많은 에이전트들이 쏟아내는 결과물을 관리하고 감독하는 것이 핵심이 될 것이기 때문이다. 파일 단위의 편집기가 아니라 에이전트들의 작업을 관제하는 시스템이 필요한 시점이다. 하지만 아직 시장에는 그런 역할을 완벽하게 수행하는 도구가 나타나지 않았다.</p><p>나는 이런 흐름을 지켜보며 꼭 남이 만들어준 도구가 완성되기를 기다려야 할까라는 의문을 가졌다. 사실 나는 v-terminal이라는 이름의 나만의 터미널을 직접 만들어 사용하고 있다. 내가 필요한 기능이 생기면 직접 코드를 짜서 추가하고, 불편한 점이 있으면 바로 개선해서 나에게 최적화된 환경을 구축했다. 이것은 단순히 터미널을 하나 만드는 행위를 넘어, 에이전트 시대를 대비하는 나만의 작은 커맨드 센터를 짓는 과정이었다. 내가 직접 도구를 빚어보니 왜 아직 시장에 제대로 된 커맨드 센터가 나오지 않았는지 조금은 이해할 수 있었다. 사용자마다 필요한 관제 시스템의 모습이 너무나 다르기 때문이다.</p><p>예전 글에서도 언급했듯이 AI 에이전트가 생성하는 코드의 양은 이미 인간의 검토 능력을 넘어서고 있다. 안드레 카파시의 프로젝트처럼 에이전트가 스스로 수만 번의 실험을 거쳐 코드를 최적화하는 상황에서, 우리는 더 이상 파일 단위의 수정을 하나하나 추적할 수 없다. 여기서 필요한 것이 바로 커맨드 센터다. 에이전트가 어떤 실험을 하고 있는지, 현재 도달한 성능 지표는 무엇인지, 그리고 그 과정에서 신뢰할 수 없는 오염이나 버그가 발생하지 않았는지를 한눈에 파악할 수 있는 대시보드가 절실하다. 인간은 이제 타이피스트가 아니라 오케스트라의 지휘자가 되어야 한다.</p><p>기존의 IDE들은 여전히 파일 트리와 텍스트 편집 창이라는 고전적인 구조에 갇혀 있다. 하지만 미래의 개발 환경은 에이전트의 상태를 시각화하고, 이들이 사용하는 컴퓨팅 자원을 효율적으로 배분하며, 수많은 실험 결과 중 최적의 결과물을 선택하는 인터페이스가 중심이 되어야 한다. 내가 v-terminal을 고도화하면서 느끼는 점도 이와 비슷하다. 단순한 명령어 입력창을 넘어, 내 작업의 흐름을 이해하고 필요한 정보를 제때 던져주는 도구가 있을 때 생산성은 차원이 달라진다. 기능을 남이 정해준 가이드라인에 맞춰 쓰는 것이 아니라, 내가 필요할 때 직접 개발해서 붙이는 경험은 에이전트 시대에도 유효한 강력한 무기가 된다.</p><p>결국 프로그래밍의 본질은 도구를 다루는 기술이 아니라 문제를 해결하는 논리적인 방식에 있다. 단위가 파일에서 에이전트로 바뀌었다고 해서 개발자의 가치가 사라지는 것은 아니다. 오히려 에이전트라는 강력한 조력자를 부리는 군단장이 되어 더 거대한 문제를 풀 수 있는 기회가 왔다. 누군가 완벽한 커맨드 센터를 만들어 가져다주기를 기다리기보다, 지금 당장 내 손에 익은 도구를 깎아서 나만의 지휘소를 만들어보는 것은 어떨까. 그것이 다음 세대의 개발 환경을 선점하고 AI 시대의 오염에 대응하는 가장 확실한 방법일 것이다.</p><hr><p>관련 글</p><ul><li><a href="/posts/2288190312/" title="MCP보다 CLI가 에이전트 시대의 진정한 표준인 이유">MCP보다 CLI가 에이전트 시대의 진정한 표준인 이유</a></li><li><a href="/posts/2755587922/" title="CLI는 레거시라서 AI 에이전트에게 좋다">CLI는 레거시라서 AI 에이전트에게 좋다</a></li><li><a href="/posts/659076475/" title="에이전트 오케스트레이션에 대한 단상">에이전트 오케스트레이션에 대한 단상</a></li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;프로그래밍이 죽었다는 말은 사실 과장된 표현이다. 오히려 지금은 그 어느 때보다 역동적으로 변화하고 있는 시기다. 이전까지 우리가 파일 하나하나를 수정하며 정성스럽게 코드를 작성하던 방식이 이제는 에이전트에게 지시를 내리고 그 결과를 조율하는 방식으로 진화하고 있다. 이런 변화 속에서 개발자의 환경은 단순한 에디터를 넘어 하나의 커맨드 센터로 탈바꿈해야 할 운명에 처했다. 우리가 다루는 단위가 파일에서 에이전트로 옮겨가고 있다는 사실을 인지하는 것이 중요하다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="terminal" scheme="https://futurecreator.cloud/tags/terminal/"/>
-    
-    <category term="ai-agent" scheme="https://futurecreator.cloud/tags/ai-agent/"/>
-    
-    <category term="software" scheme="https://futurecreator.cloud/tags/software/"/>
-    
-    <category term="programming" scheme="https://futurecreator.cloud/tags/programming/"/>
     
   </entry>
   
