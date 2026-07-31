@@ -6,7 +6,7 @@
   <link href="https://futurecreator.cloud/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.cloud/"/>
-  <updated>2026-07-31T16:09:35.385Z</updated>
+  <updated>2026-07-31T16:09:41.517Z</updated>
   <id>https://futurecreator.cloud/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://futurecreator.cloud/posts/533443415/"/>
     <id>https://futurecreator.cloud/posts/533443415/</id>
     <published>2026-07-31T16:06:17.413Z</published>
-    <updated>2026-07-31T16:09:35.385Z</updated>
+    <updated>2026-07-31T16:09:41.517Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>엉클 밥으로 알려진 로버트 C. 마틴의 X 글이 코드 리뷰를 둘러싼 논쟁을 다시 불렀다. 그 글에 따르면 에이전트가 작성한 코드를 직접 읽기보다 테스트 커버리지, 의존성 구조, 사이클로매틱 복잡도, 모듈 크기, 뮤테이션 테스트 같은 지표로 품질을 판단해야 한다. 코딩은 AI에 맡기고 사람은 더 높은 수준에서 관리하자는 주장이다.</p><span id="more"></span><p>그 글은 정해진 범위 안에서 AI를 통제하고 품질 지표를 신뢰할 수 있다면, 인간의 코드 확인이 생산성 병목이 된다는 논리다. 효율을 위해 리뷰를 줄이자는 주장과 책임을 위해 리뷰해야 한다는 반론이 맞부딪히는 지점이다.</p><p>내가 보기에는 회사 프로젝트에서는 후자의 부담을 무시하기 어렵다. AI는 자신이 만든 수정으로 장애나 보안 사고가 나도 책임지지 않는다. 개인 프로젝트라면 전적으로 맡길 수 있지만, 회사 코드라면 내가 수정 내용을 확인하고 어떤 위험을 받아들였는지 설명할 수 있어야 한다. 다만 모든 줄을 사람이 읽으면 AI 활용의 병목을 그대로 남긴다.</p><p>확인하지 않은 채 PR만 올리는 것도 문제다. 그 몫을 다른 팀원에게 넘기는 일이고, 팀원들이 AI로 리뷰하면 생성과 검증이 모두 비슷한 자동화 결과에 의존하게 된다. 테스트 통과만으로 운영 환경의 권한 경계, 데이터 상태, 장애 복구까지 보장할 수 없다는 점도 남는다.</p><p>실무에서는 변경 위험도에 따라 검증 수준을 나누는 편이 낫다. 단순 작업은 CI와 자동 리뷰로 끝내되, 결제, 인증, 마이그레이션과 같은 핵심적은 부분에 대해서는 작성자가 핵심 흐름과 실패 경로를 직접 확인해야 한다. 커버리지와 복잡도뿐 아니라 시나리오 테스트와 보안 검사를 함께 걸고, PR에는 AI가 바꾼 이유와 남은 불확실성을 적는다. 리뷰를 없애기보다 사람이 책임질 지점을 좁히는 방향이 현실적이다.</p><hr><p>관련 글</p><ul><li><a href="/posts/2468830261/" title="바이브 코딩을 폄하하는 사람들에게">바이브 코딩을 폄하하는 사람들에게</a></li><li><a href="/posts/4138851194/" title="방치 중이던 iMac에 OpenClaw를 설치했다">방치 중이던 iMac에 OpenClaw를 설치했다</a></li><li><a href="/posts/1836869449/" title="AI가 쓴 코드, 사람이 꼭 이해해야 할까">AI가 쓴 코드, 사람이 꼭 이해해야 할까</a></li></ul>]]></content>
     
