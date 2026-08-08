@@ -35,6 +35,37 @@
     
     
     <entry>
+      <title>Anthropic이 주도권을 빠르게 잃은 이유</title>
+      <link href="/posts/4279585595/"/>
+      <url>/posts/4279585595/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>프론티어 AI 랩의 경쟁 구도가 1년 만에 크게 바뀌었다. 2025년까지만 해도 코딩 에이전트의 기준은 Claude였다. 그런데 지금 나는 회사가 비용을 대주는 Claude Enterprise를 한 달째 열어보지 않고 있다. 단순한 취향 변화가 아니라, 모델 라인업의 전략적 실패가 만든 결과다.</p><span id="more"></span><p>Anthropic의 문제는 세 갈래로 드러난다. 첫째, Haiku가 사실상 시장에서 사라졌다. 가볍고 싸고 빠른 소형 모델은 에이전트 워크플로우에서 가장 많이 호출되는 계층인데, 이 자리를 GPT와 DeepSeek가 채웠다. 둘째, Sonnet은 가격이 오르면서 '합리적 중간 선택’이라는 포지셔닝을 잃었다. 셋째, Opus는 품질 경쟁에서 우위를 증명하지 못하면서 고집스러운 최상위 모델로만 남았다. 반면 경쟁사들은 가격을 파격적으로 내리고, 소형 모델을 에이전트에 깊게 통합하면서 실사용 점유율을 가져갔다.</p><p>이 구도는 프론티어 성능 자체보다 '비용 대비 실사용 가치’로 승부가 갈리는 시장의 신호다. 실제로 기업에서 AI 도입을 결정하는 순간은 벤치마크 점수가 아니라, 월 비용과 업무 자동화 수준이 맞물리는 지점이다. 비싼 최상위 모델 한 개보다, 싼 모델을 여러 번 호출해도 이익인 작업이 훨씬 많다.</p><p>개인적으로 내린 결론은 하나의 벤더에 얽매이지 말라는 것이다. 지금 내 스택은 Hermes Agent + Grok을 메인으로, DeepSeek V4 Flash를 저비용 대량 호출용으로 쓰고 있다. 어떤 랩이 최신 모델을 내놓든, 내가 바꿔야 하는 건 설정 파일의 모델 이름뿐이다. 프론티어 경쟁에서 누가 이기든, 도구를 교체할 수 있는 구조를 만든 쪽이 이득을 본다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> claude </tag>
+            
+            <tag> ai </tag>
+            
+            <tag> anthropic </tag>
+            
+            <tag> frontier-lab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>AI 시대, 사람의 코드 리뷰는 필요할까</title>
       <link href="/posts/533443415/"/>
       <url>/posts/533443415/</url>
