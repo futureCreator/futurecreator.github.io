@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://futurecreator.cloud/posts/742080314/</loc>
+    
+    <lastmod>2026-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/posts/47130114/</loc>
+    
+    <lastmod>2026-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/posts/661537222/</loc>
+    
+    <lastmod>2026-08-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://futurecreator.cloud/posts/4279585595/</loc>
     
     <lastmod>2026-08-08</lastmod>
@@ -2475,6 +2502,34 @@
   
   <url>
     <loc>https://futurecreator.cloud/tags/frontier-lab/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/grok/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/model/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/token/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://futurecreator.cloud/tags/cost/</loc>
     <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
