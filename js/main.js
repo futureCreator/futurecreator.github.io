@@ -43,6 +43,13 @@
     adjustNavbar();
     $(window).resize(adjustNavbar);
 
+    $(document).on('click', '.navbar-burger', function() {
+        const expanded = $(this).attr('aria-expanded') === 'true';
+        $(this).attr('aria-expanded', String(!expanded));
+        $(this).toggleClass('is-active');
+        $('.navbar-main .navbar-menu').toggleClass('is-active');
+    });
+
     function toggleFold(codeBlock, isFolded) {
         const $toggle = $(codeBlock).find('.fold i');
         !isFolded ? $(codeBlock).removeClass('folded') : $(codeBlock).addClass('folded');

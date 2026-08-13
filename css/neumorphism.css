@@ -10986,15 +10986,34 @@ a.article-nav-next span {
   background-color: transparent;
 }
 @media screen and (max-width: 1087px) {
+  .navbar-main .navbar-brand {
+    justify-content: flex-start !important;
+    width: 100%;
+  }
   .navbar-main .navbar-menu {
+    display: none;
     justify-content: center;
     box-shadow: none;
+    flex-basis: 100%;
+  }
+  .navbar-main .navbar-menu.is-active {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-main .navbar-menu.is-active .navbar-start,
+  .navbar-main .navbar-menu.is-active .navbar-end {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .navbar-main .navbar-menu.is-active .navbar-item {
+    justify-content: center;
   }
   .navbar-main .navbar-start {
     margin-right: 0;
   }
   .navbar-main .navbar-end {
     margin-left: 0;
+    border-top: 1px solid rgba(0,0,0,0.05);
   }
 }
 .navbar-logo img {
