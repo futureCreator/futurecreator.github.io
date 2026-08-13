@@ -391,7 +391,7 @@ th:not([align]) {
 }
 html {
   background-color: #f2f2f7;
-  font-size: 16px;
+  font-size: 15px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -10821,7 +10821,7 @@ article.article .article-meta {
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.1rem;
+  font-size: 0.975rem;
   line-height: 1.78;
 }
 article.article .content p {
@@ -10856,7 +10856,7 @@ article.article .content code {
 article.article .content blockquote.pullquote {
   float: right;
   max-width: 50%;
-  font-size: 1.15rem;
+  font-size: 1.025rem;
   position: relative;
 }
 article.article .content blockquote footer strong + cite {
@@ -11138,7 +11138,7 @@ footer.footer .level-end .field {
   width: 100%;
   height: 100%;
   z-index: 100;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 0;
   background: rgba(0,0,0,0.86);
 }
@@ -11151,7 +11151,7 @@ footer.footer .level-end .field {
   text-decoration: none;
 }
 .searchbox input {
-  font-size: 1rem;
+  font-size: 0.875rem;
   border: none;
   outline: none;
   box-shadow: none;
@@ -11660,7 +11660,7 @@ figure.highlight.foldable div.level-left {
 }
 .cc-window,
 .cc-revoke {
-  font-size: 1.1rem !important;
+  font-size: 0.975rem !important;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
 }
 .cc-window {
@@ -11785,12 +11785,12 @@ body {
 .navbar-main .navbar-brand .navbar-item {
   font-weight: 600;
   letter-spacing: -0.02em;
-  font-size: 1.0625rem;
+  font-size: 0.938rem;
   color: #000 !important;
 }
 .navbar-main .navbar-menu .navbar-item {
   border-radius: 6px;
-  font-size: 0.9375rem;
+  font-size: 0.813rem;
   font-weight: 400;
   letter-spacing: -0.01em;
   transition: background 0.15s ease;
@@ -11816,7 +11816,7 @@ body {
 }
 h1 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 2.125rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.21;
@@ -11824,7 +11824,7 @@ h1 {
 }
 h2 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   font-weight: 700;
   letter-spacing: -0.028em;
   line-height: 1.21;
@@ -11832,7 +11832,7 @@ h2 {
 }
 h3 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.022em;
   line-height: 1.27;
@@ -11840,7 +11840,7 @@ h3 {
 }
 h4 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
@@ -11849,7 +11849,7 @@ h4 {
 h5,
 h6 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.0625rem;
+  font-size: 0.938rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.29;
@@ -11871,7 +11871,7 @@ article.media .title:hover a {
 }
 article.article .article-meta {
   color: rgba(60,60,67,0.6);
-  font-size: 0.8125rem;
+  font-size: 0.688rem;
   letter-spacing: -0.005em;
   line-height: 1.38;
 }
@@ -11882,7 +11882,7 @@ article.article .article-more {
   border-radius: 8px !important;
   box-shadow: none !important;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   letter-spacing: -0.01em;
   transition: background 0.15s ease;
 }
@@ -11897,14 +11897,14 @@ article.article .article-more:hover {
 }
 .content h1 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 2.125rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.03em;
   color: #000;
 }
 .content h2 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.75rem;
+  font-size: 1.625rem;
   font-weight: 700;
   letter-spacing: -0.028em;
   border-bottom: 0.5px solid rgba(60,60,67,0.29);
@@ -11913,14 +11913,14 @@ article.article .article-more:hover {
 }
 .content h3 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   font-weight: 700;
   letter-spacing: -0.022em;
   color: #000;
 }
 .content h4 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: #000;
@@ -11928,13 +11928,13 @@ article.article .article-more:hover {
 .content h5,
 .content h6 {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
-  font-size: 1.0625rem;
+  font-size: 0.938rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   color: #000;
 }
 .content p {
-  font-size: 1.0625rem;
+  font-size: 0.938rem;
   line-height: 1.75;
   letter-spacing: -0.005em;
   color: #000;
@@ -11973,7 +11973,7 @@ article.article .article-more:hover {
 .button {
   border-radius: 10px !important;
   font-weight: 500;
-  font-size: 1.0625rem;
+  font-size: 0.938rem;
   letter-spacing: -0.01em;
   min-height: 44px;
   transition: filter 0.15s ease, transform 0.1s ease;
@@ -12001,7 +12001,7 @@ article.article .article-more:hover {
   color: #007aff !important;
   border: none;
   border-radius: 6px !important;
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-family: 'SF Mono', 'JetBrains Mono', ui-monospace, 'Fira Code', monospace;
   letter-spacing: 0.01em;
   font-weight: 500;
@@ -12047,7 +12047,7 @@ article.article .article-more:hover {
   background: #fff;
 }
 .card.widget .menu-label {
-  font-size: 0.6875rem;
+  font-size: 0.563rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: rgba(60,60,67,0.6);
@@ -12074,7 +12074,7 @@ article.article .article-more:hover {
 .searchbox .searchbox-container .searchbox-input {
   background: transparent;
   color: #000;
-  font-size: 1.0625rem;
+  font-size: 0.938rem;
   letter-spacing: -0.01em;
 }
 .searchbox .searchbox-container .searchbox-result-item {

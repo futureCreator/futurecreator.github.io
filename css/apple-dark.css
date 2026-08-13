@@ -391,7 +391,7 @@ th:not([align]) {
 }
 html {
   background-color: #000;
-  font-size: 16px;
+  font-size: 15px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -10821,7 +10821,7 @@ article.article .article-meta {
 }
 article.article .content {
   word-wrap: break-word;
-  font-size: 1.1rem;
+  font-size: 0.975rem;
   line-height: 1.78;
 }
 article.article .content p {
@@ -10856,7 +10856,7 @@ article.article .content code {
 article.article .content blockquote.pullquote {
   float: right;
   max-width: 50%;
-  font-size: 1.15rem;
+  font-size: 1.025rem;
   position: relative;
 }
 article.article .content blockquote footer strong + cite {
@@ -11138,7 +11138,7 @@ footer.footer .level-end .field {
   width: 100%;
   height: 100%;
   z-index: 100;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 0;
   background: rgba(0,0,0,0.86);
 }
@@ -11151,7 +11151,7 @@ footer.footer .level-end .field {
   text-decoration: none;
 }
 .searchbox input {
-  font-size: 1rem;
+  font-size: 0.875rem;
   border: none;
   outline: none;
   box-shadow: none;
@@ -11660,7 +11660,7 @@ figure.highlight.foldable div.level-left {
 }
 .cc-window,
 .cc-revoke {
-  font-size: 1.1rem !important;
+  font-size: 0.975rem !important;
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Inter', system-ui, sans-serif !important;
 }
 .cc-window {
