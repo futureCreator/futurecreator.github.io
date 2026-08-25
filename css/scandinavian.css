@@ -11797,18 +11797,18 @@ body {
   background-color: rgba(0,0,0,0.05) !important;
   color: #000 !important;
 }
-.card:not(#back-to-top) {
+.card {
   background: transparent;
   border: none;
   border-radius: 0;
   box-shadow: none;
 }
-.card:not(#back-to-top) .card-content {
+.card .card-content {
   background: transparent;
 }
 .column-main > .card {
   margin-bottom: 0;
-  padding: 3.5rem 0;
+  padding: 2.5rem 0;
 }
 .column-main > .card > .card-content {
   padding: 0;
@@ -11818,6 +11818,57 @@ body {
 }
 .column-main > .card:last-child {
   padding-bottom: 2rem;
+}
+.index-list .index-row {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 4px 20px;
+  align-items: baseline;
+  padding: 10px 12px;
+  margin: 0 -12px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+.index-list .index-row:hover {
+  background: rgba(0,0,0,0.05);
+}
+.index-list .index-row + .index-row {
+  margin-top: 8px;
+}
+.index-list .index-date {
+  color: rgba(0,0,0,0.56);
+  font-size: 0.84375rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.index-list .index-title {
+  color: #000;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.index-list .index-row:hover .index-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.index-list .index-cat {
+  color: rgba(0,0,0,0.44);
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .index-list .index-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 12px;
+  }
+  .index-list .index-row .index-title {
+    flex-basis: 100%;
+    order: 3;
+  }
+  .index-list .index-row .index-cat {
+    order: 2;
+  }
 }
 .card.widget {
   background: transparent;
@@ -12028,6 +12079,9 @@ article.media .article-more:hover {
   border-top: 1px solid rgba(0,0,0,0.1);
   color: rgba(0,0,0,0.64);
 }
+.footer .footer-logo {
+  color: #000;
+}
 .footer a {
   color: rgba(0,0,0,0.64);
   transition: color 0.15s ease;
@@ -12125,6 +12179,11 @@ article.media .article-more:hover {
 .cc-window .cc-btn:hover {
   background: rgba(0,0,0,0.8) !important;
 }
+.cc-window .cc-link {
+  color: rgba(0,0,0,0.64) !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(0,0,0,0.3);
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -12132,4 +12191,14 @@ article.media .article-more:hover {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+.card.widget[data-type="profile"] .card-content {
+  text-align: center;
+}
+.card.widget[data-type="profile"] .card-content figure.image {
+  margin-left: auto;
+  margin-right: auto;
+}
+.card.widget[data-type="categories"] .menu-list a.level {
+  display: flex;
 }

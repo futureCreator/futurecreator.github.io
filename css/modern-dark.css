@@ -876,8 +876,7 @@ article.media .categories,
 .is-lowercase {
   text-transform: lowercase !important;
 }
-.is-uppercase,
-article.media .categories {
+.is-uppercase {
   text-transform: uppercase !important;
 }
 .is-italic {

@@ -80,3 +80,8 @@ code,
 .hljs {
   font-size: 0.9em;
 }
+/* Profile avatar size (default 128px) */
+.card[data-type="profile"] .image {
+  width: 96px;
+  height: 96px;
+}
