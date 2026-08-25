@@ -4,6 +4,93 @@
   
     
     <entry>
+      <title>새로운 매체가 인류를 망친다는 경고는 매번 반복됐다</title>
+      <link href="/posts/129995266/"/>
+      <url>/posts/129995266/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>짧은 영상이 뇌를 망친다는 말은 활자와 라디오, 텔레비전, 게임, 스마트폰이 나올 때마다 되풀이됐다. 매체는 실제로 주의와 습관을 바꿨지만 문명이 끝나지는 않았다.</p><span id="more"></span><p>알림 범벅인 지금의 생활은 이전 세대 눈에 비정상으로 보인다. 100년 전 사람이 텔레비전과 전화, 자동차에 둘러싸인 20세기 중반을 봤어도 똑같이 기이했을 것이다. 인류는 새 자극에 적응하면서 과거 기준으로는 늘 이상해진 쪽으로 이동해왔다. 도파민 자극이 한 단계 올라간다는 사실만으로 문명이 붕괴한다고 보기 어려운 이유다. 비교 대상 자체가 같이 움직이니, 예전보다 집중하지 못하는 인류가 그대로 새로운 표준이 될 수도 있다.</p><p>물론 중독과 정신 건강 악화는 실재하는 피해다. 다만 AI는 문제를 만드는 쪽에만 있지 않다. 무한 스크롤을 최적화하는 AI가 있다면, 내가 시간을 어디에 썼는지 파악해 자극을 차단하고 중요한 정보만 압축하고 그만 보라고 끊어주는 AI도 만들 수 있다. 지금까지 사람은 플랫폼의 추천 알고리즘에 뇌 하나로 맞섰지만, 앞으로는 추천 AI와 방어 AI가 내 주변에서 싸운다. 질문도 바뀐다. 뇌가 새 매체를 견딜 수 있냐가 아니라, 주의력을 어떤 AI에 맡길 것인가다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> 도파민 </tag>
+            
+            <tag> 주의력 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI의 일자리 대체는 발주 곡선의 절벽으로 온다</title>
+      <link href="/posts/4162236420/"/>
+      <url>/posts/4162236420/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI가 일을 없애는 순간은 먼 미래에서 갑자기 도착하지 않는다. 이미 임계점 바로 앞에서 대기 중인 업무가 산업마다 엄청난 양으로 쌓여 있다.</p><span id="more"></span><p>지금 각 업계에는 몇 달째 AI로 수십 안을 만들고 버리고 고쳐가며 실제 안건에 대보는 사람들이 대량으로 있다. 결론은 대개 같다. 여기까지는 되고 이 부분만 사람이 필요하다는 것이다. 뒤집으면 마지막 5%가 채워지는 순간 곧바로 전환할 준비를 끝낸 업무가 이미 어마어마하게 적재돼 있다는 뜻이다. 다음 모델이 그 5%를 메웠을 때 사회가 5%만 변하지는 않는다. 사람 쪽에 남아 있던 이미지, 영상, 광고, 디자인, 카피, 조사 발주가 한꺼번에 임계점을 넘을 수 있다.</p><p>넘어간 뒤의 AI는 한 방의 품질로 사람과 겨루지 않는다. 100안을 뽑고 돌려보고 숫자를 확인한 다음 다시 100안을 뽑는 반복까지 자동화된다. 성능 곡선은 완만해도 발주 곡선에는 절벽이 생긴다. 기술적 특이점보다 먼저 오는 것은 카운트다운에 들어간 대량의 업무가 특정 모델 업데이트를 기점으로 일제히 대기 해제되는 사업 쪽 특이점이다. 대비할 기준도 모델 발표가 아니라, 내 일에서 사람이 필요한 마지막 5%를 스스로 말할 수 있는지다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> 자동화 </tag>
+            
+            <tag> 일자리 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI의 정체기는 한계가 아니라 병목이 겹친 시간이다</title>
+      <link href="/posts/377789243/"/>
+      <url>/posts/377789243/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>최상위 모델을 압도하는 강자가 한동안 나오지 않는 이유를 GPU 부족으로만 설명하기는 어렵다. 다음 도약에 필요한 조건이 여러 개 동시에 막혀 있을 가능성이 크다.</p><span id="more"></span><p>기반 모델을 다시 만들려면 거대한 GPU 군집과 전력, 새 데이터센터를 갖추고 몇 달 학습을 돌려야 한다. 데이터도 비슷하다. 웹과 책과 코드의 고품질 데이터는 이미 상당히 학습됐고, 합성 데이터는 자기 답을 자기가 배우는 방식만으로 새 지식을 무한히 만들지 못한다. 추론 시간을 늘리고 강화학습을 붙이는 승리 공식도 열매를 빠르게 수확해버렸다. 여기에 상위 모델 간 차이를 드러내지 못하는 벤치마크, 안전성 검증 기간, 성능 10%에 추론 비용이 다섯 배가 되는 경제성이 겹친다.</p><p>그래서 지금의 정적을 스케일링의 종료로 단정하는 것도, 데이터센터를 더 지으면 풀린다고 보는 것도 성급하다. 소형 오픈웨이트 모델이 거대 모델을 따라붙는 것을 보면 효율 개선 여지는 아직 크다. 다음 지능에는 영상과 공간, 물리 법칙, 장기 기억까지 데이터가 되어야 할지도 모른다. 그렇다면 AI의 진화는 매끄러운 곡선이 아니라 병목을 하나씩 걷어낸 뒤 갑자기 뛰는 계단에 가깝다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> scaling </tag>
+            
+            <tag> gpu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>돈으로 사는 것이 서비스에서 미래의 순서로 바뀐다</title>
       <link href="/posts/3790942981/"/>
       <url>/posts/3790942981/</url>
@@ -196,9 +283,9 @@
             
             <tag> ai </tag>
             
-            <tag> 인프라 </tag>
-            
             <tag> openrouter </tag>
+            
+            <tag> 인프라 </tag>
             
             <tag> 게이트웨이 </tag>
             
@@ -291,9 +378,9 @@
             
             <tag> llm </tag>
             
-            <tag> 벤치마크 </tag>
-            
             <tag> openrouter </tag>
+            
+            <tag> 벤치마크 </tag>
             
         </tags>
       
@@ -320,9 +407,9 @@
             
             <tag> ai </tag>
             
-            <tag> 버블 </tag>
-            
             <tag> 인프라 </tag>
+            
+            <tag> 버블 </tag>
             
         </tags>
       
@@ -349,9 +436,9 @@
             
             <tag> ai </tag>
             
-            <tag> 전력 </tag>
-            
             <tag> 인프라 </tag>
+            
+            <tag> 전력 </tag>
             
         </tags>
       
@@ -378,9 +465,9 @@
             
             <tag> ai </tag>
             
-            <tag> 제품 </tag>
-            
             <tag> 자동화 </tag>
+            
+            <tag> 제품 </tag>
             
         </tags>
       
@@ -726,9 +813,9 @@
             
             <tag> ai </tag>
             
-            <tag> 생산성 </tag>
-            
             <tag> 격차 </tag>
+            
+            <tag> 생산성 </tag>
             
         </tags>
       
@@ -753,9 +840,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> 신약 </tag>
             
@@ -1045,9 +1132,9 @@
             
             <tag> ai </tag>
             
-            <tag> 코딩 </tag>
-            
             <tag> 생산성 </tag>
+            
+            <tag> 코딩 </tag>
             
         </tags>
       
@@ -1074,9 +1161,9 @@
             
             <tag> ai </tag>
             
-            <tag> llm </tag>
-            
             <tag> 신뢰 </tag>
+            
+            <tag> llm </tag>
             
         </tags>
       
@@ -1277,9 +1364,9 @@
             
             <tag> ai </tag>
             
-            <tag> grok </tag>
-            
             <tag> hermes </tag>
+            
+            <tag> grok </tag>
             
         </tags>
       
@@ -1424,9 +1511,9 @@
             
             <tag> ai </tag>
             
-            <tag> llm </tag>
-            
             <tag> grok </tag>
+            
+            <tag> llm </tag>
             
             <tag> model </tag>
             
@@ -1515,9 +1602,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> anthropic </tag>
             
@@ -1610,13 +1697,13 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
             
-            <tag> vibecoding </tag>
+            <tag> ai </tag>
             
             <tag> software-engineering </tag>
+            
+            <tag> vibecoding </tag>
             
         </tags>
       
@@ -1641,9 +1728,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> coding </tag>
             
@@ -1705,9 +1792,9 @@
             
             <tag> ai </tag>
             
-            <tag> programming </tag>
-            
             <tag> llm </tag>
+            
+            <tag> programming </tag>
             
             <tag> abstraction </tag>
             
@@ -2213,9 +2300,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> workflow </tag>
             
@@ -2634,9 +2721,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> coding </tag>
             
@@ -2700,9 +2787,9 @@
             
             <tag> engineering </tag>
             
-            <tag> programming </tag>
-            
             <tag> llm </tag>
+            
+            <tag> programming </tag>
             
             <tag> sqlite </tag>
             
@@ -2731,9 +2818,9 @@
             
             <tag> software-development </tag>
             
-            <tag> vibecoding </tag>
-            
             <tag> coding </tag>
+            
+            <tag> vibecoding </tag>
             
             <tag> learning </tag>
             
@@ -2855,9 +2942,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> cloud </tag>
             
@@ -3006,9 +3093,9 @@
       
         <tags>
             
-            <tag> terminal </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> terminal </tag>
             
             <tag> ai </tag>
             
@@ -3440,9 +3527,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai </tag>
-            
             <tag> git </tag>
+            
+            <tag> ai </tag>
             
             <tag> ai-agent </tag>
             
@@ -3498,9 +3585,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> hexo </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -3644,9 +3731,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> ai-agent </tag>
             
@@ -3673,9 +3760,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> llm </tag>
             
@@ -3760,9 +3847,9 @@
       
         <tags>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> ci-cd </tag>
             
@@ -4003,9 +4090,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
         </tags>
       
@@ -4163,9 +4250,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai </tag>
-            
             <tag> claude </tag>
+            
+            <tag> ai </tag>
             
             <tag> ai-agent </tag>
             
@@ -4194,9 +4281,9 @@
             
             <tag> productivity </tag>
             
-            <tag> ai </tag>
-            
             <tag> git </tag>
+            
+            <tag> ai </tag>
             
             <tag> clean-code </tag>
             
@@ -4408,9 +4495,9 @@
             
             <tag> git </tag>
             
-            <tag> ci-cd </tag>
-            
             <tag> java </tag>
+            
+            <tag> ci-cd </tag>
             
             <tag> cloud </tag>
             
@@ -4568,9 +4655,9 @@
       
         <tags>
             
-            <tag> seo </tag>
-            
             <tag> cloud </tag>
+            
+            <tag> seo </tag>
             
             <tag> kubernetes </tag>
             
@@ -6005,9 +6092,9 @@
       
         <tags>
             
-            <tag> ci-cd </tag>
-            
             <tag> java </tag>
+            
+            <tag> ci-cd </tag>
             
         </tags>
       
@@ -6182,9 +6269,9 @@
       
         <tags>
             
-            <tag> terminal </tag>
-            
             <tag> productivity </tag>
+            
+            <tag> terminal </tag>
             
         </tags>
       
