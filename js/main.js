@@ -41,14 +41,29 @@
         }
     }
     adjustNavbar();
-    $(window).resize(adjustNavbar);
+    $(window).off('resize.navbarAdjust').on('resize.navbarAdjust', adjustNavbar);
 
-    $(document).on('click', '.navbar-burger', function() {
-        const expanded = $(this).attr('aria-expanded') === 'true';
-        $(this).attr('aria-expanded', String(!expanded));
-        $(this).toggleClass('is-active');
-        $('.navbar-main .navbar-menu').toggleClass('is-active');
-    });
+    function setNavbarOpen(open) {
+        const $burger = $('.navbar-burger');
+        const $menu = $('.navbar-main .navbar-menu');
+        $burger.toggleClass('is-active', open);
+        $burger.attr('aria-expanded', String(!!open));
+        $menu.toggleClass('is-active', open);
+    }
+
+    // data-pjax re-runs this file; unbind first or open/close cancel each other
+    $(document).off('click.navbarBurger', '.navbar-burger')
+        .on('click.navbarBurger', '.navbar-burger', function(e) {
+            e.preventDefault();
+            setNavbarOpen(!$(this).hasClass('is-active'));
+        });
+
+    if (!window.__icarusNavbarPjaxBound) {
+        window.__icarusNavbarPjaxBound = true;
+        document.addEventListener('pjax:complete', function() {
+            setNavbarOpen(false);
+        });
+    }
 
     function toggleFold(codeBlock, isFolded) {
         const $toggle = $(codeBlock).find('.fold i');
@@ -129,18 +144,19 @@
 
     const $toc = $('#toc');
     if ($toc.length > 0) {
-        const $mask = $('<div>');
-        $mask.attr('id', 'toc-mask');
-
-        $('body').append($mask);
+        let $mask = $('#toc-mask');
+        if (!$mask.length) {
+            $mask = $('<div id="toc-mask">');
+            $('body').append($mask);
+        }
 
         function toggleToc() { // eslint-disable-line no-inner-declarations
             $toc.toggleClass('is-active');
             $mask.toggleClass('is-active');
         }
 
-        $toc.on('click', toggleToc);
-        $mask.on('click', toggleToc);
-        $('.navbar-main .catalogue').on('click', toggleToc);
+        $toc.off('click.toc').on('click.toc', toggleToc);
+        $mask.off('click.toc').on('click.toc', toggleToc);
+        $('.navbar-main .catalogue').off('click.toc').on('click.toc', toggleToc);
     }
 }(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));

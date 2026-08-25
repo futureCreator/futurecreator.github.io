@@ -1,4 +1,4 @@
-const CACHE_NAME = 'futurecreator-v2';
+const CACHE_NAME = 'futurecreator-v3';
 const OFFLINE_URL = '/';
 
 const PRECACHE_ASSETS = [
