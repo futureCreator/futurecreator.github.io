@@ -6,7 +6,7 @@
   <link href="https://futurecreator.cloud/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.cloud/"/>
-  <updated>2026-08-27T13:02:05.671Z</updated>
+  <updated>2026-08-28T13:02:03.259Z</updated>
   <id>https://futurecreator.cloud/</id>
   
   <author>
@@ -15,6 +15,131 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>생각을 외부화하는 것은 퇴화가 아닐 수 있다</title>
+    <link href="https://futurecreator.cloud/posts/430533700/"/>
+    <id>https://futurecreator.cloud/posts/430533700/</id>
+    <published>2026-08-28T10:42:03.000Z</published>
+    <updated>2026-08-28T13:02:03.259Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI를 제대로 쓴 인류가 도달하는 곳은 더 똑똑해지는 상태가 아니라 스스로 생각하지 않아도 되는 상태일지도 모른다. 이렇게 말하면 곧바로 뇌가 퇴화한다는 반박이 붙지만, 스스로 생각하는 일이 무조건 좋은 것인가부터 의심해볼 만하다.</p><span id="more"></span><p>인간은 이미 기억을 문자에 맡기고 계산을 컴퓨터에 넘기고 이동을 기계에 위임하며 문명을 진전시켰다. 직접 하지 않아도 되는 일을 늘려온 역사다. 그런데 사고만은 자기 뇌로 계속하는 것이 선이고 외부화는 퇴화라고 보는 것은 조금 이상하다. 물론 AI를 처음 만들고 구조를 설계하는 사람들은 끝까지 생각해야 한다. 그 다음 단계에서는 사람이 방향과 바람을 제시하면 AI가 사고하고 에이전트가 움직이고 피지컬 AI가 현실에 구현하는 구도가 될 수 있다.</p><p>그때 인간이 지금보다 훨씬 머리를 덜 쓴다 해도 문명의 실패는 아니다. 자동차 때문에 다리 힘이 약해졌다고 자동차 문명을 부정하지 않는 것과 같다. 마지막까지 사람 쪽에 남는 것은 어떻게 실현하느냐가 아니라 무엇을 원하고 무엇을 아름답다고 여기며 어떤 세계를 고르는지일 것이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI를 제대로 쓴 인류가 도달하는 곳은 더 똑똑해지는 상태가 아니라 스스로 생각하지 않아도 되는 상태일지도 모른다. 이렇게 말하면 곧바로 뇌가 퇴화한다는 반박이 붙지만, 스스로 생각하는 일이 무조건 좋은 것인가부터 의심해볼 만하다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="thinking" scheme="https://futurecreator.cloud/tags/thinking/"/>
+    
+    <category term="civilization" scheme="https://futurecreator.cloud/tags/civilization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>아무도 혼자서는 경쟁에서 내려올 수 없다</title>
+    <link href="https://futurecreator.cloud/posts/1757856780/"/>
+    <id>https://futurecreator.cloud/posts/1757856780/</id>
+    <published>2026-08-28T10:32:03.000Z</published>
+    <updated>2026-08-28T13:02:03.259Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 시대의 과로 문제를 경영자 대 노동자 구도로 보면 본질을 놓친다. 누구도 스스로 브레이크를 밟을 수 없는 게임이 되어 있다는 것이 문제의 핵심이다.</p><span id="more"></span><p>AI로 하루 분량의 일이 한 시간이 됐다고 해보자. 한 회사만 남은 일곱 시간을 휴식으로 돌리면, 그 시간을 성장에 쓰는 회사에 밀린다. 경영자의 선의와 무관하게 경쟁하는 한 생산성 향상은 여가보다 다음 경쟁으로 먼저 돌아간다. 어제의 효율화가 오늘의 기준선이 된다. 과거 토요 근무도 비슷했다. 기업들이 자발적으로 쉬기로 합의한 것이 아니라, 법과 사회 규범이 모두가 동시에 속도를 늦출 환경을 만들었다.</p><p>국가의 역할은 기업을 악역으로 세우는 것이 아니라, 혼자서는 내려올 수 없는 경쟁에서 다 같이 내려올 규칙을 만드는 일이기도 하다. AI 시대는 더 까다롭다. 노동시간이 같아도 업무 밀도만 몇 배가 되거나, 24시간 돌아가는 에이전트에 사람만 상시 호출될 수 있다. 20세기가 노동시간에 상한을 만든 시대라면, 21세기는 일의 밀도에도 어딘가 제동을 거는 시대가 될지도 모른다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 시대의 과로 문제를 경영자 대 노동자 구도로 보면 본질을 놓친다. 누구도 스스로 브레이크를 밟을 수 없는 게임이 되어 있다는 것이 문제의 핵심이다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="labor" scheme="https://futurecreator.cloud/tags/labor/"/>
+    
+    <category term="policy" scheme="https://futurecreator.cloud/tags/policy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>피지컬 AI는 자율이냐 아니냐로 볼 문제가 아니다</title>
+    <link href="https://futurecreator.cloud/posts/647571361/"/>
+    <id>https://futurecreator.cloud/posts/647571361/</id>
+    <published>2026-08-28T10:22:03.000Z</published>
+    <updated>2026-08-28T13:02:03.259Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AGIBOT의 X2가 100m 장애물 레이스에서 금메달을 땄다. 다만 우승팀 엔지니어 본인이 현재는 원격 조작으로 참가한다고 설명했고, 장애물 종류와 크기는 사전에 공개돼 현지 연습까지 진행됐다.</p><span id="more"></span><p>그래서 처음 보는 코스를 완전 자율로 끝까지 공략했다는 서술은 사실이 아니다. 그렇다고 가볍게 볼 일도 아니다. 사람이 담당한 것은 대략적인 진행과 지시이고, 보행과 자세 제어, 균형 유지, 일부 장애물 돌파 같은 세밀한 신체 제어는 로봇이 맡았다. 게다가 양산 사양 휴머노이드가 경사면, 슬라롬, 계단, 좁은 길, 도약대 같은 복잡한 구간을 연속으로 통과했다.</p><p>이번에 놀라운 지점은 로봇이 전부 스스로 판단했다는 것이 아니다. 사람이 팔다리를 하나씩 조종하지 않아도 상당히 추상적인 수준의 지시만으로 신체가 알아서 따라오게 됐다는 것이다. 피지컬 AI는 완전 자율인지 아닌지의 이분법으로 보는 것보다, 사람이 세밀하게 조작하지 않아도 되는 범위가 매년 어디까지 넓어지는지를 보는 편이 진화 속도를 정확히 잡아낸다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AGIBOT의 X2가 100m 장애물 레이스에서 금메달을 땄다. 다만 우승팀 엔지니어 본인이 현재는 원격 조작으로 참가한다고 설명했고, 장애물 종류와 크기는 사전에 공개돼 현지 연습까지 진행됐다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="robotics" scheme="https://futurecreator.cloud/tags/robotics/"/>
+    
+    <category term="humanoid" scheme="https://futurecreator.cloud/tags/humanoid/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>스포츠가 인간만의 영역이라는 믿음은 오래가지 않는다</title>
+    <link href="https://futurecreator.cloud/posts/3519505246/"/>
+    <id>https://futurecreator.cloud/posts/3519505246/</id>
+    <published>2026-08-28T10:12:03.000Z</published>
+    <updated>2026-08-28T13:02:03.258Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>피지컬 AI가 탁구와 테니스에서 인간에게 근접하기 시작했다. 순수한 경기 능력만 보면 바둑과 장기가 지나온 길을 스포츠도 그대로 따라갈 가능성이 높다. 스포츠만은 인간의 것이라는 감각은 생각보다 취약한 전제다.</p><span id="more"></span><p>여기서 흔히 나오는 반론은 스포츠는 땀과 실패와 인생을 보는 것이라 로봇 경기는 흥행하지 않는다는 것이다. 그런데 그 판단은 지금의 무기질적인 로봇을 보면서 미래를 상상한 결과다. 동시에 진행되는 축이 있다. 사람과 거의 구분되지 않는 외형, 피부 질감, 표정, 목소리, 신체성이다. 여기에 AI가 인격과 캐릭터까지 갖게 되면 전제가 달라진다.</p><p>이기기만 하는 선수가 아니라 지고 초조해하고 버릇이 있고 악연이 생기고 부활하고 세대교체까지 하는 존재가 나온다. 카리스마와 드라마와 비극을 설계할 수 있는 선수다. 주최자 입장에서는 부상이나 은퇴, 이적에 흔들릴 일도 적고 세계관과 경기 수준을 통제할 수 있다. 그렇다면 가장 큰 이익을 가져가는 쪽은 로봇 제조사만이 아니라, 선수를 IP로 보유하는 매니지먼트와 이벤트 주최자일지도 모른다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;피지컬 AI가 탁구와 테니스에서 인간에게 근접하기 시작했다. 순수한 경기 능력만 보면 바둑과 장기가 지나온 길을 스포츠도 그대로 따라갈 가능성이 높다. 스포츠만은 인간의 것이라는 감각은 생각보다 취약한 전제다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="robotics" scheme="https://futurecreator.cloud/tags/robotics/"/>
+    
+    <category term="sports" scheme="https://futurecreator.cloud/tags/sports/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI가 실험 루프 안으로 들어왔다</title>
+    <link href="https://futurecreator.cloud/posts/3262523060/"/>
+    <id>https://futurecreator.cloud/posts/3262523060/</id>
+    <published>2026-08-28T10:02:03.000Z</published>
+    <updated>2026-08-28T13:02:03.258Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>앤스로픽이 공개한 MHS는 AI 에이전트와 현미경, 로봇팔, 액체 취급 장비 같은 연구 기기를 이어붙이기 위한 공통 규칙이다. 모델 성능 발표가 아니라 배선 규격에 가까운 이야기인데, 파급력은 오히려 이쪽이 크다.</p><span id="more"></span><p>그동안 실험 장비 연동은 기계마다 방식이 달라 연구자가 매번 직접 붙여야 했다. MHS는 그 접속과 설정을 표준화한다. 이미 양자 컴퓨터용 레이저에서는 AI가 실제 장비를 조작하며 시행착오로 복구 절차를 만들어 99.3% 성공률까지 끌어올렸다. 측정값을 보며 액체 취급 조건을 자동 조정하거나, 로봇팔과 액체 핸들러를 연계하고, 실험 중 이상을 감지해 대응하는 것까지 실증됐다.</p><p>AI가 답을 생각하는 단계를 넘어 기계를 움직이고 결과를 확인하고 조건을 바꿔 다시 시도하는 루프 자체에 들어왔다는 뜻이다. 아직 리서치 프리뷰이고 전문가 감독이 필요한 PoC 단계다. 그래도 과학자가 장비 조작에 뺏기던 시간이 줄어드는 방향은 분명하다. 지능이 화면 안에서 실험실로 나온 첫 걸음이다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;앤스로픽이 공개한 MHS는 AI 에이전트와 현미경, 로봇팔, 액체 취급 장비 같은 연구 기기를 이어붙이기 위한 공통 규칙이다. 모델 성능 발표가 아니라 배선 규격에 가까운 이야기인데, 파급력은 오히려 이쪽이 크다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="anthropic" scheme="https://futurecreator.cloud/tags/anthropic/"/>
+    
+    <category term="science" scheme="https://futurecreator.cloud/tags/science/"/>
+    
+  </entry>
   
   <entry>
     <title>지능이 화면 밖으로 나오면 위험의 진입장벽이 낮아진다</title>
@@ -388,137 +513,6 @@
     <category term="인프라" scheme="https://futurecreator.cloud/tags/%EC%9D%B8%ED%94%84%EB%9D%BC/"/>
     
     <category term="국방" scheme="https://futurecreator.cloud/tags/%EA%B5%AD%EB%B0%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>권한 이양은 혁명이 아니라 습관으로 온다</title>
-    <link href="https://futurecreator.cloud/posts/120371508/"/>
-    <id>https://futurecreator.cloud/posts/120371508/</id>
-    <published>2026-08-23T10:31:45.000Z</published>
-    <updated>2026-08-25T13:31:01.384Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI를 오래 쓰면서 가장 무섭게 느낀 것은 성능이 아니었다. 매달 확인하던 항목이 하나씩 줄어들고 있다는 사실이다.</p><span id="more"></span><p>처음에는 글을 맡겨도 반드시 다시 읽었고, 코드는 차이를 확인했고, 외부 서비스를 건드릴 때는 한 건씩 승인했다. 몇 달 쓰다 보면 여기까지는 맡겨도 된다는 선이 조금씩 넓어진다. 조사, 개발, 테스트, 배포, 데이터 분석까지 넘기는 권한이 계속 늘어난다. 더 신경 쓰이는 부분은 내가 게을러졌다는 감각이 아니라, 매번 검토하지 않아도 사고가 나지 않는다는 신뢰가 실제로 쌓였다는 점이다.</p><p>조직도 같은 경로를 밟는다. 처음에는 안만 뽑게 하고, 다음에는 실행까지 맡기고 사람이 승인하고, 그다음에는 일정 금액과 위험 범위까지는 자동으로 돌린다. 결국 예외가 생길 때만 사람에게 올리는 방식이 표준이 된다. 한번 맡겨서 문제가 없었던 영역을 다음 달에 다시 사람 손으로 되돌리는 일은 거의 없다. 그래서 권한 이양은 선언으로 오지 않는다. 이것도 괜찮았다는 경험을 수백 번 반복한 결과로, 되돌리기 어려운 방향으로 번져 나간다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI를 오래 쓰면서 가장 무섭게 느낀 것은 성능이 아니었다. 매달 확인하던 항목이 하나씩 줄어들고 있다는 사실이다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="에이전트" scheme="https://futurecreator.cloud/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/"/>
-    
-    <category term="자동화" scheme="https://futurecreator.cloud/tags/%EC%9E%90%EB%8F%99%ED%99%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>몸을 아끼는 것이 가장 공격적인 전략이 된다</title>
-    <link href="https://futurecreator.cloud/posts/3270098810/"/>
-    <id>https://futurecreator.cloud/posts/3270098810/</id>
-    <published>2026-08-23T10:21:45.000Z</published>
-    <updated>2026-08-25T13:31:01.422Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 시대에 건강을 지키는 일은 소극적인 선택이 아니다. 미래로 한 해 나아갈 때 손에 들어오는 것이 매년 커진다면, 중간에 이탈하지 않는 것 자체가 가장 공격적인 전략이 된다.</p><span id="more"></span><p>지금까지의 계산은 반대였다. 젊은 시절의 1년이 가장 값이 나가고 미래는 불확실하니 현재를 즐기라는 조언이 합리적이었다. 그런데 AI가 과학과 의료의 진행 속도 자체를 끌어올린다면 이 가격표가 뒤집힌다. 2026년에는 손댈 수 없는 병이 2030년대에는 평범한 처방으로 정리될 수 있다. 그리고 그 시점의 기술은 다시 그다음 10년까지 살아남을 확률을 올린다.</p><p>핵심은 한 해를 더 버틸 때 받는 것이 치료법 하나가 아니라는 점이다. 더 먼 미래로 넘어갈 선택지까지 함께 늘어난다. 남은 시간을 깎아 쓰는 구조가 아니라 다음 한 해의 값이 계속 오르는 구조다. 그래서 무리해서 지금의 체력을 태우는 일의 기회비용도 매년 같이 커진다. 예전의 안전 제일은 그냥 방어였지만, 지금은 값이 오르는 자산을 팔지 않고 들고 있는 판단에 가깝다. 미래가 멀어서 기다릴 만한 것이 아니라, 미래 자체가 매년 비싸지는 쪽이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI 시대에 건강을 지키는 일은 소극적인 선택이 아니다. 미래로 한 해 나아갈 때 손에 들어오는 것이 매년 커진다면, 중간에 이탈하지 않는 것 자체가 가장 공격적인 전략이 된다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="장수" scheme="https://futurecreator.cloud/tags/%EC%9E%A5%EC%88%98/"/>
-    
-    <category term="리스크" scheme="https://futurecreator.cloud/tags/%EB%A6%AC%EC%8A%A4%ED%81%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>모델보다 통로를 먼저 고르게 된다</title>
-    <link href="https://futurecreator.cloud/posts/1932828885/"/>
-    <id>https://futurecreator.cloud/posts/1932828885/</id>
-    <published>2026-08-22T22:48:47.000Z</published>
-    <updated>2026-08-25T13:31:01.397Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI를 쓰는 사람의 선택 순서가 바뀌고 있다. 예전에는 어떤 모델을 쓸지 먼저 정했다. 지금은 어떤 통로로 모델에 접근할지를 먼저 정하고, 모델은 그 위에서 바꿔 끼운다. 모델의 수명이 몇 달 단위로 짧아지면서, 더 오래 남는 결정이 통로 쪽으로 이동한 것이다.</p><span id="more"></span><p>숫자를 보면 이 이동이 조금 더 분명해진다. 여러 모델과 추론 공급자를 하나의 API로 묶어주는 게이트웨이 한 곳의 주간 처리량이 반년 사이 5조 토큰에서 25조 토큰 규모로 늘었고, 사용 개발자 수도 수백만 명대로 올라갔다고 한다. 이 성장의 상당 부분은 새로운 모델을 발명해서 나온 게 아니라, 남이 만든 모델을 쉽게 갈아 끼울 수 있게 해준 대가로 나왔다.</p><p>개인 입장에서 이 구조가 편한 이유는 명확하다. 구독을 여러 개 유지하면 매달 고정비가 쌓이고, 그 플랫폼의 하네스와 정책에도 함께 묶인다. 반면 종량제 게이트웨이 하나를 두면 이번 주에 좋은 모델을 이번 주에 쓰고, 다음 주에 더 나은 모델이 나오면 설정 한 줄만 바꾼다. 신규 모델이 무료로 풀리는 구간도 놓치지 않는다.</p><p>물론 통로에도 위험은 있다. 특정 게이트웨이에 코드와 습관이 얽히면 그것 역시 종속이다. 그래서 대안을 하나쯤 알아두고, 호출 코드는 공급자를 바꿔도 되도록 얇게 유지하는 편이 좋다.</p><p>정리하면, 지금 개인이 붙잡을 만한 자산은 특정 모델이 아니라 모델을 빠르게 교체할 수 있는 배선이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI를 쓰는 사람의 선택 순서가 바뀌고 있다. 예전에는 어떤 모델을 쓸지 먼저 정했다. 지금은 어떤 통로로 모델에 접근할지를 먼저 정하고, 모델은 그 위에서 바꿔 끼운다. 모델의 수명이 몇 달 단위로 짧아지면서, 더 오래 남는 결정이 통로 쪽으로 이동한 것이다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="openrouter" scheme="https://futurecreator.cloud/tags/openrouter/"/>
-    
-    <category term="인프라" scheme="https://futurecreator.cloud/tags/%EC%9D%B8%ED%94%84%EB%9D%BC/"/>
-    
-    <category term="게이트웨이" scheme="https://futurecreator.cloud/tags/%EA%B2%8C%EC%9D%B4%ED%8A%B8%EC%9B%A8%EC%9D%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>코드는 재는데 글은 아무도 재지 않았다</title>
-    <link href="https://futurecreator.cloud/posts/3204381235/"/>
-    <id>https://futurecreator.cloud/posts/3204381235/</id>
-    <published>2026-08-22T22:18:47.000Z</published>
-    <updated>2026-08-25T13:31:01.421Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>LLM 벤치마크는 대부분 코딩과 수학에 몰려 있다. 정답이 명확해 채점이 쉽기 때문이다. 그런데 내가 실제로 모델에 가장 많이 시키는 일 중 하나는 글쓰기다. 채점이 어렵다는 이유로 아무도 재지 않는 영역이, 정작 사용량이 가장 많은 영역인 셈이다. 그래서 한국어 글이 얼마나 사람처럼 자연스러운지 측정하는 벤치마크를 직접 만들었다.</p><span id="more"></span><p>결과는 예상과 상당히 달랐다. 코딩 순위와 글쓰기 순위가 일치하지 않았고, 비싼 모델이 자동으로 좋은 글을 쓰는 것도 아니었다. 어떤 저가 모델은 문장은 매끄러운데 특유의 번역체 리듬이 계속 새어 나왔다. 반대로 상위 모델 중 하나는 압도적으로 자연스러운 한국어를 냈다. 코딩 벤치마크만 보고 글쓰기 모델을 고르던 관행이 왜 어긋났는지 알 수 있었다.</p><p>측정의 어려움은 여전히 남는다. 자연스러움을 어떻게 정량화하느냐는 문제가 쉽지 않다. 다만 완벽한 척도를 기다리는 것보다, 내 용도에 맞는 거친 척도를 지금 갖는 편이 낫다. 내가 쓰는 문체, 내가 다루는 주제, 내가 싫어하는 상투구가 기준에 들어가야 결과가 쓸 만해진다.</p><p>공개 벤치마크는 학습 데이터에 섞여 오염되기 쉽다는 문제도 있다. 직접 만든 테스트는 적어도 그 위험이 낮다. 모델이 훈련 중에 본 적 없을 과제를 던져야 실력의 차이가 드러난다.</p><p>결론은 단순하다. 남이 재주지 않는 항목이 내 업무의 핵심이라면, 그 항목은 내가 재야 한다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;LLM 벤치마크는 대부분 코딩과 수학에 몰려 있다. 정답이 명확해 채점이 쉽기 때문이다. 그런데 내가 실제로 모델에 가장 많이 시키는 일 중 하나는 글쓰기다. 채점이 어렵다는 이유로 아무도 재지 않는 영역이, 정작 사용량이 가장 많은 영역인 셈이다. 그래서 한국어 글이 얼마나 사람처럼 자연스러운지 측정하는 벤치마크를 직접 만들었다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="llm" scheme="https://futurecreator.cloud/tags/llm/"/>
-    
-    <category term="벤치마크" scheme="https://futurecreator.cloud/tags/%EB%B2%A4%EC%B9%98%EB%A7%88%ED%81%AC/"/>
-    
-    <category term="글쓰기" scheme="https://futurecreator.cloud/tags/%EA%B8%80%EC%93%B0%EA%B8%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>모델 평판의 절반은 하네스가 만든다</title>
-    <link href="https://futurecreator.cloud/posts/2771374979/"/>
-    <id>https://futurecreator.cloud/posts/2771374979/</id>
-    <published>2026-08-22T21:48:47.000Z</published>
-    <updated>2026-08-25T13:31:01.413Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>같은 모델이 도구에 따라 전혀 다른 모델처럼 느껴진다. 요즘 평이 나쁜 Opus 5를 나는 만족스럽게 쓰고 있다. 차이는 하나다. 나는 그 모델을 Claude Code가 아닌 다른 하네스에 붙여서 쓴다. 모델 이름은 같지만 사용 경험은 같지 않다.</p><span id="more"></span><p>모델 평가는 보통 모델 단독의 능력으로 이야기된다. 하지만 실제로 우리가 체감하는 건 모델과 하네스가 결합된 결과물이다. 컨텍스트를 어떻게 잘라 넣는지, 도구 호출을 어떤 순서로 강제하는지, 시스템 프롬프트가 몇 천 토큰을 미리 잡아먹는지에 따라 같은 모델의 출력 품질이 눈에 보이게 달라진다. 하네스가 무거우면 모델이 정작 문제에 쓸 여력이 줄어든다.</p><p>그래서 어떤 모델이 실망스러웠다면, 실망한 대상이 정확히 무엇인지 한 번 더 나눠볼 필요가 있다. 추론 능력이 부족했던 것인지, 아니면 그 능력을 끌어내지 못한 껍데기가 문제였던 것인지. 내 경험으로는 후자의 비중이 생각보다 크다. 가벼운 하네스에 API로 직접 붙였을 때 같은 모델이 훨씬 또렷하게 일했다.</p><p>이건 회사 계정을 쓰는 경우에도 실용적인 이야기다. 크레딧이 매달 리셋되는 엔터프라이즈 플랜이라면, 그 크레딧을 어떤 도구에 흘려보낼지가 실질적인 성능 선택이 된다. 모델을 바꾸는 것보다 하네스를 바꾸는 편이 더 큰 개선을 주는 경우가 있다.</p><p>정리하면, 온라인에 떠도는 모델 평판은 대부분 특정 하네스 안에서의 평판이다. 그 조합을 밝히지 않은 평가는 절반만 참이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;같은 모델이 도구에 따라 전혀 다른 모델처럼 느껴진다. 요즘 평이 나쁜 Opus 5를 나는 만족스럽게 쓰고 있다. 차이는 하나다. 나는 그 모델을 Claude Code가 아닌 다른 하네스에 붙여서 쓴다. 모델 이름은 같지만 사용 경험은 같지 않다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="llm" scheme="https://futurecreator.cloud/tags/llm/"/>
-    
-    <category term="코딩에이전트" scheme="https://futurecreator.cloud/tags/%EC%BD%94%EB%94%A9%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/"/>
-    
-    <category term="opus" scheme="https://futurecreator.cloud/tags/opus/"/>
     
   </entry>
   

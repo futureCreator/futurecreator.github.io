@@ -4,6 +4,151 @@
   
     
     <entry>
+      <title>생각을 외부화하는 것은 퇴화가 아닐 수 있다</title>
+      <link href="/posts/430533700/"/>
+      <url>/posts/430533700/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI를 제대로 쓴 인류가 도달하는 곳은 더 똑똑해지는 상태가 아니라 스스로 생각하지 않아도 되는 상태일지도 모른다. 이렇게 말하면 곧바로 뇌가 퇴화한다는 반박이 붙지만, 스스로 생각하는 일이 무조건 좋은 것인가부터 의심해볼 만하다.</p><span id="more"></span><p>인간은 이미 기억을 문자에 맡기고 계산을 컴퓨터에 넘기고 이동을 기계에 위임하며 문명을 진전시켰다. 직접 하지 않아도 되는 일을 늘려온 역사다. 그런데 사고만은 자기 뇌로 계속하는 것이 선이고 외부화는 퇴화라고 보는 것은 조금 이상하다. 물론 AI를 처음 만들고 구조를 설계하는 사람들은 끝까지 생각해야 한다. 그 다음 단계에서는 사람이 방향과 바람을 제시하면 AI가 사고하고 에이전트가 움직이고 피지컬 AI가 현실에 구현하는 구도가 될 수 있다.</p><p>그때 인간이 지금보다 훨씬 머리를 덜 쓴다 해도 문명의 실패는 아니다. 자동차 때문에 다리 힘이 약해졌다고 자동차 문명을 부정하지 않는 것과 같다. 마지막까지 사람 쪽에 남는 것은 어떻게 실현하느냐가 아니라 무엇을 원하고 무엇을 아름답다고 여기며 어떤 세계를 고르는지일 것이다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> thinking </tag>
+            
+            <tag> civilization </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>아무도 혼자서는 경쟁에서 내려올 수 없다</title>
+      <link href="/posts/1757856780/"/>
+      <url>/posts/1757856780/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 시대의 과로 문제를 경영자 대 노동자 구도로 보면 본질을 놓친다. 누구도 스스로 브레이크를 밟을 수 없는 게임이 되어 있다는 것이 문제의 핵심이다.</p><span id="more"></span><p>AI로 하루 분량의 일이 한 시간이 됐다고 해보자. 한 회사만 남은 일곱 시간을 휴식으로 돌리면, 그 시간을 성장에 쓰는 회사에 밀린다. 경영자의 선의와 무관하게 경쟁하는 한 생산성 향상은 여가보다 다음 경쟁으로 먼저 돌아간다. 어제의 효율화가 오늘의 기준선이 된다. 과거 토요 근무도 비슷했다. 기업들이 자발적으로 쉬기로 합의한 것이 아니라, 법과 사회 규범이 모두가 동시에 속도를 늦출 환경을 만들었다.</p><p>국가의 역할은 기업을 악역으로 세우는 것이 아니라, 혼자서는 내려올 수 없는 경쟁에서 다 같이 내려올 규칙을 만드는 일이기도 하다. AI 시대는 더 까다롭다. 노동시간이 같아도 업무 밀도만 몇 배가 되거나, 24시간 돌아가는 에이전트에 사람만 상시 호출될 수 있다. 20세기가 노동시간에 상한을 만든 시대라면, 21세기는 일의 밀도에도 어딘가 제동을 거는 시대가 될지도 모른다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> labor </tag>
+            
+            <tag> policy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>피지컬 AI는 자율이냐 아니냐로 볼 문제가 아니다</title>
+      <link href="/posts/647571361/"/>
+      <url>/posts/647571361/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AGIBOT의 X2가 100m 장애물 레이스에서 금메달을 땄다. 다만 우승팀 엔지니어 본인이 현재는 원격 조작으로 참가한다고 설명했고, 장애물 종류와 크기는 사전에 공개돼 현지 연습까지 진행됐다.</p><span id="more"></span><p>그래서 처음 보는 코스를 완전 자율로 끝까지 공략했다는 서술은 사실이 아니다. 그렇다고 가볍게 볼 일도 아니다. 사람이 담당한 것은 대략적인 진행과 지시이고, 보행과 자세 제어, 균형 유지, 일부 장애물 돌파 같은 세밀한 신체 제어는 로봇이 맡았다. 게다가 양산 사양 휴머노이드가 경사면, 슬라롬, 계단, 좁은 길, 도약대 같은 복잡한 구간을 연속으로 통과했다.</p><p>이번에 놀라운 지점은 로봇이 전부 스스로 판단했다는 것이 아니다. 사람이 팔다리를 하나씩 조종하지 않아도 상당히 추상적인 수준의 지시만으로 신체가 알아서 따라오게 됐다는 것이다. 피지컬 AI는 완전 자율인지 아닌지의 이분법으로 보는 것보다, 사람이 세밀하게 조작하지 않아도 되는 범위가 매년 어디까지 넓어지는지를 보는 편이 진화 속도를 정확히 잡아낸다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> robotics </tag>
+            
+            <tag> humanoid </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>스포츠가 인간만의 영역이라는 믿음은 오래가지 않는다</title>
+      <link href="/posts/3519505246/"/>
+      <url>/posts/3519505246/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>피지컬 AI가 탁구와 테니스에서 인간에게 근접하기 시작했다. 순수한 경기 능력만 보면 바둑과 장기가 지나온 길을 스포츠도 그대로 따라갈 가능성이 높다. 스포츠만은 인간의 것이라는 감각은 생각보다 취약한 전제다.</p><span id="more"></span><p>여기서 흔히 나오는 반론은 스포츠는 땀과 실패와 인생을 보는 것이라 로봇 경기는 흥행하지 않는다는 것이다. 그런데 그 판단은 지금의 무기질적인 로봇을 보면서 미래를 상상한 결과다. 동시에 진행되는 축이 있다. 사람과 거의 구분되지 않는 외형, 피부 질감, 표정, 목소리, 신체성이다. 여기에 AI가 인격과 캐릭터까지 갖게 되면 전제가 달라진다.</p><p>이기기만 하는 선수가 아니라 지고 초조해하고 버릇이 있고 악연이 생기고 부활하고 세대교체까지 하는 존재가 나온다. 카리스마와 드라마와 비극을 설계할 수 있는 선수다. 주최자 입장에서는 부상이나 은퇴, 이적에 흔들릴 일도 적고 세계관과 경기 수준을 통제할 수 있다. 그렇다면 가장 큰 이익을 가져가는 쪽은 로봇 제조사만이 아니라, 선수를 IP로 보유하는 매니지먼트와 이벤트 주최자일지도 모른다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> robotics </tag>
+            
+            <tag> sports </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AI가 실험 루프 안으로 들어왔다</title>
+      <link href="/posts/3262523060/"/>
+      <url>/posts/3262523060/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>앤스로픽이 공개한 MHS는 AI 에이전트와 현미경, 로봇팔, 액체 취급 장비 같은 연구 기기를 이어붙이기 위한 공통 규칙이다. 모델 성능 발표가 아니라 배선 규격에 가까운 이야기인데, 파급력은 오히려 이쪽이 크다.</p><span id="more"></span><p>그동안 실험 장비 연동은 기계마다 방식이 달라 연구자가 매번 직접 붙여야 했다. MHS는 그 접속과 설정을 표준화한다. 이미 양자 컴퓨터용 레이저에서는 AI가 실제 장비를 조작하며 시행착오로 복구 절차를 만들어 99.3% 성공률까지 끌어올렸다. 측정값을 보며 액체 취급 조건을 자동 조정하거나, 로봇팔과 액체 핸들러를 연계하고, 실험 중 이상을 감지해 대응하는 것까지 실증됐다.</p><p>AI가 답을 생각하는 단계를 넘어 기계를 움직이고 결과를 확인하고 조건을 바꿔 다시 시도하는 루프 자체에 들어왔다는 뜻이다. 아직 리서치 프리뷰이고 전문가 감독이 필요한 PoC 단계다. 그래도 과학자가 장비 조작에 뺏기던 시간이 줄어드는 방향은 분명하다. 지능이 화면 안에서 실험실로 나온 첫 걸음이다.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ai </tag>
+            
+            <tag> anthropic </tag>
+            
+            <tag> science </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>지능이 화면 밖으로 나오면 위험의 진입장벽이 낮아진다</title>
       <link href="/posts/2746161273/"/>
       <url>/posts/2746161273/</url>
