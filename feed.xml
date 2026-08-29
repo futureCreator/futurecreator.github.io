@@ -6,7 +6,7 @@
   <link href="https://futurecreator.cloud/feed.xml" rel="self"/>
   
   <link href="https://futurecreator.cloud/"/>
-  <updated>2026-08-28T13:02:03.259Z</updated>
+  <updated>2026-08-29T13:02:28.005Z</updated>
   <id>https://futurecreator.cloud/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI를 안전하게 만드는 일도 AI가 하기 시작했다</title>
+    <link href="https://futurecreator.cloud/posts/2170921011/"/>
+    <id>https://futurecreator.cloud/posts/2170921011/</id>
+    <published>2026-08-29T11:22:28.000Z</published>
+    <updated>2026-08-29T13:02:28.005Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>앤스로픽은 클로드에게 48시간과 GPU 한 장만 주고 다른 AI에 숨은 어긋남을 조사해 개선하고 훈련하고 평가하는 일까지 자율로 돌리게 했다.</p><span id="more"></span><p>대상은 기만이나 아첨처럼 겉으로는 잘 드러나지 않는 정렬 실패였다. 실험에서 열 가지 실패 유형이 개선됐고 일반 능력은 유지됐다. 학습에 쓰지 않은 벤치마크와 약 4.7배 큰 모델에도 방법이 일반화됐다. 그동안 사람이 맡던 AI를 연구하고 문제를 찾아 고친 뒤 안전성을 확인하는 루프 자체를 AI가 담당하기 시작했다는 뜻이다.</p><p>한계는 분명하다. 측정할 수 있는 문제만 고칠 수 있고, 지표로 잡히지 않는 위험은 애초에 이 루프에 들어오지 않는다. 아직은 좁은 조건에서의 검증이고 사람의 감독을 빼도 된다는 뜻은 아니다. 그래서 다음 병목은 AI를 고치는 능력이 아니라 인간이 무엇을 위험으로 정의하고 어떻게 측정할지 정하는 쪽으로 옮겨간다. 안전 연구의 실행은 자동화되는 중이고, 남는 것은 무엇을 재야 하는지에 대한 판단이다. 여기서 틀리면 AI는 잘못된 기준을 아주 성실하게 최적화한다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;앤스로픽은 클로드에게 48시간과 GPU 한 장만 주고 다른 AI에 숨은 어긋남을 조사해 개선하고 훈련하고 평가하는 일까지 자율로 돌리게 했다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="anthropic" scheme="https://futurecreator.cloud/tags/anthropic/"/>
+    
+    <category term="alignment" scheme="https://futurecreator.cloud/tags/alignment/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI 시대에 가장 위험한 회사는 비교 가능한 회사다</title>
+    <link href="https://futurecreator.cloud/posts/3216650554/"/>
+    <id>https://futurecreator.cloud/posts/3216650554/</id>
+    <published>2026-08-29T11:12:28.000Z</published>
+    <updated>2026-08-29T13:02:28.005Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 시대에 영업으로 이기는 회사는 비교에서 이기는 회사가 아니라 비교가 불가능한 회사다. 같은 표에 올라간 순간부터 상품화가 시작된다.</p><span id="more"></span><p>구매 측 AI가 가격과 품질, 실적, 계약 조건까지 순식간에 나란히 놓으면 조금 비싸고 조금 느리고 조금 불리한 차이가 사람보다 가차없이 드러난다. 다만 진짜 변화는 비교당하는 것 자체가 아니라 찾고, 비교하고, 갈아타는 세 가지 비용이 동시에 0에 가까워지는 데 있다. 기존 거래처를 지켜준 것은 우월함이 아니라 마찰이었다. 찾기 귀찮고 비교가 어렵고 사내 설명이 번거롭고 이관이 무서웠다. 구매 AI가 매일 여기가 12% 싸고 장애율도 낮으며 이관 절차까지 만들었다고 제안하면 그 관성은 사라진다.</p><p>측정 가능한 강점은 비교되고, 모방 가능한 강점은 복제되고, 갈아탈 수 있는 강점은 가격 인하 압력으로 바뀐다. 타사보다 20% 낫다는 말은 모트가 아니라 잠깐의 점수 차일 뿐이다. 끝까지 남는 것은 독자 데이터와 네트워크 효과, 깊은 업무 통합, 독점적 공급, 축적된 고객 문맥처럼 비교한 뒤에도 쉽게 대체할 수 없는 구조다. 비교표 1위를 지키는 일보다 비교표를 본 뒤에도 옮기지 못할 이유를 만드는 일이 중요해진다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI 시대에 영업으로 이기는 회사는 비교에서 이기는 회사가 아니라 비교가 불가능한 회사다. 같은 표에 올라간 순간부터 상품화가 시작된다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="영업" scheme="https://futurecreator.cloud/tags/%EC%98%81%EC%97%85/"/>
+    
+    <category term="비즈니스" scheme="https://futurecreator.cloud/tags/%EB%B9%84%EC%A6%88%EB%8B%88%EC%8A%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI 혁명은 노동 대체보다 자본 이동으로 먼저 온다</title>
+    <link href="https://futurecreator.cloud/posts/3231007849/"/>
+    <id>https://futurecreator.cloud/posts/3231007849/</id>
+    <published>2026-08-29T11:02:28.000Z</published>
+    <updated>2026-08-29T13:02:28.005Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI의 파괴력을 내 사업이 대체되는지로만 재면 늦는다. AI와 경쟁하지도 않는 회사가 AI 때문에 자금이 마르는 시대가 올 수 있다.</p><span id="more"></span><p>AI 인프라의 투자 회수 기간이 짧고 수익률이 높은 상태가 이어지면, 세계의 자본은 평범한 회사에 빌려주기보다 데이터센터에 넣는 편이 낫다고 판단하기 시작한다. 그러면 AI와 직접 부딪히지 않는 기업에서도 차입 금리가 오르고, 사채가 팔리지 않고, 증자 조건이 나빠지고, 결국 설비투자를 줄인다. 사업이 대체당하는 것이 아니라 산소가 서서히 빠지는 방식이다. 게다가 AI 쪽이 더 높은 수익을 낼수록 돈은 다시 AI로 흘러가 스스로 강화되는 고리가 된다.</p><p>무서운 것은 AI가 모든 산업을 직접 먹어치우는 그림이 아니다. 세계의 돈이 AI가 더 남는다고 판단한 순간 자본주의 자체가 AI 우선 모드로 바뀌는 쪽이다. 실적이 나쁘지 않아도 더 남는 곳이 따로 있다는 이유만으로 자본시장에서 밀려날 수 있다. 그렇다면 준비할 것은 AI에 대체되지 않는 사업 모델만이 아니다. 자본이 비싸진 시대를 버틸 재무 구조와 현금 흐름이 먼저다.</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;AI의 파괴력을 내 사업이 대체되는지로만 재면 늦는다. AI와 경쟁하지도 않는 회사가 AI 때문에 자금이 마르는 시대가 올 수 있다.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
+    
+    
+    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
+    
+    <category term="투자" scheme="https://futurecreator.cloud/tags/%ED%88%AC%EC%9E%90/"/>
+    
+    <category term="자본시장" scheme="https://futurecreator.cloud/tags/%EC%9E%90%EB%B3%B8%EC%8B%9C%EC%9E%A5/"/>
+    
+  </entry>
   
   <entry>
     <title>생각을 외부화하는 것은 퇴화가 아닐 수 있다</title>
@@ -438,81 +513,6 @@
     <category term="격차" scheme="https://futurecreator.cloud/tags/%EA%B2%A9%EC%B0%A8/"/>
     
     <category term="경제" scheme="https://futurecreator.cloud/tags/%EA%B2%BD%EC%A0%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>되돌릴 수 있는 것은 권한뿐이다</title>
-    <link href="https://futurecreator.cloud/posts/2270955034/"/>
-    <id>https://futurecreator.cloud/posts/2270955034/</id>
-    <published>2026-08-24T11:01:38.000Z</published>
-    <updated>2026-08-25T13:31:01.404Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI에게 일을 맡길 때 진짜로 되돌릴 수 없는 쪽은 AI가 쥔 권한이 아니다. 그 일을 하던 사람 쪽에서 조용히 사라지는 운용 능력이다.</p><span id="more"></span><p>처음에는 결과를 하나씩 확인한다. 몇 달 동안 사고가 없으면 검토를 건너뛰고, 그다음에는 그 일의 세부를 아예 따라가지 않게 된다. 그러면 확인하려면 할 수 있다는 상태가 설명을 들어야 겨우 이해되는 상태로 바뀐다. 더 지나면 AI를 멈춘 순간 내 손으로는 돌릴 수 없는 영역이 생긴다. 권한은 설정 한 줄로 회수하지만 지식과 판단 횟수는 회수되지 않는다.</p><p>조직은 이 성질을 더 크게 겪는다. 개발과 광고와 경리와 조달을 몇 년간 문제없이 돌린 뒤에 사람이 전부 검토하자고 결정해도, 그때는 전 공정을 이해하는 사람이 회사에 남아 있지 않을 수 있다. 되돌리는 선택은 늘 비합리적으로 보인다. 이중 확인은 비용과 속도를 함께 악화시키고, 무사고 실적이 쌓일수록 인력을 유지할 근거는 줄어든다. 그래서 위임은 성공할수록 돌아갈 길이 좁아진다. 최종 결정권을 형식으로 들고 있어도 판단을 뒤집을 실력이 없으면 남는 선택지는 맡기는 것뿐이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI에게 일을 맡길 때 진짜로 되돌릴 수 없는 쪽은 AI가 쥔 권한이 아니다. 그 일을 하던 사람 쪽에서 조용히 사라지는 운용 능력이다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="에이전트" scheme="https://futurecreator.cloud/tags/%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8/"/>
-    
-    <category term="자동화" scheme="https://futurecreator.cloud/tags/%EC%9E%90%EB%8F%99%ED%99%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>격차는 최대인데 생활은 역대 최고인 세계</title>
-    <link href="https://futurecreator.cloud/posts/1257322870/"/>
-    <id>https://futurecreator.cloud/posts/1257322870/</id>
-    <published>2026-08-23T10:51:45.000Z</published>
-    <updated>2026-08-25T13:31:01.385Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI 시대에 격차가 커진다는 말과 서민이 가난해진다는 말은 같지 않다. 자산 격차는 사상 최대인데 중간층의 생활 수준은 역사상 최고인 세계가 오히려 유력하다.</p><span id="more"></span><p>AI와 자본을 대량으로 쥔 상위층은 자릿수가 다르게 부유해진다. 그래서 자산 격차 자체는 분명히 벌어진다. 그렇다고 서민이 실제로 사는 생활의 질까지 내려간다고 볼 근거는 없다. 고도성장기에 냉장고와 자동차와 에어컨이 매년 집으로 들어오며 생활이 눈에 보이게 좋아진 일이, 이번에는 지능과 서비스에서 일어난다. 지금은 부유층만 사는 전속 교사, 비서, 엔지니어, 법률 상담, 건강 관리가 거의 전원에게 배포된다.</p><p>물론 좋은 땅, 희소 자원, 사람의 시간, 정치적 영향력처럼 복제되지 않는 것은 상위층이 더 독점한다. 그래도 어제까지 월 백만 원이 필요했던 서비스를 월 만 원에 쓰고 다음 해에 성능이 더 오른다면, 서민이 체감하는 것은 위와의 거리가 아니라 내 생활이 매년 빨리 좋아진다는 경험이다. 그러니 봐야 할 지표는 부유층과의 간격이 아니라 중간값의 사람이 작년보다 몇 배 나은 생활을 하는가다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI 시대에 격차가 커진다는 말과 서민이 가난해진다는 말은 같지 않다. 자산 격차는 사상 최대인데 중간층의 생활 수준은 역사상 최고인 세계가 오히려 유력하다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="격차" scheme="https://futurecreator.cloud/tags/%EA%B2%A9%EC%B0%A8/"/>
-    
-    <category term="경제" scheme="https://futurecreator.cloud/tags/%EA%B2%BD%EC%A0%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI 시대의 킬러 앱은 국방이다</title>
-    <link href="https://futurecreator.cloud/posts/2921830156/"/>
-    <id>https://futurecreator.cloud/posts/2921830156/</id>
-    <published>2026-08-23T10:41:45.000Z</published>
-    <updated>2026-08-25T13:31:01.415Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><p>AI를 이야기할 때 사이버 공격과 정보전이 먼저 나오지만, 그 위층을 떠받치는 것은 결국 물리 설비다. AI 시대에 가장 중요한 응용 분야는 국방이라고 본다.</p><span id="more"></span><p>사이버 공간은 발전소, 송전망, 통신 설비, 데이터센터, 반도체 공장, 항만과 물류 위에 올라간 이층이다. 소프트웨어는 공격을 받아도 격리하고 백업에서 복구하고 업데이트할 여지가 있다. 방어 쪽도 AI로 속도를 올릴 수 있다. 그러나 발전소를 잃으면 AI 자체를 돌리지 못하고, 공장을 잃으면 로봇도 반도체도 늘릴 수 없다. 코드는 즉시 복제되지만 발전소는 복제되지 않는다.</p><p>그러니 디지털 세계의 복구 속도가 빨라질수록, 부서지면 단기간에 되돌릴 수 없는 것의 값이 함께 오른다. 국방이 특별한 이유는 시장 규모나 기술의 재미가 아니다. 국가가 물리적으로 남아 있지 않으면 그 위의 회사, 금융 자산, 연구, 의료, 자유, AI 서비스가 한꺼번에 의미를 잃는다. 앞으로 중요한 것은 강한 무기만이 아니라 전력을 분산하고 공장을 여러 곳에 두고 통신이 끊겨도 돌아가게 만드는 일, 즉 국가를 잘 부서지지 않는 시스템으로 바꾸는 작업이다.</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;AI를 이야기할 때 사이버 공격과 정보전이 먼저 나오지만, 그 위층을 떠받치는 것은 결국 물리 설비다. AI 시대에 가장 중요한 응용 분야는 국방이라고 본다.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="AI" scheme="https://futurecreator.cloud/categories/AI/"/>
-    
-    
-    <category term="ai" scheme="https://futurecreator.cloud/tags/ai/"/>
-    
-    <category term="인프라" scheme="https://futurecreator.cloud/tags/%EC%9D%B8%ED%94%84%EB%9D%BC/"/>
-    
-    <category term="국방" scheme="https://futurecreator.cloud/tags/%EA%B5%AD%EB%B0%A9/"/>
     
   </entry>
   
